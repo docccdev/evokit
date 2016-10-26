@@ -1,5 +1,5 @@
 {
-  "name": "uikit",
+  "name": "@evo/bigl-uikit",
   "version": "0.1.0",
   "description": "UIKit for Bigl.ua",
   "main": "index.js",
