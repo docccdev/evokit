@@ -1,0 +1,39 @@
+$width_cache = {}
+
+create_width(count)
+    for index in (1...count)
+        $width = s('%s%',  index / count * 100)
+        $class = s('.ui-width-%s-%s', index, count)
+
+        unless $width_cache[$width]
+            $width_cache[$width] = ()
+        push($width_cache[$width], $class)
+
+
+apply_width_cache()
+    for $width, $class in $width_cache
+        {join(',', $class)}
+            width: s($width)
+
++create_width(1)
+    //
++create_width(2)
+    //
++create_width(3)
+    //
++create_width(4)
+    //
++create_width(5)
+    //
++create_width(6)
+    //
++create_width(7)
+    //
++create_width(8)
+    //
++create_width(9)
+    //
++create_width(10)
+    //
++apply_width_cache()
+    //

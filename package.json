@@ -1,0 +1,22 @@
+{
+  "name": "uikit",
+  "version": "0.1.0",
+  "description": "UIKit for Bigl.ua",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.uaprom/bigl/uikit.git"
+  },
+  "keywords": [
+    "uikit",
+    "bem",
+    "css",
+    "stylus",
+    "html"
+  ],
+  "author": "e.marchenko",
+  "license": "MIT"
+}
