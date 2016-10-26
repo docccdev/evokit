@@ -4,7 +4,9 @@
   "description": "UIKit for Bigl.ua",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepublish": "npm run-script build",
+    "build": "gulp dist",
+    "prebuild": "rm -rf dist/*"
   },
   "repository": {
     "type": "git",
