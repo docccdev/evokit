@@ -1,3 +1,7 @@
+<!--
+index
+-->
+
 [![uikit banner](http://static-cache.ua.uaprom.net/image/bigl/logo.png)](http://bigl.ua/)
 
 # UIkit

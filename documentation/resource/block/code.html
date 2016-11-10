@@ -1,0 +1,10 @@
+<div class="uidocs-example">
+    <% if (arguments[1]) { %>
+        <div class="uidocs-example__label">
+            ${arguments[1]}
+        </div>
+    <% } %>
+    <div class="uidocs-example__value">
+        <pre class="uidocs-source"><code class="${arguments[1]}">${arguments[0]}</code></pre>
+    </div>
+</div>

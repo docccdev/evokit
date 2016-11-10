@@ -24,6 +24,7 @@
   "devDependencies": {
     "autoprefixer-stylus": "^0.11.0",
     "gulp": "^3.9.1",
+    "gulp-md-docs": "^0.1.4",
     "gulp-stylus": "^2.5.0"
   }
 }
