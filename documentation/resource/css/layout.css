@@ -202,3 +202,39 @@ a {
   border-radius: 4px;
   text-align: center;
 }
+
+
+.uidocs-table {}
+
+.uidocs-table__head {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  font-weight: bold;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.uidocs-table__body {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+.uidocs-table__row {
+  display: table-row;
+  border-top: 1px solid #e5e5e5;
+}
+
+.uidocs-table__row:first-child {
+  border-top: 0;
+}
+
+.uidocs-table__cell {
+  display: table-cell;
+  padding: 10px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #666;
+}
