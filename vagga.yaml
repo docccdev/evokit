@@ -1,0 +1,29 @@
+containers:
+    frontend:
+      environ:
+        NODE_PATH: /usr/lib/node_modules
+      setup:
+      - !UbuntuRelease { codename: trusty }
+      - !Install [ca-certificates, apt-transport-https]
+      - !AptTrust
+        keys: [1655A0AB68576280]
+      - !UbuntuRepo
+        url: https://deb.nodesource.com/node_6.x
+        suite: trusty
+        components: [main]
+      - !Install [nodejs]
+      - !NpmConfig
+        install-node: false
+      - !NpmDependencies
+        package: true
+        dev: true
+        optional: true
+
+commands:
+  build: !Command
+    description: Run build
+    container: frontend
+    run: |
+      gulp dist
+      gulp docs
+

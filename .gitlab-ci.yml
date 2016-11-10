@@ -1,0 +1,17 @@
+stages:
+- doc
+- cleanup
+
+before_script:
+- vagga _init_storage_dir --allow-multiple bigl-uikit
+
+doc:
+  stage: doc
+  script:
+  - vagga build
+  - gitlab-publish documentation bigl-uikit
+
+cleanup:
+  stage: cleanup
+  script:
+  - vagga _clean --unused
