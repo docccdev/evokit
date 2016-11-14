@@ -14,7 +14,7 @@ gulp.task('dist', function () {
 });
 
 gulp.task('docs', function() {
-    return gulp.src('src/**/*.md')
+    return gulp.src('**/*.md')
         .pipe(gulpMdDocs({
             templates: {
                 base: './documentation/resource/template.html',
