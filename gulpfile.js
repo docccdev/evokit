@@ -9,7 +9,6 @@ gulp.task('dist', function () {
             compress: true,
             use: [autoprefixer('last 5 versions')]
         }))
-        .pipe(gulp.dest('./dist/css'))
         .pipe(gulp.dest('./documentation/resource/css'));
 });
 
@@ -34,7 +33,6 @@ gulp.task('docs', function() {
 });
 
 gulp.task('watch', function() {
-    return gulp.watch('**/*.md', ['docs']);
+    gulp.watch('./src/styl/**/*.styl', ['dist']);
+    gulp.watch('**/*.md', ['docs']);
 });
-
-

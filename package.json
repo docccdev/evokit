@@ -1,12 +1,10 @@
 {
   "name": "@evo/bigl-uikit",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "UIKit for Bigl.ua",
   "main": "index.js",
   "scripts": {
-    "prepublish": "npm run-script build",
-    "build": "gulp dist",
-    "prebuild": "rm -rf dist/*"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
