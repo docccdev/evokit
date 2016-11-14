@@ -14,4 +14,4 @@ doc:
 cleanup:
   stage: cleanup
   script:
-  - vagga _clean --unused
+  - vagga _clean --unused --at-least 1day
