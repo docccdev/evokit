@@ -1,5 +1,5 @@
 <!--
-core/layout/title|1
+core/common/title|1
 -->
 
 # Title
@@ -18,5 +18,7 @@ core/layout/title|1
 | `.ui-title-h6` | Размер шрифта 14px. |
 
 ``` html
-<div>dddd</div>
+<div class='ui-title-h1'>
+    ...
+</div>
 ```

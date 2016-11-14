@@ -32,3 +32,9 @@ gulp.task('docs', function() {
         }))
         .pipe(gulp.dest('documentation'));
 });
+
+gulp.task('watch', function() {
+    return gulp.watch('**/*.md', ['docs']);
+});
+
+

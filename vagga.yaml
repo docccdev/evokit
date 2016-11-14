@@ -26,4 +26,8 @@ commands:
     run: |
       gulp dist
       gulp docs
-
+  watch: !Command
+    description: Run watch *.md
+    container: frontend
+    run: |
+      gulp watch

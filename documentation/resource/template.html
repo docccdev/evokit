@@ -28,7 +28,7 @@
                                         <% } %>
                                     "
                                 >
-                                    <%- data.value %>
+                                    <%- _.upperFirst(data.value) %>
                                 </a>
                             <% }) %>
                         </div>
@@ -43,7 +43,7 @@
                                 <% _.forIn(_.sortBy(data.children, ['sortIndex', 'value']), function(data) { %>
                                     <div class="uidocs-nav">
                                         <div class="uidocs-nav__title">
-                                            <%- data.value %>
+                                            <%- _.toUpper(data.value) %>
                                         </div>
                                         <% _.forIn(_.sortBy(data.children, ['sortIndex', 'value']), function(data) { %>
                                             <a
@@ -55,7 +55,7 @@
                                                     <% } %>
                                                 "
                                             >
-                                                <%- data.value %>
+                                                <%- _.upperFirst(data.value) %>
                                             </a>
                                         <% }) %>
                                     </div>
