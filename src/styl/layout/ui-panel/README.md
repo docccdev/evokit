@@ -1,5 +1,5 @@
 <!--
-core/layout/panel|2
+core/layout/panel|4
 -->
 
 # Panel
