@@ -1,5 +1,7 @@
 .ui-grid_theme_divider
     margin-top: 0
 
-    & > .ui-grid__item + .ui-grid__item
-        border-left: 1px solid $ui-line-color
+    & > .ui-grid__item
+
+        & + .ui-grid__item
+            border-left: 1px solid $ui-line-color

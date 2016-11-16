@@ -1,16 +1,10 @@
 for name, value in $ui_size
     .ui-grid_size_{name}
-        margin-top: - value
-        margin-left: - value
+        margin: - (value / 2)
 
         & > .ui-grid__item
-            padding-top: value
-            padding-left: value
+            padding: (value / 2)
 
         &.ui-grid_theme_divider
-            margin-right: - value
-
-            & > .ui-grid__item
-                padding-top: 0
-                padding-right: value
-
+            margin-top: 0
+            margin-bottom: 0
