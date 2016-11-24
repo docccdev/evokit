@@ -1,0 +1,28 @@
+// Media queries
+$media_cache = {}
+
+// Mixin for cached media queries
+media($condition)
+  helper($condition)
+    unless $media_cache[$condition]
+      $media_cache[$condition] = ()
+    push($media_cache[$condition], block)
+
+  +helper($condition)
+    {selector() + ''}
+      {block}
+
+// The function, which causes the cached media queries
+apply_media_cache()
+  for $media, $blocks in $media_cache
+    $media = unquote($media-aliases[$media] || $media)
+    $media = '(%s)' % $media unless match('\(', $media)
+    $media = 'only screen and %s' % $media
+    @media $media
+      for $block in $blocks
+        {$block}
+
++media('xl')
+    //
++media('xxl')
+    //
