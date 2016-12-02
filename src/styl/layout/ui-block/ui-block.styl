@@ -1,4 +1,9 @@
 .ui-block
-    display: table
-    width: 100%
     box-sizing: border-box
+
+    &:after
+        clear: both
+
+    &:after, &:before
+        content: ""
+        display: table
