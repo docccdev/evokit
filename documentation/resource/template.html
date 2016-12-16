@@ -12,32 +12,32 @@
         <script>hljs.initHighlightingOnLoad();</script>
     </head>
     <body>
-        <div class="ui-grid ui-grid_size_xxxl">
-            <div class="ui-grid__item ui-width-1-1">
-                <div class="uidocs-header" id="uikit-header">
-                    <div class="uidocs-page">
-                        <a href="./index.html" class="uidocs-header__logo">uikit</a>
-                        <div class="uidocs-header__menu">
-                            <% _.forIn(_.sortBy(navTree, ['sortIndex', 'value']), function(data) { %>
-                                <a
-                                    href="<%- data.href %>"
-                                    class="
-                                        uidocs-header__menu-item
-                                        <% if(data.active) { %>
-                                            uidocs-header__menu-item_state_active
-                                        <% } %>
-                                    "
-                                >
-                                    <%- _.upperFirst(data.value) %>
-                                </a>
-                            <% }) %>
-                        </div>
-                    </div>
+
+        <div class="uidocs-header" id="uikit-header">
+            <div class="ui-page">
+                <a href="./index.html" class="uidocs-header__logo">uikit</a>
+                <div class="uidocs-header__menu">
+                    <% _.forIn(_.sortBy(navTree, ['sortIndex', 'value']), function(data) { %>
+                        <a
+                            href="<%- data.href %>"
+                            class="
+                                uidocs-header__menu-item
+                                <% if(data.active) { %>
+                                    uidocs-header__menu-item_state_active
+                                <% } %>
+                            "
+                        >
+                            <%- _.upperFirst(data.value) %>
+                        </a>
+                    <% }) %>
                 </div>
             </div>
-            <div class="ui-grid__item ui-width-1-1">
-                <div class="uidocs-page">
-                    <div class="ui-grid ui-grid_theme_divider ui-grid_size_xl">
+        </div>
+
+        <div class="ui-block ui-block_size_xxl ui-block_theme_white">
+            <div class="ui-page">
+                <div class="ui-grid ui-grid_theme_divider ui-grid_size_xxxl">
+                    <% if(_.size(_.filter(navTree, 'active')[0].children)) { %>
                         <div class="ui-grid__item ui-width-1-4">
                             <% _.forIn(_.filter(navTree, 'active'), function(data) { %>
                                 <% _.forIn(_.sortBy(data.children, ['sortIndex', 'value']), function(data) { %>
@@ -65,14 +65,18 @@
                         <div class="ui-grid__item ui-width-3-4">
                             <%= content %>
                         </div>
-                    </div>
+                    <% } else { %>
+                        <div class="ui-grid__item ui-width-1-1">
+                            <%= content %>
+                        </div>
+                    <% } %>
                 </div>
             </div>
-            <div class="ui-grid__item ui-width-1-1 ui-grid ui-grid_align_center">
-                <div class="ui-grid__item">© Bigl</div>
-                <br>
-                <br>
-            </div>
         </div>
+
+        <div class="ui-block ui-block_size_xxl ui-block_theme_white ui-text-center">
+            &copy; Bigl
+        </div>
+
     </body>
 </html>

@@ -64,7 +64,7 @@ core/elements/list|1
 |  `.ui-list_style_disc`    |  Маркер в виде точки.             |
 
 ``` html
-<div class='ui-list ui-list_theme_white'>
+<div class='ui-list ui-list_style_decimal'>
     <li class="ui-list__item">
         ...
     </li>
