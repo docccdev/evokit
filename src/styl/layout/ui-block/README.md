@@ -26,13 +26,13 @@ core/layout/block|2
 
 |         Class          |         Description         |
 |------------------------|-----------------------------|
-|  `.ui-block_size_xxs`  | Отступ сверху и снизу 5px.  |
+|  `.ui-block_size_xxs`  | Отступ сверху и снизу 4px.  |
 |  `.ui-block_size_xs`   | Отступ сверху и снизу 10px. |
-|  `.ui-block_size_s`    | Отступ сверху и снизу 15px. |
+|  `.ui-block_size_s`    | Отступ сверху и снизу 14px. |
 |  `.ui-block_size_m`    | Отступ сверху и снизу 20px. |
-|  `.ui-block_size_l`    | Отступ сверху и снизу 25px. |
+|  `.ui-block_size_l`    | Отступ сверху и снизу 24px. |
 |  `.ui-block_size_xl`   | Отступ сверху и снизу 30px. |
-|  `.ui-block_size_xxl`  | Отступ сверху и снизу 35px. |
+|  `.ui-block_size_xxl`  | Отступ сверху и снизу 34px. |
 |  `.ui-block_size_xxxl` | Отступ сверху и снизу 40px. |
 
 ``` html
