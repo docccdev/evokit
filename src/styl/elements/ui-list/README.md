@@ -65,9 +65,9 @@ core/elements/list|1
 
 ``` html
 <div class='ui-list ui-list_theme_white'>
-    <div class='ui-list__body'>
+    <li class="ui-list__item">
         ...
-    </div>
+    </li>
 </div>
 ```
 
