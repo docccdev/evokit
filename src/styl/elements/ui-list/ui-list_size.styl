@@ -1,0 +1,9 @@
+for name, value in $ui_size
+    .ui-list_size_{name}
+        margin-top: - (value / 2)
+        margin-bottom: - (value / 2)
+
+        & > .ui-list__item
+            padding-top: (value / 2)
+            padding-bottom: (value / 2)
+

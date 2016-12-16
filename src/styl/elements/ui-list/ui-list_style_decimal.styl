@@ -1,0 +1,13 @@
+.ui-list_style_decimal
+    counter-reset: item-index
+
+    & > .ui-list__item
+        padding-left: 20px
+
+        &:before
+            position: absolute
+            margin-left: -20px
+            width: 20px
+            text-align: center
+            content: counter(item-index) '.'
+            counter-increment: item-index

@@ -11,3 +11,20 @@ core/layout/page|1
     ...
 </div>
 ```
+
+---
+
+## Размер
+
+По умолчаню размер блока резиновый от `1000px` до `1200px`.
+
+|          Class        |        Description        |
+|-----------------------|---------------------------|
+|  `.ui-page_size_xl`   |  От `1000px` до `1440px`  |
+|  `.ui-page_size_xxl`  |  От `1000px` до `1640px`  |
+
+``` html
+<div class='ui-page ui-page_size_xl'>
+    ...
+</div>
+```
