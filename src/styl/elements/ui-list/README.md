@@ -32,13 +32,13 @@ core/elements/list|1
 
 |         Class         |         Description         |
 |-----------------------|-----------------------------|
-|  `.ui-list_size_xxs`  | Отступ между ячейками 4px.  |
+|  `.ui-list_size_xxs`  | Отступ между ячейками 5px.  |
 |  `.ui-list_size_xs`   | Отступ между ячейками 10px. |
-|  `.ui-list_size_s`    | Отступ между ячейками 14px. |
+|  `.ui-list_size_s`    | Отступ между ячейками 15px. |
 |  `.ui-list_size_m`    | Отступ между ячейками 20px. |
-|  `.ui-list_size_l`    | Отступ между ячейками 24px. |
+|  `.ui-list_size_l`    | Отступ между ячейками 25px. |
 |  `.ui-list_size_xl`   | Отступ между ячейками 30px. |
-|  `.ui-list_size_xxl`  | Отступ между ячейками 34px. |
+|  `.ui-list_size_xxl`  | Отступ между ячейками 35px. |
 |  `.ui-list_size_xxxl` | Отступ между ячейками 40px. |
 
 ``` html
