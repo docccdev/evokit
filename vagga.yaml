@@ -24,7 +24,8 @@ commands:
     description: Run build
     container: frontend
     run: |
-      gulp dist
+      gulp desktop
+      gulp portable
       gulp docs
   watch: !Command
     description: Run watch *.md

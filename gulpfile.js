@@ -3,8 +3,17 @@ var stylus = require('gulp-stylus');
 var autoprefixer = require('autoprefixer-stylus');
 var gulpMdDocs = require('gulp-md-docs');
 
-gulp.task('dist', function () {
-    return gulp.src('./src/styl/uikit.styl')
+gulp.task('desktop', function () {
+    return gulp.src('./src/styl/bundles/desktop.styl')
+        .pipe(stylus({
+            compress: true,
+            use: [autoprefixer('last 5 versions')]
+        }))
+        .pipe(gulp.dest('./documentation/resource/css'));
+});
+
+gulp.task('portable', function () {
+    return gulp.src('./src/styl/bundles/portable.styl')
         .pipe(stylus({
             compress: true,
             use: [autoprefixer('last 5 versions')]
@@ -33,6 +42,6 @@ gulp.task('docs', function() {
 });
 
 gulp.task('watch', function() {
-    gulp.watch('./src/styl/**/*.styl', ['dist']);
+    gulp.watch('./src/styl/**/*.styl', ['desktop', 'portable']);
     gulp.watch('**/*.md', ['docs']);
 });
