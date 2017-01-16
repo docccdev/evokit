@@ -1,6 +1,16 @@
 // Media queries
 $media_cache = {}
 
+// Mixin for create media class
+media-selector($className)
+    {$className}
+        {block}
+
+    for media_name in $media-aliases
+        +media(media_name)
+            {$className}\\@{media_name}
+                {block}
+
 // Mixin for cached media queries
 media($condition)
   helper($condition)
