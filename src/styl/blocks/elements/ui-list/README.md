@@ -14,11 +14,11 @@ core/elements/list|1
 
 
 ``` html
-<ul class="ui-list">
-    <li class="ui-list__item">
+<ul class='ui-list'>
+    <li class='ui-list__item'>
         ...
     </li>
-    <li class="ui-list__item">
+    <li class='ui-list__item'>
         ...
     </li>
 </ul>
@@ -35,11 +35,11 @@ core/elements/list|1
 |  `.ui-list_size_`[size](core/base/sizes.html)  | Отступ между ячейками.  |
 
 ``` html
-<ul class="ui-list ui-list_size_xxs">
-    <li class="ui-list__item">
+<ul class='ui-list ui-list_size_xxs'>
+    <li class='ui-list__item'>
         ...
     </li>
-    <li class="ui-list__item">
+    <li class='ui-list__item'>
         ...
     </li>
 </ul>
@@ -71,11 +71,11 @@ core/elements/list|1
 Чтобы применить горизонтальный разделитель, добавьте класс `.ui-list_theme_divider`.
 
 ``` html
-<ul class="ui-list ui-list_theme_divider">
-    <li class="ui-list__item">
+<ul class='ui-list ui-list_theme_divider'>
+    <li class='ui-list__item'>
         ...
     </li>
-    <li class="ui-list__item">
+    <li class='ui-list__item'>
         ...
     </li>
 </ul>
