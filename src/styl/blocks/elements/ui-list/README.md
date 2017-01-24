@@ -1,5 +1,5 @@
 <!--
-core/elements/list|1
+docs/elements/list|1
 -->
 
 # Список
@@ -16,10 +16,10 @@ core/elements/list|1
 ``` html
 <ul class='ui-list'>
     <li class='ui-list__item'>
-        ...
+        Item
     </li>
     <li class='ui-list__item'>
-        ...
+        Item
     </li>
 </ul>
 ```
@@ -32,15 +32,15 @@ core/elements/list|1
 
 |         Class         |         Description         |
 |-----------------------|-----------------------------|
-|  `.ui-list_size_`[size](core/base/sizes.html)  | Отступ между ячейками.  |
+|  `.ui-list_size_`[size](docs/base/sizes.html)  | Отступ между ячейками.  |
 
 ``` html
-<ul class='ui-list ui-list_size_xxs'>
+<ul class='ui-list ui-list_size_xxxl'>
     <li class='ui-list__item'>
-        ...
+        Item
     </li>
     <li class='ui-list__item'>
-        ...
+        Item
     </li>
 </ul>
 ```
@@ -57,11 +57,14 @@ core/elements/list|1
 |  `.ui-list_style_disc`    |  Маркер в виде точки.             |
 
 ``` html
-<div class='ui-list ui-list_style_decimal'>
-    <li class="ui-list__item">
-        ...
+<ul class='ui-list ui-list_style_decimal'>
+    <li class='ui-list__item'>
+        Item
     </li>
-</div>
+    <li class='ui-list__item'>
+        Item
+    </li>
+</ul>
 ```
 
 ---
@@ -71,12 +74,12 @@ core/elements/list|1
 Чтобы применить горизонтальный разделитель, добавьте класс `.ui-list_theme_divider`.
 
 ``` html
-<ul class='ui-list ui-list_theme_divider'>
+<ul class='ui-list ui-list_size_xxxl ui-list_theme_divider'>
     <li class='ui-list__item'>
-        ...
+        Item
     </li>
     <li class='ui-list__item'>
-        ...
+        Item
     </li>
 </ul>
 ```

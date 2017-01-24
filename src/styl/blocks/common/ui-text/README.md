@@ -1,5 +1,5 @@
 <!--
-core/common/text|2
+docs/common/text|2
 -->
 
 # Text
@@ -16,8 +16,10 @@ core/common/text|2
 | `.ui-text-strike`    |  ~~Перечеркнутый~~ текст. |
 
 ``` html
-<div class='ui-text-bold'>
-    ...
+<div class="doc-example">
+    <div class='ui-text-bold'>
+        Жирный текст
+    </div>
 </div>
 ```
 
@@ -34,8 +36,10 @@ core/common/text|2
 | `.ui-text-right`  |  Выравнивает текст вправо.    |
 
 ``` html
-<div class='ui-text-center'>
-    ...
+<div class="doc-example">
+    <div class='ui-text-center'>
+        Текст по центру
+    </div>
 </div>
 ```
 
@@ -52,9 +56,12 @@ core/common/text|2
 | `.ui-text-bottom`  |  Выравнивает текст к низу.          |
 
 ``` html
-<div class='ui-text-middle'>
-    ...
+<div class='doc-example'>
+    <span class='ui-text-middle'>
+        Выравнивает к центру по вертикали
+    </span>
 </div>
+
 ```
 
 ---
@@ -70,8 +77,12 @@ core/common/text|2
 | `.ui-text-nowrap`    |  Весь текст отображается одной строкой.                    |
 
 ``` html
-<div class='ui-text-ellipsis'>
-    ...
+<div class='doc-example'>
+    <div class='ui-text-ellipsis'>
+        Текст обрезается и к концу строки добавляется троеточие,
+        Текст обрезается и к концу строки добавляется троеточие,
+        Текст обрезается и к концу строки добавляется троеточие
+    </div>
 </div>
 ```
 

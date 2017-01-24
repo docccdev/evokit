@@ -1,5 +1,5 @@
 <!--
-core/layout/grid|3
+docs/layout/grid|3
 -->
 
 # Grid
@@ -32,13 +32,13 @@ Cетка UIKit вмещает до 10 столбцов. Она использу
 ``` html
 <div class='ui-grid'>
     <div class='ui-grid__item ui-width-1-3'>
-        ...
+        <div class='doc-example'>Item</div>
     </div>
     <div class='ui-grid__item ui-width-1-3'>
-        ...
+        <div class='doc-example'>Item</div>
     </div>
     <div class='ui-grid__item ui-width-1-3'>
-        ...
+        <div class='doc-example'>Item</div>
     </div>
 </div>
 ```
@@ -55,10 +55,10 @@ Cетка UIKit вмещает до 10 столбцов. Она использу
 ``` html
 <div class='ui-grid ui-grid_column_2'>
     <div class='ui-grid__item'>
-        ...
+        <div class='doc-example'>Item</div>
     </div>
     <div class='ui-grid__item'>
-        ...
+        <div class='doc-example'>Item</div>
     </div>
 </div>
 ```
@@ -71,15 +71,15 @@ Cетка UIKit вмещает до 10 столбцов. Она использу
 
 |         Class         |         Description         |
 |-----------------------|-----------------------------|
-|  `.ui-grid_size_`[size](core/base/sizes.html)  | Отступ между ячейками.  |
+|  `.ui-grid_size_`[size](docs/base/sizes.html)  | Отступ между ячейками.  |
 
 ``` html
-<div class='ui-grid ui-grid_size_xxs'>
+<div class='ui-grid ui-grid_size_xxxl'>
     <div class='ui-grid__item ui-width-1-2'>
-        ...
+        <div class='doc-example'>Item</div>
     </div>
     <div class='ui-grid__item ui-width-1-2'>
-        ...
+        <div class='doc-example'>Item</div>
     </div>
 </div>
 ```
@@ -91,20 +91,20 @@ Cетка UIKit вмещает до 10 столбцов. Она использу
 Вы можете легко расширить макет сетки с вложенными сетками.
 
 ``` html
-<div class='ui-grid'>
+<div class='ui-grid ui-grid_size_xxxl'>
     <div class='ui-grid__item ui-width-1-2'>
-        ...
+        <div class='doc-example'>Item</div>
     </div>
     <div class='ui-grid__item ui-width-1-2'>
-        <div class='ui-grid'>
+        <div class='ui-grid ui-grid_size_m'>
             <div class='ui-grid__item ui-width-1-3'>
-                ...
+                <div class='doc-example'>Item</div>
             </div>
             <div class='ui-grid__item ui-width-1-3'>
-                ...
+                <div class='doc-example'>Item</div>
             </div>
             <div class='ui-grid__item ui-width-1-3'>
-                ...
+                <div class='doc-example'>Item</div>
             </div>
         </div>
     </div>
@@ -126,7 +126,7 @@ Cетка UIKit вмещает до 10 столбцов. Она использу
 ``` html
 <div class="ui-grid ui-grid_align_center">
     <div class="ui-grid__item">
-        ...
+        <div class='doc-example'>Item</div>
     </div>
 </div>
 ```
@@ -144,12 +144,12 @@ Cетка UIKit вмещает до 10 столбцов. Она использу
 |  `.ui-grid_valign_justify` | Выравнивание к краям.   |
 
 ``` html
-<div class='ui-grid ui-grid_valign_justify'>
+<div class='ui-grid ui-grid_column_1 ui-grid_valign_justify' style='height: 200px'>
     <div class='ui-grid__item'>
-        ...
+        <div class='doc-example'>Item</div>
     </div>
     <div class='ui-grid__item'>
-        ...
+        <div class='doc-example'>Item</div>
     </div>
 </div>
 ```
@@ -161,12 +161,12 @@ Cетка UIKit вмещает до 10 столбцов. Она использу
 Чтобы применить вертикальный разделитель между ячейками, добавьте класс `.ui-grid_theme_divider`.
 
 ``` html
-<div class='ui-grid ui-grid_theme_divider'>
+<div class='ui-grid ui-grid_size_xxxl ui-grid_theme_divider'>
     <div class='ui-grid__item'>
-        ...
+        <div class='doc-example'>Item</div>
     </div>
     <div class='ui-grid__item'>
-        ...
+        <div class='doc-example'>Item</div>
     </div>
 </div>
 ```

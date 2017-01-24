@@ -1,5 +1,5 @@
 <!--
-core/base/sizes|1
+docs/base/sizes|1
 -->
 
 # Модификаторы размеров
@@ -35,7 +35,12 @@ core/base/sizes|1
 ## Пример
 
 ``` html
-<div class='ui-search-form ui-search-form_size_xxl'>
-    ...
+<div class="ui-grid ui-grid_size_xxxl">
+    <div class='ui-grid__item'>
+        <div class="doc-example">Item</div>
+    </div>
+    <div class='ui-grid__item'>
+        <div class="doc-example">Item</div>
+    </div>
 </div>
 ```

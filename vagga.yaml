@@ -26,7 +26,8 @@ commands:
     run: |
       gulp desktop
       gulp portable
-      gulp docs
+      gulp doc
+      gulp md
   watch: !Command
     description: Run watch *.md
     container: frontend

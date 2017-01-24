@@ -1,5 +1,5 @@
 <!--
-core/base/media|2
+docs/base/media|2
 -->
 
 # Медиа классы
@@ -28,7 +28,18 @@ core/base/media|2
 ## Пример
 
 ``` html
-<div class='ui-grid ui-grid_column_3 ui-grid_column_4@xlarge'>
-    ...
+<div class='ui-grid ui-grid_size_m ui-grid_column_3 ui-grid_column_4@xlarge'>
+    <div class='ui-grid__item'>
+        <div class="doc-example">Item</div>
+    </div>
+    <div class='ui-grid__item'>
+        <div class="doc-example">Item</div>
+    </div>
+    <div class='ui-grid__item'>
+        <div class="doc-example">Item</div>
+    </div>
+    <div class='ui-grid__item'>
+        <div class="doc-example">Item</div>
+    </div>
 </div>
 ```

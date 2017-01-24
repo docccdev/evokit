@@ -9,7 +9,7 @@ gulp.task('desktop', function () {
             compress: true,
             use: [autoprefixer('last 5 versions')]
         }))
-        .pipe(gulp.dest('./documentation/resource/css'));
+        .pipe(gulp.dest('./documentation/css'));
 });
 
 gulp.task('portable', function () {
@@ -18,23 +18,32 @@ gulp.task('portable', function () {
             compress: true,
             use: [autoprefixer('last 5 versions')]
         }))
-        .pipe(gulp.dest('./documentation/resource/css'));
+        .pipe(gulp.dest('./documentation/css'));
 });
 
-gulp.task('docs', function() {
+gulp.task('doc', function () {
+    return gulp.src('./docsrc/styl/doc.styl')
+        .pipe(stylus({
+            compress: true,
+            use: [autoprefixer('last 5 versions')]
+        }))
+        .pipe(gulp.dest('./documentation/css'));
+});
+
+gulp.task('md', function() {
     return gulp.src('**/*.md')
         .pipe(gulpMdDocs({
             templates: {
-                base: './documentation/resource/template.html',
+                base: './docsrc/tmpl/base.html',
                 block: {
-                    code: './documentation/resource/block/code.html',
-                    codespan: './documentation/resource/block/codespan.html',
-                    hr: './documentation/resource/block/hr.html',
-                    heading: './documentation/resource/block/heading.html',
-                    paragraph: './documentation/resource/block/paragraph.html',
-                    table: './documentation/resource/block/table.html',
-                    tablerow: './documentation/resource/block/tablerow.html',
-                    tablecell: './documentation/resource/block/tablecell.html',
+                    code: './docsrc/tmpl/block/code.html',
+                    codespan: './docsrc/tmpl/block/codespan.html',
+                    hr: './docsrc/tmpl/block/hr.html',
+                    heading: './docsrc/tmpl/block/heading.html',
+                    paragraph: './docsrc/tmpl/block/paragraph.html',
+                    table: './docsrc/tmpl/block/table.html',
+                    tablerow: './docsrc/tmpl/block/tablerow.html',
+                    tablecell: './docsrc/tmpl/block/tablecell.html',
                 }
             }
         }))
@@ -43,5 +52,6 @@ gulp.task('docs', function() {
 
 gulp.task('watch', function() {
     gulp.watch('./src/styl/**/*.styl', ['desktop', 'portable']);
-    gulp.watch('**/*.md', ['docs']);
+    gulp.watch('./docsrc/styl/**/*.styl', ['doc']);
+    gulp.watch('**/*.md', ['md']);
 });

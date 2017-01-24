@@ -1,5 +1,5 @@
 <!--
-core/layout/box|2
+docs/layout/box|2
 -->
 
 # Box
@@ -13,8 +13,10 @@ core/layout/box|2
 Добавьте класс `.ui-box` к элементу контейнера.
 
 ``` html
-<div class='ui-box'>
-    ...
+<div class="doc-example">
+    <div class='ui-box ui-box_theme_gray'>
+        Box
+    </div>
 </div>
 ```
 
@@ -28,9 +30,9 @@ core/layout/box|2
 
 |                  Class                   |            Description            |
 |------------------------------------------|-----------------------------------|
-|  `.ui-box_padding_`[size](core/base/sizes.html)    | Внутренний отступ со всех сторон. |
-|  `.ui-box_padding-tb_`[size](core/base/sizes.html) | Внутренний отступ сверху и снизу. |
-|  `.ui-box_padding-lr_`[size](core/base/sizes.html) | Внутренний отступ слева и справа. |
+|  `.ui-box_padding_`[size](docs/base/sizes.html)    | Внутренний отступ со всех сторон. |
+|  `.ui-box_padding-tb_`[size](docs/base/sizes.html) | Внутренний отступ сверху и снизу. |
+|  `.ui-box_padding-lr_`[size](docs/base/sizes.html) | Внутренний отступ слева и справа. |
 
 ---
 
@@ -38,16 +40,18 @@ core/layout/box|2
 
 |                  Class                  |            Description         |
 |-----------------------------------------|--------------------------------|
-|  `.ui-box_margin_`[size](core/base/sizes.html)    | Внешний отступ со всех сторон. |
-|  `.ui-box_margin-tb_`[size](core/base/sizes.html) | Внешний отступ сверху и снизу. |
-|  `.ui-box_margin-lr_`[size](core/base/sizes.html) | Внешний отступ слева и справа. |
+|  `.ui-box_margin_`[size](docs/base/sizes.html)    | Внешний отступ со всех сторон. |
+|  `.ui-box_margin-tb_`[size](docs/base/sizes.html) | Внешний отступ сверху и снизу. |
+|  `.ui-box_margin-lr_`[size](docs/base/sizes.html) | Внешний отступ слева и справа. |
 
 
 
 
 ``` html
-<div class='ui-box ui-box_padding_xxs'>
-    ...
+<div class="doc-example">
+    <div class='ui-box ui-box_padding_xxxl ui-box_theme_gray'>
+        Box
+    </div>
 </div>
 ```
 
@@ -63,7 +67,11 @@ core/layout/box|2
 |  `.ui-box_theme_gray`   |  Цвет фона серый.  |
 
 ``` html
-<div class='ui-box ui-box_theme_white'>
-    ...
+<div class="doc-example">
+    <div class='ui-box ui-box_padding_xxxl ui-box_theme_gray'>
+        <div class='ui-box ui-box_theme_white'>
+            Box
+        </div>
+    </div>
 </div>
 ```

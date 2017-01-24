@@ -1,12 +1,12 @@
 <!--
-core/layout/panel|4
+docs/layout/panel|4
 -->
 
 # Panel
 
 ### Прямоугольный блок с разными темами и внутренними отступами.
 
-UIKit использует панели для того чтобы наметить определенные разделы вашего содержания, которые могут быть стилизованы по-разному. Как правило, панели расположены в столбцах сетки из компонента <a href="core/layout/grid.html">Grid</a>.
+UIKit использует панели для того чтобы наметить определенные разделы вашего содержания, которые могут быть стилизованы по-разному. Как правило, панели расположены в столбцах сетки из компонента <a href="docs/layout/grid.html">Grid</a>.
 
 ---
 
@@ -20,9 +20,11 @@ UIKit использует панели для того чтобы намети�
 |  `.ui-panel_body` |  Добавьте этот класс дочернему элементу для создания тела панели.      |
 
 ``` html
-<div class='ui-panel'>
-    <div class='ui-panel__body'>
-        ...
+<div class="doc-example">
+    <div class='ui-panel ui-panel_theme_gray'>
+        <div class='ui-panel__body'>
+            Panel
+        </div>
     </div>
 </div>
 ```
@@ -35,12 +37,14 @@ UIKit использует панели для того чтобы намети�
 
 |         Class         |      Description      |
 |-----------------------|-----------------------|
-|  `.ui-panel_size_`[size](core/base/sizes.html)  | Внутренний отступ.  |
+|  `.ui-panel_size_`[size](docs/base/sizes.html)  | Внутренний отступ.  |
 
 ``` html
-<div class='ui-panel ui-panel_size_xxs'>
-    <div class='ui-panel__body'>
-        ...
+<div class="doc-example">
+    <div class='ui-panel ui-panel_theme_gray ui-panel_size_xxxl'>
+        <div class='ui-panel__body'>
+            Panel
+        </div>
     </div>
 </div>
 ```
@@ -57,9 +61,15 @@ UIKit использует панели для того чтобы намети�
 |  `.ui-panel_theme_gray`   |  Цвет фона серый.  |
 
 ``` html
-<div class='ui-panel ui-panel_theme_white'>
-    <div class='ui-panel__body'>
-        ...
+<div class="doc-example">
+    <div class='ui-panel ui-panel_theme_gray ui-panel_size_xxxl'>
+        <div class='ui-panel__body'>
+            <div class='ui-panel ui-panel_theme_white'>
+                <div class='ui-panel__body'>
+                    Panel
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 ```

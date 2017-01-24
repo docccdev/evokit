@@ -1,5 +1,5 @@
 <!--
-core/layout/page|1
+docs/layout/page|1
 -->
 
 # Page

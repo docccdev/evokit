@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Gulp md docs</title>
+        <meta charset="utf-8">
+        <base href="<%= basePath %>">
+        <link href="css/doc.css" media="all" rel="stylesheet" type="text/css">
+        <link href="css/desktop.css" media="all" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700&amp;subset=latin,cyrillic">
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/github.min.css">
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+        <script>
+            function toggleTab(index, hash) {
+                var tabLinkList = document.querySelectorAll("[data-tab-link='"+hash+"']");
+                var tabContentList = document.querySelectorAll("[data-tab-content='"+hash+"']");
+
+                Array.prototype.forEach.call(tabLinkList, function(node, i) {
+                    if (index === i) {
+                        node.classList.add('doc-tab__list-item_state_active');
+                        tabContentList[i].classList.add('doc-tab__content_state_active');
+                    } else {
+                        node.classList.remove('doc-tab__list-item_state_active');
+                        tabContentList[i].classList.remove('doc-tab__content_state_active');
+                    }
+                });
+            }
+            hljs.initHighlightingOnLoad();
+        </script>
+    </head>
+    <body>
+
+        <div class="doc-header doc-header_theme_shadow">
+            <a href="index.html" class="doc-header__logo">UIkit</a>
+            <ul class="doc-header__nav">
+                <% _.forIn(_.sortBy(navTree, ['sortIndex', 'value']), function(data) { %>
+                    <li class="doc-header__nav-item">
+                        <a
+                            href="<%- data.href %>"
+                            class="
+                                doc-header__nav-link
+                                <% if(data.active) { %>
+                                    doc-header__nav-link_state_active
+                                <% } %>
+                            "
+                        >
+                            <% if(data.value == 'docs') { %>
+                                documentation
+                            <% } else { %>
+                                <%- data.value %>
+                            <% } %>
+                        </a>
+                    </li>
+                <% }) %>
+            </ul>
+        </div>
+
+        <div class="doc-page">
+            <div class="doc-page__side">
+                <% _.forIn(_.filter(navTree, 'active'), function(data) { %>
+                    <div class="doc-page__side-title">
+                        <% if(data.value == 'docs') { %>
+                            Documentation
+                        <% } else { %>
+                            <%- data.value %>
+                        <% } %>
+                    </div>
+                    <% _.forIn(_.sortBy(data.children, ['sortIndex', 'value']), function(data) { %>
+                        <div class="doc-menu">
+                            <div class="doc-menu__title">
+                                <%- _.toUpper(data.value) %>
+                            </div>
+                            <div class="doc-menu__list">
+                                <% _.forIn(_.sortBy(data.children, ['sortIndex', 'value']), function(data) { %>
+                                    <div class="doc-menu__list-item">
+                                        <a
+                                            href="<%- data.href %>"
+                                            class="
+                                                doc-menu__list-link
+                                                <% if(data.active) { %>
+                                                    doc-menu__list-link_state_active
+                                                <% } %>
+                                            "
+                                        >
+                                            <%- _.upperFirst(data.value) %>
+                                        </a>
+                                    </div>
+                                <% }) %>
+                            </div>
+                        </div>
+                    <% }) %>
+                <% }) %>
+            </div>
+            <div class="doc-page__content">
+                <div class="doc-content">
+                    <%= content %>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

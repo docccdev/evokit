@@ -1,5 +1,5 @@
 <!--
-core/common/line|3
+docs/common/line|3
 -->
 
 # Line
@@ -15,7 +15,9 @@ core/common/line|3
 Блок состоит из одного класса `.ui-line`.
 
 ``` html
-<div class='ui-line'></div>
+<div class="doc-example">
+    <div class='ui-line'></div>
+</div>
 ```
 
 ---
@@ -26,8 +28,10 @@ core/common/line|3
 
 |         Class         |          Description           |
 |-----------------------|--------------------------------|
-|  `.ui-line_size_`[size](core/base/sizes.html)  | Отступ сверху и снизу.  |
+|  `.ui-line_size_`[size](docs/base/sizes.html)  | Отступ сверху и снизу.  |
 
 ``` html
-<div class='ui-line ui-line_size_xxs'></div>
+<div class="doc-example">
+    <div class='ui-line ui-line_size_xxxl'></div>
+</div>
 ```
