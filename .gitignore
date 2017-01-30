@@ -1,3 +1,4 @@
 node_modules
 .vagga
-doc_src/_root/css
+doc_src/__root/css
+doc_dist
