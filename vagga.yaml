@@ -24,10 +24,12 @@ commands:
     description: Run build
     container: frontend
     run: |
-      gulp desktop
-      gulp portable
-      gulp doc
-      gulp md
+      gulp compile_desktop_uikit
+      gulp compile_portable_uikit
+      gulp compile_doc_css
+      gulp copy_template_root_dir
+      gulp compile_doc
+
   watch: !Command
     description: Run watch *.md
     container: frontend

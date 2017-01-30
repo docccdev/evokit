@@ -22,8 +22,9 @@
   "devDependencies": {
     "autoprefixer-stylus": "^0.11.0",
     "gulp": "^3.9.1",
-    "gulp-md-docs": "^0.1.5",
+    "gulp-md-docs": "^0.1.6",
     "gulp-stylus": "^2.5.0",
-    "gulp-cli": "^0.2.0"
+    "gulp-cli": "^0.2.0",
+    "gulp-contrib-copy": "0.1.2"
   }
 }

@@ -9,7 +9,7 @@ doc:
   stage: doc
   script:
   - vagga build
-  - gitlab-publish documentation bigl-uikit
+  - gitlab-publish doc_dist bigl-uikit
 
 cleanup:
   stage: cleanup

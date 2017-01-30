@@ -1,3 +1,5 @@
+doc_src
+doc_dist
 node_modules
 gulpfile.js
 .vagga
