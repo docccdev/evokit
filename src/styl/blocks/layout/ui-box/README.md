@@ -28,22 +28,29 @@ docs/layout/box|2
 
 ### Внутренние
 
-|                  Class                   |            Description            |
-|------------------------------------------|-----------------------------------|
-|  `.ui-box_padding_`[size](docs/base/sizes.html)    | Внутренний отступ со всех сторон. |
-|  `.ui-box_padding-tb_`[size](docs/base/sizes.html) | Внутренний отступ сверху и снизу. |
-|  `.ui-box_padding-lr_`[size](docs/base/sizes.html) | Внутренний отступ слева и справа. |
+|                         Class                          |            Description            |
+|--------------------------------------------------------|-----------------------------------|
+|  `.ui-box_padding_`[size](docs/base/sizes.html)        | Внутренний отступ со всех сторон. |
+|  `.ui-box_padding-tb_`[size](docs/base/sizes.html)     | Внутренний отступ сверху и снизу. |
+|  `.ui-box_padding-lr_`[size](docs/base/sizes.html)     | Внутренний отступ слева и справа. |
+|  `.ui-box_padding-left_`[size](docs/base/sizes.html)   | Внутренний отступ слева.          |
+|  `.ui-box_padding-top_`[size](docs/base/sizes.html)    | Внутренний отступ сверху.         |
+|  `.ui-box_padding-right_`[size](docs/base/sizes.html)  | Внутренний отступ справа.         |
+|  `.ui-box_padding-bottom_`[size](docs/base/sizes.html) | Внутренний отступ снизу.          |
 
 ---
 
 ### Внешние
 
-|                  Class                  |            Description         |
-|-----------------------------------------|--------------------------------|
-|  `.ui-box_margin_`[size](docs/base/sizes.html)    | Внешний отступ со всех сторон. |
-|  `.ui-box_margin-tb_`[size](docs/base/sizes.html) | Внешний отступ сверху и снизу. |
-|  `.ui-box_margin-lr_`[size](docs/base/sizes.html) | Внешний отступ слева и справа. |
-
+|                         Class                         |            Description         |
+|-------------------------------------------------------|--------------------------------|
+|  `.ui-box_margin_`[size](docs/base/sizes.html)        | Внешний отступ со всех сторон. |
+|  `.ui-box_margin-tb_`[size](docs/base/sizes.html)     | Внешний отступ сверху и снизу. |
+|  `.ui-box_margin-lr_`[size](docs/base/sizes.html)     | Внешний отступ слева и справа. |
+|  `.ui-box_margin-left_`[size](docs/base/sizes.html)   | Внешний отступ слева.          |
+|  `.ui-box_margin-top_`[size](docs/base/sizes.html)    | Внешний отступ сверху.         |
+|  `.ui-box_margin-right_`[size](docs/base/sizes.html)  | Внешний отступ справа.         |
+|  `.ui-box_margin-bottom_`[size](docs/base/sizes.html) | Внешний отступ снизу.          |
 
 
 
