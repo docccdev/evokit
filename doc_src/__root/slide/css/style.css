@@ -1,0 +1,134 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+html, body {
+    font-size: 13px;
+    font-family: -apple-system,BlinkMacSystemFont,Roboto,Open Sans,Helvetica Neue,sans-serif;
+    overflow: hidden;
+}
+.slider-case {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    transition: transform .3s ease-out;
+    transform: translateX(-100%);
+}
+.slider-case.active {
+    transform: translateX(0);
+}
+.slider-case.active ~ .slider-case {
+    transform: translateX(100%);
+}
+
+.svg {
+    display: block;
+    margin: 0 auto;
+    width: 85%;
+}
+
+.separator {
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin-top: 230px;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    border: 2px solid rgba(0,0,0,.2);
+    border-width: 0 2px 2px 0;
+    margin: 0 auto;
+}
+
+.diff {
+    font-style: normal;
+    padding: 1px 3px;
+    color: #000;
+    background: #fc0;
+}
+
+.copyright {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    margin: 20px;
+    font-size: 11px;
+    z-index: 99999;
+    opacity: .6;
+}
+
+.pages {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    margin: 20px;
+    font-size: 16px;
+    z-index: 99999;
+    opacity: .6;
+}
+
+.o4ki {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 14%;
+    transform: translate(-48%, -140%);
+}
+
+.jaba {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 12%;
+    transform: translate(-78%, -52%);
+    background: #fff;
+}
+
+.povesilsa {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 9%;
+    transform: translate(-95%, 13%);
+}
+
+.ogon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 6%;
+    transform: translate(-340%, 175%);
+}
+
+.jdyn {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 30%;
+    transform: translate(-31%, 68%);
+}
+
+.roja-1 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 8%;
+    transform: translate(-6%, -106%) scale(-1, 1);
+}
+
+.roja-2 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 7%;
+    transform: translate(-113%, -22%);
+}
+
+.roja-3 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 19%;
+    transform: translate(-53%, -44%);
+}
