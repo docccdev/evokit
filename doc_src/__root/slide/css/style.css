@@ -6,6 +6,8 @@ html, body {
     font-size: 13px;
     font-family: -apple-system,BlinkMacSystemFont,Roboto,Open Sans,Helvetica Neue,sans-serif;
     overflow: hidden;
+    user-select: none;
+    cursor: default;
 }
 .slider-case {
     position: absolute;
@@ -131,4 +133,49 @@ html, body {
     top: 50%;
     width: 19%;
     transform: translate(-53%, -44%);
+}
+
+.nav {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 99999;
+    margin: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    padding-top: 33px;
+    user-select: none;
+}
+
+.nav-item:first-child {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0 0 6px;
+}
+
+.nav-item {
+    width: 30px;
+    height: 30px;
+    background: #5a5a5a;
+    margin: 0 3px;
+    color: #fff;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    opacity: .7;
+    cursor: pointer;
+}
+
+.nav-item.disable {
+    opacity: .2;
+    cursor: default;
+}
+
+.nav-item.active, .nav-item:active {
+    opacity: 1;
 }
