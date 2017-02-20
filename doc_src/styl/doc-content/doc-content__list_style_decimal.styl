@@ -1,0 +1,14 @@
+.doc-content__list_style_decimal
+    counter-reset: item-index
+
+    & > .doc-content__list-item
+        padding-left: 20px
+        position: relative
+
+        &:before
+            position: absolute
+            margin-left: -20px
+            width: 20px
+            text-align: center
+            content: counter(item-index) '.'
+            counter-increment: item-index

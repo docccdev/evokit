@@ -4,11 +4,32 @@ changelog|3
 
 # Changelog
 
+## 0.1.25 beta (20.02.2017)
+
+- Added modifiers for [ui-grid](docs/layout/grid.html)
+    - `.ui-grid_direction_row`
+    - `.ui-grid_direction_row-reverse`
+    - `.ui-grid_direction_column`
+    - `.ui-grid_direction_column-reverse`
+    - `.ui-grid_align_left`
+    - `.ui-grid_valign_top`
+- Added [media rules](docs/base/media.html) for all grid modifiers
+
+
 ## 0.1.24 beta (06.02.2017)
 
 - Added [new block](docs/common/link.html) `.ui-link`
-- Added modifiers for [ui-box](docs/layout/box.html) padding `.ui-box_padding-left_*`, `.ui-box_padding-top_*`, `.ui-box_padding-right_*`, `.ui-box_padding-bottom_*`
-- Added modifiers for [ui-box](docs/layout/box.html) margin `.ui-box_margin-left_*`, `.ui-box_margin-top_*`, `.ui-box_margin-right_*`, `.ui-box_margin-bottom_*`
+- Added modifiers for [ui-box](docs/layout/box.html) padding
+    - `.ui-box_padding-left_*`
+    - `.ui-box_padding-top_*`
+    - `.ui-box_padding-right_*`
+    - `.ui-box_padding-bottom_*`
+- Added modifiers for [ui-box](docs/layout/box.html) margin
+    - `.ui-box_margin-left_*`
+    - `.ui-box_margin-top_*`
+    - `.ui-box_margin-right_*`
+    - `.ui-box_margin-bottom_*`
+
 
 ## 0.1.23 beta (24.01.2017)
 
@@ -23,8 +44,9 @@ changelog|3
 ## 0.1.21 beta (16.01.2017)
 
 - Added modifier for [ui-grid](docs/layout/grid.html) `.ui-grid_column_*`
-- Added description for [Media queries](docs/base/media.html)
+- Added description for [media queries](docs/base/media.html)
 - Changed all media class from `.ui-width-xl-1-2` to `.ui-width-1-2@xlarge`
+
 
 ## 0.1.20 beta (13.01.2017)
 

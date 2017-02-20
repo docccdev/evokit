@@ -86,6 +86,30 @@ Cетка UIKit вмещает до 10 столбцов. Она использу
 
 ---
 
+## Направление ячеек
+
+Устанавливает главную ось `main-axis`, определяя тем самым направление для элементов сетки. По умолчанию, слева направо.
+
+|         Class         |         Description         |
+|-----------------------|-----------------------------|
+|  `.ui-grid_direction_row`            | Cлева направо для **ltr**, справа налево для **rtl**  |
+|  `.ui-grid_direction_row-reverse`    | Cправа налево для **ltr**, слева направо для **rtl**  |
+|  `.ui-grid_direction_column`         | Aналогично **row** сверху вниз  |
+|  `.ui-grid_direction_column-reverse` | Aналогично **row-reverse**, снизу вверх.  |
+
+``` html
+<div class='ui-grid ui-grid_column_2 ui-grid_direction_row-reverse'>
+    <div class='ui-grid__item'>
+        <div class='doc-example'>Item 1</div>
+    </div>
+    <div class='ui-grid__item'>
+        <div class='doc-example'>Item 2</div>
+    </div>
+</div>
+```
+
+---
+
 ## Вложенные сетки
 
 Вы можете легко расширить макет сетки с вложенными сетками.
@@ -119,8 +143,9 @@ Cетка UIKit вмещает до 10 столбцов. Она использу
 
 |           Class           |          Description          |
 |---------------------------|-------------------------------|
-|  `.ui-grid_align_center`  | Выравнивание по центру.       |
+|  `.ui-grid_align_left`    | Выравнивание по левому краю. |
 |  `.ui-grid_align_right`   | Выравнивание по правому краю. |
+|  `.ui-grid_align_center`  | Выравнивание по центру.       |
 |  `.ui-grid_align_justify` | Выравнивание по краям.        |
 
 ``` html

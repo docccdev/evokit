@@ -1,5 +1,5 @@
 for name, value in $ui_size
-    .ui-grid_size_{name}
+    +media-selector('.ui-grid_size_'+name)
         margin-top: -(floor(value / 2))
         margin-left: -(floor(value / 2))
         margin-right: -(ceil(value / 2))
