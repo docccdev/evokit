@@ -9,20 +9,20 @@ rules|6
     
     **Неправильный пример**, выдаст ошибку в IE:
     ``` html
-        <div class='ui-grid'>
-            <div class='ui-grid__item ui-text-break'>
-                Много текста
-            </div>
+    <div class='ui-grid'>
+        <div class='ui-grid__item ui-text-break'>
+            Много текста
         </div>
+    </div>
     ```
     
     **Правильно**:
     ``` html
-        <div class='ui-grid'>
-            <div class='ui-grid__item'>
-                <div class='ui-text-break'>
-                    Много текста
-                </div>
+    <div class='ui-grid'>
+        <div class='ui-grid__item'>
+            <div class='ui-text-break'>
+                Много текста
             </div>
         </div>
+    </div>
     ```
