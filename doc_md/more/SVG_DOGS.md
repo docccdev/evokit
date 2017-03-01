@@ -2,7 +2,6 @@
 more/images/svg-dogs|1
 -->
 
-[dog-adult-big]: http://assets.uaprom-trunk.dev-cluster.uaprom/bigl/images/dogs/dog-search.svg "svg-dog"
 [dog-error]: http://assets.uaprom-trunk.dev-cluster.uaprom/bigl/images/dogs/dog-error.svg "svg-dog"
 [dog-search]: http://assets.uaprom-trunk.dev-cluster.uaprom/bigl/images/dogs/dog-search.svg "svg-dog"
 [dog-with-hearts]: http://assets.uaprom-trunk.dev-cluster.uaprom/bigl/images/dogs/dog-with-hearts.svg "svg-dog"
@@ -17,7 +16,6 @@ more/images/svg-dogs|1
 
 |          image          |        file name         |  templates |
 |-------------------------|--------------------------|------------|
-| ![dog-adult-big]        | dog-adult-big.svg        | `?`|
 | ![dog-error]            | dog-error.svg            | `bigl/error/500_catalog.mako` `bigl_portable/error/500_catalog.mako` |
 | ![dog-search]           | dog-search.svg           | `bigl/error/400.mako` `bigl/error/404.mako` `bigl/portlets/catalog.mako` `bigl/portlets/search.mako` |
 | ![dog-with-hearts]      | dog-with-hearts.svg      | `bigl/Favorites/controller.jsx` |
