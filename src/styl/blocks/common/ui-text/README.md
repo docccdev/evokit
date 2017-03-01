@@ -22,6 +22,21 @@ docs/common/text|2
     </div>
 </div>
 ```
+---
+
+## Цвет текста
+
+|       Class      |     Description     |
+|------------------|---------------------|
+| `.ui-text-muted` | Приглушенный цвет. |
+
+``` html
+<div class="doc-example">
+    <div class='ui-text-muted'>
+        Приглушенный цвет текста
+    </div>
+</div>
+```
 
 ---
 

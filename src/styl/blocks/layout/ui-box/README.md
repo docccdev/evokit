@@ -74,11 +74,9 @@ docs/layout/box|2
 |  `.ui-box_theme_gray`   |  Цвет фона серый.  |
 
 ``` html
-<div class="doc-example">
-    <div class='ui-box ui-box_padding_xxxl ui-box_theme_gray'>
-        <div class='ui-box ui-box_theme_white'>
-            Box
-        </div>
+<div class="doc-example doc-example_theme_gray">
+    <div class='ui-box ui-box_theme_white'>
+        Box
     </div>
 </div>
 ```

@@ -4,6 +4,15 @@ changelog|3
 
 # Changelog
 
+## 0.1.26 beta (01.03.2017)
+
+- Added text color [ui-text-muted](docs/common/text.html)
+- Added modifier for [ui-panel](docs/layout/panel.html)
+    - `.ui-panel_style_border`
+- Added border-box for [ui-panel](docs/layout/panel.html)
+- Reset margin-bottom for [ui-grid_theme_divider](docs/layout/grid.html)
+
+
 ## 0.1.25 beta (20.02.2017)
 
 - Added modifiers for [ui-grid](docs/layout/grid.html)
