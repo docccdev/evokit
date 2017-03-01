@@ -22,7 +22,7 @@ more/images/svg-dogs|1
 | ![dog-search]           | dog-search.svg           | `bigl/error/400.mako` `bigl/error/404.mako` `bigl/portlets/catalog.mako` `bigl/portlets/search.mako` |
 | ![dog-with-hearts]      | dog-with-hearts.svg      | `bigl/Favorites/controller.jsx` |
 | ![round-dog-with-medal] | round-dog-with-medal.svg | `bigl/OpinionForm/desktop.jsx` `bigl/OpinionForm/portable.jsx` |
-| ![round-sad-dog]        | round-sad-dog.svg        | `ubigl/OpinionForm/desktop.jsx` `bigl/OpinionForm/portable.jsx` |
+| ![round-sad-dog]        | round-sad-dog.svg        | `bigl/OpinionForm/desktop.jsx` `bigl/OpinionForm/portable.jsx` |
 
 
 
