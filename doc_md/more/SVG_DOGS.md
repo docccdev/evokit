@@ -7,6 +7,7 @@ more/images/svg-dogs|1
 [dog-with-hearts]: http://assets.uaprom-trunk.dev-cluster.uaprom/bigl/images/dogs/dog-with-hearts.svg "svg-dog"
 [round-dog-with-medal]: http://assets.uaprom-trunk.dev-cluster.uaprom/bigl/images/dogs/round-dog-with-medal.svg "svg-dog"
 [round-sad-dog]: http://assets.uaprom-trunk.dev-cluster.uaprom/bigl/images/dogs/round-sad-dog.svg "svg-dog"
+[dog-ufo]: http://assets.uaprom-trunk.dev-cluster.uaprom/bigl/images/dogs/dog-ufo.svg "svg-dog"
 
 
 # Svg собаки
@@ -21,6 +22,7 @@ more/images/svg-dogs|1
 | ![dog-with-hearts]      | dog-with-hearts.svg      | `bigl/Favorites/controller.jsx` |
 | ![round-dog-with-medal] | round-dog-with-medal.svg | `bigl/OpinionForm/desktop.jsx` `bigl/OpinionForm/portable.jsx` |
 | ![round-sad-dog]        | round-sad-dog.svg        | `bigl/OpinionForm/desktop.jsx` `bigl/OpinionForm/portable.jsx` |
+| ![dog-ufo]              | dog-ufo.svg              | `bigl/cabinet/OrderPage/view.jsx` |
 
 
 
