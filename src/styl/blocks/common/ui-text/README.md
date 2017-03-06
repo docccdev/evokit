@@ -10,18 +10,60 @@ docs/common/text|2
 
 |         Class        |        Description        |
 |----------------------|---------------------------|
-| `.ui-text-bold`      |  **Жирный** текст.        |
-| `.ui-text-underline` |  __Подчеркнутый__ текст.  |
-| `.ui-text-italic`    |  *Курсивный* текст.       |
-| `.ui-text-strike`    |  ~~Перечеркнутый~~ текст. |
+| `.ui-text-underline` |  Подчеркнутый текст.  |
+| `.ui-text-italic`    |  Курсивный текст.     |
+| `.ui-text-strike`    |  Перечеркнутый текст. |
 
 ``` html
 <div class="doc-example">
-    <div class='ui-text-bold'>
-        Жирный текст
-    </div>
+    <span class='ui-text-underline'>
+        Подчеркнутый
+    </span>
+    <span class='ui-text-italic'>
+        Курсивный
+    </span>
+    <span class='ui-text-strike'>
+        Перечеркнутый
+    </span>
 </div>
 ```
+
+---
+
+## Насыщенность шрифта
+
+|        Class       |    font weight   |
+|--------------------|------------------|
+| `.ui-text-thin`    | 100 |
+| `.ui-text-light`   | 300 |
+| `.ui-text-regular` | 400 |
+| `.ui-text-medium`  | 500 |
+| `.ui-text-bold`    | 700 |
+| `.ui-text-black`   | 900 |
+
+``` html
+<div class="doc-example">
+    <span class='ui-text-thin'>
+        100
+    </span>
+    <span class='ui-text-light'>
+        300
+    </span>
+    <span class='ui-text-regular'>
+        400
+    </span>
+    <span class='ui-text-medium'>
+        500
+    </span>
+    <span class='ui-text-bold'>
+        700
+    </span>
+    <span class='ui-text-black'>
+        900
+    </span>
+</div>
+```
+
 ---
 
 ## Цвет текста

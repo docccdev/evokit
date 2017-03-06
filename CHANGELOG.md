@@ -4,6 +4,16 @@ changelog|3
 
 # Changelog
 
+## 0.1.28 beta (06.03.2017)
+
+- Added font weight class for [text](docs/common/text.html)
+    - `.ui-text-thin`
+    - `.ui-text-light`
+    - `.ui-text-regular`
+    - `.ui-text-medium`
+    - `.ui-text-black`
+
+
 ## 0.1.27 beta (06.03.2017)
 
 - Added modifier for [ui-box](docs/layout/box.html)
