@@ -13,7 +13,7 @@ more/images/svg-dogs|1
 [dog-worker]: http://assets.uaprom-trunk.dev-cluster.uaprom/bigl/images/dogs/dog-worker.svg "svg-dog"
 
 
-# Svg собаки
+# SVG собаки
 
 > `uaprom/public/bigl/dogs/`
 
