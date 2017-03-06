@@ -68,10 +68,11 @@ docs/layout/box|2
 
 Определяется фоновым цветом. По умолчанию, панель не имеет фона.
 
-|           Class           |     Description    |
-|---------------------------|--------------------|
-|  `.ui-box_theme_white`  |  Цвет фона белый.  |
-|  `.ui-box_theme_gray`   |  Цвет фона серый.  |
+|            Class            |       Description     |
+|-----------------------------|-----------------------|
+| `.ui-box_theme_white`       | Цвет фона белый.      |
+| `.ui-box_theme_gray`        | Цвет фона серый.      |
+| `.ui-box_theme_transparent` | Цвет фона прозрачный. |
 
 ``` html
 <div class="doc-example doc-example_theme_gray">

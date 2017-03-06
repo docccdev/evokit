@@ -4,6 +4,16 @@ changelog|3
 
 # Changelog
 
+## 0.1.27 beta (06.03.2017)
+
+- Added modifier for [ui-box](docs/layout/box.html)
+    - `.ui-box_theme_transparent`
+- Added modifier for [ui-panel](docs/layout/panel.html)
+    - `.ui-panel_theme_transparent`
+- Added [media rules](docs/base/media.html) for all [ui-box](docs/layout/box.html) modifiers
+- Added [media rules](docs/base/media.html) for all [ui-panel](docs/layout/panel.html) modifiers
+
+
 ## 0.1.26 beta (01.03.2017)
 
 - Added text color [ui-text-muted](docs/common/text.html)

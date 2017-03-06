@@ -1,23 +1,23 @@
 for name, value in $ui_size
-    .ui-box_padding_{name}
+    +media-selector('.ui-box_padding_'+name)
         padding: value
 
-    .ui-box_padding-tb_{name}
+    +media-selector('.ui-box_padding-tb_'+name)
         padding-top: value
         padding-bottom: value
 
-    .ui-box_padding-lr_{name}
+    +media-selector('.ui-box_padding-lr_'+name)
         padding-left: value
         padding-right: value
 
-    .ui-box_padding-left_{name}
+    +media-selector('.ui-box_padding-left_'+name)
         padding-left: value
 
-    .ui-box_padding-top_{name}
+    +media-selector('.ui-box_padding-top_'+name)
         padding-top: value
 
-    .ui-box_padding-right_{name}
+    +media-selector('.ui-box_padding-right_'+name)
         padding-right: value
 
-    .ui-box_padding-bottom_{name}
+    +media-selector('.ui-box_padding-bottom_'+name)
         padding-bottom: value
