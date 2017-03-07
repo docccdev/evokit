@@ -11,6 +11,7 @@ more/images/svg-dogs|1
 [dog-ufo]: http://assets.uaprom-trunk.dev-cluster.uaprom/bigl/images/dogs/dog-ufo.svg "svg-dog"
 [dog-pointer]: http://assets.uaprom-trunk.dev-cluster.uaprom/bigl/images/dogs/dog-pointer.svg "svg-dog"
 [dog-worker]: http://assets.uaprom-trunk.dev-cluster.uaprom/bigl/images/dogs/dog-worker.svg "svg-dog"
+[dog-police]: http://assets.uaprom-trunk.dev-cluster.uaprom/bigl/images/dogs/dog-police.svg "svg-dog"
 
 
 # SVG собаки
@@ -29,6 +30,7 @@ more/images/svg-dogs|1
 | ![dog-ufo]              | dog-ufo.svg              | `bigl/cabinet/OrderPage/view.jsx` |
 | ![dog-pointer]          | dog-pointer.svg          | `bigl/update_browser.mako` |
 | ![dog-worker]           | dog-worker.svg           | `bigl/error/500.mako` |
+| ![dog-police]           | dog-police.svg           | `bigl/how_to_buy.mako` `bigl/safe_shopping.mako` `bigl_portable/how_to_buy.mako` |
 
 
 
