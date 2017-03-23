@@ -1,6 +1,6 @@
 {
   "name": "@evo/bigl-uikit",
-  "version": "0.1.28",
+  "version": "0.1.29",
   "description": "UIKit for Bigl.ua",
   "main": "index.js",
   "scripts": {

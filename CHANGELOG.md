@@ -4,6 +4,13 @@ changelog|3
 
 # Changelog
 
+## 0.1.29 beta (23.03.2017)
+
+- Big update [grid](docs/layout/grid.html) divider
+    - `Responsive`
+    - `Multi column`
+    - `Horizontal and vertical divider`
+
 ## 0.1.28 beta (06.03.2017)
 
 - Added font weight class for [text](docs/common/text.html)

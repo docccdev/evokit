@@ -1,0 +1,13 @@
+grid-divider-item-border($cols)
+    for $index in (1..$cols)
+        & + .ui-grid__item
+            border-left-width: 0
+
+        &:nth-child({$cols}n-{$cols - $index})
+            border-right-width: unit($index == $cols ? 0 : 1, px)
+
+            &:nth-last-child(-n+{$cols - $index + 1})
+                border-bottom-width: 0
+
+            &:not(:nth-last-child(-n+{$cols - $index + 1}))
+                border-bottom-width: 1px

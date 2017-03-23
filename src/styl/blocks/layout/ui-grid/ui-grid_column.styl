@@ -2,4 +2,10 @@ for count in (1..10)
     +media-selector('.ui-grid_column_'+count)
 
         & > .ui-grid__item
+            flex: none
             width: (100 / count)%
+
+        &[class*='ui-grid_theme_divider']
+
+            & > .ui-grid__item
+                grid-divider-item-border(count)

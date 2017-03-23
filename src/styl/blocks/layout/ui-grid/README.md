@@ -181,12 +181,24 @@ Cетка UIKit вмещает до 10 столбцов. Она использу
 
 ---
 
-## Вертикальный разделитель
+## Разделитель между ячейками
 
 Чтобы применить вертикальный разделитель между ячейками, добавьте класс `.ui-grid_theme_divider`.
 
 ``` html
-<div class='ui-grid ui-grid_size_xxxl ui-grid_theme_divider'>
+<div class='ui-grid ui-grid_size_xxxl ui-grid_theme_divider ui-grid_column_3'>
+    <div class='ui-grid__item'>
+        <div class='doc-example'>Item</div>
+    </div>
+    <div class='ui-grid__item'>
+        <div class='doc-example'>Item</div>
+    </div>
+    <div class='ui-grid__item'>
+        <div class='doc-example'>Item</div>
+    </div>
+    <div class='ui-grid__item'>
+        <div class='doc-example'>Item</div>
+    </div>
     <div class='ui-grid__item'>
         <div class='doc-example'>Item</div>
     </div>
