@@ -4,6 +4,11 @@ changelog|3
 
 # Changelog
 
+## 0.1.31 beta (27.03.2017)
+
+- Fixed bug with [grid](docs/layout/grid.html) item padding when applied theme divider
+
+
 ## 0.1.30 beta (23.03.2017)
 
 - Fixed bug with duplicate style
