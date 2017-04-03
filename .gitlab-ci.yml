@@ -1,17 +1,11 @@
 stages:
-- doc
-- cleanup
+- deploy
 
 before_script:
-- vagga _init_storage_dir --allow-multiple bigl-uikit
+- vagga --version
 
-doc:
-  stage: doc
+deploy:
+  stage: deploy
   script:
   - vagga build
   - gitlab-publish doc_dist bigl-uikit
-
-cleanup:
-  stage: cleanup
-  script:
-  - vagga _clean --unused --at-least 1day
