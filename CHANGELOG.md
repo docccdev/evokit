@@ -4,6 +4,12 @@ changelog|3
 
 # Changelog
 
+## 0.1.32 beta (13.04.2017)
+
+- Added [picture](docs/elements/picture.html) to portable bundle
+- Added min and max width for [grid__item](docs/layout/grid.html)
+
+
 ## 0.1.31 beta (27.03.2017)
 
 - Fixed bug with [grid](docs/layout/grid.html) item padding when applied theme divider
