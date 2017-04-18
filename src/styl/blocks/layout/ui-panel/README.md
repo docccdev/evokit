@@ -57,15 +57,25 @@ UIKit использует панели для того чтобы намети�
 
 |             Class             |      Description      |
 |-------------------------------|-----------------------|
-| `.ui-panel_theme_white`       | Цвет фона белый.      |
-| `.ui-panel_theme_gray`        | Цвет фона серый.      |
 | `.ui-panel_theme_transparent` | Цвет фона прозрачный. |
+| `.ui-panel_theme_gray`        | Цвет фона серый.      |
+| `.ui-panel_theme_white`       | Цвет фона белый.      |
 
 ``` html
 <div class="doc-example doc-example_theme_gray">
+    <div class='ui-panel ui-panel_theme_transparent'>
+        <div class='ui-panel__body'>
+            transparent
+        </div>
+    </div>
+    <div class='ui-panel ui-panel_theme_gray'>
+        <div class='ui-panel__body'>
+            gray
+        </div>
+    </div>
     <div class='ui-panel ui-panel_theme_white'>
         <div class='ui-panel__body'>
-            Panel
+            white
         </div>
     </div>
 </div>

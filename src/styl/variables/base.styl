@@ -9,24 +9,66 @@ $page-padding = ()
 $page-min-width = false
 $page-max-width = false
 
-$ui-link-color = #5e8fd5
 $ui-line-color = #dde8f0
-
-$ui-text-color-muted = #a0b0c7
 
 $ui_title = {}
 
 $ui_size = {
-    xxs:    5px
-    xs:     10px
-    s:      15px
-    m:      20px
-    l:      25px
-    xl:     30px
-    xxl:    35px
-    xxxl:   40px
+    xxs: 5px
+    xs: 10px
+    s: 15px
+    m: 20px
+    l: 25px
+    xl: 30px
+    xxl: 35px
+    xxxl: 40px
 }
 
-$ui_panel = {
-    borderRadius: 10px
+
+
+// BLOCKS SETTING
+
+$ui-text = {
+    color: {
+        muted: #a0b0c7
+    }
+}
+
+$ui-link = {
+    color: #5e8fd5
+}
+
+$ui-box = {
+    theme: {
+        white: {
+            background-color: #ffffff
+        }
+        gray: {
+            background-color: #f7f7f7
+        }
+        blue: {
+            background-color: #ebf3f9
+        }
+        transparent: {
+            background-color: transparent
+        }
+    }
+}
+
+$ui-panel = {
+    border-radius: 10px
+    theme: {
+        white: {
+            background-color: $ui-box['theme']['white']['background-color']
+            border-color: #dde8f0
+        }
+        gray: {
+            background-color: $ui-box['theme']['gray']['background-color']
+            border-color: #dde8f0
+        }
+        transparent: {
+            background-color: $ui-box['theme']['transparent']['background-color']
+            border-color: transparent
+        }
+    }
 }

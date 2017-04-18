@@ -70,14 +70,24 @@ docs/layout/box|2
 
 |            Class            |       Description     |
 |-----------------------------|-----------------------|
-| `.ui-box_theme_white`       | Цвет фона белый.      |
-| `.ui-box_theme_gray`        | Цвет фона серый.      |
 | `.ui-box_theme_transparent` | Цвет фона прозрачный. |
+| `.ui-box_theme_gray`        | Цвет фона серый.      |
+| `.ui-box_theme_white`       | Цвет фона белый.      |
+| `.ui-box_theme_blue`        | Цвет фона синий.      |
 
 ``` html
 <div class="doc-example doc-example_theme_gray">
+    <div class='ui-box ui-box_theme_transparent'>
+        transparent
+    </div>
+    <div class='ui-box ui-box_theme_gray'>
+        gray
+    </div>
     <div class='ui-box ui-box_theme_white'>
-        Box
+        white
+    </div>
+    <div class='ui-box ui-box_theme_blue'>
+        blue
     </div>
 </div>
 ```

@@ -4,6 +4,12 @@ changelog|3
 
 # Changelog
 
+## 0.1.33 beta (18.04.2017)
+
+- Added blue theme for [ui-box](docs/layout/box.html)
+- Improved block variables
+
+
 ## 0.1.32 beta (13.04.2017)
 
 - Added [picture](docs/elements/picture.html) to portable bundle

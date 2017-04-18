@@ -1,0 +1,4 @@
+for name, value in $ui-panel['theme']
+    +media-selector('.ui-panel_theme_'+name)
+        background-color: value['background-color']
+        border-color: value['border-color']
