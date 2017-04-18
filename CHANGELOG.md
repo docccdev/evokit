@@ -7,6 +7,7 @@ changelog|3
 ## 0.1.33 beta (18.04.2017)
 
 - Added blue theme for [ui-box](docs/layout/box.html)
+    - `.ui-box_theme_blue`
 - Improved block variables
 
 
