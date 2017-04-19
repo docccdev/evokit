@@ -4,6 +4,21 @@ changelog|3
 
 # Changelog
 
+## 0.1.34 beta (19.04.2017)
+
+- Update [ui-panel](docs/layout/panel.html)
+    - added border-radius and padding for children body
+- Added blue theme for [ui-panel](docs/layout/panel.html)
+    - `.ui-panel_theme_blue`
+- Added margin auto for [ui-box](docs/layout/box.html)
+    - `.ui-box_margin_auto`
+    - `.ui-box_margin-left_auto`
+    - `.ui-box_margin-top_auto`
+    - `.ui-box_margin-right_auto`
+    - `.ui-box_margin-bottom_auto`
+    - `.ui-box_margin-tb_auto`
+    - `.ui-box_margin-lr_auto`
+
 ## 0.1.33 beta (18.04.2017)
 
 - Added blue theme for [ui-box](docs/layout/box.html)
