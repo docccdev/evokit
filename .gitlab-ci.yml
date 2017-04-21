@@ -11,12 +11,17 @@ before_script:
 uikit-css:
   stage: uikit-css
   script:
-  - vagga uikit-css
+  - vagga compile-uikit-css
 
 doc-css:
   stage: doc-css
   script:
-  - vagga doc-css
+  - vagga compile-doc-css
+
+doc-html:
+  stage: doc-html
+  script:
+  - vagga compile-doc-html
 
 collect-static:
   stage: collect-static
