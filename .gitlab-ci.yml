@@ -2,7 +2,6 @@ stages:
 - uikit-css
 - doc-css
 - doc-html
-- collect-static
 - publish
 
 before_script:
@@ -23,12 +22,8 @@ doc-html:
   script:
   - vagga compile-doc-html
 
-collect-static:
-  stage: collect-static
-  script:
-  - vagga collect-static
-
 publish:
   stage: publish
   script:
+  - vagga collect-static
   - gitlab-publish doc_dist bigl-uikit
