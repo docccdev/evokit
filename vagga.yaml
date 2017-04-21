@@ -20,32 +20,6 @@ containers:
         optional: true
 
 commands:
-
-  compile-uikit-css: !Command
-    description: Run compile uikit css
-    container: frontend
-    run: |
-      gulp compile_desktop_uikit
-      gulp compile_portable_uikit
-
-  compile-doc-css: !Command
-    description: Run compile doc css
-    container: frontend
-    run: |
-      gulp compile_doc_css
-
-  compile-doc-html: !Command
-    description: Run compile doc html
-    container: frontend
-    run: |
-      gulp compile_doc
-
-  collect-static: !Command
-    description: Run compile doc html
-    container: frontend
-    run: |
-      gulp copy_template_root_dir
-
   build: !Command
     description: Run build
     container: frontend
