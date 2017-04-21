@@ -39,7 +39,7 @@ gulp.task('compile_portable_uikit', function () {
 });
 
 gulp.task('compile_doc', function() {
-    return gulp.src('**/*.md')
+    return gulp.src('doc_md/**/*.md')
         .pipe(gulpMdDocs({
             template: docTemplate
         }))

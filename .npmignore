@@ -1,5 +1,8 @@
-doc_src
 doc_dist
+doc_md
+doc_src
 node_modules
 gulpfile.js
+vagga.yaml
 .vagga
+.gitlab-ci.yml
