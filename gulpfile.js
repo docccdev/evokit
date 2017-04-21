@@ -17,7 +17,7 @@ gulp.task('compile_doc_css', function () {
 gulp.task('copy_template_root_dir', function() {
     return gulp.src(docTemplate.root_dir + '/**/*')
         .pipe(gulpCopy())
-        .pipe(gulp.dest('doc_dist'));
+        .pipe(gulp.dest('./doc_dist'));
 });
 
 gulp.task('compile_desktop_uikit', function () {
@@ -43,7 +43,7 @@ gulp.task('compile_doc', function() {
         .pipe(gulpMdDocs({
             template: docTemplate
         }))
-        .pipe(gulp.dest('doc_dist'));
+        .pipe(gulp.dest('./doc_dist'));
 });
 
 gulp.task('watch', function() {

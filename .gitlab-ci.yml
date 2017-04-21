@@ -1,12 +1,18 @@
 stages:
+- doc-html
 - uikit-css
 - doc-css
-- doc-html
 - collect-static
 - publish
 
 before_script:
 - vagga --version
+
+doc-html:
+  stage: doc-html
+  # only: [deploy]
+  script:
+  - vagga compile-doc-html
 
 uikit-css:
   stage: uikit-css
@@ -19,12 +25,6 @@ doc-css:
   # only: [deploy]
   script:
   - vagga compile-doc-css
-
-doc-html:
-  stage: doc-html
-  # only: [deploy]
-  script:
-  - vagga compile-doc-html
 
 collect-static:
   stage: collect-static
