@@ -1,29 +1,30 @@
 stages:
-- uikit-css
-- doc-css
-- doc-html
-- publish
+- build
 
 before_script:
 - vagga --version
 
 uikit-css:
-  stage: uikit-css
+  stage: build
   script:
   - vagga compile-uikit-css
 
 doc-css:
-  stage: doc-css
+  stage: build
   script:
   - vagga compile-doc-css
 
 doc-html:
-  stage: doc-html
+  stage: build
   script:
   - vagga compile-doc-html
 
-publish:
-  stage: publish
+collect-static:
+  stage: build
   script:
   - vagga collect-static
+
+publish:
+  stage: build
+  script:
   - gitlab-publish doc_dist bigl-uikit
