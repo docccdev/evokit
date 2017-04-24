@@ -1,0 +1,18 @@
+for name, value in $global-size
+    +media-selector('.grid_size_'+name)
+        margin-top: -(floor(value / 2))
+        margin-left: -(floor(value / 2))
+        margin-right: -(ceil(value / 2))
+        margin-bottom: -(ceil(value / 2))
+
+        & > .grid__item
+            padding-top: (floor(value / 2))
+            padding-left: (floor(value / 2))
+            padding-right: (ceil(value / 2))
+            padding-bottom: (ceil(value / 2))
+
+        &[class*='grid_theme_divider']
+            margin: 0
+
+            & > .grid__item
+                padding: value

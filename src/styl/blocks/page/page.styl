@@ -1,0 +1,13 @@
+.page
+    box-sizing: border-box
+    margin-left: auto
+    margin-right: auto
+
+    if $global-page['min-width']
+        min-width: $global-page['min-width']
+
+    if $global-page['max-width']
+        max-width: $global-page['max-width']
+
+    if length($global-page['padding'])
+        padding: $global-page['padding']

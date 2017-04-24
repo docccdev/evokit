@@ -10,12 +10,12 @@ media-add('xlarge', '(min-width: 1200px)')
 media-add('xxlarge', '(min-width: 1400px)')
 
 // ui-page settings
-$ui-page['padding'] = (0 20px)
-$ui-page['min-width'] = 1000px
-$ui-page['max-width'] = 1240px
+$global-page['padding'] = (0 20px)
+$global-page['min-width'] = 1000px
+$global-page['max-width'] = 1240px
 
 // ui-title settings
-$ui-title = {
+$global-title = {
     h1: 24px
     h2: 22px
     h3: 20px
@@ -24,22 +24,23 @@ $ui-title = {
     h6: 14px
 }
 
-// Common
-@import '../blocks/ui-title'
-@import '../blocks/ui-text'
-@import '../blocks/ui-link'
-@import '../blocks/ui-line'
++prefix-classes('ui-')
+    // Common
+    @import '../blocks/title'
+    @import '../blocks/text'
+    @import '../blocks/link'
+    @import '../blocks/line'
 
-// Layout
-@import '../blocks/ui-page'
-@import '../blocks/ui-box'
-@import '../blocks/ui-grid'
-@import '../blocks/ui-panel'
-@import '../blocks/ui-width'
+    // Layout
+    @import '../blocks/page'
+    @import '../blocks/box'
+    @import '../blocks/grid'
+    @import '../blocks/panel'
+    @import '../blocks/width'
 
-// Elements
-@import '../blocks/ui-list'
-@import '../blocks/ui-picture'
+    // Elements
+    @import '../blocks/list'
+    @import '../blocks/picture'
 
-// Media
-media-apply()
+    // Media
+    media-apply()

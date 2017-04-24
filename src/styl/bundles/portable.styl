@@ -13,10 +13,10 @@ media-add('medium', '(min-width: 768px)')
 media-add('large',  '(min-width: 960px)')
 
 // ui-page settings
-$ui-page['padding'] = (10px)
+$global-page['padding'] = (10px)
 
 // ui-title settings
-$ui-title = {
+$global-title = {
     h1: 22px
     h2: 20px
     h3: 18px
@@ -26,22 +26,22 @@ $ui-title = {
 
 $PORTABLE_MODE = true
 
++prefix-classes('ui-')
+    // Common
+    @import '../blocks/title'
+    @import '../blocks/text'
+    @import '../blocks/link'
+    @import '../blocks/line'
 
-// Common
-@import '../blocks/ui-title'
-@import '../blocks/ui-text'
-@import '../blocks/ui-link'
-@import '../blocks/ui-line'
+    // Layout
+    @import '../blocks/box'
+    @import '../blocks/grid'
+    @import '../blocks/panel'
+    @import '../blocks/width'
 
-// Layout
-@import '../blocks/ui-box'
-@import '../blocks/ui-grid'
-@import '../blocks/ui-panel'
-@import '../blocks/ui-width'
+    // Elements
+    @import '../blocks/list'
+    @import '../blocks/picture'
 
-// Elements
-@import '../blocks/ui-list'
-@import '../blocks/ui-picture'
-
-// Media
-media-apply()
+    // Media
+    media-apply()

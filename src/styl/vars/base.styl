@@ -3,7 +3,7 @@ $PORTABLE_MODE = false
 
 
 // BLOCKS SETTING
-$ui-size = {
+$global-size = {
     xxs: 5px
     xs: 10px
     s: 15px
@@ -14,26 +14,26 @@ $ui-size = {
     xxxl: 40px
 }
 
-$ui-line-color = #dde8f0
-$ui-title = {}
+$global-line-color = #dde8f0
+$global-title = {}
 
-$ui-page = {
+$global-page = {
     padding: ()
     min-width: false
     max-width: false
 }
 
-$ui-text = {
+$global-text = {
     color: {
         muted: #a0b0c7
     }
 }
 
-$ui-link = {
+$global-link = {
     color: #5e8fd5
 }
 
-$ui-box = {
+$global-box = {
     theme: {
         white: {
             background-color: #ffffff
@@ -50,23 +50,23 @@ $ui-box = {
     }
 }
 
-$ui-panel = {
+$global-panel = {
     border-radius: 10px
     theme: {
         white: {
-            background-color: $ui-box['theme']['white']['background-color']
+            background-color: $global-box['theme']['white']['background-color']
             border-color: #dde8f0
         }
         gray: {
-            background-color: $ui-box['theme']['gray']['background-color']
+            background-color: $global-box['theme']['gray']['background-color']
             border-color: #dde8f0
         }
         blue: {
-            background-color: $ui-box['theme']['blue']['background-color']
+            background-color: $global-box['theme']['blue']['background-color']
             border-color: #dde8f0
         }
         transparent: {
-            background-color: $ui-box['theme']['transparent']['background-color']
+            background-color: $global-box['theme']['transparent']['background-color']
             border-color: transparent
         }
     }
