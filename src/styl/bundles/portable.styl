@@ -1,14 +1,31 @@
 // Global variables
+@import '../vars/base'
 @import '../functions'
-@import '../variables/portable'
-@import '../media'
+@import '../mixins/media'
 
-+media('small')
-    //
-+media('medium')
-    //
-+media('large')
-    //
+// Phones landscape
+media-add('small',  '(min-width: 480px)')
+
+// Tablets portrait
+media-add('medium', '(min-width: 768px)')
+
+// Tablets landscape
+media-add('large',  '(min-width: 960px)')
+
+// ui-page settings
+$ui-page['padding'] = (10px)
+
+// ui-title settings
+$ui-title = {
+    h1: 22px
+    h2: 20px
+    h3: 18px
+    h4: 16px
+    h5: 14px
+}
+
+$PORTABLE_MODE = true
+
 
 // Common
 @import '../blocks/ui-title'
@@ -27,4 +44,4 @@
 @import '../blocks/ui-picture'
 
 // Media
-apply_media_cache()
+media-apply()

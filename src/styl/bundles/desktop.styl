@@ -1,12 +1,28 @@
 // Global variables
+@import '../vars/base'
 @import '../functions'
-@import '../variables/desktop'
-@import '../media'
+@import '../mixins/media'
 
-+media('xlarge')
-    //
-+media('xxlarge')
-    //
+// Laptop L
+media-add('xlarge', '(min-width: 1200px)')
+
+// Laptop XL
+media-add('xxlarge', '(min-width: 1400px)')
+
+// ui-page settings
+$ui-page['padding'] = (0 20px)
+$ui-page['min-width'] = 1000px
+$ui-page['max-width'] = 1240px
+
+// ui-title settings
+$ui-title = {
+    h1: 24px
+    h2: 22px
+    h3: 20px
+    h4: 18px
+    h5: 16px
+    h6: 14px
+}
 
 // Common
 @import '../blocks/ui-title'
@@ -26,4 +42,4 @@
 @import '../blocks/ui-picture'
 
 // Media
-apply_media_cache()
+media-apply()
