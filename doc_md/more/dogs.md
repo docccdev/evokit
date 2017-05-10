@@ -1,5 +1,5 @@
 <!--
-more/images/svg-dogs|1
+more/images/dogs|1
 -->
 
 [dog-error]: http://assets.uaprom-trunk.dev-cluster.uaprom/bigl/images/dogs/dog-error.svg "svg-dog"

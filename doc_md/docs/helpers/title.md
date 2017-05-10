@@ -1,5 +1,5 @@
 <!--
-docs/common/title|1
+docs/helpers/title|2
 -->
 
 # Title

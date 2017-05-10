@@ -1,5 +1,5 @@
 <!--
-docs/elements/list|1
+docs/blocks/list|8
 -->
 
 # Список

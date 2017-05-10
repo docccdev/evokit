@@ -1,5 +1,5 @@
 <!--
-docs/layout/page|1
+docs/helpers/page|1
 -->
 
 # Page

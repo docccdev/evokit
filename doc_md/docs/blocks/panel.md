@@ -1,5 +1,5 @@
 <!--
-docs/layout/panel|4
+docs/blocks/panel|2
 -->
 
 # Panel

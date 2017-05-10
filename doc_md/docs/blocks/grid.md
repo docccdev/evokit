@@ -1,5 +1,5 @@
 <!--
-docs/layout/grid|3
+docs/blocks/grid|1
 -->
 
 # Grid

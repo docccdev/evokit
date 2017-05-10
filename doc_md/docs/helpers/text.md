@@ -1,5 +1,5 @@
 <!--
-docs/common/text|2
+docs/helpers/text|3
 -->
 
 # Text

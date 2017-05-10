@@ -1,5 +1,5 @@
 <!--
-docs/elements/picture|2
+docs/blocks/picture|5
 -->
 
 # Картинка

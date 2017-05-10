@@ -1,5 +1,5 @@
 <!--
-docs/layout/box|2
+docs/blocks/box|3
 -->
 
 # Box
