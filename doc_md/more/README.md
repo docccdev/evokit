@@ -35,12 +35,12 @@ more|10
 
 ## Исходники
 
-|               source             |       lang       |   view   |
-|----------------------------------|------------------|----------|
-| `uaprom/styl/bigl`               | stylus (css)     | desktop  |
-| `uaprom/styl/bigl_portable`      | stylus (css)     | portable |
-| `uaprom/cs/domain/bigl`          | es6 (javascript) | desktop  |
-| `uaprom/cs/domain/bigl_portable` | es6 (javascript) | portable |
+|               source             |     lang     |   view   |
+|----------------------------------|--------------|----------|
+| `uaprom/styl/bigl/desktop`       | *.styl       | desktop  |
+| `uaprom/styl/bigl/portable`      | *.styl       | portable |
+| `uaprom/cs/domain/bigl`          | *.js, *.jsx  | desktop  |
+| `uaprom/cs/domain/bigl_portable` | *.js, *.jsx  | portable |
 
 ---
 
