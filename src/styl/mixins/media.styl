@@ -1,6 +1,10 @@
 $__media-alias = {}
 $__media-cache = {}
 
+media-add($condition, $alias)
+    unless $__media-alias[$condition]
+        $__media-alias[$condition] = $alias
+
 media($condition)
     helper($condition)
         unless $__media-cache[$condition]
@@ -19,11 +23,6 @@ media-selector($className)
         +media(media_name)
             {$className}\\@{media_name}
                 {block}
-
-media-add($condition, $alias)
-    unless $__media-alias[$condition]
-        $__media-cache[$condition] = ()
-        $__media-alias[$condition] = $alias
 
 media-apply()
     for $media, $blocks in $__media-cache

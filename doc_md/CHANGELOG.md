@@ -4,6 +4,19 @@ changelog|3
 
 # Changelog
 
+## 0.1.35 beta (20.06.2017)
+
+- Fixed size and added media for [ui-list](docs/blocks/list.html) theme divider
+- Added [size](docs/base/sizes.html) none
+    - `.ui-box_margin_none`
+    - `.ui-box_padding_none`
+    - `.ui-box_size_none`
+    - `.ui-grid_size_none`
+    - `.ui-line_size_none`
+    - `.ui-list_size_none`
+    - `.ui-panel_size_none`
+
+
 ## 0.1.34 beta (19.04.2017)
 
 - Update [ui-panel](docs/blocks/panel.html)
