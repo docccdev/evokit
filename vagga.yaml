@@ -24,7 +24,8 @@ commands:
     description: Run build
     container: frontend
     run: |
-      webpack --progress --colors
+      compile_doc_css
+      compile_uikit
       gulp copy_template_root_dir
       gulp compile_doc
 
