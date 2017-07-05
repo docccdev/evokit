@@ -24,8 +24,8 @@ commands:
     description: Run build
     container: frontend
     run: |
-      compile_doc_css
-      compile_uikit
+      gulp compile_doc_css
+      gulp compile_uikit
       gulp copy_template_root_dir
       gulp compile_doc
 
