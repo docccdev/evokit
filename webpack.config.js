@@ -1,12 +1,11 @@
 var webpack = require('webpack');
-var path = require('path');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
     entry: {
-        doc: path.resolve(__dirname, 'doc_src/styl/bundles/doc.styl'),
-        desktop: path.resolve(__dirname, 'src/styl/bundles/desktop.styl'),
-        portable: path.resolve(__dirname, 'src/styl/bundles/portable.styl'),
+        doc: './doc_src/styl/bundles/doc.styl',
+        desktop: './src/styl/bundles/desktop.styl',
+        portable: './src/styl/bundles/portable.styl',
     },
     output: {
         path: __dirname,
@@ -30,12 +29,12 @@ module.exports = {
     },
     resolve: {
         modules: [
-            path.resolve(__dirname, 'doc_src/styl'),
-            path.resolve(__dirname, 'src/styl'),
+            './doc_src/styl',
+            './src/styl',
         ],
         extensions: ['.styl'],
     },
     plugins: [
-        new ExtractTextPlugin('doc_src/__root/css/[name].css'),
+        new ExtractTextPlugin('./doc_src/__root/css/[name].css'),
     ]
 };
