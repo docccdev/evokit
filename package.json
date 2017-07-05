@@ -21,9 +21,18 @@
   "license": "MIT",
   "devDependencies": {
     "autoprefixer-stylus": "^0.11.0",
+    "css-loader": "^0.28.4",
+    "extract-text-webpack-plugin": "^2.1.2",
     "gulp": "^3.9.1",
+    "gulp-cli": "^0.2.0",
     "gulp-md-docs": "0.1.8",
     "gulp-stylus": "^2.5.0",
-    "gulp-cli": "^0.2.0"
+    "postcss-cssnext": "^2.11.0",
+    "postcss-import": "^10.0.0",
+    "postcss-loader": "^2.0.6",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^2.5.1",
+    "sugarss": "^1.0.0",
+    "webpack": "^2.0.0"
   }
 }
