@@ -4,6 +4,14 @@ changelog|3
 
 # Changelog
 
+## 0.1.36 beta (11.07.2017)
+
+- Added new media rules [media queries](docs/base/media.html)
+    - `{имя-блока}_{имя-модификатора}@xxxlarge`
+- Added [page](docs/helpers/page.html) size xxxl
+    - `.ui-page_size_xxxl`
+
+
 ## 0.1.35 beta (20.06.2017)
 
 - Fixed size and added media for [ui-list](docs/blocks/list.html) theme divider
