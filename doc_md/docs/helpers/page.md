@@ -22,7 +22,7 @@ docs/helpers/page|1
 |-----------------------|---------------------------|
 |  `.ui-page_size_xl`   |  От `1000px` до `1440px`  |
 |  `.ui-page_size_xxl`  |  От `1000px` до `1640px`  |
-|  `.ui-page_size_xxxl  |  От `1000px` до `1840px`  |
+|  `.ui-page_size_xxxl` |  От `1000px` до `1840px`  |
 
 ``` html
 <div class='ui-page ui-page_size_xxxl'>
