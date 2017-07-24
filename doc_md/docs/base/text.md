@@ -10,6 +10,7 @@ docs/base/text|3
 
 |   КЛЮЧ    | ЗНАЧЕНИЕ |
 |-----------|----------|
+| `link`    | #5e8fd5  |
 | `success` | #33b600  |
 | `info`    | #5e8fd5  |
 | `warning` | #ff9600  |
