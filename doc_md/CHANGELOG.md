@@ -4,6 +4,12 @@ changelog|3
 
 # Changelog
 
+
+## 0.1.37 beta (25.07.2017)
+- Removed stylus mixin for combine media queries
+    - Use [postcss](http://postcss.org) plugin
+
+
 ## 0.1.36 beta (11.07.2017)
 
 - Added new media rules [media queries](docs/base/media.html)

@@ -13,7 +13,7 @@ for $value, $key in $width_cache
     {join(',', $key)}
         width: s($value)
 
-for media_name in $__media-alias
+for media_name in $_media_alias
     +media(media_name)
         for $value, $key in $width_cache
             {join('\@' + media_name + ',', $key) + '\@' + media_name}

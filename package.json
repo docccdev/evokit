@@ -1,6 +1,6 @@
 {
   "name": "@evo/bigl-uikit",
-  "version": "0.1.36",
+  "version": "0.1.37",
   "description": "UIKit for Bigl.ua",
   "main": "index.js",
   "scripts": {
@@ -27,6 +27,7 @@
     "gulp-cli": "^0.2.0",
     "gulp-md-docs": "0.1.8",
     "gulp-stylus": "^2.5.0",
+    "gulp-group-css-media-queries": "^1.2.0",
     "postcss-cssnext": "^2.11.0",
     "postcss-import": "^10.0.0",
     "postcss-loader": "^2.0.6",
