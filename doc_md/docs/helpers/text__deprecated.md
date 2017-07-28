@@ -1,8 +1,8 @@
 <!--
-docs/helpers/text|3
+docs/helpers/text__deprecated|200
 -->
 
-# Text
+# Text - DEPRECATED
 
 Коллекция полезных классов для стилизации вашего контента.
 

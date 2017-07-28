@@ -1,8 +1,16 @@
 // FLAGS
 $PORTABLE_MODE = false
 
-
 // BLOCKS SETTING
+$uikit-base = {
+    font-family: 'Roboto'\, Arial\, sans-serif
+    font-size: 13px
+    line-height: 1.3em //Temporarily not used in .ui-body
+    color: #3c3c3c
+    background-color: #fff
+    min-width: 1000px
+}
+
 $global-size = {
     none: 0
     xxs: 5px
@@ -16,6 +24,7 @@ $global-size = {
 }
 
 $global-line-color = #dde8f0
+
 $global-title = {}
 
 $global-page = {
@@ -24,18 +33,38 @@ $global-page = {
     max-width: false
 }
 
-$global-text = {
-    color: {
-        muted: #a0b0c7
-    }
-}
-
 $global-link = {
     color: #5e8fd5
 }
 
+$global-text = {
+    line-height: {
+        read: 1.5em
+    }
+    color: {
+        link: $global-link['color']
+        muted: #a0b0c7
+        success: #33b600
+        info: #5e8fd5
+        warning: #ff9600
+        error: #bb2914
+    }
+    font-size: $global-title
+    font-weight: {
+        thin: 100
+        light: 300
+        regular: 400
+        medium: 500
+        bold: 700
+        black: 900
+    }
+}
+
 $global-box = {
     theme: {
+        transparent: {
+            background-color: transparent
+        }
         white: {
             background-color: #ffffff
         }
@@ -45,8 +74,17 @@ $global-box = {
         blue: {
             background-color: #ebf3f9
         }
-        transparent: {
-            background-color: transparent
+        success: {
+            background-color: #d0efcc
+        }
+        info: {
+            background-color: #dde7f5
+        }
+        warning: {
+            background-color: #fcf1bd
+        }
+        error: {
+            background-color: #efd2ce
         }
     }
 }
@@ -54,21 +92,37 @@ $global-box = {
 $global-panel = {
     border-radius: 10px
     theme: {
+        transparent: {
+            background-color: $global-box['theme']['transparent']['background-color']
+            border-color: transparent
+        }
         white: {
             background-color: $global-box['theme']['white']['background-color']
             border-color: #dde8f0
         }
         gray: {
             background-color: $global-box['theme']['gray']['background-color']
-            border-color: #dde8f0
+            border-color: darken($global-box['theme']['gray']['background-color'], 7)
         }
         blue: {
             background-color: $global-box['theme']['blue']['background-color']
-            border-color: #dde8f0
+            border-color: darken($global-box['theme']['blue']['background-color'], 7)
         }
-        transparent: {
-            background-color: $global-box['theme']['transparent']['background-color']
-            border-color: transparent
+        success: {
+            background-color: $global-box['theme']['success']['background-color']
+            border-color: darken($global-box['theme']['success']['background-color'], 7)
+        }
+        info: {
+            background-color: $global-box['theme']['info']['background-color']
+            border-color: darken($global-box['theme']['info']['background-color'], 7)
+        }
+        warning: {
+            background-color: $global-box['theme']['warning']['background-color']
+            border-color: darken($global-box['theme']['warning']['background-color'], 7)
+        }
+        error: {
+            background-color: $global-box['theme']['error']['background-color']
+            border-color: darken($global-box['theme']['error']['background-color'], 7)
         }
     }
 }

@@ -74,6 +74,10 @@ docs/blocks/box|3
 | `.ui-box_theme_gray`        | Цвет фона серый.      |
 | `.ui-box_theme_white`       | Цвет фона белый.      |
 | `.ui-box_theme_blue`        | Цвет фона синий.      |
+| `.ui-box_theme_info`        | Цвет информации.      |
+| `.ui-box_theme_success`     | Цвет успеха.          |
+| `.ui-box_theme_warning`     | Цвет предупреждения.  |
+| `.ui-box_theme_error`       | Цвет ошибки.          |
 
 ``` html
 <div class="doc-example doc-example_theme_gray">
@@ -88,6 +92,18 @@ docs/blocks/box|3
     </div>
     <div class='ui-box ui-box_theme_blue'>
         blue
+    </div>
+    <div class='ui-box ui-box_theme_info'>
+        info
+    </div>
+    <div class='ui-box ui-box_theme_success'>
+        success
+    </div>
+    <div class='ui-box ui-box_theme_warning'>
+        warning
+    </div>
+    <div class='ui-box ui-box_theme_error'>
+        error
     </div>
 </div>
 ```

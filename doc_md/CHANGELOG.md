@@ -5,6 +5,25 @@ changelog|3
 # Changelog
 
 
+## 0.1.38 beta (28.07.2017)
+- Added [new block](docs/helpers/body.html) `.ui-body`
+- Added [new block](docs/blocks/text.html) `.ui-text`
+    - **DEPRECATED** [title](docs/helpers/title__deprecated.html), replace with `.ui-text`
+    - **DEPRECATED** [text](docs/helpers/text__deprecated.html), replace with `.ui-text`
+- Added modifier for [ui-grid](docs/blocks/grid.html)
+    - `.ui-grid_valign_baseline`
+- Added themes for [ui-box](docs/blocks/box.html)
+    - `.ui-box_theme_info`
+    - `.ui-box_theme_success`
+    - `.ui-box_theme_warning`
+    - `.ui-box_theme_error`
+- Added themes for [ui-panel](docs/blocks/panel.html)
+    - `.ui-panel_theme_info`
+    - `.ui-panel_theme_success`
+    - `.ui-panel_theme_warning`
+    - `.ui-panel_theme_error`
+
+
 ## 0.1.37 beta (25.07.2017)
 - Removed stylus mixin for combine media queries
     - Use [postcss](http://postcss.org) plugin

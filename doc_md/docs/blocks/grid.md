@@ -145,11 +145,12 @@ Cетка UIKit вмещает до 10 столбцов. Она использу
 
 По умолчанию, сетка выровнена к верху.
 
-|           Class            |        Description      |
-|----------------------------|-------------------------|
-|  `.ui-grid_valign_middle`  | Выравнивание по центру. |
-|  `.ui-grid_valign_bottom`  | Выравнивание к низу.    |
-|  `.ui-grid_valign_justify` | Выравнивание к краям.   |
+|            Class            |        Description      |
+|-----------------------------|-------------------------|
+|  `.ui-grid_valign_middle`   | Выравнивание по центру. |
+|  `.ui-grid_valign_bottom`   | Выравнивание к низу.    |
+|  `.ui-grid_valign_justify`  | Выравнивание к краям.   |
+|  `.ui-grid_valign_baseline` | Выравнивает базовую линию ячейки с базовой линией первой текстовой строки.   |
 
 ``` html
 <div class='ui-grid ui-grid_column_1 ui-grid_valign_justify' style='height: 200px'>

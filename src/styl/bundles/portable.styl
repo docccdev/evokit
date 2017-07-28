@@ -12,6 +12,10 @@ media-add('medium', '(min-width: 768px)')
 // Tablets landscape
 media-add('large',  '(min-width: 960px)')
 
+// ui-base settings
+$uikit-base['background-color'] = #f7f7f7
+$uikit-base['min-width'] = 320px
+
 // ui-page settings
 $global-page['padding'] = (10px)
 
@@ -24,11 +28,15 @@ $global-title = {
     h5: 14px
 }
 
+$global-text['font-size'] = $global-title
+
 $PORTABLE_MODE = true
 
 +prefix-classes('ui-')
     // Common
-    @import '../blocks/title'
+    @import '../blocks/body'
+    @import '../blocks/deprecated_title'
+    @import '../blocks/deprecated_text'
     @import '../blocks/text'
     @import '../blocks/link'
     @import '../blocks/line'

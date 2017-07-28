@@ -61,6 +61,10 @@ UIKit использует панели для того чтобы намети�
 | `.ui-panel_theme_gray`        | Цвет фона серый.      |
 | `.ui-panel_theme_white`       | Цвет фона белый.      |
 | `.ui-panel_theme_blue`        | Цвет фона синий.      |
+| `.ui-panel_theme_info`        | Цвет информации.      |
+| `.ui-panel_theme_success`     | Цвет успеха.          |
+| `.ui-panel_theme_warning`     | Цвет предупреждения.  |
+| `.ui-panel_theme_error`       | Цвет ошибки.          |
 
 ``` html
 <div class="doc-example doc-example_theme_gray">
@@ -84,6 +88,26 @@ UIKit использует панели для того чтобы намети�
             blue
         </div>
     </div>
+    <div class='ui-panel ui-panel_theme_info'>
+        <div class='ui-panel__body'>
+            info
+        </div>
+    </div>
+    <div class='ui-panel ui-panel_theme_success'>
+        <div class='ui-panel__body'>
+            success
+        </div>
+    </div>
+    <div class='ui-panel ui-panel_theme_warning'>
+        <div class='ui-panel__body'>
+            warning
+        </div>
+    </div>
+    <div class='ui-panel ui-panel_theme_error'>
+        <div class='ui-panel__body'>
+            error
+        </div>
+    </div>
 </div>
 ```
 
@@ -97,9 +121,44 @@ UIKit использует панели для того чтобы намети�
 
 ``` html
 <div class="doc-example">
-    <div class='ui-panel ui-panel_theme_white ui-panel_style_border'>
+    <div class='ui-panel ui-panel_style_border ui-panel_theme_transparent'>
         <div class='ui-panel__body'>
-            Panel
+            transparent
+        </div>
+    </div>
+    <div class='ui-panel ui-panel_style_border ui-panel_theme_gray'>
+        <div class='ui-panel__body'>
+            gray
+        </div>
+    </div>
+    <div class='ui-panel ui-panel_style_border ui-panel_theme_white'>
+        <div class='ui-panel__body'>
+            white
+        </div>
+    </div>
+    <div class='ui-panel ui-panel_style_border ui-panel_theme_blue'>
+        <div class='ui-panel__body'>
+            blue
+        </div>
+    </div>
+    <div class='ui-panel ui-panel_style_border ui-panel_theme_info'>
+        <div class='ui-panel__body'>
+            info
+        </div>
+    </div>
+    <div class='ui-panel ui-panel_style_border ui-panel_theme_success'>
+        <div class='ui-panel__body'>
+            success
+        </div>
+    </div>
+    <div class='ui-panel ui-panel_style_border ui-panel_theme_warning'>
+        <div class='ui-panel__body'>
+            warning
+        </div>
+    </div>
+    <div class='ui-panel ui-panel_style_border ui-panel_theme_error'>
+        <div class='ui-panel__body'>
+            error
         </div>
     </div>
 </div>

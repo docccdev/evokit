@@ -1,0 +1,5 @@
+$_text_valign = ('top' 'middle' 'bottom')
+
+for value in $_text_valign
+    .text_valign_{unquote(value)}
+        vertical-align: unquote(value)

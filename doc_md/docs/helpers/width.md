@@ -1,5 +1,5 @@
 <!--
-docs/helpers/width|4
+docs/helpers/width|30
 -->
 
 # Width

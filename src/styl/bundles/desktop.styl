@@ -27,9 +27,13 @@ $global-title = {
     h6: 14px
 }
 
+$global-text['font-size'] = $global-title
+
 +prefix-classes('ui-')
     // Common
-    @import '../blocks/title'
+    @import '../blocks/body'
+    @import '../blocks/deprecated_title'
+    @import '../blocks/deprecated_text'
     @import '../blocks/text'
     @import '../blocks/link'
     @import '../blocks/line'

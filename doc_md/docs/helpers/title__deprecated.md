@@ -1,8 +1,8 @@
 <!--
-docs/helpers/title|2
+docs/helpers/title__deprecated|100
 -->
 
-# Title
+# Title - DEPRECATED
 
 Используйте классы `.ui-title-h1` — `.ui-title-h6` чтобы определить заголовки.
 
