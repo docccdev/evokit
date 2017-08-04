@@ -28,15 +28,17 @@ docs/blocks/body|10
 |  `.ui-body_size_xxxl` |  `max-width: 1840px`      |
 
 ``` html
-<div class='ui-body'>
-    <div class='ui-body__section'>
-        header
-    </div>
-    <div class='ui-body__section'>
-        content
-    </div>
-    <div class='ui-body__section'>
-        footer
+<div class="doc-example">
+    <div class='ui-body'>
+        <div class='ui-body__section'>
+            header
+        </div>
+        <div class='ui-body__section'>
+            content
+        </div>
+        <div class='ui-body__section'>
+            footer
+        </div>
     </div>
 </div>
 ```
