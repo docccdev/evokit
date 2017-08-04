@@ -28,7 +28,7 @@ docs/blocks/body|10
 |  `.ui-body_size_xxxl` |  `max-width: 1840px`      |
 
 ``` html
-<body class='ui-body'>
+<div class='ui-body'>
     <div class='ui-body__section'>
         header
     </div>
@@ -38,5 +38,5 @@ docs/blocks/body|10
     <div class='ui-body__section'>
         footer
     </div>
-</body>
+</div>
 ```
