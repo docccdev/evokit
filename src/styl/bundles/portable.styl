@@ -33,20 +33,20 @@ $global-text['font-size'] = $global-title
 $PORTABLE_MODE = true
 
 +prefix-classes('ui-')
-    // Common
-    @import '../blocks/body'
-    @import '../blocks/deprecated_title'
-    @import '../blocks/deprecated_text'
-    @import '../blocks/text'
-    @import '../blocks/link'
-    @import '../blocks/line'
+    // Deprecated
+    @import '../deprecated/title'
+    @import '../deprecated/text'
 
-    // Layout
-    @import '../blocks/box'
+    // Blocks
+    @import '../blocks/body'
     @import '../blocks/grid'
     @import '../blocks/panel'
-    @import '../blocks/width'
-
-    // Elements
+    @import '../blocks/box'
     @import '../blocks/list'
+    @import '../blocks/text'
+    @import '../blocks/link'
     @import '../blocks/picture'
+    @import '../blocks/line'
+
+    // helpers
+    @import '../helpers/width'

@@ -1,5 +1,5 @@
 <!--
-docs/blocks/panel|2
+docs/blocks/panel|30
 -->
 
 # Panel

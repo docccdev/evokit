@@ -1,5 +1,5 @@
 <!--
-docs/blocks/link|6
+docs/blocks/link|70
 -->
 
 # Link

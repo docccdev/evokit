@@ -1,5 +1,5 @@
 <!--
-docs/blocks/box|3
+docs/blocks/box|40
 -->
 
 # Box
