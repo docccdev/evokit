@@ -8,4 +8,4 @@ deploy:
   stage: deploy
   script:
   - vagga build
-  - gitlab-publish doc_dist bigl-uikit
+  - gitlab-publish doc_dist uikit
