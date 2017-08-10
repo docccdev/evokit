@@ -1,8 +1,8 @@
 <!--
-docs/deprecated/title|30
+docs/removed/title|30
 -->
 
-# Title - **НЕ ИСПОЛЬЗОВАТЬ**
+# Title - **УДАЛЕН**
 
 Используйте классы `.ui-title-h1` — `.ui-title-h6` чтобы определить заголовки.
 

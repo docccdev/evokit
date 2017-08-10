@@ -15,23 +15,30 @@ updates|3
 [picture]: docs/blocks/picture.html
 [link]: docs/blocks/link.html
 
-[page_deprecated]: docs/deprecated/page.html
-[title_deprecated]: docs/deprecated/title.html
-[text_deprecated]: docs/deprecated/text.html
+[page_deprecated]: docs/removed/page.html
+[title_deprecated]: docs/removed/title.html
+[text_deprecated]: docs/removed/text.html
 
 
 # Обновления
 
 
+## 0.1.40 beta (10.08.2017)
+- **УДАЛЕН** блок [ui-page][page_deprecated]
+- **УДАЛЕН** блок [ui-title][title_deprecated]- *
+- **УДАЛЕН** блок [ui-text][text_deprecated]- *
+
+
 ## 0.1.39 beta (03.08.2017)
 - Добавлен новый элемент `.ui-body__section` для блока [ui-body][body]:
-    - **НЕ ИСПОЛЬЗОВАТЬ** блок [page][page_deprecated], замените его на `.ui-body__section`
+    - **НЕ ИСПОЛЬЗОВАТЬ** блок [ui-page][page_deprecated], замените его на `.ui-body__section`
+
 
 ## 0.1.38 beta (28.07.2017)
 - Новый блок [ui-body][body].
 - Новый блок [ui-text][text]:
-    - **НЕ ИСПОЛЬЗОВАТЬ** вспомогательные классы [title][title_deprecated], замените их на `.ui-text`
-    - **НЕ ИСПОЛЬЗОВАТЬ** вспомогательные классы [text][text_deprecated], замените их на `.ui-text`
+    - **НЕ ИСПОЛЬЗОВАТЬ** вспомогательные классы [ui-title][title_deprecated], замените их на `.ui-text`
+    - **НЕ ИСПОЛЬЗОВАТЬ** вспомогательные классы [ui-text][text_deprecated], замените их на `.ui-text`
 - Добавлен модификатор `.ui-grid_valign_baseline` для [ui-grid][grid].
 - Добавлены модификаторы тем для блока [ui-box][box]:
     - `.ui-box_theme_info`
