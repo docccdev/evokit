@@ -12,6 +12,8 @@ docs/base/text|3
 
 |   КЛЮЧ    | ЗНАЧЕНИЕ |
 |-----------|----------|
+| `red`     | #f55832  |
+| `yellow`  | #facd00  |
 | `link`    | #5e8fd5  |
 | `muted`   | #a0b0c7  |
 | `info`    | #5e8fd5  |

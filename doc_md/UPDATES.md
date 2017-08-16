@@ -22,6 +22,20 @@ updates|3
 
 # Обновления
 
+## 0.1.41 beta (16.08.2017)
+- Добавлены два цвета для [ui-text][text]:
+    - `.ui-text_color_red`
+    - `.ui-text_color_yellow`
+- Добавлены модификаторы цвета маркера для списка [ui-list][list]:
+    - `.ui-list_color_red`
+    - `.ui-list_color_yellow`
+    - `.ui-list_color_link`
+    - `.ui-list_color_muted`
+    - `.ui-list_color_info`
+    - `.ui-list_color_success`
+    - `.ui-list_color_warning`
+    - `.ui-list_color_error`
+
 
 ## 0.1.40 beta (10.08.2017)
 - **УДАЛЕН** блок [ui-page][page_deprecated]

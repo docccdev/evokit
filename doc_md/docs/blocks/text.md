@@ -30,6 +30,12 @@ docs/blocks/text|60
 
 ``` html
 <div class='doc-example'>
+    <div class='ui-text ui-text_color_red'>
+        Red
+    </div>
+    <div class='ui-text ui-text_color_yellow'>
+        Yellow
+    </div>
     <div class='ui-text ui-text_color_link'>
         Link
     </div>
