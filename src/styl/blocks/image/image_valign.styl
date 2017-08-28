@@ -1,0 +1,5 @@
+$_image_valign = ('top' 'middle' 'bottom')
+
+for value in $_image_valign
+    .image_valign_{unquote(value)}
+        vertical-align: unquote(value)

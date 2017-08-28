@@ -13,6 +13,7 @@ updates|3
 [list]: docs/blocks/list.html
 [text]: docs/blocks/text.html
 [picture]: docs/blocks/picture.html
+[image]: docs/blocks/image.html
 [link]: docs/blocks/link.html
 
 [page_deprecated]: docs/removed/page.html
@@ -21,6 +22,11 @@ updates|3
 
 
 # Обновления
+
+
+## 0.1.42 beta (28.08.2017)
+- Новый блок [ui-image][image].
+
 
 ## 0.1.41 beta (16.08.2017)
 - Добавлены два цвета для [ui-text][text]:

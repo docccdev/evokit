@@ -1,0 +1,96 @@
+<!--
+docs/blocks/image|90
+-->
+
+# Изображение
+
+Чтобы применить этот компонент, просто добавьте класс `.ui-image` к тегу `<img>`.
+
+
+``` html
+<div class='doc-example'>
+    <img
+        class='ui-image'
+        src='data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=='
+        width='40'
+        height='40'
+    >
+    Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.
+</div>
+```
+
+---
+
+## Горизонтальное выравнивание
+
+|           Class           |          Description          |
+|---------------------------|-------------------------------|
+| `.ui-image_align_left`    | Выравнивание по левому краю.  |
+| `.ui-image_align_center`  | Выравнивание по центру.       |
+| `.ui-image_align_right`   | Выравнивание по правому краю. |
+
+``` html
+<div class="doc-example">
+    <img
+        class='ui-image ui-image_align_left'
+        src='data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=='
+        width='40'
+        height='40'
+    >
+    Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.." Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке, некоторые - намеренно (например, юмористические варианты).
+    <div class="ui-line ui-line_size_m"></div>
+    <img
+        class='ui-image ui-image_align_center'
+        src='data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=='
+        width='40'
+        height='40'
+    >
+    Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.." Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке, некоторые - намеренно (например, юмористические варианты).
+    <div class="ui-line ui-line_size_m"></div>
+    <img
+        class='ui-image ui-image_align_right'
+        src='data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=='
+        width='40'
+        height='40'
+    >
+    Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.." Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке, некоторые - намеренно (например, юмористические варианты).
+</div>
+```
+
+---
+
+## Вертикальное выравнивание
+
+|            Class            |              Description              |
+|-----------------------------|---------------------------------------|
+| `.ui-image_valign_top`      | Выравнивание по верхнему краю строки. |
+| `.ui-image_valign_middle`   | Выравнивание по середине.             |
+| `.ui-image_valign_bottom`   | Выравнивание по нижнему краю.         |
+
+``` html
+<div class="doc-example">
+    <img
+        class='ui-image ui-image_valign_top'
+        src='data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=='
+        width='40'
+        height='40'
+    >
+    Выравнивание по верхнему краю строки
+    <div class="ui-line ui-line_size_m"></div>
+    <img
+        class='ui-image ui-image_valign_middle'
+        src='data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=='
+        width='40'
+        height='40'
+    >
+    Выравнивание по середине
+    <div class="ui-line ui-line_size_m"></div>
+    <img
+        class='ui-image ui-image_valign_bottom'
+        src='data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=='
+        width='40'
+        height='40'
+    >
+    Выравнивание по нижнему краю
+</div>
+```
