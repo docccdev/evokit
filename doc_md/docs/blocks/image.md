@@ -11,7 +11,7 @@ docs/blocks/image|90
 <div class='doc-example'>
     <img
         class='ui-image'
-        src='data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=='
+        src='http://lorempixel.com/40/40/'
         width='40'
         height='40'
     >
@@ -33,7 +33,7 @@ docs/blocks/image|90
 <div class="doc-example">
     <img
         class='ui-image ui-image_align_left'
-        src='data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=='
+        src='http://lorempixel.com/40/40/'
         width='40'
         height='40'
     >
@@ -41,7 +41,7 @@ docs/blocks/image|90
     <div class="ui-line ui-line_size_m"></div>
     <img
         class='ui-image ui-image_align_center'
-        src='data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=='
+        src='http://lorempixel.com/40/40/'
         width='40'
         height='40'
     >
@@ -49,7 +49,7 @@ docs/blocks/image|90
     <div class="ui-line ui-line_size_m"></div>
     <img
         class='ui-image ui-image_align_right'
-        src='data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=='
+        src='http://lorempixel.com/40/40/'
         width='40'
         height='40'
     >
@@ -71,7 +71,7 @@ docs/blocks/image|90
 <div class="doc-example">
     <img
         class='ui-image ui-image_valign_top'
-        src='data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=='
+        src='http://lorempixel.com/40/40/'
         width='40'
         height='40'
     >
@@ -79,7 +79,7 @@ docs/blocks/image|90
     <div class="ui-line ui-line_size_m"></div>
     <img
         class='ui-image ui-image_valign_middle'
-        src='data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=='
+        src='http://lorempixel.com/40/40/'
         width='40'
         height='40'
     >
@@ -87,7 +87,7 @@ docs/blocks/image|90
     <div class="ui-line ui-line_size_m"></div>
     <img
         class='ui-image ui-image_valign_bottom'
-        src='data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=='
+        src='http://lorempixel.com/40/40/'
         width='40'
         height='40'
     >

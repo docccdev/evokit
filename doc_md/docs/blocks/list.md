@@ -153,7 +153,7 @@ docs/blocks/list|50
 
 ``` html
 <div class='doc-example'>
-    <ul class='ui-list ui-list_size_xxxl ui-list_theme_divider'>
+    <ul class='ui-list ui-list_size_xl ui-list_theme_divider'>
         <li class='ui-list__item'>
             Item
         </li>

@@ -23,6 +23,12 @@ updates|3
 
 # Обновления
 
+## 0.1.43 beta (30.08.2017)
+- Исправлены стили  [ui-picture][picture].
+- Добавлен модификатор закругления для [ui-picture][picture]:
+    - `.ui-picture_size_cover`
+    - `.ui-picture_style_round`
+
 
 ## 0.1.42 beta (28.08.2017)
 - Новый блок [ui-image][image].
