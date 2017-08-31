@@ -1,10 +1,10 @@
 {
   "name": "@evo/bigl-uikit",
-  "version": "0.1.43",
+  "version": "0.1.44",
   "description": "UIKit for Bigl.ua",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepublish": "vagga build_es6"
   },
   "repository": {
     "type": "git",
@@ -15,25 +15,40 @@
     "bem",
     "css",
     "stylus",
-    "html"
+    "html",
+    "jsx",
+    "react"
   ],
   "author": "e.marchenko",
   "license": "MIT",
   "devDependencies": {
     "autoprefixer-stylus": "^0.11.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
     "css-loader": "^0.28.4",
     "extract-text-webpack-plugin": "^2.1.2",
     "gulp": "^3.9.1",
     "gulp-cli": "^0.2.0",
+    "gulp-group-css-media-queries": "^1.2.0",
     "gulp-md-docs": "0.1.8",
     "gulp-stylus": "^2.5.0",
-    "gulp-group-css-media-queries": "^1.2.0",
     "postcss-cssnext": "^2.11.0",
     "postcss-import": "^10.0.0",
     "postcss-loader": "^2.0.6",
     "stylus": "^0.54.5",
     "stylus-loader": "^2.5.1",
     "sugarss": "^1.0.0",
-    "webpack": "^2.0.0"
+    "webpack": "^2.0.0",
+    "webpack-node-externals": "^1.6.0"
+  },
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "prop-types": "^15.5.10",
+    "react": "^15.6.1"
   }
 }

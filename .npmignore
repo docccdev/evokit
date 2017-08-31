@@ -2,6 +2,7 @@ doc_dist
 doc_md
 doc_src
 node_modules
+temp
 gulpfile.js
 vagga.yaml
 .vagga

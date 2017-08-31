@@ -2,6 +2,7 @@ containers:
     frontend:
       environ:
         NODE_PATH: /usr/lib/node_modules
+        PROJECT_DEPS: /usr/lib
       setup:
       - !UbuntuRelease { codename: trusty }
       - !Install [ca-certificates, apt-transport-https]
@@ -20,6 +21,18 @@ containers:
         optional: true
 
 commands:
+  build_es6: !Command
+    description: Run build
+    container: frontend
+    options: |
+      Usage:
+        vagga build_es6 [--watch|-w]
+
+      Options:
+        --watch, -w          enable webpack watch
+    run: |
+      webpack --progress ${VAGGACLI_WATCH} --config webpack.es6.config.js
+
   build: !Command
     description: Run build
     container: frontend

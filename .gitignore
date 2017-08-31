@@ -3,3 +3,4 @@ node_modules
 doc_src/__root/css
 doc_dist
 temp
+dist
