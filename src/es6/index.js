@@ -11,6 +11,7 @@ export {
     Box as UiBox,
     Panel as UiPanel,
     Grid as UiGrid,
+    List as UiList,
     Link as UiLink,
     Picture as UiPicture,
     Text as UiText,

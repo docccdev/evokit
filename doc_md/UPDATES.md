@@ -12,9 +12,10 @@ updates|3
 [box]: docs/blocks/box.html
 [list]: docs/blocks/list.html
 [text]: docs/blocks/text.html
+[link]: docs/blocks/link.html
 [picture]: docs/blocks/picture.html
 [image]: docs/blocks/image.html
-[link]: docs/blocks/link.html
+[line]: docs/blocks/line.html
 
 [page_deprecated]: docs/removed/page.html
 [title_deprecated]: docs/removed/title.html
@@ -23,8 +24,19 @@ updates|3
 
 # Обновления
 
+## 0.1.45 beta (04.09.2017)
+- Добавлен новый блок в `jsx`:
+     - [UiList][list]
+
 ## 0.1.44 beta (31.08.2017)
-- Добавлены блоки `jsx`
+- Добавлены блоки `jsx`:
+     - [UiGrid][grid]
+     - [UiPanel][panel]
+     - [UiBox][box]
+     - [UiText][text]
+     - [UiLink][link]
+     - [UiPicture][picture]
+     - [UiLine][line]
 
 
 ## 0.1.43 beta (30.08.2017)
