@@ -1,5 +1,5 @@
 <!--
-docs/removed/page|10
+more/removed/page|10
 -->
 
 # Page - **УДАЛЕН**

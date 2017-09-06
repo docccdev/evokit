@@ -1,5 +1,5 @@
 <!--
-docs/removed/text|20
+more/removed/text|20
 -->
 
 # Text - **УДАЛЕН**

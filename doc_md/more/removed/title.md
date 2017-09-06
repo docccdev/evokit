@@ -1,5 +1,5 @@
 <!--
-docs/removed/title|30
+more/removed/title|30
 -->
 
 # Title - **УДАЛЕН**

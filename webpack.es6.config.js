@@ -1,5 +1,5 @@
 var path = require('path');
-var nodeExternals = require('webpack-node-externals');
+var PeerDepsExternalsPlugin = require('peer-deps-externals-webpack-plugin');
 var PROJECT_DEPS = process.env.PROJECT_DEPS || __dirname;
 
 module.exports = {
@@ -9,16 +9,18 @@ module.exports = {
         filename: 'index.js',
         libraryTarget: 'umd',
     },
-    externals: [nodeExternals()],
     module: {
         loaders: [
             {
-                test: /.jsx?$/,
+                test: /(\.jsx|\.js)$/,
                 loader: 'babel-loader',
                 exclude: /node_modules/,
             },
         ],
     },
+    plugins: [
+        new PeerDepsExternalsPlugin(),
+    ],
     resolve: {
         modules: [path.resolve(PROJECT_DEPS, 'node_modules'), 'node_modules'],
         extensions: ['.js', '.jsx'],

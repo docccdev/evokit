@@ -4,6 +4,10 @@ import { uiKitComponent } from '../component';
 @uiKitComponent
 export default class Picture extends React.Component {
     static blockName = 'picture';
+    static blockMods = [
+        'size',
+        'style',
+    ];
 
     render() {
         return (
