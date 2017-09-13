@@ -1,8 +1,7 @@
 import React from 'react';
 import { uiKitComponent } from '../component';
 
-@uiKitComponent
-export default class Image extends React.Component {
+class Image extends React.Component {
     static blockName = 'image';
     static blockMods = [
         'align',
@@ -18,3 +17,5 @@ export default class Image extends React.Component {
         );
     }
 }
+
+export default uiKitComponent(Image);

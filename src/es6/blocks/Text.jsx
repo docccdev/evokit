@@ -1,8 +1,7 @@
 import React from 'react';
 import { uiKitComponent } from '../component';
 
-@uiKitComponent
-export default class Text extends React.Component {
+class Text extends React.Component {
     static blockName = 'text';
     static blockMods = [
         'color',
@@ -25,3 +24,5 @@ export default class Text extends React.Component {
         );
     }
 }
+
+export default uiKitComponent(Text);

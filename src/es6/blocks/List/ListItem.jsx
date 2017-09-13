@@ -1,8 +1,7 @@
 import React from 'react';
 import { uiKitComponent } from '../../component';
 
-@uiKitComponent
-export default class ListItem extends React.Component {
+class ListItem extends React.Component {
     static blockName = 'list__item';
 
     render() {
@@ -16,3 +15,5 @@ export default class ListItem extends React.Component {
         );
     }
 }
+
+export default uiKitComponent(ListItem);

@@ -1,8 +1,7 @@
 import React from 'react';
 import { uiKitComponent } from '../../component';
 
-@uiKitComponent
-export default class Grid extends React.Component {
+class Grid extends React.Component {
     static blockName = 'grid';
     static blockMods = [
         'column',
@@ -24,3 +23,5 @@ export default class Grid extends React.Component {
         );
     }
 }
+
+export default uiKitComponent(Grid);

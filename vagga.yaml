@@ -36,6 +36,8 @@ commands:
   build: !Command
     description: Run build
     container: frontend
+    environ:
+      NODE_ENV: production
     run: |
       gulp compile_doc_css
       gulp compile_uikit
@@ -47,3 +49,15 @@ commands:
     container: frontend
     run: |
       gulp watch
+
+  publish: !Command
+    prerequisites: [build_es6]
+    description: Publishes new package version
+    container: frontend
+    volumes:
+      /root/.npm: !Tmpfs
+        size: 10Mi
+    run: |
+      touch /work/.npmrc
+      echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > /work/.npmrc
+      npm publish --access public

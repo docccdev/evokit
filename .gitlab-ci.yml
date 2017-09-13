@@ -1,11 +1,23 @@
 stages:
-- deploy
+- build
+- gitlab-publish
+- npm-publish
 
-before_script:
-- vagga --version
-
-deploy:
-  stage: deploy
+build:
+  stage: build
   script:
   - vagga build
+  - vagga build_es6
+
+gitlab-publish:
+  stage: gitlab-publish
+  script:
   - gitlab-publish doc_dist uikit
+
+npm-publish:
+  stage: npm-publish
+  only:
+    - tags
+  script:
+    - echo $NPM_TOKEN
+    - vagga -ENPM_TOKEN=$NPM_TOKEN publish

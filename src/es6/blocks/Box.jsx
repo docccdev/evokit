@@ -1,8 +1,7 @@
 import React from 'react';
 import { uiKitComponent } from '../component';
 
-@uiKitComponent
-export default class Box extends React.Component {
+class Box extends React.Component {
     static blockName = 'box';
     static blockMods = [
         'theme',
@@ -33,3 +32,6 @@ export default class Box extends React.Component {
         );
     }
 }
+
+export default uiKitComponent(Box);
+

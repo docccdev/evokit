@@ -1,8 +1,7 @@
 import React from 'react';
 import { uiKitComponent } from '../component';
 
-@uiKitComponent
-export default class Link extends React.Component {
+class Link extends React.Component {
     static blockName = 'link';
     static blockMods = [
         'style',
@@ -19,3 +18,5 @@ export default class Link extends React.Component {
         );
     }
 }
+
+export default uiKitComponent(Link);

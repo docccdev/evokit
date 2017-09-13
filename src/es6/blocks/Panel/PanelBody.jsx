@@ -1,8 +1,7 @@
 import React from 'react';
 import { uiKitComponent } from '../../component';
 
-@uiKitComponent
-export default class PanelBody extends React.Component {
+class PanelBody extends React.Component {
     static blockName = 'panel__body';
 
     render() {
@@ -16,3 +15,5 @@ export default class PanelBody extends React.Component {
         );
     }
 }
+
+export default uiKitComponent(PanelBody);
