@@ -4,17 +4,20 @@ stages:
 - npm-publish
 
 build:
+  image: frontend
   stage: build
   script:
   - vagga build
   - vagga build_es6
 
 gitlab-publish:
+  image: frontend
   stage: gitlab-publish
   script:
-  - gitlab-publish ./doc_dist/ uikit
+  - gitlab-publish doc_dist uikit
 
 npm-publish:
+  image: frontend
   stage: npm-publish
   only:
     - tags
