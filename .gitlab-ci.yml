@@ -12,7 +12,7 @@ build:
 gitlab-publish:
   stage: gitlab-publish
   script:
-  - gitlab-publish doc_dist uikit
+  - gitlab-publish ./doc_dist/ uikit
 
 npm-publish:
   stage: npm-publish
