@@ -24,6 +24,12 @@ updates|3
 
 # Обновления
 
+## 0.1.49 beta (14.09.2017)
+- Добавлены модификаторы стиля для [ui-line][line]:
+    - `.ui-line_style_dotted`
+    - `.ui-line_style_dashed`
+
+
 ## 0.1.48 beta (13.09.2017)
 - Исправлены названия компононетов для `React Developer Tools`.
 

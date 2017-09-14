@@ -35,3 +35,21 @@ docs/blocks/line|100
     <div class='ui-line ui-line_size_xxxl'></div>
 </div>
 ```
+
+---
+
+## Стили
+
+Устанавливает стиль линии.
+
+|          Class          |      Description       |
+|-------------------------|------------------------|
+| `.ui-line_style_dotted` | Точечный.              |
+| `.ui-line_style_dashed` | Пунктирный.            |
+
+``` html
+<div class="doc-example">
+    <div class='ui-line ui-line_style_dotted ui-line_size_xxxl'></div>
+    <div class='ui-line ui-line_style_dashed ui-line_size_xxxl'></div>
+</div>
+```
