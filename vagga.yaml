@@ -19,6 +19,7 @@ containers:
         package: true
         dev: true
         optional: true
+      - !EnsureDir /root/.npm
 
 commands:
   build_es6: !Command
