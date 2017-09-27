@@ -24,6 +24,13 @@ updates|3
 
 # Обновления
 
+## 0.1.50 beta (27.09.2017)
+- Добавлены модификаторы переноса [ui-grid][grid]:
+    - `.ui-grid_wrap_nowrap`
+    - `.ui-grid_wrap_wrap`
+    - `.ui-grid_wrap_wrap-reverse`
+
+
 ## 0.1.49 beta (14.09.2017)
 - Добавлены модификаторы стиля для [ui-line][line]:
     - `.ui-line_style_dotted`

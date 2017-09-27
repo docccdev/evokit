@@ -1,0 +1,5 @@
+$_grid_wrap = ('nowrap' 'wrap' 'wrap-reverse')
+
+for value in $_grid_wrap
+    +media-selector('.grid_wrap_'+unquote(value))
+        flex-wrap: unquote(value)
