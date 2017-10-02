@@ -10,6 +10,7 @@ class Grid extends React.Component {
         'align',
         'valign',
         'theme',
+        'wrap',
     ];
 
     render() {
