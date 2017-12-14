@@ -16,6 +16,7 @@ updates|3
 [picture]: docs/blocks/picture.html
 [image]: docs/blocks/image.html
 [line]: docs/blocks/line.html
+[tags]: docs/blocks/tags.html
 
 [page_deprecated]: docs/removed/page.html
 [title_deprecated]: docs/removed/title.html
@@ -23,6 +24,10 @@ updates|3
 
 
 # Обновления
+
+## 0.1.51 beta (14.12.2017)
+- Новый блок [ui-tags][tags].
+
 
 ## 0.1.50 beta (27.09.2017)
 - Добавлены модификаторы переноса [ui-grid][grid]:
