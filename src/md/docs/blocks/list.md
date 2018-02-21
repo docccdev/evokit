@@ -14,16 +14,14 @@ docs/blocks/list|50
 
 
 ``` html
-<div class='doc-example'>
-    <ul class='ui-list'>
-        <li class='ui-list__item'>
-            Item
-        </li>
-        <li class='ui-list__item'>
-            Item
-        </li>
-    </ul>
-</div>
+<ul class='ui-list'>
+    <li class='ui-list__item'>
+        Item
+    </li>
+    <li class='ui-list__item'>
+        Item
+    </li>
+</ul>
 ```
 
 ---
@@ -37,16 +35,14 @@ docs/blocks/list|50
 |  `.ui-list_size_`[size](docs/base/sizes.html)  | Отступ между ячейками.  |
 
 ``` html
-<div class='doc-example'>
-    <ul class='ui-list ui-list_size_xxxl'>
-        <li class='ui-list__item'>
-            Item
-        </li>
-        <li class='ui-list__item'>
-            Item
-        </li>
-    </ul>
-</div>
+<ul class='ui-list ui-list_size_xxxl'>
+    <li class='ui-list__item'>
+        Item
+    </li>
+    <li class='ui-list__item'>
+        Item
+    </li>
+</ul>
 ```
 
 ---
@@ -62,32 +58,30 @@ docs/blocks/list|50
 |  `.ui-list_style_disc`    |  Маркер в виде точки.             |
 
 ``` html
-<div class='doc-example'>
-    <ul class='ui-list ui-list_style_decimal'>
-        <li class='ui-list__item'>
-            Item
-        </li>
-        <li class='ui-list__item'>
-            Item
-        </li>
-    </ul>
-    <ul class='ui-list ui-list_style_dash'>
-        <li class='ui-list__item'>
-            Item
-        </li>
-        <li class='ui-list__item'>
-            Item
-        </li>
-    </ul>
-    <ul class='ui-list ui-list_style_disc'>
-        <li class='ui-list__item'>
-            Item
-        </li>
-        <li class='ui-list__item'>
-            Item
-        </li>
-    </ul>
-</div>
+<ul class='ui-list ui-list_style_decimal'>
+    <li class='ui-list__item'>
+        Item
+    </li>
+    <li class='ui-list__item'>
+        Item
+    </li>
+</ul>
+<ul class='ui-list ui-list_style_dash'>
+    <li class='ui-list__item'>
+        Item
+    </li>
+    <li class='ui-list__item'>
+        Item
+    </li>
+</ul>
+<ul class='ui-list ui-list_style_disc'>
+    <li class='ui-list__item'>
+        Item
+    </li>
+    <li class='ui-list__item'>
+        Item
+    </li>
+</ul>
 ```
 
 ---
@@ -101,48 +95,46 @@ docs/blocks/list|50
 |  `.ui-list_color_`[color](docs/base/text.html)  | Цвет текста.  |
 
 ``` html
-<div class='doc-example'>
-    <ul class='ui-list ui-list_style_disc ui-list_color_red'>
-        <li class='ui-list__item'>
-            Red
-        </li>
-    </ul>
-    <ul class='ui-list ui-list_style_disc ui-list_color_yellow'>
-        <li class='ui-list__item'>
-            Yellow
-        </li>
-    </ul>
-    <ul class='ui-list ui-list_style_disc ui-list_color_link'>
-        <li class='ui-list__item'>
-            Link
-        </li>
-    </ul>
-    <ul class='ui-list ui-list_style_disc ui-list_color_muted'>
-        <li class='ui-list__item'>
-            Muted
-        </li>
-    </ul>
-    <ul class='ui-list ui-list_style_disc ui-list_color_info'>
-        <li class='ui-list__item'>
-            Info
-        </li>
-    </ul>
-    <ul class='ui-list ui-list_style_disc ui-list_color_success'>
-        <li class='ui-list__item'>
-            Success
-        </li>
-    </ul>
-    <ul class='ui-list ui-list_style_disc ui-list_color_warning'>
-        <li class='ui-list__item'>
-            Warning
-        </li>
-    </ul>
-    <ul class='ui-list ui-list_style_disc ui-list_color_error'>
-        <li class='ui-list__item'>
-            Error
-        </li>
-    </ul>
-</div>
+<ul class='ui-list ui-list_style_disc ui-list_color_red'>
+    <li class='ui-list__item'>
+        Red
+    </li>
+</ul>
+<ul class='ui-list ui-list_style_disc ui-list_color_yellow'>
+    <li class='ui-list__item'>
+        Yellow
+    </li>
+</ul>
+<ul class='ui-list ui-list_style_disc ui-list_color_link'>
+    <li class='ui-list__item'>
+        Link
+    </li>
+</ul>
+<ul class='ui-list ui-list_style_disc ui-list_color_muted'>
+    <li class='ui-list__item'>
+        Muted
+    </li>
+</ul>
+<ul class='ui-list ui-list_style_disc ui-list_color_info'>
+    <li class='ui-list__item'>
+        Info
+    </li>
+</ul>
+<ul class='ui-list ui-list_style_disc ui-list_color_success'>
+    <li class='ui-list__item'>
+        Success
+    </li>
+</ul>
+<ul class='ui-list ui-list_style_disc ui-list_color_warning'>
+    <li class='ui-list__item'>
+        Warning
+    </li>
+</ul>
+<ul class='ui-list ui-list_style_disc ui-list_color_error'>
+    <li class='ui-list__item'>
+        Error
+    </li>
+</ul>
 ```
 
 ---
@@ -152,14 +144,12 @@ docs/blocks/list|50
 Чтобы применить горизонтальный разделитель, добавьте класс `.ui-list_theme_divider`.
 
 ``` html
-<div class='doc-example'>
-    <ul class='ui-list ui-list_size_xl ui-list_theme_divider'>
-        <li class='ui-list__item'>
-            Item
-        </li>
-        <li class='ui-list__item'>
-            Item
-        </li>
-    </ul>
-</div>
+<ul class='ui-list ui-list_size_xl ui-list_theme_divider'>
+    <li class='ui-list__item'>
+        Item
+    </li>
+    <li class='ui-list__item'>
+        Item
+    </li>
+</ul>
 ```

@@ -11,9 +11,7 @@ docs/blocks/link|70
 ## Использование
 
 ``` html
-<div class="doc-example">
-    <a class='ui-link'>Cсылка</a>
-</div>
+<a class='ui-link'>Cсылка</a>
 ```
 
 ---
@@ -25,7 +23,5 @@ docs/blocks/link|70
 | `.ui-link_style_dotted` | Добавляет пунктирное подчеркивание. |
 
 ``` html
-<div class="doc-example">
-    <a class='ui-link ui-link_style_dotted'>Пунктирная ссылка</a>
-</div>
+<a class='ui-link ui-link_style_dotted'>Пунктирная ссылка</a>
 ```

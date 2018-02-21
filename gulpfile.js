@@ -41,5 +41,6 @@ gulp.task('compile_doc', function() {
 gulp.task('watch', function() {
     gulp.watch('./src/styl/**/*.styl', ['compile_uikit', 'copy_template_root_dir']);
     gulp.watch('./doc_src/styl/**/*.styl', ['compile_doc_css', 'copy_template_root_dir']);
+    gulp.watch('./doc_src/tmpl/**/*.html', ['compile_doc']);
     gulp.watch('./src/md/**/*.md', ['compile_doc']);
 });

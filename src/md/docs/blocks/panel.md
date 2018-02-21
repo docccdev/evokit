@@ -20,11 +20,9 @@ UIKit использует панели для того чтобы намети�
 |  `.ui-panel_body` |  Добавьте этот класс дочернему элементу для создания тела панели.      |
 
 ``` html
-<div class="doc-example">
-    <div class='ui-panel ui-panel_theme_gray'>
-        <div class='ui-panel__body'>
-            Panel
-        </div>
+<div class='ui-panel ui-panel_theme_gray ui-panel_size_xxs'>
+    <div class='ui-panel__body'>
+        Panel
     </div>
 </div>
 ```
@@ -40,11 +38,9 @@ UIKit использует панели для того чтобы намети�
 |  `.ui-panel_size_`[size](docs/base/sizes.html)  | Внутренний отступ.  |
 
 ``` html
-<div class="doc-example">
-    <div class='ui-panel ui-panel_theme_gray ui-panel_size_xxxl'>
-        <div class='ui-panel__body'>
-            Panel
-        </div>
+<div class='ui-panel ui-panel_theme_gray ui-panel_size_xxxl'>
+    <div class='ui-panel__body'>
+        Panel
     </div>
 </div>
 ```
@@ -67,46 +63,51 @@ UIKit использует панели для того чтобы намети�
 | `.ui-panel_theme_error`       | Цвет ошибки.          |
 
 ``` html
-<div class="doc-example doc-example_theme_gray">
-    <div class='ui-panel ui-panel_theme_transparent'>
-        <div class='ui-panel__body'>
-            transparent
-        </div>
+<div class='ui-panel ui-panel_size_s ui-panel_theme_transparent'>
+    <div class='ui-panel__body'>
+        transparent
     </div>
-    <div class='ui-panel ui-panel_theme_gray'>
-        <div class='ui-panel__body'>
-            gray
-        </div>
+</div>
+<br>
+<div class='ui-panel ui-panel_size_s ui-panel_theme_gray'>
+    <div class='ui-panel__body'>
+        gray
     </div>
-    <div class='ui-panel ui-panel_theme_white'>
-        <div class='ui-panel__body'>
-            white
-        </div>
+</div>
+<br>
+<div class='ui-panel ui-panel_size_s ui-panel_theme_white'>
+    <div class='ui-panel__body'>
+        white
     </div>
-    <div class='ui-panel ui-panel_theme_blue'>
-        <div class='ui-panel__body'>
-            blue
-        </div>
+</div>
+<br>
+<div class='ui-panel ui-panel_size_s ui-panel_theme_blue'>
+    <div class='ui-panel__body'>
+        blue
     </div>
-    <div class='ui-panel ui-panel_theme_info'>
-        <div class='ui-panel__body'>
-            info
-        </div>
+</div>
+<br>
+<div class='ui-panel ui-panel_size_s ui-panel_theme_info'>
+    <div class='ui-panel__body'>
+        info
     </div>
-    <div class='ui-panel ui-panel_theme_success'>
-        <div class='ui-panel__body'>
-            success
-        </div>
+</div>
+<br>
+<div class='ui-panel ui-panel_size_s ui-panel_theme_success'>
+    <div class='ui-panel__body'>
+        success
     </div>
-    <div class='ui-panel ui-panel_theme_warning'>
-        <div class='ui-panel__body'>
-            warning
-        </div>
+</div>
+<br>
+<div class='ui-panel ui-panel_size_s ui-panel_theme_warning'>
+    <div class='ui-panel__body'>
+        warning
     </div>
-    <div class='ui-panel ui-panel_theme_error'>
-        <div class='ui-panel__body'>
-            error
-        </div>
+</div>
+<br>
+<div class='ui-panel ui-panel_size_s ui-panel_theme_error'>
+    <div class='ui-panel__body'>
+        error
     </div>
 </div>
 ```
@@ -120,46 +121,51 @@ UIKit использует панели для того чтобы намети�
 |  `.ui-panel_style_border`  | Добавляет рамку. |
 
 ``` html
-<div class="doc-example">
-    <div class='ui-panel ui-panel_style_border ui-panel_theme_transparent'>
-        <div class='ui-panel__body'>
-            transparent
-        </div>
+<div class='ui-panel ui-panel_size_s ui-panel_style_border ui-panel_theme_transparent'>
+    <div class='ui-panel__body'>
+        transparent
     </div>
-    <div class='ui-panel ui-panel_style_border ui-panel_theme_gray'>
-        <div class='ui-panel__body'>
-            gray
-        </div>
+</div>
+<br>
+<div class='ui-panel ui-panel_size_s ui-panel_style_border ui-panel_theme_gray'>
+    <div class='ui-panel__body'>
+        gray
     </div>
-    <div class='ui-panel ui-panel_style_border ui-panel_theme_white'>
-        <div class='ui-panel__body'>
-            white
-        </div>
+</div>
+<br>
+<div class='ui-panel ui-panel_size_s ui-panel_style_border ui-panel_theme_white'>
+    <div class='ui-panel__body'>
+        white
     </div>
-    <div class='ui-panel ui-panel_style_border ui-panel_theme_blue'>
-        <div class='ui-panel__body'>
-            blue
-        </div>
+</div>
+<br>
+<div class='ui-panel ui-panel_size_s ui-panel_style_border ui-panel_theme_blue'>
+    <div class='ui-panel__body'>
+        blue
     </div>
-    <div class='ui-panel ui-panel_style_border ui-panel_theme_info'>
-        <div class='ui-panel__body'>
-            info
-        </div>
+</div>
+<br>
+<div class='ui-panel ui-panel_size_s ui-panel_style_border ui-panel_theme_info'>
+    <div class='ui-panel__body'>
+        info
     </div>
-    <div class='ui-panel ui-panel_style_border ui-panel_theme_success'>
-        <div class='ui-panel__body'>
-            success
-        </div>
+</div>
+<br>
+<div class='ui-panel ui-panel_size_s ui-panel_style_border ui-panel_theme_success'>
+    <div class='ui-panel__body'>
+        success
     </div>
-    <div class='ui-panel ui-panel_style_border ui-panel_theme_warning'>
-        <div class='ui-panel__body'>
-            warning
-        </div>
+</div>
+<br>
+<div class='ui-panel ui-panel_size_s ui-panel_style_border ui-panel_theme_warning'>
+    <div class='ui-panel__body'>
+        warning
     </div>
-    <div class='ui-panel ui-panel_style_border ui-panel_theme_error'>
-        <div class='ui-panel__body'>
-            error
-        </div>
+</div>
+<br>
+<div class='ui-panel ui-panel_size_s ui-panel_style_border ui-panel_theme_error'>
+    <div class='ui-panel__body'>
+        error
     </div>
 </div>
 ```

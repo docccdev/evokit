@@ -30,19 +30,19 @@ Cетка UIKit вмещает до 10 столбцов. Она использу
 
 ``` html
 <div class="ui-width-1-3">
-    <div class='doc-example doc-example_theme_gray'>
+    <div class='doc-example'>
         ui-width-1-3
     </div>
 </div>
 <br>
 <div class="ui-width-2-3">
-    <div class='doc-example doc-example_theme_gray'>
+    <div class='doc-example'>
         ui-width-2-3
     </div>
 </div>
 <br>
 <div class="ui-width-1-1">
-    <div class='doc-example doc-example_theme_gray'>
+    <div class='doc-example'>
         ui-width-1-1 или ui-width-3-3
     </div>
 </div>

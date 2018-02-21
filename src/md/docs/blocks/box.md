@@ -13,10 +13,8 @@ docs/blocks/box|40
 Добавьте класс `.ui-box` к элементу контейнера.
 
 ``` html
-<div class="doc-example">
-    <div class='ui-box ui-box_theme_gray'>
-        Box
-    </div>
+<div class='ui-box ui-box_theme_gray'>
+    Box
 </div>
 ```
 
@@ -55,10 +53,8 @@ docs/blocks/box|40
 
 
 ``` html
-<div class="doc-example">
-    <div class='ui-box ui-box_padding_xxxl ui-box_theme_gray'>
-        Box
-    </div>
+<div class='ui-box ui-box_padding_xxxl ui-box_margin-lr_xxxl ui-box_theme_gray'>
+    Box
 </div>
 ```
 
@@ -80,30 +76,28 @@ docs/blocks/box|40
 | `.ui-box_theme_error`       | Цвет ошибки.          |
 
 ``` html
-<div class="doc-example doc-example_theme_gray">
-    <div class='ui-box ui-box_theme_transparent'>
-        transparent
-    </div>
-    <div class='ui-box ui-box_theme_gray'>
-        gray
-    </div>
-    <div class='ui-box ui-box_theme_white'>
-        white
-    </div>
-    <div class='ui-box ui-box_theme_blue'>
-        blue
-    </div>
-    <div class='ui-box ui-box_theme_info'>
-        info
-    </div>
-    <div class='ui-box ui-box_theme_success'>
-        success
-    </div>
-    <div class='ui-box ui-box_theme_warning'>
-        warning
-    </div>
-    <div class='ui-box ui-box_theme_error'>
-        error
-    </div>
+<div class='ui-box ui-box_padding_s ui-box_margin-tb_s ui-box_theme_transparent'>
+    transparent
+</div>
+<div class='ui-box ui-box_padding_s ui-box_margin-tb_s ui-box_theme_gray'>
+    gray
+</div>
+<div class='ui-box ui-box_padding_s ui-box_margin-tb_s ui-box_theme_white'>
+    white
+</div>
+<div class='ui-box ui-box_padding_s ui-box_margin-tb_s ui-box_theme_blue'>
+    blue
+</div>
+<div class='ui-box ui-box_padding_s ui-box_margin-tb_s ui-box_theme_info'>
+    info
+</div>
+<div class='ui-box ui-box_padding_s ui-box_margin-tb_s ui-box_theme_success'>
+    success
+</div>
+<div class='ui-box ui-box_padding_s ui-box_margin-tb_s ui-box_theme_warning'>
+    warning
+</div>
+<div class='ui-box ui-box_padding_s ui-box_margin-tb_s ui-box_theme_error'>
+    error
 </div>
 ```

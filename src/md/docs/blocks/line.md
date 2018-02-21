@@ -15,9 +15,7 @@ docs/blocks/line|100
 Блок состоит из одного класса `.ui-line`.
 
 ``` html
-<div class="doc-example">
-    <div class='ui-line'></div>
-</div>
+<div class='ui-line'></div>
 ```
 
 ---
@@ -31,9 +29,7 @@ docs/blocks/line|100
 |  `.ui-line_size_`[size](docs/base/sizes.html)  | Отступ сверху и снизу.  |
 
 ``` html
-<div class="doc-example">
-    <div class='ui-line ui-line_size_xxxl'></div>
-</div>
+<div class='ui-line ui-line_size_xxxl'></div>
 ```
 
 ---
@@ -48,8 +44,9 @@ docs/blocks/line|100
 | `.ui-line_style_dashed` | Пунктирный.            |
 
 ``` html
-<div class="doc-example">
-    <div class='ui-line ui-line_style_dotted ui-line_size_xxxl'></div>
-    <div class='ui-line ui-line_style_dashed ui-line_size_xxxl'></div>
-</div>
+<div class='ui-line ui-line_style_dotted'></div>
+<br>
+<div>текст</div>
+<br>
+<div class='ui-line ui-line_style_dashed'></div>
 ```

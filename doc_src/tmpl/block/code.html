@@ -2,27 +2,27 @@
     var hash = Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1);
 %>
 
-<div class="doc-tab">
-    <div class="doc-tab__list">
-        <div
-            class="doc-tab__list-item doc-tab__list-item_state_active"
+<div class="doc-browser">
+    <ul class="doc-browser__tabs">
+        <li
+            class="doc-browser__tabs-item doc-browser__tabs-item_state_active"
             data-tab-link='<%- hash %>'
             onclick="return toggleTab(0, '<%- hash %>');"
         >
             Preview
-        </div>
-        <div
-            class="doc-tab__list-item"
+        </li>
+        <li
+            class="doc-browser__tabs-item"
             data-tab-link='<%- hash %>'
             onclick="return toggleTab(1, '<%- hash %>');"
         >
             Markup
-        </div>
-    </div>
-    <div class="doc-tab__content doc-tab__content_state_active" data-tab-content='<%- hash %>'>
+        </li>
+    </ul>
+    <div class="doc-browser__body doc-browser__body_state_active" data-tab-content='<%- hash %>'>
         <%= arguments[0] %>
     </div>
-    <div class="doc-tab__content" data-tab-content='<%- hash %>'>
+    <div class="doc-browser__body" data-tab-content='<%- hash %>'>
         <pre class="doc-content__code"><code class="${arguments[1]}"><%- arguments[0] %></code></pre>
     </div>
 </div>

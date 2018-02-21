@@ -21,14 +21,16 @@
             function toggleTab(index, hash) {
                 var tabLinkList = document.querySelectorAll("[data-tab-link='"+hash+"']");
                 var tabContentList = document.querySelectorAll("[data-tab-content='"+hash+"']");
+                var tabActiveClass = 'doc-browser__tabs-item_state_active';
+                var contentActiveClass = 'doc-browser__body_state_active';
 
                 Array.prototype.forEach.call(tabLinkList, function(node, i) {
                     if (index === i) {
-                        node.classList.add('doc-tab__list-item_state_active');
-                        tabContentList[i].classList.add('doc-tab__content_state_active');
+                        node.classList.add(tabActiveClass);
+                        tabContentList[i].classList.add(contentActiveClass);
                     } else {
-                        node.classList.remove('doc-tab__list-item_state_active');
-                        tabContentList[i].classList.remove('doc-tab__content_state_active');
+                        node.classList.remove(tabActiveClass);
+                        tabContentList[i].classList.remove(contentActiveClass);
                     }
                 });
             }
