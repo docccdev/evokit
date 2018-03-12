@@ -2,6 +2,8 @@
 docs/blocks/line|100
 -->
 
+[sizes]: docs/base/sizes.html
+
 # Line
 
 ### Разделительная линия с внешними отступами.
@@ -26,7 +28,7 @@ docs/blocks/line|100
 
 |         Class         |          Description           |
 |-----------------------|--------------------------------|
-|  `.ui-line_size_`[size](docs/base/sizes.html)  | Отступ сверху и снизу.  |
+|  `.ui-line_size_`[sizes]  | Отступ сверху и снизу.  |
 
 ``` html
 <div class='ui-line ui-line_size_xxxl'></div>

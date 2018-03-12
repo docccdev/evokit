@@ -2,6 +2,9 @@
 docs/blocks/list|50
 -->
 
+[colors]: docs/base/colors.html
+[sizes]: docs/base/sizes.html
+
 # Список
 
 Блок `.ui-list` создает список. Каждый элемент списка должен иметь класс `.ui-list__item`.
@@ -32,7 +35,7 @@ docs/blocks/list|50
 
 |         Class         |         Description         |
 |-----------------------|-----------------------------|
-|  `.ui-list_size_`[size](docs/base/sizes.html)  | Отступ между ячейками.  |
+|  `.ui-list_size_`[sizes]  | Отступ между ячейками.  |
 
 ``` html
 <ul class='ui-list ui-list_size_xxxl'>
@@ -92,9 +95,19 @@ docs/blocks/list|50
 
 |            Class          |            Description            |
 |---------------------------|-----------------------------------|
-|  `.ui-list_color_`[color](docs/base/text.html)  | Цвет текста.  |
+|  `.ui-list_color_`[colors]  | Цвет маркера.  |
 
 ``` html
+<ul class='ui-list ui-list_style_disc ui-list_color_base'>
+    <li class='ui-list__item'>
+        Base
+    </li>
+</ul>
+<ul class='ui-list ui-list_style_disc ui-list_color_link'>
+    <li class='ui-list__item'>
+        Link
+    </li>
+</ul>
 <ul class='ui-list ui-list_style_disc ui-list_color_red'>
     <li class='ui-list__item'>
         Red
@@ -103,11 +116,6 @@ docs/blocks/list|50
 <ul class='ui-list ui-list_style_disc ui-list_color_yellow'>
     <li class='ui-list__item'>
         Yellow
-    </li>
-</ul>
-<ul class='ui-list ui-list_style_disc ui-list_color_link'>
-    <li class='ui-list__item'>
-        Link
     </li>
 </ul>
 <ul class='ui-list ui-list_style_disc ui-list_color_muted'>

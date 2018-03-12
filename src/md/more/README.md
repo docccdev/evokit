@@ -1,5 +1,5 @@
 <!--
-more|10
+more|50
 -->
 
 [bigl]: http://bigl.ua

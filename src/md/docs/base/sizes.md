@@ -1,5 +1,5 @@
 <!--
-docs/base/sizes|1
+docs/base/sizes|10
 -->
 
 # Модификаторы размеров

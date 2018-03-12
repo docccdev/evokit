@@ -2,6 +2,10 @@
 docs/blocks/text|60
 -->
 
+[colors]: docs/base/colors.html
+[text]: docs/base/text.html
+
+
 # Text
 
 Текстовый блок
@@ -24,17 +28,20 @@ docs/blocks/text|60
 
 |         Class         |         Description         |
 |-----------------------|-----------------------------|
-|  `.ui-text_color_`[color](docs/base/text.html)  | Цвет текста.  |
+|  `.ui-text_color_`[colors]  | Цвет текста.  |
 
 ``` html
+<div class='ui-text ui-text_color_base'>
+    Base
+</div>
+<div class='ui-text ui-text_color_link'>
+    Link
+</div>
 <div class='ui-text ui-text_color_red'>
     Red
 </div>
 <div class='ui-text ui-text_color_yellow'>
     Yellow
-</div>
-<div class='ui-text ui-text_color_link'>
-    Link
 </div>
 <div class='ui-text ui-text_color_muted'>
     Muted
@@ -59,7 +66,7 @@ docs/blocks/text|60
 
 |         Class         |         Description         |
 |-----------------------|-----------------------------|
-|  `.ui-text_size_`[font-size](docs/base/text.html)  | Размер текста.  |
+|  `.ui-text_size_`[font-size][text]  | Размер текста.  |
 
 ``` html
 <div class='ui-text ui-text_size_h1'>
@@ -88,18 +95,18 @@ docs/blocks/text|60
 
 |        Class       |    Description   |
 |--------------------|------------------|
-|  `.ui-text_weight_`[font-weight](docs/base/text.html)  | Насыщенность текста.  |
+|  `.ui-text_weight_`[font-weight][text]  | Насыщенность текста.  |
 
 
 ``` html
+<span class='ui-text ui-text_weight_base'>
+    base
+</span>
 <span class='ui-text ui-text_weight_thin'>
     100
 </span>
 <span class='ui-text ui-text_weight_light'>
     300
-</span>
-<span class='ui-text ui-text_weight_regular'>
-    400
 </span>
 <span class='ui-text ui-text_weight_medium'>
     500

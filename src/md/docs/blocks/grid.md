@@ -2,6 +2,8 @@
 docs/blocks/grid|20
 -->
 
+[sizes]: docs/base/sizes.html
+
 # Grid
 
 ### Резиновый макет сетки.
@@ -54,7 +56,7 @@ Cетка UIKit вмещает до 10 столбцов. Она использу
 
 |         Class         |         Description         |
 |-----------------------|-----------------------------|
-|  `.ui-grid_size_`[size](docs/base/sizes.html)  | Отступ между ячейками.  |
+|  `.ui-grid_size_`[sizes]  | Отступ между ячейками.  |
 
 ``` html
 <div class='ui-grid ui-grid_size_xxxl'>

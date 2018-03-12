@@ -2,6 +2,8 @@
 docs/blocks/tags|110
 -->
 
+[colors]: docs/base/colors.html
+
 [text]: docs/blocks/text.html
 [link]: docs/blocks/link.html
 
@@ -35,13 +37,7 @@ docs/blocks/tags|110
 
 |            Class            |       Description     |
 |-----------------------------|-----------------------|
-| `.ui-tags_theme_white`       | Цвет белый.          |
-| `.ui-tags_theme_gray`        | Цвет серый.          |
-| `.ui-tags_theme_blue`        | Цвет синий.          |
-| `.ui-tags_theme_info`        | Цвет информации.     |
-| `.ui-tags_theme_success`     | Цвет успеха.         |
-| `.ui-tags_theme_warning`     | Цвет предупреждения. |
-| `.ui-tags_theme_error`       | Цвет ошибки.         |
+| `.ui-tags_theme_`[colors]   | Цвет фона.            |
 
 ``` html
 <ul class='ui-tags'>
@@ -118,16 +114,13 @@ docs/blocks/tags|110
 
 |            Class            |        Description      |
 |-----------------------------|-------------------------|
-| `.ui-tags__item_theme_white`   | Цвет белый.          |
-| `.ui-tags__item_theme_gray`    | Цвет серый.          |
-| `.ui-tags__item_theme_blue`    | Цвет синий.          |
-| `.ui-tags__item_theme_info`    | Цвет информации.     |
-| `.ui-tags__item_theme_success` | Цвет успеха.         |
-| `.ui-tags__item_theme_warning` | Цвет предупреждения. |
-| `.ui-tags__item_theme_error`   | Цвет ошибки.         |
+| `.ui-tags__item_theme_`[colors]   | Цвет фона.        |
 
 ``` html
 <ul class='ui-tags'>
+    <li class='ui-tags__item ui-tags__item_theme_transparent'>
+        transparent
+    </li>
     <li class='ui-tags__item ui-tags__item_theme_white'>
         white
     </li>
@@ -156,7 +149,7 @@ docs/blocks/tags|110
 
 ## Пример
 
-Использование с блоками [ui-link][link] и [ui-text][text].
+Использование с блоками [Link][link] и [Text][text].
 
 ``` html
 <ul class='ui-tags'>
@@ -166,7 +159,9 @@ docs/blocks/tags|110
         </span>
     </li>
     <li class='ui-tags__item ui-tags__item_theme_gray'>
-        color default
+        <span class='ui-text ui-text_color_base'>
+            color base
+        </span>
     </li>
     <li class='ui-tags__item ui-tags__item_theme_blue'>
         <span class='ui-text ui-text_color_link'>

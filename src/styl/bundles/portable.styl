@@ -12,15 +12,15 @@ media-add('medium', '(min-width: 768px)')
 // Tablets landscape
 media-add('large',  '(min-width: 960px)')
 
-// ui-base settings
+// ui-page settings
 $uikit-base['background-color'] = #f7f7f7
 $uikit-base['min-width'] = 320px
 
 // ui-page settings
 $global-page['padding'] = (10px)
 
-// ui-title settings
-$global-title = {
+// replace font sizes
+$FONT_SIZES = {
     h1: 22px
     h2: 20px
     h3: 18px
@@ -28,9 +28,8 @@ $global-title = {
     h5: 14px
 }
 
-$global-text['font-size'] = $global-title
-
-$PORTABLE_MODE = true
+$global-text['font-size'] = $FONT_SIZES
+$global-link['font-size'] = $FONT_SIZES
 
 +prefix-classes('ui-')
     // Blocks

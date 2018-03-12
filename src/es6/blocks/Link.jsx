@@ -4,6 +4,9 @@ import { uiKitComponent } from '../component';
 class Link extends React.Component {
     static blockName = 'link';
     static blockMods = [
+        'color',
+        'size',
+        'weight',
         'style',
     ];
 

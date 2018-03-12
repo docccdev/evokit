@@ -2,11 +2,16 @@
 docs/blocks/panel|30
 -->
 
+[colors]: docs/base/colors.html
+[sizes]: docs/base/sizes.html
+
+[grid]: docs/blocks/grid.html
+
 # Panel
 
 ### Прямоугольный блок с разными темами и внутренними отступами.
 
-UIKit использует панели для того чтобы наметить определенные разделы вашего содержания, которые могут быть стилизованы по-разному. Как правило, панели расположены в столбцах сетки из компонента <a href="docs/layout/grid.html">Grid</a>.
+UIKit использует панели для того чтобы наметить определенные разделы вашего содержания, которые могут быть стилизованы по-разному. Как правило, панели расположены в столбцах сетки из компонента [Grid][grid].
 
 ---
 
@@ -33,9 +38,9 @@ UIKit использует панели для того чтобы намети�
 
 Модификатор размера панели определяет внутренние отступы. По умолчанию, панель не имеет отступов.
 
-|         Class         |      Description      |
-|-----------------------|-----------------------|
-|  `.ui-panel_size_`[size](docs/base/sizes.html)  | Внутренний отступ.  |
+|           Class           |      Description      |
+|---------------------------|-----------------------|
+|  `.ui-panel_size_`[sizes] | Внутренний отступ.    |
 
 ``` html
 <div class='ui-panel ui-panel_theme_gray ui-panel_size_xxxl'>
@@ -53,14 +58,8 @@ UIKit использует панели для того чтобы намети�
 
 |             Class             |      Description      |
 |-------------------------------|-----------------------|
-| `.ui-panel_theme_transparent` | Цвет фона прозрачный. |
-| `.ui-panel_theme_gray`        | Цвет фона серый.      |
-| `.ui-panel_theme_white`       | Цвет фона белый.      |
-| `.ui-panel_theme_blue`        | Цвет фона синий.      |
-| `.ui-panel_theme_info`        | Цвет информации.      |
-| `.ui-panel_theme_success`     | Цвет успеха.          |
-| `.ui-panel_theme_warning`     | Цвет предупреждения.  |
-| `.ui-panel_theme_error`       | Цвет ошибки.          |
+| `.ui-panel_theme_`[colors] | Цвет фона. |
+
 
 ``` html
 <div class='ui-panel ui-panel_size_s ui-panel_theme_transparent'>
@@ -69,15 +68,15 @@ UIKit использует панели для того чтобы намети�
     </div>
 </div>
 <br>
-<div class='ui-panel ui-panel_size_s ui-panel_theme_gray'>
-    <div class='ui-panel__body'>
-        gray
-    </div>
-</div>
-<br>
 <div class='ui-panel ui-panel_size_s ui-panel_theme_white'>
     <div class='ui-panel__body'>
         white
+    </div>
+</div>
+<br>
+<div class='ui-panel ui-panel_size_s ui-panel_theme_gray'>
+    <div class='ui-panel__body'>
+        gray
     </div>
 </div>
 <br>
@@ -127,15 +126,15 @@ UIKit использует панели для того чтобы намети�
     </div>
 </div>
 <br>
-<div class='ui-panel ui-panel_size_s ui-panel_style_border ui-panel_theme_gray'>
-    <div class='ui-panel__body'>
-        gray
-    </div>
-</div>
-<br>
 <div class='ui-panel ui-panel_size_s ui-panel_style_border ui-panel_theme_white'>
     <div class='ui-panel__body'>
         white
+    </div>
+</div>
+<br>
+<div class='ui-panel ui-panel_size_s ui-panel_style_border ui-panel_theme_gray'>
+    <div class='ui-panel__body'>
+        gray
     </div>
 </div>
 <br>

@@ -1,14 +1,67 @@
-// FLAGS
-$PORTABLE_MODE = false
+// THEMES
+$GRID_SIZES = {
+    none: 0
+    xxs: 5px
+    xs: 10px
+    s: 15px
+    m: 20px
+    l: 25px
+    xl: 30px
+    xxl: 35px
+    xxxl: 40px
+}
+
+$FONT_COLORS = {
+    base: #3c3c3c
+    link: #5e8fd5
+    red: #f55832
+    yellow: #facd00
+    muted: #a0b0c7
+    success: #33b600
+    info: #5e8fd5
+    warning: #ff9600
+    error: #bb2914
+}
+
+$FONT_WEIGHTS = {
+    base: 400
+    thin: 100
+    light: 300
+    medium: 500
+    bold: 700
+    black: 900
+}
+
+$FONT_SIZES = {
+    base: 13px
+    h1: 24px
+    h2: 22px
+    h3: 20px
+    h4: 18px
+    h5: 16px
+    h6: 14px
+}
+
+$BG_COLORS = {
+    transparent: transparent
+    white: #ffffff
+    gray: #f7f7f7
+    blue: #ebf3f9
+    success: #d0efcc
+    info: #dde7f5
+    warning: #fcf1bd
+    error: #efd2ce
+}
 
 // BLOCKS SETTING
 $uikit-base = {
     font-family: 'Roboto'\, Arial\, sans-serif
-    font-size: 13px
+    font-size: $FONT_SIZES['base']
     line-height: 1.3em //Temporarily not used in .body
-    color: #3c3c3c
+    color: $FONT_COLORS['base']
     background-color: #fff
     min-width: 1000px
+    font-weight: $FONT_WEIGHTS['base']
 }
 
 $uikit-body = {
@@ -24,21 +77,12 @@ $uikit-body = {
     }
 }
 
-$global-size = {
-    none: 0
-    xxs: 5px
-    xs: 10px
-    s: 15px
-    m: 20px
-    l: 25px
-    xl: 30px
-    xxl: 35px
-    xxxl: 40px
-}
+
+// blocks settings
+
+$global-size = $GRID_SIZES
 
 $global-line-color = #dde8f0
-
-$global-title = {}
 
 $global-page = {
     padding: ()
@@ -47,132 +91,34 @@ $global-page = {
 }
 
 $global-link = {
-    color: #5e8fd5
+    colors: $FONT_COLORS
+    font-size: $FONT_SIZES
+    font-weight: $FONT_WEIGHTS
 }
 
 $global-text = {
     line-height: {
         read: 1.5em
     }
-    color: {
-        red: #f55832
-        yellow: #facd00
-        link: $global-link['color']
-        muted: #a0b0c7
-        success: #33b600
-        info: #5e8fd5
-        warning: #ff9600
-        error: #bb2914
-    }
-    font-size: $global-title
-    font-weight: {
-        thin: 100
-        light: 300
-        regular: 400
-        medium: 500
-        bold: 700
-        black: 900
-    }
+    color: $FONT_COLORS
+    font-size: $FONT_SIZES
+    font-weight: $FONT_WEIGHTS
 }
 
 $uikit-list = {
-    color: $global-text['color']
+    color: $FONT_COLORS
 }
 
 $global-box = {
-    theme: {
-        transparent: {
-            background-color: transparent
-        }
-        white: {
-            background-color: #ffffff
-        }
-        gray: {
-            background-color: #f7f7f7
-        }
-        blue: {
-            background-color: #ebf3f9
-        }
-        success: {
-            background-color: #d0efcc
-        }
-        info: {
-            background-color: #dde7f5
-        }
-        warning: {
-            background-color: #fcf1bd
-        }
-        error: {
-            background-color: #efd2ce
-        }
-    }
+    background-color: $BG_COLORS
+}
+
+$global-tags = {
+    border-radius: 10px
+    background-color: $BG_COLORS
 }
 
 $global-panel = {
     border-radius: 10px
-    theme: {
-        transparent: {
-            background-color: $global-box['theme']['transparent']['background-color']
-            border-color: transparent
-        }
-        white: {
-            background-color: $global-box['theme']['white']['background-color']
-            border-color: #dde8f0
-        }
-        gray: {
-            background-color: $global-box['theme']['gray']['background-color']
-            border-color: darken($global-box['theme']['gray']['background-color'], 7)
-        }
-        blue: {
-            background-color: $global-box['theme']['blue']['background-color']
-            border-color: darken($global-box['theme']['blue']['background-color'], 7)
-        }
-        success: {
-            background-color: $global-box['theme']['success']['background-color']
-            border-color: darken($global-box['theme']['success']['background-color'], 7)
-        }
-        info: {
-            background-color: $global-box['theme']['info']['background-color']
-            border-color: darken($global-box['theme']['info']['background-color'], 7)
-        }
-        warning: {
-            background-color: $global-box['theme']['warning']['background-color']
-            border-color: darken($global-box['theme']['warning']['background-color'], 7)
-        }
-        error: {
-            background-color: $global-box['theme']['error']['background-color']
-            border-color: darken($global-box['theme']['error']['background-color'], 7)
-        }
-    }
-}
-
-
-$global-tags = {
-    border-radius: 10px
-    theme: {
-        transparent: {
-            background-color: $global-box['theme']['transparent']['background-color']
-        }
-        white: {
-            background-color: $global-box['theme']['white']['background-color']
-        }
-        gray: {
-            background-color: $global-box['theme']['gray']['background-color']
-        }
-        blue: {
-            background-color: $global-box['theme']['blue']['background-color']
-        }
-        success: {
-            background-color: $global-box['theme']['success']['background-color']
-        }
-        info: {
-            background-color: $global-box['theme']['info']['background-color']
-        }
-        warning: {
-            background-color: $global-box['theme']['warning']['background-color']
-        }
-        error: {
-            background-color: $global-box['theme']['error']['background-color']
-        }
-    }
+    background-color: $BG_COLORS
 }

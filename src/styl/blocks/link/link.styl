@@ -1,8 +1,8 @@
 .link
-    color: $global-link['color']
+    color: $global-link['colors']['link']
     text-decoration: none
 
-    if not $PORTABLE_MODE
+    @media (hover), (min-width:0\0), (min--moz-device-pixel-ratio:0)
         cursor: pointer
 
         &:hover

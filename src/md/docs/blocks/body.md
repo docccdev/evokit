@@ -10,8 +10,9 @@ docs/blocks/body|10
 |---------------------|------------------------------|
 |  `font-family`      |  "Roboto", Arial, sans-serif |
 |  `font-size`        |  13px                        |
+|  `font-weight`      |  400                         |
 |  `color`            |  #3c3c3c                     |
-|  `background-color` |  #fff                        |
+|  `background-color` |  #FFF                        |
 |  `min-width`        |  1000px                      |
 
 

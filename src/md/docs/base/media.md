@@ -1,5 +1,5 @@
 <!--
-docs/base/media|2
+docs/base/media|20
 -->
 
 # Медиа классы

@@ -1,10 +1,11 @@
 <!--
-updates|3
+updates|30
 -->
 
 [media]: docs/base/media.html
 [size]: docs/base/sizes.html
-[media]: docs/base/media.html
+[text]: docs/base/text.html
+[colors]: docs/base/colors.html
 
 [body]: docs/blocks/body.html
 [grid]: docs/blocks/grid.html
@@ -24,6 +25,22 @@ updates|3
 
 
 # Обновления
+
+
+## 0.1.53 beta (12.03.2018)
+- Новый раздел [colors][colors].
+- Изменен модификатор насыщенности с `regular` на `base` для [text][text]:
+- Установлен базовый `font-weight: 400` для [ui-body][body]:
+- Добавлено автоопределение сенсорных экранов для свойства `:hover` на ссылке [ui-link][link]:
+- Добавлен модификатор базового цвета [ui-text][text]:
+    - `.ui-text_color_base`
+- Добавлен модификатор базового цвета [ui-list][list]:
+    - `.ui-list_color_base`
+- Добавлены модификаторы для [ui-link][link]
+    - `.ui-link_color_*`
+    - `.ui-link_size_*`
+    - `.ui-link_weight_*`
+
 
 ## 0.1.52 beta (19.01.2018)
 - Добавлен новый блок в `jsx`:

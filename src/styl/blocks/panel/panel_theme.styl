@@ -1,4 +1,5 @@
-for name, value in $global-panel['theme']
+for name, value in $global-panel['background-color']
     +media-selector('.panel_theme_'+name)
-        background-color: value['background-color']
-        border-color: value['border-color']
+        background-color: value
+        border-color: darken(value, 7)
+        outline: none
