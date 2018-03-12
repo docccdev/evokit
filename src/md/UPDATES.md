@@ -29,14 +29,14 @@ updates|30
 
 ## 0.1.53 beta (12.03.2018)
 - Новый раздел [colors][colors].
-- Изменен модификатор насыщенности с `regular` на `base` для [text][text]:
-- Установлен базовый `font-weight: 400` для [ui-body][body]:
-- Добавлено автоопределение сенсорных экранов для свойства `:hover` на ссылке [ui-link][link]:
+- Изменен модификатор насыщенности с `regular` на `base` для [text][text].
+- Установлен базовый `font-weight: 400` для [ui-body][body].
+- Добавлено автоопределение сенсорных экранов для свойства `:hover` на ссылке [ui-link][link].
 - Добавлен модификатор базового цвета [ui-text][text]:
     - `.ui-text_color_base`
 - Добавлен модификатор базового цвета [ui-list][list]:
     - `.ui-list_color_base`
-- Добавлены модификаторы для [ui-link][link]
+- Добавлены модификаторы для [ui-link][link]:
     - `.ui-link_color_*`
     - `.ui-link_size_*`
     - `.ui-link_weight_*`
