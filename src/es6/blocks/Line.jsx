@@ -10,12 +10,10 @@ class Line extends React.Component {
 
     render() {
         return (
-            <a
+            <hr
                 className={this.getClassName()}
                 {...this.getCleanProps()}
-            >
-                {this.props.children}
-            </a>
+            />
         );
     }
 }

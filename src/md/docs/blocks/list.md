@@ -4,8 +4,11 @@ docs/blocks/list|50
 
 [colors]: docs/base/colors.html
 [sizes]: docs/base/sizes.html
+[media]: docs/base/media.html
 
-# Список
+# List
+
+### Модификаторы имеют [Media][media] параметры.
 
 Блок `.ui-list` создает список. Каждый элемент списка должен иметь класс `.ui-list__item`.
 

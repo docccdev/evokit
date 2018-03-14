@@ -14,7 +14,7 @@ docs/blocks/picture|80
 ``` html
 <div class='ui-width-1-5'>
     <div class='ui-picture'>
-        <img class='ui-picture__item' src='http://lorempixel.com/600/300/'>
+        <img class='ui-picture__item' src='https://picsum.photos/600/300/?random'>
     </div>
 </div>
 ```
@@ -30,7 +30,7 @@ docs/blocks/picture|80
 ``` html
 <div class="ui-width-1-5">
     <div class="ui-picture ui-picture_size_cover">
-        <img class='ui-picture__item' src='http://lorempixel.com/600/300/'>
+        <img class='ui-picture__item' src='https://picsum.photos/600/300/?random'>
     </div>
 </div>
 ```
@@ -46,7 +46,7 @@ docs/blocks/picture|80
 ``` html
 <div class="ui-width-1-5">
     <div class="ui-picture ui-picture_style_round ui-picture_size_cover">
-        <img class='ui-picture__item' src='http://lorempixel.com/600/300/'>
+        <img class='ui-picture__item' src='https://picsum.photos/600/300/?random'>
     </div>
 </div>
 ```

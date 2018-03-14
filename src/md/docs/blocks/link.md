@@ -27,21 +27,13 @@ docs/blocks/link|70
 
 ``` html
 <a class='ui-link ui-link_color_base'>Base</a>
-<br>
 <a class='ui-link ui-link_color_link'>Link</a>
-<br>
 <a class='ui-link ui-link_color_red'>Red</a>
-<br>
 <a class='ui-link ui-link_color_yellow'>Yellow</a>
-<br>
 <a class='ui-link ui-link_color_muted'>Muted</a>
-<br>
 <a class='ui-link ui-link_color_info'>Info</a>
-<br>
 <a class='ui-link ui-link_color_success'>Success</a>
-<br>
 <a class='ui-link ui-link_color_warning'>Warning</a>
-<br>
 <a class='ui-link ui-link_color_error'>Error</a>
 ```
 
@@ -54,17 +46,12 @@ docs/blocks/link|70
 |  `.ui-link_size_`[font-size][text]  | Размер текста.  |
 
 ``` html
-<a class='ui-link ui-link_size_h1'>Размер заголовка h1</a>
-<br>
-<a class='ui-link ui-link_size_h2'>Размер заголовка h2</a>
-<br>
-<a class='ui-link ui-link_size_h3'>Размер заголовка h3</a>
-<br>
-<a class='ui-link ui-link_size_h4'>Размер заголовка h4</a>
-<br>
-<a class='ui-link ui-link_size_h5'>Размер заголовка h5</a>
-<br>
-<a class='ui-link ui-link_size_h6'>Размер заголовка h6</a>
+<a class='ui-link ui-link_size_h1'>H1</a>
+<a class='ui-link ui-link_size_h2'>H2</a>
+<a class='ui-link ui-link_size_h3'>H3</a>
+<a class='ui-link ui-link_size_h4'>H4</a>
+<a class='ui-link ui-link_size_h5'>H5</a>
+<a class='ui-link ui-link_size_h6'>H6</a>
 ```
 
 ---

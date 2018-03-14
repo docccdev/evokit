@@ -27,6 +27,17 @@ updates|30
 # Обновления
 
 
+## 0.1.54 beta (14.03.2018)
+- Изменен тег c `<div>` на `<span>` для jsx компонента [UiText][text].
+- Изменен тег c `<a>` на `<hr>` для jsx компонента [UiLine][line].
+- Блок [ui-box][box] получил свойство `display: block`.
+- Блок [ui-text][text] получил свойство `display: inline`.
+- Блок [ui-list][list] получил свойство `display: block`.
+- Добавлены модификаторы отображения [ui-box][box]:
+    - `.ui-box_display_*`
+- Добавлены модификаторы отображения [ui-text][text]:
+    - `.ui-text_display_*`
+
 ## 0.1.53 beta (12.03.2018)
 - Новый раздел [colors][colors].
 - Изменен модификатор насыщенности с `regular` на `base` для [text][text].

@@ -2,7 +2,7 @@
 docs/blocks/image|90
 -->
 
-# Изображение
+# Image
 
 Чтобы применить этот компонент, просто добавьте класс `.ui-image` к тегу `<img>`.
 
@@ -10,7 +10,7 @@ docs/blocks/image|90
 ``` html
 <img
     class='ui-image'
-    src='http://lorempixel.com/40/40/'
+    src='https://picsum.photos/40/40/?random'
     width='40'
     height='40'
 >
@@ -30,7 +30,7 @@ docs/blocks/image|90
 ``` html
 <img
     class='ui-image ui-image_align_left'
-    src='http://lorempixel.com/40/40/'
+    src='https://picsum.photos/40/40/?random'
     width='40'
     height='40'
 >
@@ -38,7 +38,7 @@ docs/blocks/image|90
 <div class="ui-line ui-line_size_m"></div>
 <img
     class='ui-image ui-image_align_center'
-    src='http://lorempixel.com/40/40/'
+    src='https://picsum.photos/40/40/?random'
     width='40'
     height='40'
 >
@@ -46,7 +46,7 @@ docs/blocks/image|90
 <div class="ui-line ui-line_size_m"></div>
 <img
     class='ui-image ui-image_align_right'
-    src='http://lorempixel.com/40/40/'
+    src='https://picsum.photos/40/40/?random'
     width='40'
     height='40'
 >
@@ -66,23 +66,23 @@ docs/blocks/image|90
 ``` html
 <img
     class='ui-image ui-image_valign_top'
-    src='http://lorempixel.com/40/40/'
+    src='https://picsum.photos/40/40/?random'
     width='40'
     height='40'
 >
 Выравнивание по верхнему краю строки
-<div class="ui-line ui-line_size_m"></div>
+<hr class="ui-line ui-line_size_m" />
 <img
     class='ui-image ui-image_valign_middle'
-    src='http://lorempixel.com/40/40/'
+    src='https://picsum.photos/40/40/?random'
     width='40'
     height='40'
 >
 Выравнивание по середине
-<div class="ui-line ui-line_size_m"></div>
+<hr class="ui-line ui-line_size_m" />
 <img
     class='ui-image ui-image_valign_bottom'
-    src='http://lorempixel.com/40/40/'
+    src='https://picsum.photos/40/40/?random'
     width='40'
     height='40'
 >

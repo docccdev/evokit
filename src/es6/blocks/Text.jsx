@@ -15,12 +15,12 @@ class Text extends React.Component {
 
     render() {
         return (
-            <div
+            <span
                 className={this.getClassName()}
                 {...this.getCleanProps()}
             >
                 {this.props.children}
-            </div>
+            </span>
         );
     }
 }
