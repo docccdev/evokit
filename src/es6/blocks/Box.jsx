@@ -19,6 +19,7 @@ class Box extends React.Component {
         'padding-left',
         'padding-tb',
         'padding-lr',
+        'display',
     ];
 
     render() {
