@@ -4,12 +4,13 @@ docs/blocks/panel|30
 
 [colors]: docs/base/colors.html
 [sizes]: docs/base/sizes.html
+[media]: docs/base/media.html
 
 [grid]: docs/blocks/grid.html
 
 # Panel
 
-### Прямоугольный блок с разными темами и внутренними отступами.
+### Модификаторы имеют [Media][media] параметры.
 
 UIKit использует панели для того чтобы наметить определенные разделы вашего содержания, которые могут быть стилизованы по-разному. Как правило, панели расположены в столбцах сетки из компонента [Grid][grid].
 
@@ -118,51 +119,86 @@ UIKit использует панели для того чтобы намети�
 |           Class            |    Description   |
 |----------------------------|------------------|
 |  `.ui-panel_style_border`  | Добавляет рамку. |
+|  `.ui-panel_style_divider`  | Добавляет разделитель. |
 
 ``` html
-<div class='ui-panel ui-panel_size_s ui-panel_style_border ui-panel_theme_transparent'>
+<div class='ui-panel ui-panel_size_s ui-panel_style_border ui-panel_style_divider'>
+    <div class='ui-panel__body'>
+        default
+    </div>
+    <div class='ui-panel__body'>
+        default
+    </div>
+</div>
+<br>
+
+<div class='ui-panel ui-panel_size_s ui-panel_style_border ui-panel_style_divider ui-panel_theme_transparent'>
+    <div class='ui-panel__body'>
+        transparent
+    </div>
     <div class='ui-panel__body'>
         transparent
     </div>
 </div>
 <br>
-<div class='ui-panel ui-panel_size_s ui-panel_style_border ui-panel_theme_white'>
+<div class='ui-panel ui-panel_size_s ui-panel_style_border ui-panel_style_divider ui-panel_theme_white'>
+    <div class='ui-panel__body'>
+        white
+    </div>
     <div class='ui-panel__body'>
         white
     </div>
 </div>
 <br>
-<div class='ui-panel ui-panel_size_s ui-panel_style_border ui-panel_theme_gray'>
+<div class='ui-panel ui-panel_size_s ui-panel_style_border ui-panel_style_divider ui-panel_theme_gray'>
+    <div class='ui-panel__body'>
+        gray
+    </div>
     <div class='ui-panel__body'>
         gray
     </div>
 </div>
 <br>
-<div class='ui-panel ui-panel_size_s ui-panel_style_border ui-panel_theme_blue'>
+<div class='ui-panel ui-panel_size_s ui-panel_style_border ui-panel_style_divider ui-panel_theme_blue'>
+    <div class='ui-panel__body'>
+        blue
+    </div>
     <div class='ui-panel__body'>
         blue
     </div>
 </div>
 <br>
-<div class='ui-panel ui-panel_size_s ui-panel_style_border ui-panel_theme_info'>
+<div class='ui-panel ui-panel_size_s ui-panel_style_border ui-panel_style_divider ui-panel_theme_info'>
+    <div class='ui-panel__body'>
+        info
+    </div>
     <div class='ui-panel__body'>
         info
     </div>
 </div>
 <br>
-<div class='ui-panel ui-panel_size_s ui-panel_style_border ui-panel_theme_success'>
+<div class='ui-panel ui-panel_size_s ui-panel_style_border ui-panel_style_divider ui-panel_theme_success'>
+    <div class='ui-panel__body'>
+        success
+    </div>
     <div class='ui-panel__body'>
         success
     </div>
 </div>
 <br>
-<div class='ui-panel ui-panel_size_s ui-panel_style_border ui-panel_theme_warning'>
+<div class='ui-panel ui-panel_size_s ui-panel_style_border ui-panel_style_divider ui-panel_theme_warning'>
+    <div class='ui-panel__body'>
+        warning
+    </div>
     <div class='ui-panel__body'>
         warning
     </div>
 </div>
 <br>
-<div class='ui-panel ui-panel_size_s ui-panel_style_border ui-panel_theme_error'>
+<div class='ui-panel ui-panel_size_s ui-panel_style_border ui-panel_style_divider ui-panel_theme_error'>
+    <div class='ui-panel__body'>
+        error
+    </div>
     <div class='ui-panel__body'>
         error
     </div>

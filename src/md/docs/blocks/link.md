@@ -79,7 +79,10 @@ docs/blocks/link|70
 |          Class          |             Description             |
 |-------------------------|-------------------------------------|
 | `.ui-link_style_dotted` | Добавляет пунктирное подчеркивание. |
+| `.ui-link_style_multi-line` | Делает пространство между многострочной ссылкой кликабельным. |
 
 ``` html
 <a class='ui-link ui-link_style_dotted'>Пунктирная ссылка</a>
+<hr class="ui-line ui-line_size_xl">
+<a class='ui-link ui-link_style_multi-line'>Многострочная <br><br> ссылка</a>
 ```

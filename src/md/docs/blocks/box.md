@@ -32,9 +32,9 @@ docs/blocks/box|40
 
 |         Class         |         Description         |
 |-----------------------|-----------------------------|
-|  `.ui-text_display_block`  | Элемент показывается как блочный.  |
-|  `.ui-text_display_inline`  | Элемент отображается как встроенный.  |
-|  `.ui-text_display_inline-block`  | Блочный элемент, который обтекается другими элементами.  |
+|  `.ui-box_display_block`  | Элемент показывается как блочный.  |
+|  `.ui-box_display_inline`  | Элемент отображается как встроенный.  |
+|  `.ui-box_display_inline-block`  | Блочный элемент, который обтекается другими элементами.  |
 
 ``` html
 <div class='ui-box ui-box_theme_gray ui-box_margin_xxs ui-box_display_block'>

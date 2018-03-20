@@ -22,24 +22,6 @@ docs/blocks/text|60
 
 ---
 
-## Отображение (display)
-
-Определяет, как элемент должен быть показан в документе. По умолчанию `display: inline`;
-
-|         Class         |         Description         |
-|-----------------------|-----------------------------|
-|  `.ui-text_display_block`  | Элемент показывается как блочный.  |
-|  `.ui-text_display_inline`  | Элемент отображается как встроенный.  |
-|  `.ui-text_display_inline-block`  | Блочный элемент, который обтекается другими элементами.  |
-
-``` html
-<span class='ui-text ui-text_display_block'>Block</span>
-<span class='ui-text ui-text_display_inline'>Inline</span>
-<span class='ui-text ui-text_display_inline-block'>Inline-block</span>
-```
-
----
-
 ## Цвет
 
 |         Class         |         Description         |
@@ -97,7 +79,7 @@ docs/blocks/text|60
 
 ## Горизонтальное выравнивание
 
-Применяется только в паре с модификатором `ui-text_display_block`.
+Устанавливает свойство `display: block`.
 
 |           Class          |             Description              |
 |--------------------------|--------------------------------------|
@@ -107,13 +89,13 @@ docs/blocks/text|60
 | `.ui-text_align_justify` | Выравнивание по ширине.              |
 
 ``` html
-<span class='ui-text ui-text_display_block ui-text_align_left'>
+<span class='ui-text ui-text_align_left'>
     Текст слева
 </span>
-<span class='ui-text ui-text_display_block ui-text_align_center'>
+<span class='ui-text ui-text_align_center'>
     Текст по центру
 </span>
-<span class='ui-text ui-text_display_block ui-text_align_right'>
+<span class='ui-text ui-text_align_right'>
     Текст справа
 </span>
 ```
@@ -149,7 +131,7 @@ docs/blocks/text|60
 
 ## Перенос и обрезание
 
-Применяется только в паре с модификатором `ui-text_display_block`.
+Устанавливает свойство `display: block`.
 
 |            Class           |                        Description                       |
 |----------------------------|----------------------------------------------------------|
@@ -160,13 +142,13 @@ docs/blocks/text|60
 | `.ui-text_wrap_nowrap`     | Весь текст отображается одной строкой.                   |
 
 ``` html
-<span class='ui-text ui-text_display_block ui-text_wrap_ellipsis'>
+<span class='ui-text ui-text_wrap_ellipsis'>
     Текст обрезается и к концу строки добавляется троеточие.
     Текст обрезается и к концу строки добавляется троеточие.
     Текст обрезается и к концу строки добавляется троеточие.
 </span>
 <br>
-<span class='ui-text ui-text_display_block ui-text_wrap_two-line'>
+<span class='ui-text ui-text_wrap_two-line'>
     Текст обрезается больше 2 строк.
     Текст обрезается больше 2 строк.
     Текст обрезается больше 2 строк.
@@ -180,7 +162,7 @@ docs/blocks/text|60
     Текст обрезается больше 2 строк.
 </span>
 <br>
-<span class='ui-text ui-text_display_block ui-text_wrap_three-line'>
+<span class='ui-text ui-text_wrap_three-line'>
     Текст обрезается больше 3 строк.
     Текст обрезается больше 3 строк.
     Текст обрезается больше 3 строк.
@@ -199,17 +181,17 @@ docs/blocks/text|60
     Текст обрезается больше 3 строк.
 </span>
 <br>
-<span class='ui-text ui-text_display_block ui-text_wrap_three-line'>
+<span class='ui-text ui-text_wrap_three-line'>
     Перенос строк добавляется автоматически, чтобы слово поместилось в заданную ширину блока.
     Перенос строк добавляется автоматически, чтобы слово поместилось в заданную ширину блока.
 </span>
 <br>
-<span class='ui-text ui-text_display_block ui-text_wrap_break'>
+<span class='ui-text ui-text_wrap_break'>
     Перенос строк добавляется автоматически, чтобы слово поместилось в заданную ширину блока.
     Перенос строк добавляется автоматически, чтобы слово поместилось в заданную ширину блока.
 </span>
 <br>
-<span class='ui-text ui-text_display_block ui-text_wrap_nowrap'>
+<span class='ui-text ui-text_wrap_nowrap'>
     Пробелы не учитываются, переносы строк в коде HTML игнорируются, весь текст отображается одной строкой; вместе с тем, добавление тега <br> переносит текст на новую строку.
 </span>
 ```

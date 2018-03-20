@@ -27,6 +27,18 @@ updates|30
 # Обновления
 
 
+## 0.1.56 beta (20.03.2018)
+- Блок [ui-link][link] получил свойство `display: inline` и базовый `line-height: 1.3em`.
+- Добавлен модификатор для [ui-link][link]:
+    - `.ui-link_style_multi-line`
+- Добавлен модификатор разделителя для [ui-panel][panel]:
+    - `.ui-panel_style_divider`
+- Удалены модификаторы отображения [ui-text][text]:
+    - `.ui-text_display_*`
+- Установлено по умолчанию свойство `display: block` для модификаторов:
+    - `.ui-text_align_*`
+    - `.ui-text_wrap_*`
+
 ## 0.1.55 beta (14.03.2018)
 - Добавлены модификаторы `display` для `jsx` блоков:
      - [UiBox][box]

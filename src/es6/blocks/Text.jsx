@@ -11,7 +11,6 @@ class Text extends React.Component {
         'valign',
         'wrap',
         'style',
-        'display',
     ];
 
     render() {

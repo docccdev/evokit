@@ -2,4 +2,5 @@ $_text_align = ('left' 'center' 'right' 'justify')
 
 for value in $_text_align
     .text_align_{unquote(value)}
+        display: block
         text-align: unquote(value)
