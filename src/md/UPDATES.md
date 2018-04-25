@@ -26,6 +26,9 @@ updates|30
 
 # Обновления
 
+## 0.1.58 beta (25.04.2018)
+- Fix warning `Unknown prop domRef on <div> tag`
+
 ## 0.1.57 beta (25.04.2018)
 - Добавлен метов `domRef` для всех `jsx` блоков, пример: `domRef={(node) => this.node = node}`
 - Добавлен новый блок в `jsx`:

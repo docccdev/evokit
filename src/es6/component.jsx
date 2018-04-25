@@ -67,6 +67,7 @@ export function uiKitComponent(target) {
         }
 
         if (this.props.domRef) {
+            delete cleanProps.domRef;
             cleanProps.ref = this.props.domRef;
         }
 
