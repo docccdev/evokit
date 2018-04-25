@@ -26,6 +26,10 @@ updates|30
 
 # Обновления
 
+## 0.1.57 beta (25.04.2018)
+- Добавлен метов `domRef` для всех `jsx` блоков, пример: `domRef={(node) => this.node = node}`
+- Добавлен новый блок в `jsx`:
+     - [UiTags][tags]
 
 ## 0.1.56 beta (20.03.2018)
 - Блок [ui-link][link] получил свойство `display: inline` и базовый `line-height: 1.3em`.

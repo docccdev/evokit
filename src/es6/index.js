@@ -7,6 +7,7 @@ import Picture from './blocks/Picture';
 import Text from './blocks/Text';
 import Line from './blocks/Line';
 import Image from './blocks/Image';
+import Tags from './blocks/Tags';
 
 export {
     Box as UiBox,
@@ -18,4 +19,5 @@ export {
     Text as UiText,
     Line as UiLine,
     Image as UiImage,
+    Tags as UiTags,
 };

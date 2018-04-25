@@ -5,6 +5,7 @@ const DEFAULT_MOD_PROP_TYPES = PropTypes.oneOfType([
     PropTypes.array,
     PropTypes.string,
     PropTypes.object,
+    PropTypes.number,
 ]);
 
 export function uiKitComponent(target) {
@@ -12,6 +13,8 @@ export function uiKitComponent(target) {
     target.classPrefix = target.classPrefix || 'ui';
     target.blockMods = target.blockMods || [];
     target.displayName = target.displayName || `${target.classPrefix}-${target.blockName}`;
+
+    target.propTypes['domRef'] = PropTypes.func;
 
     for (const key of target.blockMods) {
         target.propTypes[`${target.classPrefix}-${key}`] = DEFAULT_MOD_PROP_TYPES;
@@ -61,6 +64,10 @@ export function uiKitComponent(target) {
 
         if (cleanProps.className) {
             delete cleanProps.className;
+        }
+
+        if (this.props.domRef) {
+            cleanProps.ref = this.props.domRef;
         }
 
         return cleanProps;
