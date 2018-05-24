@@ -10,9 +10,9 @@ docs/blocks/image|90
 ``` html
 <img
     class='ui-image'
-    src='https://picsum.photos/40/40/?random'
-    width='40'
-    height='40'
+    src='https://picsum.photos/100/100/?random'
+    width='100'
+    height='100'
 >
 Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.
 ```
@@ -30,25 +30,25 @@ docs/blocks/image|90
 ``` html
 <img
     class='ui-image ui-image_align_left'
-    src='https://picsum.photos/40/40/?random'
-    width='40'
-    height='40'
+    src='https://picsum.photos/100/100/?random'
+    width='100'
+    height='100'
 >
 Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.." Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке, некоторые - намеренно (например, юмористические варианты).
 <div class="ui-line ui-line_size_m"></div>
 <img
     class='ui-image ui-image_align_center'
-    src='https://picsum.photos/40/40/?random'
-    width='40'
-    height='40'
+    src='https://picsum.photos/100/100/?random'
+    width='100'
+    height='100'
 >
 Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.." Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке, некоторые - намеренно (например, юмористические варианты).
 <div class="ui-line ui-line_size_m"></div>
 <img
     class='ui-image ui-image_align_right'
-    src='https://picsum.photos/40/40/?random'
-    width='40'
-    height='40'
+    src='https://picsum.photos/100/100/?random'
+    width='100'
+    height='100'
 >
 Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.." Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке, некоторые - намеренно (например, юмористические варианты).
 ```
@@ -66,25 +66,66 @@ docs/blocks/image|90
 ``` html
 <img
     class='ui-image ui-image_valign_top'
-    src='https://picsum.photos/40/40/?random'
-    width='40'
-    height='40'
+    src='https://picsum.photos/100/100/?random'
+    width='100'
+    height='100'
 >
 Выравнивание по верхнему краю строки
 <hr class="ui-line ui-line_size_m" />
 <img
     class='ui-image ui-image_valign_middle'
-    src='https://picsum.photos/40/40/?random'
-    width='40'
-    height='40'
+    src='https://picsum.photos/100/100/?random'
+    width='100'
+    height='100'
 >
 Выравнивание по середине
 <hr class="ui-line ui-line_size_m" />
 <img
     class='ui-image ui-image_valign_bottom'
-    src='https://picsum.photos/40/40/?random'
-    width='40'
-    height='40'
+    src='https://picsum.photos/100/100/?random'
+    width='100'
+    height='100'
 >
 Выравнивание по нижнему краю
+```
+
+---
+
+## Отражение
+
+|         Class         |                     Description                     |
+|-----------------------|-----------------------------------------------------|
+| `.ui-image_mirror_x`  | Отражение по горизонтали                            |
+| `.ui-image_mirror_y`  | Отражение по вертикали                              |
+| `.ui-image_mirror_xy` | Одновременное отражение по горизонтали и вертикали  |
+
+``` html
+<img
+    class='ui-image'
+    src='https://picsum.photos/100/100/?random'
+    width='100'
+    height='100'
+    alt=''
+>
+<img
+    class='ui-image ui-image_mirror_x'
+    src='https://picsum.photos/100/100/?random'
+    width='100'
+    height='100'
+    alt=''
+>
+<img
+    class='ui-image ui-image_mirror_y'
+    src='https://picsum.photos/100/100/?random'
+    width='100'
+    height='100'
+    alt=''
+>
+<img
+    class='ui-image ui-image_mirror_xy'
+    src='https://picsum.photos/100/100/?random'
+    width='100'
+    height='100'
+    alt=''
+>
 ```

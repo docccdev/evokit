@@ -106,6 +106,11 @@ docs/blocks/list|50
         Base
     </li>
 </ul>
+<ul class='ui-list ui-list_style_disc ui-list_color_white'>
+    <li class='ui-list__item'>
+        White
+    </li>
+</ul>
 <ul class='ui-list ui-list_style_disc ui-list_color_link'>
     <li class='ui-list__item'>
         Link

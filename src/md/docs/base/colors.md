@@ -22,6 +22,7 @@ docs/base/colors|40
 |   КЛЮЧ    | ЗНАЧЕНИЕ |
 |-----------|----------|
 | `base`    | #3c3c3c  |
+| `white`   | #ffffff  |
 | `link`    | #5e8fd5  |
 | `red`     | #f55832  |
 | `yellow`  | #facd00  |

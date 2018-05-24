@@ -6,6 +6,7 @@ class Image extends React.Component {
     static blockMods = [
         'align',
         'valign',
+        'mirror',
     ];
 
     render() {

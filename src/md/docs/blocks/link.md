@@ -27,6 +27,7 @@ docs/blocks/link|70
 
 ``` html
 <a class='ui-link ui-link_color_base'>Base</a>
+<a class='ui-link ui-link_color_white'>White</a>
 <a class='ui-link ui-link_color_link'>Link</a>
 <a class='ui-link ui-link_color_red'>Red</a>
 <a class='ui-link ui-link_color_yellow'>Yellow</a>

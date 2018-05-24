@@ -26,21 +26,39 @@ updates|30
 
 # Обновления
 
+## 0.1.59 beta (24.05.2018)
+- Добавлен белый цвет текста [colors][colors]:
+    - `.ui-text_color_white`
+    - `.ui-link_color_white`
+    - `.ui-list_color_white`
+- Удалено свойство `display: block` для модификаторов:
+    - `.ui-text_wrap_nowrap`
+    - `.ui-text_wrap_break`
+- Добавлены по умолчанию ограничения `max-width` и `max-height` для блока [image][image].
+- Добавлены модификаторы отражения [image][image]:
+    - `.ui-image_mirror_x`
+    - `.ui-image_mirror_y`
+    - `.ui-image_mirror_xy`
+- Добавлен модификатор для [box][box]:
+    - `.ui-box_display_none`
+
 ## 0.1.58 beta (25.04.2018)
 - Fix warning `Unknown prop domRef on <div> tag`
+
 
 ## 0.1.57 beta (25.04.2018)
 - Добавлен метов `domRef` для всех `jsx` блоков, пример: `domRef={(node) => this.node = node}`
 - Добавлен новый блок в `jsx`:
      - [UiTags][tags]
 
+
 ## 0.1.56 beta (20.03.2018)
-- Блок [ui-link][link] получил свойство `display: inline` и базовый `line-height: 1.3em`.
-- Добавлен модификатор для [ui-link][link]:
+- Блок [link][link] получил свойство `display: inline` и базовый `line-height: 1.3em`.
+- Добавлен модификатор для [link][link]:
     - `.ui-link_style_multi-line`
-- Добавлен модификатор разделителя для [ui-panel][panel]:
+- Добавлен модификатор разделителя для [panel][panel]:
     - `.ui-panel_style_divider`
-- Удалены модификаторы отображения [ui-text][text]:
+- Удалены модификаторы отображения [text][text]:
     - `.ui-text_display_*`
 - Установлено по умолчанию свойство `display: block` для модификаторов:
     - `.ui-text_align_*`
@@ -55,24 +73,24 @@ updates|30
 ## 0.1.54 beta (14.03.2018)
 - Изменен тег c `<div>` на `<span>` для jsx компонента [UiText][text].
 - Изменен тег c `<a>` на `<hr>` для jsx компонента [UiLine][line].
-- Блок [ui-box][box] получил свойство `display: block`.
-- Блок [ui-text][text] получил свойство `display: inline`.
-- Блок [ui-list][list] получил свойство `display: block`.
-- Добавлены модификаторы отображения [ui-box][box]:
+- Блок [box][box] получил свойство `display: block`.
+- Блок [text][text] получил свойство `display: inline`.
+- Блок [list][list] получил свойство `display: block`.
+- Добавлены модификаторы отображения [box][box]:
     - `.ui-box_display_*`
-- Добавлены модификаторы отображения [ui-text][text]:
+- Добавлены модификаторы отображения [text][text]:
     - `.ui-text_display_*`
 
 ## 0.1.53 beta (12.03.2018)
 - Новый раздел [colors][colors].
 - Изменен модификатор насыщенности с `regular` на `base` для [text][text].
-- Установлен базовый `font-weight: 400` для [ui-body][body].
-- Добавлено автоопределение сенсорных экранов для свойства `:hover` на ссылке [ui-link][link].
-- Добавлен модификатор базового цвета [ui-text][text]:
+- Установлен базовый `font-weight: 400` для [body][body].
+- Добавлено автоопределение сенсорных экранов для свойства `:hover` на ссылке [link][link].
+- Добавлен модификатор базового цвета [text][text]:
     - `.ui-text_color_base`
-- Добавлен модификатор базового цвета [ui-list][list]:
+- Добавлен модификатор базового цвета [list][list]:
     - `.ui-list_color_base`
-- Добавлены модификаторы для [ui-link][link]:
+- Добавлены модификаторы для [link][link]:
     - `.ui-link_color_*`
     - `.ui-link_size_*`
     - `.ui-link_weight_*`
@@ -84,18 +102,18 @@ updates|30
 
 
 ## 0.1.51 beta (14.12.2017)
-- Новый блок [ui-tags][tags].
+- Новый блок [tags][tags].
 
 
 ## 0.1.50 beta (27.09.2017)
-- Добавлены модификаторы переноса [ui-grid][grid]:
+- Добавлены модификаторы переноса [grid][grid]:
     - `.ui-grid_wrap_nowrap`
     - `.ui-grid_wrap_wrap`
     - `.ui-grid_wrap_wrap-reverse`
 
 
 ## 0.1.49 beta (14.09.2017)
-- Добавлены модификаторы стиля для [ui-line][line]:
+- Добавлены модификаторы стиля для [line][line]:
     - `.ui-line_style_dotted`
     - `.ui-line_style_dashed`
 
@@ -130,21 +148,21 @@ updates|30
 
 
 ## 0.1.43 beta (30.08.2017)
-- Исправлены стили  [ui-picture][picture].
-- Добавлен модификатор закругления для [ui-picture][picture]:
+- Исправлены стили  [picture][picture].
+- Добавлен модификатор закругления для [picture][picture]:
     - `.ui-picture_size_cover`
     - `.ui-picture_style_round`
 
 
 ## 0.1.42 beta (28.08.2017)
-- Новый блок [ui-image][image].
+- Новый блок [image][image].
 
 
 ## 0.1.41 beta (16.08.2017)
-- Добавлены два цвета для [ui-text][text]:
+- Добавлены два цвета для [text][text]:
     - `.ui-text_color_red`
     - `.ui-text_color_yellow`
-- Добавлены модификаторы цвета маркера для списка [ui-list][list]:
+- Добавлены модификаторы цвета маркера для списка [list][list]:
     - `.ui-list_color_red`
     - `.ui-list_color_yellow`
     - `.ui-list_color_link`
@@ -162,22 +180,22 @@ updates|30
 
 
 ## 0.1.39 beta (03.08.2017)
-- Добавлен новый элемент `.ui-body__section` для блока [ui-body][body]:
+- Добавлен новый элемент `.ui-body__section` для блока [body][body]:
     - **НЕ ИСПОЛЬЗОВАТЬ** блок [ui-page][page_deprecated], замените его на `.ui-body__section`
 
 
 ## 0.1.38 beta (28.07.2017)
-- Новый блок [ui-body][body].
-- Новый блок [ui-text][text]:
+- Новый блок [body][body].
+- Новый блок [text][text]:
     - **НЕ ИСПОЛЬЗОВАТЬ** вспомогательные классы [ui-title][title_deprecated], замените их на `.ui-text`
     - **НЕ ИСПОЛЬЗОВАТЬ** вспомогательные классы [ui-text][text_deprecated], замените их на `.ui-text`
-- Добавлен модификатор `.ui-grid_valign_baseline` для [ui-grid][grid].
-- Добавлены модификаторы тем для блока [ui-box][box]:
+- Добавлен модификатор `.ui-grid_valign_baseline` для [grid][grid].
+- Добавлены модификаторы тем для блока [box][box]:
     - `.ui-box_theme_info`
     - `.ui-box_theme_success`
     - `.ui-box_theme_warning`
     - `.ui-box_theme_error`
-- Добавлены модификаторы тем для блока [ui-panel][panel]:
+- Добавлены модификаторы тем для блока [panel][panel]:
     - `.ui-panel_theme_info`
     - `.ui-panel_theme_success`
     - `.ui-panel_theme_warning`
@@ -197,7 +215,7 @@ updates|30
 
 ## 0.1.35 beta (20.06.2017)
 
-- Исправлен модификатор размера для [ui-list][list].
+- Исправлен модификатор размера для [list][list].
 - Для модификатора `.ui-list_theme_divider` добавлены [media][media] правила.
 - Модификаторы для обнуления [size][size]:
     - `.ui-box_margin_none`
@@ -211,9 +229,9 @@ updates|30
 
 ## 0.1.34 beta (19.04.2017)
 
-- Добавлены стили `border-radius` и `padding` к элементу`.ui-panel__body` для блока [ui-panel][panel].
-- Добавлен модификатор `.ui-panel_theme_blue` для [ui-panel][panel].
-- Новые модификаторы для [ui-box][box]:
+- Добавлены стили `border-radius` и `padding` к элементу`.ui-panel__body` для блока [panel][panel].
+- Добавлен модификатор `.ui-panel_theme_blue` для [panel][panel].
+- Новые модификаторы для [box][box]:
     - `.ui-box_margin_auto`
     - `.ui-box_margin-left_auto`
     - `.ui-box_margin-top_auto`
@@ -224,19 +242,19 @@ updates|30
 
 ## 0.1.33 beta (18.04.2017)
 
-- Добавлен модификатор `.ui-box_theme_blue` для [ui-box][box].
+- Добавлен модификатор `.ui-box_theme_blue` для [box][box].
 - Обновлен список переменных.
 
 
 ## 0.1.32 beta (13.04.2017)
 
-- Added [ui-picture][picture] to portable bundle.
+- Added [picture][picture] to portable bundle.
 - Added min and max width for `.ui-grid__item`.
 
 
 ## 0.1.31 beta (27.03.2017)
 
-- Fixed bug with [ui-grid][grid] item padding when applied theme divider.
+- Fixed bug with [grid][grid] item padding when applied theme divider.
 
 
 ## 0.1.30 beta (23.03.2017)
@@ -246,7 +264,7 @@ updates|30
 
 ## 0.1.29 beta (23.03.2017)
 
-- Big update [ui-grid][grid] divider:
+- Big update [grid][grid] divider:
     - `Responsive`
     - `Multi column`
     - `Horizontal and vertical divider`
@@ -254,7 +272,7 @@ updates|30
 
 ## 0.1.28 beta (06.03.2017)
 
-- Added font weight class for [ui-text][text]:
+- Added font weight class for [text][text]:
     - `.ui-text-thin`
     - `.ui-text-light`
     - `.ui-text-regular`
@@ -264,23 +282,23 @@ updates|30
 
 ## 0.1.27 beta (06.03.2017)
 
-- Добавлен модификатор `.ui-box_theme_transparent` для [ui-box][box].
-- Добавлен модификатор `.ui-panel_theme_transparent` для [ui-panel][panel].
-- Added [media][media] rules for all [ui-box][box] modifiers.
-- Added [media][media] rules for all [ui-panel][panel] modifiers.
+- Добавлен модификатор `.ui-box_theme_transparent` для [box][box].
+- Добавлен модификатор `.ui-panel_theme_transparent` для [panel][panel].
+- Added [media][media] rules for all [box][box] modifiers.
+- Added [media][media] rules for all [panel][panel] modifiers.
 
 
 ## 0.1.26 beta (01.03.2017)
 
-- Добавлен цвет текста `.ui-text-muted` для [ui-text][text].
-- Добавлен модификатор `.ui-panel_style_border` для [ui-panel][panel].
-- Added border-box for [ui-panel][panel].
+- Добавлен цвет текста `.ui-text-muted` для [text][text].
+- Добавлен модификатор `.ui-panel_style_border` для [panel][panel].
+- Added border-box for [panel][panel].
 - Reset margin-bottom for `.ui-grid_theme_divider`.
 
 
 ## 0.1.25 beta (20.02.2017)
 
-- Added modifiers for [ui-grid][grid]:
+- Added modifiers for [grid][grid]:
     - `.ui-grid_direction_row`
     - `.ui-grid_direction_row-reverse`
     - `.ui-grid_direction_column`
@@ -292,13 +310,13 @@ updates|30
 
 ## 0.1.24 beta (06.02.2017)
 
-- Новый блок [ui-link][link].
-- Added modifiers for [ui-box][box] padding:
+- Новый блок [link][link].
+- Added modifiers for [box][box] padding:
     - `.ui-box_padding-left_*`
     - `.ui-box_padding-top_*`
     - `.ui-box_padding-right_*`
     - `.ui-box_padding-bottom_*`
-- Added modifiers for [ui-box][box] margin:
+- Added modifiers for [box][box] margin:
     - `.ui-box_margin-left_*`
     - `.ui-box_margin-top_*`
     - `.ui-box_margin-right_*`
@@ -307,23 +325,23 @@ updates|30
 
 ## 0.1.23 beta (24.01.2017)
 
-- Новый блок [ui-picture][picture].
+- Новый блок [picture][picture].
 - Added ui-width class `.ui-width-auto`.
 - Added ui-width class `.ui-width-expand`.
-- Added modifier for [ui-grid][grid] `.ui-grid_column_expand`.
+- Added modifier for [grid][grid] `.ui-grid_column_expand`.
 - Исправлен стиль `position` для `.ui-list__item`.
 - Changed the design documentation and add preview block.
 
 
 ## 0.1.21 beta (16.01.2017)
 
-- Added modifier `.ui-grid_column_*` for [ui-grid][grid].
+- Added modifier `.ui-grid_column_*` for [grid][grid].
 - Added description for [media][media] rules.
 - Changed all media class from `.ui-width-xl-1-2` to `.ui-width-1-2@xlarge`.
 
 
 ## 0.1.20 beta (13.01.2017)
 
-- Новый блок [ui-box][box].
+- Новый блок [box][box].
 - **УДАЛЕН** блок `.ui-block`.
 - Исправлен стиль `display` для `.ui-list__item`.

@@ -1,6 +1,6 @@
-$_text_display = ('inline' 'block' 'inline-block')
+$_box_display = ('none' 'inline' 'block' 'inline-block')
 
-for value in $_text_display
+for value in $_box_display
     +media-selector('.box_display_'+unquote(value))
         display: unquote(value)
 

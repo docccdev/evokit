@@ -28,15 +28,19 @@ docs/blocks/box|40
 
 ## Отображение (display)
 
-Определяет, как элемент должен быть показан в документе. По умолчанию `display: block`;
+Определяет, как элемент должен быть показан в документе. По умолчанию `display: block`.
 
-|         Class         |         Description         |
-|-----------------------|-----------------------------|
-|  `.ui-box_display_block`  | Элемент показывается как блочный.  |
-|  `.ui-box_display_inline`  | Элемент отображается как встроенный.  |
-|  `.ui-box_display_inline-block`  | Блочный элемент, который обтекается другими элементами.  |
+|               Class               |                       Description                       |
+|-----------------------------------|---------------------------------------------------------|
+|  `.ui-box_display_none`           | Удаляет элемент из документа..                          |
+|  `.ui-box_display_block`          | Элемент показывается как блочный.                       |
+|  `.ui-box_display_inline`         | Элемент отображается как встроенный.                    |
+|  `.ui-box_display_inline-block`   | Блочный элемент, который обтекается другими элементами. |
 
 ``` html
+<div class='ui-box ui-box_theme_gray ui-box_margin_xxs ui-box_display_none'>
+    None
+</div>
 <div class='ui-box ui-box_theme_gray ui-box_margin_xxs ui-box_display_block'>
     Block
 </div>
@@ -56,8 +60,8 @@ docs/blocks/box|40
 
 ### Внутренние
 
-|                         Class                          |            Description            |
-|--------------------------------------------------------|-----------------------------------|
+|               Class               |            Description            |
+|-----------------------------------|-----------------------------------|
 |  `.ui-box_padding_`[sizes]        | Внутренний отступ со всех сторон. |
 |  `.ui-box_padding-tb_`[sizes]     | Внутренний отступ сверху и снизу. |
 |  `.ui-box_padding-lr_`[sizes]     | Внутренний отступ слева и справа. |
@@ -70,8 +74,8 @@ docs/blocks/box|40
 
 ### Внешние
 
-|                         Class                         |            Description         |
-|-------------------------------------------------------|--------------------------------|
+|              Class               |            Description         |
+|----------------------------------|--------------------------------|
 |  `.ui-box_margin_`[sizes]        | Внешний отступ со всех сторон. |
 |  `.ui-box_margin-tb_`[sizes]     | Внешний отступ сверху и снизу. |
 |  `.ui-box_margin-lr_`[sizes]     | Внешний отступ слева и справа. |
@@ -94,9 +98,9 @@ docs/blocks/box|40
 
 Определяется фоновым цветом. По умолчанию, панель не имеет фона.
 
-|            Class            |       Description     |
-|-----------------------------|-----------------------|
-| `.ui-box_theme_`[colors] | Цвет фона. |
+|           Class           | Description |
+|---------------------------|-------------|
+| `.ui-box_theme_`[colors]  | Цвет фона.  |
 
 ``` html
 <div class='ui-box ui-box_padding_s ui-box_margin-tb_s ui-box_theme_transparent'>
