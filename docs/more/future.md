@@ -1,0 +1,12 @@
+[changelog]: changelog/
+
+# Планы
+
+
+- [0.1.59 beta][changelog] ~~Белый цвет для текста~~
+- [0.1.59 beta][changelog] ~~Отражения изображения~~
+- Екстра размер для текста
+- [0.1.59 beta][changelog] ~~Придумать решение `display: none` с возможностью `media`~~
+- [0.1.59 beta][changelog] ~~Добавить ограничения `max-width` и `max-height` для изображения~~
+- Модификаторы текста с `media` параметрами
+- Добавить для текста модификаторы `uppercase`, `capitalize`, `lowercase`
