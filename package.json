@@ -41,7 +41,6 @@
     "gulp": "^3.9.1",
     "gulp-cli": "^0.2.0",
     "gulp-group-css-media-queries": "^1.2.0",
-    "gulp-md-docs": "0.1.8",
     "gulp-stylus": "^2.5.0",
     "peer-deps-externals-webpack-plugin": "^1.0.2",
     "postcss-cssnext": "^2.11.0",

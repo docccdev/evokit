@@ -1,6 +1,5 @@
 node_modules
 .vagga
-doc_src/__root/css
-doc_dist
 temp
 dist
+docs/_media/css/

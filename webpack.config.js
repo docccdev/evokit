@@ -3,7 +3,6 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
     entry: {
-        doc: './doc_src/styl/bundles/doc.styl',
         desktop: './src/styl/bundles/desktop.styl',
         portable: './src/styl/bundles/portable.styl',
     },
@@ -29,12 +28,11 @@ module.exports = {
     },
     resolve: {
         modules: [
-            './doc_src/styl',
             './src/styl',
         ],
         extensions: ['.styl'],
     },
     plugins: [
-        new ExtractTextPlugin('./doc_src/__root/css/[name].css'),
+        new ExtractTextPlugin('./docs/_media/css/[name].css'),
     ]
 };

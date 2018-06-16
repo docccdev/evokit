@@ -2,18 +2,6 @@
 demo|20
 -->
 
-[body]: docs/blocks/body.html
-[grid]: docs/blocks/grid.html
-[panel]: docs/blocks/panel.html
-[box]: docs/blocks/box.html
-[list]: docs/blocks/list.html
-[text]: docs/blocks/text.html
-[link]: docs/blocks/link.html
-[picture]: docs/blocks/picture.html
-[image]: docs/blocks/image.html
-[line]: docs/blocks/line.html
-[tags]: docs/blocks/tags.html
-
 # DEMO
 
 ``` html

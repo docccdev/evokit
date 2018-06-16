@@ -40,10 +40,7 @@ commands:
     environ:
       NODE_ENV: production
     run: |
-      gulp compile_doc_css
       gulp compile_uikit
-      gulp copy_template_root_dir
-      gulp compile_doc
 
   watch: !Command
     description: Run watch *.md

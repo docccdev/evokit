@@ -1,8 +1,7 @@
-doc_dist
-doc_src
 node_modules
 temp
 gulpfile.js
 vagga.yaml
 .vagga
 .gitlab-ci.yml
+docs
