@@ -7,7 +7,8 @@ gitlab-publish:
   script:
   - vagga build
   - vagga build_es6
-  - gitlab-publish doc_dist uikit
+  # - gitlab-publish doc_dist uikit
+  - gitlab-publish docs uikit
 
 npm-publish:
   stage: npm-publish
