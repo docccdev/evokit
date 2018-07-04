@@ -1,3 +1,5 @@
+@import '../mixins.sss'
+
 .line
     display: block
     border-width: 1px 0 0
@@ -6,10 +8,10 @@
     margin: 0
 
 @each $name, $i in (none, xxs, xs, s, m, l, xl, xxl, xxxl)
-    .line_size_$(name)
+    @mixin media .line_size_$(name)
         margin-top: calc(var(--EKStepSize) * $i)
         margin-bottom: calc(var(--EKStepSize) * $i)
 
 @each $value in (dotted, dashed)
-    .line_style_$(value)
+    @mixin media .line_style_$(value)
         border-top-style: $value

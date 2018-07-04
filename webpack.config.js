@@ -6,6 +6,10 @@ var postcssEach = require('postcss-each');
 var postcssConditionals = require('postcss-conditionals');
 var postcssNested = require('postcss-nested');
 var postcssCustomProperties = require('postcss-custom-properties');
+var postcsscustomMedia = require('postcss-custom-media');
+var postcssMixins = require('postcss-mixins');
+var postcssImport = require('postcss-import');
+var postcssMqpacker = require("css-mqpacker");
 
 var extractSTYL = new ExtractTextPlugin('[name].css');
 
@@ -40,12 +44,23 @@ module.exports = {
             {
                 test: /\.sss$/,
                 use: extractSTYL.extract([
-                    { loader: 'css-loader', options: { importLoaders: 1 } },
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            importLoaders: 1
+                        }
+                    },
                     {
                         loader: 'postcss-loader',
                         options: {
+                            // ident: 'postcss',
                             parser: 'sugarss',
                             plugins: [
+                                postcssImport(),
+                                postcssMixins(),
+                                postcssEach(),
+                                postcssConditionals(),
+                                postcssNested(),
                                 // postcssCustomProperties({
                                 //     preserve: 'computed',
                                 //     warnings: true,
@@ -54,9 +69,17 @@ module.exports = {
                                 //         EKStepSize: '5px'
                                 //     }
                                 // }),
-                                postcssEach(),
-                                postcssConditionals(),
-                                postcssNested(),
+                                // postcsscustomMedia({
+                                //     extensions: {
+                                //         EKMediaSmall: 'only screen and (min-width: 480px)',
+                                //         EKMediaMedium: 'only screen and (min-width: 768px)',
+                                //         EKMediaLarge: 'only screen and (min-width: 960px)',
+                                //         EKMediaXlarge: 'only screen and (min-width: 1200px)',
+                                //         EKMediaXxlarge: 'only screen and (min-width: 1400px)',
+                                //         EKMediaXxxlarge: 'only screen and (min-width: 1600px)'
+                                //     }
+                                // }),
+                                postcssMqpacker()
                             ]
                         }
                     }
