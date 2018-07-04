@@ -4,7 +4,7 @@
   "description": "UIKit for Bigl.ua",
   "main": "dist/index.js",
   "scripts": {
-    "prepublish": "vagga build_es6"
+    "prepublish": "vagga build_es"
   },
   "repository": {
     "type": "git",

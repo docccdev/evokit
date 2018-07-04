@@ -6,7 +6,7 @@ containers:
       PROJECT_DEPS: /usr/lib
       NODE_ENV: production
     setup:
-    - !Alpine v3.8
+    - !Alpine v3.7
     - !Install [nodejs-npm]
     - !EnsureDir /work/node_modules
     - !EnsureDir /usr/lib/node_modules/.cache
