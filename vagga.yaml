@@ -1,27 +1,22 @@
 containers:
-    frontend:
-      environ:
-        NODE_PATH: /usr/lib/node_modules
-        PROJECT_DEPS: /usr/lib
-      setup:
-      - !UbuntuRelease { codename: trusty }
-      - !Install [ca-certificates, apt-transport-https]
-      - !AptTrust
-        keys: [1655A0AB68576280]
-      - !UbuntuRepo
-        url: https://deb.nodesource.com/node_6.x
-        suite: trusty
-        components: [main]
-      - !Install [nodejs]
-      - !NpmConfig
-        install-node: false
-      - !NpmDependencies
-        package: true
-        dev: true
-        optional: true
-      - !EnsureDir /root/.npm
+
+  frontend:
+    environ:
+      NODE_PATH: /usr/lib/node_modules
+      PROJECT_DEPS: /usr/lib
+    setup:
+    - !Alpine v3.8
+    - !Install [nodejs-npm]
+    - !EnsureDir /work/node_modules
+    - !EnsureDir /usr/lib/node_modules/.cache
+    - !NpmDependencies
+      package: true
+      dev: true
+    volumes:
+      /work/node_modules: !Empty
 
 commands:
+
   build_es6: !Command
     description: Run build
     container: frontend
@@ -43,19 +38,7 @@ commands:
       gulp compile_uikit
 
   watch: !Command
-    description: Run watch *.md
+    description: Run watch *.styl
     container: frontend
     run: |
       gulp watch
-
-  publish: !Command
-    prerequisites: [build_es6]
-    description: Publishes new package version
-    container: frontend
-    volumes:
-      /root/.npm: !Tmpfs
-        size: 10Mi
-    run: |
-      touch /work/.npmrc
-      echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > /work/.npmrc
-      npm publish --access public

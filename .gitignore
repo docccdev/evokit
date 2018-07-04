@@ -3,3 +3,4 @@ node_modules
 temp
 dist
 docs/_media/css/
+package-lock.json

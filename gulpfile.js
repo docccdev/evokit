@@ -14,5 +14,5 @@ gulp.task('compile_uikit', function () {
 });
 
 gulp.task('watch', function() {
-    gulp.watch('./src/styl/**/*.styl', ['compile_uikit']);
+    gulp.watch('./src/styl/**/*.styl', gulp.series('compile_uikit'));
 });
