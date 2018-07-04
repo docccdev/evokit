@@ -1,5 +1,5 @@
 import React from 'react';
-import { uiKitComponent } from '../../component';
+import { uiKitComponent } from '../component';
 
 class Grid extends React.Component {
     static blockName = 'grid';

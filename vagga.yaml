@@ -4,6 +4,7 @@ containers:
     environ:
       NODE_PATH: /usr/lib/node_modules
       PROJECT_DEPS: /usr/lib
+      NODE_ENV: production
     setup:
     - !Alpine v3.8
     - !Install [nodejs-npm]
@@ -17,25 +18,24 @@ containers:
 
 commands:
 
-  build_es6: !Command
+  build_es: !Command
     description: Run build
     container: frontend
     options: |
       Usage:
-        vagga build_es6 [--watch|-w]
+        vagga build_es [--watch|-w]
 
       Options:
         --watch, -w          enable webpack watch
     run: |
-      webpack --progress ${VAGGACLI_WATCH} --config webpack.es6.config.js
+      webpack --progress ${VAGGACLI_WATCH} --config webpack.config.js
 
   build: !Command
     description: Run build
     container: frontend
-    environ:
-      NODE_ENV: production
     run: |
       gulp compile_uikit
+      webpack --progress --config webpack.config.js
 
   watch: !Command
     description: Run watch *.styl

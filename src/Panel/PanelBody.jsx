@@ -1,8 +1,8 @@
 import React from 'react';
-import { uiKitComponent } from '../../component';
+import { uiKitComponent } from '../component';
 
-class GridItem extends React.Component {
-    static blockName = 'grid__item';
+class PanelBody extends React.Component {
+    static blockName = 'panel__body';
 
     render() {
         return (
@@ -16,4 +16,4 @@ class GridItem extends React.Component {
     }
 }
 
-export default uiKitComponent(GridItem);
+export default uiKitComponent(PanelBody);

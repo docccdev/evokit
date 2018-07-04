@@ -1,19 +1,19 @@
 import React from 'react';
-import { uiKitComponent } from '../../component';
+import { uiKitComponent } from '../component';
 
-class ListItem extends React.Component {
-    static blockName = 'list__item';
+class GridItem extends React.Component {
+    static blockName = 'grid__item';
 
     render() {
         return (
-            <li
+            <div
                 className={this.getClassName()}
                 {...this.getCleanProps()}
             >
                 {this.props.children}
-            </li>
+            </div>
         );
     }
 }
 
-export default uiKitComponent(ListItem);
+export default uiKitComponent(GridItem);

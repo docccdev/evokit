@@ -1,0 +1,46 @@
+.picture
+    display: block
+    position: relative
+    padding-top: 100%
+    overflow: hidden
+
+.picture__item
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    max-width: 100%
+    max-height: 100%
+    margin: auto
+    outline: none
+    border: 0
+
+    &[alt]
+        word-wrap: break-word
+        word-break: break-word
+        hyphens: auto
+
+/**
+ * Cover:
+ *
+ *  - picture_size_cover
+ *
+ **/
+
+.picture_size_cover
+
+    .picture__item
+        object-fit: cover
+        min-width: 100%
+        min-height: 100%
+
+/**
+ * Rounding:
+ *
+ *  - picture_style_round
+ *
+ **/
+
+.picture_style_round
+    border-radius: 50%

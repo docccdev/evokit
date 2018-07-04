@@ -1,8 +1,8 @@
 import React from 'react';
-import { uiKitComponent } from '../../component';
+import { uiKitComponent } from '../component';
 
-class List extends React.Component {
-    static blockName = 'list';
+class Panel extends React.Component {
+    static blockName = 'panel';
     static blockMods = [
         'theme',
         'style',
@@ -11,14 +11,14 @@ class List extends React.Component {
 
     render() {
         return (
-            <ul
+            <div
                 className={this.getClassName()}
                 {...this.getCleanProps()}
             >
                 {this.props.children}
-            </ul>
+            </div>
         );
     }
 }
 
-export default uiKitComponent(List);
+export default uiKitComponent(Panel);

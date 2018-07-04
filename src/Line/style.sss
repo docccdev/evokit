@@ -1,0 +1,15 @@
+.line
+    display: block
+    border-width: 1px 0 0
+    border-style: solid none none
+    border-color: var(--EKLineColor) transparent transparent
+    margin: 0
+
+@each $name, $i in (none, xxs, xs, s, m, l, xl, xxl, xxxl)
+    .line_size_$(name)
+        margin-top: calc(var(--EKStepSize) * $i)
+        margin-bottom: calc(var(--EKStepSize) * $i)
+
+@each $value in (dotted, dashed)
+    .line_style_$(value)
+        border-top-style: $value

@@ -1,11 +1,8 @@
 import React from 'react';
-import { uiKitComponent } from '../../component';
+import { uiKitComponent } from '../component';
 
-class TagsItem extends React.Component {
-    static blockName = 'tags__item';
-    static blockMods = [
-        'theme',
-    ];
+class ListItem extends React.Component {
+    static blockName = 'list__item';
 
     render() {
         return (
@@ -19,4 +16,4 @@ class TagsItem extends React.Component {
     }
 }
 
-export default uiKitComponent(TagsItem);
+export default uiKitComponent(ListItem);
