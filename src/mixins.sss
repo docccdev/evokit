@@ -25,3 +25,74 @@
     @media (--EKMediaXxxlarge)
         $(selector)\@xxxlarge
             @mixin-content
+
+
+@define-mixin color $selector
+    @each $name in (base, white, black, link, muted, success, info, warning, error, first, second, third)
+        $(selector)_$(name)
+            @if $name == base
+                color: var(--EKColor)
+            @else if $name == white
+                color: var(--EKColorWhite)
+            @else if $name == black
+                color: var(--EKColorBlack)
+            @else if $name == link
+                color: var(--EKColorLink)
+            @else if $name == muted
+                color: var(--EKColorMuted)
+            @else if $name == success
+                color: var(--EKColorSuccess)
+            @else if $name == info
+                color: var(--EKColorInfo)
+            @else if $name == warning
+                color: var(--EKColorWarning)
+            @else if $name == error
+                color: var(--EKColorError)
+            @else if $name == first
+                color: var(--EKColorFirst)
+            @else if $name == second
+                color: var(--EKColorSecond)
+            @else if $name == third
+                color: var(--EKColorThird)
+
+
+@define-mixin font-size $selector
+    @each $name in (base, h1, h2, h3, h4, h5, h6, first, second, third)
+        $(selector)_$(name)
+            @if $name == base
+                font-size: var(--EKFontSize)
+            @else if $name == h1
+                font-size: var(--EKFontSizeH1)
+            @else if $name == h2
+                font-size: var(--EKFontSizeH2)
+            @else if $name == h3
+                font-size: var(--EKFontSizeH3)
+            @else if $name == h4
+                font-size: var(--EKFontSizeH4)
+            @else if $name == h5
+                font-size: var(--EKFontSizeH5)
+            @else if $name == h6
+                font-size: var(--EKFontSizeH6)
+            @else if $name == first
+                font-size: var(--EKFontSizeFirst)
+            @else if $name == second
+                font-size: var(--EKFontSizeSecond)
+            @else if $name == third
+                font-size: var(--EKFontSizeThird)
+
+
+@define-mixin font-weight $selector
+    @each $name in (base, thin, light, medium, bold, black)
+        $(selector)_$(name)
+            @if $name == base
+                font-weight: var(--EKFontWeight)
+            @else if $name == thin
+                font-weight: 100
+            @else if $name == light
+                font-weight: 300
+            @else if $name == medium
+                font-weight: 500
+            @else if $name == bold
+                font-weight: 700
+            @else if $name == black
+                font-weight: 900

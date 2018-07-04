@@ -67,21 +67,37 @@ module.exports = {
                                 //     preserve: 'computed',
                                 //     warnings: true,
                                 //     variables: {
+                                //         // base
                                 //         EKLineColor: '#dde8f0',
                                 //         EKStepSize: '5px',
+                                //         EKLineHeight: '1.3em',
+                                //         EKFontWeight: '400',
+                                //         EKFontSize: '13px',
+                                //         EKColor: '#3c3c3c',
+
                                 //         // text colors
-                                //         EKTextColorBase: '#3c3c3c',
-                                //         EKTextColorWhite: '#ffffff',
-                                //         EKTextColorBlack: '#000000',
-                                //         EKTextColorLink: '#5e8fd5',
-                                //         EKTextColorMuted: '#a0b0c7',
-                                //         EKTextColorSuccess: '#33b600',
-                                //         EKTextColorInfo: '#5e8fd5',
-                                //         EKTextColorWarning: '#ff9600',
-                                //         EKTextColorError: '#bb2914',
-                                //         EKTextColorFirst: 'red', // red: #f55832
-                                //         EKTextColorSecond: 'green', // yellow: #facd00
-                                //         EKTextColorThird: 'blue'
+                                //         EKColorWhite: '#ffffff',
+                                //         EKColorBlack: '#000000',
+                                //         EKColorLink: '#5e8fd5',
+                                //         EKColorMuted: '#a0b0c7',
+                                //         EKColorSuccess: '#33b600',
+                                //         EKColorInfo: '#5e8fd5',
+                                //         EKColorWarning: '#ff9600',
+                                //         EKColorError: '#bb2914',
+                                //         EKColorFirst: 'red', // red: #f55832
+                                //         EKColorSecond: 'green', // yellow: #facd00
+                                //         EKColorThird: 'blue',
+
+                                //         // font size
+                                //         EKFontSizeH1: '24px',
+                                //         EKFontSizeH2: '22px',
+                                //         EKFontSizeH3: '20px',
+                                //         EKFontSizeH4: '18px',
+                                //         EKFontSizeH5: '16px',
+                                //         EKFontSizeH6: '14px',
+                                //         EKFontSizeFirst: '30px',
+                                //         EKFontSizeSecond: '60px',
+                                //         EKFontSizeThird: '90px',
                                 //     }
                                 // }),
                                 // postcsscustomMedia({
