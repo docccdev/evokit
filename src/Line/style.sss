@@ -7,10 +7,24 @@
     border-color: var(--EKLineColor) transparent transparent
     margin: 0
 
+/**
+ * Size:
+ *
+ *  - line_size_*
+ *
+ **/
+
 @each $name, $i in (none, xxs, xs, s, m, l, xl, xxl, xxxl)
     @mixin media .line_size_$(name)
         margin-top: calc(var(--EKStepSize) * $i)
         margin-bottom: calc(var(--EKStepSize) * $i)
+
+/**
+ * Style:
+ *
+ *  - line_style_*
+ *
+ **/
 
 @each $value in (dotted, dashed)
     @mixin media .line_style_$(value)

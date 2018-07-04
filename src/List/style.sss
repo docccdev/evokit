@@ -1,0 +1,116 @@
+@import '../mixins.sss'
+
+.list
+    display: block
+    list-style: none
+    padding: 0
+    margin: 0
+
+.list__item
+    display: block
+
+/**
+ * Size:
+ *
+ *  - list_size_*
+ *
+ **/
+
+@each $name, $i in (none, xxs, xs, s, m, l, xl, xxl, xxxl)
+    @mixin media .list_size_$(name)
+        margin-top: calc(var(--EKStepSize) * -$i  / 2)
+        margin-bottom: calc(var(--EKStepSize) * -$i  / 2)
+
+        & > .list__item
+            padding-top: calc(var(--EKStepSize) * $i / 2)
+            padding-bottom: calc(var(--EKStepSize) * $i / 2)
+
+        &[class*='list_theme_divider']
+            margin-top: calc(var(--EKStepSize) * -$i)
+            margin-bottom: calc(var(--EKStepSize) * -$i)
+
+            & > .list__item
+                padding-top: calc(var(--EKStepSize) * $i)
+                padding-bottom: calc(var(--EKStepSize) * $i)
+
+/**
+ * Color:
+ *
+ *  - list_color_*
+ *
+ **/
+
+@each $name in (base, white, black, link, muted, success, info, warning, error, first, second, third)
+    .list_color_$(name)
+
+        & > .list__item
+
+            &:before
+                @if $name == base
+                    color: var(--EKTextColorBase)
+                @else if $name == white
+                    color: var(--EKTextColorWhite)
+                @else if $name == black
+                    color: var(--EKTextColorBlack)
+                @else if $name == link
+                    color: var(--EKTextColorLink)
+                @else if $name == muted
+                    color: var(--EKTextColorMuted)
+                @else if $name == success
+                    color: var(--EKTextColorSuccess)
+                @else if $name == info
+                    color: var(--EKTextColorInfo)
+                @else if $name == warning
+                    color: var(--EKTextColorWarning)
+                @else if $name == error
+                    color: var(--EKTextColorError)
+                @else if $name == first
+                    color: var(--EKTextColorFirst)
+                @else if $name == second
+                    color: var(--EKTextColorSecond)
+                @else if $name == third
+                    color: var(--EKTextColorThird)
+
+/**
+ * Style:
+ *
+ *  - list_style_*
+ *
+ **/
+
+@each $name in (dash, decimal, disc)
+    .list_style_$(name)
+        @if $name == decimal
+            counter-reset: item-index
+
+        & > .list__item
+            padding-left: 20px
+            position: relative
+
+            &:before
+                position: absolute
+                margin-left: -20px
+                width: 20px
+                text-align: center
+                @if $name == dash
+                    content: '\2014'
+                @else if $name == decimal
+                    content: counter(item-index) '.'
+                    counter-increment: item-index
+                @else if $name == disc
+                    content: '\2022'
+                    font-weight: bold
+
+/**
+ * Theme divider:
+ *
+ *  - list_theme_divider
+ *
+ **/
+
+@mixin media .list_theme_divider
+
+    & > .list__item
+
+        & + .list__item
+            border-top: 1px solid var(--EKLineColor)

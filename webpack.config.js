@@ -27,6 +27,9 @@ var entryList = {
     'Tags/index':     path.resolve(__dirname, 'src/Tags'),
 };
 
+// 1. Обратить внимание на модификаторы size
+// 2. Изменились переменные текста red => first, yellow => second
+
 module.exports = {
     entry: entryList,
     output: {
@@ -53,7 +56,6 @@ module.exports = {
                     {
                         loader: 'postcss-loader',
                         options: {
-                            // ident: 'postcss',
                             parser: 'sugarss',
                             plugins: [
                                 postcssImport(),
@@ -66,7 +68,20 @@ module.exports = {
                                 //     warnings: true,
                                 //     variables: {
                                 //         EKLineColor: '#dde8f0',
-                                //         EKStepSize: '5px'
+                                //         EKStepSize: '5px',
+                                //         // text colors
+                                //         EKTextColorBase: '#3c3c3c',
+                                //         EKTextColorWhite: '#ffffff',
+                                //         EKTextColorBlack: '#000000',
+                                //         EKTextColorLink: '#5e8fd5',
+                                //         EKTextColorMuted: '#a0b0c7',
+                                //         EKTextColorSuccess: '#33b600',
+                                //         EKTextColorInfo: '#5e8fd5',
+                                //         EKTextColorWarning: '#ff9600',
+                                //         EKTextColorError: '#bb2914',
+                                //         EKTextColorFirst: 'red', // red: #f55832
+                                //         EKTextColorSecond: 'green', // yellow: #facd00
+                                //         EKTextColorThird: 'blue'
                                 //     }
                                 // }),
                                 // postcsscustomMedia({
