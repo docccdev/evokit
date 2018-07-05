@@ -69,7 +69,7 @@ module.exports = {
                                 //     warnings: true,
                                 //     variables: {
                                 //         // base
-                                //         EKLineColor: '#dde8f0',
+                                //         EKLineColor: '#dde8f0', // replase with EKBorderColor
                                 //         EKStepSize: '5px',
                                 //         EKLineHeight: '1.3em',
                                 //         EKLineHeightRead: '1.5em',
@@ -78,6 +78,7 @@ module.exports = {
                                 //         EKColor: '#3c3c3c',
                                 //         EKBackgroundColor: '#f7f7f7',
                                 //         EKBorderRadius: '10px',
+                                //         EKBorderColor: '#dde8f0',
 
                                 //         // font size
                                 //         EKFontSizeH1: '24px',
@@ -115,6 +116,19 @@ module.exports = {
                                 //         EKBackgroundColorFirst: 'red',
                                 //         EKBackgroundColorSecond: 'green',
                                 //         EKBackgroundColorThird: 'blue',
+
+                                //         // border color
+                                //         EKBorderColorWhite: '#ededed',
+                                //         EKBorderColorBlack: '#ffffff',
+                                //         EKBorderColorLink: '#d0e3f1',  // blue: #ebf3f9
+                                //         EKBorderColorMuted: '#e5e5e5',  // gray: #f7f7f7
+                                //         EKBorderColorSuccess: '#b7e6b1',
+                                //         EKBorderColorInfo: '#c1d4ed',
+                                //         EKBorderColorWarning: '#faea9b',
+                                //         EKBorderColorError: '#e6b9b3',
+                                //         EKBorderColorFirst: 'red',
+                                //         EKBorderColorSecond: 'green',
+                                //         EKBorderColorThird: 'blue',
                                 //     }
                                 // }),
                                 // postcsscustomMedia({
