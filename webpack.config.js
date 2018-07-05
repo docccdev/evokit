@@ -14,7 +14,7 @@ var postcssMqpacker = require("css-mqpacker");
 var extractSTYL = new ExtractTextPlugin('[name]/style.css');
 
 var entryList = {
-    '.':       path.resolve(__dirname, 'src/index.js'),
+    '.':        path.resolve(__dirname, 'src/index.js'),
     'Box':      path.resolve(__dirname, 'src/Box'),
     'Panel':    path.resolve(__dirname, 'src/Panel'),
     'Grid':     path.resolve(__dirname, 'src/Grid'),
@@ -77,6 +77,7 @@ module.exports = {
                                 //         EKFontSize: '13px',
                                 //         EKColor: '#3c3c3c',
                                 //         EKBackgroundColor: '#f7f7f7',
+                                //         EKBorderRadius: '10px',
 
                                 //         // font size
                                 //         EKFontSizeH1: '24px',
