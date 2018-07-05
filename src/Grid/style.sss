@@ -59,11 +59,7 @@
  *
  **/
 
-@each $to in (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
-    @each $from in (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
-        @if $from < $to or ($from == 1 and $to == 1)
-            @mixin media .grid__item_width_$(from)-$(to)
-                width: calc($from / $to * 100%)
+@mixin width .grid__item_width
 
 /**
  * Item order:

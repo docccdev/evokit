@@ -10,28 +10,29 @@ const DEFAULT_MOD_PROP_TYPES = PropTypes.oneOfType([
 
 export function createBlock(target) {
     target.propTypes = target.propTypes || {};
-    target.classPrefix = target.classPrefix || 'ui';
+    target.classPrefix = target.classPrefix;
+    target.propsPrefix = target.propsPrefix || 'ek-';
     target.blockMods = target.blockMods || [];
-    target.displayName = target.displayName || `${target.classPrefix}-${target.blockName}`;
+    target.displayName = target.displayName || `${target.classPrefix}${target.blockName}`;
 
     target.propTypes['domRef'] = PropTypes.func;
 
     for (const key of target.blockMods) {
-        target.propTypes[`${target.classPrefix}-${key}`] = DEFAULT_MOD_PROP_TYPES;
+        target.propTypes[`${target.propsPrefix}${key}`] = DEFAULT_MOD_PROP_TYPES;
     }
 
     target.prototype.getElementClassName = function getElementClassName(name) {
-        const blockClassName = `${target.classPrefix}-${target.blockName}`;
+        const blockClassName = `${target.classPrefix}${target.blockName}`;
 
         return `${blockClassName}__${name}`;
     };
 
     target.prototype.getClassName = function getClassName() {
-        const blockClassName = `${target.classPrefix}-${target.blockName}`;
+        const blockClassName = `${target.classPrefix}${target.blockName}`;
         const modsProps = [blockClassName];
 
         for (const key of target.blockMods) {
-            const propName = `${target.classPrefix}-${key}`;
+            const propName = `${target.propsPrefix}${key}`;
 
             if (propName in this.props) {
                 const modName = `${blockClassName}_${key}`;
@@ -55,7 +56,7 @@ export function createBlock(target) {
         const cleanProps = Object.assign({}, this.props);
 
         for (const key of target.blockMods) {
-            const propName = `${target.classPrefix}-${key}`;
+            const propName = `${target.propsPrefix}${key}`;
 
             if (propName in cleanProps) {
                 delete cleanProps[propName];
