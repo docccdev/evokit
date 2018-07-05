@@ -18,24 +18,24 @@ containers:
 
 commands:
 
-  build_es: !Command
+  build_evokit: !Command
     description: Run build
     container: frontend
     options: |
       Usage:
-        vagga build_es [--watch|-w]
+        vagga build_evokit [--watch|-w]
 
       Options:
         --watch, -w          enable webpack watch
     run: |
-      webpack --progress ${VAGGACLI_WATCH} --config webpack.config.js
+      webpack --progress ${VAGGACLI_WATCH} --config webpack.evokit.config.js
 
   build: !Command
     description: Run build
     container: frontend
     run: |
       gulp compile_uikit
-      webpack --progress --config webpack.config.js
+      webpack --progress ${VAGGACLI_WATCH} --config webpack.evokit.config.js
 
   watch: !Command
     description: Run watch *.styl
