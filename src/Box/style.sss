@@ -1,0 +1,122 @@
+@import '../mixins.sss'
+
+.box
+    display: block
+    box-sizing: border-box
+
+    &:after
+        clear: both
+
+    &:after, &:before
+        content: ''
+        display: table
+
+/**
+ * Display:
+ *
+ *  - box_display_*
+ *
+ **/
+
+@each $value in (none, inline, block, inline-block)
+    @mixin media .box_display_$(value)
+        display: $value
+
+        @if $value == inline
+            &:after, &:before
+                content: none
+
+/**
+ * Margin:
+ *
+ *  - box_margin_*
+ *
+ **/
+
+@each $value, $i in (none, xxs, xs, s, m, l, xl, xxl, xxxl, auto)
+    @if $value == auto
+        @mixin media .box_margin_$(value)
+            margin: auto
+
+        @mixin media .box_margin-tb_$(value)
+            margin-top: auto
+            margin-bottom: auto
+
+        @mixin media .box_margin-lr_$(value)
+            margin-left: auto
+            margin-right: auto
+
+        @mixin media .box_margin-left_$(value)
+            margin-left: auto
+
+        @mixin media .box_margin-top_$(value)
+            margin-top: auto
+
+        @mixin media .box_margin-right_$(value)
+            margin-right: auto
+
+        @mixin media .box_margin-bottom_$(value)
+            margin-bottom: auto
+    @else
+        @mixin media .box_margin_$(value)
+            margin: calc(var(--EKStepSize) * $i)
+
+        @mixin media .box_margin-tb_$(value)
+            margin-top: calc(var(--EKStepSize) * $i)
+            margin-bottom: calc(var(--EKStepSize) * $i)
+
+        @mixin media .box_margin-lr_$(value)
+            margin-left: calc(var(--EKStepSize) * $i)
+            margin-right: calc(var(--EKStepSize) * $i)
+
+        @mixin media .box_margin-left_$(value)
+            margin-left: calc(var(--EKStepSize) * $i)
+
+        @mixin media .box_margin-top_$(value)
+            margin-top: calc(var(--EKStepSize) * $i)
+
+        @mixin media .box_margin-right_$(value)
+            margin-right: calc(var(--EKStepSize) * $i)
+
+        @mixin media .box_margin-bottom_$(value)
+            margin-bottom: calc(var(--EKStepSize) * $i)
+
+/**
+ * Padding:
+ *
+ *  - box_padding_*
+ *
+ **/
+
+@each $value, $i in (none, xxs, xs, s, m, l, xl, xxl, xxxl)
+    @mixin media .box_padding_$(value)
+        padding: calc(var(--EKStepSize) * $i)
+
+    @mixin media .box_padding-tb_$(value)
+        padding-top: calc(var(--EKStepSize) * $i)
+        padding-bottom: calc(var(--EKStepSize) * $i)
+
+    @mixin media .box_padding-lr_$(value)
+        padding-left: calc(var(--EKStepSize) * $i)
+        padding-right: calc(var(--EKStepSize) * $i)
+
+    @mixin media .box_padding-left_$(value)
+        padding-left: calc(var(--EKStepSize) * $i)
+
+    @mixin media .box_padding-top_$(value)
+        padding-top: calc(var(--EKStepSize) * $i)
+
+    @mixin media .box_padding-right_$(value)
+        padding-right: calc(var(--EKStepSize) * $i)
+
+    @mixin media .box_padding-bottom_$(value)
+        padding-bottom: calc(var(--EKStepSize) * $i)
+
+/**
+ * Theme:
+ *
+ *  - box_theme_*
+ *
+ **/
+
+@mixin background-color .box_theme

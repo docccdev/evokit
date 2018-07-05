@@ -40,9 +40,8 @@
  *
  **/
 
-@each $name in (base, white, black, link, muted, success, info, warning, error, first, second, third)
-    .list_color_$(name)
-
+@each $name in (base, white, black, link, muted, success, info, warning, error, first, second, third, transparent)
+    @mixin media .list_color_$(name)
         & > .list__item
 
             &:before
@@ -70,6 +69,8 @@
                     color: var(--EKColorSecond)
                 @else if $name == third
                     color: var(--EKColorThird)
+                @else if $name == transparent
+                    color: transparent
 
 /**
  * Style:

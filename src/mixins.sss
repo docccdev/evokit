@@ -28,8 +28,8 @@
 
 
 @define-mixin color $selector
-    @each $name in (base, white, black, link, muted, success, info, warning, error, first, second, third)
-        $(selector)_$(name)
+    @each $name in (base, white, black, link, muted, success, info, warning, error, first, second, third, transparent)
+        @mixin media $(selector)_$(name)
             @if $name == base
                 color: var(--EKColor)
             @else if $name == white
@@ -54,11 +54,12 @@
                 color: var(--EKColorSecond)
             @else if $name == third
                 color: var(--EKColorThird)
-
+            @else if $name == transparent
+                color: transparent
 
 @define-mixin font-size $selector
     @each $name in (base, h1, h2, h3, h4, h5, h6, first, second, third)
-        $(selector)_$(name)
+        @mixin media $(selector)_$(name)
             @if $name == base
                 font-size: var(--EKFontSize)
             @else if $name == h1
@@ -83,7 +84,7 @@
 
 @define-mixin font-weight $selector
     @each $name in (base, thin, light, medium, bold, black)
-        $(selector)_$(name)
+        @mixin media $(selector)_$(name)
             @if $name == base
                 font-weight: var(--EKFontWeight)
             @else if $name == thin
@@ -96,3 +97,34 @@
                 font-weight: 700
             @else if $name == black
                 font-weight: 900
+
+
+@define-mixin background-color $selector
+    @each $name in (base, white, black, link, muted, success, info, warning, error, first, second, third, transparent)
+        @mixin media $(selector)_$(name)
+            @if $name == base
+                background-color: var(--EKBackgroundColor)
+            @else if $name == white
+                background-color: var(--EKBackgroundColorWhite)
+            @else if $name == black
+                background-color: var(--EKBackgroundColorBlack)
+            @else if $name == link
+                background-color: var(--EKBackgroundColorLink)
+            @else if $name == muted
+                background-color: var(--EKBackgroundColorMuted)
+            @else if $name == success
+                background-color: var(--EKBackgroundColorSuccess)
+            @else if $name == info
+                background-color: var(--EKBackgroundColorInfo)
+            @else if $name == warning
+                background-color: var(--EKBackgroundColorWarning)
+            @else if $name == error
+                background-color: var(--EKBackgroundColorError)
+            @else if $name == first
+                background-color: var(--EKBackgroundColorFirst)
+            @else if $name == second
+                background-color: var(--EKBackgroundColorSecond)
+            @else if $name == third
+                background-color: var(--EKBackgroundColorThird)
+            @else if $name == transparent
+                background-color: transparent

@@ -28,7 +28,8 @@ var entryList = {
 };
 
 // 1. Обратить внимание на модификаторы size
-// 2. Изменились переменные текста red => first, yellow => second
+// 2. Изменились переменные цвета текста red => first, yellow => second
+// 3. Добавились новые модификаторы, найти и задокументировать
 
 module.exports = {
     entry: entryList,
@@ -75,6 +76,18 @@ module.exports = {
                                 //         EKFontWeight: '400',
                                 //         EKFontSize: '13px',
                                 //         EKColor: '#3c3c3c',
+                                //         EKBackgroundColor: '#f7f7f7',
+
+                                //         // font size
+                                //         EKFontSizeH1: '24px',
+                                //         EKFontSizeH2: '22px',
+                                //         EKFontSizeH3: '20px',
+                                //         EKFontSizeH4: '18px',
+                                //         EKFontSizeH5: '16px',
+                                //         EKFontSizeH6: '14px',
+                                //         EKFontSizeFirst: '30px',
+                                //         EKFontSizeSecond: '60px',
+                                //         EKFontSizeThird: '90px',
 
                                 //         // text colors
                                 //         EKColorWhite: '#ffffff',
@@ -89,16 +102,18 @@ module.exports = {
                                 //         EKColorSecond: 'green', // yellow: #facd00
                                 //         EKColorThird: 'blue',
 
-                                //         // font size
-                                //         EKFontSizeH1: '24px',
-                                //         EKFontSizeH2: '22px',
-                                //         EKFontSizeH3: '20px',
-                                //         EKFontSizeH4: '18px',
-                                //         EKFontSizeH5: '16px',
-                                //         EKFontSizeH6: '14px',
-                                //         EKFontSizeFirst: '30px',
-                                //         EKFontSizeSecond: '60px',
-                                //         EKFontSizeThird: '90px',
+                                //         // background color
+                                //         EKBackgroundColorWhite: '#ffffff',
+                                //         EKBackgroundColorBlack: '#000000',
+                                //         EKBackgroundColorLink: '#ebf3f9',  // blue: #ebf3f9
+                                //         EKBackgroundColorMuted: '#f7f7f7',  // gray: #f7f7f7
+                                //         EKBackgroundColorSuccess: '#d0efcc',
+                                //         EKBackgroundColorInfo: '#dde7f5',
+                                //         EKBackgroundColorWarning: '#fcf1bd',
+                                //         EKBackgroundColorError: '#efd2ce',
+                                //         EKBackgroundColorFirst: 'red',
+                                //         EKBackgroundColorSecond: 'green',
+                                //         EKBackgroundColorThird: 'blue',
                                 //     }
                                 // }),
                                 // postcsscustomMedia({
