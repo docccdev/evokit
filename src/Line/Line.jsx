@@ -1,5 +1,5 @@
 import React from 'react';
-import { uiKitComponent } from '../component';
+import { createBlock } from '../component';
 
 class Line extends React.Component {
     static blockName = 'line';
@@ -18,4 +18,4 @@ class Line extends React.Component {
     }
 }
 
-export default uiKitComponent(Line);
+export default createBlock(Line);

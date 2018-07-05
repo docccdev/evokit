@@ -1,5 +1,5 @@
 import React from 'react';
-import { uiKitComponent } from '../component';
+import { createBlock } from '../component';
 
 class Text extends React.Component {
     static blockName = 'text';
@@ -25,4 +25,4 @@ class Text extends React.Component {
     }
 }
 
-export default uiKitComponent(Text);
+export default createBlock(Text);

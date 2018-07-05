@@ -69,7 +69,6 @@ module.exports = {
                                 //     warnings: true,
                                 //     variables: {
                                 //         // base
-                                //         EKLineColor: '#dde8f0', // replase with EKBorderColor
                                 //         EKStepSize: '5px',
                                 //         EKLineHeight: '1.3em',
                                 //         EKLineHeightRead: '1.5em',

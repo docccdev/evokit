@@ -1,5 +1,5 @@
 import React from 'react';
-import { uiKitComponent } from '../component';
+import { createBlock } from '../component';
 
 class TagsItem extends React.Component {
     static blockName = 'tags__item';
@@ -19,4 +19,4 @@ class TagsItem extends React.Component {
     }
 }
 
-export default uiKitComponent(TagsItem);
+export default createBlock(TagsItem);

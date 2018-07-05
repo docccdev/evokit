@@ -1,3 +1,5 @@
+import { createBlock } from './component';
+
 import Box from './Box';
 import Panel from './Panel';
 import Grid from './Grid';
@@ -10,6 +12,7 @@ import Image from './Image';
 import Tags from './Tags';
 
 export {
+    createBlock,
     Box as UiBox,
     Panel as UiPanel,
     Grid as UiGrid,

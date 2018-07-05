@@ -1,5 +1,5 @@
 import React from 'react';
-import { uiKitComponent } from '../component';
+import { createBlock } from '../component';
 
 class Grid extends React.Component {
     static blockName = 'grid';
@@ -25,4 +25,4 @@ class Grid extends React.Component {
     }
 }
 
-export default uiKitComponent(Grid);
+export default createBlock(Grid);

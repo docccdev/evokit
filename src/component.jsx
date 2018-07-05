@@ -8,7 +8,7 @@ const DEFAULT_MOD_PROP_TYPES = PropTypes.oneOfType([
     PropTypes.number,
 ]);
 
-export function uiKitComponent(target) {
+export function createBlock(target) {
     target.propTypes = target.propTypes || {};
     target.classPrefix = target.classPrefix || 'ui';
     target.blockMods = target.blockMods || [];

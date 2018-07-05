@@ -1,5 +1,5 @@
 import React from 'react';
-import { uiKitComponent } from '../component';
+import { createBlock } from '../component';
 
 class GridItem extends React.Component {
     static blockName = 'grid__item';
@@ -16,4 +16,4 @@ class GridItem extends React.Component {
     }
 }
 
-export default uiKitComponent(GridItem);
+export default createBlock(GridItem);
