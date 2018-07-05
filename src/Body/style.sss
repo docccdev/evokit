@@ -1,0 +1,35 @@
+.body
+    font-family: var(--EKFontFamily)
+    font-size: var(--EKFontSize)
+    // line-height: var(--EKLineHeight)
+    color: var(--EKColor)
+    background-color: var(--EKBackgroundColor)
+    min-width: var(--EKMinWidth)
+    margin: 0
+    font-weight: var(--EKFontWeight)
+
+.body__section
+    display: block
+    box-sizing: border-box
+    margin-left: auto
+    margin-right: auto
+    min-width: var(--EKMinWidth)
+    max-width: var(--EKMaxWidth)
+    padding: var(--EKPadding)
+
+/**
+ * Size:
+ *
+ *  - body_size_*
+ *
+ **/
+
+@each $value in (xl, xxl, xxxl)
+    .body_size_$(value)
+        .body__section
+            @if $value == xl
+                max-width: 1440px
+            @else if $value == xxl
+                max-width: 1640px
+            @else if $value == xxxl
+                max-width: 1840px

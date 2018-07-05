@@ -17,6 +17,7 @@ var extractSTYL = new ExtractTextPlugin('[name]/style.css');
 
 var entryList = {
     '.':        path.resolve(__dirname, 'src/index.js'),
+    'Body':     path.resolve(__dirname, 'src/Body'),
     'Box':      path.resolve(__dirname, 'src/Box'),
     'Panel':    path.resolve(__dirname, 'src/Panel'),
     'Grid':     path.resolve(__dirname, 'src/Grid'),
@@ -74,15 +75,19 @@ module.exports = {
                                 //     variables: {
                                 //         // base
                                 //         EKStepSize: '5px',
-                                //         EKLineHeight: '1.3em',
                                 //         EKLineHeightRead: '1.5em',
+                                //         EKBorderRadius: '10px',
+                                //         EKBorderColor: '#dde8f0',
+                                //         // body
+                                //         EKFontFamily: '\'Roboto\', Arial, sans-serif',
+                                //         EKLineHeight: '1.3em',
                                 //         EKFontWeight: '400',
                                 //         EKFontSize: '13px',
                                 //         EKColor: '#3c3c3c',
                                 //         EKBackgroundColor: '#f7f7f7',
-                                //         EKBorderRadius: '10px',
-                                //         EKBorderColor: '#dde8f0',
-
+                                //         EKMinWidth: '1000px',
+                                //         EKMaxWidth: '1200px',
+                                //         EKPadding: '0 20px',
                                 //         // font size
                                 //         EKFontSizeH1: '24px',
                                 //         EKFontSizeH2: '22px',
@@ -93,7 +98,6 @@ module.exports = {
                                 //         EKFontSizeFirst: '30px',
                                 //         EKFontSizeSecond: '60px',
                                 //         EKFontSizeThird: '90px',
-
                                 //         // text colors
                                 //         EKColorWhite: '#ffffff',
                                 //         EKColorBlack: '#000000',
@@ -106,7 +110,6 @@ module.exports = {
                                 //         EKColorFirst: 'red', // red: #f55832
                                 //         EKColorSecond: 'green', // yellow: #facd00
                                 //         EKColorThird: 'blue',
-
                                 //         // background color
                                 //         EKBackgroundColorWhite: '#ffffff',
                                 //         EKBackgroundColorBlack: '#000000',
@@ -119,7 +122,6 @@ module.exports = {
                                 //         EKBackgroundColorFirst: 'red',
                                 //         EKBackgroundColorSecond: 'green',
                                 //         EKBackgroundColorThird: 'blue',
-
                                 //         // border color
                                 //         EKBorderColorWhite: '#ededed',
                                 //         EKBorderColorBlack: '#ffffff',
