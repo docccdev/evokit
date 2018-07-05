@@ -11,20 +11,20 @@ var postcssMixins = require('postcss-mixins');
 var postcssImport = require('postcss-import');
 var postcssMqpacker = require("css-mqpacker");
 
-var extractSTYL = new ExtractTextPlugin('[name].css');
+var extractSTYL = new ExtractTextPlugin('[name]/style.css');
 
 var entryList = {
-    'index':          path.resolve(__dirname, 'src/index.js'),
-    'Box/index':      path.resolve(__dirname, 'src/Box'),
-    'Panel/index':    path.resolve(__dirname, 'src/Panel'),
-    'Grid/index':     path.resolve(__dirname, 'src/Grid'),
-    'List/index':     path.resolve(__dirname, 'src/List'),
-    'Link/index':     path.resolve(__dirname, 'src/Link'),
-    'Picture/index':  path.resolve(__dirname, 'src/Picture'),
-    'Text/index':     path.resolve(__dirname, 'src/Text'),
-    'Line/index':     path.resolve(__dirname, 'src/Line'),
-    'Image/index':    path.resolve(__dirname, 'src/Image'),
-    'Tags/index':     path.resolve(__dirname, 'src/Tags'),
+    './':       path.resolve(__dirname, 'src/index.js'),
+    'Box':      path.resolve(__dirname, 'src/Box'),
+    'Panel':    path.resolve(__dirname, 'src/Panel'),
+    'Grid':     path.resolve(__dirname, 'src/Grid'),
+    'List':     path.resolve(__dirname, 'src/List'),
+    'Link':     path.resolve(__dirname, 'src/Link'),
+    'Picture':  path.resolve(__dirname, 'src/Picture'),
+    'Text':     path.resolve(__dirname, 'src/Text'),
+    'Line':     path.resolve(__dirname, 'src/Line'),
+    'Image':    path.resolve(__dirname, 'src/Image'),
+    'Tags':     path.resolve(__dirname, 'src/Tags'),
 };
 
 // 1. Обратить внимание на модификаторы size
@@ -35,7 +35,7 @@ module.exports = {
     entry: entryList,
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: '[name].js',
+        filename: '[name]/index.js',
         libraryTarget: 'umd',
     },
     module: {
