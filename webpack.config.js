@@ -3,6 +3,8 @@ var PeerDepsExternalsPlugin = require('peer-deps-externals-webpack-plugin');
 var PROJECT_DEPS = process.env.PROJECT_DEPS || __dirname;
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var postcssEach = require('postcss-each');
+var postcssFor = require('postcss-for');
+var postcssMath = require('postcss-math');
 var postcssConditionals = require('postcss-conditionals');
 var postcssNested = require('postcss-nested');
 var postcssCustomProperties = require('postcss-custom-properties');
@@ -62,6 +64,8 @@ module.exports = {
                                 postcssImport(),
                                 postcssMixins(),
                                 postcssEach(),
+                                postcssFor(),
+                                postcssMath(),
                                 postcssConditionals(),
                                 postcssNested(),
                                 // postcssCustomProperties({

@@ -128,3 +128,22 @@
                 background-color: var(--EKBackgroundColorThird)
             @else if $name == transparent
                 background-color: transparent
+
+
+@define-mixin grid-divider-item $value
+    & + .grid__item
+        border-left-width: 0
+
+    @for $index from 1 to $value
+
+        &:nth-child(resolve($value)n-resolve($value - $index))
+            @if $index == $value
+                border-right-width: 0
+            @else
+                border-right-width: 1px
+
+            &:nth-last-child(-n+resolve($value - $index + 1))
+                border-bottom-width: 0
+
+            &:not(:nth-last-child(-n+resolve($value - $index + 1)))
+                border-bottom-width: 1px
