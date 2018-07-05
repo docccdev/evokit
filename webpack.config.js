@@ -71,6 +71,7 @@ module.exports = {
                                 //         EKLineColor: '#dde8f0',
                                 //         EKStepSize: '5px',
                                 //         EKLineHeight: '1.3em',
+                                //         EKLineHeightRead: '1.5em',
                                 //         EKFontWeight: '400',
                                 //         EKFontSize: '13px',
                                 //         EKColor: '#3c3c3c',
