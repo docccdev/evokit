@@ -8,13 +8,13 @@ containers:
     setup:
     - !Alpine v3.7
     - !Install [nodejs-npm]
-    - !EnsureDir /work/node_modules
+    # - !EnsureDir /work/node_modules
     - !EnsureDir /usr/lib/node_modules/.cache
     - !NpmDependencies
       package: true
       dev: true
-    volumes:
-      /work/node_modules: !Empty
+    # volumes:
+    #   /work/node_modules: !Empty
 
 commands:
 
