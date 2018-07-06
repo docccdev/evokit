@@ -1,7 +1,0 @@
-.grid_direction
-    //
-$_grid_direction = ('row' 'row-reverse' 'column' 'column-reverse')
-
-for value in $_grid_direction
-    +media-selector('.grid_direction_'+unquote(value))
-        flex-direction: unquote(value)

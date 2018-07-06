@@ -1,5 +1,5 @@
 module.exports = {
-    var: {
+    variables: {
         // base
         EKStepSize: '5px',
         EKLineHeightRead: '1.5em',
@@ -62,7 +62,7 @@ module.exports = {
         EKBorderColorSecond: 'green',
         EKBorderColorThird: 'blue',
     },
-    media: {
+    extensions: {
         EKMediaSmall: 'only screen and (min-width: 480px)',
         EKMediaMedium: 'only screen and (min-width: 768px)',
         EKMediaLarge: 'only screen and (min-width: 960px)',

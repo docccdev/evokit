@@ -13,7 +13,7 @@ var postcssMixins = require('postcss-mixins');
 var postcssImport = require('postcss-import');
 var postcssMqpacker = require('css-mqpacker');
 
-var evokitDesktopConfig = require('./evokit.desktop.config.js');
+var evokitConfig = require('./evokit.desktop.config.js');
 
 var extractSTYL = new ExtractTextPlugin('[name]/style.css');
 
@@ -39,7 +39,7 @@ var entryList = {
 module.exports = {
     entry: entryList,
     output: {
-        path: path.resolve(__dirname, 'dist_evokit'),
+        path: path.resolve(__dirname, 'dist'),
         filename: '[name]/index.js',
         libraryTarget: 'umd',
     },
@@ -74,10 +74,10 @@ module.exports = {
                                 // postcssCustomProperties({
                                 //     preserve: 'computed',
                                 //     warnings: true,
-                                //     variables: evokitDesktopConfig.var
+                                //     variables: evokitConfig.variables
                                 // }),
                                 // postcsscustomMedia({
-                                //     extensions: evokitDesktopConfig.media
+                                //     extensions: evokitConfig.extensions
                                 // }),
                                 postcssMqpacker()
                             ]

@@ -1,7 +1,3 @@
 node_modules
-.vagga
-temp
 dist
-dist_evokit
-docs/_media/css/
 package-lock.json
