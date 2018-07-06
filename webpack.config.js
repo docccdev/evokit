@@ -13,7 +13,7 @@ var postcssMixins = require('postcss-mixins');
 var postcssImport = require('postcss-import');
 var postcssMqpacker = require('css-mqpacker');
 
-var evokitConfig = require('./evokit.desktop.config.js');
+var evokitConfig = require('./evokit.config.js');
 
 var extractSTYL = new ExtractTextPlugin('[name]/style.css');
 

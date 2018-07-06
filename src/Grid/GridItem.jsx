@@ -3,6 +3,10 @@ import { createBlock } from '../component';
 
 class GridItem extends React.Component {
     static blockName = 'grid__item';
+    static blockMods = [
+        'width',
+        'order',
+    ];
 
     render() {
         return (
