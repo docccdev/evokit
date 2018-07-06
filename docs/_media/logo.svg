@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="150" height="150">
 <polygon style="fill:#AD7ACF;" points="379,133 379,256 253,256 253,379 379,379 379,502 502,502 502,379 502,256 502,133 "/>
 <polygon style="fill:#FEC761;" points="253,379 130,379 10,379 10,502 130,502 253,502 379,502 379,379 "/>
 <path style="fill:#FD3C65;" d="M130,10H10v123v123h120V133h123V10H130z"/>
@@ -13,34 +12,4 @@
 <path d="M10,266h120c5.523,0,10-4.477,10-10V143h113c5.522,0,10-4.477,10-10V10c0-5.523-4.478-10-10-10C245.732,0,15.315,0,10,0
 	C4.477,0,0,4.477,0,10c0,6.94,0,239.064,0,246C0,261.523,4.477,266,10,266z M243,123H140V20h103V123z M20,20h100v103h-13.02
 	c-5.523,0-10,4.477-10,10c0,5.523,4.477,10,10,10H120v103H20V143h12.63c5.523,0,10-4.477,10-10s-4.477-10-10-10H20V20z"/>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
 </svg>
