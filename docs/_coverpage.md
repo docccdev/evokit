@@ -2,11 +2,11 @@
 
 ![logo](_media/logo.svg)
 
-# UIKit <small>0.1.59 (beta)</small>
+# EvoKit <small>1.0.0 (beta)</small>
 
 > Framework для разработки быстрых и мощных веб-интерфейсов
 
 * Основан на принципе разделения интерфейса на независимые единицы
 
-[GitHub](https://gitlab.uaprom/bigl/uikit)
+[GitHub](https://github.com/docccdev/evokit)
 [Начать](#uikit)
