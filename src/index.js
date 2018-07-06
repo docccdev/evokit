@@ -12,6 +12,8 @@ import Line from './Line';
 import Image from './Image';
 import Tags from './Tags';
 
+import './helper-width';
+
 export {
     createBlock,
     Body,
