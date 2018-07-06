@@ -1,5 +1,5 @@
 {
-  "name": "EvoKit",
+  "name": "evokit",
   "version": "1.0.0",
   "description": "Ract UI Components for developing fast and powerful web interfaces",
   "main": "dist/index.js",
