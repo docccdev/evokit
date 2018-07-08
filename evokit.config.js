@@ -13,7 +13,7 @@ module.exports = {
         EKColor: '#3c3c3c',
         EKBackgroundColor: '#f7f7f7',
         EKMinWidth: '1000px',
-        EKMaxWidth: '1200px',
+        EKMaxWidth: '1240px',
         EKPadding: '0 20px',
         // font size
         EKFontSizeH1: '24px',

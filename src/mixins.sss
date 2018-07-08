@@ -135,7 +135,6 @@
         border-left-width: 0
 
     @for $index from 1 to $value
-
         &:nth-child(resolve($value)n-resolve($value - $index))
             @if $index == $value
                 border-right-width: 0
