@@ -2,12 +2,11 @@ module.exports = {
     variables: {
         // base
         EKStepSize: '5px',
-        EKLineHeightRead: '1.5em',
+        EKLineHeightRead: '1.5',
         EKBorderRadius: '10px',
         EKBorderColor: '#dde8f0',
         // body
-        EKFontFamily: '\'Roboto\', Arial, sans-serif',
-        EKLineHeight: '1.3em',
+        EKLineHeight: '1.3',
         EKFontWeight: '400',
         EKFontSize: '13px',
         EKColor: '#3c3c3c',

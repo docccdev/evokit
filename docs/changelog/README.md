@@ -17,6 +17,9 @@
 
 # CHANGELOG
 
+## 1.0.5
+- Удалена переменная `--EKFontFamily`, используется `system-ui`.
+
 ## 0.1.59 beta (24.05.2018)
 - Добавлен белый цвет текста [colors][colors]:
     - `.ui-text_color_white`
