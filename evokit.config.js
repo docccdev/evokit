@@ -34,8 +34,8 @@ module.exports = {
         EKColorInfo: '#5e8fd5',
         EKColorWarning: '#ff9600',
         EKColorError: '#bb2914',
-        EKColorFirst: 'red', // red: #f55832
-        EKColorSecond: 'green', // yellow: #facd00
+        EKColorFirst: '#f55832', // red: #f55832
+        EKColorSecond: '#facd00', // yellow: #facd00
         EKColorThird: 'blue',
         // background color
         EKBackgroundColorWhite: '#ffffff',
@@ -52,8 +52,8 @@ module.exports = {
         // border color
         EKBorderColorWhite: '#ededed',
         EKBorderColorBlack: '#ffffff',
-        EKBorderColorLink: '#d0e3f1',  // blue: #ebf3f9
-        EKBorderColorMuted: '#e5e5e5',  // gray: #f7f7f7
+        EKBorderColorLink: '#d0e3f1',  // blue
+        EKBorderColorMuted: '#e5e5e5',  // gray
         EKBorderColorSuccess: '#b7e6b1',
         EKBorderColorInfo: '#c1d4ed',
         EKBorderColorWarning: '#faea9b',

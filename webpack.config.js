@@ -32,10 +32,6 @@ var entryList = {
     'Tags':     path.resolve(__dirname, 'src/Tags'),
 };
 
-// 1. Обратить внимание на модификаторы size
-// 2. Изменились переменные цвета текста red => first, yellow => second
-// 3. Добавились новые модификаторы, найти и задокументировать
-
 module.exports = {
     entry: entryList,
     output: {
