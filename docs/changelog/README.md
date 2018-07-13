@@ -18,7 +18,7 @@
 # CHANGELOG
 
 ## 1.0.6
-- Добавлене media модификаторы для:
+- Добавлены media модификаторы для:
     - `ek-text_align_*`
     - `ek-text_valign_*`
 
