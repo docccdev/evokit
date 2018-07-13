@@ -39,7 +39,7 @@
  **/
 
 @each $value in (left, center, right, justify)
-    .text_align_$(value)
+    @mixin media .text_align_$(value)
         display: block
         text-align: $value
 
@@ -51,7 +51,7 @@
  **/
 
 @each $value in (top, middle, bottom)
-    .text_valign_$(value)
+    @mixin media .text_valign_$(value)
         vertical-align: $value
 
 /**
