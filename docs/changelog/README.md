@@ -127,8 +127,8 @@
 ## 0.1.46 beta (06.09.2017)
 - Оптимизирован размер `.js` бандла.
 - Добавлены модификаторы в `jsx` для блока [UiPicture][picture]:
-    - `ui-size`
-    - `ui-style`
+    - `ek-size`
+    - `ek-style`
 - Добавлен новый блок в `jsx`:
     - [UiImage][image]
 
@@ -328,8 +328,8 @@
 ## 0.1.23 beta (24.01.2017)
 
 - Новый блок [picture][picture].
-- Added ui-width class `.ek-width-auto`.
-- Added ui-width class `.ek-width-expand`.
+- Added ek-width class `.ek-width-auto`.
+- Added ek-width class `.ek-width-expand`.
 - Added modifier for [grid][grid] `.ek-grid_column_expand`.
 - Исправлен стиль `position` для `.ek-list__item`.
 - Changed the design documentation and add preview block.

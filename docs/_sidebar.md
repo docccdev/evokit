@@ -2,8 +2,9 @@
 
   * [Sizes](/base/sizes.md)
   * [Media](/base/media.md)
-  * [Colors](/base/colors.md)
-  * [Text](/base/text.md)
+  * [Config](/base/config.md)
+  <!-- * [Colors](/base/colors.md) -->
+  <!-- * [Text](/base/text.md) -->
 
 * BLOCKS
 

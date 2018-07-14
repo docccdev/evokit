@@ -32,11 +32,11 @@
 ## Пример
 
 ``` html
-<div class="ui-grid ui-grid_size_xxxl">
-    <div class='ui-grid__item'>
+<div class="ek-grid ek-grid_size_xxxl">
+    <div class='ek-grid__item'>
         <div class="doc-example">Item</div>
     </div>
-    <div class='ui-grid__item'>
+    <div class='ek-grid__item'>
         <div class="doc-example">Item</div>
     </div>
 </div>

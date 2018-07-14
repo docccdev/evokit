@@ -5,173 +5,173 @@ demo|20
 # DEMO
 
 ``` html
-    <div class="ui-box ui-box_margin-bottom_m">
-        <div class="ui-text ui-text_size_h2 ui-text_align_center ui-text_weight_medium">
+    <div class="ek-box ek-box_margin-bottom_m">
+        <div class="ek-text ek-text_size_h2 ek-text_align_center ek-text_weight_medium">
             Grid
         </div>
     </div>
-    <div class="ui-grid ui-grid_size_m ui-grid_column_10">
-        <div class="ui-grid__item"><div class="doc-example">&nbsp;</div></div>
-        <div class="ui-grid__item"><div class="doc-example">&nbsp;</div></div>
-        <div class="ui-grid__item"><div class="doc-example">&nbsp;</div></div>
-        <div class="ui-grid__item"><div class="doc-example">&nbsp;</div></div>
-        <div class="ui-grid__item"><div class="doc-example">&nbsp;</div></div>
-        <div class="ui-grid__item"><div class="doc-example">&nbsp;</div></div>
-        <div class="ui-grid__item"><div class="doc-example">&nbsp;</div></div>
-        <div class="ui-grid__item"><div class="doc-example">&nbsp;</div></div>
-        <div class="ui-grid__item"><div class="doc-example">&nbsp;</div></div>
-        <div class="ui-grid__item"><div class="doc-example">&nbsp;</div></div>
+    <div class="ek-grid ek-grid_size_m ek-grid_column_10">
+        <div class="ek-grid__item"><div class="doc-example">&nbsp;</div></div>
+        <div class="ek-grid__item"><div class="doc-example">&nbsp;</div></div>
+        <div class="ek-grid__item"><div class="doc-example">&nbsp;</div></div>
+        <div class="ek-grid__item"><div class="doc-example">&nbsp;</div></div>
+        <div class="ek-grid__item"><div class="doc-example">&nbsp;</div></div>
+        <div class="ek-grid__item"><div class="doc-example">&nbsp;</div></div>
+        <div class="ek-grid__item"><div class="doc-example">&nbsp;</div></div>
+        <div class="ek-grid__item"><div class="doc-example">&nbsp;</div></div>
+        <div class="ek-grid__item"><div class="doc-example">&nbsp;</div></div>
+        <div class="ek-grid__item"><div class="doc-example">&nbsp;</div></div>
     </div>
     <br>
-    <div class="ui-grid ui-grid_size_m ui-grid_column_9">
-        <div class="ui-grid__item"><div class="doc-example">&nbsp;</div></div>
-        <div class="ui-grid__item"><div class="doc-example">&nbsp;</div></div>
-        <div class="ui-grid__item"><div class="doc-example">&nbsp;</div></div>
-        <div class="ui-grid__item"><div class="doc-example">&nbsp;</div></div>
-        <div class="ui-grid__item"><div class="doc-example">&nbsp;</div></div>
-        <div class="ui-grid__item"><div class="doc-example">&nbsp;</div></div>
-        <div class="ui-grid__item"><div class="doc-example">&nbsp;</div></div>
-        <div class="ui-grid__item"><div class="doc-example">&nbsp;</div></div>
-        <div class="ui-grid__item"><div class="doc-example">&nbsp;</div></div>
+    <div class="ek-grid ek-grid_size_m ek-grid_column_9">
+        <div class="ek-grid__item"><div class="doc-example">&nbsp;</div></div>
+        <div class="ek-grid__item"><div class="doc-example">&nbsp;</div></div>
+        <div class="ek-grid__item"><div class="doc-example">&nbsp;</div></div>
+        <div class="ek-grid__item"><div class="doc-example">&nbsp;</div></div>
+        <div class="ek-grid__item"><div class="doc-example">&nbsp;</div></div>
+        <div class="ek-grid__item"><div class="doc-example">&nbsp;</div></div>
+        <div class="ek-grid__item"><div class="doc-example">&nbsp;</div></div>
+        <div class="ek-grid__item"><div class="doc-example">&nbsp;</div></div>
+        <div class="ek-grid__item"><div class="doc-example">&nbsp;</div></div>
     </div>
     <br>
-    <div class="ui-grid ui-grid_size_m ui-grid_column_8">
-        <div class="ui-grid__item"><div class="doc-example">&nbsp;</div></div>
-        <div class="ui-grid__item"><div class="doc-example">&nbsp;</div></div>
-        <div class="ui-grid__item"><div class="doc-example">&nbsp;</div></div>
-        <div class="ui-grid__item"><div class="doc-example">&nbsp;</div></div>
-        <div class="ui-grid__item"><div class="doc-example">&nbsp;</div></div>
-        <div class="ui-grid__item"><div class="doc-example">&nbsp;</div></div>
-        <div class="ui-grid__item"><div class="doc-example">&nbsp;</div></div>
-        <div class="ui-grid__item"><div class="doc-example">&nbsp;</div></div>
+    <div class="ek-grid ek-grid_size_m ek-grid_column_8">
+        <div class="ek-grid__item"><div class="doc-example">&nbsp;</div></div>
+        <div class="ek-grid__item"><div class="doc-example">&nbsp;</div></div>
+        <div class="ek-grid__item"><div class="doc-example">&nbsp;</div></div>
+        <div class="ek-grid__item"><div class="doc-example">&nbsp;</div></div>
+        <div class="ek-grid__item"><div class="doc-example">&nbsp;</div></div>
+        <div class="ek-grid__item"><div class="doc-example">&nbsp;</div></div>
+        <div class="ek-grid__item"><div class="doc-example">&nbsp;</div></div>
+        <div class="ek-grid__item"><div class="doc-example">&nbsp;</div></div>
     </div>
     <br>
-    <div class="ui-grid ui-grid_size_m ui-grid_column_7">
-        <div class="ui-grid__item"><div class="doc-example">&nbsp;</div></div>
-        <div class="ui-grid__item"><div class="doc-example">&nbsp;</div></div>
-        <div class="ui-grid__item"><div class="doc-example">&nbsp;</div></div>
-        <div class="ui-grid__item"><div class="doc-example">&nbsp;</div></div>
-        <div class="ui-grid__item"><div class="doc-example">&nbsp;</div></div>
-        <div class="ui-grid__item"><div class="doc-example">&nbsp;</div></div>
-        <div class="ui-grid__item"><div class="doc-example">&nbsp;</div></div>
+    <div class="ek-grid ek-grid_size_m ek-grid_column_7">
+        <div class="ek-grid__item"><div class="doc-example">&nbsp;</div></div>
+        <div class="ek-grid__item"><div class="doc-example">&nbsp;</div></div>
+        <div class="ek-grid__item"><div class="doc-example">&nbsp;</div></div>
+        <div class="ek-grid__item"><div class="doc-example">&nbsp;</div></div>
+        <div class="ek-grid__item"><div class="doc-example">&nbsp;</div></div>
+        <div class="ek-grid__item"><div class="doc-example">&nbsp;</div></div>
+        <div class="ek-grid__item"><div class="doc-example">&nbsp;</div></div>
     </div>
     <br>
-    <div class="ui-grid ui-grid_size_m ui-grid_column_6">
-        <div class="ui-grid__item"><div class="doc-example">&nbsp;</div></div>
-        <div class="ui-grid__item"><div class="doc-example">&nbsp;</div></div>
-        <div class="ui-grid__item"><div class="doc-example">&nbsp;</div></div>
-        <div class="ui-grid__item"><div class="doc-example">&nbsp;</div></div>
-        <div class="ui-grid__item"><div class="doc-example">&nbsp;</div></div>
-        <div class="ui-grid__item"><div class="doc-example">&nbsp;</div></div>
+    <div class="ek-grid ek-grid_size_m ek-grid_column_6">
+        <div class="ek-grid__item"><div class="doc-example">&nbsp;</div></div>
+        <div class="ek-grid__item"><div class="doc-example">&nbsp;</div></div>
+        <div class="ek-grid__item"><div class="doc-example">&nbsp;</div></div>
+        <div class="ek-grid__item"><div class="doc-example">&nbsp;</div></div>
+        <div class="ek-grid__item"><div class="doc-example">&nbsp;</div></div>
+        <div class="ek-grid__item"><div class="doc-example">&nbsp;</div></div>
     </div>
     <br>
-    <div class="ui-grid ui-grid_size_m ui-grid_column_5">
-        <div class="ui-grid__item"><div class="doc-example">&nbsp;</div></div>
-        <div class="ui-grid__item"><div class="doc-example">&nbsp;</div></div>
-        <div class="ui-grid__item"><div class="doc-example">&nbsp;</div></div>
-        <div class="ui-grid__item"><div class="doc-example">&nbsp;</div></div>
-        <div class="ui-grid__item"><div class="doc-example">&nbsp;</div></div>
+    <div class="ek-grid ek-grid_size_m ek-grid_column_5">
+        <div class="ek-grid__item"><div class="doc-example">&nbsp;</div></div>
+        <div class="ek-grid__item"><div class="doc-example">&nbsp;</div></div>
+        <div class="ek-grid__item"><div class="doc-example">&nbsp;</div></div>
+        <div class="ek-grid__item"><div class="doc-example">&nbsp;</div></div>
+        <div class="ek-grid__item"><div class="doc-example">&nbsp;</div></div>
     </div>
     <br>
-    <div class="ui-grid ui-grid_size_m ui-grid_column_4">
-        <div class="ui-grid__item"><div class="doc-example">&nbsp;</div></div>
-        <div class="ui-grid__item"><div class="doc-example">&nbsp;</div></div>
-        <div class="ui-grid__item"><div class="doc-example">&nbsp;</div></div>
-        <div class="ui-grid__item"><div class="doc-example">&nbsp;</div></div>
+    <div class="ek-grid ek-grid_size_m ek-grid_column_4">
+        <div class="ek-grid__item"><div class="doc-example">&nbsp;</div></div>
+        <div class="ek-grid__item"><div class="doc-example">&nbsp;</div></div>
+        <div class="ek-grid__item"><div class="doc-example">&nbsp;</div></div>
+        <div class="ek-grid__item"><div class="doc-example">&nbsp;</div></div>
     </div>
     <br>
-    <div class="ui-grid ui-grid_size_m ui-grid_column_3">
-        <div class="ui-grid__item"><div class="doc-example">&nbsp;</div></div>
-        <div class="ui-grid__item"><div class="doc-example">&nbsp;</div></div>
-        <div class="ui-grid__item"><div class="doc-example">&nbsp;</div></div>
+    <div class="ek-grid ek-grid_size_m ek-grid_column_3">
+        <div class="ek-grid__item"><div class="doc-example">&nbsp;</div></div>
+        <div class="ek-grid__item"><div class="doc-example">&nbsp;</div></div>
+        <div class="ek-grid__item"><div class="doc-example">&nbsp;</div></div>
     </div>
     <br>
-    <div class="ui-grid ui-grid_size_m ui-grid_column_2">
-        <div class="ui-grid__item"><div class="doc-example">&nbsp;</div></div>
-        <div class="ui-grid__item"><div class="doc-example">&nbsp;</div></div>
+    <div class="ek-grid ek-grid_size_m ek-grid_column_2">
+        <div class="ek-grid__item"><div class="doc-example">&nbsp;</div></div>
+        <div class="ek-grid__item"><div class="doc-example">&nbsp;</div></div>
     </div>
     <br>
-    <div class="ui-grid ui-grid_size_m ui-grid_column_1">
-        <div class="ui-grid__item"><div class="doc-example">&nbsp;</div></div>
+    <div class="ek-grid ek-grid_size_m ek-grid_column_1">
+        <div class="ek-grid__item"><div class="doc-example">&nbsp;</div></div>
     </div>
 
 
-    <div class="ui-grid ui-grid_size_m ui-grid_column_2">
-        <div class="ui-grid__item">
-            <div class="ui-box ui-box_margin-top_xxxl ui-box_margin-bottom_m">
-                <div class="ui-text ui-text_size_h2 ui-text_align_center ui-text_weight_medium">
+    <div class="ek-grid ek-grid_size_m ek-grid_column_2">
+        <div class="ek-grid__item">
+            <div class="ek-box ek-box_margin-top_xxxl ek-box_margin-bottom_m">
+                <div class="ek-text ek-text_size_h2 ek-text_align_center ek-text_weight_medium">
                     Panel
                 </div>
             </div>
-            <div class="ui-panel ui-panel_size_m ui-panel_theme_gray">
-                <div class="ui-panel__body">&nbsp;</div>
+            <div class="ek-panel ek-panel_size_m ek-panel_theme_gray">
+                <div class="ek-panel__body">&nbsp;</div>
             </div>
             <br>
-            <div class="ui-panel ui-panel_size_m ui-panel_theme_blue">
-                <div class="ui-panel__body">&nbsp;</div>
+            <div class="ek-panel ek-panel_size_m ek-panel_theme_blue">
+                <div class="ek-panel__body">&nbsp;</div>
             </div>
             <br>
-            <div class="ui-panel ui-panel_size_m ui-panel_theme_info">
-                <div class="ui-panel__body">&nbsp;</div>
+            <div class="ek-panel ek-panel_size_m ek-panel_theme_info">
+                <div class="ek-panel__body">&nbsp;</div>
             </div>
             <br>
-            <div class="ui-panel ui-panel_size_m ui-panel_theme_success">
-                <div class="ui-panel__body">&nbsp;</div>
+            <div class="ek-panel ek-panel_size_m ek-panel_theme_success">
+                <div class="ek-panel__body">&nbsp;</div>
             </div>
             <br>
-            <div class="ui-panel ui-panel_size_m ui-panel_theme_warning">
-                <div class="ui-panel__body">&nbsp;</div>
+            <div class="ek-panel ek-panel_size_m ek-panel_theme_warning">
+                <div class="ek-panel__body">&nbsp;</div>
             </div>
             <br>
-            <div class="ui-panel ui-panel_size_m ui-panel_theme_error">
-                <div class="ui-panel__body">&nbsp;</div>
+            <div class="ek-panel ek-panel_size_m ek-panel_theme_error">
+                <div class="ek-panel__body">&nbsp;</div>
             </div>
         </div>
-        <div class="ui-grid__item">
-            <div class="ui-box ui-box_margin-top_xxxl ui-box_margin-bottom_m">
-                <div class="ui-text ui-text_size_h2 ui-text_align_center ui-text_weight_medium">
+        <div class="ek-grid__item">
+            <div class="ek-box ek-box_margin-top_xxxl ek-box_margin-bottom_m">
+                <div class="ek-text ek-text_size_h2 ek-text_align_center ek-text_weight_medium">
                     Box
                 </div>
             </div>
-            <div class="ui-box ui-box_padding_m ui-box_theme_gray">&nbsp;</div>
+            <div class="ek-box ek-box_padding_m ek-box_theme_gray">&nbsp;</div>
             <br>
-            <div class="ui-box ui-box_padding_m ui-box_theme_blue">&nbsp;</div>
+            <div class="ek-box ek-box_padding_m ek-box_theme_blue">&nbsp;</div>
             <br>
-            <div class="ui-box ui-box_padding_m ui-box_theme_info">&nbsp;</div>
+            <div class="ek-box ek-box_padding_m ek-box_theme_info">&nbsp;</div>
             <br>
-            <div class="ui-box ui-box_padding_m ui-box_theme_success">&nbsp;</div>
+            <div class="ek-box ek-box_padding_m ek-box_theme_success">&nbsp;</div>
             <br>
-            <div class="ui-box ui-box_padding_m ui-box_theme_warning">&nbsp;</div>
+            <div class="ek-box ek-box_padding_m ek-box_theme_warning">&nbsp;</div>
             <br>
-            <div class="ui-box ui-box_padding_m ui-box_theme_error">&nbsp;</div>
+            <div class="ek-box ek-box_padding_m ek-box_theme_error">&nbsp;</div>
         </div>
     </div>
 
 
-    <div class="ui-box ui-box_margin-top_xxxl ui-box_margin-bottom_m">
-        <div class="ui-text ui-text_size_h2 ui-text_align_center ui-text_weight_medium">
+    <div class="ek-box ek-box_margin-top_xxxl ek-box_margin-bottom_m">
+        <div class="ek-text ek-text_size_h2 ek-text_align_center ek-text_weight_medium">
             Tags
         </div>
     </div>
-    <div class="ui-grid ui-grid_align_center">
-        <div class="ui-grid__item">
-            <ul class='ui-tags'>
-                <li class='ui-tags__item ui-tags__item_theme_gray'>
+    <div class="ek-grid ek-grid_align_center">
+        <div class="ek-grid__item">
+            <ul class='ek-tags'>
+                <li class='ek-tags__item ek-tags__item_theme_gray'>
                     <div style="width: 50px;">&nbsp;</div>
                 </li>
-                <li class='ui-tags__item ui-tags__item_theme_blue'>
+                <li class='ek-tags__item ek-tags__item_theme_blue'>
                     <div style="width: 50px;">&nbsp;</div>
                 </li>
-                <li class='ui-tags__item ui-tags__item_theme_info'>
+                <li class='ek-tags__item ek-tags__item_theme_info'>
                     <div style="width: 50px;">&nbsp;</div>
                 </li>
-                <li class='ui-tags__item ui-tags__item_theme_success'>
+                <li class='ek-tags__item ek-tags__item_theme_success'>
                     <div style="width: 50px;">&nbsp;</div>
                 </li>
-                <li class='ui-tags__item ui-tags__item_theme_warning'>
+                <li class='ek-tags__item ek-tags__item_theme_warning'>
                     <div style="width: 50px;">&nbsp;</div>
                 </li>
-                <li class='ui-tags__item ui-tags__item_theme_error'>
+                <li class='ek-tags__item ek-tags__item_theme_error'>
                     <div style="width: 50px;">&nbsp;</div>
                 </li>
             </ul>

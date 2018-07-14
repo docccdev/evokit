@@ -6,21 +6,21 @@
 
 ### Модификаторы имеют [Media][media] параметры.
 
-Блок `.ui-list` создает список. Каждый элемент списка должен иметь класс `.ui-list__item`.
+Блок `.ek-list` создает список. Каждый элемент списка должен иметь класс `.ek-list__item`.
 
 ---
 
 ## Использование
 
-Чтобы применить этот компонент, просто добавьте класс `.ui-list` к тегу `<ul>` или `<ol>`.
+Чтобы применить этот компонент, просто добавьте класс `.ek-list` к тегу `<ul>` или `<ol>`.
 
 
 ``` html
-<ul class='ui-list'>
-    <li class='ui-list__item'>
+<ul class='ek-list'>
+    <li class='ek-list__item'>
         Item
     </li>
-    <li class='ui-list__item'>
+    <li class='ek-list__item'>
         Item
     </li>
 </ul>
@@ -34,14 +34,14 @@
 
 |         Class         |         Description         |
 |-----------------------|-----------------------------|
-|  `.ui-list_size_`[sizes]  | Отступ между ячейками.  |
+|  `.ek-list_size_`[sizes]  | Отступ между ячейками.  |
 
 ``` html
-<ul class='ui-list ui-list_size_xxxl'>
-    <li class='ui-list__item'>
+<ul class='ek-list ek-list_size_xxxl'>
+    <li class='ek-list__item'>
         Item
     </li>
-    <li class='ui-list__item'>
+    <li class='ek-list__item'>
         Item
     </li>
 </ul>
@@ -55,32 +55,32 @@
 
 |            Class          |            Description            |
 |---------------------------|-----------------------------------|
-|  `.ui-list_style_decimal` |  Арабские числа (1, 2, 3, 4,...). |
-|  `.ui-list_style_dash`    |  Маркер в виде тире.              |
-|  `.ui-list_style_disc`    |  Маркер в виде точки.             |
+|  `.ek-list_style_decimal` |  Арабские числа (1, 2, 3, 4,...). |
+|  `.ek-list_style_dash`    |  Маркер в виде тире.              |
+|  `.ek-list_style_disc`    |  Маркер в виде точки.             |
 
 ``` html
-<ul class='ui-list ui-list_style_decimal'>
-    <li class='ui-list__item'>
+<ul class='ek-list ek-list_style_decimal'>
+    <li class='ek-list__item'>
         Item
     </li>
-    <li class='ui-list__item'>
-        Item
-    </li>
-</ul>
-<ul class='ui-list ui-list_style_dash'>
-    <li class='ui-list__item'>
-        Item
-    </li>
-    <li class='ui-list__item'>
+    <li class='ek-list__item'>
         Item
     </li>
 </ul>
-<ul class='ui-list ui-list_style_disc'>
-    <li class='ui-list__item'>
+<ul class='ek-list ek-list_style_dash'>
+    <li class='ek-list__item'>
         Item
     </li>
-    <li class='ui-list__item'>
+    <li class='ek-list__item'>
+        Item
+    </li>
+</ul>
+<ul class='ek-list ek-list_style_disc'>
+    <li class='ek-list__item'>
+        Item
+    </li>
+    <li class='ek-list__item'>
         Item
     </li>
 </ul>
@@ -94,56 +94,56 @@
 
 |            Class          |            Description            |
 |---------------------------|-----------------------------------|
-|  `.ui-list_color_`[colors]  | Цвет маркера.  |
+|  `.ek-list_color_`[colors]  | Цвет маркера.  |
 
 ``` html
-<ul class='ui-list ui-list_style_disc ui-list_color_base'>
-    <li class='ui-list__item'>
+<ul class='ek-list ek-list_style_disc ek-list_color_base'>
+    <li class='ek-list__item'>
         Base
     </li>
 </ul>
-<ul class='ui-list ui-list_style_disc ui-list_color_white'>
-    <li class='ui-list__item'>
+<ul class='ek-list ek-list_style_disc ek-list_color_white'>
+    <li class='ek-list__item'>
         White
     </li>
 </ul>
-<ul class='ui-list ui-list_style_disc ui-list_color_link'>
-    <li class='ui-list__item'>
+<ul class='ek-list ek-list_style_disc ek-list_color_link'>
+    <li class='ek-list__item'>
         Link
     </li>
 </ul>
-<ul class='ui-list ui-list_style_disc ui-list_color_red'>
-    <li class='ui-list__item'>
+<ul class='ek-list ek-list_style_disc ek-list_color_red'>
+    <li class='ek-list__item'>
         Red
     </li>
 </ul>
-<ul class='ui-list ui-list_style_disc ui-list_color_yellow'>
-    <li class='ui-list__item'>
+<ul class='ek-list ek-list_style_disc ek-list_color_yellow'>
+    <li class='ek-list__item'>
         Yellow
     </li>
 </ul>
-<ul class='ui-list ui-list_style_disc ui-list_color_muted'>
-    <li class='ui-list__item'>
+<ul class='ek-list ek-list_style_disc ek-list_color_muted'>
+    <li class='ek-list__item'>
         Muted
     </li>
 </ul>
-<ul class='ui-list ui-list_style_disc ui-list_color_info'>
-    <li class='ui-list__item'>
+<ul class='ek-list ek-list_style_disc ek-list_color_info'>
+    <li class='ek-list__item'>
         Info
     </li>
 </ul>
-<ul class='ui-list ui-list_style_disc ui-list_color_success'>
-    <li class='ui-list__item'>
+<ul class='ek-list ek-list_style_disc ek-list_color_success'>
+    <li class='ek-list__item'>
         Success
     </li>
 </ul>
-<ul class='ui-list ui-list_style_disc ui-list_color_warning'>
-    <li class='ui-list__item'>
+<ul class='ek-list ek-list_style_disc ek-list_color_warning'>
+    <li class='ek-list__item'>
         Warning
     </li>
 </ul>
-<ul class='ui-list ui-list_style_disc ui-list_color_error'>
-    <li class='ui-list__item'>
+<ul class='ek-list ek-list_style_disc ek-list_color_error'>
+    <li class='ek-list__item'>
         Error
     </li>
 </ul>
@@ -153,14 +153,14 @@
 
 ## Разделитель между элементами
 
-Чтобы применить горизонтальный разделитель, добавьте класс `.ui-list_theme_divider`.
+Чтобы применить горизонтальный разделитель, добавьте класс `.ek-list_theme_divider`.
 
 ``` html
-<ul class='ui-list ui-list_size_xl ui-list_theme_divider'>
-    <li class='ui-list__item'>
+<ul class='ek-list ek-list_size_xl ek-list_theme_divider'>
+    <li class='ek-list__item'>
         Item
     </li>
-    <li class='ui-list__item'>
+    <li class='ek-list__item'>
         Item
     </li>
 </ul>

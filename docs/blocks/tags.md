@@ -5,21 +5,21 @@
 
 # Tags
 
-Блок `.ui-tags` создает "облако тегов".
+Блок `.ek-tags` создает "облако тегов".
 
 ---
 
 ## Использование
 
-Чтобы применить этот компонент, просто добавьте класс `.ui-tags` к тегу `<ul>`.
+Чтобы применить этот компонент, просто добавьте класс `.ek-tags` к тегу `<ul>`.
 
 
 ``` html
-<ul class='ui-tags ui-tags_theme_info'>
-    <li class='ui-tags__item'>
+<ul class='ek-tags ek-tags_theme_info'>
+    <li class='ek-tags__item'>
         item
     </li>
-    <li class='ui-tags__item'>
+    <li class='ek-tags__item'>
         item
     </li>
 </ul>
@@ -33,70 +33,70 @@
 
 |            Class            |       Description     |
 |-----------------------------|-----------------------|
-| `.ui-tags_theme_`[colors]   | Цвет фона.            |
+| `.ek-tags_theme_`[colors]   | Цвет фона.            |
 
 ``` html
-<ul class='ui-tags'>
-    <li class='ui-tags__item'>
+<ul class='ek-tags'>
+    <li class='ek-tags__item'>
         default
     </li>
-    <li class='ui-tags__item'>
+    <li class='ek-tags__item'>
         default
     </li>
 </ul>
-<ul class='ui-tags ui-tags_theme_white'>
-    <li class='ui-tags__item'>
+<ul class='ek-tags ek-tags_theme_white'>
+    <li class='ek-tags__item'>
         white
     </li>
-    <li class='ui-tags__item'>
+    <li class='ek-tags__item'>
         white
     </li>
 </ul>
-<ul class='ui-tags ui-tags_theme_gray'>
-    <li class='ui-tags__item'>
+<ul class='ek-tags ek-tags_theme_gray'>
+    <li class='ek-tags__item'>
         gray
     </li>
-    <li class='ui-tags__item'>
+    <li class='ek-tags__item'>
         gray
     </li>
 </ul>
-<ul class='ui-tags ui-tags_theme_blue'>
-    <li class='ui-tags__item'>
+<ul class='ek-tags ek-tags_theme_blue'>
+    <li class='ek-tags__item'>
         blue
     </li>
-    <li class='ui-tags__item'>
+    <li class='ek-tags__item'>
         blue
     </li>
 </ul>
-<ul class='ui-tags ui-tags_theme_info'>
-    <li class='ui-tags__item'>
+<ul class='ek-tags ek-tags_theme_info'>
+    <li class='ek-tags__item'>
         info
     </li>
-    <li class='ui-tags__item'>
+    <li class='ek-tags__item'>
         info
     </li>
 </ul>
-<ul class='ui-tags ui-tags_theme_success'>
-    <li class='ui-tags__item'>
+<ul class='ek-tags ek-tags_theme_success'>
+    <li class='ek-tags__item'>
         success
     </li>
-    <li class='ui-tags__item'>
+    <li class='ek-tags__item'>
         success
     </li>
 </ul>
-<ul class='ui-tags ui-tags_theme_warning'>
-    <li class='ui-tags__item'>
+<ul class='ek-tags ek-tags_theme_warning'>
+    <li class='ek-tags__item'>
         warning
     </li>
-    <li class='ui-tags__item'>
+    <li class='ek-tags__item'>
         warning
     </li>
 </ul>
-<ul class='ui-tags ui-tags_theme_error'>
-    <li class='ui-tags__item'>
+<ul class='ek-tags ek-tags_theme_error'>
+    <li class='ek-tags__item'>
         error
     </li>
-    <li class='ui-tags__item'>
+    <li class='ek-tags__item'>
         error
     </li>
 </ul>
@@ -110,32 +110,32 @@
 
 |            Class            |        Description      |
 |-----------------------------|-------------------------|
-| `.ui-tags__item_theme_`[colors]   | Цвет фона.        |
+| `.ek-tags__item_theme_`[colors]   | Цвет фона.        |
 
 ``` html
-<ul class='ui-tags'>
-    <li class='ui-tags__item ui-tags__item_theme_transparent'>
+<ul class='ek-tags'>
+    <li class='ek-tags__item ek-tags__item_theme_transparent'>
         transparent
     </li>
-    <li class='ui-tags__item ui-tags__item_theme_white'>
+    <li class='ek-tags__item ek-tags__item_theme_white'>
         white
     </li>
-    <li class='ui-tags__item ui-tags__item_theme_gray'>
+    <li class='ek-tags__item ek-tags__item_theme_gray'>
         gray
     </li>
-    <li class='ui-tags__item ui-tags__item_theme_blue'>
+    <li class='ek-tags__item ek-tags__item_theme_blue'>
         blue
     </li>
-    <li class='ui-tags__item ui-tags__item_theme_info'>
+    <li class='ek-tags__item ek-tags__item_theme_info'>
         info
     </li>
-    <li class='ui-tags__item ui-tags__item_theme_success'>
+    <li class='ek-tags__item ek-tags__item_theme_success'>
         success
     </li>
-    <li class='ui-tags__item ui-tags__item_theme_warning'>
+    <li class='ek-tags__item ek-tags__item_theme_warning'>
         warning
     </li>
-    <li class='ui-tags__item ui-tags__item_theme_error'>
+    <li class='ek-tags__item ek-tags__item_theme_error'>
         error
     </li>
 </ul>
@@ -148,49 +148,49 @@
 Использование с блоками [Link][link] и [Text][text].
 
 ``` html
-<ul class='ui-tags'>
-    <li class='ui-tags__item ui-tags__item_theme_white'>
-        <span class='ui-text ui-text_color_muted'>
+<ul class='ek-tags'>
+    <li class='ek-tags__item ek-tags__item_theme_white'>
+        <span class='ek-text ek-text_color_muted'>
             color muted
         </span>
     </li>
-    <li class='ui-tags__item ui-tags__item_theme_gray'>
-        <span class='ui-text ui-text_color_base'>
+    <li class='ek-tags__item ek-tags__item_theme_gray'>
+        <span class='ek-text ek-text_color_base'>
             color base
         </span>
     </li>
-    <li class='ui-tags__item ui-tags__item_theme_blue'>
-        <span class='ui-text ui-text_color_link'>
+    <li class='ek-tags__item ek-tags__item_theme_blue'>
+        <span class='ek-text ek-text_color_link'>
             color link
         </span>
     </li>
-    <li class='ui-tags__item ui-tags__item_theme_info'>
-        <span class='ui-text ui-text_color_info'>
+    <li class='ek-tags__item ek-tags__item_theme_info'>
+        <span class='ek-text ek-text_color_info'>
             color info
         </span>
     </li>
-    <li class='ui-tags__item ui-tags__item_theme_success'>
-        <span class='ui-text ui-text_color_success'>
+    <li class='ek-tags__item ek-tags__item_theme_success'>
+        <span class='ek-text ek-text_color_success'>
             color success
         </span>
     </li>
-    <li class='ui-tags__item ui-tags__item_theme_warning'>
-        <span class='ui-text ui-text_color_warning'>
+    <li class='ek-tags__item ek-tags__item_theme_warning'>
+        <span class='ek-text ek-text_color_warning'>
             color warning
         </span>
     </li>
-    <li class='ui-tags__item ui-tags__item_theme_error'>
-        <span class='ui-text ui-text_color_error'>
+    <li class='ek-tags__item ek-tags__item_theme_error'>
+        <span class='ek-text ek-text_color_error'>
             color error
         </span>
     </li>
-    <li class='ui-tags__item ui-tags__item_theme_white'>
-        <a class='ui-link'>
+    <li class='ek-tags__item ek-tags__item_theme_white'>
+        <a class='ek-link'>
             link
         </a>
     </li>
-    <li class='ui-tags__item'>
-        <a class='ui-link ui-link_style_dotted'>
+    <li class='ek-tags__item'>
+        <a class='ek-link ek-link_style_dotted'>
             dotted link
         </a>
     </li>

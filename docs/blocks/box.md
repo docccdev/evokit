@@ -12,10 +12,10 @@
 
 ## Использование
 
-Добавьте класс `.ui-box` к элементу контейнера.
+Добавьте класс `.ek-box` к элементу контейнера.
 
 ``` html
-<div class='ui-box ui-box_theme_gray'>
+<div class='ek-box ek-box_theme_gray'>
     Box
 </div>
 ```
@@ -28,22 +28,22 @@
 
 |               Class               |                       Description                       |
 |-----------------------------------|---------------------------------------------------------|
-|  `.ui-box_display_none`           | Удаляет элемент из документа..                          |
-|  `.ui-box_display_block`          | Элемент показывается как блочный.                       |
-|  `.ui-box_display_inline`         | Элемент отображается как встроенный.                    |
-|  `.ui-box_display_inline-block`   | Блочный элемент, который обтекается другими элементами. |
+|  `.ek-box_display_none`           | Удаляет элемент из документа..                          |
+|  `.ek-box_display_block`          | Элемент показывается как блочный.                       |
+|  `.ek-box_display_inline`         | Элемент отображается как встроенный.                    |
+|  `.ek-box_display_inline-block`   | Блочный элемент, который обтекается другими элементами. |
 
 ``` html
-<div class='ui-box ui-box_theme_gray ui-box_margin_xxs ui-box_display_none'>
+<div class='ek-box ek-box_theme_gray ek-box_margin_xxs ek-box_display_none'>
     None
 </div>
-<div class='ui-box ui-box_theme_gray ui-box_margin_xxs ui-box_display_block'>
+<div class='ek-box ek-box_theme_gray ek-box_margin_xxs ek-box_display_block'>
     Block
 </div>
-<div class='ui-box ui-box_theme_gray ui-box_margin_xxs ui-box_display_inline'>
+<div class='ek-box ek-box_theme_gray ek-box_margin_xxs ek-box_display_inline'>
     Inline
 </div>
-<div class='ui-box ui-box_theme_gray ui-box_margin_xxs ui-box_display_inline-block'>
+<div class='ek-box ek-box_theme_gray ek-box_margin_xxs ek-box_display_inline-block'>
     Inline-block
 </div>
 ```
@@ -58,13 +58,13 @@
 
 |               Class               |            Description            |
 |-----------------------------------|-----------------------------------|
-|  `.ui-box_padding_`[sizes]        | Внутренний отступ со всех сторон. |
-|  `.ui-box_padding-tb_`[sizes]     | Внутренний отступ сверху и снизу. |
-|  `.ui-box_padding-lr_`[sizes]     | Внутренний отступ слева и справа. |
-|  `.ui-box_padding-left_`[sizes]   | Внутренний отступ слева.          |
-|  `.ui-box_padding-top_`[sizes]    | Внутренний отступ сверху.         |
-|  `.ui-box_padding-right_`[sizes]  | Внутренний отступ справа.         |
-|  `.ui-box_padding-bottom_`[sizes] | Внутренний отступ снизу.          |
+|  `.ek-box_padding_`[sizes]        | Внутренний отступ со всех сторон. |
+|  `.ek-box_padding-tb_`[sizes]     | Внутренний отступ сверху и снизу. |
+|  `.ek-box_padding-lr_`[sizes]     | Внутренний отступ слева и справа. |
+|  `.ek-box_padding-left_`[sizes]   | Внутренний отступ слева.          |
+|  `.ek-box_padding-top_`[sizes]    | Внутренний отступ сверху.         |
+|  `.ek-box_padding-right_`[sizes]  | Внутренний отступ справа.         |
+|  `.ek-box_padding-bottom_`[sizes] | Внутренний отступ снизу.          |
 
 ---
 
@@ -72,18 +72,18 @@
 
 |              Class               |            Description         |
 |----------------------------------|--------------------------------|
-|  `.ui-box_margin_`[sizes]        | Внешний отступ со всех сторон. |
-|  `.ui-box_margin-tb_`[sizes]     | Внешний отступ сверху и снизу. |
-|  `.ui-box_margin-lr_`[sizes]     | Внешний отступ слева и справа. |
-|  `.ui-box_margin-left_`[sizes]   | Внешний отступ слева.          |
-|  `.ui-box_margin-top_`[sizes]    | Внешний отступ сверху.         |
-|  `.ui-box_margin-right_`[sizes]  | Внешний отступ справа.         |
-|  `.ui-box_margin-bottom_`[sizes] | Внешний отступ снизу.          |
+|  `.ek-box_margin_`[sizes]        | Внешний отступ со всех сторон. |
+|  `.ek-box_margin-tb_`[sizes]     | Внешний отступ сверху и снизу. |
+|  `.ek-box_margin-lr_`[sizes]     | Внешний отступ слева и справа. |
+|  `.ek-box_margin-left_`[sizes]   | Внешний отступ слева.          |
+|  `.ek-box_margin-top_`[sizes]    | Внешний отступ сверху.         |
+|  `.ek-box_margin-right_`[sizes]  | Внешний отступ справа.         |
+|  `.ek-box_margin-bottom_`[sizes] | Внешний отступ снизу.          |
 
 
 
 ``` html
-<div class='ui-box ui-box_padding_xxxl ui-box_margin-lr_xxxl ui-box_theme_gray'>
+<div class='ek-box ek-box_padding_xxxl ek-box_margin-lr_xxxl ek-box_theme_gray'>
     Box
 </div>
 ```
@@ -96,31 +96,31 @@
 
 |           Class           | Description |
 |---------------------------|-------------|
-| `.ui-box_theme_`[colors]  | Цвет фона.  |
+| `.ek-box_theme_`[colors]  | Цвет фона.  |
 
 ``` html
-<div class='ui-box ui-box_padding_s ui-box_margin-tb_s ui-box_theme_transparent'>
+<div class='ek-box ek-box_padding_s ek-box_margin-tb_s ek-box_theme_transparent'>
     transparent
 </div>
-<div class='ui-box ui-box_padding_s ui-box_margin-tb_s ui-box_theme_gray'>
+<div class='ek-box ek-box_padding_s ek-box_margin-tb_s ek-box_theme_gray'>
     gray
 </div>
-<div class='ui-box ui-box_padding_s ui-box_margin-tb_s ui-box_theme_white'>
+<div class='ek-box ek-box_padding_s ek-box_margin-tb_s ek-box_theme_white'>
     white
 </div>
-<div class='ui-box ui-box_padding_s ui-box_margin-tb_s ui-box_theme_blue'>
+<div class='ek-box ek-box_padding_s ek-box_margin-tb_s ek-box_theme_blue'>
     blue
 </div>
-<div class='ui-box ui-box_padding_s ui-box_margin-tb_s ui-box_theme_info'>
+<div class='ek-box ek-box_padding_s ek-box_margin-tb_s ek-box_theme_info'>
     info
 </div>
-<div class='ui-box ui-box_padding_s ui-box_margin-tb_s ui-box_theme_success'>
+<div class='ek-box ek-box_padding_s ek-box_margin-tb_s ek-box_theme_success'>
     success
 </div>
-<div class='ui-box ui-box_padding_s ui-box_margin-tb_s ui-box_theme_warning'>
+<div class='ek-box ek-box_padding_s ek-box_margin-tb_s ek-box_theme_warning'>
     warning
 </div>
-<div class='ui-box ui-box_padding_s ui-box_margin-tb_s ui-box_theme_error'>
+<div class='ek-box ek-box_padding_s ek-box_margin-tb_s ek-box_theme_error'>
     error
 </div>
 ```

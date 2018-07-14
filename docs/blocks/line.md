@@ -10,10 +10,10 @@
 
 ## Использование
 
-Блок состоит из одного класса `.ui-line`.
+Блок состоит из одного класса `.ek-line`.
 
 ``` html
-<hr class='ui-line' />
+<hr class='ek-line' />
 ```
 
 ---
@@ -24,10 +24,10 @@
 
 |         Class         |          Description           |
 |-----------------------|--------------------------------|
-|  `.ui-line_size_`[sizes]  | Отступ сверху и снизу.  |
+|  `.ek-line_size_`[sizes]  | Отступ сверху и снизу.  |
 
 ``` html
-<hr class='ui-line ui-line_size_xxxl' />
+<hr class='ek-line ek-line_size_xxxl' />
 ```
 
 ---
@@ -38,13 +38,13 @@
 
 |          Class          |      Description       |
 |-------------------------|------------------------|
-| `.ui-line_style_dotted` | Точечный.              |
-| `.ui-line_style_dashed` | Пунктирный.            |
+| `.ek-line_style_dotted` | Точечный.              |
+| `.ek-line_style_dashed` | Пунктирный.            |
 
 ``` html
-<hr class='ui-line ui-line_style_dotted' />
+<hr class='ek-line ek-line_style_dotted' />
 <br>
 <div>текст</div>
 <br>
-<hr class='ui-line ui-line_style_dashed' />
+<hr class='ek-line ek-line_style_dashed' />
 ```
