@@ -10,7 +10,7 @@ const DEFAULT_MOD_PROP_TYPES = PropTypes.oneOfType([
 
 export function createBlock(target) {
     target.propTypes = target.propTypes || {};
-    target.classPrefix = target.classPrefix;
+    target.classPrefix = target.classPrefix || 'ek-';
     target.propsPrefix = target.propsPrefix || 'ek-';
     target.blockMods = target.blockMods || [];
     target.displayName = target.displayName || `${target.classPrefix}${target.blockName}`;
