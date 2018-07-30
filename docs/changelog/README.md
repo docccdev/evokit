@@ -17,6 +17,25 @@
 
 # CHANGELOG
 
+## 1.0.8
+- Добавлены модификаторы `position` для [box][box]:
+    - `.ek-box_position_absolute`
+    - `.ek-box_position_fixed`
+    - `.ek-box_position_relative`
+    - `.ek-box_position_static`
+- Добавлены модификаторы `place` для [box][box]:
+    - `.ek-box_place_top`
+    - `.ek-box_place_top-left`
+    - `.ek-box_place_top-right`
+    - `.ek-box_place_center`
+    - `.ek-box_place_center-left`
+    - `.ek-box_place_center-right`
+    - `.ek-box_place_bottom`
+    - `.ek-box_place_bottom-left`
+    - `.ek-box_place_bottom-right`
+- Добавлен модификатор `style` для [box][box]:
+    - `.ek-box_style_round`
+
 ## 1.0.7
 - Установлен дефолтный class prefix `ek-`.
 

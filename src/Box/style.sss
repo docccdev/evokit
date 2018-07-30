@@ -27,6 +27,60 @@
                 content: none
 
 /**
+ * Position:
+ *
+ *  - box_position_*
+ *
+ **/
+
+@each $value in (absolute, fixed, relative, static)
+    .box_position_$(value)
+        position: $value
+
+/**
+ * Place:
+ *
+ *  - box_place_*
+ *
+ **/
+
+@each $value in (top, top-left, top-right, center, center-left, center-right, bottom, bottom-left, bottom-right)
+    .box_place_$(value)
+
+        @if $value == top
+            top: 0
+            left: 50%
+            transform: translateX(-50%)
+        @else if $value == top-left
+            top: 0
+            left: 0
+        @else if $value == top-right
+            top: 0
+            right: 0
+        @else if $value == center
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+        @else if $value == center-left
+            top: 50%
+            left: 0
+            transform: translateY(-50%)
+        @else if $value == center-right
+            top: 50%
+            right: 0
+            transform: translateY(-50%)
+        @else if $value == bottom
+            bottom: 0
+            left: 50%
+            transform: translateX(-50%)
+        @else if $value == bottom-left
+            bottom: 0
+            left: 0
+        @else if $value == bottom-right
+            bottom: 0
+            right: 0
+
+/**
  * Margin:
  *
  *  - box_margin_*
@@ -120,3 +174,13 @@
  **/
 
 @mixin background-color .box_theme
+
+/**
+ * Style:
+ *
+ *  - box_style_round
+ *
+ **/
+
+@mixin media .box_style_round
+    border-radius: var(--EKBorderRadius)
