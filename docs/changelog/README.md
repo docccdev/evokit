@@ -17,6 +17,14 @@
 
 # CHANGELOG
 
+## 1.0.9
+- Добавлены модификаторы для [text][text]:
+    - `.ek-text_transform_none`
+    - `.ek-text_transform_capitalize`
+    - `.ek-text_transform_lowercase`
+    - `.ek-text_transform_uppercase`
+
+
 ## 1.0.8
 - Добавлены модификаторы `position` для [box][box]:
     - `.ek-box_position_absolute`

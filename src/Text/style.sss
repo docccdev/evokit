@@ -55,6 +55,17 @@
         vertical-align: $value
 
 /**
+ * Transform:
+ *
+ *  - text_transform_*
+ *
+ **/
+
+@each $value in (none, capitalize, lowercase, uppercase)
+    @mixin media .text_transform_$(value)
+        text-transform: $value
+
+/**
  * Style:
  *
  *  - text_style_*

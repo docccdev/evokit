@@ -126,6 +126,22 @@
 
 ---
 
+## Преобразование текста
+
+|            Class           |             Description              |
+|----------------------------|--------------------------------------|
+| `.ek-text_transform_none`       | Не меняет регистр символов. |
+| `.ek-text_transform_capitalize` | Первый символ каждого слова в предложении будет заглавным. Остальные символы свой вид не меняют. |
+| `.ek-text_transform_lowercase`  | Все символы текста становятся строчными (нижний регистр). |
+| `.ek-text_transform_uppercase`  | Все символы текста становятся прописными (верхний регистр). |
+
+``` html
+<span class="ek-text ek-text_transform_capitalize">заглавные буквы</span>
+<span class="ek-text ek-text_transform_lowercase">Нижний Регистр</span>
+<span class="ek-text ek-text_transform_uppercase">Верхний Регистр</span>
+```
+---
+
 ## Перенос и обрезание
 
 Устанавливает свойство `display: block` для `ellipsis`, `two-line` и `three-line`.
