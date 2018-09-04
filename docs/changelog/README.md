@@ -17,6 +17,12 @@
 
 # CHANGELOG
 
+
+## 1.0.10
+- Добавлены модификаторы цвета [line][line]:
+    - `.ek-line_color_*`
+
+
 ## 1.0.9
 - Добавлены модификаторы для [text][text]:
     - `.ek-text_transform_none`

@@ -129,6 +129,35 @@
             @else if $name == transparent
                 background-color: transparent
 
+@define-mixin border-color $selector
+    @each $name in (base, white, black, link, muted, success, info, warning, error, first, second, third, transparent)
+        @mixin media $(selector)_$(name)
+            @if $name == base
+                border-color: var(--EKBorderColor)
+            @else if $name == white
+                border-color: var(--EKBorderColorWhite)
+            @else if $name == black
+                border-color: var(--EKBorderColorBlack)
+            @else if $name == link
+                border-color: var(--EKBorderColorLink)
+            @else if $name == muted
+                border-color: var(--EKBorderColorMuted)
+            @else if $name == success
+                border-color: var(--EKBorderColorSuccess)
+            @else if $name == info
+                border-color: var(--EKBorderColorInfo)
+            @else if $name == warning
+                border-color: var(--EKBorderColorWarning)
+            @else if $name == error
+                border-color: var(--EKBorderColorError)
+            @else if $name == first
+                border-color: var(--EKBorderColorFirst)
+            @else if $name == second
+                border-color: var(--EKBorderColorSecond)
+            @else if $name == third
+                border-color: var(--EKBorderColorThird)
+            @else if $name == transparent
+                border-color: transparent
 
 @define-mixin grid-divider-item $value
     & + .grid__item

@@ -6,6 +6,7 @@ class Line extends React.Component {
     static blockMods = [
         'size',
         'style',
+        'color',
     ];
 
     render() {

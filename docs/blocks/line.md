@@ -1,4 +1,5 @@
 [sizes]: base/sizes.md
+[colors]: base/colors.md
 
 # Line
 
@@ -28,6 +29,32 @@
 
 ``` html
 <hr class='ek-line ek-line_size_xxxl' />
+```
+
+---
+
+## Цвет
+
+Определяет цвет линии.
+
+|         Class         |          Description           |
+|-----------------------|--------------------------------|
+|  `.ek-line_color_`[colors]  | Цвет.  |
+
+``` html
+<hr class='ek-line ek-line_color_base'>
+<hr class='ek-line ek-line_color_transparent'>
+<hr class='ek-line ek-line_color_white'>
+<hr class='ek-line ek-line_color_black'>
+<hr class='ek-line ek-line_color_link'>
+<hr class='ek-line ek-line_color_muted'>
+<hr class='ek-line ek-line_color_success'>
+<hr class='ek-line ek-line_color_info'>
+<hr class='ek-line ek-line_color_warning'>
+<hr class='ek-line ek-line_color_error'>
+<hr class='ek-line ek-line_color_first'>
+<hr class='ek-line ek-line_color_second'>
+<hr class='ek-line ek-line_color_third'>
 ```
 
 ---
