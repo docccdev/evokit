@@ -10,10 +10,23 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/_media/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/_media/favicon-16x16.png">
     <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
+    <style>
+        .markdown-section {
+            max-width: 1000px;
+        }
+    </style>
 </head>
 <body>
     <div id="app"></div>
+    <script src="//unpkg.com/react/umd/react.production.min.js"></script>
+    <script src="//unpkg.com/react-dom/umd/react-dom.production.min.js"></script>
+    <script src="//unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script src="//unpkg.com/docsify-demo-box-react/dist/docsify-demo-box-react.min.js"></script>
     <script>
+        var jsResources = '<scr' + 'ipt src="//cdn.bootcss.com/react/15.6.1/react.js"></scr' + 'ipt>\n' +
+         '<scr' + 'ipt src="//cdn.bootcss.com/react/15.6.1/react-dom.js"></scr' + 'ipt>';
+        var cssResources = '@import url("//cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css");';
+
         window.$docsify = {
             ga: 'UA-125255834-1',
             search: 'auto',
@@ -26,6 +39,9 @@
                 placeholder: 'Поиск...',
             },
             auto2top: true,
+            plugins: [
+                DemoBoxReact.create(jsResources, cssResources)
+            ]
         }
     </script>
     <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>

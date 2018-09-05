@@ -16,3 +16,24 @@
 - Добавить`z-index` для блока `box` (?)
 - Сделать модификаторы ширины `expand` с медиа параметрами
 - Написать конфигуратор темы (?)
+
+
+## Test
+
+```jsx
+/*react*/
+<desc>
+Hello `world`
+* a
+* b
+</desc>
+<script>
+  export default class ExampleLine extends React.PureComponent {
+    render() {
+      return (
+        <div>Hello world</div>
+      )
+    }
+  }
+</script>
+```
