@@ -1,7 +1,7 @@
 import React from 'react';
 import { createBlock } from '../component';
 
-class ListItem extends React.Component {
+class ListItem extends React.PureComponent {
     static blockName = 'list__item';
 
     render() {

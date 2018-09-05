@@ -1,7 +1,7 @@
 import React from 'react';
 import { createBlock } from '../component';
 
-class Image extends React.Component {
+class Image extends React.PureComponent {
     static blockName = 'image';
     static blockMods = [
         'align',

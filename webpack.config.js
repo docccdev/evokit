@@ -1,5 +1,4 @@
 var path = require('path');
-var PeerDepsExternalsPlugin = require('peer-deps-externals-webpack-plugin');
 var PROJECT_DEPS = process.env.PROJECT_DEPS || __dirname;
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var postcssEach = require('postcss-each');
@@ -33,14 +32,17 @@ var entryList = {
 };
 
 module.exports = {
+    mode: 'development',
     entry: entryList,
     output: {
+        library: 'EvoKit',
         path: path.resolve(__dirname, 'dist'),
         filename: '[name]/index.js',
         libraryTarget: 'umd',
+        globalObject: 'this'
     },
     module: {
-        loaders: [
+        rules: [
             {
                 test: /(\.jsx|\.js)$/,
                 loader: 'babel-loader',
@@ -83,8 +85,13 @@ module.exports = {
             },
         ],
     },
+    externals: {
+        'react': 'React',
+        'react-dom': 'ReactDOM',
+        'classnames': 'classNames',
+        'prop-types': 'PropTypes'
+    },
     plugins: [
-        new PeerDepsExternalsPlugin(),
         extractSTYL,
     ],
     resolve: {

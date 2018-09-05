@@ -1,7 +1,7 @@
 import React from 'react';
 import { createBlock } from '../component';
 
-class Box extends React.Component {
+class Box extends React.PureComponent {
     static blockName = 'box';
     static blockMods = [
         'theme',

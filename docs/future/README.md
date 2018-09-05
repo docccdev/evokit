@@ -28,12 +28,16 @@ Hello `world`
 * b
 </desc>
 <script>
-  export default class ExampleLine extends React.PureComponent {
+const { Link } = EvoKit;
+
+export default class ExampleLink extends React.PureComponent {
     render() {
-      return (
-        <div>Hello world</div>
-      )
+        return (
+            <Link href='#test' ek-style='dotted' ek-size='h1'>
+                Hello world
+            </Link>
+        )
     }
-  }
+}
 </script>
 ```

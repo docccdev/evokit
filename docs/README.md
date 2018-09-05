@@ -1,3 +1,8 @@
+[react]: //www.npmjs.com/package/react
+[react-dom]: //www.npmjs.com/package/react-dom
+[prop-types]: //www.npmjs.com/package/prop-types
+[classnames]: //www.npmjs.com/package/classnames
+
 # EvoKit
 
 Основа для разработки быстрых и мощных веб-интерфейсов. Он основан на принципе разделения интерфейса на независимые единицы. Это позволяет вам легко и быстро создавать интерфейс любой сложности и повторно использовать существующий код, избегая «Copy-Paste».
@@ -14,7 +19,7 @@ npm install evokit
 import React from 'react';
 import { Grid } from 'evokit';
 
-export default class EvokitExample extends React.PureComponent {
+export default class EvokitExample extends React.Component {
     render() {
         return (
             <Grid ek-align='justify'>
@@ -29,6 +34,13 @@ export default class EvokitExample extends React.PureComponent {
     }
 }
 ```
+
+## Зависимости
+
+ - [react]
+ - [react-dom]
+ - [prop-types]
+ - [classnames]
 
 ## Поддержка браузеров
 

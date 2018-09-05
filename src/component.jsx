@@ -1,12 +1,6 @@
-import classSet from 'classnames';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
-const DEFAULT_MOD_PROP_TYPES = PropTypes.oneOfType([
-    PropTypes.array,
-    PropTypes.string,
-    PropTypes.object,
-    PropTypes.number,
-]);
 
 export function createBlock(target) {
     target.propTypes = target.propTypes || {};
@@ -18,7 +12,12 @@ export function createBlock(target) {
     target.propTypes['domRef'] = PropTypes.func;
 
     for (const key of target.blockMods) {
-        target.propTypes[`${target.propsPrefix}${key}`] = DEFAULT_MOD_PROP_TYPES;
+        target.propTypes[`${target.propsPrefix}${key}`] = PropTypes.oneOfType([
+            PropTypes.array,
+            PropTypes.string,
+            PropTypes.object,
+            PropTypes.number,
+        ]);
     }
 
     target.prototype.getElementClassName = function getElementClassName(name) {
@@ -36,7 +35,7 @@ export function createBlock(target) {
 
             if (propName in this.props) {
                 const modName = `${blockClassName}_${key}`;
-                let modsString = classSet(this.props[propName]);
+                let modsString = classNames(this.props[propName]);
 
                 if (modsString) {
                     modsString = modsString.replace(/ /g, ` ${modName}_`);
