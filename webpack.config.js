@@ -86,10 +86,24 @@ module.exports = {
         ],
     },
     externals: {
-        'react': 'React',
-        'react-dom': 'ReactDOM',
-        'classnames': 'classNames',
-        'prop-types': 'PropTypes'
+        'react': {
+            root: 'React',
+            commonjs: 'react',
+            commonjs2: 'react',
+            amd: 'react'
+        },
+        'classnames': {
+            root: 'classNames',
+            commonjs: 'classnames',
+            commonjs2: 'classnames',
+            amd: 'classnames'
+        },
+        'prop-types': {
+            root: 'PropTypes',
+            commonjs: 'prop-types',
+            commonjs2: 'prop-types',
+            amd: 'prop-types'
+        }
     },
     plugins: [
         extractSTYL,

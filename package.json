@@ -1,6 +1,6 @@
 {
   "name": "evokit",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "React UI Components for developing fast and powerful web interfaces",
   "main": "dist/index.js",
   "scripts": {
@@ -24,9 +24,9 @@
   "author": "docccdev",
   "license": "MIT",
   "peerDependencies": {
-    "classnames": "*",
+    "react": "*",
     "prop-types": "*",
-    "react": "*"
+    "classnames": "*"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

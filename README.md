@@ -1,5 +1,4 @@
 [react]: //www.npmjs.com/package/react
-[react-dom]: //www.npmjs.com/package/react-dom
 [prop-types]: //www.npmjs.com/package/prop-types
 [classnames]: //www.npmjs.com/package/classnames
 
@@ -36,6 +35,5 @@ export default class EvokitExample extends React.Component {
 ## Dependencies
 
  - [react]
- - [react-dom]
  - [prop-types]
  - [classnames]
