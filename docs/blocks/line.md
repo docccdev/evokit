@@ -17,6 +17,21 @@
 <hr class='ek-line' />
 ```
 
+```jsx
+/*react*/
+<script>
+const { Line } = EvoKit;
+
+export default class Example extends React.PureComponent {
+    render() {
+        return (
+            <Line />
+        )
+    }
+}
+</script>
+```
+
 ---
 
 ## Размер
@@ -29,6 +44,30 @@
 
 ``` html
 <hr class='ek-line ek-line_size_xxxl' />
+```
+
+```jsx
+/*react*/
+<script>
+const { Line } = EvoKit;
+
+export default class Example extends React.PureComponent {
+    render() {
+        return (
+            <div>
+                <Line ek-size='xxs' />
+                <Line ek-size='xs' />
+                <Line ek-size='s' />
+                <Line ek-size='m' />
+                <Line ek-size='l' />
+                <Line ek-size='xl' />
+                <Line ek-size='xxl' />
+                <Line ek-size='xxxl' />
+            </div>
+        )
+    }
+}
+</script>
 ```
 
 ---
@@ -57,6 +96,41 @@
 <hr class='ek-line ek-line_color_third'>
 ```
 
+```jsx
+/*react*/
+<script>
+const { Line } = EvoKit;
+
+export default class Example extends React.PureComponent {
+    render() {
+        return (
+            <div>
+                <Line ek-color='base' />
+                <br />
+                <Line ek-color='link' />
+                <br />
+                <Line ek-color='muted' />
+                <br />
+                <Line ek-color='success' />
+                <br />
+                <Line ek-color='info' />
+                <br />
+                <Line ek-color='warning' />
+                <br />
+                <Line ek-color='error' />
+                <br />
+                <Line ek-color='first' />
+                <br />
+                <Line ek-color='second' />
+                <br />
+                <Line ek-color='third' />
+            </div>
+        )
+    }
+}
+</script>
+```
+
 ---
 
 ## Стили
@@ -74,4 +148,23 @@
 <div>текст</div>
 <br>
 <hr class='ek-line ek-line_style_dashed' />
+```
+
+```jsx
+/*react*/
+<script>
+const { Line } = EvoKit;
+
+export default class Example extends React.PureComponent {
+    render() {
+        return (
+            <div>
+                <Line ek-style='dotted' />
+                <br />
+                <Line ek-style='dashed' />
+            </div>
+        )
+    }
+}
+</script>
 ```

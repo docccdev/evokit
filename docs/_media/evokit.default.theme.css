@@ -1,0 +1,68 @@
+@custom-media --EKMediaSmall only screen and (min-width: 480px);
+@custom-media --EKMediaMedium only screen and (min-width: 768px);
+@custom-media --EKMediaLarge only screen and (min-width: 960px);
+@custom-media --EKMediaXlarge only screen and (min-width: 1200px);
+@custom-media --EKMediaXxlarge only screen and (min-width: 1400px);
+@custom-media --EKMediaXxxlarge only screen and (min-width: 1600px);
+
+:root {
+    --EKStepSize: 5px;
+    --EKLineHeightRead: 1.5em;
+    --EKBorderRadius: 10px;
+    --EKBorderColor: #dde8f0;
+
+    --EKLineHeight: 1.3em;
+    --EKFontWeight: 400;
+    --EKFontSize: 13px;
+    --EKColor: #3c3c3c;
+    --EKBackgroundColor: #f7f7f7;
+    --EKMinWidth: 1000px;
+    --EKMaxWidth: 1240px;
+    --EKPadding: 0 20px;
+
+    --EKFontSizeH1: 24px;
+    --EKFontSizeH2: 22px;
+    --EKFontSizeH3: 20px;
+    --EKFontSizeH4: 18px;
+    --EKFontSizeH5: 16px;
+    --EKFontSizeH6: 14px;
+    --EKFontSizeFirst: 30px;
+    --EKFontSizeSecond: 60px;
+    --EKFontSizeThird: 90px;
+
+    --EKColorWhite: #ffffff;
+    --EKColorBlack: #000000;
+    --EKColorLink: #5e8fd5;
+    --EKColorMuted: #a0b0c7;
+    --EKColorSuccess: #33b600;
+    --EKColorInfo: #5e8fd5;
+    --EKColorWarning: #ff9600;
+    --EKColorError: #bb2914;
+    --EKColorFirst: #f55832;
+    --EKColorSecond: #facd00;
+    --EKColorThird: blue;
+
+    --EKBackgroundColorWhite: #ffffff;
+    --EKBackgroundColorBlack: #000000;
+    --EKBackgroundColorLink: #ebf3f9;
+    --EKBackgroundColorMuted: #f7f7f7;
+    --EKBackgroundColorSuccess: #d0efcc;
+    --EKBackgroundColorInfo: #dde7f5;
+    --EKBackgroundColorWarning: #fcf1bd;
+    --EKBackgroundColorError: #efd2ce;
+    --EKBackgroundColorFirst: red;
+    --EKBackgroundColorSecond: green;
+    --EKBackgroundColorThird: blue;
+
+    --EKBorderColorWhite: #ededed;
+    --EKBorderColorBlack: #ffffff;
+    --EKBorderColorLink: #d0e3f1;
+    --EKBorderColorMuted: #e5e5e5;
+    --EKBorderColorSuccess: #b7e6b1;
+    --EKBorderColorInfo: #c1d4ed;
+    --EKBorderColorWarning: #faea9b;
+    --EKBorderColorError: #e6b9b3;
+    --EKBorderColorFirst: red;
+    --EKBorderColorSecond: green;
+    --EKBorderColorThird: blue;
+}

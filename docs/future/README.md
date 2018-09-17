@@ -22,20 +22,25 @@
 
 ```jsx
 /*react*/
-<desc>
-Hello `world`
-* a
-* b
-</desc>
 <script>
 const { Link } = EvoKit;
 
 export default class ExampleLink extends React.PureComponent {
     render() {
         return (
-            <Link href='#test' ek-style='dotted' ek-size='h1'>
-                Hello world
-            </Link>
+            <div>
+                <Link href='#' ek-size='h1'>H1</Link>
+                <br />
+                <Link href='#' ek-size='h2'>H2</Link>
+                <br />
+                <Link href='#' ek-size='h3'>H3</Link>
+                <br />
+                <Link href='#' ek-size='h4'>H4</Link>
+                <br />
+                <Link href='#' ek-size='h5'>H5</Link>
+                <br />
+                <Link href='#' ek-size='h6'>H6</Link>
+            </div>
         )
     }
 }
