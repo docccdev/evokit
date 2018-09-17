@@ -10,6 +10,7 @@ var postcssCustomProperties = require('postcss-custom-properties');
 var postcsscustomMedia = require('postcss-custom-media');
 var postcssMixins = require('postcss-mixins');
 var postcssImport = require('postcss-import');
+var postcssPrefixer = require('postcss-prefixer');
 var postcssMqpacker = require('css-mqpacker');
 
 var evokitConfig = require('./evokit.config.js');
@@ -77,6 +78,9 @@ module.exports = {
                                 // postcsscustomMedia({
                                 //     extensions: evokitConfig.extensions
                                 // }),
+                                postcssPrefixer({
+                                    prefix: 'ek-'
+                                }),
                                 postcssMqpacker()
                             ]
                         }

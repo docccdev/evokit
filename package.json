@@ -1,6 +1,6 @@
 {
   "name": "evokit",
-  "version": "1.0.12",
+  "version": "1.1.0",
   "description": "React UI Components for developing fast and powerful web interfaces",
   "main": "dist/index.js",
   "scripts": {
@@ -50,6 +50,7 @@
     "postcss-math": "0.0.10",
     "postcss-mixins": "^6.2.0",
     "postcss-nested": "^3.0.0",
+    "postcss-prefixer": "^2.1.0",
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "rollup": "^0.62.0",
