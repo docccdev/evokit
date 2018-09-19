@@ -17,6 +17,21 @@
 
 # CHANGELOG
 
+## 1.1.1
+- Добавлены медиа параметрами для модификаторов ширины `*-expand`.
+- Удалены отступы для [body][body].
+- Добавлены модификаторы горизонтальных отступов для [body][body]:
+    - `.ek-body_indent_*`
+- Удалено media выражения `@xxxlarge`.
+- Переименованные media выражения:
+    - `@xlarge` -> `@wide`
+    - `@xxlarge` -> `@huge`
+- Изменения в переменных `evokit.config.js`:
+    - Удалено `--EKPadding`
+    - Удалено `--EKMediaXxxlarge`
+    - Переименовано `EKMediaXlarge` -> `EKMediaWide`
+    - Переименовано `EKMediaXxlarge` -> `EKMediaHuge`
+
 ## 1.1.0
 - Установлен дефолтный префикс `ek-` для css класов
 

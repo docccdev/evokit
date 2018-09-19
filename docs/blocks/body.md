@@ -1,3 +1,5 @@
+[sizes]: base/sizes.md
+
 # Body
 
 Добавьте класс `.ek-body` для тега `<body>`, чтобы определить дефолтные стили на странице. Элемент `ek-body__section` ограничивает контент по ширине и центрирует его.
@@ -36,4 +38,41 @@
         footer
     </div>
 </div>
+```
+
+---
+
+## Горизонтальные отступы
+
+Модификатор задает отступ слева и справа.
+
+|          Class        |        Description        |
+|-----------------------|---------------------------|
+| `.ek-body_indent_`[sizes] | отступ слева и справа |
+
+``` html
+<div class='ek-body ek-body_indent_m'>
+    <div class='ek-body__section'>
+        content
+    </div>
+</div>
+```
+
+```jsx
+/*react*/
+<script>
+const { Body } = EvoKit;
+
+export default class Example extends React.PureComponent {
+    render() {
+        return (
+            <Body ek-indent='m'>
+                <Body.Section>
+                    content
+                </Body.Section>
+            </Body>
+        )
+    }
+}
+</script>
 ```

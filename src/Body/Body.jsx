@@ -5,6 +5,7 @@ class Body extends React.PureComponent {
     static blockName = 'body';
     static blockMods = [
         'size',
+        'indent',
     ];
 
     render() {

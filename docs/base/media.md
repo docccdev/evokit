@@ -24,7 +24,7 @@
 ## Пример
 
 ``` html
-<div class='ek-grid ek-grid_size_m ek-grid_column_3 ek-grid_column_4@xlarge ek-grid_column_5@xxlarge ek-grid_column_6@xxxlarge'>
+<div class='ek-grid ek-grid_size_m ek-grid_column_3 ek-grid_column_4@wide ek-grid_column_5@huge'>
     <div class='ek-grid__item'>
         <div class="doc-example">Item 1</div>
     </div>

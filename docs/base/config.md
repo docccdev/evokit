@@ -17,7 +17,6 @@ module.exports = {
         EKBackgroundColor: '#f7f7f7',
         EKMinWidth: '1000px',
         EKMaxWidth: '1240px',
-        EKPadding: '0 20px',
         // font size
         EKFontSizeH1: '24px',
         EKFontSizeH2: '22px',
@@ -69,9 +68,8 @@ module.exports = {
         EKMediaSmall: 'only screen and (min-width: 480px)',
         EKMediaMedium: 'only screen and (min-width: 768px)',
         EKMediaLarge: 'only screen and (min-width: 960px)',
-        EKMediaXlarge: 'only screen and (min-width: 1200px)',
-        EKMediaXxlarge: 'only screen and (min-width: 1400px)',
-        EKMediaXxxlarge: 'only screen and (min-width: 1600px)'
+        EKMediaWide: 'only screen and (min-width: 1200px)',
+        EKMediaHuge: 'only screen and (min-width: 1400px)',
     }
 }
 

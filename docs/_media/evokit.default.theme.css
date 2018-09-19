@@ -1,9 +1,8 @@
 @custom-media --EKMediaSmall only screen and (min-width: 480px);
 @custom-media --EKMediaMedium only screen and (min-width: 768px);
 @custom-media --EKMediaLarge only screen and (min-width: 960px);
-@custom-media --EKMediaXlarge only screen and (min-width: 1200px);
-@custom-media --EKMediaXxlarge only screen and (min-width: 1400px);
-@custom-media --EKMediaXxxlarge only screen and (min-width: 1600px);
+@custom-media --EKMediaWide only screen and (min-width: 1200px);
+@custom-media --EKMediaHuge only screen and (min-width: 1400px);
 
 :root {
     --EKStepSize: 5px;
@@ -18,7 +17,6 @@
     --EKBackgroundColor: #f7f7f7;
     --EKMinWidth: 1000px;
     --EKMaxWidth: 1240px;
-    --EKPadding: 0 20px;
 
     --EKFontSizeH1: 24px;
     --EKFontSizeH2: 22px;

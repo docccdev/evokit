@@ -15,7 +15,6 @@
     margin-right: auto
     min-width: var(--EKMinWidth)
     max-width: var(--EKMaxWidth)
-    padding: var(--EKPadding)
 
 /**
  * Size:
@@ -33,3 +32,16 @@
                 max-width: 1640px
             @else if $value == xxxl
                 max-width: 1840px
+
+/**
+ * Indent:
+ *
+ *  - body_indent_*
+ *
+ **/
+
+@each $value, $i in (none, xxs, xs, s, m, l, xl, xxl, xxxl)
+    @mixin media .body_indent_$(value)
+        .body__section
+            padding-left: calc(var(--EKStepSize) * $i)
+            padding-right: calc(var(--EKStepSize) * $i)

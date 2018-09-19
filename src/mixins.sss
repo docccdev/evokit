@@ -14,16 +14,12 @@
         $(selector)\@large
             @mixin-content
 
-    @media (--EKMediaXlarge)
-        $(selector)\@xlarge
+    @media (--EKMediaWide)
+        $(selector)\@wide
             @mixin-content
 
-    @media (--EKMediaXxlarge)
-        $(selector)\@xxlarge
-            @mixin-content
-
-    @media (--EKMediaXxxlarge)
-        $(selector)\@xxxlarge
+    @media (--EKMediaHuge)
+        $(selector)\@huge
             @mixin-content
 
 
