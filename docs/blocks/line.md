@@ -22,7 +22,7 @@
 <script>
 const { Line } = EvoKit;
 
-export default class Example extends React.PureComponent {
+export default class Example extends React.Component {
     render() {
         return (
             <Line />
@@ -51,7 +51,7 @@ export default class Example extends React.PureComponent {
 <script>
 const { Line } = EvoKit;
 
-export default class Example extends React.PureComponent {
+export default class Example extends React.Component {
     render() {
         return (
             <div>
@@ -101,7 +101,7 @@ export default class Example extends React.PureComponent {
 <script>
 const { Line } = EvoKit;
 
-export default class Example extends React.PureComponent {
+export default class Example extends React.Component {
     render() {
         return (
             <div>
@@ -155,7 +155,7 @@ export default class Example extends React.PureComponent {
 <script>
 const { Line } = EvoKit;
 
-export default class Example extends React.PureComponent {
+export default class Example extends React.Component {
     render() {
         return (
             <div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { createBlock } from '../component';
 
-class PanelBody extends React.PureComponent {
+class PanelBody extends React.Component {
     static blockTag = 'div';
     static blockName = 'panel__body';
 

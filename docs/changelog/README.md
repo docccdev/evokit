@@ -17,6 +17,8 @@
 
 # CHANGELOG
 
+## 1.1.3
+- Откат jsx блоков с `React.PureComponent` на `React.Component`.
 
 ## 1.1.2
 - Обновлен `evokit.config.js`.

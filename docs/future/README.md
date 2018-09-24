@@ -26,7 +26,7 @@
 <script>
 const { Body, Grid, Panel, Box, List, Text, Link, Picture, Image, Line, Tags } = EvoKit;
 
-export default class ExampleLink extends React.PureComponent {
+export default class ExampleLink extends React.Component {
     render() {
         return (
             <div>

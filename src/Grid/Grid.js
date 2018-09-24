@@ -1,7 +1,7 @@
 import React from 'react';
 import { createBlock } from '../component';
 
-class Grid extends React.PureComponent {
+class Grid extends React.Component {
     static blockTag = 'div';
     static blockName = 'grid';
     static blockMods = [

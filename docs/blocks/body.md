@@ -63,7 +63,7 @@
 <script>
 const { Body } = EvoKit;
 
-export default class Example extends React.PureComponent {
+export default class Example extends React.Component {
     render() {
         return (
             <Body ek-indent='m'>
