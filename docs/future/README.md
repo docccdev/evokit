@@ -24,23 +24,93 @@
 ```jsx
 /*react*/
 <script>
-const { Link } = EvoKit;
+const { Body, Grid, Panel, Box, List, Text, Link, Picture, Image, Line, Tags } = EvoKit;
 
 export default class ExampleLink extends React.PureComponent {
     render() {
         return (
             <div>
-                <Link href='#' ek-size='h1'>H1</Link>
+                BODY:
+                <Body body-indent='m'>
+                    <Body.Section>
+                        section
+                    </Body.Section>
+                </Body>
                 <br />
-                <Link href='#' ek-size='h2'>H2</Link>
                 <br />
-                <Link href='#' ek-size='h3'>H3</Link>
+                GRID:
+                <Grid grid-column={2} grid-size='m'>
+                    <Grid.Item>
+                        item
+                    </Grid.Item>
+                    <Grid.Item>
+                        item
+                    </Grid.Item>
+                </Grid>
                 <br />
-                <Link href='#' ek-size='h4'>H4</Link>
                 <br />
-                <Link href='#' ek-size='h5'>H5</Link>
+                PANEL:
+                <Panel panel-theme='muted' panel-size='m'>
+                    <Panel.Body>
+                        body
+                    </Panel.Body>
+                </Panel>
                 <br />
-                <Link href='#' ek-size='h6'>H6</Link>
+                <br />
+                BOX:
+                <Box box-padding='m' box-theme='muted'>
+                    box
+                </Box>
+                <br />
+                <br />
+                LIST:
+                <List list-size='m'>
+                    <List.Item>
+                        item
+                    </List.Item>
+                    <List.Item>
+                        item
+                    </List.Item>
+                </List>
+                <br />
+                <br />
+                TEXT:
+                <div>
+                    <Text text-tag='h1' text-size='h1' style={{ margin: 0 }}>H1</Text>
+                </div>
+                <br />
+                <br />
+                LINK:
+                <div>
+                    <Link href="#" link-style='dotted'>dotted</Link>
+                </div>
+                <br />
+                <br />
+                PICTURE:
+                <div className='ek-width-3-10'>
+                    <Picture src='https://picsum.photos/300/300' picture-style='round' />
+                </div>
+                <br />
+                <br />
+                IMAGE:
+                <div>
+                    <Image src='https://picsum.photos/150/150' image-valign='top' />
+                </div>
+                <br />
+                <br />
+                LINE:
+                <Line line-size='m' />
+                <br />
+                <br />
+                TAGS:
+                <Tags tags-theme='muted' tags-size='m'>
+                    <Tags.Item>
+                        item
+                    </Tags.Item>
+                    <Tags.Item>
+                        item
+                    </Tags.Item>
+                </Tags>
             </div>
         )
     }

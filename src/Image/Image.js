@@ -2,6 +2,7 @@ import React from 'react';
 import { createBlock } from '../component';
 
 class Image extends React.PureComponent {
+    static blockTag = 'img';
     static blockName = 'image';
     static blockMods = [
         'align',
@@ -11,10 +12,10 @@ class Image extends React.PureComponent {
 
     render() {
         return (
-            <img
-                className={this.getClassName()}
-                {...this.getCleanProps()}
-            />
+            React.createElement(
+                this.getTagName(),
+                this.getProps(),
+            )
         );
     }
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import { createBlock } from '../component';
 
 class Grid extends React.PureComponent {
+    static blockTag = 'div';
     static blockName = 'grid';
     static blockMods = [
         'column',
@@ -15,12 +16,11 @@ class Grid extends React.PureComponent {
 
     render() {
         return (
-            <div
-                className={this.getClassName()}
-                {...this.getCleanProps()}
-            >
-                {this.props.children}
-            </div>
+            React.createElement(
+                this.getTagName(),
+                this.getProps(),
+                this.props.children,
+            )
         );
     }
 }

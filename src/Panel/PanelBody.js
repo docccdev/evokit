@@ -2,16 +2,16 @@ import React from 'react';
 import { createBlock } from '../component';
 
 class PanelBody extends React.PureComponent {
+    static blockTag = 'div';
     static blockName = 'panel__body';
 
     render() {
         return (
-            <div
-                className={this.getClassName()}
-                {...this.getCleanProps()}
-            >
-                {this.props.children}
-            </div>
+            React.createElement(
+                this.getTagName(),
+                this.getProps(),
+                this.props.children,
+            )
         );
     }
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import { createBlock } from '../component';
 
 class Body extends React.PureComponent {
+    static blockTag = 'body';
     static blockName = 'body';
     static blockMods = [
         'size',
@@ -10,12 +11,11 @@ class Body extends React.PureComponent {
 
     render() {
         return (
-            <body
-                className={this.getClassName()}
-                {...this.getCleanProps()}
-            >
-                {this.props.children}
-            </body>
+            React.createElement(
+                this.getTagName(),
+                this.getProps(),
+                this.props.children,
+            )
         );
     }
 }

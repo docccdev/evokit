@@ -2,6 +2,7 @@ import React from 'react';
 import { createBlock } from '../component';
 
 class Text extends React.PureComponent {
+    static blockTag = 'span';
     static blockName = 'text';
     static blockMods = [
         'color',
@@ -16,12 +17,11 @@ class Text extends React.PureComponent {
 
     render() {
         return (
-            <span
-                className={this.getClassName()}
-                {...this.getCleanProps()}
-            >
-                {this.props.children}
-            </span>
+            React.createElement(
+                this.getTagName(),
+                this.getProps(),
+                this.props.children,
+            )
         );
     }
 }

@@ -45,7 +45,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /(\.jsx|\.js)$/,
+                test: /\.js$/,
                 loader: 'babel-loader',
                 exclude: /node_modules/,
             },
@@ -71,12 +71,12 @@ module.exports = {
                                 postcssConditionals(),
                                 postcssNested(),
                                 // postcssCustomProperties({
-                                //     preserve: 'computed',
-                                //     warnings: true,
-                                //     variables: evokitConfig.variables
+                                //     preserve: false,
+                                //     importFrom: [evokitConfig]
                                 // }),
                                 // postcsscustomMedia({
-                                //     extensions: evokitConfig.extensions
+                                //     preserve: false,
+                                //     importFrom: [evokitConfig]
                                 // }),
                                 postcssPrefixer({
                                     prefix: 'ek-'
@@ -114,9 +114,15 @@ module.exports = {
     ],
     resolve: {
         modules: [path.resolve(PROJECT_DEPS, 'node_modules'), 'node_modules'],
-        extensions: ['.js', '.jsx', '.sss'],
+        extensions: ['.js', '.sss'],
     },
     resolveLoader: {
         modules: [path.resolve(PROJECT_DEPS, 'node_modules'), 'node_modules'],
     },
+    stats: {
+        colors: true,
+        entrypoints: false,
+        children: false,
+        modules: false,
+    }
 };

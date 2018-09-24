@@ -2,6 +2,7 @@ import React from 'react';
 import { createBlock } from '../component';
 
 class Link extends React.PureComponent {
+    static blockTag = 'a';
     static blockName = 'link';
     static blockMods = [
         'color',
@@ -12,12 +13,11 @@ class Link extends React.PureComponent {
 
     render() {
         return (
-            <a
-                className={this.getClassName()}
-                {...this.getCleanProps()}
-            >
-                {this.props.children}
-            </a>
+            React.createElement(
+                this.getTagName(),
+                this.getProps(),
+                this.props.children,
+            )
         );
     }
 }

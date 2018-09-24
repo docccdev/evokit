@@ -2,6 +2,7 @@ import React from 'react';
 import { createBlock } from '../component';
 
 class Line extends React.PureComponent {
+    static blockTag = 'hr';
     static blockName = 'line';
     static blockMods = [
         'size',
@@ -11,10 +12,10 @@ class Line extends React.PureComponent {
 
     render() {
         return (
-            <hr
-                className={this.getClassName()}
-                {...this.getCleanProps()}
-            />
+            React.createElement(
+                this.getTagName(),
+                this.getProps(),
+            )
         );
     }
 }

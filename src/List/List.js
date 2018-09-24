@@ -2,6 +2,7 @@ import React from 'react';
 import { createBlock } from '../component';
 
 class List extends React.PureComponent {
+    static blockTag = 'ul';
     static blockName = 'list';
     static blockMods = [
         'theme',
@@ -11,12 +12,11 @@ class List extends React.PureComponent {
 
     render() {
         return (
-            <ul
-                className={this.getClassName()}
-                {...this.getCleanProps()}
-            >
-                {this.props.children}
-            </ul>
+            React.createElement(
+                this.getTagName(),
+                this.getProps(),
+                this.props.children,
+            )
         );
     }
 }

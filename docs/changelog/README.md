@@ -17,6 +17,17 @@
 
 # CHANGELOG
 
+
+## 1.1.2
+- Обновлен `evokit.config.js`.
+- Обновлен `package.json`.
+- Изменен дефолтный префикс для всех`jsx` блоков c `ek-` на `{blockName}-`, пример:
+    - Было `<Text ek-size='h1'>...</Text>`
+    - Cтало `<Text text-size='h1'>...</Text>`
+- Добавлена возможность изменять `tagName` для `jsx` блоков, пример:
+    - `<Text text-tag='h1' text-size='h1'>...</Text>`
+
+
 ## 1.1.1
 - Добавлены медиа параметрами для модификаторов ширины `*-expand`.
 - Удалены отступы для [body][body].
@@ -31,6 +42,7 @@
     - Удалено `--EKMediaXxxlarge`
     - Переименовано `EKMediaXlarge` -> `EKMediaWide`
     - Переименовано `EKMediaXxlarge` -> `EKMediaHuge`
+
 
 ## 1.1.0
 - Установлен дефолтный префикс `ek-` для css класов
