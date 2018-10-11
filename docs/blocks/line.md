@@ -55,14 +55,14 @@ export default class Example extends React.Component {
     render() {
         return (
             <div>
-                <Line ek-size='xxs' />
-                <Line ek-size='xs' />
-                <Line ek-size='s' />
-                <Line ek-size='m' />
-                <Line ek-size='l' />
-                <Line ek-size='xl' />
-                <Line ek-size='xxl' />
-                <Line ek-size='xxxl' />
+                <Line line-size='xxs' />
+                <Line line-size='xs' />
+                <Line line-size='s' />
+                <Line line-size='m' />
+                <Line line-size='l' />
+                <Line line-size='xl' />
+                <Line line-size='xxl' />
+                <Line line-size='xxxl' />
             </div>
         )
     }
@@ -105,25 +105,25 @@ export default class Example extends React.Component {
     render() {
         return (
             <div>
-                <Line ek-color='base' />
+                <Line line-color='base' />
                 <br />
-                <Line ek-color='link' />
+                <Line line-color='link' />
                 <br />
-                <Line ek-color='muted' />
+                <Line line-color='muted' />
                 <br />
-                <Line ek-color='success' />
+                <Line line-color='success' />
                 <br />
-                <Line ek-color='info' />
+                <Line line-color='info' />
                 <br />
-                <Line ek-color='warning' />
+                <Line line-color='warning' />
                 <br />
-                <Line ek-color='error' />
+                <Line line-color='error' />
                 <br />
-                <Line ek-color='first' />
+                <Line line-color='first' />
                 <br />
-                <Line ek-color='second' />
+                <Line line-color='second' />
                 <br />
-                <Line ek-color='third' />
+                <Line line-color='third' />
             </div>
         )
     }
@@ -159,9 +159,9 @@ export default class Example extends React.Component {
     render() {
         return (
             <div>
-                <Line ek-style='dotted' />
+                <Line line-style='dotted' />
                 <br />
-                <Line ek-style='dashed' />
+                <Line line-style='dashed' />
             </div>
         )
     }

@@ -13,6 +13,23 @@
 <a class='ek-link'>Cсылка</a>
 ```
 
+```jsx
+/*react*/
+<script>
+const { Link } = EvoKit;
+
+export default class Example extends React.Component {
+    render() {
+        return (
+            <Link href="#Link">
+                Ссылка
+            </Link>
+        )
+    }
+}
+</script>
+```
+
 ---
 
 ## Цвет

@@ -66,7 +66,7 @@ const { Body } = EvoKit;
 export default class Example extends React.Component {
     render() {
         return (
-            <Body ek-indent='m'>
+            <Body body-indent='m'>
                 <Body.Section>
                     content
                 </Body.Section>

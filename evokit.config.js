@@ -1,14 +1,14 @@
-// EvoKit config v1.1.2
+// EvoKit config v1.1.4
 
 module.exports = {
     customProperties: {
         // base
         '--EKStepSize': '5px',
-        '--EKLineHeightRead': '1.5em',
+        '--EKLineHeightRead': '1.5',
         '--EKBorderRadius': '10px',
         '--EKBorderColor': '#dde8f0',
         // body
-        '--EKLineHeight': '1.3em',
+        '--EKLineHeight': '1',
         '--EKFontWeight': '400',
         '--EKFontSize': '13px',
         '--EKColor': '#3c3c3c',

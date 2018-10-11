@@ -21,7 +21,7 @@ import { Grid } from 'evokit';
 export default class EvokitExample extends React.Component {
     render() {
         return (
-            <Grid ek-align='justify'>
+            <Grid grid-align='justify'>
                 <Grid.Item>
                     left
                 </Grid.Item>
