@@ -1,6 +1,6 @@
 {
   "name": "evokit",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "React UI Components for developing fast and powerful web interfaces",
   "main": "dist/index.js",
   "scripts": {
@@ -41,7 +41,7 @@
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "postcss-conditionals": "^2.1.0",
     "postcss-custom-media": "^7.0.4",
-    "postcss-custom-properties": "^8.0.5",
+    "postcss-custom-properties": "^8.0.8",
     "postcss-each": "^0.10.0",
     "postcss-for": "^2.1.1",
     "postcss-import": "^12.0.0",
