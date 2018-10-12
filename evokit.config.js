@@ -4,11 +4,11 @@ module.exports = {
     customProperties: {
         // base
         '--EKStepSize': '5px',
-        '--EKLineHeightRead': '1.5',
+        '--EKLineHeightRead': '1.5em',
         '--EKBorderRadius': '10px',
         '--EKBorderColor': '#dde8f0',
         // body
-        '--EKLineHeight': '1',
+        '--EKLineHeight': '1em',
         '--EKFontWeight': '400',
         '--EKFontSize': '13px',
         '--EKColor': '#3c3c3c',
