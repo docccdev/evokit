@@ -87,7 +87,7 @@
  *
  **/
 
-@each $value, $i in (none, xxs, xs, s, m, l, xl, xxl, xxxl, auto)
+@each $value, $i in (none, xxs, xs, s, m, l, xl, xxl, auto)
     @if $value == auto
         @mixin media .box_margin_$(value)
             margin: auto
@@ -142,7 +142,7 @@
  *
  **/
 
-@each $value, $i in (none, xxs, xs, s, m, l, xl, xxl, xxxl)
+@each $value, $i in (none, xxs, xs, s, m, l, xl, xxl)
     @mixin media .box_padding_$(value)
         padding: calc(var(--ek-step-indent) * $i)
 

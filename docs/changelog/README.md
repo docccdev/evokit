@@ -31,6 +31,7 @@
     - `--EKStepSize` -> `--ek-step-indent`
 - Удаленные переменные `evokit.config.js`:
     - `--EKBorderRadius`
+- Удален модификатор отступа `xxxl` для всех блоков.
 - Изменения модификаторов для блока [box][box]:
     - Удалено `.box_style_round`
     - Удалено `.box_theme_*`

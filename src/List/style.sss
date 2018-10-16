@@ -16,7 +16,7 @@
  *
  **/
 
-@each $name, $i in (none, xxs, xs, s, m, l, xl, xxl, xxxl)
+@each $name, $i in (none, xxs, xs, s, m, l, xl, xxl)
     @mixin media .list_size_$(name)
         margin-top: calc(var(--ek-step-indent) * -$i  / 2)
         margin-bottom: calc(var(--ek-step-indent) * -$i  / 2)

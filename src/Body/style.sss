@@ -42,7 +42,7 @@
  *
  **/
 
-@each $value, $i in (none, xxs, xs, s, m, l, xl, xxl, xxxl)
+@each $value, $i in (none, xxs, xs, s, m, l, xl, xxl)
     @mixin media .body_indent_$(value)
         .body__section
             padding-left: calc(var(--ek-step-indent) * $i)
