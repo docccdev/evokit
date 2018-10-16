@@ -1,0 +1,11 @@
+@import '../../mixins.sss'
+
+@mixin media .list_color_minor
+    & > .list__item
+        &:before
+            color: var(--ek-minor-text-color)
+
+@mixin media .list_divider_minor
+    & > .list__item
+        & + .list__item
+            border-top: 1px solid var(--ek-minor-divider-color)

@@ -1,0 +1,11 @@
+@import '../../mixins.sss'
+
+@mixin media .list_color_muted
+    & > .list__item
+        &:before
+            color: var(--ek-muted-text-color)
+
+@mixin media .list_divider_muted
+    & > .list__item
+        & + .list__item
+            border-top: 1px solid var(--ek-muted-divider-color)
