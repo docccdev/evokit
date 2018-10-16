@@ -187,10 +187,3 @@
                 @mixin media $(selector)_$(from)-$(to)
                     flex: none
                     width: calc($from / $to * 100%)
-
-@define-mixin helpers-width $selector
-    @each $to in (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
-        @each $from in (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
-            @if $from < $to or ($from == 1 and $to == 1)
-                @mixin media $(selector)-$(from)-$(to)
-                    width: calc($from / $to * 100%)

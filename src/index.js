@@ -10,8 +10,6 @@ import Text from './Text';
 import Line from './Line';
 import Image from './Image';
 
-import './helper-width';
-
 export {
     createBlock,
     Body,

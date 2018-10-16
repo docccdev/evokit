@@ -32,12 +32,14 @@
 - Удаленные переменные `evokit.config.js`:
     - `--EKBorderRadius`
 - Удален модификатор отступа `xxxl` для всех блоков.
+- Удалены вспомогательные классы `.ek-width-*-*`.
 - Изменения модификаторов для блока [box][box]:
-    - Удалено `.box_style_round`
-    - Удалено `.box_theme_*`
-    - Добавлено `.box_round_*`
-    - Добавлено `.box_background_*`
-    - Добавлено `.box_border_*`
+    - Удалено `.ek-box_style_round`
+    - Удалено `.ek-box_theme_*`
+    - Добавлено `.ek-box_round_*`
+    - Добавлено `.ek-box_background_*`
+    - Добавлено `.ek-box_border_*`
+    - Добавлено `.ek-box_width_*`
 
 
 ## 1.1.6

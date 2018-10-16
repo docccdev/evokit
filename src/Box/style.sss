@@ -33,7 +33,7 @@
  *
  **/
 
-@each $value in (absolute, fixed, relative, static)
+@each $value in (static, relative, absolute, fixed)
     .box_position_$(value)
         position: $value
 
@@ -176,3 +176,12 @@
 @each $value, $i in (none, xxs, xs, s, m, l, xl, xxl)
     @mixin media .box_round_$(value)
         border-radius: calc(var(--ek-step-round) * $i)
+
+/**
+ * Width:
+ *
+ *  - box_width_*
+ *
+ **/
+
+@mixin width .box_width
