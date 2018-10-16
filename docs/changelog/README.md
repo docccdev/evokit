@@ -31,15 +31,21 @@
     - `--EKStepSize` -> `--ek-step-indent`
 - Удаленные переменные `evokit.config.js`:
     - `--EKBorderRadius`
+- Добавленные переменные `evokit.config.js`:
+    - `--ek-step-round`
 - Удален модификатор отступа `xxxl` для всех блоков.
 - Удалены вспомогательные классы `.ek-width-*-*`.
 - Изменения модификаторов для блока [box][box]:
     - Удалено `.ek-box_style_round`
     - Удалено `.ek-box_theme_*`
-    - Добавлено `.ek-box_round_*`
-    - Добавлено `.ek-box_background_*`
-    - Добавлено `.ek-box_border_*`
-    - Добавлено `.ek-box_width_*`
+    - Добавлено `.ek-box_round_${step_round}`
+    - Добавлено `.ek-box_background_${theme_name}`
+    - Добавлено `.ek-box_border_${theme_name}`
+    - Добавлено `.ek-box_width_${from}-${to}`
+- Изменения модификаторов для блока [grid][grid]:
+    - Переименовано `.ek-grid_size_*` -> `.ek-grid_indent_*`
+    - Удалено `.ek-grid_theme_divider`
+    - Добавлено `.ek-grid_divider_${theme_name}`
 
 
 ## 1.1.6

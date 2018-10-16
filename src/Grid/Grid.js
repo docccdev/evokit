@@ -6,11 +6,11 @@ class Grid extends React.Component {
     static blockName = 'grid';
     static blockMods = [
         'column',
-        'size',
+        'indent',
         'direction',
         'align',
         'valign',
-        'theme',
+        'divider',
         'wrap',
     ];
 

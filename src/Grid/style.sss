@@ -11,20 +11,20 @@
     max-width: 100%
 
 /**
- * Size:
+ * Indent:
  *
- *  - grid_size_*
+ *  - grid_indent_*
  *
  **/
 
 @each $name, $i in (none, xxs, xs, s, m, l, xl, xxl)
-    @mixin media .grid_size_$(name)
+    @mixin media .grid_indent_$(name)
         margin: calc(var(--ek-step-indent) * -$i  / 2)
 
         & > .grid__item
             padding: calc(var(--ek-step-indent) * $i  / 2)
 
-        &[class*='grid_theme_divider']
+        &[class*='grid_divider']
             margin: 0
 
             & > .grid__item
@@ -43,7 +43,7 @@
             flex: none
             width: calc(100% / $value)
 
-        &[class*='grid_theme_divider']
+        &[class*='grid_divider']
 
             & > .grid__item
                 @mixin grid-divider-item $value
@@ -139,18 +139,14 @@
         flex-wrap: $value
 
 /**
- * Theme divider:
+ * Divider:
  *
- *  - grid_theme_divider_*
+ *  - grid_divider_*
  *
  **/
 
-@mixin media .grid_theme_divider
+.grid[class*='grid_divider']
+    border: 0 solid transparent
 
-    & > .grid__item
-        border-color: var(--EKBorderColor)
-        border-style: solid
-        border-width: 0
-
-        & + .grid__item
-            border-left-width: 1px
+    & + .grid__item
+        border-left-width: 1px
