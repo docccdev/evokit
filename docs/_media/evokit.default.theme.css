@@ -6,8 +6,8 @@
 
 :root {
     --ek-step-indent: 5px;
+    --ek-step-round: 2px;
     --EKLineHeightRead: 1.5em;
-    --EKBorderRadius: 10px;
     --EKBorderColor: #dde8f0;
 
     --EKLineHeight: 1;

@@ -2,10 +2,10 @@
 
 module.exports = {
     customProperties: {
-        // base
-        '--ek-step-indent': '5px',
+        // common
+        '--ek-step-indent': '4px',
+        '--ek-step-round': '2px',
         '--EKLineHeightRead': '1.5em',
-        '--EKBorderRadius': '10px',
         '--EKBorderColor': '#dde8f0',
         // body
         '--EKLineHeight': '1em',

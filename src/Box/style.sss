@@ -178,9 +178,10 @@
 /**
  * Style:
  *
- *  - box_style_round
+ *  - box_round_*
  *
  **/
 
-@mixin media .box_style_round
-    border-radius: var(--EKBorderRadius)
+@each $value, $i in (none, xxs, xs, s, m, l, xl, xxl)
+    @mixin media .box_round_$(value)
+        border-radius: calc(var(--ek-step-round) * $i)

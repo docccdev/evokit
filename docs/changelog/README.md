@@ -20,8 +20,8 @@
 !> **v2.0.0** in progress and not released!
 
 ## 2.0.0
-- Удален блок [panel][panel]
-- Удален блок [tags][tags]
+- Удален блок [panel][panel].
+- Удален блок [tags][tags].
 - Переименованные переменные `evokit.config.js`:
     - `--EKMediaSmall` -> `--ek-media-small`
     - `--EKMediaMedium` -> `--ek-media-medium`
@@ -29,6 +29,11 @@
     - `--EKMediaWide` -> `--ek-media-wide`
     - `--EKMediaHuge` -> `--ek-media-huge`
     - `--EKStepSize` -> `--ek-step-indent`
+- Удаленные переменные `evokit.config.js`:
+    - `--EKBorderRadius`
+- Удален модификатор `.box_style_round` для [box][box].
+- Добавлен модификатор `.box_round_*` для [box][box].
+    - Значения `none`, `xxs`, `xs`, `s`, `m`, `l`, `xl`, `xxl`
 
 
 ## 1.1.6
