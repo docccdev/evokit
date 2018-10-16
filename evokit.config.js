@@ -3,7 +3,7 @@
 module.exports = {
     customProperties: {
         // base
-        '--EKStepSize': '5px',
+        '--ek-step-indent': '5px',
         '--EKLineHeightRead': '1.5em',
         '--EKBorderRadius': '10px',
         '--EKBorderColor': '#dde8f0',

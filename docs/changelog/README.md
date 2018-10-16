@@ -28,6 +28,7 @@
     - `--EKMediaLarge` -> `--ek-media-large`
     - `--EKMediaWide` -> `--ek-media-wide`
     - `--EKMediaHuge` -> `--ek-media-huge`
+    - `--EKStepSize` -> `--ek-step-indent`
 
 
 ## 1.1.6

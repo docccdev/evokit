@@ -45,5 +45,5 @@
 @each $value, $i in (none, xxs, xs, s, m, l, xl, xxl, xxxl)
     @mixin media .body_indent_$(value)
         .body__section
-            padding-left: calc(var(--EKStepSize) * $i)
-            padding-right: calc(var(--EKStepSize) * $i)
+            padding-left: calc(var(--ek-step-indent) * $i)
+            padding-right: calc(var(--ek-step-indent) * $i)

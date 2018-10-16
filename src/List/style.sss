@@ -18,20 +18,20 @@
 
 @each $name, $i in (none, xxs, xs, s, m, l, xl, xxl, xxxl)
     @mixin media .list_size_$(name)
-        margin-top: calc(var(--EKStepSize) * -$i  / 2)
-        margin-bottom: calc(var(--EKStepSize) * -$i  / 2)
+        margin-top: calc(var(--ek-step-indent) * -$i  / 2)
+        margin-bottom: calc(var(--ek-step-indent) * -$i  / 2)
 
         & > .list__item
-            padding-top: calc(var(--EKStepSize) * $i / 2)
-            padding-bottom: calc(var(--EKStepSize) * $i / 2)
+            padding-top: calc(var(--ek-step-indent) * $i / 2)
+            padding-bottom: calc(var(--ek-step-indent) * $i / 2)
 
         &[class*='list_theme_divider']
-            margin-top: calc(var(--EKStepSize) * -$i)
-            margin-bottom: calc(var(--EKStepSize) * -$i)
+            margin-top: calc(var(--ek-step-indent) * -$i)
+            margin-bottom: calc(var(--ek-step-indent) * -$i)
 
             & > .list__item
-                padding-top: calc(var(--EKStepSize) * $i)
-                padding-bottom: calc(var(--EKStepSize) * $i)
+                padding-top: calc(var(--ek-step-indent) * $i)
+                padding-bottom: calc(var(--ek-step-indent) * $i)
 
 /**
  * Color:

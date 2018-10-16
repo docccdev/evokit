@@ -16,8 +16,8 @@
 
 @each $name, $i in (none, xxs, xs, s, m, l, xl, xxl, xxxl)
     @mixin media .line_size_$(name)
-        margin-top: calc(var(--EKStepSize) * $i)
-        margin-bottom: calc(var(--EKStepSize) * $i)
+        margin-top: calc(var(--ek-step-indent) * $i)
+        margin-bottom: calc(var(--ek-step-indent) * $i)
 
 /**
  * Color:
