@@ -17,7 +17,6 @@
   * [Picture](blocks/picture.md)
   * [Image](blocks/image.md)
   * [Line](blocks/line.md)
-  * [Tags](blocks/tags.md)
 
 * Helpers
 

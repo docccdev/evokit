@@ -749,7 +749,7 @@ section.cover blockquote>p>a:hover {
     word-spacing: .05rem
 }
 
-.markdown-section ol:not(.ek-list),.markdown-section ul:not(.ek-list):not(.ek-tags) {
+.markdown-section ol:not(.ek-list),.markdown-section ul:not(.ek-list) {
     padding-left: 1.5rem
 }
 

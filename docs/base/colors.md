@@ -1,5 +1,4 @@
 [box]: blocks/box.md
-[tags]: blocks/tags.md
 [text]: blocks/text.md
 [link]: blocks/link.md
 [list]: blocks/list.md
@@ -31,7 +30,7 @@
 
 ## Фон
 
-Используются в блоках [Box][box], [Tags][tags]
+Используются в блоках [Box][box]
 
 |       КЛЮЧ        |  ЗНАЧЕНИЕ   |
 |-------------------|-------------|

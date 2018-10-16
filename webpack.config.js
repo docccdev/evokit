@@ -28,7 +28,6 @@ var entryList = {
     'Text':     path.resolve(__dirname, 'src/Text'),
     'Line':     path.resolve(__dirname, 'src/Line'),
     'Image':    path.resolve(__dirname, 'src/Image'),
-    'Tags':     path.resolve(__dirname, 'src/Tags'),
 };
 
 module.exports = {

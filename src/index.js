@@ -9,7 +9,6 @@ import Picture from './Picture';
 import Text from './Text';
 import Line from './Line';
 import Image from './Image';
-import Tags from './Tags';
 
 import './helper-width';
 
@@ -24,5 +23,4 @@ export {
     Text,
     Line,
     Image,
-    Tags,
 };
