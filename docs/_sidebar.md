@@ -10,7 +10,6 @@
 
   * [Body](blocks/body.md)
   * [Grid](blocks/grid.md)
-  * [Panel](blocks/panel.md)
   * [Box](blocks/box.md)
   * [List](blocks/list.md)
   * [Text](blocks/text.md)

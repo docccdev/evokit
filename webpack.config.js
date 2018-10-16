@@ -21,7 +21,6 @@ var entryList = {
     '.':        path.resolve(__dirname, 'src/index.js'),
     'Body':     path.resolve(__dirname, 'src/Body'),
     'Box':      path.resolve(__dirname, 'src/Box'),
-    'Panel':    path.resolve(__dirname, 'src/Panel'),
     'Grid':     path.resolve(__dirname, 'src/Grid'),
     'List':     path.resolve(__dirname, 'src/List'),
     'Link':     path.resolve(__dirname, 'src/Link'),

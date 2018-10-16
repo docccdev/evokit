@@ -1,4 +1,3 @@
-[panel]: blocks/panel.md
 [box]: blocks/box.md
 [tags]: blocks/tags.md
 [text]: blocks/text.md
@@ -32,7 +31,7 @@
 
 ## Фон
 
-Используются в блоках [Panel][panel], [Box][box], [Tags][tags]
+Используются в блоках [Box][box], [Tags][tags]
 
 |       КЛЮЧ        |  ЗНАЧЕНИЕ   |
 |-------------------|-------------|
