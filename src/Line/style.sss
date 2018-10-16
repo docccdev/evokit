@@ -8,25 +8,16 @@
     margin: 0
 
 /**
- * Size:
+ * Indent:
  *
- *  - line_size_*
+ *  - line_indent_*
  *
  **/
 
 @each $name, $i in (none, xxs, xs, s, m, l, xl, xxl)
-    @mixin media .line_size_$(name)
+    @mixin media .line_indent_$(name)
         margin-top: calc(var(--ek-step-indent) * $i)
         margin-bottom: calc(var(--ek-step-indent) * $i)
-
-/**
- * Color:
- *
- *  - line_color_*
- *
- **/
-
-@mixin border-color .line_color
 
 /**
  * Style:

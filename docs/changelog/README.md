@@ -46,7 +46,8 @@
     - Переименовано `.ek-grid_size_*` -> `.ek-grid_indent_*`
     - Удалено `.ek-grid_theme_divider`
     - Добавлено `.ek-grid_divider_${theme_name}`
-
+- Изменения модификаторов для блока [line][line]:
+    - Переименовано `.ek-line_size_*` -> `.ek-line_indent_*`
 
 ## 1.1.6
 - Поправлен `evokit.config.js`.
