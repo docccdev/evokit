@@ -1,0 +1,11 @@
+@import '../mixins.sss'
+
+@mixin media .grid_divider_minor
+
+    & > .grid__item
+        border-color: var(--ek-minor-divider-color)
+        border-style: solid
+        border-width: 0
+
+        & + .grid__item
+            border-left-width: 1px
