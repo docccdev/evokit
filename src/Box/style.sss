@@ -18,7 +18,7 @@
  *
  **/
 
-@each $value in (none, inline, block, inline-block)
+@each $value in (none, inline, inline-block, block)
     @mixin media .box_display_$(value)
         display: $value
 
@@ -167,16 +167,7 @@
         padding-bottom: calc(var(--ek-step-indent) * $i)
 
 /**
- * Theme:
- *
- *  - box_theme_*
- *
- **/
-
-@mixin background-color .box_theme
-
-/**
- * Style:
+ * Round:
  *
  *  - box_round_*
  *

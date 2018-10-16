@@ -5,7 +5,9 @@ class Box extends React.Component {
     static blockTag = 'div';
     static blockName = 'box';
     static blockMods = [
-        'theme',
+        'background',
+        'border',
+        'round',
         'margin',
         'margin-top',
         'margin-right',
@@ -23,7 +25,6 @@ class Box extends React.Component {
         'display',
         'position',
         'place',
-        'style',
     ];
 
     render() {
