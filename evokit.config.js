@@ -63,10 +63,10 @@ module.exports = {
         '--EKBorderColorThird': 'blue'
     },
     customMedia: {
-        '--EKMediaSmall': 'only screen and (min-width: 480px)',
-        '--EKMediaMedium': 'only screen and (min-width: 768px)',
-        '--EKMediaLarge': 'only screen and (min-width: 960px)',
-        '--EKMediaWide': 'only screen and (min-width: 1200px)',
-        '--EKMediaHuge': 'only screen and (min-width: 1400px)'
+        '--ek-media-small': 'only screen and (min-width: 480px)',
+        '--ek-media-medium': 'only screen and (min-width: 768px)',
+        '--ek-media-large': 'only screen and (min-width: 960px)',
+        '--ek-media-wide': 'only screen and (min-width: 1200px)',
+        '--ek-media-huge': 'only screen and (min-width: 1400px)'
     }
 }

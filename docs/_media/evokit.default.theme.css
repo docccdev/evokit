@@ -1,8 +1,8 @@
-@custom-media --EKMediaSmall only screen and (min-width: 480px);
-@custom-media --EKMediaMedium only screen and (min-width: 768px);
-@custom-media --EKMediaLarge only screen and (min-width: 960px);
-@custom-media --EKMediaWide only screen and (min-width: 1200px);
-@custom-media --EKMediaHuge only screen and (min-width: 1400px);
+@custom-media --ek-media-small only screen and (min-width: 480px);
+@custom-media --ek-media-medium only screen and (min-width: 768px);
+@custom-media --ek-media-large only screen and (min-width: 960px);
+@custom-media --ek-media-wide only screen and (min-width: 1200px);
+@custom-media --ek-media-huge only screen and (min-width: 1400px);
 
 :root {
     --EKStepSize: 5px;

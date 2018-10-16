@@ -22,6 +22,12 @@
 ## 2.0.0
 - Удален блок [panel][panel]
 - Удален блок [tags][tags]
+- Переименованные переменные `evokit.config.js`:
+    - `--EKMediaSmall` -> `--ek-media-small`
+    - `--EKMediaMedium` -> `--ek-media-medium`
+    - `--EKMediaLarge` -> `--ek-media-large`
+    - `--EKMediaWide` -> `--ek-media-wide`
+    - `--EKMediaHuge` -> `--ek-media-huge`
 
 
 ## 1.1.6
