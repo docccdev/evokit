@@ -17,6 +17,13 @@
 
 # CHANGELOG
 
+!> **v2.0.0** in progress and not released!
+
+## 2.0.0
+- Удален блок [panel][panel]
+- Удален блок [tags][tags]
+
+
 ## 1.1.6
 - Поправлен `evokit.config.js`.
 
