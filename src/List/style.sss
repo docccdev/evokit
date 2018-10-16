@@ -10,14 +10,14 @@
     display: block
 
 /**
- * Size:
+ * Indent:
  *
- *  - list_size_*
+ *  - list_indent_*
  *
  **/
 
 @each $name, $i in (none, xxs, xs, s, m, l, xl, xxl)
-    @mixin media .list_size_$(name)
+    @mixin media .list_indent_$(name)
         margin-top: calc(var(--ek-step-indent) * -$i  / 2)
         margin-bottom: calc(var(--ek-step-indent) * -$i  / 2)
 
@@ -25,52 +25,13 @@
             padding-top: calc(var(--ek-step-indent) * $i / 2)
             padding-bottom: calc(var(--ek-step-indent) * $i / 2)
 
-        &[class*='list_theme_divider']
+        &[class*='list_divider']
             margin-top: calc(var(--ek-step-indent) * -$i)
             margin-bottom: calc(var(--ek-step-indent) * -$i)
 
             & > .list__item
                 padding-top: calc(var(--ek-step-indent) * $i)
                 padding-bottom: calc(var(--ek-step-indent) * $i)
-
-/**
- * Color:
- *
- *  - list_color_*
- *
- **/
-
-@each $name in (base, white, black, link, muted, success, info, warning, error, first, second, third, transparent)
-    @mixin media .list_color_$(name)
-        & > .list__item
-
-            &:before
-                @if $name == base
-                    color: var(--EKColor)
-                @else if $name == white
-                    color: var(--EKColorWhite)
-                @else if $name == black
-                    color: var(--EKColorBlack)
-                @else if $name == link
-                    color: var(--EKColorLink)
-                @else if $name == muted
-                    color: var(--EKColorMuted)
-                @else if $name == success
-                    color: var(--EKColorSuccess)
-                @else if $name == info
-                    color: var(--EKColorInfo)
-                @else if $name == warning
-                    color: var(--EKColorWarning)
-                @else if $name == error
-                    color: var(--EKColorError)
-                @else if $name == first
-                    color: var(--EKColorFirst)
-                @else if $name == second
-                    color: var(--EKColorSecond)
-                @else if $name == third
-                    color: var(--EKColorThird)
-                @else if $name == transparent
-                    color: transparent
 
 /**
  * Style:
@@ -103,15 +64,13 @@
                     font-weight: bold
 
 /**
- * Theme divider:
+ * Divider:
  *
- *  - list_theme_divider
+ *  - list_divider
  *
  **/
 
-@mixin media .list_theme_divider
-
+.list[class*='list_divider']
     & > .list__item
-
         & + .list__item
-            border-top: 1px solid var(--EKBorderColor)
+            border-top: 1px solid transparent
