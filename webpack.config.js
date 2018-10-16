@@ -19,7 +19,6 @@ var extractSTYL = new ExtractTextPlugin('[name]/style.css');
 
 var entryList = {
     '.':        path.resolve(__dirname, 'src/index.js'),
-    'Theme':    path.resolve(__dirname, 'src/theme'),
     'Body':     path.resolve(__dirname, 'src/Body'),
     'Box':      path.resolve(__dirname, 'src/Box'),
     'Panel':    path.resolve(__dirname, 'src/Panel'),
