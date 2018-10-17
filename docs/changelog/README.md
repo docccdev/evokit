@@ -52,10 +52,23 @@
     - Переименовано `.ek-list_size_*` -> `.ek-list_indent_*`
     - Удалено `.ek-list_theme_divider`
     - Добавлено `.ek-list_divider_${theme_name}`
+- Темы вынесены в отдельные файлы:
+    - `theme.danger.css`
+    - `theme.dark.css`
+    - `theme.default.css`
+    - `theme.info.css`
+    - `theme.light.css`
+    - `theme.minor.css`
+    - `theme.muted.css`
+    - `theme.primary.css`
+    - `theme.reset.css`
+    - `theme.second.css`
+    - `theme.success.css`
+    - `theme.warning.css`
 
 
 ## 1.1.6
-- Поправлен `evokit.config.js`.
+- Исправлен `evokit.config.js`.
 
 
 ## 1.1.5
