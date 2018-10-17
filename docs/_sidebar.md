@@ -17,7 +17,3 @@
   * [Picture](blocks/picture.md)
   * [Image](blocks/image.md)
   * [Line](blocks/line.md)
-
-* Helpers
-
-  * [Width](helpers/width.md)

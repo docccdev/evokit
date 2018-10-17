@@ -1,3 +1,7 @@
+[panel]: blocks/removed_panel.md
+[tags]: blocks/removed_tags.md
+[width]: helpers/removed_width.md
+
 [media]: base/media.md
 [size]: base/sizes.md
 [text]: base/text.md
@@ -5,7 +9,6 @@
 
 [body]: blocks/body.md
 [grid]: blocks/grid.md
-[panel]: blocks/panel.md
 [box]: blocks/box.md
 [list]: blocks/list.md
 [text]: blocks/text.md
@@ -13,7 +16,6 @@
 [picture]: blocks/picture.md
 [image]: blocks/image.md
 [line]: blocks/line.md
-[tags]: blocks/tags.md
 
 # CHANGELOG
 
@@ -59,7 +61,7 @@
     - `--ek-step-line-height`
     - `--ek-${theme_name}-divider-color`
 - Удален модификатор отступа `xxxl` для всех блоков.
-- Удалены вспомогательные классы `.ek-width-*-*`.
+- Удалены вспомогательные классы `.ek-width-*-*` [width][width].
 - Изменения модификаторов для блока [box][box]:
     - Удалено `.ek-box_style_round`
     - Удалено `.ek-box_theme_*`
