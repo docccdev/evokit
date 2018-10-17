@@ -1,0 +1,197 @@
+@import '../../mixins.sss'
+
+.box
+    display: block
+    box-sizing: border-box
+
+    &:after
+        clear: both
+
+    &:after, &:before
+        content: ''
+        display: table
+
+/**
+ * Display:
+ *
+ *  - box_display_*
+ *
+ **/
+
+@each $value in (none, inline, inline-block, block)
+    @mixin media .box_display_$(value)
+        display: $value
+
+        @if $value == inline
+            &:after, &:before
+                content: none
+
+/**
+ * Position:
+ *
+ *  - box_position_*
+ *
+ **/
+
+@each $value in (static, relative, absolute, fixed)
+    .box_position_$(value)
+        position: $value
+
+/**
+ * Place:
+ *
+ *  - box_place_*
+ *
+ **/
+
+@each $value in (top, top-left, top-right, center, center-left, center-right, bottom, bottom-left, bottom-right)
+    .box_place_$(value)
+
+        @if $value == top
+            top: 0
+            left: 50%
+            transform: translateX(-50%)
+        @else if $value == top-left
+            top: 0
+            left: 0
+        @else if $value == top-right
+            top: 0
+            right: 0
+        @else if $value == center
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+        @else if $value == center-left
+            top: 50%
+            left: 0
+            transform: translateY(-50%)
+        @else if $value == center-right
+            top: 50%
+            right: 0
+            transform: translateY(-50%)
+        @else if $value == bottom
+            bottom: 0
+            left: 50%
+            transform: translateX(-50%)
+        @else if $value == bottom-left
+            bottom: 0
+            left: 0
+        @else if $value == bottom-right
+            bottom: 0
+            right: 0
+
+/**
+ * Margin:
+ *
+ *  - box_margin_*
+ *
+ **/
+
+@each $value, $i in (none, xxs, xs, s, m, l, xl, xxl, auto)
+    @if $value == auto
+        @mixin media .box_margin_$(value)
+            margin: auto
+
+        @mixin media .box_margin-tb_$(value)
+            margin-top: auto
+            margin-bottom: auto
+
+        @mixin media .box_margin-lr_$(value)
+            margin-left: auto
+            margin-right: auto
+
+        @mixin media .box_margin-left_$(value)
+            margin-left: auto
+
+        @mixin media .box_margin-top_$(value)
+            margin-top: auto
+
+        @mixin media .box_margin-right_$(value)
+            margin-right: auto
+
+        @mixin media .box_margin-bottom_$(value)
+            margin-bottom: auto
+    @else
+        @mixin media .box_margin_$(value)
+            margin: calc(var(--ek-step-indent) * $i)
+
+        @mixin media .box_margin-tb_$(value)
+            margin-top: calc(var(--ek-step-indent) * $i)
+            margin-bottom: calc(var(--ek-step-indent) * $i)
+
+        @mixin media .box_margin-lr_$(value)
+            margin-left: calc(var(--ek-step-indent) * $i)
+            margin-right: calc(var(--ek-step-indent) * $i)
+
+        @mixin media .box_margin-left_$(value)
+            margin-left: calc(var(--ek-step-indent) * $i)
+
+        @mixin media .box_margin-top_$(value)
+            margin-top: calc(var(--ek-step-indent) * $i)
+
+        @mixin media .box_margin-right_$(value)
+            margin-right: calc(var(--ek-step-indent) * $i)
+
+        @mixin media .box_margin-bottom_$(value)
+            margin-bottom: calc(var(--ek-step-indent) * $i)
+
+/**
+ * Padding:
+ *
+ *  - box_padding_*
+ *
+ **/
+
+@each $value, $i in (none, xxs, xs, s, m, l, xl, xxl)
+    @mixin media .box_padding_$(value)
+        padding: calc(var(--ek-step-indent) * $i)
+
+    @mixin media .box_padding-tb_$(value)
+        padding-top: calc(var(--ek-step-indent) * $i)
+        padding-bottom: calc(var(--ek-step-indent) * $i)
+
+    @mixin media .box_padding-lr_$(value)
+        padding-left: calc(var(--ek-step-indent) * $i)
+        padding-right: calc(var(--ek-step-indent) * $i)
+
+    @mixin media .box_padding-left_$(value)
+        padding-left: calc(var(--ek-step-indent) * $i)
+
+    @mixin media .box_padding-top_$(value)
+        padding-top: calc(var(--ek-step-indent) * $i)
+
+    @mixin media .box_padding-right_$(value)
+        padding-right: calc(var(--ek-step-indent) * $i)
+
+    @mixin media .box_padding-bottom_$(value)
+        padding-bottom: calc(var(--ek-step-indent) * $i)
+
+/**
+ * Round:
+ *
+ *  - box_round_*
+ *
+ **/
+
+@each $value, $i in (none, xxs, xs, s, m, l, xl, xxl)
+    @mixin media .box_round_$(value)
+        border-radius: calc(var(--ek-step-round) * $i)
+
+/**
+ * Width:
+ *
+ *  - box_width_*
+ *
+ **/
+
+@mixin width .box_width
+
+/**
+ * Border:
+ *
+ *  - box_border_*
+ *
+ **/
+
+.box[class*='box_border']
+    border: 1px solid transparent

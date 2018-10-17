@@ -1,6 +1,8 @@
 var path = require('path');
 var PROJECT_DEPS = process.env.PROJECT_DEPS || __dirname;
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var MiniCssExtractPlugin = require('mini-css-extract-plugin');
+var FixStyleOnlyEntriesPlugin = require('webpack-fix-style-only-entries');
+
 var postcssEach = require('postcss-each');
 var postcssFor = require('postcss-for');
 var postcssMath = require('postcss-math');
@@ -15,28 +17,77 @@ var postcssMqpacker = require('css-mqpacker');
 
 var evokitConfig = require('./evokit.config.js');
 
-var extractSTYL = new ExtractTextPlugin('[name]/style.css');
+const THEMES_LIST = [
+    'danger',
+    'dark',
+    'default',
+    'info',
+    'light',
+    'minor',
+    'muted',
+    'primary',
+    'reset',
+    'second',
+    'success',
+    'warning',
+]
 
-var entryList = {
-    '.':        path.resolve(__dirname, 'src/index.js'),
-    'Body':     path.resolve(__dirname, 'src/Body'),
-    'Box':      path.resolve(__dirname, 'src/Box'),
-    'Grid':     path.resolve(__dirname, 'src/Grid'),
-    'List':     path.resolve(__dirname, 'src/List'),
-    'Link':     path.resolve(__dirname, 'src/Link'),
-    'Picture':  path.resolve(__dirname, 'src/Picture'),
-    'Text':     path.resolve(__dirname, 'src/Text'),
-    'Line':     path.resolve(__dirname, 'src/Line'),
-    'Image':    path.resolve(__dirname, 'src/Image'),
+function getThemesPath(blockName, blockPath) {
+    const result = {};
+    THEMES_LIST.forEach((themeName) => {
+        const srcPath = `${blockPath}/${blockName}/themes/${themeName}`;
+        const distPath = `${blockName}/theme.${themeName}`;
+        result[distPath] = path.resolve(__dirname, srcPath);
+    });
+    return result;
+}
+
+const ENTRY_LIST = {
+    'Body/index': path.resolve(__dirname, 'src/blocks/Body'),
+    'Body/style':path.resolve(__dirname, 'src/blocks/Body/style'),
+
+    'Image/index': path.resolve(__dirname, 'src/blocks/Image'),
+    'Image/style': path.resolve(__dirname, 'src/blocks/Image/style'),
+
+    'Picture/index': path.resolve(__dirname, 'src/blocks/Picture'),
+    'Picture/style': path.resolve(__dirname, 'src/blocks/Picture/style'),
+
+    'Box/index': path.resolve(__dirname, 'src/blocks/Box'),
+    'Box/style': path.resolve(__dirname, 'src/blocks/Box/style'),
+    ...getThemesPath('Box', 'src/blocks'),
+
+    'Grid/index': path.resolve(__dirname, 'src/blocks/Grid'),
+    'Grid/style': path.resolve(__dirname, 'src/blocks/Grid/style'),
+    ...getThemesPath('Grid', 'src/blocks'),
+
+    'List/index': path.resolve(__dirname, 'src/blocks/List'),
+    'List/style': path.resolve(__dirname, 'src/blocks/List/style'),
+    ...getThemesPath('List', 'src/blocks'),
+
+    'Link/index': path.resolve(__dirname, 'src/blocks/Link'),
+    'Link/style': path.resolve(__dirname, 'src/blocks/Link/style'),
+    ...getThemesPath('Link', 'src/blocks'),
+
+    'Text/index': path.resolve(__dirname, 'src/blocks/Text'),
+    'Text/style': path.resolve(__dirname, 'src/blocks/Text/style'),
+    ...getThemesPath('Text', 'src/blocks'),
+
+    'Line/index': path.resolve(__dirname, 'src/blocks/Line'),
+    'Line/style': path.resolve(__dirname, 'src/blocks/Line/style'),
+    ...getThemesPath('Line', 'src/blocks'),
+
+    './index': path.resolve(__dirname, 'src'),
+    './style': path.resolve(__dirname, 'src/style'),
+    ...getThemesPath('.', 'src'),
 };
 
 module.exports = {
     mode: 'development',
-    entry: entryList,
+    entry: ENTRY_LIST,
     output: {
         library: 'EvoKit',
         path: path.resolve(__dirname, 'dist'),
-        filename: '[name]/index.js',
+        filename: '[name].js',
         libraryTarget: 'umd',
         globalObject: 'this'
     },
@@ -49,11 +100,14 @@ module.exports = {
             },
             {
                 test: /\.sss$/,
-                use: extractSTYL.extract([
+                use: [
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                    },
                     {
                         loader: 'css-loader',
                         options: {
-                            importLoaders: 1
+                            importLoaders: 1,
                         }
                     },
                     {
@@ -79,11 +133,11 @@ module.exports = {
                                 postcssPrefixer({
                                     prefix: 'ek-'
                                 }),
-                                postcssMqpacker()
+                                postcssMqpacker(),
                             ]
                         }
                     }
-                ])
+                ]
             },
         ],
     },
@@ -92,23 +146,29 @@ module.exports = {
             root: 'React',
             commonjs: 'react',
             commonjs2: 'react',
-            amd: 'react'
+            amd: 'react',
         },
         'classnames': {
             root: 'classNames',
             commonjs: 'classnames',
             commonjs2: 'classnames',
-            amd: 'classnames'
+            amd: 'classnames',
         },
         'prop-types': {
             root: 'PropTypes',
             commonjs: 'prop-types',
             commonjs2: 'prop-types',
-            amd: 'prop-types'
+            amd: 'prop-types',
         }
     },
     plugins: [
-        extractSTYL,
+        new FixStyleOnlyEntriesPlugin({
+            extensions: ['sss'],
+            silent: true,
+        }),
+        new MiniCssExtractPlugin({
+            filename: '[name].css',
+        }),
     ],
     resolve: {
         modules: [path.resolve(PROJECT_DEPS, 'node_modules'), 'node_modules'],
@@ -122,5 +182,6 @@ module.exports = {
         entrypoints: false,
         children: false,
         modules: false,
+        assetsSort: 'name',
     }
 };

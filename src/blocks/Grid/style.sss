@@ -1,0 +1,152 @@
+@import '../../mixins.sss'
+
+.grid
+    display: flex
+    flex-wrap: wrap
+    min-width: 0
+
+.grid__item
+    box-sizing: border-box
+    min-width: 0
+    max-width: 100%
+
+/**
+ * Indent:
+ *
+ *  - grid_indent_*
+ *
+ **/
+
+@each $name, $i in (none, xxs, xs, s, m, l, xl, xxl)
+    @mixin media .grid_indent_$(name)
+        margin: calc(var(--ek-step-indent) * -$i  / 2)
+
+        & > .grid__item
+            padding: calc(var(--ek-step-indent) * $i  / 2)
+
+        &[class*='grid_divider']
+            margin: 0
+
+            & > .grid__item
+                padding: calc(var(--ek-step-indent) * $i)
+
+/**
+ * Colum:
+ *
+ *  - grid_column_*
+ *
+ **/
+
+@each $value in (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+    @mixin media .grid_column_$(value)
+        & > .grid__item
+            flex: none
+            width: calc(100% / $value)
+
+        &[class*='grid_divider']
+
+            & > .grid__item
+                @mixin grid-divider-item $value
+
+@mixin media .grid_column_expand
+    & > .grid__item
+        flex: 1
+        width: auto
+
+/**
+ * Item width:
+ *
+ *  - grid__item_width_*
+ *
+ **/
+
+@mixin grid-item-width .grid__item_width
+
+@mixin media .grid__item_width_expand
+    flex: 1
+    width: auto
+
+/**
+ * Item order:
+ *
+ *  - grid__item_order_*
+ *
+ **/
+
+@each $value in (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+    @mixin media .grid__item_order_$(value)
+        order: $value
+
+/**
+ * Align:
+ *
+ *  - grid_align_*
+ *
+ **/
+
+@each $value in (left, center, right, justify)
+    @mixin media .grid_align_$(value)
+        @if $value == left
+            justify-content: flex-start
+        @else if $value == center
+            justify-content: center
+        @else if $value == right
+            justify-content: flex-end
+        @else if $value == justify
+            justify-content: space-between
+
+/**
+ * Valign:
+ *
+ *  - grid_valign_*
+ *
+ **/
+
+@each $value in (top, middle, bottom, baseline, justify)
+    @mixin media .grid_valign_$(value)
+        @if $value == top
+            align-items: flex-start
+        @else if $value == middle
+            align-items: center
+        @else if $value == bottom
+            align-content: flex-end
+            align-items: flex-end
+        @else if $value == baseline
+            align-items: baseline
+        @else if $value == justify
+            align-content: space-between
+
+/**
+ * Direction:
+ *
+ *  - grid_direction_*
+ *
+ **/
+
+@each $value in (row, row-reverse, column, column-reverse)
+    @mixin media .grid_direction_$(value)
+        flex-direction: $value
+
+/**
+ * Wrap:
+ *
+ *  - grid_wrap_*
+ *
+ **/
+
+@each $value in (nowrap, wrap, wrap-reverse)
+    @mixin media .grid_wrap_$(value)
+        flex-wrap: $value
+
+/**
+ * Divider:
+ *
+ *  - grid_divider_*
+ *
+ **/
+
+.grid[class*='grid_divider']
+    border: 0 solid transparent
+
+    & + .grid__item
+        border-left-width: 1px

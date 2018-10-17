@@ -1,14 +1,14 @@
 import { createBlock } from './component';
 
-import Body from './Body';
-import Box from './Box';
-import Grid from './Grid';
-import List from './List';
-import Link from './Link';
-import Picture from './Picture';
-import Text from './Text';
-import Line from './Line';
-import Image from './Image';
+import Body from './blocks/Body';
+import Box from './blocks/Box';
+import Grid from './blocks/Grid';
+import List from './blocks/List';
+import Link from './blocks/Link';
+import Picture from './blocks/Picture';
+import Text from './blocks/Text';
+import Line from './blocks/Line';
+import Image from './blocks/Image';
 
 export {
     createBlock,

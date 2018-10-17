@@ -1,0 +1,11 @@
+@import '../../../mixins.sss'
+
+@mixin media .list_color_primary
+    & > .list__item
+        &:before
+            color: var(--ek-primary-text-color)
+
+@mixin media .list_divider_primary
+    & > .list__item
+        & + .list__item
+            border-color: var(--ek-primary-divider-color)
