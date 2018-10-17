@@ -5,7 +5,7 @@ class Line extends React.Component {
     static blockTag = 'hr';
     static blockName = 'line';
     static blockMods = [
-        'size',
+        'indent',
         'style',
         'color',
     ];

@@ -5,9 +5,10 @@ class List extends React.Component {
     static blockTag = 'ul';
     static blockName = 'list';
     static blockMods = [
-        'theme',
+        'color',
+        'divider',
         'style',
-        'size',
+        'indent',
     ];
 
     render() {
