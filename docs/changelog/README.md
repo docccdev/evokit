@@ -23,7 +23,7 @@
 
 
 ## 2.0.1
-    - Исправлен баг в темах для [box][box], [grid][grid], [list][list].
+- Исправлен баг в темах для [box][box], [grid][grid], [list][list].
 
 ## 2.0.0
 - Удален блок [panel][panel].
