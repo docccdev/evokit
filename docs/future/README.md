@@ -24,7 +24,7 @@
 ```jsx
 /*react*/
 <script>
-const { Body, Grid, Panel, Box, List, Text, Link, Picture, Image, Line, Tags } = EvoKit;
+const { Body, Grid, Box, List, Text, Link, Picture, Image, Line } = EvoKit;
 
 export default class ExampleLink extends React.Component {
     render() {
@@ -39,7 +39,7 @@ export default class ExampleLink extends React.Component {
                 <br />
                 <br />
                 GRID:
-                <Grid grid-column={2} grid-size='m'>
+                <Grid grid-divider='success' grid-column={2} grid-size='m'>
                     <Grid.Item>
                         item
                     </Grid.Item>
@@ -49,16 +49,8 @@ export default class ExampleLink extends React.Component {
                 </Grid>
                 <br />
                 <br />
-                PANEL:
-                <Panel panel-theme='muted' panel-size='m'>
-                    <Panel.Body>
-                        body
-                    </Panel.Body>
-                </Panel>
-                <br />
-                <br />
                 BOX:
-                <Box box-padding='m' box-theme='muted'>
+                <Box box-padding='m' box-background='success' box-border='success' box-round='xs'>
                     box
                 </Box>
                 <br />
@@ -82,7 +74,7 @@ export default class ExampleLink extends React.Component {
                 <br />
                 LINK:
                 <div>
-                    <Link href="#" link-style='dotted'>dotted</Link>
+                    <Link href="#" link-style='dotted' link-color='success'>dotted</Link>
                 </div>
                 <br />
                 <br />
@@ -100,17 +92,6 @@ export default class ExampleLink extends React.Component {
                 <br />
                 LINE:
                 <Line line-size='m' />
-                <br />
-                <br />
-                TAGS:
-                <Tags tags-theme='muted' tags-size='m'>
-                    <Tags.Item>
-                        item
-                    </Tags.Item>
-                    <Tags.Item>
-                        item
-                    </Tags.Item>
-                </Tags>
             </div>
         )
     }
