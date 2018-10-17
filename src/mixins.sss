@@ -24,35 +24,50 @@
 
 
 @define-mixin font-size $selector
-    @each $name in (base, h1, h2, h3, h4, h5, h6, first, second, third)
+    @each $name in (small, default, big, h1, h2, h3, h4, h5, h6)
         @mixin media $(selector)_$(name)
-            @if $name == base
-                font-size: var(--EKFontSize)
+            @if $name == small
+                font-size: calc(var(--ek-default-font-size) - var(--ek-step-font-size))
+            @else if $name == default
+                font-size: var(--ek-default-font-size)
+            @else if $name == big
+                font-size: calc(var(--ek-default-font-size) + var(--ek-step-font-size))
             @else if $name == h1
-                font-size: var(--EKFontSizeH1)
+                font-size: var(--ek-font-size-h1)
             @else if $name == h2
-                font-size: var(--EKFontSizeH2)
+                font-size: var(--ek-font-size-h2)
             @else if $name == h3
-                font-size: var(--EKFontSizeH3)
+                font-size: var(--ek-font-size-h3)
             @else if $name == h4
-                font-size: var(--EKFontSizeH4)
+                font-size: var(--ek-font-size-h4)
             @else if $name == h5
-                font-size: var(--EKFontSizeH5)
+                font-size: var(--ek-font-size-h5)
             @else if $name == h6
-                font-size: var(--EKFontSizeH6)
-            @else if $name == first
-                font-size: var(--EKFontSizeFirst)
-            @else if $name == second
-                font-size: var(--EKFontSizeSecond)
-            @else if $name == third
-                font-size: var(--EKFontSizeThird)
+                font-size: var(--ek-font-size-h6)
+
+
+@define-mixin vertical-align $selector
+    @each $name in (baseline, bottom, middle, sub, super, text-bottom, text-top, top)
+        @mixin media $(selector)_$(name)
+            vertical-align: $name
+
+
+@define-mixin line-height $selector
+    @each $name in (default, medium, large)
+        @mixin media $(selector)_$(name)
+            @if $name == default
+                line-height: var(--ek-default-line-height)
+            @else if $name == medium
+                line-height: calc(var(--ek-default-line-height) + var(--ek-step-line-height))
+            @else if $name == large
+                line-height: calc(var(--ek-default-line-height) + (var(--ek-step-line-height) * 2))
 
 
 @define-mixin font-weight $selector
-    @each $name in (base, thin, light, medium, bold, black)
+    @each $name in (default, thin, light, medium, bold, black)
         @mixin media $(selector)_$(name)
-            @if $name == base
-                font-weight: var(--EKFontWeight)
+            @if $name == default
+                font-weight: var(--ek-default-font-weight)
             @else if $name == thin
                 font-weight: 100
             @else if $name == light

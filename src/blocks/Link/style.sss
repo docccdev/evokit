@@ -1,10 +1,9 @@
 @import '../../mixins.sss'
 
 .link
-    color: var(--EKColorLink)
+    color: var(--ek-default-link-color)
     text-decoration: none
     display: inline
-    line-height: var(--EKLineHeight)
 
     @media (hover), (min-width:0\0), (min--moz-device-pixel-ratio:0)
         cursor: pointer
@@ -29,6 +28,24 @@
  **/
 
 @mixin font-weight .link_weight
+
+/**
+ * Valign:
+ *
+ *  - link_valign_*
+ *
+ **/
+
+@mixin vertical-align .link_valign
+
+/**
+ * Line height:
+ *
+ *  - link_lheight_*
+ *
+ **/
+
+@mixin line-height .link_lheight
 
 /**
  * Style:

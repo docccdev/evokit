@@ -29,10 +29,35 @@
     - `--EKMediaWide` -> `--ek-media-wide`
     - `--EKMediaHuge` -> `--ek-media-huge`
     - `--EKStepSize` -> `--ek-step-indent`
+    - `--EKFontSizeH1` -> `--ek-font-size-h1`
+    - `--EKFontSizeH2` -> `--ek-font-size-h2`
+    - `--EKFontSizeH3` -> `--ek-font-size-h3`
+    - `--EKFontSizeH4` -> `--ek-font-size-h4`
+    - `--EKFontSizeH5` -> `--ek-font-size-h5`
+    - `--EKFontSizeH6` -> `--ek-font-size-h6`
+    - `--EKFontSize` -> `--ek-default-font-size`
+    - `--EKLineHeight` -> `--ek-default-line-height`
+    - `--EKFontWeight` -> `--ek-default-font-weight`
+    - `--EKBorderColor` -> `--ek-default-border-color`
+    - `--EKBackgroundColor` -> `--ek-default-background-color`
+    - `--EKColor` -> `--ek-default-text-color`
+    - `--EKMinWidth` -> `--ek-body-min-width`
+    - `--EKMaxWidth` -> `--ek-body-max-width`
+    - `--EKColorLink` -> `--ek-${theme_name}-link-color`
+    - `--EKColor${theme_name}` -> `--ek-${theme_name}-text-color`
+    - `--EKBackgroundColor${theme_name}` -> `--ek-${theme_name}-background-color`
+    - `--EKBorderColor${theme_name}` -> `--ek-${theme_name}-border-color`
 - Удаленные переменные `evokit.config.js`:
     - `--EKBorderRadius`
+    - `--EKLineHeightRead`
+    - `--EKFontSizeFirst`
+    - `--EKFontSizeSecond`
+    - `--EKFontSizeThird`
 - Добавленные переменные `evokit.config.js`:
     - `--ek-step-round`
+    - `--ek-step-font-size`
+    - `--ek-step-line-height`
+    - `--ek-${theme_name}-divider-color`
 - Удален модификатор отступа `xxxl` для всех блоков.
 - Удалены вспомогательные классы `.ek-width-*-*`.
 - Изменения модификаторов для блока [box][box]:
@@ -52,6 +77,16 @@
     - Переименовано `.ek-list_size_*` -> `.ek-list_indent_*`
     - Удалено `.ek-list_theme_divider`
     - Добавлено `.ek-list_divider_${theme_name}`
+- Изменения модификаторов для блока [link][link]:
+    - Переименовано `.ek-link_size_base` -> `.ek-link_size_default`
+    - Добавлено `.ek-link_size_(small|large)`
+    - Добавлено `.ek-link_lheight_(default|medium|large)`
+    - Добавлено `.ek-link_valign_(baseline|bottom|middle|sub|super|text-bottom|text-top|top)`
+- Изменения модификаторов для блока [text][text]:
+    - Переименовано `.ek-text_size_base` -> `.ek-text_size_default`
+    - Удалено `.ek-text_style_read`
+    - Добавлено `.ek-text_lheight_(default|medium|large)`
+    - Добавлено `.ek-text_size_(small|large)`
 - Темы вынесены в отдельные файлы:
     - `theme.danger.css`
     - `theme.dark.css`

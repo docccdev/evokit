@@ -9,6 +9,8 @@ class Link extends React.Component {
         'size',
         'weight',
         'style',
+        'valign',
+        'lheight',
     ];
 
     render() {

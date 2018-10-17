@@ -13,6 +13,7 @@ class Text extends React.Component {
         'wrap',
         'style',
         'transform',
+        'lheight',
     ];
 
     render() {

@@ -1,3 +1,5 @@
+@import '../../mixins.sss'
+
 .image
     outline: none
     border: 0
@@ -30,15 +32,11 @@
 /**
  * Vertical align:
  *
- *  - image_valign_top
- *  - image_valign_middle
- *  - image_valign_bottom
+ *  - image_valign_*
  *
  **/
 
-@each $value in (top, middle, bottom)
-    .image_valign_$(value)
-        vertical-align: $value
+@mixin vertical-align .image_valign
 
 /**
  * Mirror:
