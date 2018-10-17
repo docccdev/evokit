@@ -62,15 +62,3 @@
                 @else if $name == disc
                     content: '\2022'
                     font-weight: bold
-
-/**
- * Divider:
- *
- *  - list_divider
- *
- **/
-
-.list[class*='list_divider']
-    & > .list__item
-        & + .list__item
-            border-top: 1px solid transparent

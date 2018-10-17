@@ -137,16 +137,3 @@
 @each $value in (nowrap, wrap, wrap-reverse)
     @mixin media .grid_wrap_$(value)
         flex-wrap: $value
-
-/**
- * Divider:
- *
- *  - grid_divider_*
- *
- **/
-
-.grid[class*='grid_divider']
-    border: 0 solid transparent
-
-    & + .grid__item
-        border-left-width: 1px

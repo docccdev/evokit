@@ -3,4 +3,7 @@
 @mixin media .grid_divider_second
 
     & > .grid__item
-        border-color: var(--ek-second-divider-color)
+        border: 0 solid var(--ek-second-divider-color)
+
+        & + .grid__item
+            border-left-width: 1px

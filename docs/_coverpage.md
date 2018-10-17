@@ -2,7 +2,7 @@
 
 ![logo](_media/logo.svg)
 
-# EvoKit <small>2.0.0</small>
+# EvoKit <small>2.0.1</small>
 
 > Framework для разработки быстрых и мощных веб-интерфейсов
 
