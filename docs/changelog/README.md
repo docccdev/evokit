@@ -19,7 +19,7 @@
 
 # CHANGELOG
 
-!> **v2.0.0** in progress and not released!
+!> **v2.0.0** изменились все переменные в конфиге!
 
 ## 2.0.0
 - Удален блок [panel][panel].
