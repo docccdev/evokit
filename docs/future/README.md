@@ -39,7 +39,7 @@ export default class ExampleLink extends React.Component {
                 <br />
                 <br />
                 GRID:
-                <Grid grid-divider='success' grid-column={2} grid-size='m'>
+                <Grid grid-divider='success' grid-column={2} grid-indent='m'>
                     <Grid.Item>
                         item
                     </Grid.Item>
@@ -56,7 +56,7 @@ export default class ExampleLink extends React.Component {
                 <br />
                 <br />
                 LIST:
-                <List list-size='m'>
+                <List list-indent='m' list-divider='default'>
                     <List.Item>
                         item
                     </List.Item>
@@ -68,20 +68,34 @@ export default class ExampleLink extends React.Component {
                 <br />
                 TEXT:
                 <div>
-                    <Text text-tag='h1' text-size='h1' style={{ margin: 0 }}>H1</Text>
+                    <Text text-tag='small' text-size='small'>small</Text>
+                    <Text text-size='default'>default</Text>
+                    <Text text-tag='big' text-size='big'>big</Text>
+                    <Text text-tag='h1' text-size='h1'>H1</Text>
+                    <br />
+                    <br />
+                    <Text text-lheight='default'>
+                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                    </Text>
                 </div>
                 <br />
                 <br />
                 LINK:
                 <div>
-                    <Link href="#" link-style='dotted' link-color='success'>dotted</Link>
+                    <Link
+                        href="#"
+                        link-style='dotted'
+                        link-color='success'
+                        link-valign='text-top'
+                        link-lheight='medium'
+                    >dotted</Link>
                 </div>
                 <br />
                 <br />
                 PICTURE:
-                <div className='ek-width-3-10'>
+                <Box box-width='3-10'>
                     <Picture src='https://picsum.photos/300/300' picture-style='round' />
-                </div>
+                </Box>
                 <br />
                 <br />
                 IMAGE:
@@ -91,7 +105,7 @@ export default class ExampleLink extends React.Component {
                 <br />
                 <br />
                 LINE:
-                <Line line-size='m' />
+                <Line line-indent='m' />
             </div>
         )
     }

@@ -25,6 +25,7 @@ class Box extends React.Component {
         'display',
         'position',
         'place',
+        'width',
     ];
 
     render() {
