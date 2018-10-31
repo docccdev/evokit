@@ -7,6 +7,7 @@ class Body extends React.Component {
     static blockMods = [
         'size',
         'indent',
+        'background',
     ];
 
     render() {

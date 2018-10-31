@@ -23,6 +23,13 @@
             @mixin-content
 
 
+@define-mixin hover $selector
+    @media (hover), (min-width:0\0), (min--moz-device-pixel-ratio:0)
+        $(selector)
+            &:hover
+                @mixin-content
+
+
 @define-mixin font-size $selector
     @each $name in (small, default, big, h1, h2, h3, h4, h5, h6)
         @mixin media $(selector)_$(name)

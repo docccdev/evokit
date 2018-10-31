@@ -45,6 +45,7 @@ function getThemesPath(blockName, blockPath) {
 const ENTRY_LIST = {
     'Body/index': path.resolve(__dirname, 'src/blocks/Body'),
     'Body/style':path.resolve(__dirname, 'src/blocks/Body/style'),
+    ...getThemesPath('Body', 'src/blocks'),
 
     'Image/index': path.resolve(__dirname, 'src/blocks/Image'),
     'Image/style': path.resolve(__dirname, 'src/blocks/Image/style'),
