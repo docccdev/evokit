@@ -6,11 +6,28 @@
 ``` html
 <img
     class='ek-image'
-    src='https://picsum.photos/100/100/?random'
-    width='100'
-    height='100'
+    src='https://picsum.photos/100/100'
 >
-Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.
+```
+
+```jsx
+/*react*/
+<script>
+const { Image } = EvoKit;
+
+export default class Example extends React.Component {
+    render() {
+        return (
+            <Image
+                src='https://picsum.photos/100/100'
+                width={100}
+                height={100}
+                alt=''
+            />
+        )
+    }
+}
+</script>
 ```
 
 ---
@@ -25,28 +42,46 @@
 
 ``` html
 <img
-    class='ek-image ek-image_align_left'
-    src='https://picsum.photos/100/100/?random'
-    width='100'
-    height='100'
->
-Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.." Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке, некоторые - намеренно (например, юмористические варианты).
-<div class="ek-line ek-line_size_m"></div>
-<img
     class='ek-image ek-image_align_center'
-    src='https://picsum.photos/100/100/?random'
-    width='100'
-    height='100'
+    src='https://picsum.photos/100/100'
 >
-Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.." Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке, некоторые - намеренно (например, юмористические варианты).
-<div class="ek-line ek-line_size_m"></div>
-<img
-    class='ek-image ek-image_align_right'
-    src='https://picsum.photos/100/100/?random'
-    width='100'
-    height='100'
->
-Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.." Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке, некоторые - намеренно (например, юмористические варианты).
+```
+
+```jsx
+/*react*/
+<script>
+const { Image } = EvoKit;
+
+export default class Example extends React.Component {
+    render() {
+        return (
+            <div>
+                <Image
+                    image-align='left'
+                    src='https://picsum.photos/100/100'
+                    width={100}
+                    height={100}
+                    alt=''
+                />
+                <Image
+                    image-align='right'
+                    src='https://picsum.photos/100/100'
+                    width={100}
+                    height={100}
+                    alt=''
+                />
+                <Image
+                    image-align='center'
+                    src='https://picsum.photos/100/100'
+                    width={100}
+                    height={100}
+                    alt=''
+                />
+            </div>
+        )
+    }
+}
+</script>
 ```
 
 ---
@@ -61,28 +96,55 @@
 
 ``` html
 <img
-    class='ek-image ek-image_valign_top'
-    src='https://picsum.photos/100/100/?random'
-    width='100'
-    height='100'
->
-Выравнивание по верхнему краю строки
-<hr class="ek-line ek-line_size_m" />
-<img
     class='ek-image ek-image_valign_middle'
-    src='https://picsum.photos/100/100/?random'
-    width='100'
-    height='100'
+    src='https://picsum.photos/100/100'
 >
-Выравнивание по середине
-<hr class="ek-line ek-line_size_m" />
-<img
-    class='ek-image ek-image_valign_bottom'
-    src='https://picsum.photos/100/100/?random'
-    width='100'
-    height='100'
->
-Выравнивание по нижнему краю
+```
+
+```jsx
+/*react*/
+<script>
+const { Image, Grid } = EvoKit;
+
+export default class Example extends React.Component {
+    render() {
+        return (
+            <Grid grid-indent='xl'>
+                <Grid.Item>
+                    <Image
+                        image-valign='top'
+                        src='https://picsum.photos/100/100'
+                        width={100}
+                        height={100}
+                        alt=''
+                    />
+                    top
+                </Grid.Item>
+                <Grid.Item>
+                    <Image
+                        image-valign='middle'
+                        src='https://picsum.photos/100/100'
+                        width={100}
+                        height={100}
+                        alt=''
+                    />
+                    middle
+                </Grid.Item>
+                <Grid.Item>
+                    <Image
+                        image-valign='bottom'
+                        src='https://picsum.photos/100/100'
+                        width={100}
+                        height={100}
+                        alt=''
+                    />
+                    bottom
+                </Grid.Item>
+            </Grid>
+        )
+    }
+}
+</script>
 ```
 
 ---
@@ -97,31 +159,62 @@
 
 ``` html
 <img
-    class='ek-image'
-    src='https://picsum.photos/100/100/?random'
-    width='100'
-    height='100'
-    alt=''
->
-<img
-    class='ek-image ek-image_mirror_x'
-    src='https://picsum.photos/100/100/?random'
-    width='100'
-    height='100'
-    alt=''
->
-<img
     class='ek-image ek-image_mirror_y'
-    src='https://picsum.photos/100/100/?random'
-    width='100'
-    height='100'
-    alt=''
+    src='https://picsum.photos/100/100'
 >
-<img
-    class='ek-image ek-image_mirror_xy'
-    src='https://picsum.photos/100/100/?random'
-    width='100'
-    height='100'
-    alt=''
->
+```
+
+```jsx
+/*react*/
+<script>
+const { Image, Grid } = EvoKit;
+
+export default class Example extends React.Component {
+    render() {
+        return (
+            <Grid grid-indent='xl'>
+                <Grid.Item>
+                    original <br />
+                    <Image
+                        src='https://picsum.photos/100/100'
+                        width={100}
+                        height={100}
+                        alt=''
+                    />
+                </Grid.Item>
+                <Grid.Item>
+                    horizontal <br />
+                    <Image
+                        image-mirror='x'
+                        src='https://picsum.photos/100/100'
+                        width={100}
+                        height={100}
+                        alt=''
+                    />
+                </Grid.Item>
+                <Grid.Item>
+                    vertical <br />
+                    <Image
+                        image-mirror='y'
+                        src='https://picsum.photos/100/100'
+                        width={100}
+                        height={100}
+                        alt=''
+                    />
+                </Grid.Item>
+                <Grid.Item>
+                    horizontal & vertical <br />
+                    <Image
+                        image-mirror='xy'
+                        src='https://picsum.photos/100/100'
+                        width={100}
+                        height={100}
+                        alt=''
+                    />
+                </Grid.Item>
+            </Grid>
+        )
+    }
+}
+</script>
 ```

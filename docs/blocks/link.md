@@ -39,19 +39,7 @@ export default class Example extends React.Component {
 |  `.ek-link_color_`[colors]  | Цвет ссылки.  |
 
 ``` html
-<a class='ek-link ek-link_color_base'>Base</a>
-<a class='ek-link ek-link_color_link'>Link</a>
-<a class='ek-link ek-link_color_white'>White</a>
-<a class='ek-link ek-link_color_muted'>Muted</a>
-<a class='ek-link ek-link_color_link'>Link</a>
-<a class='ek-link ek-link_color_info'>Info</a>
 <a class='ek-link ek-link_color_success'>Success</a>
-<a class='ek-link ek-link_color_warning'>Warning</a>
-<a class='ek-link ek-link_color_error'>Error</a>
-<a class='ek-link ek-link_color_first'>First</a>
-<a class='ek-link ek-link_color_second'>Second</a>
-<a class='ek-link ek-link_color_third'>Third</a>
-<a class='ek-link ek-link_color_transparent'>Transparent</a>
 ```
 
 ```jsx
@@ -63,29 +51,29 @@ export default class Example extends React.Component {
     render() {
         return (
             <div>
-                <Link href="#" link-color='base'>base</Link>
+                <Link href="#" link-color='default'>default</Link>
                 <br />
-                <Link href="#" link-color='link'>link</Link>
-                <br />
-                <Link href="#" link-color='white'>white</Link>
+                <Link href="#" link-color='reset'>reset</Link>
                 <br />
                 <Link href="#" link-color='muted'>muted</Link>
                 <br />
-                <Link href="#" link-color='info'>info</Link>
+                <Link href="#" link-color='second'>second</Link>
+                <br />
+                <Link href="#" link-color='minor'>minor</Link>
+                <br />
+                <Link href="#" link-color='light'>light</Link>
+                <br />
+                <Link href="#" link-color='muted'>muted</Link>
+                <br />
+                <Link href="#" link-color='dark'>dark</Link>
                 <br />
                 <Link href="#" link-color='success'>success</Link>
                 <br />
+                <Link href="#" link-color='info'>info</Link>
+                <br />
                 <Link href="#" link-color='warning'>warning</Link>
                 <br />
-                <Link href="#" link-color='error'>error</Link>
-                <br />
-                <Link href="#" link-color='first'>first</Link>
-                <br />
-                <Link href="#" link-color='second'>second</Link>
-                <br />
-                <Link href="#" link-color='third'>third</Link>
-                <br />
-                <Link href="#" link-color='transparent'>transparent</Link>
+                <Link href="#" link-color='danger'>danger</Link>
             </div>
         )
     }
@@ -102,12 +90,40 @@ export default class Example extends React.Component {
 |  `.ek-link_size_`[font-size][text]  | Размер текста.  |
 
 ``` html
-<a class='ek-link ek-link_size_h1'>H1</a>
 <a class='ek-link ek-link_size_h2'>H2</a>
-<a class='ek-link ek-link_size_h3'>H3</a>
-<a class='ek-link ek-link_size_h4'>H4</a>
-<a class='ek-link ek-link_size_h5'>H5</a>
-<a class='ek-link ek-link_size_h6'>H6</a>
+```
+
+```jsx
+/*react*/
+<script>
+const { Link } = EvoKit;
+
+export default class Example extends React.Component {
+    render() {
+        return (
+            <div>
+                <Link href="#" link-size='small'>small</Link>
+                <br />
+                <Link href="#" link-size='default'>default</Link>
+                <br />
+                <Link href="#" link-size='big'>big</Link>
+                <br />
+                <Link href="#" link-size='h1'>h1</Link>
+                <br />
+                <Link href="#" link-size='h2'>h2</Link>
+                <br />
+                <Link href="#" link-size='h3'>h3</Link>
+                <br />
+                <Link href="#" link-size='h4'>h4</Link>
+                <br />
+                <Link href="#" link-size='h5'>h5</Link>
+                <br />
+                <Link href="#" link-size='h6'>h6</Link>
+            </div>
+        )
+    }
+}
+</script>
 ```
 
 ---
@@ -120,12 +136,34 @@ export default class Example extends React.Component {
 
 
 ``` html
-<a class='ek-link ek-link_weight_base'>base</a>
-<a class='ek-link ek-link_weight_thin'>100</a>
-<a class='ek-link ek-link_weight_light'>300</a>
-<a class='ek-link ek-link_weight_medium'>500</a>
-<a class='ek-link ek-link_weight_bold'>700</a>
-<a class='ek-link ek-link_weight_black'>900</a>
+<a class='ek-link ek-link_weight_medium'>medium 500</a>
+```
+
+```jsx
+/*react*/
+<script>
+const { Link } = EvoKit;
+
+export default class Example extends React.Component {
+    render() {
+        return (
+            <div>
+                <Link href="#" link-weight='default'>default 400</Link>
+                <br />
+                <Link href="#" link-weight='thin'>thin 100</Link>
+                <br />
+                <Link href="#" link-weight='light'>light 300</Link>
+                <br />
+                <Link href="#" link-weight='medium'>medium 500</Link>
+                <br />
+                <Link href="#" link-weight='bold'>bold 700</Link>
+                <br />
+                <Link href="#" link-weight='black'>black 900</Link>
+            </div>
+        )
+    }
+}
+</script>
 ```
 
 ---
@@ -139,6 +177,23 @@ export default class Example extends React.Component {
 
 ``` html
 <a class='ek-link ek-link_style_dotted'>Пунктирная ссылка</a>
-<hr class="ek-line ek-line_size_xl">
-<a class='ek-link ek-link_style_multi-line'>Многострочная <br><br> ссылка</a>
+```
+
+```jsx
+/*react*/
+<script>
+const { Link } = EvoKit;
+
+export default class Example extends React.Component {
+    render() {
+        return (
+            <div>
+                <Link href="#" link-style='dotted'>dotted</Link>
+                <br />
+                <Link href="#" link-style='multi-line'>ссылка в две <br /> строки</Link>
+            </div>
+        )
+    }
+}
+</script>
 ```

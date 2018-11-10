@@ -14,7 +14,7 @@
 Блок состоит из одного класса `.ek-line`.
 
 ``` html
-<hr class='ek-line' />
+<hr class='ek-line'>
 ```
 
 ```jsx
@@ -25,7 +25,7 @@ const { Line } = EvoKit;
 export default class Example extends React.Component {
     render() {
         return (
-            <Line />
+            <Line line-indent='xl' />
         )
     }
 }
@@ -40,10 +40,10 @@ export default class Example extends React.Component {
 
 |         Class         |          Description           |
 |-----------------------|--------------------------------|
-|  `.ek-line_size_`[sizes]  | Отступ сверху и снизу.  |
+|  `.ek-line_indent_`[sizes]  | Отступ сверху и снизу.  |
 
 ``` html
-<hr class='ek-line ek-line_size_xxxl' />
+<hr class='ek-line ek-line_indent_xl'>
 ```
 
 ```jsx
@@ -55,14 +55,13 @@ export default class Example extends React.Component {
     render() {
         return (
             <div>
-                <Line line-size='xxs' />
-                <Line line-size='xs' />
-                <Line line-size='s' />
-                <Line line-size='m' />
-                <Line line-size='l' />
-                <Line line-size='xl' />
-                <Line line-size='xxl' />
-                <Line line-size='xxxl' />
+                <Line line-indent='xxs' />
+                <Line line-indent='xs' />
+                <Line line-indent='s' />
+                <Line line-indent='m' />
+                <Line line-indent='l' />
+                <Line line-indent='xl' />
+                <Line line-indent='xxl' />
             </div>
         )
     }
@@ -81,19 +80,7 @@ export default class Example extends React.Component {
 |  `.ek-line_color_`[colors]  | Цвет.  |
 
 ``` html
-<hr class='ek-line ek-line_color_base'>
-<hr class='ek-line ek-line_color_transparent'>
-<hr class='ek-line ek-line_color_white'>
-<hr class='ek-line ek-line_color_black'>
-<hr class='ek-line ek-line_color_link'>
-<hr class='ek-line ek-line_color_muted'>
 <hr class='ek-line ek-line_color_success'>
-<hr class='ek-line ek-line_color_info'>
-<hr class='ek-line ek-line_color_warning'>
-<hr class='ek-line ek-line_color_error'>
-<hr class='ek-line ek-line_color_first'>
-<hr class='ek-line ek-line_color_second'>
-<hr class='ek-line ek-line_color_third'>
 ```
 
 ```jsx
@@ -105,25 +92,16 @@ export default class Example extends React.Component {
     render() {
         return (
             <div>
-                <Line line-color='base' />
-                <br />
-                <Line line-color='link' />
-                <br />
-                <Line line-color='muted' />
-                <br />
-                <Line line-color='success' />
-                <br />
-                <Line line-color='info' />
-                <br />
-                <Line line-color='warning' />
-                <br />
-                <Line line-color='error' />
-                <br />
-                <Line line-color='first' />
-                <br />
-                <Line line-color='second' />
-                <br />
-                <Line line-color='third' />
+                <Line line-indent='xl' line-color='base' />
+                <Line line-indent='xl' line-color='link' />
+                <Line line-indent='xl' line-color='muted' />
+                <Line line-indent='xl' line-color='success' />
+                <Line line-indent='xl' line-color='info' />
+                <Line line-indent='xl' line-color='warning' />
+                <Line line-indent='xl' line-color='error' />
+                <Line line-indent='xl' line-color='first' />
+                <Line line-indent='xl' line-color='second' />
+                <Line line-indent='xl' line-color='third' />
             </div>
         )
     }
@@ -143,11 +121,7 @@ export default class Example extends React.Component {
 | `.ek-line_style_dashed` | Пунктирный.            |
 
 ``` html
-<hr class='ek-line ek-line_style_dotted' />
-<br>
-<div>текст</div>
-<br>
-<hr class='ek-line ek-line_style_dashed' />
+<hr class='ek-line ek-line_style_dotted'>
 ```
 
 ```jsx
@@ -159,9 +133,8 @@ export default class Example extends React.Component {
     render() {
         return (
             <div>
-                <Line line-style='dotted' />
-                <br />
-                <Line line-style='dashed' />
+                <Line line-indent='xl' line-style='dotted' />
+                <Line line-indent='xl' line-style='dashed' />
             </div>
         )
     }
