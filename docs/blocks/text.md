@@ -1,7 +1,6 @@
 [colors]: base/colors.md
 [text]: base/text.md
 
-
 # Text
 
 Текстовый блок
@@ -10,10 +9,25 @@
 
 ## Использование
 
-Добавьте класс `.ek-text` к текстовому элементу и выберите нужный модификатор.
-
 ``` html
 <span class='ek-text'>Текст</span>
+```
+
+```jsx
+/*react*/
+<script>
+const { Text } = EvoKit;
+
+export default class Example extends React.Component {
+    render() {
+        return (
+            <Text>
+                Текст
+            </Text>
+        )
+    }
+}
+</script>
 ```
 
 ---
@@ -25,16 +39,46 @@
 |  `.ek-text_color_`[colors]  | Цвет текста.  |
 
 ``` html
-<span class='ek-text ek-text_color_base'>Base</span>
-<span class='ek-text ek-text_color_white'>White</span>
-<span class='ek-text ek-text_color_link'>Link</span>
-<span class='ek-text ek-text_color_red'>Red</span>
-<span class='ek-text ek-text_color_yellow'>Yellow</span>
-<span class='ek-text ek-text_color_muted'>Muted</span>
-<span class='ek-text ek-text_color_info'>Info</span>
 <span class='ek-text ek-text_color_success'>Success</span>
-<span class='ek-text ek-text_color_warning'>Warning</span>
-<span class='ek-text ek-text_color_error'>Error</span>
+```
+
+```jsx
+/*react*/
+<script>
+const { Text } = EvoKit;
+
+export default class Example extends React.Component {
+    render() {
+        return (
+            <div>
+                <Text text-color='default'>default</Text>
+                <br />
+                <Text text-color='reset'>reset</Text>
+                <br />
+                <Text text-color='muted'>muted</Text>
+                <br />
+                <Text text-color='second'>second</Text>
+                <br />
+                <Text text-color='minor'>minor</Text>
+                <br />
+                <Text text-color='light'>light</Text>
+                <br />
+                <Text text-color='muted'>muted</Text>
+                <br />
+                <Text text-color='dark'>dark</Text>
+                <br />
+                <Text text-color='success'>success</Text>
+                <br />
+                <Text text-color='info'>info</Text>
+                <br />
+                <Text text-color='warning'>warning</Text>
+                <br />
+                <Text text-color='danger'>danger</Text>
+            </div>
+        )
+    }
+}
+</script>
 ```
 
 ---
@@ -46,12 +90,40 @@
 |  `.ek-text_size_`[font-size][text]  | Размер текста.  |
 
 ``` html
-<span class='ek-text ek-text_size_h1'>H1</span>
 <span class='ek-text ek-text_size_h2'>H2</span>
-<span class='ek-text ek-text_size_h3'>H3</span>
-<span class='ek-text ek-text_size_h4'>H4</span>
-<span class='ek-text ek-text_size_h5'>H5</span>
-<span class='ek-text ek-text_size_h6'>H6</span>
+```
+
+```jsx
+/*react*/
+<script>
+const { Text } = EvoKit;
+
+export default class Example extends React.Component {
+    render() {
+        return (
+            <div>
+                <Text text-size='small'>small</Text>
+                <br />
+                <Text text-size='default'>default</Text>
+                <br />
+                <Text text-size='big'>big</Text>
+                <br />
+                <Text text-size='h1'>h1</Text>
+                <br />
+                <Text text-size='h2'>h2</Text>
+                <br />
+                <Text text-size='h3'>h3</Text>
+                <br />
+                <Text text-size='h4'>h4</Text>
+                <br />
+                <Text text-size='h5'>h5</Text>
+                <br />
+                <Text text-size='h6'>h6</Text>
+            </div>
+        )
+    }
+}
+</script>
 ```
 
 ---
@@ -60,16 +132,38 @@
 
 |        Class       |    Description   |
 |--------------------|------------------|
-|  `.ek-text_weight_`[font-weight][text]  | Насыщенность текста.  |
+|  `.ek-text_weight_`[font-weight][text]  | Насыщенность шрифта.  |
 
 
 ``` html
-<span class='ek-text ek-text_weight_base'>base</span>
-<span class='ek-text ek-text_weight_thin'>100</span>
-<span class='ek-text ek-text_weight_light'>300</span>
-<span class='ek-text ek-text_weight_medium'>500</span>
-<span class='ek-text ek-text_weight_bold'>700</span>
-<span class='ek-text ek-text_weight_black'>900</span>
+<span class='ek-text ek-text_weight_medium'>medium 500</span>
+```
+
+```jsx
+/*react*/
+<script>
+const { Text } = EvoKit;
+
+export default class Example extends React.Component {
+    render() {
+        return (
+            <div>
+                <Text text-weight='default'>default 400</Text>
+                <br />
+                <Text text-weight='thin'>thin 100</Text>
+                <br />
+                <Text text-weight='light'>light 300</Text>
+                <br />
+                <Text text-weight='medium'>medium 500</Text>
+                <br />
+                <Text text-weight='bold'>bold 700</Text>
+                <br />
+                <Text text-weight='black'>black 900</Text>
+            </div>
+        )
+    }
+}
+</script>
 ```
 
 ---
