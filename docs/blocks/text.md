@@ -1,333 +1,276 @@
 [colors]: base/colors.md
 [text]: base/text.md
+[media]: base/media.md
 
-# Text
+[text-color]: #text-color
+[text-size]: #text-size
+[text-weight]: #text-weight
+[text-align]: #text-align
+[text-valign]: #text-valign
+[text-wrap]: #text-wrap
+[text-style]: #text-style
+[text-transform]: #text-transform
+[text-lheight]: #text-lheight
+
+
+[text]: #text
+
+# EvoKit - Text
 
 Текстовый блок
 
+!> Модификаторы имеют [Media][media] параметры.
+
 ---
 
-## Использование
+## Usage
 
-``` html
-<span class='ek-text'>Текст</span>
+- [Text][text]
+
+```jsx
+// Common import for all blocks and css
+import { Text } from 'evokit';
+import 'evokit/dist/style.css';
+
+// Single import block and css
+import Text from 'evokit/dist/Text';
+import 'evokit/dist/Text/style.css';
+
+...
+
+<Text>
+    content
+</Text>
+
 ```
+
+---
+
+## Text
+
+| Property | Type | Description |
+|----------|----------|-------------|
+| [text-color]     | `string`, `object`, `array` | Цвет текста |
+| [text-size]      | `string`, `object`, `array` | Размер текста |
+| [text-weight]    | `string`, `object`, `array` | Насыщенность |
+| [text-align]     | `string`, `object`, `array` | Горизонтальное выравнивание |
+| [text-valign]    | `string`, `object`, `array` | Вертикальное выравнивание |
+| [text-wrap]      | `string`, `object`, `array` | Перенос и обрезание |
+| [text-style]     | `string`, `object`, `array` | Стили (подчеркнутый/перечеркнутый) |
+| [text-transform] | `string`, `object`, `array` | Преобразование регистра |
+| [text-lheight]   | `string`, `object`, `array` | Межстрочный интервал |
+
+### `text-color`
 
 ```jsx
 /*react*/
 <script>
-const { Text } = EvoKit;
+const { Text, Example } = EvoKit;
 
-export default class Example extends React.Component {
+export default class ExampleList extends React.Component {
     render() {
         return (
-            <Text>
-                Текст
-            </Text>
+            <Example values={['danger', 'dark', 'default', 'info', 'light', 'minor', 'muted', 'primary', 'reset', 'second', 'success', 'warning']}>
+                {(value) => (
+                    <Text text-color={value}>
+                        Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.." Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке, некоторые - намеренно (например, юмористические варианты).
+                    </Text>
+                )}
+            </Example>
         )
     }
 }
 </script>
 ```
 
----
-
-## Цвет
-
-|         Class         |         Description         |
-|-----------------------|-----------------------------|
-|  `.ek-text_color_`[colors]  | Цвет текста.  |
-
-``` html
-<span class='ek-text ek-text_color_success'>Success</span>
-```
+### `text-size`
 
 ```jsx
 /*react*/
 <script>
-const { Text } = EvoKit;
+const { Text, Example } = EvoKit;
 
-export default class Example extends React.Component {
+export default class ExampleList extends React.Component {
     render() {
         return (
-            <div>
-                <Text text-color='default'>default</Text>
-                <br />
-                <Text text-color='reset'>reset</Text>
-                <br />
-                <Text text-color='muted'>muted</Text>
-                <br />
-                <Text text-color='second'>second</Text>
-                <br />
-                <Text text-color='minor'>minor</Text>
-                <br />
-                <Text text-color='light'>light</Text>
-                <br />
-                <Text text-color='muted'>muted</Text>
-                <br />
-                <Text text-color='dark'>dark</Text>
-                <br />
-                <Text text-color='success'>success</Text>
-                <br />
-                <Text text-color='info'>info</Text>
-                <br />
-                <Text text-color='warning'>warning</Text>
-                <br />
-                <Text text-color='danger'>danger</Text>
-            </div>
+            <Example values={['small', 'default', 'big', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6']}>
+                {(value) => (
+                    <Text text-size={value}>
+                        Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.." Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке, некоторые - намеренно (например, юмористические варианты).
+                    </Text>
+                )}
+            </Example>
         )
     }
 }
 </script>
 ```
 
----
-
-## Размер
-
-|         Class         |         Description         |
-|-----------------------|-----------------------------|
-|  `.ek-text_size_`[font-size][text]  | Размер текста.  |
-
-``` html
-<span class='ek-text ek-text_size_h2'>H2</span>
-```
+### `text-weight`
 
 ```jsx
 /*react*/
 <script>
-const { Text } = EvoKit;
+const { Text, Example } = EvoKit;
 
-export default class Example extends React.Component {
+export default class ExampleList extends React.Component {
     render() {
         return (
-            <div>
-                <Text text-size='small'>small</Text>
-                <br />
-                <Text text-size='default'>default</Text>
-                <br />
-                <Text text-size='big'>big</Text>
-                <br />
-                <Text text-size='h1'>h1</Text>
-                <br />
-                <Text text-size='h2'>h2</Text>
-                <br />
-                <Text text-size='h3'>h3</Text>
-                <br />
-                <Text text-size='h4'>h4</Text>
-                <br />
-                <Text text-size='h5'>h5</Text>
-                <br />
-                <Text text-size='h6'>h6</Text>
-            </div>
+            <Example values={['default', 'thin', 'light', 'medium', 'bold', 'black']}>
+                {(value) => (
+                    <Text text-weight={value}>
+                        Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.." Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке, некоторые - намеренно (например, юмористические варианты).
+                    </Text>
+                )}
+            </Example>
         )
     }
 }
 </script>
 ```
 
----
-
-## Насыщенность шрифта
-
-|        Class       |    Description   |
-|--------------------|------------------|
-|  `.ek-text_weight_`[font-weight][text]  | Насыщенность шрифта.  |
-
-
-``` html
-<span class='ek-text ek-text_weight_medium'>medium 500</span>
-```
+### `text-align`
 
 ```jsx
 /*react*/
 <script>
-const { Text } = EvoKit;
+const { Text, Example } = EvoKit;
 
-export default class Example extends React.Component {
+export default class ExampleList extends React.Component {
     render() {
         return (
-            <div>
-                <Text text-weight='default'>default 400</Text>
-                <br />
-                <Text text-weight='thin'>thin 100</Text>
-                <br />
-                <Text text-weight='light'>light 300</Text>
-                <br />
-                <Text text-weight='medium'>medium 500</Text>
-                <br />
-                <Text text-weight='bold'>bold 700</Text>
-                <br />
-                <Text text-weight='black'>black 900</Text>
-            </div>
+            <Example values={['left', 'center', 'right', 'justify']}>
+                {(value) => (
+                    <Text text-align={value}>
+                        Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.." Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке, некоторые - намеренно (например, юмористические варианты).
+                    </Text>
+                )}
+            </Example>
         )
     }
 }
 </script>
 ```
 
----
+### `text-valign`
 
-## Горизонтальное выравнивание
+```jsx
+/*react*/
+<script>
+const { Text, Example } = EvoKit;
 
-Устанавливает свойство `display: block`.
-
-|           Class          |             Description              |
-|--------------------------|--------------------------------------|
-| `.ek-text_align_left`    | Выравнивание текста по левому краю.  |
-| `.ek-text_align_center`  | Выравнивание текста по центру.       |
-| `.ek-text_align_right`   | Выравнивание текста по правому краю. |
-| `.ek-text_align_justify` | Выравнивание по ширине.              |
-
-``` html
-<span class='ek-text ek-text_align_left'>
-    Текст слева
-</span>
-<span class='ek-text ek-text_align_center'>
-    Текст по центру
-</span>
-<span class='ek-text ek-text_align_right'>
-    Текст справа
-</span>
+export default class ExampleList extends React.Component {
+    render() {
+        return (
+            <Example values={['baseline', 'top', 'bottom', 'middle', 'super', 'sub', 'text-top', 'text-bottom']}>
+                {(value) => (
+                    <div>
+                        <Example.Box style={{ display: 'inline-block' }}>
+                            <Text text-align='right'>
+                                text 1
+                            </Text>
+                        </Example.Box>
+                        <Text text-valign={value}>
+                            text 2
+                        </Text>
+                    </div>
+                )}
+            </Example>
+        )
+    }
+}
+</script>
 ```
 
----
+### `text-wrap`
 
-## Вертикальное выравнивание
+```jsx
+/*react*/
+<script>
+const { Text, Example } = EvoKit;
 
-|            Class           |             Description              |
-|----------------------------|--------------------------------------|
-| `.ek-text_valign_top`      | Выравнивание верхнего края элемента по верху самого высокого элемента строки. |
-| `.ek-text_valign_middle`   | Выравнивание средней точки элемента по базовой линии родителя плюс половина высоты родительского элемента. |
-| `.ek-text_valign_bottom`   | Выравнивает основание текущего элемента по нижней части элемента строки, расположенного ниже всех. |
-
-``` html
-<span class="ek-text ek-text_valign_top ek-text_size_h1">Текст</span>
-<span class='ek-text ek-text_valign_top'>
-    вверху
-</span>
-<br>
-<span class="ek-text ek-text_valign_middle ek-text_size_h1">Текст</span>
-<span class='ek-text ek-text_valign_middle'>
-    по середине
-</span>
-<br>
-<span class="ek-text ek-text_valign_bottom ek-text_size_h1">Текст</span>
-<span class='ek-text ek-text_valign_bottom'>
-    внизу
-</span>
+export default class ExampleList extends React.Component {
+    render() {
+        return (
+            <Example values={['nowrap', 'break', 'ellipsis', 'two-line', 'three-line']}>
+                {(value) => (
+                    <Text text-wrap={value}>
+                        Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.." Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения.
+                        ЗапрошедшиегодытекстLoremIpsumполучилмноговерсий.Некоторыеверсиипоявилисьпоошибке,некоторыенамеренно(например,юмористические варианты).
+                    </Text>
+                )}
+            </Example>
+        )
+    }
+}
+</script>
 ```
 
----
+### `text-style`
 
-## Преобразование текста
+```jsx
+/*react*/
+<script>
+const { Text, Example } = EvoKit;
 
-|            Class           |             Description              |
-|----------------------------|--------------------------------------|
-| `.ek-text_transform_none`       | Не меняет регистр символов. |
-| `.ek-text_transform_capitalize` | Первый символ каждого слова в предложении будет заглавным. Остальные символы свой вид не меняют. |
-| `.ek-text_transform_lowercase`  | Все символы текста становятся строчными (нижний регистр). |
-| `.ek-text_transform_uppercase`  | Все символы текста становятся прописными (верхний регистр). |
-
-``` html
-<span class="ek-text ek-text_transform_capitalize">заглавные буквы</span>
-<span class="ek-text ek-text_transform_lowercase">Нижний Регистр</span>
-<span class="ek-text ek-text_transform_uppercase">Верхний Регистр</span>
-```
----
-
-## Перенос и обрезание
-
-Устанавливает свойство `display: block` для `ellipsis`, `two-line` и `three-line`.
-
-|            Class           |                        Description                       |
-|----------------------------|----------------------------------------------------------|
-| `.ek-text_wrap_ellipsis`   | Текст обрезается и к концу строки добавляется троеточие. |
-| `.ek-text_wrap_two-line`   | Текст обрезается больше 2 строк.                             |
-| `.ek-text_wrap_three-line` | Текст обрезается больше 3 строк.                             |
-| `.ek-text_wrap_break`      | Перенос строк чтобы текст поместился в блок.             |
-| `.ek-text_wrap_nowrap`     | Весь текст отображается одной строкой.                   |
-
-``` html
-<span class='ek-text ek-text_wrap_ellipsis'>
-    Текст обрезается и к концу строки добавляется троеточие.
-    Текст обрезается и к концу строки добавляется троеточие.
-    Текст обрезается и к концу строки добавляется троеточие.
-</span>
-<br>
-<span class='ek-text ek-text_wrap_two-line'>
-    Текст обрезается больше 2 строк.
-    Текст обрезается больше 2 строк.
-    Текст обрезается больше 2 строк.
-    Текст обрезается больше 2 строк.
-    Текст обрезается больше 2 строк.
-    Текст обрезается больше 2 строк.
-    Текст обрезается больше 2 строк.
-    Текст обрезается больше 2 строк.
-    Текст обрезается больше 2 строк.
-    Текст обрезается больше 2 строк.
-    Текст обрезается больше 2 строк.
-</span>
-<br>
-<span class='ek-text ek-text_wrap_three-line'>
-    Текст обрезается больше 3 строк.
-    Текст обрезается больше 3 строк.
-    Текст обрезается больше 3 строк.
-    Текст обрезается больше 3 строк.
-    Текст обрезается больше 3 строк.
-    Текст обрезается больше 3 строк.
-    Текст обрезается больше 3 строк.
-    Текст обрезается больше 3 строк.
-    Текст обрезается больше 3 строк.
-    Текст обрезается больше 3 строк.
-    Текст обрезается больше 3 строк.
-    Текст обрезается больше 3 строк.
-    Текст обрезается больше 3 строк.
-    Текст обрезается больше 3 строк.
-    Текст обрезается больше 3 строк.
-    Текст обрезается больше 3 строк.
-</span>
-<br>
-<span class='ek-text ek-text_wrap_break'>
-    Перенос|строк|добавляется|автоматически|Перенос|строк|добавляется|автоматически|Перенос|строк|добавляется|автоматически|Перенос|строк|добавляется|автоматически|Перенос|строк|добавляется|автоматически|Перенос|строк|добавляется|автоматически.
-</span>
-<br>
-<br>
-<span class='ek-text ek-text_wrap_nowrap'>
-    Пробелы не учитываются, переносы строк в коде HTML игнорируются, весь текст отображается одной строкой; вместе с тем, добавление тега &lt;br&gt; <br> переносит текст на новую строку.
-</span>
+export default class ExampleList extends React.Component {
+    render() {
+        return (
+            <Example values={['italic', 'strike', 'underline', 'overline']}>
+                {(value) => (
+                    <Text text-style={value}>
+                        Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.." Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке, некоторые - намеренно (например, юмористические варианты).
+                    </Text>
+                )}
+            </Example>
+        )
+    }
+}
+</script>
 ```
 
----
+### `text-transform`
 
-## Стили
+```jsx
+/*react*/
+<script>
+const { Text, Example } = EvoKit;
 
-|            Class           |             Description              |
-|----------------------------|--------------------------------------|
-| `.ek-text_style_overline`  | Линия проходит над текстом.          |
-| `.ek-text_style_strike`    | Создает перечеркнутый текст.         |
-| `.ek-text_style_underline` | Устанавливает подчеркнутый текст.    |
-| `.ek-text_style_italic`    | Курсивное начертание.                |
-| `.ek-text_style_read`      | Для чтения `line-height: 1.5em`.     |
+export default class ExampleList extends React.Component {
+    render() {
+        return (
+            <Example values={['none', 'capitalize', 'lowercase', 'uppercase']}>
+                {(value) => (
+                    <Text text-transform={value}>
+                        Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.." Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке, некоторые - намеренно (например, юмористические варианты).
+                    </Text>
+                )}
+            </Example>
+        )
+    }
+}
+</script>
+```
 
-``` html
-<span class='ek-text ek-text_style_overline'>
-    Линия проходит над текстом
-</span>
-<br>
-<span class='ek-text ek-text_style_strike'>
-    Перечеркнутый текст
-</span>
-<br>
-<span class='ek-text ek-text_style_underline'>
-    Подчеркнутый текст
-</span>
-<br>
-<span class='ek-text ek-text_style_italic'>
-    Курсивное начертание
-</span>
-<br>
-<span class='ek-text ek-text_style_read'>
-    Текст для чтения
-</span>
+### `text-lheight`
+
+```jsx
+/*react*/
+<script>
+const { Text, Example } = EvoKit;
+
+export default class ExampleList extends React.Component {
+    render() {
+        return (
+            <Example values={['default', 'medium', 'large']}>
+                {(value) => (
+                    <Text text-align='left' text-lheight={value}>
+                        Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.." Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке, некоторые - намеренно (например, юмористические варианты).
+                    </Text>
+                )}
+            </Example>
+        )
+    }
+}
+</script>
 ```
