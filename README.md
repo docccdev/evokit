@@ -15,11 +15,12 @@ npm install evokit
 ```jsx
 import React from 'react';
 import { Grid } from 'evokit';
+import 'evokit/dist/style.css';
 
 export default class EvokitExample extends React.Component {
     render() {
         return (
-            <Grid ek-align='justify'>
+            <Grid grid-column={2} grid-indent='m'>
                 <Grid.Item>
                     left
                 </Grid.Item>
