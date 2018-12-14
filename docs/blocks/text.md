@@ -1,5 +1,4 @@
 [colors]: base/colors.md
-[text]: base/text.md
 [media]: base/media.md
 
 [text-color]: #text-color
