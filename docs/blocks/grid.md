@@ -53,13 +53,13 @@ import 'evokit/dist/Grid/style.css';
 
 | Property | Type | Description |
 |----------|----------|-------------|
-| [grid-column]    | `string`, `object`, `array` or `number` | Количество ячеек в ряду. |
-| [grid-indent]    | `string`, `object`, `array` | Отступы между ячейками. [sizes] |
-| [grid-direction] | `string`, `object`, `array` | Направление. |
-| [grid-wrap]      | `string`, `object`, `array` | Правила переноса ячеек. |
-| [grid-align]     | `string`, `object`, `array` | Горизонтальное выравнивание. |
-| [grid-valign]    | `string`, `object`, `array` | Вертикальное выравние. |
-| [grid-divider]   | `string`, `object`, `array` | Разделитель между ячейками. |
+| [grid-column]    | `string`, `object`, `array` or `number` | Количество ячеек в ряду |
+| [grid-indent]    | `string`, `object`, `array` | Отступы между ячейками [sizes] |
+| [grid-direction] | `string`, `object`, `array` | Направление |
+| [grid-wrap]      | `string`, `object`, `array` | Правила переноса ячеек |
+| [grid-align]     | `string`, `object`, `array` | Горизонтальное выравнивание |
+| [grid-valign]    | `string`, `object`, `array` | Вертикальное выравние |
+| [grid-divider]   | `string`, `object`, `array` | Разделитель между ячейками |
 
 ### `grid-column`
 

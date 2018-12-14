@@ -2,166 +2,165 @@
 [sizes]: base/sizes
 [media]: base/media
 
-# List
+[list-indent]: #list-indent
+[list-style]: #list-style
+[list-color]: #list-color
+[list-divider]: #list-divider
 
-### Модификаторы имеют [Media][media] параметры.
+[list]: #list
+[listitem]: #listitem
 
-Блок `.ek-list` создает список. Каждый элемент списка должен иметь класс `.ek-list__item`.
+# EvoKit - List
+
+Cоздает список.
+
+!> Модификаторы имеют [Media][media] параметры.
 
 ---
 
-## Использование
+## Usage
 
-Чтобы применить этот компонент, просто добавьте класс `.ek-list` к тегу `<ul>` или `<ol>`.
+- [List][list]
+- [List.Item][listitem]
 
+```jsx
+// Common import for all blocks and css
+import { List } from 'evokit';
+import 'evokit/dist/style.css';
 
-``` html
-<ul class='ek-list'>
-    <li class='ek-list__item'>
+// Single import block and css
+import List from 'evokit/dist/List';
+import 'evokit/dist/List/style.css';
+
+...
+
+<List>
+    <List.Item>
         Item
-    </li>
-    <li class='ek-list__item'>
-        Item
-    </li>
-</ul>
+    </List.Item>
+</List>
+
 ```
 
 ---
 
-## Размер
+## List
 
-Модификатор размера списка определяет вертикальные отступы.
+| Property | Type | Description |
+|----------|----------|-------------|
+| [list-indent]  | `string`, `object`, `array` | Отступ между ячейками [sizes] |
+| [list-style]   | `string`, `object`, `array` | Тип маркера |
+| [list-color]   | `string`, `object`, `array` | Цвет маркера |
+| [list-divider] | `string`, `object`, `array` | Разделитель между ячейками |
 
-|         Class         |         Description         |
-|-----------------------|-----------------------------|
-|  `.ek-list_size_`[sizes]  | Отступ между ячейками.  |
+### `list-indent`
 
-``` html
-<ul class='ek-list ek-list_size_xxxl'>
-    <li class='ek-list__item'>
-        Item
-    </li>
-    <li class='ek-list__item'>
-        Item
-    </li>
-</ul>
+```jsx
+/*react*/
+<script>
+const { List, Example } = EvoKit;
+
+export default class ExampleList extends React.Component {
+    render() {
+        return (
+            <Example values={['xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl']}>
+                {(value) => (
+                    <List list-indent={value}>
+                        {[1, 2, 3].map((key) => (
+                            <List.Item>
+                                <Example.Box>
+                                    item {key}
+                                </Example.Box>
+                            </List.Item>
+                        ))}
+                    </List>
+                )}
+            </Example>
+        )
+    }
+}
+</script>
 ```
 
----
+### `list-style`
 
-## Стили маркера
+```jsx
+/*react*/
+<script>
+const { List, Example } = EvoKit;
 
-Изменяет вид маркера для каждого элемента списка.
-
-|            Class          |            Description            |
-|---------------------------|-----------------------------------|
-|  `.ek-list_style_decimal` |  Арабские числа (1, 2, 3, 4,...). |
-|  `.ek-list_style_dash`    |  Маркер в виде тире.              |
-|  `.ek-list_style_disc`    |  Маркер в виде точки.             |
-
-``` html
-<ul class='ek-list ek-list_style_decimal'>
-    <li class='ek-list__item'>
-        Item
-    </li>
-    <li class='ek-list__item'>
-        Item
-    </li>
-</ul>
-<ul class='ek-list ek-list_style_dash'>
-    <li class='ek-list__item'>
-        Item
-    </li>
-    <li class='ek-list__item'>
-        Item
-    </li>
-</ul>
-<ul class='ek-list ek-list_style_disc'>
-    <li class='ek-list__item'>
-        Item
-    </li>
-    <li class='ek-list__item'>
-        Item
-    </li>
-</ul>
+export default class ExampleList extends React.Component {
+    render() {
+        return (
+            <Example values={['dash', 'decimal', 'disc']}>
+                {(value) => (
+                    <List list-style={value}>
+                        {[1, 2, 3].map((key) => (
+                            <List.Item>
+                                item {key}
+                            </List.Item>
+                        ))}
+                    </List>
+                )}
+            </Example>
+        )
+    }
+}
+</script>
 ```
 
----
+### `list-color`
 
-## Цвет
+```jsx
+/*react*/
+<script>
+const { List, Example } = EvoKit;
 
-Определяют цвет маркера.
-
-|            Class          |            Description            |
-|---------------------------|-----------------------------------|
-|  `.ek-list_color_`[colors]  | Цвет маркера.  |
-
-``` html
-<ul class='ek-list ek-list_style_disc ek-list_color_base'>
-    <li class='ek-list__item'>
-        Base
-    </li>
-</ul>
-<ul class='ek-list ek-list_style_disc ek-list_color_white'>
-    <li class='ek-list__item'>
-        White
-    </li>
-</ul>
-<ul class='ek-list ek-list_style_disc ek-list_color_link'>
-    <li class='ek-list__item'>
-        Link
-    </li>
-</ul>
-<ul class='ek-list ek-list_style_disc ek-list_color_red'>
-    <li class='ek-list__item'>
-        Red
-    </li>
-</ul>
-<ul class='ek-list ek-list_style_disc ek-list_color_yellow'>
-    <li class='ek-list__item'>
-        Yellow
-    </li>
-</ul>
-<ul class='ek-list ek-list_style_disc ek-list_color_muted'>
-    <li class='ek-list__item'>
-        Muted
-    </li>
-</ul>
-<ul class='ek-list ek-list_style_disc ek-list_color_info'>
-    <li class='ek-list__item'>
-        Info
-    </li>
-</ul>
-<ul class='ek-list ek-list_style_disc ek-list_color_success'>
-    <li class='ek-list__item'>
-        Success
-    </li>
-</ul>
-<ul class='ek-list ek-list_style_disc ek-list_color_warning'>
-    <li class='ek-list__item'>
-        Warning
-    </li>
-</ul>
-<ul class='ek-list ek-list_style_disc ek-list_color_error'>
-    <li class='ek-list__item'>
-        Error
-    </li>
-</ul>
+export default class ExampleList extends React.Component {
+    render() {
+        return (
+            <Example values={['danger', 'dark', 'default', 'info', 'light', 'minor', 'muted', 'primary', 'reset', 'second', 'success', 'warning']}>
+                {(value) => (
+                    <List list-style='disc' list-color={value}>
+                        {[1, 2, 3].map((key) => (
+                            <List.Item>
+                                item {key}
+                            </List.Item>
+                        ))}
+                    </List>
+                )}
+            </Example>
+        )
+    }
+}
+</script>
 ```
 
----
+### `list-divider`
 
-## Разделитель между элементами
+```jsx
+/*react*/
+<script>
+const { List, Example } = EvoKit;
 
-Чтобы применить горизонтальный разделитель, добавьте класс `.ek-list_theme_divider`.
-
-``` html
-<ul class='ek-list ek-list_size_xl ek-list_theme_divider'>
-    <li class='ek-list__item'>
-        Item
-    </li>
-    <li class='ek-list__item'>
-        Item
-    </li>
-</ul>
+export default class ExampleList extends React.Component {
+    render() {
+        return (
+            <Example values={['danger', 'dark', 'default', 'info', 'light', 'minor', 'muted', 'primary', 'reset', 'second', 'success', 'warning']}>
+                {(value) => (
+                    <List list-indent='m' list-divider={value}>
+                        {[1, 2, 3].map((key) => (
+                            <List.Item>
+                                <Example.Box>
+                                    item {key}
+                                </Example.Box>
+                            </List.Item>
+                        ))}
+                    </List>
+                )}
+            </Example>
+        )
+    }
+}
+</script>
 ```

@@ -62,20 +62,20 @@ import 'evokit/dist/Box/style.css';
 
 | Property | Type | Description |
 |----------|----------|-------------|
-| [box-margin]         | `string`, `object`, `array` | Внешний отступ со всех сторон |
-| [box-margin-top]     | `string`, `object`, `array` | Внешний отступ сверху |
-| [box-margin-right]   | `string`, `object`, `array` | Внешний отступ справа |
-| [box-margin-bottom]  | `string`, `object`, `array` | Внешний отступ снизу |
-| [box-margin-left]    | `string`, `object`, `array` | Внешний отступ слева |
-| [box-margin-tb]      | `string`, `object`, `array` | Внешний отступ сверху и снизу |
-| [box-margin-lr]      | `string`, `object`, `array` | Внешний отступ слева и справа |
-| [box-padding]        | `string`, `object`, `array` | Внутренний отступ со всех сторон |
-| [box-padding-top]    | `string`, `object`, `array` | Внутренний отступ сверху |
-| [box-padding-right]  | `string`, `object`, `array` | Внутренний отступ справа |
-| [box-padding-bottom] | `string`, `object`, `array` | Внутренний отступ снизу |
-| [box-padding-left]   | `string`, `object`, `array` | Внутренний отступ слева |
-| [box-padding-tb]     | `string`, `object`, `array` | Внутренний отступ сверху и снизу |
-| [box-padding-lr]     | `string`, `object`, `array` | Внутренний отступ слева и справа |
+| [box-margin]         | `string`, `object`, `array` | Внешний отступ со всех сторон [sizes] |
+| [box-margin-top]     | `string`, `object`, `array` | Внешний отступ сверху [sizes] |
+| [box-margin-right]   | `string`, `object`, `array` | Внешний отступ справа [sizes] |
+| [box-margin-bottom]  | `string`, `object`, `array` | Внешний отступ снизу [sizes] |
+| [box-margin-left]    | `string`, `object`, `array` | Внешний отступ слева [sizes] |
+| [box-margin-tb]      | `string`, `object`, `array` | Внешний отступ сверху и снизу [sizes] |
+| [box-margin-lr]      | `string`, `object`, `array` | Внешний отступ слева и справа [sizes] |
+| [box-padding]        | `string`, `object`, `array` | Внутренний отступ со всех сторон [sizes] |
+| [box-padding-top]    | `string`, `object`, `array` | Внутренний отступ сверху [sizes] |
+| [box-padding-right]  | `string`, `object`, `array` | Внутренний отступ справа [sizes] |
+| [box-padding-bottom] | `string`, `object`, `array` | Внутренний отступ снизу [sizes] |
+| [box-padding-left]   | `string`, `object`, `array` | Внутренний отступ слева [sizes] |
+| [box-padding-tb]     | `string`, `object`, `array` | Внутренний отступ сверху и снизу [sizes] |
+| [box-padding-lr]     | `string`, `object`, `array` | Внутренний отступ слева и справа [sizes] |
 | [box-background]     | `string`, `object`, `array` | Добавляет фон |
 | [box-border]         | `string`, `object`, `array` | Добавляет рамку |
 | [box-round]          | `string`, `object`, `array` | Скругление углов |
