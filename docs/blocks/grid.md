@@ -89,53 +89,24 @@ export default class ExampleGrid extends React.Component {
 ```jsx
 /*react*/
 <script>
-const { Grid } = EvoKit;
+const { Grid, Example } = EvoKit;
 
-export default class Example extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            listValues: ['xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl'],
-            setValue: null
-        }
-    }
-
-    renderСontrol(){
-        return (
-            <div style={{ marginBottom: 20 }}>
-                <strong>Switch:</strong>&nbsp;
-                <button
-                    disabled={this.state.setValue === null}
-                    onClick={() => this.setState({ setValue: null })}
-                    style={{ marginRight: 5 }}
-                >
-                    reset
-                </button>
-                {this.state.listValues.map((value) => (
-                    <button
-                        disabled={this.state.setValue === value}
-                        onClick={() => this.setState({ setValue: value })}
-                        style={{ marginRight: 5 }}
-                    >
-                        {value}
-                    </button>
-                ))}
-            </div>
-        );
-    }
-
+export default class ExampleGrid extends React.Component {
     render() {
         return (
-            <div>
-                {this.renderСontrol()}
-                <Grid grid-indent={this.state.setValue}>
-                    {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((value) => (
-                        <Grid.Item>
-                            item {value}
-                        </Grid.Item>
-                    ))}
-                </Grid>
-            </div>
+            <Example values={['xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl']}>
+                {(value) => (
+                    <Grid grid-indent={value}>
+                        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((key) => (
+                            <Grid.Item>
+                                <Example.Box>
+                                    item {key}
+                                </Example.Box>
+                            </Grid.Item>
+                        ))}
+                    </Grid>
+                )}
+            </Example>
         )
     }
 }
@@ -147,53 +118,24 @@ export default class Example extends React.Component {
 ```jsx
 /*react*/
 <script>
-const { Grid } = EvoKit;
+const { Grid, Example } = EvoKit;
 
-export default class Example extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            listValues: ['row', 'row-reverse', 'column', 'column-reverse'],
-            setValue: null
-        }
-    }
-
-    renderСontrol(){
-        return (
-            <div style={{ marginBottom: 20 }}>
-                <strong>Switch:</strong>&nbsp;
-                <button
-                    disabled={this.state.setValue === null}
-                    onClick={() => this.setState({ setValue: null })}
-                    style={{ marginRight: 5 }}
-                >
-                    reset
-                </button>
-                {this.state.listValues.map((value) => (
-                    <button
-                        disabled={this.state.setValue === value}
-                        onClick={() => this.setState({ setValue: value })}
-                        style={{ marginRight: 5 }}
-                    >
-                        {value}
-                    </button>
-                ))}
-            </div>
-        );
-    }
-
+export default class ExampleGrid extends React.Component {
     render() {
         return (
-            <div>
-                {this.renderСontrol()}
-                <Grid grid-direction={this.state.setValue}>
-                    {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((value) => (
-                        <Grid.Item>
-                            item {value}
-                        </Grid.Item>
-                    ))}
-                </Grid>
-            </div>
+            <Example values={['row', 'row-reverse', 'column', 'column-reverse']}>
+                {(value) => (
+                    <Grid grid-direction={value}>
+                        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((key) => (
+                            <Grid.Item>
+                                <Example.Box>
+                                    item {key}
+                                </Example.Box>
+                            </Grid.Item>
+                        ))}
+                    </Grid>
+                )}
+            </Example>
         )
     }
 }
@@ -205,53 +147,24 @@ export default class Example extends React.Component {
 ```jsx
 /*react*/
 <script>
-const { Grid } = EvoKit;
+const { Grid, Example } = EvoKit;
 
-export default class Example extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            listValues: ['nowrap', 'wrap', 'wrap-reverse'],
-            setValue: null
-        }
-    }
-
-    renderСontrol(){
-        return (
-            <div style={{ marginBottom: 20 }}>
-                <strong>Switch:</strong>&nbsp;
-                <button
-                    disabled={this.state.setValue === null}
-                    onClick={() => this.setState({ setValue: null })}
-                    style={{ marginRight: 5 }}
-                >
-                    reset
-                </button>
-                {this.state.listValues.map((value) => (
-                    <button
-                        disabled={this.state.setValue === value}
-                        onClick={() => this.setState({ setValue: value })}
-                        style={{ marginRight: 5 }}
-                    >
-                        {value}
-                    </button>
-                ))}
-            </div>
-        );
-    }
-
+export default class ExampleGrid extends React.Component {
     render() {
         return (
-            <div>
-                {this.renderСontrol()}
-                <Grid grid-wrap={this.state.setValue}>
-                    {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((value) => (
-                        <Grid.Item grid-width='1-3'>
-                            item {value}
-                        </Grid.Item>
-                    ))}
-                </Grid>
-            </div>
+            <Example values={['nowrap', 'wrap', 'wrap-reverse']}>
+                {(value) => (
+                    <Grid grid-wrap={value}>
+                        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((key) => (
+                            <Grid.Item grid-width='1-3'>
+                                <Example.Box>
+                                    item {key}
+                                </Example.Box>
+                            </Grid.Item>
+                        ))}
+                    </Grid>
+                )}
+            </Example>
         )
     }
 }
@@ -263,53 +176,24 @@ export default class Example extends React.Component {
 ```jsx
 /*react*/
 <script>
-const { Grid } = EvoKit;
+const { Grid, Example } = EvoKit;
 
-export default class Example extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            listValues: ['left', 'center', 'right', 'justify'],
-            setValue: null
-        }
-    }
-
-    renderСontrol(){
-        return (
-            <div style={{ marginBottom: 20 }}>
-                <strong>Switch:</strong>&nbsp;
-                <button
-                    disabled={this.state.setValue === null}
-                    onClick={() => this.setState({ setValue: null })}
-                    style={{ marginRight: 5 }}
-                >
-                    reset
-                </button>
-                {this.state.listValues.map((value) => (
-                    <button
-                        disabled={this.state.setValue === value}
-                        onClick={() => this.setState({ setValue: value })}
-                        style={{ marginRight: 5 }}
-                    >
-                        {value}
-                    </button>
-                ))}
-            </div>
-        );
-    }
-
+export default class ExampleGrid extends React.Component {
     render() {
         return (
-            <div>
-                {this.renderСontrol()}
-                <Grid grid-align={this.state.setValue}>
-                    {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((value) => (
-                        <Grid.Item>
-                            item {value}
-                        </Grid.Item>
-                    ))}
-                </Grid>
-            </div>
+            <Example values={['left', 'center', 'right', 'justify']}>
+                {(value) => (
+                    <Grid grid-align={value}>
+                        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((key) => (
+                            <Grid.Item>
+                                <Example.Box>
+                                    item {key}
+                                </Example.Box>
+                            </Grid.Item>
+                        ))}
+                    </Grid>
+                )}
+            </Example>
         )
     }
 }
@@ -321,53 +205,24 @@ export default class Example extends React.Component {
 ```jsx
 /*react*/
 <script>
-const { Grid } = EvoKit;
+const { Grid, Example } = EvoKit;
 
-export default class Example extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            listValues: ['top', 'middle', 'bottom', 'baseline', 'justify'],
-            setValue: null
-        }
-    }
-
-    renderСontrol(){
-        return (
-            <div style={{ marginBottom: 20 }}>
-                <strong>Switch:</strong>&nbsp;
-                <button
-                    disabled={this.state.setValue === null}
-                    onClick={() => this.setState({ setValue: null })}
-                    style={{ marginRight: 5 }}
-                >
-                    reset
-                </button>
-                {this.state.listValues.map((value) => (
-                    <button
-                        disabled={this.state.setValue === value}
-                        onClick={() => this.setState({ setValue: value })}
-                        style={{ marginRight: 5 }}
-                    >
-                        {value}
-                    </button>
-                ))}
-            </div>
-        );
-    }
-
+export default class ExampleGrid extends React.Component {
     render() {
         return (
-            <div>
-                {this.renderСontrol()}
-                <Grid grid-valign={this.state.setValue}>
-                    {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((value) => (
-                        <Grid.Item style={{ height: `${value * 20}px`, background: 'gray' }}>
-                            item {value}
-                        </Grid.Item>
-                    ))}
-                </Grid>
-            </div>
+            <Example values={['top', 'middle', 'bottom', 'baseline', 'justify']}>
+                {(value) => (
+                    <Grid grid-valign={value}>
+                        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((key) => (
+                            <Grid.Item>
+                                <Example.Box style={{ height: `${key * 20}px` }}>
+                                    item {key}
+                                </Example.Box>
+                            </Grid.Item>
+                        ))}
+                    </Grid>
+                )}
+            </Example>
         )
     }
 }
@@ -379,58 +234,29 @@ export default class Example extends React.Component {
 ```jsx
 /*react*/
 <script>
-const { Grid } = EvoKit;
+const { Grid, Example } = EvoKit;
 
-export default class Example extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            listValues: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-            setValue: null
-        }
-    }
-
-    renderСontrol(){
-        return (
-            <div style={{ marginBottom: 20 }}>
-                <strong>Switch:</strong>&nbsp;
-                <button
-                    disabled={this.state.setValue === null}
-                    onClick={() => this.setState({ setValue: null })}
-                    style={{ marginRight: 5 }}
-                >
-                    reset
-                </button>
-                {this.state.listValues.map((value) => (
-                    <button
-                        disabled={this.state.setValue === value}
-                        onClick={() => this.setState({ setValue: value })}
-                        style={{ marginRight: 5 }}
-                    >
-                        {value}
-                    </button>
-                ))}
-            </div>
-        );
-    }
-
+export default class ExampleGrid extends React.Component {
     render() {
         return (
-            <div>
-                {this.renderСontrol()}
-                <Grid>
-                    <Grid.Item grid-order={this.state.setValue}>
-                        <div style={{ background: 'gray' }}>
-                            item 1
-                        </div>
-                    </Grid.Item>
-                    {[2, 3, 4, 5, 6, 7, 8, 9].map((value) => (
+            <Example values={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}>
+                {(value) => (
+                    <Grid>
                         <Grid.Item grid-order={value}>
-                            item {value}
+                            <Example.Box>
+                                item 1
+                            </Example.Box>
                         </Grid.Item>
-                    ))}
-                </Grid>
-            </div>
+                        {[2, 3, 4, 5, 6, 7, 8, 9].map((key) => (
+                            <Grid.Item grid-order={key}>
+                                <Example.Box style={{ background: '#f8f8f8', color: '#333' }}>
+                                    item {key}
+                                </Example.Box>
+                            </Grid.Item>
+                        ))}
+                    </Grid>
+                )}
+            </Example>
         )
     }
 }
@@ -442,53 +268,24 @@ export default class Example extends React.Component {
 ```jsx
 /*react*/
 <script>
-const { Grid } = EvoKit;
+const { Grid, Example } = EvoKit;
 
-export default class Example extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            listValues: ['expand', '1-1', '1-10', '2-10', '3-10', '4-10', '5-10', '6-10', '7-10', '8-10', '9-10'],
-            setValue: null
-        }
-    }
-
-    renderСontrol(){
-        return (
-            <div style={{ marginBottom: 20 }}>
-                <strong>Switch:</strong>&nbsp;
-                <button
-                    disabled={this.state.setValue === null}
-                    onClick={() => this.setState({ setValue: null })}
-                    style={{ marginRight: 5 }}
-                >
-                    reset
-                </button>
-                {this.state.listValues.map((value) => (
-                    <button
-                        disabled={this.state.setValue === value}
-                        onClick={() => this.setState({ setValue: value })}
-                        style={{ marginRight: 5 }}
-                    >
-                        {value}
-                    </button>
-                ))}
-            </div>
-        );
-    }
-
+export default class ExampleGrid extends React.Component {
     render() {
         return (
-            <div>
-                {this.renderСontrol()}
-                <Grid>
-                    {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((value) => (
-                        <Grid.Item grid-width={this.state.setValue}>
-                            item {value}
-                        </Grid.Item>
-                    ))}
-                </Grid>
-            </div>
+            <Example values={['expand', '1-1', '1-10', '2-10', '3-10', '4-10', '5-10', '6-10', '7-10', '8-10', '9-10']}>
+                {(value) => (
+                    <Grid>
+                        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((key) => (
+                            <Grid.Item grid-width={value}>
+                                <Example.Box>
+                                    item {key}
+                                </Example.Box>
+                            </Grid.Item>
+                        ))}
+                    </Grid>
+                )}
+            </Example>
         )
     }
 }
