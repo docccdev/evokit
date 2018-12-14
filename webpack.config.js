@@ -33,7 +33,9 @@ const THEMES_LIST = [
 ]
 
 function getThemesPath(blockName, blockPath) {
-    const result = {};
+    const result = {
+        [`${blockName}/themes`]: path.resolve(__dirname, `${blockPath}/${blockName}/themes`),
+    };
     THEMES_LIST.forEach((themeName) => {
         const srcPath = `${blockPath}/${blockName}/themes/${themeName}`;
         const distPath = `${blockName}/theme.${themeName}`;
