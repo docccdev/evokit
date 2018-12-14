@@ -2,180 +2,633 @@
 [colors]: base/colors.md
 [media]: base/media.md
 
-# Box
+[box-margin]: #box-margin
+[box-margin-top]: #box-margin-top
+[box-margin-right]: #box-margin-right
+[box-margin-bottom]: #box-margin-bottom
+[box-margin-left]: #box-margin-left
+[box-margin-tb]: #box-margin-tb
+[box-margin-lr]: #box-margin-lr
+[box-padding]: #box-padding
+[box-padding-top]: #box-padding-top
+[box-padding-right]: #box-padding-right
+[box-padding-bottom]: #box-padding-bottom
+[box-padding-left]: #box-padding-left
+[box-padding-tb]: #box-padding-tb
+[box-padding-lr]: #box-padding-lr
+[box-background]: #box-background
+[box-border]: #box-border
+[box-round]: #box-round
+[box-display]: #box-display
+[box-position]: #box-position
+[box-place]: #box-place
+[box-width]: #box-width
 
-### Модификаторы имеют [Media][media] параметры.
+[box]: #box
 
-Задаёт блок для контента.
+
+# EvoKit - Box
+
+Блок для контента, позволяет применить внутренние/внешние отступы и много другое.
+
+!> Модификаторы имеют [Media][media] параметры.
 
 ---
 
-## Использование
+## Usage
 
-Добавьте класс `.ek-box` к элементу контейнера.
+- [Box][box]
 
-``` html
-<div class='ek-box ek-box_theme_gray'>
-    Box
-</div>
+```jsx
+// Common import for all blocks and css
+import { Box } from 'evokit';
+import 'evokit/dist/style.css';
+
+// Single import block and css
+import Box from 'evokit/dist/Box';
+import 'evokit/dist/Box/style.css';
+
+...
+
+<Box>
+    content
+</Box>
+
 ```
 
 ---
 
-## Отображение (display)
+## Box
 
-Определяет, как элемент должен быть показан в документе. По умолчанию `display: block`.
+| Property | Type | Description |
+|----------|----------|-------------|
+| [box-margin]         | `string`, `object`, `array` | Внешний отступ со всех сторон |
+| [box-margin-top]     | `string`, `object`, `array` | Внешний отступ сверху |
+| [box-margin-right]   | `string`, `object`, `array` | Внешний отступ справа |
+| [box-margin-bottom]  | `string`, `object`, `array` | Внешний отступ снизу |
+| [box-margin-left]    | `string`, `object`, `array` | Внешний отступ слева |
+| [box-margin-tb]      | `string`, `object`, `array` | Внешний отступ сверху и снизу |
+| [box-margin-lr]      | `string`, `object`, `array` | Внешний отступ слева и справа |
+| [box-padding]        | `string`, `object`, `array` | Внутренний отступ со всех сторон |
+| [box-padding-top]    | `string`, `object`, `array` | Внутренний отступ сверху |
+| [box-padding-right]  | `string`, `object`, `array` | Внутренний отступ справа |
+| [box-padding-bottom] | `string`, `object`, `array` | Внутренний отступ снизу |
+| [box-padding-left]   | `string`, `object`, `array` | Внутренний отступ слева |
+| [box-padding-tb]     | `string`, `object`, `array` | Внутренний отступ сверху и снизу |
+| [box-padding-lr]     | `string`, `object`, `array` | Внутренний отступ слева и справа |
+| [box-background]     | `string`, `object`, `array` | Добавляет фон |
+| [box-border]         | `string`, `object`, `array` | Добавляет рамку |
+| [box-round]          | `string`, `object`, `array` | Скругление углов |
+| [box-display]        | `string`, `object`, `array` | Отображение в документе |
+| [box-position]       | `string`, `object`, `array` | Cпособ позиционирования |
+| [box-place]          | `string`, `object`, `array` | Место позиционирования |
+| [box-width]          | `string`, `object`, `array` | Ширина |
 
-|               Class               |                       Description                       |
-|-----------------------------------|---------------------------------------------------------|
-|  `.ek-box_display_none`           | Удаляет элемент из документа..                          |
-|  `.ek-box_display_block`          | Элемент показывается как блочный.                       |
-|  `.ek-box_display_inline`         | Элемент отображается как встроенный.                    |
-|  `.ek-box_display_inline-block`   | Блочный элемент, который обтекается другими элементами. |
+### `box-margin`
 
-``` html
-<div class='ek-box ek-box_theme_gray ek-box_margin_xxs ek-box_display_none'>
-    None
-</div>
-<div class='ek-box ek-box_theme_gray ek-box_margin_xxs ek-box_display_block'>
-    Block
-</div>
-<div class='ek-box ek-box_theme_gray ek-box_margin_xxs ek-box_display_inline'>
-    Inline
-</div>
-<div class='ek-box ek-box_theme_gray ek-box_margin_xxs ek-box_display_inline-block'>
-    Inline-block
-</div>
+```jsx
+/*react*/
+<script>
+const { Box, Example } = EvoKit;
+
+export default class ExampleBox extends React.Component {
+    render() {
+        return (
+            <Example values={['auto', 'xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl']}>
+                {(value) => (
+                    <Example.Box style={{ background: '#f8f8f8', overflow: 'hidden', padding: 0 }}>
+                        <Box box-margin={value}>
+                            <Example.Box>
+                                content
+                            </Example.Box>
+                        </Box>
+                    </Example.Box>
+                )}
+            </Example>
+        )
+    }
+}
+</script>
 ```
 
----
+### `box-margin-top`
 
-## Позиционирование (position)
+```jsx
+/*react*/
+<script>
+const { Box, Example } = EvoKit;
 
-Устанавливает способ позиционирования элемента относительно окна браузера или других объектов на странице.
-
-|               Class               |                       Description                       |
-|-----------------------------------|---------------------------------------------------------|
-|  `.ek-box_position_absolute`      | Указывает, что элемент абсолютно позиционирован         |
-|  `.ek-box_position_fixed`         | Не меняет своего положения при прокрутке веб-страницы   |
-|  `.ek-box_position_relative`      | Положение элемента устанавливается относительно его исходного места.  |
-|  `.ek-box_position_static`        | Элементы отображаются как обычно. |
-
-``` html
-<div class='ek-box ek-box_position_absolute'>
-    absolute
-</div>
+export default class ExampleBox extends React.Component {
+    render() {
+        return (
+            <Example values={['auto', 'xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl']}>
+                {(value) => (
+                    <Example.Box style={{ background: '#f8f8f8', overflow: 'hidden', padding: 0 }}>
+                        <Box box-margin-top={value}>
+                            <Example.Box>
+                                content
+                            </Example.Box>
+                        </Box>
+                    </Example.Box>
+                )}
+            </Example>
+        )
+    }
+}
+</script>
 ```
 
----
+### `box-margin-right`
 
-## Размещение (place)
+```jsx
+/*react*/
+<script>
+const { Box, Example } = EvoKit;
 
-Положение элемента зависит от значения свойства `position`.
-
-|               Class               |                       Description                       |
-|-----------------------------------|---------------------------------------------------------|
-|  `.ek-box_place_top`              | Позиционирует элемент в верхнем центре.      |
-|  `.ek-box_place_top-left`         | Позиционирует элемент в левом верхнем углу.  |
-|  `.ek-box_place_top-right`        | Позиционирует элемент в верхнем правом углу. |
-|  `.ek-box_place_center`           | Позиционирует элемент, центрированный по центру в середине. |
-|  `.ek-box_place_center-left`      | Позиционирует элемент, вертикально центрированный слева.    |
-|  `.ek-box_place_center-right`     | Позиционирует элемент, вертикально центрированный справа.   |
-|  `.ek-box_place_bottom`           | Позиционирует элемент в центре внизу.       |
-|  `.ek-box_place_bottom-left`      | Позиционирует элемент в левом нижнем углу.  |
-|  `.ek-box_place_bottom-right`     | Позиционирует элемент в правом нижнем углу. |
-
-``` html
-<div class='ek-box ek-box_place_top'>
-    элемент в верхнем центре
-</div>
+export default class ExampleBox extends React.Component {
+    render() {
+        return (
+            <Example values={['auto', 'xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl']}>
+                {(value) => (
+                    <Example.Box style={{ background: '#f8f8f8', overflow: 'hidden', padding: 0 }}>
+                        <Box box-margin-right={value}>
+                            <Example.Box>
+                                content
+                            </Example.Box>
+                        </Box>
+                    </Example.Box>
+                )}
+            </Example>
+        )
+    }
+}
+</script>
 ```
 
----
+### `box-margin-bottom`
 
-## Отступы
+```jsx
+/*react*/
+<script>
+const { Box, Example } = EvoKit;
 
-Модификатор размера определяет внутренние и внешние отступы. По умолчанию, блок не имеет отступов.
-
-### Внутренние
-
-|               Class               |            Description            |
-|-----------------------------------|-----------------------------------|
-|  `.ek-box_padding_`[sizes]        | Внутренний отступ со всех сторон. |
-|  `.ek-box_padding-tb_`[sizes]     | Внутренний отступ сверху и снизу. |
-|  `.ek-box_padding-lr_`[sizes]     | Внутренний отступ слева и справа. |
-|  `.ek-box_padding-left_`[sizes]   | Внутренний отступ слева.          |
-|  `.ek-box_padding-top_`[sizes]    | Внутренний отступ сверху.         |
-|  `.ek-box_padding-right_`[sizes]  | Внутренний отступ справа.         |
-|  `.ek-box_padding-bottom_`[sizes] | Внутренний отступ снизу.          |
-
----
-
-### Внешние
-
-|              Class               |            Description         |
-|----------------------------------|--------------------------------|
-|  `.ek-box_margin_`[sizes]        | Внешний отступ со всех сторон. |
-|  `.ek-box_margin-tb_`[sizes]     | Внешний отступ сверху и снизу. |
-|  `.ek-box_margin-lr_`[sizes]     | Внешний отступ слева и справа. |
-|  `.ek-box_margin-left_`[sizes]   | Внешний отступ слева.          |
-|  `.ek-box_margin-top_`[sizes]    | Внешний отступ сверху.         |
-|  `.ek-box_margin-right_`[sizes]  | Внешний отступ справа.         |
-|  `.ek-box_margin-bottom_`[sizes] | Внешний отступ снизу.          |
-
-
-
-``` html
-<div class='ek-box ek-box_padding_xxxl ek-box_margin-lr_xxxl ek-box_theme_gray'>
-    Box
-</div>
+export default class ExampleBox extends React.Component {
+    render() {
+        return (
+            <Example values={['auto', 'xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl']}>
+                {(value) => (
+                    <Example.Box style={{ background: '#f8f8f8', overflow: 'hidden', padding: 0 }}>
+                        <Box box-margin-bottom={value}>
+                            <Example.Box>
+                                content
+                            </Example.Box>
+                        </Box>
+                    </Example.Box>
+                )}
+            </Example>
+        )
+    }
+}
+</script>
 ```
 
----
+### `box-margin-left`
 
-## Темы
+```jsx
+/*react*/
+<script>
+const { Box, Example } = EvoKit;
 
-Определяется фоновым цветом. По умолчанию, панель не имеет фона.
-
-|           Class           | Description |
-|---------------------------|-------------|
-| `.ek-box_theme_`[colors]  | Цвет фона.  |
-
-``` html
-<div class='ek-box ek-box_padding_s ek-box_margin-tb_s ek-box_theme_transparent'>
-    transparent
-</div>
-<div class='ek-box ek-box_padding_s ek-box_margin-tb_s ek-box_theme_gray'>
-    gray
-</div>
-<div class='ek-box ek-box_padding_s ek-box_margin-tb_s ek-box_theme_white'>
-    white
-</div>
-<div class='ek-box ek-box_padding_s ek-box_margin-tb_s ek-box_theme_blue'>
-    blue
-</div>
-<div class='ek-box ek-box_padding_s ek-box_margin-tb_s ek-box_theme_info'>
-    info
-</div>
-<div class='ek-box ek-box_padding_s ek-box_margin-tb_s ek-box_theme_success'>
-    success
-</div>
-<div class='ek-box ek-box_padding_s ek-box_margin-tb_s ek-box_theme_warning'>
-    warning
-</div>
-<div class='ek-box ek-box_padding_s ek-box_margin-tb_s ek-box_theme_error'>
-    error
-</div>
+export default class ExampleBox extends React.Component {
+    render() {
+        return (
+            <Example values={['auto', 'xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl']}>
+                {(value) => (
+                    <Example.Box style={{ background: '#f8f8f8', overflow: 'hidden', padding: 0 }}>
+                        <Box box-margin-left={value}>
+                            <Example.Box>
+                                content
+                            </Example.Box>
+                        </Box>
+                    </Example.Box>
+                )}
+            </Example>
+        )
+    }
+}
+</script>
 ```
 
-## Стиль
+### `box-margin-tb`
 
-|           Class           | Description |
-|---------------------------|-------------|
-| `.ek-box_style_round`     | Скруглённые уголки. |
+```jsx
+/*react*/
+<script>
+const { Box, Example } = EvoKit;
 
-``` html
-<div class='ek-box ek-box_style_round'>
-    round
-</div>
+export default class ExampleBox extends React.Component {
+    render() {
+        return (
+            <Example values={['auto', 'xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl']}>
+                {(value) => (
+                    <Example.Box style={{ background: '#f8f8f8', overflow: 'hidden', padding: 0 }}>
+                        <Box box-margin-tb={value}>
+                            <Example.Box>
+                                content
+                            </Example.Box>
+                        </Box>
+                    </Example.Box>
+                )}
+            </Example>
+        )
+    }
+}
+</script>
+```
+
+### `box-margin-lr`
+
+```jsx
+/*react*/
+<script>
+const { Box, Example } = EvoKit;
+
+export default class ExampleBox extends React.Component {
+    render() {
+        return (
+            <Example values={['auto', 'xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl']}>
+                {(value) => (
+                    <Example.Box style={{ background: '#f8f8f8', overflow: 'hidden', padding: 0 }}>
+                        <Box box-margin-lr={value}>
+                            <Example.Box>
+                                content
+                            </Example.Box>
+                        </Box>
+                    </Example.Box>
+                )}
+            </Example>
+        )
+    }
+}
+</script>
+```
+
+### `box-padding`
+
+```jsx
+/*react*/
+<script>
+const { Box, Example } = EvoKit;
+
+export default class ExampleBox extends React.Component {
+    render() {
+        return (
+            <Example values={['xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl']}>
+                {(value) => (
+                    <Example.Box style={{ background: '#f8f8f8', overflow: 'hidden', padding: 0 }}>
+                        <Box box-padding={value}>
+                            <Example.Box>
+                                content
+                            </Example.Box>
+                        </Box>
+                    </Example.Box>
+                )}
+            </Example>
+        )
+    }
+}
+</script>
+```
+
+### `box-padding-top`
+
+```jsx
+/*react*/
+<script>
+const { Box, Example } = EvoKit;
+
+export default class ExampleBox extends React.Component {
+    render() {
+        return (
+            <Example values={['xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl']}>
+                {(value) => (
+                    <Example.Box style={{ background: '#f8f8f8', overflow: 'hidden', padding: 0 }}>
+                        <Box box-padding-top={value}>
+                            <Example.Box>
+                                content
+                            </Example.Box>
+                        </Box>
+                    </Example.Box>
+                )}
+            </Example>
+        )
+    }
+}
+</script>
+```
+
+### `box-padding-right`
+
+```jsx
+/*react*/
+<script>
+const { Box, Example } = EvoKit;
+
+export default class ExampleBox extends React.Component {
+    render() {
+        return (
+            <Example values={['xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl']}>
+                {(value) => (
+                    <Example.Box style={{ background: '#f8f8f8', overflow: 'hidden', padding: 0 }}>
+                        <Box box-padding-right={value}>
+                            <Example.Box>
+                                content
+                            </Example.Box>
+                        </Box>
+                    </Example.Box>
+                )}
+            </Example>
+        )
+    }
+}
+</script>
+```
+
+### `box-padding-bottom`
+
+```jsx
+/*react*/
+<script>
+const { Box, Example } = EvoKit;
+
+export default class ExampleBox extends React.Component {
+    render() {
+        return (
+            <Example values={['xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl']}>
+                {(value) => (
+                    <Example.Box style={{ background: '#f8f8f8', overflow: 'hidden', padding: 0 }}>
+                        <Box box-padding-bottom={value}>
+                            <Example.Box>
+                                content
+                            </Example.Box>
+                        </Box>
+                    </Example.Box>
+                )}
+            </Example>
+        )
+    }
+}
+</script>
+```
+
+### `box-padding-left`
+
+```jsx
+/*react*/
+<script>
+const { Box, Example } = EvoKit;
+
+export default class ExampleBox extends React.Component {
+    render() {
+        return (
+            <Example values={['xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl']}>
+                {(value) => (
+                    <Example.Box style={{ background: '#f8f8f8', overflow: 'hidden', padding: 0 }}>
+                        <Box box-padding-left={value}>
+                            <Example.Box>
+                                content
+                            </Example.Box>
+                        </Box>
+                    </Example.Box>
+                )}
+            </Example>
+        )
+    }
+}
+</script>
+```
+
+### `box-padding-tb`
+
+```jsx
+/*react*/
+<script>
+const { Box, Example } = EvoKit;
+
+export default class ExampleBox extends React.Component {
+    render() {
+        return (
+            <Example values={['xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl']}>
+                {(value) => (
+                    <Example.Box style={{ background: '#f8f8f8', overflow: 'hidden', padding: 0 }}>
+                        <Box box-padding-tb={value}>
+                            <Example.Box>
+                                content
+                            </Example.Box>
+                        </Box>
+                    </Example.Box>
+                )}
+            </Example>
+        )
+    }
+}
+</script>
+```
+
+### `box-padding-lr`
+
+```jsx
+/*react*/
+<script>
+const { Box, Example } = EvoKit;
+
+export default class ExampleBox extends React.Component {
+    render() {
+        return (
+            <Example values={['xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl']}>
+                {(value) => (
+                    <Example.Box style={{ background: '#f8f8f8', overflow: 'hidden', padding: 0 }}>
+                        <Box box-padding-lr={value}>
+                            <Example.Box>
+                                content
+                            </Example.Box>
+                        </Box>
+                    </Example.Box>
+                )}
+            </Example>
+        )
+    }
+}
+</script>
+```
+
+### `box-background`
+
+```jsx
+/*react*/
+<script>
+const { Box, Example } = EvoKit;
+
+export default class ExampleBox extends React.Component {
+    render() {
+        return (
+            <Example values={['danger', 'dark', 'default', 'info', 'light', 'minor', 'muted', 'primary', 'reset', 'second', 'success', 'warning']}>
+                {(value) => (
+                    <Box box-padding='xs' box-background={value}>
+                        content
+                    </Box>
+                )}
+            </Example>
+        )
+    }
+}
+</script>
+```
+
+### `box-border`
+
+```jsx
+/*react*/
+<script>
+const { Box, Example } = EvoKit;
+
+export default class ExampleBox extends React.Component {
+    render() {
+        return (
+            <Example values={['danger', 'dark', 'default', 'info', 'light', 'minor', 'muted', 'primary', 'reset', 'second', 'success', 'warning']}>
+                {(value) => (
+                    <Box box-padding='xs' box-border={value}>
+                        content
+                    </Box>
+                )}
+            </Example>
+        )
+    }
+}
+</script>
+```
+
+### `box-round`
+
+```jsx
+/*react*/
+<script>
+const { Box, Example } = EvoKit;
+
+export default class ExampleBox extends React.Component {
+    render() {
+        return (
+            <Example values={['xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl']}>
+                {(value) => (
+                    <Box box-padding='xs' box-border='success' box-round={value}>
+                        content
+                    </Box>
+                )}
+            </Example>
+        )
+    }
+}
+</script>
+```
+
+### `box-display`
+
+```jsx
+/*react*/
+<script>
+const { Box, Example } = EvoKit;
+
+export default class ExampleBox extends React.Component {
+    render() {
+        return (
+            <Example values={['none', 'inline', 'inline-block', 'block']}>
+                {(value) => (
+                    <Box box-display={value}>
+                        <Example.Box>
+                            content
+                        </Example.Box>
+                    </Box>
+                )}
+            </Example>
+        )
+    }
+}
+</script>
+```
+
+### `box-position`
+
+```jsx
+/*react*/
+<script>
+const { Box, Example } = EvoKit;
+
+export default class ExampleBox extends React.Component {
+    render() {
+        return (
+            <Example values={['static', 'relative', 'absolute', 'fixed']}>
+                {(value) => (
+                    <Box box-position={value}>
+                        <Example.Box>
+                            content
+                        </Example.Box>
+                    </Box>
+                )}
+            </Example>
+        )
+    }
+}
+</script>
+```
+
+### `box-place`
+
+```jsx
+/*react*/
+<script>
+const { Box, Example } = EvoKit;
+
+export default class ExampleBox extends React.Component {
+    render() {
+        return (
+            <Example values={['top', 'top-left', 'top-right', 'center', 'center-left', 'center-right', 'bottom', 'bottom-left', 'bottom-right']}>
+                {(value) => (
+                    <Box box-position='relative' style={{ background: '#f8f8f8', width: 200, height: 200 }}>
+                        <Box box-position='absolute' box-place={value}>
+                            <Example.Box>
+                                content
+                            </Example.Box>
+                        </Box>
+                    </Box>
+                )}
+            </Example>
+        )
+    }
+}
+</script>
+```
+
+### `box-width`
+
+```jsx
+/*react*/
+<script>
+const { Box, Example } = EvoKit;
+
+export default class ExampleBox extends React.Component {
+    render() {
+        return (
+            <Example values={['1-1', '1-10', '2-10', '3-10', '4-10', '5-10', '6-10', '7-10', '8-10', '9-10']}>
+                {(value) => (
+                    <Box box-width={value}>
+                        <Example.Box>
+                            content
+                        </Example.Box>
+                    </Box>
+                )}
+            </Example>
+        )
+    }
+}
+</script>
 ```
