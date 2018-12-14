@@ -60,53 +60,24 @@ import 'evokit/dist/Grid/style.css';
 ```jsx
 /*react*/
 <script>
-const { Grid } = EvoKit;
+const { Grid, Example } = EvoKit;
 
-export default class Example extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            listValues: ['expand', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-            setValue: null
-        }
-    }
-
-    renderСontrol(){
-        return (
-            <div style={{ marginBottom: 20 }}>
-                <strong>Switch:</strong>&nbsp;
-                <button
-                    disabled={this.state.setValue === null}
-                    onClick={() => this.setState({ setValue: null })}
-                    style={{ marginRight: 5 }}
-                >
-                    reset
-                </button>
-                {this.state.listValues.map((value) => (
-                    <button
-                        disabled={this.state.setValue === value}
-                        onClick={() => this.setState({ setValue: value })}
-                        style={{ marginRight: 5 }}
-                    >
-                        {value}
-                    </button>
-                ))}
-            </div>
-        );
-    }
-
+export default class ExampleGrid extends React.Component {
     render() {
         return (
-            <div>
-                {this.renderСontrol()}
-                <Grid grid-column={this.state.setValue}>
-                    {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((value) => (
-                        <Grid.Item>
-                            item {value}
-                        </Grid.Item>
-                    ))}
-                </Grid>
-            </div>
+            <Example values={['expand', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}>
+                {(value) => (
+                    <Grid grid-column={value}>
+                        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((key) => (
+                            <Grid.Item>
+                                <Example.Box>
+                                    item {key}
+                                </Example.Box>
+                            </Grid.Item>
+                        ))}
+                    </Grid>
+                )}
+            </Example>
         )
     }
 }

@@ -1,4 +1,5 @@
 import { createBlock } from './component';
+import { Example } from './example';
 
 import Body from './blocks/Body';
 import Box from './blocks/Box';
@@ -12,6 +13,7 @@ import Image from './blocks/Image';
 
 export {
     createBlock,
+    Example,
     Body,
     Box,
     Grid,
