@@ -111,6 +111,9 @@
                 @mixin media $(selector)_$(from)-$(to)
                     width: calc($from / $to * 100%)
 
+    @mixin media $(selector)_auto
+        width: auto
+
 @define-mixin grid-item-width $selector
     @each $to in (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
         @each $from in (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
@@ -118,3 +121,11 @@
                 @mixin media $(selector)_$(from)-$(to)
                     flex: none
                     width: calc($from / $to * 100%)
+
+    @mixin media $(selector)_expand
+        flex: 1
+        width: auto
+
+    @mixin media $(selector)_auto
+        flex: none
+        width: auto

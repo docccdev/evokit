@@ -71,7 +71,7 @@ const { Grid, Example } = EvoKit;
 export default class ExampleGrid extends React.Component {
     render() {
         return (
-            <Example values={['expand', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}>
+            <Example values={['expand', 'auto', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}>
                 {(value) => (
                     <Grid grid-column={value}>
                         {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((key) => (
@@ -283,7 +283,7 @@ const { Grid, Example } = EvoKit;
 export default class ExampleGrid extends React.Component {
     render() {
         return (
-            <Example values={['expand', '1-1', '1-10', '2-10', '3-10', '4-10', '5-10', '6-10', '7-10', '8-10', '9-10']}>
+            <Example values={['expand', 'auto', '1-1', '1-10', '2-10', '3-10', '4-10', '5-10', '6-10', '7-10', '8-10', '9-10']}>
                 {(value) => (
                     <Grid>
                         {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((key) => (
