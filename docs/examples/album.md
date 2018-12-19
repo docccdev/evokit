@@ -8,6 +8,7 @@ const {
     Box,
     Text,
     Picture,
+    Link,
 } = EvoKit;
 
 export default class ExampleGrid extends React.Component {
@@ -62,7 +63,7 @@ export default class ExampleGrid extends React.Component {
 
     render() {
         return (
-            <Box>
+            <div>
                 <Box box-padding-tb='xxl' box-margin-lr='auto' box-width='6-10'>
                     <Box box-margin-bottom='m'>
                         <Text text-size='h1' text-weight='bold' text-align='center'>
@@ -76,6 +77,11 @@ export default class ExampleGrid extends React.Component {
                             but not too short so folks don't simply skip over it entirely.
                         </Text>
                     </Box>
+                    <Text text-align='center'>
+                        <Link>
+                            See all
+                        </Link>
+                    </Text>
                 </Box>
                 <Box box-background='muted' box-padding='xxl'>
                     <Grid grid-column='3' grid-indent='m'>
@@ -99,7 +105,7 @@ export default class ExampleGrid extends React.Component {
                         </Grid.Item>
                     </Grid>
                 </Box>
-            </Box>
+            </div>
         )
     }
 }

@@ -2,7 +2,7 @@
 
   * [Sizes](/base/sizes.md)
   * [Media](/base/media.md)
-  * [Config](/base/config.md)
+  * [Variables](/base/variables.md)
   <!-- * [Colors](/base/colors.md) -->
   <!-- * [Text](/base/text.md) -->
 

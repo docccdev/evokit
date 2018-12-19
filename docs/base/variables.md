@@ -1,0 +1,105 @@
+# Css variables
+
+```html
+<style>
+    @custom-media --ek-media-small only screen and (min-width: 480px);
+    @custom-media --ek-media-medium only screen and (min-width: 768px);
+    @custom-media --ek-media-large only screen and (min-width: 960px);
+    @custom-media --ek-media-wide only screen and (min-width: 1200px);
+    @custom-media --ek-media-huge only screen and (min-width: 1400px);
+
+    :root {
+        --ek-step-indent: 4px;
+        --ek-step-round: 2px;
+        --ek-step-font-size: 2px;
+        --ek-step-line-height: 0.25em;
+
+        --ek-body-min-width: 1000px;
+        --ek-body-max-width: 1240px;
+
+        --ek-font-size-h1: 24px;
+        --ek-font-size-h2: 22px;
+        --ek-font-size-h3: 20px;
+        --ek-font-size-h4: 18px;
+        --ek-font-size-h5: 16px;
+        --ek-font-size-h6: 14px;
+
+        --ek-default-font-size: 13px;
+        --ek-default-font-weight: 400;
+        --ek-default-line-height: 1em;
+
+        --ek-default-background-color: #f7f7f7;
+        --ek-default-border-color: #dde8f0;
+        --ek-default-divider-color: var(--ek-default-border-color);
+        --ek-default-text-color: #3c3c3c;
+        --ek-default-link-color: #5e8fd5;
+
+        --ek-reset-background-color: transparent;
+        --ek-reset-border-color: transparent;
+        --ek-reset-divider-color: transparent;
+        --ek-reset-text-color: var(--ek-default-text-color);
+        --ek-reset-link-color: var(--ek-default-text-color);
+
+        --ek-primary-background-color: white;
+        --ek-primary-border-color: black;
+        --ek-primary-divider-color: black;
+        --ek-primary-text-color: black;
+        --ek-primary-link-color: black;
+
+        --ek-second-background-color: white;
+        --ek-second-border-color: black;
+        --ek-second-divider-color: black;
+        --ek-second-text-color: black;
+        --ek-second-link-color: black;
+
+        --ek-minor-background-color: white;
+        --ek-minor-border-color: black;
+        --ek-minor-divider-color: black;
+        --ek-minor-text-color: black;
+        --ek-minor-link-color: black;
+
+        --ek-light-background-color: #f8f9fa;
+        --ek-light-border-color: #dee2e6;
+        --ek-light-divider-color: #dee2e6;
+        --ek-light-text-color: #212529;
+        --ek-light-link-color: #212529;
+
+        --ek-muted-background-color: #f7f7f7;
+        --ek-muted-border-color: #e5e5e5;
+        --ek-muted-divider-color: #e5e5e5;
+        --ek-muted-text-color: #a0b0c7;
+        --ek-muted-link-color: #a0b0c7;
+
+        --ek-dark-background-color: #343a40;
+        --ek-dark-border-color: #dee2e6;
+        --ek-dark-divider-color: #dee2e6;
+        --ek-dark-text-color: #ffffff;
+        --ek-dark-link-color: #ffffff;
+
+        --ek-success-border-color: #b7e6b1;
+        --ek-success-divider-color: #b7e6b1;
+        --ek-success-background-color: #d0efcc;
+        --ek-success-text-color: #33b600;
+        --ek-success-link-color: #33b600;
+
+        --ek-info-border-color: #c1d4ed;
+        --ek-info-divider-color: #dde8f0;
+        --ek-info-background-color: #dde7f5;
+        --ek-info-text-color: #5e8fd5;
+        --ek-info-link-color: #5e8fd5;
+
+        --ek-warning-border-color: #faea9b;
+        --ek-warning-divider-color: #faea9b;
+        --ek-warning-background-color: #fcf1bd;
+        --ek-warning-text-color: #ff9600;
+        --ek-warning-link-color: #ff9600;
+
+        --ek-danger-border-color: #e6b9b3;
+        --ek-danger-divider-color: #e6b9b3;
+        --ek-danger-background-color: #efd2ce;
+        --ek-danger-text-color: #bb2914;
+        --ek-danger-link-color: #bb2914;
+    }
+</style>
+
+```
