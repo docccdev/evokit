@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Prom Example</title>
+        <link rel='stylesheet' href='/prom/evokit.variables.css'>
+        <link rel='stylesheet' href='https://unpkg.com/evokit/dist/style.css'>
+        <link rel='stylesheet' href='https://unpkg.com/evokit/dist/themes.css'>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                border: 0;
+            }
+            #root {
+                overflow: hidden;
+            }
+            .HeaderNavLink {
+                display: block;
+                height: 40px;
+                line-height: 40px;
+                text-align: center;
+                color: #fff;
+                text-decoration: none;
+            }
+            .HeaderNavLink:hover {
+                background: rgba(0,0,0,.2);
+                color: #fff;
+                text-decoration: none;
+            }
+            .Height100Perc {
+                height: 100%;
+            }
+            /*Fixed in next version EvoKit*/
+                .FixBackgroundPrimary {
+                    background: linear-gradient(135deg, #4854a2, #772088);
+                }
+            /*Fixed in next version EvoKit*/
+        </style>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script src="https://unpkg.com/react/umd/react.production.min.js"></script>
+        <script src="https://unpkg.com/react-dom/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/prop-types/prop-types.min.js"></script>
+        <script src="https://unpkg.com/classnames/index.js"></script>
+        <script src="//unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+        <script src="https://unpkg.com/evokit/dist/index.js"></script>
+        <script src="/prom/main/index.jsx" type="text/jsx"></script>
+    </body>
+</html>
