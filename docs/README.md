@@ -7,7 +7,6 @@
 
 Основа для разработки быстрых и мощных веб-интерфейсов. Он основан на принципе разделения интерфейса на независимые единицы. Это позволяет вам легко и быстро создавать интерфейс любой сложности и повторно использовать существующий код, избегая «Copy-Paste».
 
-
 ---
 
 ## Peer dependencies
@@ -22,7 +21,6 @@ npm install evokit
 ```
 
 ## Usage
-
 
 #### Step 1
 
@@ -67,7 +65,6 @@ export default class EvokitExample extends React.Component {
         </style>
         <link rel='stylesheet' href='https://unpkg.com/evokit/dist/style.css'>
         <link rel='stylesheet' href='https://unpkg.com/evokit/dist/themes.css'>
-
     </head>
     <body>
         <div id="root"></div>
