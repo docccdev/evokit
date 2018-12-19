@@ -214,17 +214,17 @@ function HeaderContent() {
                 <Grid.Item grid-width='2-10'>
                     <Plug style={{ height: '100%' }}>Navigation</Plug>
                 </Grid.Item>
-                <Grid.Item>
+                <Grid.Item grid-width='expand'>
                     <Grid grid-indent='xs'>
-                        <Grid.Item>
-                            <Plug style={{ height: 360, width: 735 }}>Banner</Plug>
-                        </Grid.Item>
                         <Grid.Item grid-width='expand'>
+                            <Plug style={{ height: 360 }}>Banner</Plug>
+                        </Grid.Item>
+                        <Grid.Item grid-width='1-4'>
                             {RightContentSidebar}
                         </Grid.Item>
                     </Grid>
-                    <Box box-padding-tb='xxl' box-padding-lr='xs' box-border='muted' box-margin-top='xs'>
-                        <Grid grid-indent='xxs' grid-divider='muted' grid-valign='middle'>
+                    <Box box-padding-tb='xxl' box-border='muted' box-margin-top='xs'>
+                        <Grid grid-wrap='nowrap' grid-align='center' grid-indent='xxs' grid-divider='muted' grid-valign='middle'>
                             <Grid.Item>
                                 <BannerContent>
                                     <Text text-weight='bold'>
@@ -255,7 +255,7 @@ function HeaderContent() {
                                     </Box>
                                 </BannerContent>
                             </Grid.Item>
-                            <Grid.Item grid-width='expand'>
+                            <Grid.Item>
                                 <BannerContent>
                                     <Text text-weight='bold'>
                                         Покупка без риска
@@ -276,10 +276,273 @@ function HeaderContent() {
     );
 }
 
+function Footer() {
+    const MenuTitle = ({ children }) => (
+        <Box box-margin-bottom='m'>
+            <Text text-weight='bold'>
+                {children}
+            </Text>
+        </Box>
+    )
+
+    const MenuList = (data) => (
+        <List list-indent='s'>
+            {data.map((value) => (
+                <List.Item>
+                    <Link href="#" link-lheight='medium' link-size='small' link-color='reset'>
+                        {value}
+                    </Link>
+                </List.Item>
+            ))}
+        </List>
+    )
+
+    const MenuData1 = [
+        'Как покупать на Prom.ua',
+        'О сертифицированных компаниях',
+        'Как покупать с Покупкой без риска',
+        'Как оставить полезный отзыв',
+        'Программа Защиты Покупателей',
+        'Рекомендации по безопасным покупкам',
+        'Покупателям с почтой .ru',
+    ];
+
+    const MenuData2 = [
+        'Создать сайт на Prom.ua',
+        'Тарифы',
+        'Как продавать с Покупкой без риска',
+        'Отзывы клиентов Prom.ua',
+        'Рейтинг компаний по посещениям',
+        'Пользовательское соглашение',
+        'Политика конфиденциальности',
+        'Правила пользования порталом',
+        'Правила оформления товаров и услуг',
+        'Руководство Google Ads',
+    ];
+
+    const MenuData3 = [
+        'О Prom.ua',
+        'СМИ о нас',
+        'Работа в Prom.ua',
+        'Реклама на Prom.ua',
+        'Объявления на Prom.ua',
+        'Справка и FAQ',
+        'Администрация',
+    ];
+
+    const MenuData4 = [
+        'EVO.business',
+        'Kabanchik.ua',
+        'Вчасно',
+        'Crafta.ua',
+        'Zakupki.prom.ua',
+        'Shafa',
+        'Bigl.ua',
+        'Официальные дилеры Prom.ua',
+        'RIA.com',
+    ];
+
+    const MenuData5 = [
+        'Беларусь',
+        'Казахстан',
+        'Молдова',
+        'Бразилия',
+        'Турция',
+    ];
+
+    return (
+        <Box box-margin-tb='m'>
+            <Grid grid-indent='m' grid-column='expand'>
+                <Grid.Item>
+                    <MenuTitle>
+                        Покупателям
+                    </MenuTitle>
+                    {MenuList(MenuData1)}
+                </Grid.Item>
+                <Grid.Item>
+                    <MenuTitle>
+                        Продавцам
+                    </MenuTitle>
+                    {MenuList(MenuData2)}
+                </Grid.Item>
+                <Grid.Item>
+                    <MenuTitle>
+                        О нас
+                    </MenuTitle>
+                    {MenuList(MenuData3)}
+                </Grid.Item>
+                <Grid.Item>
+                    <MenuTitle>
+                        Партнеры
+                    </MenuTitle>
+                    {MenuList(MenuData4)}
+                </Grid.Item>
+                <Grid.Item>
+                    <MenuTitle>
+                        Другие страны
+                    </MenuTitle>
+                    {MenuList(MenuData5)}
+                </Grid.Item>
+            </Grid>
+        </Box>
+    );
+}
+
+function SearchTags() {
+    const MenuList = (data) => (
+        <List list-indent='s'>
+            {data.map((value) => (
+                <List.Item>
+                    <Link href="#" link-lheight='medium'>
+                        {value}
+                    </Link>
+                </List.Item>
+            ))}
+        </List>
+    )
+
+    const MenuData1 = [
+        'Куртки женские',
+        'Автозапчасти',
+        'Шины и диски',
+        'Радиаторы и обогреватели',
+    ];
+
+    const MenuData2 = [
+        'Спортивные костюмы',
+        'Мягкая мебель для дома',
+        'Товары для рыбалки',
+        'Котлы твердотопливные',
+    ];
+
+    const MenuData3 = [
+        'Планшетные компьютеры',
+        'Детская одежда',
+        'Водонагреватели, бойлеры, колонки',
+        'Товары для офиса',
+    ];
+
+    const MenuData4 = [
+        'Комплекты постельного белья',
+        'Платья женские',
+        'Тренажеры',
+        'Коляски детские',
+    ];
+
+    const MenuData5 = [
+        'Декоративная косметика',
+        'Куртки мужские',
+        'Детские игрушки',
+        'Окна и двери',
+    ];
+
+    return (
+        <Fragment>
+            <Box box-margin-bottom='m'>
+                <Text text-size='h1'>
+                    Что ищут
+                </Text>
+            </Box>
+            <Grid grid-indent='m' grid-column='expand'>
+                <Grid.Item>
+                    {MenuList(MenuData1)}
+                </Grid.Item>
+                <Grid.Item>
+                    {MenuList(MenuData2)}
+                </Grid.Item>
+                <Grid.Item>
+                    {MenuList(MenuData3)}
+                </Grid.Item>
+                <Grid.Item>
+                    {MenuList(MenuData4)}
+                </Grid.Item>
+                <Grid.Item>
+                    {MenuList(MenuData5)}
+                </Grid.Item>
+            </Grid>
+        </Fragment>
+    );
+}
+
+function Advantages() {
+    const AdvantagesItem = ({ children }) => (
+        <Fragment>
+            <Box box-margin-bottom='m'>
+                <Plug style={{ height: 74, width: 74, margin: '0 auto' }}>Icon</Plug>
+            </Box>
+            {children}
+        </Fragment>
+    )
+
+    return (
+        <Grid grid-indent='m' grid-column='expand'>
+            <Grid.Item>
+                <AdvantagesItem>
+                    <Text text-align='center' text-weight='bold'>
+                        Можно купить все
+                    </Text>
+                    <Box box-margin-top='xs'>
+                        <Text text-align='center'>
+                            113 612 824 товаров и услуг
+                        </Text>
+                    </Box>
+                </AdvantagesItem>
+            </Grid.Item>
+            <Grid.Item>
+                <AdvantagesItem>
+                    <Text text-align='center' text-weight='bold'>
+                        Лучшие цены
+                    </Text>
+                    <Box box-margin-top='xs'>
+                        <Text text-align='center'>
+                            Найдите дешевле
+                        </Text>
+                    </Box>
+                </AdvantagesItem>
+            </Grid.Item>
+            <Grid.Item>
+                <AdvantagesItem>
+                    <Text text-align='center' text-weight='bold'>
+                        Покупка без риска
+                    </Text>
+                    <Box box-margin-top='xs'>
+                        <Text text-align='center'>
+                            В посылке то, что на картинке
+                        </Text>
+                    </Box>
+                </AdvantagesItem>
+            </Grid.Item>
+            <Grid.Item>
+                <AdvantagesItem>
+                    <Text text-align='center' text-weight='bold'>
+                        Проверенные продавцы
+                    </Text>
+                    <Box box-margin-top='xs'>
+                        <Text text-align='center'>
+                            Рейтинг по отзывам
+                        </Text>
+                    </Box>
+                </AdvantagesItem>
+            </Grid.Item>
+            <Grid.Item>
+                <AdvantagesItem>
+                    <Text text-align='center' text-weight='bold'>
+                        Защита покупателей
+                    </Text>
+                    <Box box-margin-top='xs'>
+                        <Text text-align='center'>
+                            Защищаем покупки на 3 000 грн
+                        </Text>
+                    </Box>
+                </AdvantagesItem>
+            </Grid.Item>
+        </Grid>
+    );
+}
 
 function Main() {
     return (
-        <Body body-tag='div'>
+        <Body body-indent='m' body-tag='div'>
             <Body.Section>
                 <HeaderService />
             </Body.Section>
@@ -295,6 +558,31 @@ function Main() {
             <Body.Section>
                 <HeaderContent />
             </Body.Section>
+            <Box box-background='primary' className="FixBackgroundPrimary">
+                <Body.Section>
+                    <Box box-padding-tb='xxl' box-margin-tb='xxl'>
+                        <Text text-align='center' text-color='dark' text-transform='uppercase'>
+                            ... custom content ...
+                        </Text>
+                    </Box>
+                </Body.Section>
+            </Box>
+            <Box box-padding-tb='xxl'>
+                <Body.Section>
+                    <Advantages />
+                </Body.Section>
+            </Box>
+            <Line />
+            <Box box-padding-tb='xxl'>
+                <Body.Section>
+                    <SearchTags />
+                </Body.Section>
+            </Box>
+            <Box box-padding-tb='xxl' box-background='muted'>
+                <Body.Section>
+                    <Footer />
+                </Body.Section>
+            </Box>
         </Body>
     );
 }
