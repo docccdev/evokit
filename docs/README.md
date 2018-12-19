@@ -20,7 +20,7 @@
 npm install evokit
 ```
 
-## Usage
+## React usage (jsx)
 
 #### Step 1
 
