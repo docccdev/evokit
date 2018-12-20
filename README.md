@@ -3,7 +3,9 @@
 [classnames]: //www.npmjs.com/package/classnames
 [variables]: /docs/base/variables.md
 
-# EvoKit [http://evokit.net]
+# EvoKit
+
+http://evokit.net
 
 React framework для разработки быстрых и мощных веб-интерфейсов. Основан на принципе разделения интерфейса на независимые единицы. Это позволяет вам легко и быстро создавать интерфейс любой сложности и повторно использовать существующий код, избегая «Copy-Paste».
 
