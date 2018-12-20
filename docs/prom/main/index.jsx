@@ -546,10 +546,12 @@ function Viewed() {
     const Product = ({ src, priceOld }) => (
         <Box box-padding='m' box-background='default' className='Height100Perc'>
             <Box box-margin-bottom='xs'>
-                <Picture
-                    src={src}
-                    alt=''
-                />
+                <a href="#">
+                    <Picture
+                        src={src}
+                        alt=''
+                    />
+                </a>
             </Box>
             <Box box-margin-bottom='xs'>
                 <Plug style={{ height: 25, width: 75 }}>Label</Plug>
@@ -580,7 +582,9 @@ function Viewed() {
                 </Text>
             </Box>
             <Text text-lheight='medium' text-wrap='two-line'>
-                SKMEI ILLUMINATOR мужские спортивные часы SKMEI ILLUMINATOR мужские спортивные часы
+                <Link href="#" link-lheight='medium' link-color='reset' link-style='multi-line'>
+                    SKMEI ILLUMINATOR мужские спортивные часы SKMEI ILLUMINATOR мужские спортивные часы
+                </Link>
             </Text>
         </Box>
     );
