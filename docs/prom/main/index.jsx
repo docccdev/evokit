@@ -126,23 +126,23 @@ function HeaderNav() {
     )
 
     return (
-        <Grid grid-column='expand'>
-            <Grid.Item>
+        <Grid grid-tag='ul' grid-column='expand'>
+            <Grid.Item grid-tag='li'>
                 <SelfLink>
                     Потребительские товары
                 </SelfLink>
             </Grid.Item>
-            <Grid.Item>
+            <Grid.Item grid-tag='li'>
                 <SelfLink>
                     Товары для бизнеса
                 </SelfLink>
             </Grid.Item>
-            <Grid.Item>
+            <Grid.Item grid-tag='li'>
                 <SelfLink>
                     Услуги
                 </SelfLink>
             </Grid.Item>
-            <Grid.Item>
+            <Grid.Item grid-tag='li'>
                 <SelfLink>
                     Частные объявления
                 </SelfLink>
