@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+ol, ul {
+    list-style: none;
+}
+#root {
+    overflow: hidden;
+}
+.HeaderNavLink {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+}
+.HeaderNavLink:hover {
+    background: rgba(0,0,0,.2);
+    color: #fff;
+    text-decoration: none;
+}
+.Height100Perc {
+    height: 100%;
+}
+/*Fixed in next version EvoKit*/
+    .FixBackgroundPrimary {
+        background: linear-gradient(135deg, #4854a2, #772088);
+    }
+    .FixBackgroundPrimary2 {
+        background: linear-gradient(135deg, #39427f, #53165f);
+    }
+/*Fixed in next version EvoKit*/
