@@ -151,7 +151,7 @@ function Catalog() {
 
     return (
         <Box>
-            <Box box-margin-bottom='xl'>
+            <Box box-margin-bottom='l'>
                 {Breadcrumbs}
             </Box>
             <Box box-margin-bottom='xl'>
