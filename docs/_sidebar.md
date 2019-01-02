@@ -2,8 +2,8 @@
 
   * [Get started](/base/started.md)
   * [Variables](/base/variables.md)
-  * [Sizes](/base/sizes.md)
   * [Media](/base/media.md)
+  * [Sizes](/base/sizes.md)
   <!-- * [Colors](/base/colors.md) -->
   <!-- * [Text](/base/text.md) -->
 
