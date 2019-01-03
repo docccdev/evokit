@@ -1,197 +1,196 @@
-[colors]: base/colors.md
-[text]: base/text.md
+[media]: base/media.md
 
-# Link
+[link-color]: #link-color
+[link-size]: #link-size
+[link-weight]: #link-weight
+[link-valign]: #link-valign
+[link-style]: #link-style
+[link-lheight]: #link-lheight
 
-Блок предназначен для создания ссылок.
+[link]: #link
+
+# EvoKit - Link
+
+Предназначен для создания ссылок.
+
+!> Модификаторы имеют [Media][media] параметры.
 
 ---
 
-## Использование
+## Usage
 
-``` html
-<a class='ek-link'>Cсылка</a>
+- [Link][link]
+
+```jsx
+// Common import for all blocks and css
+import { Link } from 'evokit';
+import 'evokit/dist/style.css';
+
+// Single import block and css
+import Link from 'evokit/dist/Link';
+import 'evokit/dist/Link/style.css';
+
+...
+
+<Link href='#'>
+    link
+</Link>
+
 ```
+
+---
+
+## Link
+
+| Property | Type | Description |
+|----------|----------|-------------|
+| [link-color]     | `string`, `object`, `array` | Цвет |
+| [link-size]      | `string`, `object`, `array` | Размер |
+| [link-weight]    | `string`, `object`, `array` | Насыщенность |
+| [link-valign]    | `string`, `object`, `array` | Вертикальное выравнивание |
+| [link-style]     | `string`, `object`, `array` | Стили |
+| [link-lheight]   | `string`, `object`, `array` | Межстрочный интервал |
+
+
+### `link-color`
 
 ```jsx
 /*react*/
 <script>
-const { Link } = EvoKit;
+const { Link, Example } = EvoKit;
 
-export default class Example extends React.Component {
+export default class ExampleList extends React.Component {
     render() {
         return (
-            <Link href="#">
-                Ссылка
-            </Link>
+            <Example values={['danger', 'dark', 'default', 'info', 'light', 'minor', 'muted', 'primary', 'reset', 'second', 'success', 'warning']}>
+                {(value) => (
+                    <Link link-color={value}>
+                        Ссылка
+                    </Link>
+                )}
+            </Example>
         )
     }
 }
 </script>
 ```
 
----
-
-## Цвет
-
-|         Class         |         Description         |
-|-----------------------|-----------------------------|
-|  `.ek-link_color_`[colors]  | Цвет ссылки.  |
-
-``` html
-<a class='ek-link ek-link_color_success'>Success</a>
-```
+### `link-size`
 
 ```jsx
 /*react*/
 <script>
-const { Link } = EvoKit;
+const { Link, Example } = EvoKit;
 
-export default class Example extends React.Component {
+export default class ExampleList extends React.Component {
     render() {
         return (
-            <div>
-                <Link href="#" link-color='default'>default</Link>
-                <br />
-                <Link href="#" link-color='reset'>reset</Link>
-                <br />
-                <Link href="#" link-color='muted'>muted</Link>
-                <br />
-                <Link href="#" link-color='second'>second</Link>
-                <br />
-                <Link href="#" link-color='minor'>minor</Link>
-                <br />
-                <Link href="#" link-color='light'>light</Link>
-                <br />
-                <Link href="#" link-color='muted'>muted</Link>
-                <br />
-                <Link href="#" link-color='dark'>dark</Link>
-                <br />
-                <Link href="#" link-color='success'>success</Link>
-                <br />
-                <Link href="#" link-color='info'>info</Link>
-                <br />
-                <Link href="#" link-color='warning'>warning</Link>
-                <br />
-                <Link href="#" link-color='danger'>danger</Link>
-            </div>
+            <Example values={['small', 'default', 'big', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6']}>
+                {(value) => (
+                    <Link link-size={value}>
+                        Ссылка
+                    </Link>
+                )}
+            </Example>
         )
     }
 }
 </script>
 ```
 
----
-
-## Размер
-
-|         Class         |         Description         |
-|-----------------------|-----------------------------|
-|  `.ek-link_size_`[font-size][text]  | Размер текста.  |
-
-``` html
-<a class='ek-link ek-link_size_h2'>H2</a>
-```
+### `link-weight`
 
 ```jsx
 /*react*/
 <script>
-const { Link } = EvoKit;
+const { Link, Example } = EvoKit;
 
-export default class Example extends React.Component {
+export default class ExampleList extends React.Component {
     render() {
         return (
-            <div>
-                <Link href="#" link-size='small'>small</Link>
-                <br />
-                <Link href="#" link-size='default'>default</Link>
-                <br />
-                <Link href="#" link-size='big'>big</Link>
-                <br />
-                <Link href="#" link-size='h1'>h1</Link>
-                <br />
-                <Link href="#" link-size='h2'>h2</Link>
-                <br />
-                <Link href="#" link-size='h3'>h3</Link>
-                <br />
-                <Link href="#" link-size='h4'>h4</Link>
-                <br />
-                <Link href="#" link-size='h5'>h5</Link>
-                <br />
-                <Link href="#" link-size='h6'>h6</Link>
-            </div>
+            <Example values={['default', 'thin', 'light', 'medium', 'bold', 'black']}>
+                {(value) => (
+                    <Link link-weight={value}>
+                        Ссылка
+                    </Link>
+                )}
+            </Example>
         )
     }
 }
 </script>
 ```
 
----
-
-## Насыщенность шрифта
-
-|        Class       |    Description   |
-|--------------------|------------------|
-|  `.ek-link_weight_`[font-weight][text]  | Насыщенность шрифта.  |
-
-
-``` html
-<a class='ek-link ek-link_weight_medium'>medium 500</a>
-```
+### `link-valign`
 
 ```jsx
 /*react*/
 <script>
-const { Link } = EvoKit;
+const { Link, Text, Example } = EvoKit;
 
-export default class Example extends React.Component {
+export default class ExampleList extends React.Component {
     render() {
         return (
-            <div>
-                <Link href="#" link-weight='default'>default 400</Link>
-                <br />
-                <Link href="#" link-weight='thin'>thin 100</Link>
-                <br />
-                <Link href="#" link-weight='light'>light 300</Link>
-                <br />
-                <Link href="#" link-weight='medium'>medium 500</Link>
-                <br />
-                <Link href="#" link-weight='bold'>bold 700</Link>
-                <br />
-                <Link href="#" link-weight='black'>black 900</Link>
-            </div>
+            <Example values={['baseline', 'top', 'bottom', 'middle', 'super', 'sub', 'text-top', 'text-bottom']}>
+                {(value) => (
+                    <div>
+                        <Example.Box style={{ display: 'inline-block' }}>
+                            <Text link-align='right'>
+                                text
+                            </Text>
+                        </Example.Box>
+                        <Link link-valign={value}>
+                            Ссылка
+                        </Link>
+                    </div>
+                )}
+            </Example>
         )
     }
 }
 </script>
 ```
 
----
-
-## Стили
-
-|          Class          |             Description             |
-|-------------------------|-------------------------------------|
-| `.ek-link_style_dotted` | Добавляет пунктирное подчеркивание. |
-| `.ek-link_style_multi-line` | Делает пространство между многострочной ссылкой кликабельным. |
-
-``` html
-<a class='ek-link ek-link_style_dotted'>Пунктирная ссылка</a>
-```
+### `link-style`
 
 ```jsx
 /*react*/
 <script>
-const { Link } = EvoKit;
+const { Link, Example } = EvoKit;
 
-export default class Example extends React.Component {
+export default class ExampleList extends React.Component {
     render() {
         return (
-            <div>
-                <Link href="#" link-style='dotted'>dotted</Link>
-                <br />
-                <Link href="#" link-style='multi-line'>ссылка в две <br /> строки</Link>
-            </div>
+            <Example values={['dotted', 'multi-line']}>
+                {(value) => (
+                    <Link link-style={value}>
+                        Ссылка
+                    </Link>
+                )}
+            </Example>
+        )
+    }
+}
+</script>
+```
+
+### `link-lheight`
+
+```jsx
+/*react*/
+<script>
+const { Link, Example } = EvoKit;
+
+export default class ExampleList extends React.Component {
+    render() {
+        return (
+            <Example values={['default', 'medium', 'large']}>
+                {(value) => (
+                    <Link link-align='left' link-lheight={value}>
+                        Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.." Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке, некоторые - намеренно (например, юмористические варианты).
+                    </Link>
+                )}
+            </Example>
         )
     }
 }
