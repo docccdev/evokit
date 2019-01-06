@@ -29,6 +29,10 @@
     <link rel="stylesheet" href="//unpkg.com/evokit/dist/themes.css">
 
     <script>
+        if (typeof navigator.serviceWorker !== 'undefined') {
+            navigator.serviceWorker.register('sw.js');
+        }
+
         var jsResources = [
             '<scr'+'ipt src="//unpkg.com/react/umd/react.production.min.js"></scr'+'ipt>',
             '<scr'+'ipt src="//unpkg.com/react-dom/umd/react-dom.production.min.js"></scr'+'ipt>',
@@ -59,7 +63,7 @@
             plugins: [
                 DemoBoxReact.create(jsResources.join('\n'), cssResources.join('\n'))
             ]
-        }
+        };
     </script>
     <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
     <script src="//unpkg.com/prismjs/components/prism-bash.min.js"></script>
