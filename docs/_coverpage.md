@@ -2,11 +2,15 @@
 
 ![logo](_media/logo.svg)
 
-# EvoKit <small>2.0.7</small>
+# [EvoKit](/)
 
-> Основа для разработки быстрых и мощных веб-интерфейсов
+[![](https://img.shields.io/npm/v/evokit.svg?style=flat-square&colorB=blue)](https://www.npmjs.com/package/evokit)
+&nbsp;
+[![](https://img.shields.io/bundlephobia/minzip/react.svg?style=flat-square&label=size&colorB=green)](https://www.npmjs.com/package/evokit)
 
-* Основан на принципе разделения интерфейса на независимые единицы
+> Easy and fast React front-end framework
+
+* Based on the principle of dividing the interface into independent blocks
 
 [GitHub](https://github.com/docccdev/evokit)
 [Get started](/base/started.md)

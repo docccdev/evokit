@@ -6,7 +6,8 @@
   "scripts": {
     "build": "webpack --progress --config webpack.config.js",
     "watch": "webpack --progress --watch --config webpack.config.js",
-    "prepublishOnly": "webpack --config webpack.config.js"
+    "prepublishOnly": "webpack --config webpack.config.js",
+    "docs": "http-server ./docs"
   },
   "repository": {
     "type": "git",
