@@ -25,7 +25,7 @@ import 'evokit/dist/Image/style.css';
 
 ...
 
-<Image src='картинка.png' alt='картинка'>
+<Image src='картинка.png' alt='картинка' />
 
 ```
 
@@ -46,7 +46,7 @@ import 'evokit/dist/Image/style.css';
 <script>
 const { Image, Example } = EvoKit;
 
-export default class ExampleList extends React.Component {
+export default class ExampleImage extends React.Component {
     render() {
         return (
             <Example values={['left', 'center', 'right']}>
@@ -72,7 +72,7 @@ export default class ExampleList extends React.Component {
 <script>
 const { Image, Example } = EvoKit;
 
-export default class ExampleList extends React.Component {
+export default class ExampleImage extends React.Component {
     render() {
         return (
             <Example values={['baseline', 'top', 'bottom', 'middle', 'super', 'sub', 'text-top', 'text-bottom']}>
@@ -106,7 +106,7 @@ export default class ExampleList extends React.Component {
 <script>
 const { Image, Example } = EvoKit;
 
-export default class ExampleList extends React.Component {
+export default class ExampleImage extends React.Component {
     render() {
         return (
             <Example values={['x', 'y', 'xy']}>

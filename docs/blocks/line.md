@@ -1,141 +1,109 @@
 [sizes]: base/sizes.md
-[colors]: base/colors.md
 
-# Line
+[line-indent]: #line-indent
+[line-color]: #line-color
+[line-style]: #line-style
 
-### Разделительная линия с внешними отступами.
+[line]: #line
 
-Рисует горизонтальную линию, которая относится к блочным элементам. Линия всегда начинается с новой строки, а после нее все элементы отображаются на следующей строке.
+# EvoKit - Line
+
+Горизонтальная линия
 
 ---
 
-## Использование
+## Usage
 
-Блок состоит из одного класса `.ek-line`.
+- [Line][line]
 
-``` html
-<hr class='ek-line'>
+```jsx
+// Common import for all blocks and css
+import { Line } from 'evokit';
+import 'evokit/dist/style.css';
+
+// Single import block and css
+import Line from 'evokit/dist/Line';
+import 'evokit/dist/Line/style.css';
+
+...
+
+<Line />
+
 ```
+
+## Line
+
+| Property | Type | Description |
+|----------|----------|-------------|
+| [line-indent]    | `string`, `object`, `array` | Отступ сверху и снизу [sizes] |
+| [line-color]     | `string`, `object`, `array` | Цвет |
+| [line-style]     | `string`, `object`, `array` | Стиль |
+
+### `line-indent`
 
 ```jsx
 /*react*/
 <script>
-const { Line } = EvoKit;
+const { Line, Example } = EvoKit;
 
-export default class Example extends React.Component {
+export default class ExampleLine extends React.Component {
     render() {
         return (
-            <Line line-indent='xl' />
+            <Example values={['xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl']}>
+                {(value) => (
+                    <div>
+                        <Example.Box style={{ display: 'inline-block' }}>
+                            text
+                        </Example.Box>
+                        <Line line-indent={value} />
+                        <Example.Box style={{ display: 'inline-block' }}>
+                            text
+                        </Example.Box>
+                    </div>
+                )}
+            </Example>
         )
     }
 }
 </script>
 ```
 
----
-
-## Размер
-
-Модификатор размера определяет внешние вертикальные отступы. По умолчанию, линия не имеет отступов.
-
-|         Class         |          Description           |
-|-----------------------|--------------------------------|
-|  `.ek-line_indent_`[sizes]  | Отступ сверху и снизу.  |
-
-``` html
-<hr class='ek-line ek-line_indent_xl'>
-```
+### `line-color`
 
 ```jsx
 /*react*/
 <script>
-const { Line } = EvoKit;
+const { Line, Example } = EvoKit;
 
-export default class Example extends React.Component {
+export default class ExampleLine extends React.Component {
     render() {
         return (
-            <div>
-                <Line line-indent='xxs' />
-                <Line line-indent='xs' />
-                <Line line-indent='s' />
-                <Line line-indent='m' />
-                <Line line-indent='l' />
-                <Line line-indent='xl' />
-                <Line line-indent='xxl' />
-            </div>
+            <Example values={['danger', 'dark', 'default', 'info', 'light', 'minor', 'muted', 'primary', 'reset', 'second', 'success', 'warning']}>
+                {(value) => (
+                    <Line line-color={value} />
+                )}
+            </Example>
         )
     }
 }
 </script>
 ```
 
----
-
-## Цвет
-
-Определяет цвет линии.
-
-|         Class         |          Description           |
-|-----------------------|--------------------------------|
-|  `.ek-line_color_`[colors]  | Цвет.  |
-
-``` html
-<hr class='ek-line ek-line_color_success'>
-```
+### `line-style`
 
 ```jsx
 /*react*/
 <script>
-const { Line } = EvoKit;
+const { Line, Example } = EvoKit;
 
-export default class Example extends React.Component {
+export default class ExampleLine extends React.Component {
     render() {
         return (
-            <div>
-                <Line line-indent='xl' line-color='base' />
-                <Line line-indent='xl' line-color='link' />
-                <Line line-indent='xl' line-color='muted' />
-                <Line line-indent='xl' line-color='success' />
-                <Line line-indent='xl' line-color='info' />
-                <Line line-indent='xl' line-color='warning' />
-                <Line line-indent='xl' line-color='error' />
-                <Line line-indent='xl' line-color='first' />
-                <Line line-indent='xl' line-color='second' />
-                <Line line-indent='xl' line-color='third' />
-            </div>
-        )
-    }
-}
-</script>
-```
-
----
-
-## Стили
-
-Устанавливает стиль линии.
-
-|          Class          |      Description       |
-|-------------------------|------------------------|
-| `.ek-line_style_dotted` | Точечный.              |
-| `.ek-line_style_dashed` | Пунктирный.            |
-
-``` html
-<hr class='ek-line ek-line_style_dotted'>
-```
-
-```jsx
-/*react*/
-<script>
-const { Line } = EvoKit;
-
-export default class Example extends React.Component {
-    render() {
-        return (
-            <div>
-                <Line line-indent='xl' line-style='dotted' />
-                <Line line-indent='xl' line-style='dashed' />
-            </div>
+            <Example values={['dotted', 'dashed']}>
+                {(value) => (
+                    <Line line-color='danger' line-style={value} />
+                )}
+            </Example>
         )
     }
 }

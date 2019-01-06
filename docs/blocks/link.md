@@ -59,7 +59,7 @@ import 'evokit/dist/Link/style.css';
 <script>
 const { Link, Example } = EvoKit;
 
-export default class ExampleList extends React.Component {
+export default class ExampleLink extends React.Component {
     render() {
         return (
             <Example values={['danger', 'dark', 'default', 'info', 'light', 'minor', 'muted', 'primary', 'reset', 'second', 'success', 'warning']}>
@@ -82,7 +82,7 @@ export default class ExampleList extends React.Component {
 <script>
 const { Link, Example } = EvoKit;
 
-export default class ExampleList extends React.Component {
+export default class ExampleLink extends React.Component {
     render() {
         return (
             <Example values={['small', 'default', 'big', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6']}>
@@ -105,7 +105,7 @@ export default class ExampleList extends React.Component {
 <script>
 const { Link, Example } = EvoKit;
 
-export default class ExampleList extends React.Component {
+export default class ExampleLink extends React.Component {
     render() {
         return (
             <Example values={['default', 'thin', 'light', 'medium', 'bold', 'black']}>
@@ -128,7 +128,7 @@ export default class ExampleList extends React.Component {
 <script>
 const { Link, Text, Example } = EvoKit;
 
-export default class ExampleList extends React.Component {
+export default class ExampleLink extends React.Component {
     render() {
         return (
             <Example values={['baseline', 'top', 'bottom', 'middle', 'super', 'sub', 'text-top', 'text-bottom']}>
@@ -158,7 +158,7 @@ export default class ExampleList extends React.Component {
 <script>
 const { Link, Example } = EvoKit;
 
-export default class ExampleList extends React.Component {
+export default class ExampleLink extends React.Component {
     render() {
         return (
             <Example values={['dotted', 'multi-line']}>
@@ -181,7 +181,7 @@ export default class ExampleList extends React.Component {
 <script>
 const { Link, Example } = EvoKit;
 
-export default class ExampleList extends React.Component {
+export default class ExampleLink extends React.Component {
     render() {
         return (
             <Example values={['default', 'medium', 'large']}>
