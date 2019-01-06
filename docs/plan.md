@@ -22,13 +22,17 @@
     - Добавить модификатор round и удалить style
     - Добавить модификатор border
     - Item - вынести как отдельный елемент
-    - Добавить все свойства модификатору cover (создать миксин)
+    - Переименовать cover на fit и добавить всех свойств (создать миксин)
 
 5. Image
     - Добавить модификатор round
     - Добавить модификатор border
-    - Добавить модификатор cover
+    - Добавить модификатор fit (бывший cover)
 
-6. MORE
+6. FORMS
+    - Добавить все елементы форм
+
+7. MORE
     - box_display_none не перебивает box_display_inline
     - Добавить модификаторы border-top, border-left, border-right, border-bottom
+    - Добавить модификаторы round-top, round-left, round-right, round-bottom

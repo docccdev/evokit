@@ -1,13 +1,13 @@
-* BASE
+* GET STARTED
 
-  * [Get started](/base/started.md)
+  * [Usage](/base/usage.md)
   * [Variables](/base/variables.md)
   * [Media](/base/media.md)
   * [Sizes](/base/sizes.md)
   <!-- * [Colors](/base/colors.md) -->
   <!-- * [Text](/base/text.md) -->
 
-* SIMPLE
+* COMMON
 
   * [Box](blocks/box.md)
   * [Text](blocks/text.md)
@@ -15,9 +15,15 @@
   * [Image](blocks/image.md)
   * [Line](blocks/line.md)
 
-* ADVANCED
+* ADDITIONAL
 
   * [Body](blocks/body.md)
   * [Grid](blocks/grid.md)
   * [List](blocks/list.md)
   * [Picture](blocks/picture.md)
+
+* COMPLEX
+
+  * [Form](complex/form.md)
+  <!-- * [Card](complex/card.md) -->
+  * [Progress](complex/progress.md)

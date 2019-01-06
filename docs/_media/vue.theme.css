@@ -744,7 +744,7 @@ section.cover blockquote>p>a:hover {
     margin: 1.2em 0
 }
 
-.markdown-section ol:not(.ek-list),.markdown-section p,.markdown-section ul {
+.markdown-section ol:not(.ek-list),.markdown-section p,.markdown-section ul:not(.ek-list) {
     line-height: 1.6rem;
     word-spacing: .05rem
 }

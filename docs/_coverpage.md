@@ -13,4 +13,4 @@
 * Based on the principle of dividing the interface into independent blocks
 
 [GitHub](https://github.com/docccdev/evokit)
-[Get started](/base/started.md)
+[Usage](/base/usage.md)

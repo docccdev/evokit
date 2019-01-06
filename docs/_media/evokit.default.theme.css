@@ -36,11 +36,11 @@
     --ek-reset-text-color: var(--ek-default-text-color);
     --ek-reset-link-color: var(--ek-default-text-color);
 
-    --ek-primary-background-color: white;
-    --ek-primary-border-color: black;
-    --ek-primary-divider-color: black;
-    --ek-primary-text-color: black;
-    --ek-primary-link-color: black;
+    --ek-primary-background-color: #007bff;
+    --ek-primary-border-color: var(--ek-primary-background-color);
+    --ek-primary-divider-color: var(--ek-primary-border-color);
+    --ek-primary-text-color: #004085;
+    --ek-primary-link-color: #004085;
 
     --ek-second-background-color: white;
     --ek-second-border-color: black;
@@ -54,45 +54,45 @@
     --ek-minor-text-color: black;
     --ek-minor-link-color: black;
 
-    --ek-light-background-color: #f8f9fa;
-    --ek-light-border-color: #dee2e6;
-    --ek-light-divider-color: #dee2e6;
-    --ek-light-text-color: #212529;
-    --ek-light-link-color: #212529;
+    --ek-light-background-color: #fff;
+    --ek-light-border-color: var(--ek-light-background-color);
+    --ek-light-divider-color: var(--ek-light-border-color);
+    --ek-light-text-color: #818182;
+    --ek-light-link-color: #818182;
 
-    --ek-muted-background-color: #f7f7f7;
-    --ek-muted-border-color: #e5e5e5;
-    --ek-muted-divider-color: #e5e5e5;
-    --ek-muted-text-color: #a0b0c7;
-    --ek-muted-link-color: #a0b0c7;
+    --ek-muted-background-color: #f8f9fa;
+    --ek-muted-border-color: var(--ek-muted-background-color);
+    --ek-muted-divider-color: var(--ek-muted-border-color);
+    --ek-muted-text-color: #a4abc4;
+    --ek-muted-link-color: #a4abc4;
 
     --ek-dark-background-color: #343a40;
-    --ek-dark-border-color: #dee2e6;
-    --ek-dark-divider-color: #dee2e6;
-    --ek-dark-text-color: #ffffff;
-    --ek-dark-link-color: #ffffff;
+    --ek-dark-border-color: var(--ek-dark-background-color);
+    --ek-dark-divider-color: var(--ek-dark-border-color);
+    --ek-dark-text-color: #fff;
+    --ek-dark-link-color: #fff;
 
-    --ek-success-border-color: #b7e6b1;
-    --ek-success-divider-color: #b7e6b1;
-    --ek-success-background-color: #d0efcc;
-    --ek-success-text-color: #33b600;
-    --ek-success-link-color: #33b600;
+    --ek-success-background-color: #28a745;
+    --ek-success-border-color: var(--ek-success-background-color);
+    --ek-success-divider-color: var(--ek-success-border-color);
+    --ek-success-text-color: #155724;
+    --ek-success-link-color: #155724;
 
-    --ek-info-border-color: #c1d4ed;
-    --ek-info-divider-color: #dde8f0;
-    --ek-info-background-color: #dde7f5;
-    --ek-info-text-color: #5e8fd5;
-    --ek-info-link-color: #5e8fd5;
+    --ek-info-background-color: #17a2b8;
+    --ek-info-border-color: var(--ek-info-background-color);
+    --ek-info-divider-color: var(--ek-info-border-color);
+    --ek-info-text-color: #0c5460;
+    --ek-info-link-color: #0c5460;
 
-    --ek-warning-border-color: #faea9b;
-    --ek-warning-divider-color: #faea9b;
-    --ek-warning-background-color: #fcf1bd;
-    --ek-warning-text-color: #ff9600;
-    --ek-warning-link-color: #ff9600;
+    --ek-warning-background-color: #ffc107;
+    --ek-warning-border-color: var(--ek-warning-background-color);
+    --ek-warning-divider-color: var(--ek-warning-border-color);
+    --ek-warning-text-color: #856404;
+    --ek-warning-link-color: #856404;
 
-    --ek-danger-border-color: #e6b9b3;
-    --ek-danger-divider-color: #e6b9b3;
-    --ek-danger-background-color: #efd2ce;
-    --ek-danger-text-color: #bb2914;
-    --ek-danger-link-color: #bb2914;
+    --ek-danger-background-color: #dc3545;
+    --ek-danger-border-color: var(--ek-danger-background-color);
+    --ek-danger-divider-color: var(--ek-danger-border-color);
+    --ek-danger-text-color: #721c24;
+    --ek-danger-link-color: #721c24;
 }
