@@ -1,4 +1,5 @@
 [sizes]: base/sizes.md
+[media]: base/media.md
 
 [line-indent]: #line-indent
 [line-color]: #line-color
@@ -9,6 +10,8 @@
 # EvoKit - Line
 
 Горизонтальная линия
+
+!> Модификаторы имеют [media] параметры.
 
 ---
 

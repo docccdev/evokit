@@ -1,107 +1,98 @@
-# Картинка
+[picture-size]: #picture-size
+[picture-style]: #picture-style
 
-Блок `.ek-picture` состоит из одного элемента `.ek-picture__item`.
+[picture]: #picture
+
+# EvoKit - Picture
+
+Создает квадрат с изображением.
 
 ---
 
-## Использование
-Компонент создает квадрат относительно ширины родителя и адаптирует изображение в этих рамках.
+## Usage
 
-``` html
-<div class='ek-picture'>
-    <img
-        class='ek-picture__item'
-        src='https://picsum.photos/600/300'
-    >
-</div>
+- [Picture][picture]
+
+```jsx
+// Common import for all blocks and css
+import { Picture } from 'evokit';
+import 'evokit/dist/style.css';
+
+// Single import block and css
+import Picture from 'evokit/dist/Picture';
+import 'evokit/dist/Picture/style.css';
+
+...
+
+<Picture src='картинка.png' alt='картинка' />
+
 ```
+
+---
+
+## Picture
+
+| Property | Type | Description |
+|----------|----------|-------------|
+| [picture-size]    | `string`, `object`, `array` | Пропорции изображения |
+| [picture-style]    | `string`, `object`, `array` | Скругление изображения |
+
+### `picture-size`
 
 ```jsx
 /*react*/
 <script>
-const { Picture } = EvoKit;
+const { Picture, Example } = EvoKit;
 
-export default class Example extends React.Component {
+export default class ExampleImage extends React.Component {
     render() {
         return (
-            <div style={{ width: 100, height: 100}}>
-                <Picture src='https://picsum.photos/600/300' />
-            </div>
+            <Example values={['cover']}>
+                {(value) => (
+                    <div>
+                        <Example.Box style={{ width: 100, display: 'inline-block', padding: 5 }}>
+                            <Picture
+                                src='https://picsum.photos/200/100'
+                                picture-size={value}
+                            />
+                        </Example.Box>
+                        <Example.Box style={{ width: 100, display: 'inline-block', padding: 5 }}>
+                            <Picture
+                                src='https://picsum.photos/100/200'
+                                picture-size={value}
+                            />
+                        </Example.Box>
+                    </div>
+                )}
+            </Example>
         )
     }
 }
 </script>
 ```
 
----
-
-## Размер
-
-|            Class           |                       Description                       |
-|----------------------------|---------------------------------------------------------|
-| `.ek-picture_size_cover`   | Картинка сохраняет свои пропорции при заполнении блока. |
-
-``` html
-<div class="ek-picture ek-picture_size_cover">
-    <img
-        class='ek-picture__item'
-        src='https://picsum.photos/600/300'
-    >
-</div>
-```
+### `picture-style`
 
 ```jsx
 /*react*/
 <script>
-const { Picture } = EvoKit;
+const { Picture, Example } = EvoKit;
 
-export default class Example extends React.Component {
+export default class ExampleImage extends React.Component {
     render() {
         return (
-            <div style={{ width: 100, height: 100}}>
-                <Picture
-                    picture-size='cover'
-                    src='https://picsum.photos/600/300'
-                />
-            </div>
-        )
-    }
-}
-</script>
-```
-
----
-
-## Стили
-
-|          Class          |      Description     |
-|-------------------------|----------------------|
-| `.ek-picture_style_round` | Круглое изображение. |
-
-``` html
-<div class="ek-picture ek-picture_style_round ek-picture_size_cover">
-    <img
-        class='ek-picture__item'
-        src='https://picsum.photos/600/300'
-    >
-</div>
-```
-
-```jsx
-/*react*/
-<script>
-const { Picture } = EvoKit;
-
-export default class Example extends React.Component {
-    render() {
-        return (
-            <div style={{ width: 100, height: 100}}>
-                <Picture
-                    picture-style='round'
-                    picture-size='cover'
-                    src='https://picsum.photos/600/300'
-                />
-            </div>
+            <Example values={['round']}>
+                {(value) => (
+                    <div>
+                        <Example.Box style={{ width: 100, display: 'inline-block', padding: 5 }}>
+                            <Picture
+                                src='https://picsum.photos/200/200'
+                                picture-style={value}
+                            />
+                        </Example.Box>
+                    </div>
+                )}
+            </Example>
         )
     }
 }
