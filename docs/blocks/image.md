@@ -1,218 +1,124 @@
-# Image
+[image-align]: #image-align
+[image-valign]: #image-valign
+[image-mirror]: #image-mirror
 
-Чтобы применить этот компонент, просто добавьте класс `.ek-image` к тегу `<img>`.
+[image]: #image
 
+# EvoKit - Image
 
-``` html
-<img
-    class='ek-image'
-    src='https://picsum.photos/100/100'
->
+Предназначен для отображения изображения.
+
+---
+
+## Usage
+
+- [Image][image]
+
+```jsx
+// Common import for all blocks and css
+import { Image } from 'evokit';
+import 'evokit/dist/style.css';
+
+// Single import block and css
+import Image from 'evokit/dist/Image';
+import 'evokit/dist/Image/style.css';
+
+...
+
+<Image src='картинка.png' alt='картинка'>
+
 ```
+
+---
+
+## Image
+
+| Property | Type | Description |
+|----------|----------|-------------|
+| [image-align]    | `string`, `object`, `array` | Горизонтальное выравнивание |
+| [image-valign]    | `string`, `object`, `array` | Вертикальное выравнивание |
+| [image-mirror]     | `string`, `object`, `array` | Отзеркаливание |
+
+### `image-align`
 
 ```jsx
 /*react*/
 <script>
-const { Image } = EvoKit;
+const { Image, Example } = EvoKit;
 
-export default class Example extends React.Component {
+export default class ExampleList extends React.Component {
     render() {
         return (
-            <Image
-                src='https://picsum.photos/100/100'
-                width={100}
-                height={100}
-                alt=''
-            />
+            <Example values={['left', 'center', 'right']}>
+                {(value) => (
+                    <Image
+                        src='https://picsum.photos/200/200'
+                        width={100}
+                        height={100}
+                        image-align={value}
+                    />
+                )}
+            </Example>
         )
     }
 }
 </script>
 ```
 
----
-
-## Горизонтальное выравнивание
-
-|           Class           |          Description          |
-|---------------------------|-------------------------------|
-| `.ek-image_align_left`    | Выравнивание по левому краю.  |
-| `.ek-image_align_center`  | Выравнивание по центру.       |
-| `.ek-image_align_right`   | Выравнивание по правому краю. |
-
-``` html
-<img
-    class='ek-image ek-image_align_center'
-    src='https://picsum.photos/100/100'
->
-```
+### `image-valign`
 
 ```jsx
 /*react*/
 <script>
-const { Image } = EvoKit;
+const { Image, Example } = EvoKit;
 
-export default class Example extends React.Component {
+export default class ExampleList extends React.Component {
     render() {
         return (
-            <div>
-                <Image
-                    image-align='left'
-                    src='https://picsum.photos/100/100'
-                    width={100}
-                    height={100}
-                    alt=''
-                />
-                <Image
-                    image-align='right'
-                    src='https://picsum.photos/100/100'
-                    width={100}
-                    height={100}
-                    alt=''
-                />
-                <Image
-                    image-align='center'
-                    src='https://picsum.photos/100/100'
-                    width={100}
-                    height={100}
-                    alt=''
-                />
-            </div>
+            <Example values={['baseline', 'top', 'bottom', 'middle', 'super', 'sub', 'text-top', 'text-bottom']}>
+                {(value) => (
+                    <div>
+                        <Example.Box style={{ display: 'inline-block' }}>
+                            text
+                        </Example.Box>
+                        <Image
+                            src='https://picsum.photos/120/120'
+                            width={60}
+                            height={60}
+                            image-valign={value}
+                        />
+                        <Example.Box style={{ display: 'inline-block' }}>
+                            text
+                        </Example.Box>
+                    </div>
+                )}
+            </Example>
         )
     }
 }
 </script>
 ```
 
----
-
-## Вертикальное выравнивание
-
-|            Class            |              Description              |
-|-----------------------------|---------------------------------------|
-| `.ek-image_valign_top`      | Выравнивание по верхнему краю строки. |
-| `.ek-image_valign_middle`   | Выравнивание по середине.             |
-| `.ek-image_valign_bottom`   | Выравнивание по нижнему краю.         |
-
-``` html
-<img
-    class='ek-image ek-image_valign_middle'
-    src='https://picsum.photos/100/100'
->
-```
+### `image-mirror`
 
 ```jsx
 /*react*/
 <script>
-const { Image, Grid } = EvoKit;
+const { Image, Example } = EvoKit;
 
-export default class Example extends React.Component {
+export default class ExampleList extends React.Component {
     render() {
         return (
-            <Grid grid-indent='xl'>
-                <Grid.Item>
+            <Example values={['x', 'y', 'xy']}>
+                {(value) => (
                     <Image
-                        image-valign='top'
-                        src='https://picsum.photos/100/100'
+                        src='https://picsum.photos/200/200'
                         width={100}
                         height={100}
-                        alt=''
+                        image-mirror={value}
                     />
-                    top
-                </Grid.Item>
-                <Grid.Item>
-                    <Image
-                        image-valign='middle'
-                        src='https://picsum.photos/100/100'
-                        width={100}
-                        height={100}
-                        alt=''
-                    />
-                    middle
-                </Grid.Item>
-                <Grid.Item>
-                    <Image
-                        image-valign='bottom'
-                        src='https://picsum.photos/100/100'
-                        width={100}
-                        height={100}
-                        alt=''
-                    />
-                    bottom
-                </Grid.Item>
-            </Grid>
-        )
-    }
-}
-</script>
-```
-
----
-
-## Отражение
-
-|         Class         |                     Description                     |
-|-----------------------|-----------------------------------------------------|
-| `.ek-image_mirror_x`  | Отражение по горизонтали                            |
-| `.ek-image_mirror_y`  | Отражение по вертикали                              |
-| `.ek-image_mirror_xy` | Одновременное отражение по горизонтали и вертикали  |
-
-``` html
-<img
-    class='ek-image ek-image_mirror_y'
-    src='https://picsum.photos/100/100'
->
-```
-
-```jsx
-/*react*/
-<script>
-const { Image, Grid } = EvoKit;
-
-export default class Example extends React.Component {
-    render() {
-        return (
-            <Grid grid-indent='xl'>
-                <Grid.Item>
-                    original <br />
-                    <Image
-                        src='https://picsum.photos/100/100'
-                        width={100}
-                        height={100}
-                        alt=''
-                    />
-                </Grid.Item>
-                <Grid.Item>
-                    horizontal <br />
-                    <Image
-                        image-mirror='x'
-                        src='https://picsum.photos/100/100'
-                        width={100}
-                        height={100}
-                        alt=''
-                    />
-                </Grid.Item>
-                <Grid.Item>
-                    vertical <br />
-                    <Image
-                        image-mirror='y'
-                        src='https://picsum.photos/100/100'
-                        width={100}
-                        height={100}
-                        alt=''
-                    />
-                </Grid.Item>
-                <Grid.Item>
-                    horizontal & vertical <br />
-                    <Image
-                        image-mirror='xy'
-                        src='https://picsum.photos/100/100'
-                        width={100}
-                        height={100}
-                        alt=''
-                    />
-                </Grid.Item>
-            </Grid>
+                )}
+            </Example>
         )
     }
 }
