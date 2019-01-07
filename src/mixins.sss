@@ -86,6 +86,7 @@
             @else if $name == black
                 font-weight: 900
 
+
 @define-mixin grid-divider-item $value
     & + .grid__item
         border-left-width: 0
@@ -114,6 +115,7 @@
     @mixin media $(selector)_auto
         width: auto
 
+
 @define-mixin grid-item-width $selector
     @each $to in (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
         @each $from in (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
@@ -129,3 +131,91 @@
     @mixin media $(selector)_auto
         flex: none
         width: auto
+
+
+@define-mixin font-size $selector
+    @each $name in (small, default, big, h1, h2, h3, h4, h5, h6)
+        @mixin media $(selector)_$(name)
+            @if $name == small
+                font-size: calc(var(--ek-default-font-size) - var(--ek-step-font-size))
+            @else if $name == default
+                font-size: var(--ek-default-font-size)
+            @else if $name == big
+                font-size: calc(var(--ek-default-font-size) + var(--ek-step-font-size))
+            @else if $name == h1
+                font-size: var(--ek-font-size-h1)
+            @else if $name == h2
+                font-size: var(--ek-font-size-h2)
+            @else if $name == h3
+                font-size: var(--ek-font-size-h3)
+            @else if $name == h4
+                font-size: var(--ek-font-size-h4)
+            @else if $name == h5
+                font-size: var(--ek-font-size-h5)
+            @else if $name == h6
+                font-size: var(--ek-font-size-h6)
+
+
+@define-mixin border-radius $selector
+    @each $name, $i in (none, full, xxs, xs, s, m, l, xl, xxl)
+        @mixin media $(selector)_$(name)
+            @if $name == full
+                border-radius: 50%
+            @else
+                border-radius: calc(var(--ek-step-round) * $i)
+
+        @mixin media $(selector)-top_$(name)
+            @if $name == full
+                border-top-left-radius: 50%
+                border-top-right-radius: 50%
+            @else
+                border-top-left-radius: calc(var(--ek-step-round) * $i)
+                border-top-right-radius: calc(var(--ek-step-round) * $i)
+
+        @mixin media $(selector)-right_$(name)
+            @if $name == full
+                border-top-right-radius: 50%
+                border-bottom-right-radius: 50%
+            @else
+                border-top-right-radius: calc(var(--ek-step-round) * $i)
+                border-bottom-right-radius: calc(var(--ek-step-round) * $i)
+
+        @mixin media $(selector)-bottom_$(name)
+            @if $name == full
+                border-bottom-left-radius: 50%
+                border-bottom-right-radius: 50%
+            @else
+                border-bottom-left-radius: calc(var(--ek-step-round) * $i)
+                border-bottom-right-radius: calc(var(--ek-step-round) * $i)
+
+        @mixin media $(selector)-left_$(name)
+            @if $name == full
+                border-top-left-radius: 50%
+                border-bottom-left-radius: 50%
+            @else
+                border-top-left-radius: calc(var(--ek-step-round) * $i)
+                border-bottom-left-radius: calc(var(--ek-step-round) * $i)
+
+        @mixin media $(selector)-top-left_$(name)
+            @if $name == full
+                border-top-left-radius: 50%
+            @else
+                border-top-left-radius: calc(var(--ek-step-round) * $i)
+
+        @mixin media $(selector)-top-right_$(name)
+            @if $name == full
+                border-top-right-radius: 50%
+            @else
+                border-top-right-radius: calc(var(--ek-step-round) * $i)
+
+        @mixin media $(selector)-bottom-right_$(name)
+            @if $name == full
+                border-bottom-right-radius: 50%
+            @else
+                border-bottom-right-radius: calc(var(--ek-step-round) * $i)
+
+        @mixin media $(selector)-bottom-left_$(name)
+            @if $name == full
+                border-bottom-left-radius: 50%
+            @else
+                border-bottom-left-radius: calc(var(--ek-step-round) * $i)

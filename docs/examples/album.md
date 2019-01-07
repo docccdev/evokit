@@ -18,11 +18,9 @@ export default class ExampleGrid extends React.Component {
             <Grid grid-valign='middle' grid-indent='xs'>
                 <Grid.Item>
                     <div style={{ width: 30 }}>
-                        <Picture
-                            picture-style='round'
-                            picture-size='cover'
-                            src='https://picsum.photos/60/40'
-                        />
+                        <Picture picture-round='full' picture-size='cover'>
+                            <Picture.Item src='https://picsum.photos/60/40' alt='' />
+                        </Picture>
                     </div>
                 </Grid.Item>
                 <Grid.Item grid-width='expand'>
@@ -35,10 +33,9 @@ export default class ExampleGrid extends React.Component {
 
         return (
             <Box box-background='minor' box-border='muted' box-round='m'>
-                <Picture
-                    style={{ borderRadius: '8px 8px 0 0' }}
-                    src='https://picsum.photos/300/300'
-                />
+                <Picture picture-round-top='m'>
+                    <Picture.Item src='https://picsum.photos/600/600' alt='' />
+                </Picture>
                 <Box box-padding='m'>
                     <Text text-wrap='break' text-lheight='medium'>
                         This is a wider card with supporting text below asa natural

@@ -16,10 +16,9 @@ function Viewed() {
         <Box box-padding='m' box-background='default' className='Height100Perc'>
             <Box box-margin-bottom='xs'>
                 <a href="#">
-                    <Picture
-                        src={src}
-                        alt=''
-                    />
+                    <Picture>
+                        <Picture.Item src={src} alt='' />
+                    </Picture>
                 </a>
             </Box>
             <Box box-margin-bottom='xs'>

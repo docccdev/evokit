@@ -93,8 +93,10 @@ export default class ExampleLink extends React.Component {
                 <br />
                 <br />
                 PICTURE:
-                <Box box-width='3-10'>
-                    <Picture src='https://picsum.photos/300/300' picture-style='round' />
+                <Box style={{ width: 150 }}>
+                    <Picture picture-round='full'>
+                        <Picture.Item src='https://picsum.photos/300/300' alt='' />
+                    </Picture>
                 </Box>
                 <br />
                 <br />

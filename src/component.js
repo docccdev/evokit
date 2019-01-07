@@ -27,12 +27,6 @@ export function createBlock(target) {
         ]);
     }
 
-    target.prototype.getElementClassName = function getElementClassName(name) {
-        const blockClassName = `${target.classPrefix}${target.blockName}`;
-
-        return `${blockClassName}__${name}`;
-    };
-
     target.prototype.getClassName = function getClassName() {
         const blockClassName = `${target.classPrefix}${target.blockName}`;
         const modsProps = [blockClassName];

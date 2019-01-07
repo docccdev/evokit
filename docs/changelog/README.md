@@ -22,6 +22,22 @@
 !> В версии **v2.0.0** и выше, изменился конфиг и некоторые названия класов!
 
 
+## 2.0.8
+- Добавлено значение `full` для модификатора`*-round` блока [box].
+- Удален модификатор `picture-style` для блока [picture].
+- Елемент `<Picture.Item />` блока [picture] вынесен отдельно и обязателен для использования.
+- Для блоков [box], [image], [picture] добавлены модификаторы:
+    - `*-round`
+    - `*-round-top`
+    - `*-round-right`
+    - `*-round-bottom`
+    - `*-round-left`
+    - `*-round-top-left`
+    - `*-round-top-right`
+    - `*-round-bottom-left`
+    - `*-round-bottom-right`
+
+
 ## 2.0.7
 - Исправлен импорт `React` для `Example` блока.
 

@@ -19,13 +19,15 @@
         * style.css = reset + base + themes
 
 4. Picture
-    - Добавить модификатор round и удалить style
++++++ Добавить модификатор round
++++++ Удалить style (взамен использовать round)
++++++ Item - вынести как отдельный елемент
     - Добавить модификатор border
-    - Item - вынести как отдельный елемент
     - Переименовать cover на fit и добавить всех свойств (создать миксин)
+    - Сделать настраиваемую высоту
 
 5. Image
-    - Добавить модификатор round
++++++ Добавить модификатор round
     - Добавить модификатор border
     - Добавить модификатор fit (бывший cover)
 
@@ -35,4 +37,4 @@
 7. MORE
     - box_display_none не перебивает box_display_inline
     - Добавить модификаторы border-top, border-left, border-right, border-bottom
-    - Добавить модификаторы round-top, round-left, round-right, round-bottom
++++++ Добавить модификаторы round-top, round-left, round-right, round-bottom

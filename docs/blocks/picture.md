@@ -1,5 +1,13 @@
 [picture-size]: #picture-size
-[picture-style]: #picture-style
+[picture-round]: #picture-round
+[picture-round-top]: #picture-round-top
+[picture-round-right]: #picture-round-right
+[picture-round-bottom]: #picture-round-bottom
+[picture-round-left]: #picture-round-left
+[picture-round-top-left]: #picture-round-top-left
+[picture-round-top-right]: #picture-round-top-right
+[picture-round-bottom-left]: #picture-round-bottom-left
+[picture-round-bottom-right]: #picture-round-bottom-right
 
 [picture]: #picture
 
@@ -24,7 +32,9 @@ import 'evokit/dist/Picture/style.css';
 
 ...
 
-<Picture src='картинка.png' alt='картинка' />
+<Picture>
+    <Picture.Item src='картинка.png' alt='картинка' />
+</Picture>
 
 ```
 
@@ -35,14 +45,22 @@ import 'evokit/dist/Picture/style.css';
 | Property | Type | Description |
 |----------|----------|-------------|
 | [picture-size]    | `string`, `object`, `array` | Пропорции изображения |
-| [picture-style]    | `string`, `object`, `array` | Скругление изображения |
+| [picture-round]    | `string`, `object`, `array` | Скругление углов |
+| [picture-round-top]    | `string`, `object`, `array` | Скругление углов сверху |
+| [picture-round-right]    | `string`, `object`, `array` | Скругление углов справа |
+| [picture-round-bottom]    | `string`, `object`, `array` | Скругление углов снизу |
+| [picture-round-left]    | `string`, `object`, `array` | Скругление углов слева |
+| [picture-round-top-left]    | `string`, `object`, `array` | Скругление верхнего левого угла |
+| [picture-round-top-right]    | `string`, `object`, `array` | Скругление верхнего правого угла |
+| [picture-round-bottom-left]    | `string`, `object`, `array` | Скругление нижнего левого угла |
+| [picture-round-bottom-right]    | `string`, `object`, `array` | Скругление нижнего правого угла |
 
 ### `picture-size`
 
 ```jsx
 /*react*/
 <script>
-const { Picture, Example } = EvoKit;
+const { Picture, Box, Example } = EvoKit;
 
 export default class ExampleImage extends React.Component {
     render() {
@@ -50,18 +68,16 @@ export default class ExampleImage extends React.Component {
             <Example values={['cover']}>
                 {(value) => (
                     <div>
-                        <Example.Box style={{ width: 100, display: 'inline-block', padding: 5 }}>
-                            <Picture
-                                src='https://picsum.photos/200/100'
-                                picture-size={value}
-                            />
-                        </Example.Box>
-                        <Example.Box style={{ width: 100, display: 'inline-block', padding: 5 }}>
-                            <Picture
-                                src='https://picsum.photos/100/200'
-                                picture-size={value}
-                            />
-                        </Example.Box>
+                        <Box box-margin-right='xs' box-display='inline-block' style={{ width: 100 }}>
+                            <Picture picture-size={value}>
+                                <Picture.Item src='https://picsum.photos/200/100' alt='' />
+                            </Picture>
+                        </Box>
+                        <Box box-margin-right='xs' box-display='inline-block' style={{ width: 100 }}>
+                            <Picture picture-size={value}>
+                                <Picture.Item src='https://picsum.photos/100/200' alt='' />
+                            </Picture>
+                        </Box>
                     </div>
                 )}
             </Example>
@@ -71,7 +87,7 @@ export default class ExampleImage extends React.Component {
 </script>
 ```
 
-### `picture-style`
+### `picture-round`
 
 ```jsx
 /*react*/
@@ -81,15 +97,212 @@ const { Picture, Example } = EvoKit;
 export default class ExampleImage extends React.Component {
     render() {
         return (
-            <Example values={['round']}>
+            <Example values={['none', 'xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl', 'full']}>
                 {(value) => (
-                    <div>
-                        <Example.Box style={{ width: 100, display: 'inline-block', padding: 5 }}>
-                            <Picture
-                                src='https://picsum.photos/200/200'
-                                picture-style={value}
-                            />
-                        </Example.Box>
+                    <div style={{ width: 100 }}>
+                        <Picture picture-round={value}>
+                            <Picture.Item src='https://picsum.photos/200/200' alt='' />
+                        </Picture>
+                    </div>
+                )}
+            </Example>
+        )
+    }
+}
+</script>
+```
+
+### `picture-round-top`
+
+```jsx
+/*react*/
+<script>
+const { Picture, Example } = EvoKit;
+
+export default class ExampleImage extends React.Component {
+    render() {
+        return (
+            <Example values={['none', 'xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl', 'full']}>
+                {(value) => (
+                    <div style={{ width: 100 }}>
+                        <Picture picture-round-top={value}>
+                            <Picture.Item src='https://picsum.photos/200/200' alt='' />
+                        </Picture>
+                    </div>
+                )}
+            </Example>
+        )
+    }
+}
+</script>
+```
+
+### `picture-round-right`
+
+```jsx
+/*react*/
+<script>
+const { Picture, Example } = EvoKit;
+
+export default class ExampleImage extends React.Component {
+    render() {
+        return (
+            <Example values={['none', 'xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl', 'full']}>
+                {(value) => (
+                    <div style={{ width: 100 }}>
+                        <Picture picture-round-right={value}>
+                            <Picture.Item src='https://picsum.photos/200/200' alt='' />
+                        </Picture>
+                    </div>
+                )}
+            </Example>
+        )
+    }
+}
+</script>
+```
+
+### `picture-round-bottom`
+
+```jsx
+/*react*/
+<script>
+const { Picture, Example } = EvoKit;
+
+export default class ExampleImage extends React.Component {
+    render() {
+        return (
+            <Example values={['none', 'xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl', 'full']}>
+                {(value) => (
+                    <div style={{ width: 100 }}>
+                        <Picture picture-round-bottom={value}>
+                            <Picture.Item src='https://picsum.photos/200/200' alt='' />
+                        </Picture>
+                    </div>
+                )}
+            </Example>
+        )
+    }
+}
+</script>
+```
+
+### `picture-round-left`
+
+```jsx
+/*react*/
+<script>
+const { Picture, Example } = EvoKit;
+
+export default class ExampleImage extends React.Component {
+    render() {
+        return (
+            <Example values={['none', 'xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl', 'full']}>
+                {(value) => (
+                    <div style={{ width: 100 }}>
+                        <Picture picture-round-left={value}>
+                            <Picture.Item src='https://picsum.photos/200/200' alt='' />
+                        </Picture>
+                    </div>
+                )}
+            </Example>
+        )
+    }
+}
+</script>
+```
+
+### `picture-round-top-left`
+
+```jsx
+/*react*/
+<script>
+const { Picture, Example } = EvoKit;
+
+export default class ExampleImage extends React.Component {
+    render() {
+        return (
+            <Example values={['none', 'xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl', 'full']}>
+                {(value) => (
+                    <div style={{ width: 100 }}>
+                        <Picture picture-round-top-left={value}>
+                            <Picture.Item src='https://picsum.photos/200/200' alt='' />
+                        </Picture>
+                    </div>
+                )}
+            </Example>
+        )
+    }
+}
+</script>
+```
+
+### `picture-round-top-right`
+
+```jsx
+/*react*/
+<script>
+const { Picture, Example } = EvoKit;
+
+export default class ExampleImage extends React.Component {
+    render() {
+        return (
+            <Example values={['none', 'xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl', 'full']}>
+                {(value) => (
+                    <div style={{ width: 100 }}>
+                        <Picture picture-round-top-right={value}>
+                            <Picture.Item src='https://picsum.photos/200/200' alt='' />
+                        </Picture>
+                    </div>
+                )}
+            </Example>
+        )
+    }
+}
+</script>
+```
+
+### `picture-round-bottom-left`
+
+```jsx
+/*react*/
+<script>
+const { Picture, Example } = EvoKit;
+
+export default class ExampleImage extends React.Component {
+    render() {
+        return (
+            <Example values={['none', 'xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl', 'full']}>
+                {(value) => (
+                    <div style={{ width: 100 }}>
+                        <Picture picture-round-bottom-left={value}>
+                            <Picture.Item src='https://picsum.photos/200/200' alt='' />
+                        </Picture>
+                    </div>
+                )}
+            </Example>
+        )
+    }
+}
+</script>
+```
+
+### `picture-round-bottom-right`
+
+```jsx
+/*react*/
+<script>
+const { Picture, Example } = EvoKit;
+
+export default class ExampleImage extends React.Component {
+    render() {
+        return (
+            <Example values={['none', 'xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl', 'full']}>
+                {(value) => (
+                    <div style={{ width: 100 }}>
+                        <Picture picture-round-bottom-right={value}>
+                            <Picture.Item src='https://picsum.photos/200/200' alt='' />
+                        </Picture>
                     </div>
                 )}
             </Example>
