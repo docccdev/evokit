@@ -64,3 +64,14 @@
  **/
 
 @mixin border-radius .image_round
+
+/**
+ * Fix:
+ *
+ *  - image_fit_*
+ *
+ **/
+
+@each $value in (none, fill, contain, cover, scale-down)
+    .image_fit_$(value)
+        object-fit: $value

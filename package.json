@@ -1,13 +1,13 @@
 {
   "name": "evokit",
-  "version": "2.0.8",
+  "version": "2.0.9",
   "description": "React UI Components for developing fast and powerful web interfaces",
   "main": "dist/index.js",
   "scripts": {
     "build": "webpack --progress --config webpack.config.js",
     "watch": "webpack --progress --watch --config webpack.config.js",
     "prepublishOnly": "webpack --config webpack.config.js",
-    "docs": "http-server ./"
+    "docs": "http-server ./ -p 9090"
   },
   "repository": {
     "type": "git",

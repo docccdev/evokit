@@ -1,4 +1,4 @@
-[picture-size]: #picture-size
+[picture-fit]: #picture-fit
 [picture-round]: #picture-round
 [picture-round-top]: #picture-round-top
 [picture-round-right]: #picture-round-right
@@ -44,7 +44,7 @@ import 'evokit/dist/Picture/style.css';
 
 | Property | Type | Description |
 |----------|----------|-------------|
-| [picture-size]    | `string`, `object`, `array` | Пропорции изображения |
+| [picture-fit]    | `string`, `object`, `array` | Заполнение контейнера относительно его высоты и ширины |
 | [picture-round]    | `string`, `object`, `array` | Скругление углов |
 | [picture-round-top]    | `string`, `object`, `array` | Скругление углов сверху |
 | [picture-round-right]    | `string`, `object`, `array` | Скругление углов справа |
@@ -55,7 +55,7 @@ import 'evokit/dist/Picture/style.css';
 | [picture-round-bottom-left]    | `string`, `object`, `array` | Скругление нижнего левого угла |
 | [picture-round-bottom-right]    | `string`, `object`, `array` | Скругление нижнего правого угла |
 
-### `picture-size`
+### `picture-fit`
 
 ```jsx
 /*react*/
@@ -65,16 +65,16 @@ const { Picture, Box, Example } = EvoKit;
 export default class ExampleImage extends React.Component {
     render() {
         return (
-            <Example values={['cover']}>
+            <Example values={['none', 'fill', 'contain', 'cover', 'scale-down']}>
                 {(value) => (
                     <div>
                         <Box box-margin-right='xs' box-display='inline-block' style={{ width: 100 }}>
-                            <Picture picture-size={value}>
+                            <Picture picture-fit={value}>
                                 <Picture.Item src='https://picsum.photos/200/100' alt='' />
                             </Picture>
                         </Box>
                         <Box box-margin-right='xs' box-display='inline-block' style={{ width: 100 }}>
-                            <Picture picture-size={value}>
+                            <Picture picture-fit={value}>
                                 <Picture.Item src='https://picsum.photos/100/200' alt='' />
                             </Picture>
                         </Box>

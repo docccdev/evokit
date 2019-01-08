@@ -8,6 +8,7 @@ class Image extends React.Component {
         'align',
         'valign',
         'mirror',
+        'fit',
         'round',
         'round-top',
         'round-right',

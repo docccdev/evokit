@@ -1,6 +1,7 @@
 [image-align]: #image-align
 [image-valign]: #image-valign
 [image-mirror]: #image-mirror
+[image-fit]: #image-fit
 [image-round]: #image-round
 [image-round-top]: #image-round-top
 [image-round-right]: #image-round-right
@@ -47,6 +48,7 @@ import 'evokit/dist/Image/style.css';
 | [image-align]    | `string`, `object`, `array` | Горизонтальное выравнивание |
 | [image-valign]    | `string`, `object`, `array` | Вертикальное выравнивание |
 | [image-mirror]     | `string`, `object`, `array` | Отзеркаливание |
+| [image-fit]     | `string`, `object`, `array` | Заполнение контейнера относительно его высоты и ширины |
 | [image-round]     | `string`, `object`, `array` | Скругление углов |
 | [image-round-top]    | `string`, `object`, `array` | Скругление углов сверху |
 | [image-round-right]    | `string`, `object`, `array` | Скругление углов справа |
@@ -135,6 +137,35 @@ export default class ExampleImage extends React.Component {
                         height={100}
                         image-mirror={value}
                     />
+                )}
+            </Example>
+        )
+    }
+}
+</script>
+```
+
+### `image-fit`
+
+```jsx
+/*react*/
+<script>
+const { Image, Example } = EvoKit;
+
+export default class ExampleImage extends React.Component {
+    render() {
+        return (
+            <Example values={['none', 'fill', 'contain', 'cover', 'scale-down']}>
+                {(value) => (
+                    <Example.Box style={{ display: 'inline-block', padding: 5 }}>
+                        <Image
+                            src='https://picsum.photos/200/100'
+                            width={100}
+                            height={100}
+                            image-fit={value}
+                            image-valign='top'
+                        />
+                    </Example.Box>
                 )}
             </Example>
         )

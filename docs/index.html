@@ -24,6 +24,25 @@
 </head>
 <body>
     <div id="app"></div>
+    <button
+        type="button"
+        style="
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            z-index: 9999;
+            cursor: pointer;
+            background: #42b983;
+            border: 0;
+            color: #fff;
+            font-weight: bold;
+            font-size: 20px;
+            padding: 4px 10px;
+            display: none;
+        "
+        onClick="topFunction();"
+        id="scrollToTopButton"
+    >&uarr;</button>
     <script src="//unpkg.com/react/umd/react.production.min.js"></script>
     <script src="//unpkg.com/react-dom/umd/react-dom.production.min.js"></script>
     <script src="//unpkg.com/prop-types/prop-types.min.js"></script>
@@ -37,9 +56,9 @@
     -->
 
     <script>
-        if (typeof navigator.serviceWorker !== 'undefined') {
-            navigator.serviceWorker.register('sw.js');
-        }
+        // if (typeof navigator.serviceWorker !== 'undefined') {
+        //     navigator.serviceWorker.register('sw.js');
+        // }
 
         var jsResources = [
             '<scr'+'ipt src="//unpkg.com/react/umd/react.production.min.js"></scr'+'ipt>',
@@ -73,6 +92,21 @@
             ],
             onlyCover: true
         };
+
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("scrollToTopButton").style.display = "block";
+            } else {
+                document.getElementById("scrollToTopButton").style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
     </script>
     <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
     <script src="//unpkg.com/prismjs/components/prism-bash.min.js"></script>

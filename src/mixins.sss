@@ -157,7 +157,7 @@
 
 
 @define-mixin border-radius $selector
-    @each $name, $i in (none, full, xxs, xs, s, m, l, xl, xxl)
+    @each $name, $i in (none, xxs, xs, s, m, l, xl, xxl, full)
         @mixin media $(selector)_$(name)
             @if $name == full
                 border-radius: 50%

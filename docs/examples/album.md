@@ -18,7 +18,7 @@ export default class ExampleGrid extends React.Component {
             <Grid grid-valign='middle' grid-indent='xs'>
                 <Grid.Item>
                     <div style={{ width: 30 }}>
-                        <Picture picture-round='full' picture-size='cover'>
+                        <Picture picture-round='full' picture-fit='cover'>
                             <Picture.Item src='https://picsum.photos/60/40' alt='' />
                         </Picture>
                     </div>
