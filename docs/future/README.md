@@ -50,7 +50,7 @@ export default class ExampleLink extends React.Component {
                 <br />
                 <br />
                 BOX:
-                <Box box-padding='m' box-background='success' box-border='success' box-round='xs'>
+                <Box box-padding='m' box-background='success' box-border='success' mix-round='xs'>
                     box
                 </Box>
                 <br />
@@ -94,7 +94,7 @@ export default class ExampleLink extends React.Component {
                 <br />
                 PICTURE:
                 <Box style={{ width: 150 }}>
-                    <Picture picture-round='full'>
+                    <Picture mix-round='full'>
                         <Picture.Item src='https://picsum.photos/300/300' alt='' />
                     </Picture>
                 </Box>

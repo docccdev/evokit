@@ -10,6 +10,7 @@ import Picture from './blocks/Picture';
 import Text from './blocks/Text';
 import Line from './blocks/Line';
 import Image from './blocks/Image';
+import Mix from './blocks/Mix';
 
 export {
     createBlock,
@@ -23,4 +24,5 @@ export {
     Text,
     Line,
     Image,
+    Mix,
 };

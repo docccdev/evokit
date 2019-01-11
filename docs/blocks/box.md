@@ -2,6 +2,8 @@
 [colors]: base/colors.md
 [media]: base/media.md
 
+[mixes]: common/mixes.md
+
 [box-margin]: #box-margin
 [box-margin-top]: #box-margin-top
 [box-margin-right]: #box-margin-right
@@ -22,15 +24,7 @@
 [box-position]: #box-position
 [box-place]: #box-place
 [box-width]: #box-width
-[box-round]: #box-round
-[box-round-top]: #box-round-top
-[box-round-right]: #box-round-right
-[box-round-bottom]: #box-round-bottom
-[box-round-left]: #box-round-left
-[box-round-top-left]: #box-round-top-left
-[box-round-top-right]: #box-round-top-right
-[box-round-bottom-left]: #box-round-bottom-left
-[box-round-bottom-right]: #box-round-bottom-right
+[mix-round]: #mix-round
 
 [box]: #box
 
@@ -68,6 +62,8 @@ import 'evokit/dist/Box/style.css';
 
 ## Box
 
+#### Base options:
+
 | Property | Type | Description |
 |----------|----------|-------------|
 | [box-margin]         | `string`, `object`, `array` | Внешний отступ со всех сторон [sizes] |
@@ -84,21 +80,19 @@ import 'evokit/dist/Box/style.css';
 | [box-padding-left]   | `string`, `object`, `array` | Внутренний отступ слева [sizes] |
 | [box-padding-tb]     | `string`, `object`, `array` | Внутренний отступ сверху и снизу [sizes] |
 | [box-padding-lr]     | `string`, `object`, `array` | Внутренний отступ слева и справа [sizes] |
-| [box-round]          | `string`, `object`, `array` | Скругление углов |
-| [box-round-top]    | `string`, `object`, `array` | Скругление углов сверху |
-| [box-round-right]    | `string`, `object`, `array` | Скругление углов справа |
-| [box-round-bottom]    | `string`, `object`, `array` | Скругление углов снизу |
-| [box-round-left]    | `string`, `object`, `array` | Скругление углов слева |
-| [box-round-top-left]    | `string`, `object`, `array` | Скругление верхнего левого угла |
-| [box-round-top-right]    | `string`, `object`, `array` | Скругление верхнего правого угла |
-| [box-round-bottom-left]    | `string`, `object`, `array` | Скругление нижнего левого угла |
-| [box-round-bottom-right]    | `string`, `object`, `array` | Скругление нижнего правого угла |
 | [box-background]     | `string`, `object`, `array` | Добавляет фон |
 | [box-border]         | `string`, `object`, `array` | Добавляет рамку |
 | [box-display]        | `string`, `object`, `array` | Отображение в документе |
 | [box-position]       | `string`, `object`, `array` | Cпособ позиционирования |
 | [box-place]          | `string`, `object`, `array` | Место позиционирования |
 | [box-width]          | `string`, `object`, `array` | Ширина |
+
+#### Mix options:
+
+| Property | About | Description |
+|----------|----------|-------------|
+| [mix-round] | [Mixes][mixes] | Скругление углов |
+
 
 ### `box-margin`
 
@@ -478,213 +472,6 @@ export default class ExampleBox extends React.Component {
 </script>
 ```
 
-### `box-round`
-
-```jsx
-/*react*/
-<script>
-const { Box, Example } = EvoKit;
-
-export default class ExampleBox extends React.Component {
-    render() {
-        return (
-            <Example values={['none', 'xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl', 'full']}>
-                {(value) => (
-                    <Box box-padding='xs' box-border='success' box-round={value}>
-                        content
-                    </Box>
-                )}
-            </Example>
-        )
-    }
-}
-</script>
-```
-
-### `box-round-top`
-
-```jsx
-/*react*/
-<script>
-const { Box, Example } = EvoKit;
-
-export default class ExampleBox extends React.Component {
-    render() {
-        return (
-            <Example values={['none', 'xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl', 'full']}>
-                {(value) => (
-                    <Box box-padding='xs' box-border='success' box-round-top={value}>
-                        content
-                    </Box>
-                )}
-            </Example>
-        )
-    }
-}
-</script>
-```
-
-### `box-round-right`
-
-```jsx
-/*react*/
-<script>
-const { Box, Example } = EvoKit;
-
-export default class ExampleBox extends React.Component {
-    render() {
-        return (
-            <Example values={['none', 'xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl', 'full']}>
-                {(value) => (
-                    <Box box-padding='xs' box-border='success' box-round-right={value}>
-                        content
-                    </Box>
-                )}
-            </Example>
-        )
-    }
-}
-</script>
-```
-
-### `box-round-bottom`
-
-```jsx
-/*react*/
-<script>
-const { Box, Example } = EvoKit;
-
-export default class ExampleBox extends React.Component {
-    render() {
-        return (
-            <Example values={['none', 'xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl', 'full']}>
-                {(value) => (
-                    <Box box-padding='xs' box-border='success' box-round-bottom={value}>
-                        content
-                    </Box>
-                )}
-            </Example>
-        )
-    }
-}
-</script>
-```
-
-### `box-round-left`
-
-```jsx
-/*react*/
-<script>
-const { Box, Example } = EvoKit;
-
-export default class ExampleBox extends React.Component {
-    render() {
-        return (
-            <Example values={['none', 'xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl', 'full']}>
-                {(value) => (
-                    <Box box-padding='xs' box-border='success' box-round-left={value}>
-                        content
-                    </Box>
-                )}
-            </Example>
-        )
-    }
-}
-</script>
-```
-
-### `box-round-top-left`
-
-```jsx
-/*react*/
-<script>
-const { Box, Example } = EvoKit;
-
-export default class ExampleBox extends React.Component {
-    render() {
-        return (
-            <Example values={['none', 'xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl', 'full']}>
-                {(value) => (
-                    <Box box-padding='xs' box-border='success' box-round-top-left={value}>
-                        content
-                    </Box>
-                )}
-            </Example>
-        )
-    }
-}
-</script>
-```
-
-### `box-round-top-right`
-
-```jsx
-/*react*/
-<script>
-const { Box, Example } = EvoKit;
-
-export default class ExampleBox extends React.Component {
-    render() {
-        return (
-            <Example values={['none', 'xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl', 'full']}>
-                {(value) => (
-                    <Box box-padding='xs' box-border='success' box-round-top-right={value}>
-                        content
-                    </Box>
-                )}
-            </Example>
-        )
-    }
-}
-</script>
-```
-
-### `box-round-bottom-left`
-
-```jsx
-/*react*/
-<script>
-const { Box, Example } = EvoKit;
-
-export default class ExampleBox extends React.Component {
-    render() {
-        return (
-            <Example values={['none', 'xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl', 'full']}>
-                {(value) => (
-                    <Box box-padding='xs' box-border='success' box-round-bottom-left={value}>
-                        content
-                    </Box>
-                )}
-            </Example>
-        )
-    }
-}
-</script>
-```
-
-### `box-round-bottom-right`
-
-```jsx
-/*react*/
-<script>
-const { Box, Example } = EvoKit;
-
-export default class ExampleBox extends React.Component {
-    render() {
-        return (
-            <Example values={['none', 'xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl', 'full']}>
-                {(value) => (
-                    <Box box-padding='xs' box-border='success' box-round-bottom-right={value}>
-                        content
-                    </Box>
-                )}
-            </Example>
-        )
-    }
-}
-</script>
-```
-
 ### `box-background`
 
 ```jsx
@@ -825,6 +612,55 @@ export default class ExampleBox extends React.Component {
                             content
                         </Example.Box>
                     </Box>
+                )}
+            </Example>
+        )
+    }
+}
+</script>
+```
+
+### `mix-round`
+
+```jsx
+/*react*/
+<script>
+const { Box, Example } = EvoKit;
+
+export default class ExampleBox extends React.Component {
+    render() {
+        return (
+            <Example values={['none', 'xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl', 'full']}>
+                {(value) => (
+                    <div>
+                        <Box mix-round={value} box-margin-tb='xs' box-padding='xs' box-border='success'>
+                            mix-round
+                        </Box>
+                        <Box mix-round-top={value} box-margin-tb='xs' box-padding='xs' box-border='success'>
+                            mix-round-top
+                        </Box>
+                        <Box mix-round-right={value} box-margin-tb='xs' box-padding='xs' box-border='success'>
+                            mix-round-right
+                        </Box>
+                        <Box mix-round-bottom={value} box-margin-tb='xs' box-padding='xs' box-border='success'>
+                            mix-round-bottom
+                        </Box>
+                        <Box mix-round-left={value} box-margin-tb='xs' box-padding='xs' box-border='success'>
+                            mix-round-left
+                        </Box>
+                        <Box mix-round-top-left={value} box-margin-tb='xs' box-padding='xs' box-border='success'>
+                            mix-round-top-left
+                        </Box>
+                        <Box mix-round-top-right={value} box-margin-tb='xs' box-padding='xs' box-border='success'>
+                            mix-round-top-right
+                        </Box>
+                        <Box mix-round-bottom-left={value} box-margin-tb='xs' box-padding='xs' box-border='success'>
+                            mix-round-bottom-left
+                        </Box>
+                        <Box mix-round-bottom-right={value} box-margin-tb='xs' box-padding='xs' box-border='success'>
+                            mix-round-bottom-right
+                        </Box>
+                    </div>
                 )}
             </Example>
         )

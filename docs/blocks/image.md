@@ -1,16 +1,11 @@
+[mixes]: common/mixes.md
+
 [image-align]: #image-align
 [image-valign]: #image-valign
 [image-mirror]: #image-mirror
 [image-fit]: #image-fit
-[image-round]: #image-round
-[image-round-top]: #image-round-top
-[image-round-right]: #image-round-right
-[image-round-bottom]: #image-round-bottom
-[image-round-left]: #image-round-left
-[image-round-top-left]: #image-round-top-left
-[image-round-top-right]: #image-round-top-right
-[image-round-bottom-left]: #image-round-bottom-left
-[image-round-bottom-right]: #image-round-bottom-right
+
+[mix-round]: #mix-round
 
 [image]: #image
 
@@ -43,21 +38,20 @@ import 'evokit/dist/Image/style.css';
 
 ## Image
 
+#### Base options:
+
 | Property | Type | Description |
 |----------|----------|-------------|
 | [image-align]    | `string`, `object`, `array` | Горизонтальное выравнивание |
 | [image-valign]    | `string`, `object`, `array` | Вертикальное выравнивание |
 | [image-mirror]     | `string`, `object`, `array` | Отзеркаливание |
 | [image-fit]     | `string`, `object`, `array` | Заполнение контейнера относительно его высоты и ширины |
-| [image-round]     | `string`, `object`, `array` | Скругление углов |
-| [image-round-top]    | `string`, `object`, `array` | Скругление углов сверху |
-| [image-round-right]    | `string`, `object`, `array` | Скругление углов справа |
-| [image-round-bottom]    | `string`, `object`, `array` | Скругление углов снизу |
-| [image-round-left]    | `string`, `object`, `array` | Скругление углов слева |
-| [image-round-top-left]    | `string`, `object`, `array` | Скругление верхнего левого угла |
-| [image-round-top-right]    | `string`, `object`, `array` | Скругление верхнего правого угла |
-| [image-round-bottom-left]    | `string`, `object`, `array` | Скругление нижнего левого угла |
-| [image-round-bottom-right]    | `string`, `object`, `array` | Скругление нижнего правого угла |
+
+#### Mix options:
+
+| Property | About | Description |
+|----------|----------|-------------|
+| [mix-round] | [Mixes][mixes] | Скругление углов |
 
 ### `image-align`
 
@@ -174,7 +168,7 @@ export default class ExampleImage extends React.Component {
 </script>
 ```
 
-### `image-round`
+### `mix-round`
 
 ```jsx
 /*react*/
@@ -186,220 +180,70 @@ export default class ExampleImage extends React.Component {
         return (
             <Example values={['none', 'xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl', 'full']}>
                 {(value) => (
-                    <Image
-                        src='https://picsum.photos/200/200'
-                        width={100}
-                        height={100}
-                        image-round={value}
-                    />
-                )}
-            </Example>
-        )
-    }
-}
-</script>
-```
-
-### `image-round-top`
-
-```jsx
-/*react*/
-<script>
-const { Image, Example } = EvoKit;
-
-export default class ExampleImage extends React.Component {
-    render() {
-        return (
-            <Example values={['none', 'xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl', 'full']}>
-                {(value) => (
-                    <Image
-                        src='https://picsum.photos/200/200'
-                        width={100}
-                        height={100}
-                        image-round-top={value}
-                    />
-                )}
-            </Example>
-        )
-    }
-}
-</script>
-```
-
-### `image-round-right`
-
-```jsx
-/*react*/
-<script>
-const { Image, Example } = EvoKit;
-
-export default class ExampleImage extends React.Component {
-    render() {
-        return (
-            <Example values={['none', 'xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl', 'full']}>
-                {(value) => (
-                    <Image
-                        src='https://picsum.photos/200/200'
-                        width={100}
-                        height={100}
-                        image-round-right={value}
-                    />
-                )}
-            </Example>
-        )
-    }
-}
-</script>
-```
-
-### `image-round-bottom`
-
-```jsx
-/*react*/
-<script>
-const { Image, Example } = EvoKit;
-
-export default class ExampleImage extends React.Component {
-    render() {
-        return (
-            <Example values={['none', 'xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl', 'full']}>
-                {(value) => (
-                    <Image
-                        src='https://picsum.photos/200/200'
-                        width={100}
-                        height={100}
-                        image-round-bottom={value}
-                    />
-                )}
-            </Example>
-        )
-    }
-}
-</script>
-```
-
-### `image-round-left`
-
-```jsx
-/*react*/
-<script>
-const { Image, Example } = EvoKit;
-
-export default class ExampleImage extends React.Component {
-    render() {
-        return (
-            <Example values={['none', 'xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl', 'full']}>
-                {(value) => (
-                    <Image
-                        src='https://picsum.photos/200/200'
-                        width={100}
-                        height={100}
-                        image-round-left={value}
-                    />
-                )}
-            </Example>
-        )
-    }
-}
-</script>
-```
-
-### `image-round-top-left`
-
-```jsx
-/*react*/
-<script>
-const { Image, Example } = EvoKit;
-
-export default class ExampleImage extends React.Component {
-    render() {
-        return (
-            <Example values={['none', 'xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl', 'full']}>
-                {(value) => (
-                    <Image
-                        src='https://picsum.photos/200/200'
-                        width={100}
-                        height={100}
-                        image-round-top-left={value}
-                    />
-                )}
-            </Example>
-        )
-    }
-}
-</script>
-```
-
-### `image-round-top-right`
-
-```jsx
-/*react*/
-<script>
-const { Image, Example } = EvoKit;
-
-export default class ExampleImage extends React.Component {
-    render() {
-        return (
-            <Example values={['none', 'xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl', 'full']}>
-                {(value) => (
-                    <Image
-                        src='https://picsum.photos/200/200'
-                        width={100}
-                        height={100}
-                        image-round-top-right={value}
-                    />
-                )}
-            </Example>
-        )
-    }
-}
-</script>
-```
-
-### `image-round-bottom-left`
-
-```jsx
-/*react*/
-<script>
-const { Image, Example } = EvoKit;
-
-export default class ExampleImage extends React.Component {
-    render() {
-        return (
-            <Example values={['none', 'xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl', 'full']}>
-                {(value) => (
-                    <Image
-                        src='https://picsum.photos/200/200'
-                        width={100}
-                        height={100}
-                        image-round-bottom-left={value}
-                    />
-                )}
-            </Example>
-        )
-    }
-}
-</script>
-```
-
-### `image-round-bottom-right`
-
-```jsx
-/*react*/
-<script>
-const { Image, Example } = EvoKit;
-
-export default class ExampleImage extends React.Component {
-    render() {
-        return (
-            <Example values={['none', 'xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl', 'full']}>
-                {(value) => (
-                    <Image
-                        src='https://picsum.photos/200/200'
-                        width={100}
-                        height={100}
-                        image-round-bottom-right={value}
-                    />
+                    <div>
+                        <Image
+                            src='https://picsum.photos/200/200'
+                            width={100}
+                            height={100}
+                            mix-round={value}
+                        />
+                        &nbsp;&nbsp;
+                        <Image
+                            src='https://picsum.photos/200/200'
+                            width={100}
+                            height={100}
+                            mix-round-top={value}
+                        />
+                        &nbsp;&nbsp;
+                        <Image
+                            src='https://picsum.photos/200/200'
+                            width={100}
+                            height={100}
+                            mix-round-right={value}
+                        />
+                        &nbsp;&nbsp;
+                        <Image
+                            src='https://picsum.photos/200/200'
+                            width={100}
+                            height={100}
+                            mix-round-bottom={value}
+                        />
+                        &nbsp;&nbsp;
+                        <Image
+                            src='https://picsum.photos/200/200'
+                            width={100}
+                            height={100}
+                            mix-round-left={value}
+                        />
+                        &nbsp;&nbsp;
+                        <Image
+                            src='https://picsum.photos/200/200'
+                            width={100}
+                            height={100}
+                            mix-round-top-left={value}
+                        />
+                        &nbsp;&nbsp;
+                        <Image
+                            src='https://picsum.photos/200/200'
+                            width={100}
+                            height={100}
+                            mix-round-top-right={value}
+                        />
+                        &nbsp;&nbsp;
+                        <Image
+                            src='https://picsum.photos/200/200'
+                            width={100}
+                            height={100}
+                            mix-round-bottom-left={value}
+                        />
+                        &nbsp;&nbsp;
+                        <Image
+                            src='https://picsum.photos/200/200'
+                            width={100}
+                            height={100}
+                            mix-round-bottom-right={value}
+                        />
+                    </div>
                 )}
             </Example>
         )

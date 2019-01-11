@@ -7,6 +7,8 @@
 [text]: base/text.md
 [colors]: base/colors.md
 
+[mixes]: common/mixes.md
+
 [body]: blocks/body.md
 [grid]: blocks/grid.md
 [box]: blocks/box.md
@@ -20,6 +22,12 @@
 # CHANGELOG
 
 !> В версии **v2.0.0** и выше, изменился конфиг и некоторые названия класов!
+
+## 2.1.0
+- Добавлены [Mixes][mixes].
+- Для блока [Box][box] свойства `box-round` и `box-round-*` заменены на `mix-round` и `mix-round-*`.
+- Для блока [Image][image] свойства `image-round` и `image-round-*` заменены на `mix-round` и `mix-round-*`.
+- Для блока [Picture][picture] свойства `picture-round` и `picture-round-*` заменены на `mix-round` и `mix-round-*`.
 
 
 ## 2.0.9

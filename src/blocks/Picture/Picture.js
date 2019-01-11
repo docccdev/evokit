@@ -6,6 +6,8 @@ class Picture extends React.Component {
     static blockName = 'picture';
     static blockMods = [
         'fit',
+    ];
+    static mixMods = [
         'round',
         'round-top',
         'round-right',

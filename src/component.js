@@ -2,6 +2,27 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
 
+const getClassNameFromProps = function(classPrefix, propsPrefix, blockName, allowedMods, props) {
+    const blockClassName = `${classPrefix}${blockName}`;
+    const modsProps = [blockClassName];
+
+    for (const key of allowedMods) {
+        const propName = `${propsPrefix}${key}`;
+
+        if (propName in props) {
+            const modName = `${blockClassName}_${key}`;
+            let modsString = classNames(props[propName]);
+
+            if (modsString) {
+                modsString = modsString.replace(/ /g, ` ${modName}_`);
+                modsProps.push(`${modName}_${modsString}`);
+            }
+        }
+    }
+
+    return modsProps;
+};
+
 export function createBlock(target) {
     const propsPrefixName = target.blockName.split('__')[0];
 
@@ -10,6 +31,7 @@ export function createBlock(target) {
     target.classPrefix = target.classPrefix || 'ek-';
     target.propsPrefix = target.propsPrefix || `${propsPrefixName}-`;
     target.blockMods = target.blockMods || [];
+    target.mixMods = target.mixMods || [];
     target.displayName = target.displayName || `${target.classPrefix}${target.blockName}`;
 
     target.propTypes['domRef'] = PropTypes.func;
@@ -28,28 +50,25 @@ export function createBlock(target) {
     }
 
     target.prototype.getClassName = function getClassName() {
-        const blockClassName = `${target.classPrefix}${target.blockName}`;
-        const modsProps = [blockClassName];
+        const propClassList = this.props.className ? [this.props.className] : [];
 
-        for (const key of target.blockMods) {
-            const propName = `${target.propsPrefix}${key}`;
+        const blockClassList = getClassNameFromProps(
+            target.classPrefix,
+            target.propsPrefix,
+            target.blockName,
+            target.blockMods,
+            this.props,
+        );
 
-            if (propName in this.props) {
-                const modName = `${blockClassName}_${key}`;
-                let modsString = classNames(this.props[propName]);
+        const mixClassList = target.mixMods.length ? getClassNameFromProps(
+            target.classPrefix,
+            'mix-',
+            'mix',
+            target.mixMods,
+            this.props,
+        ) : [];
 
-                if (modsString) {
-                    modsString = modsString.replace(/ /g, ` ${modName}_`);
-                    modsProps.push(`${modName}_${modsString}`);
-                }
-            }
-        }
-
-        if (this.props.className) {
-            modsProps.push(this.props.className);
-        }
-
-        return modsProps.join(' ');
+        return [...blockClassList, ...mixClassList, ...propClassList].join(' ');
     };
 
     target.prototype.getCleanProps = function getCleanProps() {

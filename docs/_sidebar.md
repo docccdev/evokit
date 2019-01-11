@@ -1,13 +1,14 @@
-* GET STARTED
+* COMMON
 
   * [Usage](/base/usage.md)
   * [Variables](/base/variables.md)
   * [Media](/base/media.md)
   * [Sizes](/base/sizes.md)
+  * [Mixes](/common/mixes.md)
   <!-- * [Colors](/base/colors.md) -->
   <!-- * [Text](/base/text.md) -->
 
-* COMMON
+* BASE
 
   * [Box](blocks/box.md)
   * [Text](blocks/text.md)
@@ -15,7 +16,7 @@
   * [Image](blocks/image.md)
   * [Line](blocks/line.md)
 
-* ADDITIONAL
+* EXTRA
 
   * [Body](blocks/body.md)
   * [Grid](blocks/grid.md)

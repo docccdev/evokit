@@ -1,16 +1,10 @@
 import React from 'react';
 import { createBlock } from '../../component';
 
-class Image extends React.Component {
-    static blockTag = 'img';
-    static blockName = 'image';
+class Mix extends React.Component {
+    static blockTag = 'div';
+    static blockName = 'mix';
     static blockMods = [
-        'align',
-        'valign',
-        'mirror',
-        'fit',
-    ];
-    static mixMods = [
         'round',
         'round-top',
         'round-right',
@@ -32,4 +26,4 @@ class Image extends React.Component {
     }
 }
 
-export default createBlock(Image);
+export default createBlock(Mix);

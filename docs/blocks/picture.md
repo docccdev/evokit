@@ -1,13 +1,8 @@
+[mixes]: common/mixes.md
+
 [picture-fit]: #picture-fit
-[picture-round]: #picture-round
-[picture-round-top]: #picture-round-top
-[picture-round-right]: #picture-round-right
-[picture-round-bottom]: #picture-round-bottom
-[picture-round-left]: #picture-round-left
-[picture-round-top-left]: #picture-round-top-left
-[picture-round-top-right]: #picture-round-top-right
-[picture-round-bottom-left]: #picture-round-bottom-left
-[picture-round-bottom-right]: #picture-round-bottom-right
+
+[mix-round]: #mix-round
 
 [picture]: #picture
 
@@ -42,18 +37,17 @@ import 'evokit/dist/Picture/style.css';
 
 ## Picture
 
+#### Base options:
+
 | Property | Type | Description |
 |----------|----------|-------------|
 | [picture-fit]    | `string`, `object`, `array` | Заполнение контейнера относительно его высоты и ширины |
-| [picture-round]    | `string`, `object`, `array` | Скругление углов |
-| [picture-round-top]    | `string`, `object`, `array` | Скругление углов сверху |
-| [picture-round-right]    | `string`, `object`, `array` | Скругление углов справа |
-| [picture-round-bottom]    | `string`, `object`, `array` | Скругление углов снизу |
-| [picture-round-left]    | `string`, `object`, `array` | Скругление углов слева |
-| [picture-round-top-left]    | `string`, `object`, `array` | Скругление верхнего левого угла |
-| [picture-round-top-right]    | `string`, `object`, `array` | Скругление верхнего правого угла |
-| [picture-round-bottom-left]    | `string`, `object`, `array` | Скругление нижнего левого угла |
-| [picture-round-bottom-right]    | `string`, `object`, `array` | Скругление нижнего правого угла |
+
+#### Mix options:
+
+| Property | About | Description |
+|----------|----------|-------------|
+| [mix-round] | [Mixes][mixes] | Скругление углов |
 
 ### `picture-fit`
 
@@ -87,223 +81,65 @@ export default class ExampleImage extends React.Component {
 </script>
 ```
 
-### `picture-round`
+### `mix-round`
 
 ```jsx
 /*react*/
 <script>
-const { Picture, Example } = EvoKit;
+const { Picture, Grid, Example } = EvoKit;
 
 export default class ExampleImage extends React.Component {
     render() {
         return (
             <Example values={['none', 'xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl', 'full']}>
                 {(value) => (
-                    <div style={{ width: 100 }}>
-                        <Picture picture-round={value}>
-                            <Picture.Item src='https://picsum.photos/200/200' alt='' />
-                        </Picture>
-                    </div>
-                )}
-            </Example>
-        )
-    }
-}
-</script>
-```
-
-### `picture-round-top`
-
-```jsx
-/*react*/
-<script>
-const { Picture, Example } = EvoKit;
-
-export default class ExampleImage extends React.Component {
-    render() {
-        return (
-            <Example values={['none', 'xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl', 'full']}>
-                {(value) => (
-                    <div style={{ width: 100 }}>
-                        <Picture picture-round-top={value}>
-                            <Picture.Item src='https://picsum.photos/200/200' alt='' />
-                        </Picture>
-                    </div>
-                )}
-            </Example>
-        )
-    }
-}
-</script>
-```
-
-### `picture-round-right`
-
-```jsx
-/*react*/
-<script>
-const { Picture, Example } = EvoKit;
-
-export default class ExampleImage extends React.Component {
-    render() {
-        return (
-            <Example values={['none', 'xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl', 'full']}>
-                {(value) => (
-                    <div style={{ width: 100 }}>
-                        <Picture picture-round-right={value}>
-                            <Picture.Item src='https://picsum.photos/200/200' alt='' />
-                        </Picture>
-                    </div>
-                )}
-            </Example>
-        )
-    }
-}
-</script>
-```
-
-### `picture-round-bottom`
-
-```jsx
-/*react*/
-<script>
-const { Picture, Example } = EvoKit;
-
-export default class ExampleImage extends React.Component {
-    render() {
-        return (
-            <Example values={['none', 'xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl', 'full']}>
-                {(value) => (
-                    <div style={{ width: 100 }}>
-                        <Picture picture-round-bottom={value}>
-                            <Picture.Item src='https://picsum.photos/200/200' alt='' />
-                        </Picture>
-                    </div>
-                )}
-            </Example>
-        )
-    }
-}
-</script>
-```
-
-### `picture-round-left`
-
-```jsx
-/*react*/
-<script>
-const { Picture, Example } = EvoKit;
-
-export default class ExampleImage extends React.Component {
-    render() {
-        return (
-            <Example values={['none', 'xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl', 'full']}>
-                {(value) => (
-                    <div style={{ width: 100 }}>
-                        <Picture picture-round-left={value}>
-                            <Picture.Item src='https://picsum.photos/200/200' alt='' />
-                        </Picture>
-                    </div>
-                )}
-            </Example>
-        )
-    }
-}
-</script>
-```
-
-### `picture-round-top-left`
-
-```jsx
-/*react*/
-<script>
-const { Picture, Example } = EvoKit;
-
-export default class ExampleImage extends React.Component {
-    render() {
-        return (
-            <Example values={['none', 'xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl', 'full']}>
-                {(value) => (
-                    <div style={{ width: 100 }}>
-                        <Picture picture-round-top-left={value}>
-                            <Picture.Item src='https://picsum.photos/200/200' alt='' />
-                        </Picture>
-                    </div>
-                )}
-            </Example>
-        )
-    }
-}
-</script>
-```
-
-### `picture-round-top-right`
-
-```jsx
-/*react*/
-<script>
-const { Picture, Example } = EvoKit;
-
-export default class ExampleImage extends React.Component {
-    render() {
-        return (
-            <Example values={['none', 'xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl', 'full']}>
-                {(value) => (
-                    <div style={{ width: 100 }}>
-                        <Picture picture-round-top-right={value}>
-                            <Picture.Item src='https://picsum.photos/200/200' alt='' />
-                        </Picture>
-                    </div>
-                )}
-            </Example>
-        )
-    }
-}
-</script>
-```
-
-### `picture-round-bottom-left`
-
-```jsx
-/*react*/
-<script>
-const { Picture, Example } = EvoKit;
-
-export default class ExampleImage extends React.Component {
-    render() {
-        return (
-            <Example values={['none', 'xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl', 'full']}>
-                {(value) => (
-                    <div style={{ width: 100 }}>
-                        <Picture picture-round-bottom-left={value}>
-                            <Picture.Item src='https://picsum.photos/200/200' alt='' />
-                        </Picture>
-                    </div>
-                )}
-            </Example>
-        )
-    }
-}
-</script>
-```
-
-### `picture-round-bottom-right`
-
-```jsx
-/*react*/
-<script>
-const { Picture, Example } = EvoKit;
-
-export default class ExampleImage extends React.Component {
-    render() {
-        return (
-            <Example values={['none', 'xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl', 'full']}>
-                {(value) => (
-                    <div style={{ width: 100 }}>
-                        <Picture picture-round-bottom-right={value}>
-                            <Picture.Item src='https://picsum.photos/200/200' alt='' />
-                        </Picture>
-                    </div>
+                    <Grid grid-indent='xs' grid-column='expand'>
+                        <Grid.Item>
+                            <Picture mix-round={value}>
+                                <Picture.Item src='https://picsum.photos/200/200' alt='' />
+                            </Picture>
+                        </Grid.Item>
+                        <Grid.Item>
+                            <Picture mix-round-top={value}>
+                                <Picture.Item src='https://picsum.photos/200/200' alt='' />
+                            </Picture>
+                        </Grid.Item>
+                        <Grid.Item>
+                            <Picture mix-round-right={value}>
+                                <Picture.Item src='https://picsum.photos/200/200' alt='' />
+                            </Picture>
+                        </Grid.Item>
+                        <Grid.Item>
+                            <Picture mix-round-bottom={value}>
+                                <Picture.Item src='https://picsum.photos/200/200' alt='' />
+                            </Picture>
+                        </Grid.Item>
+                        <Grid.Item>
+                            <Picture mix-round-left={value}>
+                                <Picture.Item src='https://picsum.photos/200/200' alt='' />
+                            </Picture>
+                        </Grid.Item>
+                        <Grid.Item>
+                            <Picture mix-round-top-left={value}>
+                                <Picture.Item src='https://picsum.photos/200/200' alt='' />
+                            </Picture>
+                        </Grid.Item>
+                        <Grid.Item>
+                            <Picture mix-round-top-right={value}>
+                                <Picture.Item src='https://picsum.photos/200/200' alt='' />
+                            </Picture>
+                        </Grid.Item>
+                        <Grid.Item>
+                            <Picture mix-round-bottom-left={value}>
+                                <Picture.Item src='https://picsum.photos/200/200' alt='' />
+                            </Picture>
+                        </Grid.Item>
+                        <Grid.Item>
+                            <Picture mix-round-bottom-right={value}>
+                                <Picture.Item src='https://picsum.photos/200/200' alt='' />
+                            </Picture>
+                        </Grid.Item>
+                    </Grid>
                 )}
             </Example>
         )
