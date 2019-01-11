@@ -262,7 +262,7 @@ function ProductCart() {
                             <Grid.Item>
                                 <Plug style={{ width: 20, height: 20 }}></Plug>
                             </Grid.Item>
-                            <Grid.Item grid-width='expand'>
+                            <Grid.Item mix-width='expand'>
                                 <Link href='#' link-style='dotted'>
                                     Киев
                                 </Link>
@@ -274,7 +274,7 @@ function ProductCart() {
                             <Grid.Item>
                                 <Plug style={{ width: 20, height: 20 }}></Plug>
                             </Grid.Item>
-                            <Grid.Item grid-width='expand'>
+                            <Grid.Item mix-width='expand'>
                                 <Link href='#' link-style='dotted'>
                                     График работы
                                 </Link>
@@ -286,7 +286,7 @@ function ProductCart() {
                             <Grid.Item>
                                 <Plug style={{ width: 20, height: 20 }}></Plug>
                             </Grid.Item>
-                            <Grid.Item grid-width='expand'>
+                            <Grid.Item mix-width='expand'>
                                 <Link href='#' link-style='dotted'>
                                     +380 показать номер
                                 </Link>
@@ -316,7 +316,7 @@ function ProductCart() {
                     <Grid.Item>
                         <Plug style={{ width: 40, height: 40 }}></Plug>
                     </Grid.Item>
-                    <Grid.Item grid-width='expand'>
+                    <Grid.Item mix-width='expand'>
                         <Text text-lheight='medium'>
                             1 год
                             <br />
@@ -335,7 +335,7 @@ function ProductCart() {
             </Box>
             <Box box-margin-bottom='m' box-background='light'>
                 <Grid grid-divider='muted'>
-                    <Grid.Item grid-width='expand'>
+                    <Grid.Item mix-width='expand'>
                         <Box box-padding='m'>
                             top
                         </Box>
@@ -344,7 +344,7 @@ function ProductCart() {
                             bottom
                         </Box>
                     </Grid.Item>
-                    <Grid.Item grid-width='2-10'>
+                    <Grid.Item mix-width='2-10'>
                         <Box box-padding='m'>
                             {Sidebar}
                         </Box>
@@ -353,7 +353,7 @@ function ProductCart() {
             </Box>
             <Box box-margin-bottom='m'>
                 <Grid grid-indent='xs'>
-                    <Grid.Item grid-width='expand'>
+                    <Grid.Item mix-width='expand'>
                         <Box box-padding='m' box-background='light'>
                             <List list-indent='xl'>
                                 <List.Item>
@@ -374,7 +374,7 @@ function ProductCart() {
                             </List>
                         </Box>
                     </Grid.Item>
-                    <Grid.Item grid-width='4-10'>
+                    <Grid.Item mix-width='4-10'>
                         {Recomended}
                     </Grid.Item>
                 </Grid>

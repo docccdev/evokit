@@ -23,10 +23,10 @@ function Header() {
                     />
                 </a>
             </Grid.Item>
-            <Grid.Item grid-width='expand'>
+            <Grid.Item mix-width='expand'>
                 <Plug style={{ height: 36 }}>HeaderSearch</Plug>
             </Grid.Item>
-            <Grid.Item grid-width='1-7'>
+            <Grid.Item mix-width='1-7'>
                 <Plug style={{ height: 36 }}>HeaderRegion</Plug>
             </Grid.Item>
             <Grid.Item>

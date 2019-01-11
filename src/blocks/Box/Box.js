@@ -24,7 +24,6 @@ class Box extends React.Component {
         'display',
         'position',
         'place',
-        'width',
     ];
     static mixMods = [
         'round',
@@ -36,6 +35,7 @@ class Box extends React.Component {
         'round-top-right',
         'round-bottom-left',
         'round-bottom-right',
+        'width',
     ];
 
     render() {

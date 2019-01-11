@@ -5,6 +5,7 @@ class Mix extends React.Component {
     static blockTag = 'div';
     static blockName = 'mix';
     static blockMods = [
+        'width',
         'round',
         'round-top',
         'round-right',

@@ -23,7 +23,8 @@
 [box-display]: #box-display
 [box-position]: #box-position
 [box-place]: #box-place
-[box-width]: #box-width
+
+[mix-width]: #mix-width
 [mix-round]: #mix-round
 
 [box]: #box
@@ -85,12 +86,12 @@ import 'evokit/dist/Box/style.css';
 | [box-display]        | `string`, `object`, `array` | Отображение в документе |
 | [box-position]       | `string`, `object`, `array` | Cпособ позиционирования |
 | [box-place]          | `string`, `object`, `array` | Место позиционирования |
-| [box-width]          | `string`, `object`, `array` | Ширина |
 
 #### Mix options:
 
 | Property | About | Description |
 |----------|----------|-------------|
+| [mix-width] | [Mixes][mixes] | Ширина |
 | [mix-round] | [Mixes][mixes] | Скругление углов |
 
 
@@ -595,7 +596,7 @@ export default class ExampleBox extends React.Component {
 </script>
 ```
 
-### `box-width`
+### `mix-width`
 
 ```jsx
 /*react*/
@@ -607,7 +608,7 @@ export default class ExampleBox extends React.Component {
         return (
             <Example values={['auto', '1-1', '1-10', '2-10', '3-10', '4-10', '5-10', '6-10', '7-10', '8-10', '9-10']}>
                 {(value) => (
-                    <Box box-width={value}>
+                    <Box mix-width={value}>
                         <Example.Box>
                             content
                         </Example.Box>

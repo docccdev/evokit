@@ -5,8 +5,10 @@ class GridItem extends React.Component {
     static blockTag = 'div';
     static blockName = 'grid__item';
     static blockMods = [
-        'width',
         'order',
+    ];
+    static mixMods = [
+        'width',
     ];
 
     render() {

@@ -23,7 +23,7 @@ export default class ExampleGrid extends React.Component {
                         </Picture>
                     </div>
                 </Grid.Item>
-                <Grid.Item grid-width='expand'>
+                <Grid.Item mix-width='expand'>
                     <Text text-lheight='medium' text-wrap='ellipsis'>
                          Margenko Evgene Sergeyevich
                     </Text>
@@ -61,7 +61,7 @@ export default class ExampleGrid extends React.Component {
     render() {
         return (
             <div>
-                <Box box-padding-tb='xxl' box-margin-lr='auto' box-width='6-10'>
+                <Box box-padding-tb='xxl' box-margin-lr='auto' mix-width='6-10'>
                     <Box box-margin-bottom='m'>
                         <Text text-size='h1' text-weight='bold' text-align='center'>
                             Album example

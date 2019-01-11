@@ -27,13 +27,13 @@ function HeaderContent() {
                 </Grid.Item>
                 <Grid.Item>
                     <Grid grid-valign='middle' grid-indent='xs'>
-                        <Grid.Item grid-width='expand'>
+                        <Grid.Item mix-width='expand'>
                             <Line />
                         </Grid.Item>
                         <Grid.Item>
                             или
                         </Grid.Item>
-                        <Grid.Item grid-width='expand'>
+                        <Grid.Item mix-width='expand'>
                             <Line />
                         </Grid.Item>
                     </Grid>
@@ -62,7 +62,7 @@ function HeaderContent() {
                 <Grid.Item>
                     <Plug style={{ height: 30, width: 30 }}></Plug>
                 </Grid.Item>
-                <Grid.Item grid-width='expand'>
+                <Grid.Item mix-width='expand'>
                     {children}
                 </Grid.Item>
             </Grid>
@@ -72,15 +72,15 @@ function HeaderContent() {
     return (
         <Fragment>
             <Grid grid-indent='xs'>
-                <Grid.Item grid-width='2-10'>
+                <Grid.Item mix-width='2-10'>
                     <Plug style={{ height: '100%' }}>Navigation</Plug>
                 </Grid.Item>
-                <Grid.Item grid-width='expand'>
+                <Grid.Item mix-width='expand'>
                     <Grid grid-indent='xs'>
-                        <Grid.Item grid-width='expand'>
+                        <Grid.Item mix-width='expand'>
                             <Plug style={{ height: 360 }}>Banner</Plug>
                         </Grid.Item>
-                        <Grid.Item grid-width='1-4'>
+                        <Grid.Item mix-width='1-4'>
                             {RightContentSidebar}
                         </Grid.Item>
                     </Grid>

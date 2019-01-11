@@ -1,5 +1,8 @@
 [sizes]: base/sizes.md
 [media]: base/media.md
+
+[mixes]: common/mixes.md
+
 [grid-column]: #grid-column
 [grid-indent]: #grid-indent
 [grid-direction]: #grid-direction
@@ -8,8 +11,9 @@
 [grid-divider]: #grid-divider
 [grid-wrap]: #grid-wrap
 
-[grid-width]: #grid-width
 [grid-order]: #grid-order
+
+[mix-width]: #mix-width
 
 [grid]: #grid
 [griditem]: #griditem
@@ -162,7 +166,7 @@ export default class ExampleGrid extends React.Component {
                 {(value) => (
                     <Grid grid-wrap={value}>
                         {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((key) => (
-                            <Grid.Item grid-width='1-3'>
+                            <Grid.Item mix-width='1-3'>
                                 <Example.Box>
                                     item {key}
                                 </Example.Box>
@@ -268,39 +272,17 @@ export default class ExampleGrid extends React.Component {
 
 ## Grid.Item
 
+#### Base options:
+
 | Property | Type | Description |
 |----------|------|-------------|
-| [grid-width] | `string`, `object`, `array` | Ширина для ячейки. |
 | [grid-order] | `string`, `object`, `array` or `number` | Задает порядок расположения ячейки |
 
-### `grid-width`
+#### Mix options:
 
-```jsx
-/*react*/
-<script>
-const { Grid, Example } = EvoKit;
-
-export default class ExampleGrid extends React.Component {
-    render() {
-        return (
-            <Example values={['expand', 'auto', '1-1', '1-10', '2-10', '3-10', '4-10', '5-10', '6-10', '7-10', '8-10', '9-10']}>
-                {(value) => (
-                    <Grid>
-                        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((key) => (
-                            <Grid.Item grid-width={value}>
-                                <Example.Box>
-                                    item {key}
-                                </Example.Box>
-                            </Grid.Item>
-                        ))}
-                    </Grid>
-                )}
-            </Example>
-        )
-    }
-}
-</script>
-```
+| Property | About | Description |
+|----------|----------|-------------|
+| [mix-width] | [Mixes][mixes] | Ширина |
 
 ### `grid-order`
 
@@ -327,6 +309,38 @@ export default class ExampleGrid extends React.Component {
                                 </Example.Box>
                             </Grid.Item>
                         ))}
+                    </Grid>
+                )}
+            </Example>
+        )
+    }
+}
+</script>
+```
+
+### `mix-width`
+
+```jsx
+/*react*/
+<script>
+const { Grid, Example } = EvoKit;
+
+export default class ExampleGrid extends React.Component {
+    render() {
+        return (
+            <Example values={['auto', 'expand', '1-1', '1-10', '2-10', '3-10', '4-10', '5-10', '6-10', '7-10', '8-10', '9-10']}>
+                {(value) => (
+                    <Grid>
+                        <Grid.Item mix-width={value}>
+                            <Example.Box>
+                                content
+                            </Example.Box>
+                        </Grid.Item>
+                        <Grid.Item>
+                            <Example.Box>
+                                aside
+                            </Example.Box>
+                        </Grid.Item>
                     </Grid>
                 )}
             </Example>
