@@ -82,6 +82,14 @@ export function createBlock(target) {
             }
         }
 
+        for (const key of target.mixMods) {
+            const propName = `mix-${key}`;
+
+            if (propName in cleanProps) {
+                delete cleanProps[propName];
+            }
+        }
+
         if (cleanProps.className) {
             delete cleanProps.className;
         }
