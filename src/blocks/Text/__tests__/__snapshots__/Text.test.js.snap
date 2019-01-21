@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Text /> props className 1`] = `
+<span
+  className="ek-text ololo"
+/>
+`;
+
+exports[`<Text /> props text-align 1`] = `
+<span
+  className="ek-text ek-text_align_center"
+/>
+`;
+
+exports[`<Text /> props text-color 1`] = `
+<span
+  className="ek-text ek-text_color_default"
+/>
+`;
+
+exports[`<Text /> props text-lheight 1`] = `
+<span
+  className="ek-text ek-text_lheight_medium"
+/>
+`;
+
+exports[`<Text /> props text-size 1`] = `
+<span
+  className="ek-text ek-text_size_h1"
+/>
+`;
+
+exports[`<Text /> props text-style 1`] = `
+<span
+  className="ek-text ek-text_style_strike"
+/>
+`;
+
+exports[`<Text /> props text-tag 1`] = `
+<div
+  className="ek-text"
+/>
+`;
+
+exports[`<Text /> props text-transform 1`] = `
+<span
+  className="ek-text ek-text_transform_uppercase"
+/>
+`;
+
+exports[`<Text /> props text-valign 1`] = `
+<span
+  className="ek-text ek-text_valign_middle"
+/>
+`;
+
+exports[`<Text /> props text-weight 1`] = `
+<span
+  className="ek-text ek-text_weight_bold"
+/>
+`;
+
+exports[`<Text /> props text-wrap 1`] = `
+<span
+  className="ek-text ek-text_wrap_nowrap"
+/>
+`;
+
+exports[`<Text /> render 1`] = `
+<span
+  className="ek-text"
+>
+  Hello World!
+</span>
+`;
