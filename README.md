@@ -5,6 +5,8 @@
 
 # EvoKit
 
+[![](https://img.shields.io/npm/v/evokit.svg?style=flat-square&colorB=blue)](https://www.npmjs.com/package/evokit)
+
 http://evokit.net
 
 Easy and fast React front-end framework.
