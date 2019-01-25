@@ -328,6 +328,61 @@ function ProductCart() {
         </List>
     );
 
+    const ProductGallery = (
+        <Fragment>
+            <Picture style={{ paddingTop: 310 }}>
+                <Picture.Item
+                    src='https://images.ua.prom.st/1404273135_w640_h640_7811_02.jpg'
+                    alt=''
+                />
+            </Picture>
+            <Box box-margin-top='m'>
+                <Grid grid-column='expand' grid-indent='xs'>
+                    <Grid.Item>
+                        <Box box-border='warning'>
+                            <Picture style={{ paddingTop: 70 }}>
+                                <Picture.Item
+                                    src='https://images.ua.prom.st/1404273135_w100_h100_7811_02.jpg'
+                                    alt=''
+                                />
+                            </Picture>
+                        </Box>
+                    </Grid.Item>
+                    <Grid.Item>
+                        <Box box-border='muted'>
+                            <Picture style={{ paddingTop: 70 }}>
+                                <Picture.Item
+                                    src='https://images.ua.prom.st/986885565_w100_h100_7811_03_.jpg'
+                                    alt=''
+                                />
+                            </Picture>
+                        </Box>
+                    </Grid.Item>
+                    <Grid.Item>
+                        <Box box-border='muted'>
+                            <Picture style={{ paddingTop: 70 }}>
+                                <Picture.Item
+                                    src='https://images.ua.prom.st/1404273136_w100_h100_781175_11.jpg'
+                                    alt=''
+                                />
+                            </Picture>
+                        </Box>
+                    </Grid.Item>
+                    <Grid.Item>
+                        <Box box-border='muted'>
+                            <Picture style={{ paddingTop: 70 }}>
+                                <Picture.Item
+                                    src='https://images.ua.prom.st/1375678784_w100_h100_781135_11.jpg'
+                                    alt=''
+                                />
+                            </Picture>
+                        </Box>
+                    </Grid.Item>
+                </Grid>
+            </Box>
+        </Fragment>
+    );
+
     return (
         <Fragment>
             <Box box-margin-bottom='l'>
@@ -337,11 +392,147 @@ function ProductCart() {
                 <Grid grid-divider='muted'>
                     <Grid.Item mix-width='expand'>
                         <Box box-padding='m'>
-                            top
+                            <Grid grid-column={2} grid-indent='m'>
+                                <Grid.Item>
+                                    {ProductGallery}
+                                </Grid.Item>
+                                <Grid.Item>
+                                    <Box box-margin-bottom='s'>
+                                        <Text text-color='muted'>
+                                            Код: AL7811
+                                        </Text>
+                                    </Box>
+                                    <Box box-margin-bottom='m'>
+                                        <Text text-tag='h1' text-size='h1' text-weight='default'>
+                                            Пуховик женский AL7811
+                                        </Text>
+                                    </Box>
+                                    <Box box-margin-bottom='m'>
+                                        <Text text-color='success'>
+                                            В наличии
+                                        </Text>
+                                    </Box>
+                                    <Box box-margin-bottom='xs'>
+                                        <Text text-weight='bold' style={{ fontSize: 36 }}>
+                                            613,70 грн.
+                                        </Text>
+                                        &nbsp;
+                                        &nbsp;
+                                        <Text
+                                            text-valign='top'
+                                            text-weight='bold'
+                                            text-size='h5'
+                                            text-style='strike'
+                                        >
+                                            722 грн.
+                                        </Text>
+                                    </Box>
+                                    <Box box-margin-bottom='xs'>
+                                        <Link link-style='dotted'>
+                                            Оптовые цены
+                                        </Link>
+                                    </Box>
+                                    <Box box-margin-bottom='m'>
+                                        <Grid grid-column={2} grid-indent='m'>
+                                            <Grid.Item>
+                                                <Plug style={{ height: 50 }}>BuyButton</Plug>
+                                            </Grid.Item>
+                                            <Grid.Item>
+                                                <Plug style={{ height: 50 }}>SendMessageButton</Plug>
+                                            </Grid.Item>
+                                        </Grid>
+                                    </Box>
+
+                                    <Grid grid-indent='xs' grid-valign='middle' grid-wrap='nowrap'>
+                                        <Grid.Item>
+                                            <Plug style={{ width: 20, height: 20 }}></Plug>
+                                        </Grid.Item>
+                                        <Grid.Item mix-width='expand'>
+                                            <Link href='#' link-style='dotted'>
+                                                Добавить в избранное
+                                            </Link>
+                                        </Grid.Item>
+                                    </Grid>
+                                </Grid.Item>
+                            </Grid>
+                            <Box box-margin-top='m'>
+                                <Link link-color='muted' link-style='dotted'>
+                                    Информация неактуальна?
+                                </Link>
+                            </Box>
                         </Box>
                         <Line />
                         <Box box-padding='m'>
-                            bottom
+                            <Grid grid-indent='m' grid-column='expand'>
+                                <Grid.Item>
+                                    <Box box-margin-bottom='s'>
+                                        <Text text-weight='bold'>
+                                            Способы оплаты
+                                        </Text>
+                                    </Box>
+                                    <List list-indent='xxs'>
+                                        <List.Item>
+                                            <Text text-wrap='ellipsis'>
+                                                Наложенный платеж, Безналичный расчет
+                                            </Text>
+                                        </List.Item>
+                                        <List.Item>
+                                            <Link href='#' link-style='dotted'>
+                                                Подробнее
+                                            </Link>
+                                        </List.Item>
+                                    </List>
+                                </Grid.Item>
+                                <Grid.Item>
+                                    <Box box-margin-bottom='s'>
+                                        <Text text-weight='bold'>
+                                            Способы доставки
+                                        </Text>
+                                    </Box>
+                                    <List list-indent='xxs'>
+                                        <List.Item>
+                                            <Text text-wrap='ellipsis'>
+                                                Нова Пошта
+                                            </Text>
+                                        </List.Item>
+                                        <List.Item>
+                                            <Link href='#' link-style='dotted'>
+                                                Подробнее
+                                            </Link>
+                                        </List.Item>
+                                    </List>
+                                </Grid.Item>
+                                <Grid.Item>
+                                    <List list-indent='s'>
+                                        <List.Item>
+                                            <Link href='#' link-style='dotted'>
+                                                Условия возврата
+                                            </Link>
+                                        </List.Item>
+                                        <List.Item>
+                                            <Link href='#' link-style='dotted'>
+                                                Регионы доставки
+                                            </Link>
+                                        </List.Item>
+                                    </List>
+                                </Grid.Item>
+                                <Grid.Item>
+                                    <Grid grid-indent='xs' grid-valign='middle' grid-wrap='nowrap'>
+                                        <Grid.Item>
+                                            <Plug style={{ width: 20, height: 20 }}></Plug>
+                                        </Grid.Item>
+                                        <Grid.Item mix-width='expand'>
+                                            <Link
+                                                href='#'
+                                                link-style='multi-line'
+                                                link-lheight='medium'
+                                            >
+                                                Защищаем покупки <br /> на 3 000 грн
+                                            </Link>
+                                        </Grid.Item>
+                                    </Grid>
+                                </Grid.Item>
+                            </Grid>
                         </Box>
                     </Grid.Item>
                     <Grid.Item mix-width='2-10'>
