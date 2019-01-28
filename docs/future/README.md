@@ -31,7 +31,7 @@ export default class ExampleLink extends React.Component {
         return (
             <div>
                 BODY:
-                <Body body-indent='m'>
+                <Body body-color='default' body-background='default' body-indent='m'>
                     <Body.Section>
                         section
                     </Body.Section>
@@ -107,7 +107,7 @@ export default class ExampleLink extends React.Component {
                 <br />
                 <br />
                 LINE:
-                <Line line-indent='m' />
+                <Line line-color='default' line-indent='m' />
             </div>
         )
     }

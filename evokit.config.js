@@ -10,6 +10,7 @@ module.exports = {
         // body
         '--ek-body-min-width': '1000px',
         '--ek-body-max-width': '1240px',
+        '--ek-body-font-family': 'system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif',
 
         // font size
         '--ek-font-size-h1': '24px',
