@@ -8,6 +8,7 @@ class Body extends React.Component {
         'size',
         'indent',
         'background',
+        'color',
     ];
 
     render() {
