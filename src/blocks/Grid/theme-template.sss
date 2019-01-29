@@ -1,0 +1,9 @@
+@import '../../mixins.sss'
+
+@mixin media .grid_divider___TEMPLATE_NAME__
+
+    & > .grid__item
+        border: 0 solid var(--ek-__TEMPLATE_NAME__-divider-color)
+
+        & + .grid__item
+            border-left-width: 1px

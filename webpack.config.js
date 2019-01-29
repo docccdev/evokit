@@ -46,7 +46,7 @@ function getThemesPath(blockName, blockPath) {
 
 const ENTRY_LIST = {
     'Body/index': path.resolve(__dirname, 'src/blocks/Body'),
-    'Body/style':path.resolve(__dirname, 'src/blocks/Body/style'),
+    'Body/style': path.resolve(__dirname, 'src/blocks/Body/style'),
     ...getThemesPath('Body', 'src/blocks'),
 
     'Image/index': path.resolve(__dirname, 'src/blocks/Image'),
@@ -82,6 +82,8 @@ const ENTRY_LIST = {
     './index': path.resolve(__dirname, 'src'),
     './style': path.resolve(__dirname, 'src/style'),
     ...getThemesPath('.', 'src'),
+
+    './theme-template': path.resolve(__dirname, 'src/theme-template'),
 };
 
 module.exports = {

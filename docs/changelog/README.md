@@ -19,9 +19,15 @@
 [image]: blocks/image.md
 [line]: blocks/line.md
 
+[create_theme]: create_theme/
+
 # CHANGELOG
 
 !> В версии **v2.0.0** и выше, изменился конфиг и некоторые названия класов!
+
+
+## 2.1.4
+- Создан `theme-template.css` для [create_theme]
 
 
 ## 2.1.3

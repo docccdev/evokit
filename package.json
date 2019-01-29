@@ -1,6 +1,6 @@
 {
   "name": "evokit",
-  "version": "2.1.3",
+  "version": "2.1.4",
   "description": "React UI Components for developing fast and powerful web interfaces",
   "main": "dist/index.js",
   "scripts": {

@@ -9,217 +9,6 @@
     }
 </style>
 
-<script type="text/template" id="theme-template">
-:root {
-    --ek-{{ templateName }}-border-color: {{ templateBorderColor }};
-    --ek-{{ templateName }}-divider-color:  {{ templateDividerColor }};
-    --ek-{{ templateName }}-background-color:  {{ templateBackgroundColor }};
-    --ek-{{ templateName }}-text-color:  {{ templateTextColor }};
-    --ek-{{ templateName }}-link-color:  {{ templateLinkColor }};
-}
-
-.ek-body_background_{{ templateName }} {
-    background-color: var(--ek-{{ templateName }}-background-color);
-}
-.ek-box_background_{{ templateName }} {
-    background-color: var(--ek-{{ templateName }}-background-color);
-}
-.ek-box_border_{{ templateName }} {
-    border: 1px solid var(--ek-{{ templateName }}-border-color);
-}
-.ek-grid_divider_{{ templateName }} > .ek-grid__item {
-        border: 0 solid var(--ek-{{ templateName }}-divider-color);
-}
-.ek-grid_divider_{{ templateName }} > .ek-grid__item + .ek-grid__item {
-            border-left-width: 1px;
-}
-.ek-list_color_{{ templateName }} > .ek-list__item:before {
-            color: var(--ek-{{ templateName }}-text-color);
-}
-.ek-list_divider_{{ templateName }} > .ek-list__item + .ek-list__item {
-            border-top: 1px solid var(--ek-{{ templateName }}-divider-color);
-}
-.ek-link_color_{{ templateName }} {
-    color: var(--ek-{{ templateName }}-link-color);
-}
-.ek-text_color_{{ templateName }} {
-    color: var(--ek-{{ templateName }}-text-color);
-}
-.ek-line_color_{{ templateName }} {
-    border-color: var(--ek-{{ templateName }}-divider-color);
-}
-@media (--ek-media-small) {
-        .ek-body_background_{{ templateName }}\@small {
-    background-color: var(--ek-{{ templateName }}-background-color);
-    }
-        .ek-box_background_{{ templateName }}\@small {
-    background-color: var(--ek-{{ templateName }}-background-color);
-    }
-        .ek-box_border_{{ templateName }}\@small {
-    border: 1px solid var(--ek-{{ templateName }}-border-color);
-    }
-
-    .ek-grid_divider_{{ templateName }}\@small > .ek-grid__item {
-        border: 0 solid var(--ek-{{ templateName }}-divider-color);
-    }
-
-        .ek-grid_divider_{{ templateName }}\@small > .ek-grid__item + .ek-grid__item {
-            border-left-width: 1px;
-    }
-        .ek-list_color_{{ templateName }}\@small > .ek-list__item:before {
-            color: var(--ek-{{ templateName }}-text-color);
-    }
-        .ek-list_divider_{{ templateName }}\@small > .ek-list__item + .ek-list__item {
-            border-top: 1px solid var(--ek-{{ templateName }}-divider-color);
-    }
-        .ek-link_color_{{ templateName }}\@small {
-    color: var(--ek-{{ templateName }}-link-color);
-    }
-        .ek-text_color_{{ templateName }}\@small {
-    color: var(--ek-{{ templateName }}-text-color);
-    }
-        .ek-line_color_{{ templateName }}\@small {
-    border-color: var(--ek-{{ templateName }}-divider-color);
-    }
-}
-@media (--ek-media-medium) {
-        .ek-body_background_{{ templateName }}\@medium {
-    background-color: var(--ek-{{ templateName }}-background-color);
-    }
-        .ek-box_background_{{ templateName }}\@medium {
-    background-color: var(--ek-{{ templateName }}-background-color);
-    }
-        .ek-box_border_{{ templateName }}\@medium {
-    border: 1px solid var(--ek-{{ templateName }}-border-color);
-    }
-
-    .ek-grid_divider_{{ templateName }}\@medium > .ek-grid__item {
-        border: 0 solid var(--ek-{{ templateName }}-divider-color);
-    }
-
-        .ek-grid_divider_{{ templateName }}\@medium > .ek-grid__item + .ek-grid__item {
-            border-left-width: 1px;
-    }
-        .ek-list_color_{{ templateName }}\@medium > .ek-list__item:before {
-            color: var(--ek-{{ templateName }}-text-color);
-    }
-        .ek-list_divider_{{ templateName }}\@medium > .ek-list__item + .ek-list__item {
-            border-top: 1px solid var(--ek-{{ templateName }}-divider-color);
-    }
-        .ek-link_color_{{ templateName }}\@medium {
-    color: var(--ek-{{ templateName }}-link-color);
-    }
-        .ek-text_color_{{ templateName }}\@medium {
-    color: var(--ek-{{ templateName }}-text-color);
-    }
-        .ek-line_color_{{ templateName }}\@medium {
-    border-color: var(--ek-{{ templateName }}-divider-color);
-    }
-}
-@media (--ek-media-large) {
-        .ek-body_background_{{ templateName }}\@large {
-    background-color: var(--ek-{{ templateName }}-background-color);
-    }
-        .ek-box_background_{{ templateName }}\@large {
-    background-color: var(--ek-{{ templateName }}-background-color);
-    }
-        .ek-box_border_{{ templateName }}\@large {
-    border: 1px solid var(--ek-{{ templateName }}-border-color);
-    }
-
-    .ek-grid_divider_{{ templateName }}\@large > .ek-grid__item {
-        border: 0 solid var(--ek-{{ templateName }}-divider-color);
-    }
-
-        .ek-grid_divider_{{ templateName }}\@large > .ek-grid__item + .ek-grid__item {
-            border-left-width: 1px;
-    }
-        .ek-list_color_{{ templateName }}\@large > .ek-list__item:before {
-            color: var(--ek-{{ templateName }}-text-color);
-    }
-        .ek-list_divider_{{ templateName }}\@large > .ek-list__item + .ek-list__item {
-            border-top: 1px solid var(--ek-{{ templateName }}-divider-color);
-    }
-        .ek-link_color_{{ templateName }}\@large {
-    color: var(--ek-{{ templateName }}-link-color);
-    }
-        .ek-text_color_{{ templateName }}\@large {
-    color: var(--ek-{{ templateName }}-text-color);
-    }
-        .ek-line_color_{{ templateName }}\@large {
-    border-color: var(--ek-{{ templateName }}-divider-color);
-    }
-}
-@media (--ek-media-wide) {
-        .ek-body_background_{{ templateName }}\@wide {
-    background-color: var(--ek-{{ templateName }}-background-color);
-    }
-        .ek-box_background_{{ templateName }}\@wide {
-    background-color: var(--ek-{{ templateName }}-background-color);
-    }
-        .ek-box_border_{{ templateName }}\@wide {
-    border: 1px solid var(--ek-{{ templateName }}-border-color);
-    }
-
-    .ek-grid_divider_{{ templateName }}\@wide > .ek-grid__item {
-        border: 0 solid var(--ek-{{ templateName }}-divider-color);
-    }
-
-        .ek-grid_divider_{{ templateName }}\@wide > .ek-grid__item + .ek-grid__item {
-            border-left-width: 1px;
-    }
-        .ek-list_color_{{ templateName }}\@wide > .ek-list__item:before {
-            color: var(--ek-{{ templateName }}-text-color);
-    }
-        .ek-list_divider_{{ templateName }}\@wide > .ek-list__item + .ek-list__item {
-            border-top: 1px solid var(--ek-{{ templateName }}-divider-color);
-    }
-        .ek-link_color_{{ templateName }}\@wide {
-    color: var(--ek-{{ templateName }}-link-color);
-    }
-        .ek-text_color_{{ templateName }}\@wide {
-    color: var(--ek-{{ templateName }}-text-color);
-    }
-        .ek-line_color_{{ templateName }}\@wide {
-    border-color: var(--ek-{{ templateName }}-divider-color);
-    }
-}
-@media (--ek-media-huge) {
-        .ek-body_background_{{ templateName }}\@huge {
-    background-color: var(--ek-{{ templateName }}-background-color);
-    }
-        .ek-box_background_{{ templateName }}\@huge {
-    background-color: var(--ek-{{ templateName }}-background-color);
-    }
-        .ek-box_border_{{ templateName }}\@huge {
-    border: 1px solid var(--ek-{{ templateName }}-border-color);
-    }
-
-    .ek-grid_divider_{{ templateName }}\@huge > .ek-grid__item {
-        border: 0 solid var(--ek-{{ templateName }}-divider-color);
-    }
-
-        .ek-grid_divider_{{ templateName }}\@huge > .ek-grid__item + .ek-grid__item {
-            border-left-width: 1px;
-    }
-        .ek-list_color_{{ templateName }}\@huge > .ek-list__item:before {
-            color: var(--ek-{{ templateName }}-text-color);
-    }
-        .ek-list_divider_{{ templateName }}\@huge > .ek-list__item + .ek-list__item {
-            border-top: 1px solid var(--ek-{{ templateName }}-divider-color);
-    }
-        .ek-link_color_{{ templateName }}\@huge {
-    color: var(--ek-{{ templateName }}-link-color);
-    }
-        .ek-text_color_{{ templateName }}\@huge {
-    color: var(--ek-{{ templateName }}-text-color);
-    }
-        .ek-line_color_{{ templateName }}\@huge {
-    border-color: var(--ek-{{ templateName }}-divider-color);
-    }
-}
-</script>
-
 ```jsx
 /*react*/
 <script>
@@ -228,85 +17,85 @@ const { Box, Text, Grid, List, Picture, Link, Line } = EvoKit;
 
 const PRESETS = {
     'primary': {
-        'templateName': 'primary',
-        'templateBackgroundColor': '#cce5ff',
-        'templateBorderColor': '#b8daff',
-        'templateDividerColor': '#b8daff',
-        'templateTextColor': '#004085',
-        'templateLinkColor': '#004085',
+        '__TEMPLATE_NAME__': 'primary',
+        '__TEMPLATE_BACKGROUND_COLOR__': '#cce5ff',
+        '__TEMPLATE_BORDER_COLOR__': '#b8daff',
+        '__TEMPLATE_DIVIDER_COLOR__': '#b8daff',
+        '__TEMPLATE_TEXT_COLOR__': '#004085',
+        '__TEMPLATE_LINK_COLOR__': '#004085',
     },
     'secondary': {
-        'templateName': 'secondary',
-        'templateBackgroundColor': '#e2e3e5',
-        'templateBorderColor': '#d6d8db',
-        'templateDividerColor': '#d6d8db',
-        'templateTextColor': '#383d41',
-        'templateLinkColor': '#383d41',
+        '__TEMPLATE_NAME__': 'secondary',
+        '__TEMPLATE_BACKGROUND_COLOR__': '#e2e3e5',
+        '__TEMPLATE_BORDER_COLOR__': '#d6d8db',
+        '__TEMPLATE_DIVIDER_COLOR__': '#d6d8db',
+        '__TEMPLATE_TEXT_COLOR__': '#383d41',
+        '__TEMPLATE_LINK_COLOR__': '#383d41',
     },
     'success': {
-        'templateName': 'success',
-        'templateBackgroundColor': '#d4edda',
-        'templateBorderColor': '#c3e6cb',
-        'templateDividerColor': '#c3e6cb',
-        'templateTextColor': '#155724',
-        'templateLinkColor': '#155724',
+        '__TEMPLATE_NAME__': 'success',
+        '__TEMPLATE_BACKGROUND_COLOR__': '#d4edda',
+        '__TEMPLATE_BORDER_COLOR__': '#c3e6cb',
+        '__TEMPLATE_DIVIDER_COLOR__': '#c3e6cb',
+        '__TEMPLATE_TEXT_COLOR__': '#155724',
+        '__TEMPLATE_LINK_COLOR__': '#155724',
     },
     'danger': {
-        'templateName': 'danger',
-        'templateBackgroundColor': '#f8d7da',
-        'templateBorderColor': '#f5c6cb',
-        'templateDividerColor': '#f5c6cb',
-        'templateTextColor': '#721c24',
-        'templateLinkColor': '#721c24',
+        '__TEMPLATE_NAME__': 'danger',
+        '__TEMPLATE_BACKGROUND_COLOR__': '#f8d7da',
+        '__TEMPLATE_BORDER_COLOR__': '#f5c6cb',
+        '__TEMPLATE_DIVIDER_COLOR__': '#f5c6cb',
+        '__TEMPLATE_TEXT_COLOR__': '#721c24',
+        '__TEMPLATE_LINK_COLOR__': '#721c24',
     },
     'warning': {
-        'templateName': 'warning',
-        'templateBackgroundColor': '#fff3cd',
-        'templateBorderColor': '#ffeeba',
-        'templateDividerColor': '#ffeeba',
-        'templateTextColor': '#856404',
-        'templateLinkColor': '#856404',
+        '__TEMPLATE_NAME__': 'warning',
+        '__TEMPLATE_BACKGROUND_COLOR__': '#fff3cd',
+        '__TEMPLATE_BORDER_COLOR__': '#ffeeba',
+        '__TEMPLATE_DIVIDER_COLOR__': '#ffeeba',
+        '__TEMPLATE_TEXT_COLOR__': '#856404',
+        '__TEMPLATE_LINK_COLOR__': '#856404',
     },
     'info': {
-        'templateName': 'info',
-        'templateBackgroundColor': '#d1ecf1',
-        'templateBorderColor': '#bee5eb',
-        'templateDividerColor': '#bee5eb',
-        'templateTextColor': '#0c5460',
-        'templateLinkColor': '#0c5460',
+        '__TEMPLATE_NAME__': 'info',
+        '__TEMPLATE_BACKGROUND_COLOR__': '#d1ecf1',
+        '__TEMPLATE_BORDER_COLOR__': '#bee5eb',
+        '__TEMPLATE_DIVIDER_COLOR__': '#bee5eb',
+        '__TEMPLATE_TEXT_COLOR__': '#0c5460',
+        '__TEMPLATE_LINK_COLOR__': '#0c5460',
     },
     'light': {
-        'templateName': 'light',
-        'templateBackgroundColor': '#fefefe',
-        'templateBorderColor': '#fdfdfe',
-        'templateDividerColor': '#fdfdfe',
-        'templateTextColor': '#818182',
-        'templateLinkColor': '#818182',
+        '__TEMPLATE_NAME__': 'light',
+        '__TEMPLATE_BACKGROUND_COLOR__': '#fefefe',
+        '__TEMPLATE_BORDER_COLOR__': '#fdfdfe',
+        '__TEMPLATE_DIVIDER_COLOR__': '#fdfdfe',
+        '__TEMPLATE_TEXT_COLOR__': '#818182',
+        '__TEMPLATE_LINK_COLOR__': '#818182',
     },
     'dark': {
-        'templateName': 'dark',
-        'templateBackgroundColor': '#d6d8d9',
-        'templateBorderColor': '#c6c8ca',
-        'templateDividerColor': '#c6c8ca',
-        'templateTextColor': '#1b1e21',
-        'templateLinkColor': '#1b1e21',
+        '__TEMPLATE_NAME__': 'dark',
+        '__TEMPLATE_BACKGROUND_COLOR__': '#d6d8d9',
+        '__TEMPLATE_BORDER_COLOR__': '#c6c8ca',
+        '__TEMPLATE_DIVIDER_COLOR__': '#c6c8ca',
+        '__TEMPLATE_TEXT_COLOR__': '#1b1e21',
+        '__TEMPLATE_LINK_COLOR__': '#1b1e21',
     },
 }
 
 const SETTINGS_LABEL = {
-    'templateName': 'Название темы',
-    'templateBackgroundColor': 'Цвет фона',
-    'templateBorderColor': 'Цвет рамки',
-    'templateTextColor': 'Цвет текста',
-    'templateDividerColor': 'Цвет линии',
-    'templateLinkColor': 'Цвет ссылки',
+    '__TEMPLATE_NAME__': 'Template name',
+    '__TEMPLATE_BACKGROUND_COLOR__': 'Background color',
+    '__TEMPLATE_BORDER_COLOR__': 'Border color',
+    '__TEMPLATE_DIVIDER_COLOR__': 'Line color',
+    '__TEMPLATE_TEXT_COLOR__': 'Text color',
+    '__TEMPLATE_LINK_COLOR__': 'Link color',
 };
 
 const applyThemeSheme = (template, sheme) => {
     let result;
 
     Object.keys(sheme).map((key) => {
-        const regex = new RegExp(`{{ ${key} }}`, 'g');
+        const regex = new RegExp(key, 'g');
 
         result = (result || template).replace(regex, sheme[key]);
     });
@@ -314,17 +103,37 @@ const applyThemeSheme = (template, sheme) => {
     return result;
 };
 
+const rootConfig = `
+:root {
+    --ek-__TEMPLATE_NAME__-background-color: __TEMPLATE_BACKGROUND_COLOR__;
+    --ek-__TEMPLATE_NAME__-border-color: __TEMPLATE_BORDER_COLOR__;
+    --ek-__TEMPLATE_NAME__-divider-color: __TEMPLATE_DIVIDER_COLOR__;
+    --ek-__TEMPLATE_NAME__-text-color: __TEMPLATE_TEXT_COLOR__;
+    --ek-__TEMPLATE_NAME__-link-color: __TEMPLATE_LINK_COLOR__;
+}
+`;
+
 export default class EvoKitCreateTheme extends React.Component {
     constructor(props) {
         super(props);
 
         this.state = {
+            template: null,
             sheme: PRESETS['primary'],
         };
 
-        this.template = document.getElementById('theme-template').innerText.trim();
         this.onChangeVar = this.onChangeVar.bind(this);
         this.onChangePreset = this.onChangePreset.bind(this);
+    }
+
+    componentDidMount() {
+        fetch('//unpkg.com/evokit/dist/theme-template.css').then((response) => {
+            response.text().then((text) => {
+                this.setState({
+                    template: rootConfig.trim() + '\n\n' + text.trim(),
+                });
+            });
+        });
     }
 
     onChangeVar({ target }) {
@@ -341,9 +150,34 @@ export default class EvoKitCreateTheme extends React.Component {
         });
     }
 
+    download(filename, text) {
+        var element = document.createElement('a');
+        element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+        element.setAttribute('download', filename);
+
+        element.style.display = 'none';
+        document.body.appendChild(element);
+
+        element.click();
+
+        document.body.removeChild(element);
+    }
+
     render() {
-        const { sheme } = this.state;
-        const template = applyThemeSheme(this.template, sheme);
+        const { sheme, template } = this.state;
+
+        if(!template) {
+            return (
+                <Box box-padding='m'>
+                    <Text text-align='center' text-size='h1'>
+                        Loading...
+                    </Text>
+                </Box>
+            );
+        }
+
+        const newTemplate = applyThemeSheme(template, sheme);
+        const cssFileName = `theme-${sheme['__TEMPLATE_NAME__']}.css`;
 
         return (
             <div>
@@ -355,6 +189,7 @@ export default class EvoKitCreateTheme extends React.Component {
                         <Grid.Item key={value}>
                             <Link
                                 link-tag='span'
+                                link-color='default'
                                 onClick={() => this.onChangePreset(value)}
                             >
                                 {value}
@@ -365,16 +200,16 @@ export default class EvoKitCreateTheme extends React.Component {
                 <Line line-indent='xl' />
                 <Grid grid-indent='xl'>
                     <Grid.Item mix-width='expand'>
-                        <style dangerouslySetInnerHTML={{__html: template}}></style>
+                        <style dangerouslySetInnerHTML={{__html: newTemplate}}></style>
                         <Box box-margin-bottom='xl'>
                             <Text text-size='h1'>
-                                Theme <Text text-weight='bold'>{sheme['templateName']}</Text>
+                                Theme <Text text-weight='bold'>{sheme['__TEMPLATE_NAME__']}</Text>
                             </Text>
                         </Box>
                         <Box
                             box-padding='m'
-                            box-background={sheme['templateName']}
-                            box-border={sheme['templateName']}
+                            box-background={sheme['__TEMPLATE_NAME__']}
+                            box-border={sheme['__TEMPLATE_NAME__']}
                             mix-round='m'
                         >
                             <Grid grid-indent='m'>
@@ -384,14 +219,14 @@ export default class EvoKitCreateTheme extends React.Component {
                                     </Picture>
                                 </Grid.Item>
                                 <Grid.Item mix-width='expand'>
-                                    <Text text-size='h1' text-color={sheme['templateName']}>
+                                    <Text text-size='h1' text-color={sheme['__TEMPLATE_NAME__']}>
                                         What is Lorem Ipsum?
                                     </Text>
                                     <Line
                                         line-indent='s'
-                                        line-color={sheme['templateName']}
+                                        line-color={sheme['__TEMPLATE_NAME__']}
                                     />
-                                    <Text text-lheight='medium' text-color={sheme['templateName']}>
+                                    <Text text-lheight='medium' text-color={sheme['__TEMPLATE_NAME__']}>
                                         Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                                         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
                                         when an unknown printer took a galley of type and scrambled it to make a type specimen book.
@@ -399,22 +234,36 @@ export default class EvoKitCreateTheme extends React.Component {
                                         remaining essentially unchanged.
                                     </Text>
                                     <Box box-margin-top='xs'>
-                                        <Link href="#" link-color={sheme['templateName']}>See More »</Link>
+                                        <Link href="#" link-color={sheme['__TEMPLATE_NAME__']}>See More »</Link>
                                     </Box>
                                 </Grid.Item>
                             </Grid>
                         </Box>
+                        <Box box-margin-lr='auto' box-margin-top='m' mix-width='3-10'>
+                            <button
+                                type='button'
+                                style={{ width: '100%', padding: 10, cursor: 'pointer' }}
+                                onClick={() => this.download(cssFileName, newTemplate)}
+                            >
+                                <Text text-lheight='medium' text-wrap='ellipsis'>
+                                    Download&nbsp;
+                                    <Text text-weight='bold'>
+                                        {cssFileName}
+                                    </Text>
+                                </Text>
+                            </button>
+                        </Box>
                         <pre style={{ display: 'none' }}>
                             <code
                                 className='language-css'
-                                dangerouslySetInnerHTML={{__html: template}}
+                                dangerouslySetInnerHTML={{__html: newTemplate}}
                             />
                         </pre>
                     </Grid.Item>
                     <Grid.Item mix-width='2-10'>
                         <Box box-margin-bottom='xl'>
-                            <Text text-size='h1'>
-                                Settings:
+                            <Text text-size='h3'>
+                                Settings
                             </Text>
                         </Box>
                         <List list-indent='m'>
@@ -424,7 +273,7 @@ export default class EvoKitCreateTheme extends React.Component {
                                         {SETTINGS_LABEL[key] || key}
                                     </Text>
                                     <Box box-margin-top='xxs'>
-                                        {key === 'templateName' ? (
+                                        {key === '__TEMPLATE_NAME__' ? (
                                             <input
                                                 type='text'
                                                 value={sheme[key]}
