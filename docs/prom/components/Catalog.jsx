@@ -15,7 +15,7 @@ function Catalog() {
     const Breadcrumbs = (
         <Grid grid-indent='xxs'>
             <Grid.Item>
-                <Link href="#">
+                <Link link-color='default' href="#">
                     Prom.ua
                 </Link>
             </Grid.Item>
@@ -25,7 +25,7 @@ function Catalog() {
                 </Text>
             </Grid.Item>
             <Grid.Item>
-                <Link href="#">
+                <Link link-color='default' href="#">
                     Потребительские товары
                 </Link>
             </Grid.Item>
@@ -35,7 +35,7 @@ function Catalog() {
                 </Text>
             </Grid.Item>
             <Grid.Item>
-                <Link href="#">
+                <Link link-color='default' href="#">
                     Одежда и обувь
                 </Link>
             </Grid.Item>
@@ -45,7 +45,7 @@ function Catalog() {
                 </Text>
             </Grid.Item>
             <Grid.Item>
-                <Link href="#">
+                <Link link-color='default' href="#">
                     Одежда женская
                 </Link>
             </Grid.Item>
@@ -98,7 +98,7 @@ function Catalog() {
                 </Text>
             </Box>
             <Text text-lheight='medium' text-wrap='two-line'>
-                <Link href="#" link-lheight='medium' link-color='reset' link-style='multi-line'>
+                <Link href="#" link-lheight='medium' link-style='multi-line'>
                     SKMEI ILLUMINATOR мужские спортивные часы SKMEI ILLUMINATOR мужские спортивные часы
                 </Link>
             </Text>
@@ -115,12 +115,12 @@ function Catalog() {
                         </Text>
                     </Grid.Item>
                     <Grid.Item>
-                        <Link href='#'>
+                        <Link link-color='default' href='#'>
                             Магазины
                         </Link>
                     </Grid.Item>
                     <Grid.Item>
-                        <Link href='#'>
+                        <Link link-color='default' href='#'>
                             Объявления
                         </Link>
                     </Grid.Item>
@@ -134,12 +134,12 @@ function Catalog() {
                         </Text>
                     </Grid.Item>
                     <Grid.Item>
-                        <Link href='#'>
+                        <Link link-color='default' href='#'>
                             Дешевые
                         </Link>
                     </Grid.Item>
                     <Grid.Item>
-                        <Link href='#'>
+                        <Link link-color='default' href='#'>
                             Дорогие
                         </Link>
                     </Grid.Item>

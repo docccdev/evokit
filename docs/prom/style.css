@@ -25,11 +25,3 @@ ol, ul {
 .Height100Perc {
     height: 100%;
 }
-/*Fixed in next version EvoKit*/
-    .FixBackgroundPrimary {
-        background: linear-gradient(135deg, #4854a2, #772088);
-    }
-    .FixBackgroundPrimary2 {
-        background: linear-gradient(135deg, #39427f, #53165f);
-    }
-/*Fixed in next version EvoKit*/

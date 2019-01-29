@@ -6,7 +6,7 @@ function SearchTags() {
         <List list-indent='s'>
             {data.map((value) => (
                 <List.Item>
-                    <Link href="#" link-lheight='medium'>
+                    <Link link-color='default' href="#" link-lheight='medium'>
                         {value}
                     </Link>
                 </List.Item>

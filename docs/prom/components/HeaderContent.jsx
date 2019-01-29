@@ -41,7 +41,7 @@ function HeaderContent() {
                 <Grid.Item>
                     <List list-indent='xxs'>
                         <List.Item>
-                            <Link href="#">
+                            <Link link-color='default' href="#">
                                 Подать частное объявление
                             </Link>
                         </List.Item>

@@ -50,7 +50,7 @@ function Viewed() {
                 </Text>
             </Box>
             <Text text-lheight='medium' text-wrap='two-line'>
-                <Link href="#" link-lheight='medium' link-color='reset' link-style='multi-line'>
+                <Link href="#" link-lheight='medium' link-style='multi-line'>
                     SKMEI ILLUMINATOR мужские спортивные часы SKMEI ILLUMINATOR мужские спортивные часы
                 </Link>
             </Text>

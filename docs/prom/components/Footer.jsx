@@ -13,7 +13,7 @@ function Footer() {
         <List list-indent='s'>
             {data.map((value) => (
                 <List.Item>
-                    <Link href="#" link-lheight='medium' link-size='small' link-color='reset'>
+                    <Link href="#" link-lheight='medium' link-size='small'>
                         {value}
                     </Link>
                 </List.Item>

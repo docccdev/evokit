@@ -12,7 +12,7 @@ function HeaderService() {
                 <Text text-color='muted'>|</Text>
             </Grid.Item>
             <Grid.Item>
-                <Link href='#' link-color='reset'>
+                <Link href='#'>
                     RU
                 </Link>
             </Grid.Item>
@@ -22,22 +22,22 @@ function HeaderService() {
     const rightContent = (
         <Grid grid-indent='xxl'>
             <Grid.Item>
-                <Link href='#' link-color='reset'>
+                <Link href='#'>
                     Подать частное объявление
                 </Link>
             </Grid.Item>
             <Grid.Item>
-                <Link href='#' link-color='reset'>
+                <Link href='#'>
                     Мобильное приложение
                 </Link>
             </Grid.Item>
             <Grid.Item>
-                <Link href='#' link-color='reset'>
+                <Link href='#'>
                     Войти
                 </Link>
             </Grid.Item>
             <Grid.Item>
-                <Link href='#' link-color='reset'>
+                <Link href='#'>
                     Зарегистрироваться
                 </Link>
             </Grid.Item>

@@ -15,7 +15,7 @@ function ProductCart() {
     const Breadcrumbs = (
         <Grid grid-indent='xxs'>
             <Grid.Item>
-                <Link href="#">
+                <Link link-color='default' href="#">
                     Prom.ua
                 </Link>
             </Grid.Item>
@@ -25,7 +25,7 @@ function ProductCart() {
                 </Text>
             </Grid.Item>
             <Grid.Item>
-                <Link href="#">
+                <Link link-color='default' href="#">
                     Потребительские товары
                 </Link>
             </Grid.Item>
@@ -35,7 +35,7 @@ function ProductCart() {
                 </Text>
             </Grid.Item>
             <Grid.Item>
-                <Link href="#">
+                <Link link-color='default' href="#">
                     Одежда и обувь
                 </Link>
             </Grid.Item>
@@ -45,7 +45,7 @@ function ProductCart() {
                 </Text>
             </Grid.Item>
             <Grid.Item>
-                <Link href="#">
+                <Link link-color='default' href="#">
                     Одежда женская
                 </Link>
             </Grid.Item>
@@ -98,7 +98,7 @@ function ProductCart() {
                 </Text>
             </Box>
             <Text text-lheight='medium' text-wrap='two-line'>
-                <Link href="#" link-lheight='medium' link-color='reset' link-style='multi-line'>
+                <Link href="#" link-lheight='medium' link-style='multi-line'>
                     SKMEI ILLUMINATOR мужские спортивные часы SKMEI ILLUMINATOR мужские спортивные часы
                 </Link>
             </Text>
@@ -125,7 +125,7 @@ function ProductCart() {
                     Еще
                 </Text>
             </Box>
-            {moreData.map((value) => <Link link-lheight='medium' href='#'>{value}</Link>).reduce((prev, curr) => [prev, ', ', curr])}
+            {moreData.map((value) => <Link link-color='default' link-lheight='medium' href='#'>{value}</Link>).reduce((prev, curr) => [prev, ', ', curr])}
         </Fragment>
     );
 
@@ -166,7 +166,7 @@ function ProductCart() {
             <Box box-margin-bottom='xs'>
                 <Plug style={{ height: 150 }}>Attributes</Plug>
             </Box>
-            <Link link-style='dotted'>
+            <Link link-color='default' link-style='dotted'>
                 Показать все
             </Link>
         </Fragment>
@@ -212,7 +212,7 @@ function ProductCart() {
             <Box box-margin-bottom='s'>
                 <Text text-size='h1'>
                     Отзывы о компании&nbsp;
-                    <Link href='#'>
+                    <Link link-color='default' href='#'>
                         boxmeup
                     </Link>
                 </Text>
@@ -238,7 +238,7 @@ function ProductCart() {
                         </Text>
                     </Grid.Item>
                     <Grid.Item>
-                        <Link href='#'>
+                        <Link link-color='default' href='#'>
                             Смотреть все
                         </Link>
                     </Grid.Item>
@@ -252,7 +252,7 @@ function ProductCart() {
         <List list-divider='transparent' list-indent='l'>
             <List.Item>
                 <Box box-margin-bottom='m'>
-                    <Link href='#' link-weight='bold' link-color='reset'>
+                    <Link href='#' link-weight='bold'>
                         boxmeup
                     </Link>
                 </Box>
@@ -263,7 +263,7 @@ function ProductCart() {
                                 <Plug style={{ width: 20, height: 20 }}></Plug>
                             </Grid.Item>
                             <Grid.Item mix-width='expand'>
-                                <Link href='#' link-style='dotted'>
+                                <Link link-color='default' href='#' link-style='dotted'>
                                     Киев
                                 </Link>
                             </Grid.Item>
@@ -275,7 +275,7 @@ function ProductCart() {
                                 <Plug style={{ width: 20, height: 20 }}></Plug>
                             </Grid.Item>
                             <Grid.Item mix-width='expand'>
-                                <Link href='#' link-style='dotted'>
+                                <Link link-color='default' href='#' link-style='dotted'>
                                     График работы
                                 </Link>
                             </Grid.Item>
@@ -287,7 +287,7 @@ function ProductCart() {
                                 <Plug style={{ width: 20, height: 20 }}></Plug>
                             </Grid.Item>
                             <Grid.Item mix-width='expand'>
-                                <Link href='#' link-style='dotted'>
+                                <Link link-color='default' href='#' link-style='dotted'>
                                     +380 показать номер
                                 </Link>
                             </Grid.Item>
@@ -302,7 +302,7 @@ function ProductCart() {
                     </Text>
                 </Box>
                 Нет отзывов.&nbsp;
-                <Link href='#'>
+                <Link link-color='default' href='#'>
                     Добавить
                 </Link>
             </List.Item>
@@ -428,7 +428,7 @@ function ProductCart() {
                                         </Text>
                                     </Box>
                                     <Box box-margin-bottom='xs'>
-                                        <Link link-style='dotted'>
+                                        <Link link-color='default' link-style='dotted'>
                                             Оптовые цены
                                         </Link>
                                     </Box>
@@ -448,7 +448,7 @@ function ProductCart() {
                                             <Plug style={{ width: 20, height: 20 }}></Plug>
                                         </Grid.Item>
                                         <Grid.Item mix-width='expand'>
-                                            <Link href='#' link-style='dotted'>
+                                            <Link link-color='default' href='#' link-style='dotted'>
                                                 Добавить в избранное
                                             </Link>
                                         </Grid.Item>
@@ -477,7 +477,7 @@ function ProductCart() {
                                             </Text>
                                         </List.Item>
                                         <List.Item>
-                                            <Link href='#' link-style='dotted'>
+                                            <Link link-color='default' href='#' link-style='dotted'>
                                                 Подробнее
                                             </Link>
                                         </List.Item>
@@ -496,7 +496,7 @@ function ProductCart() {
                                             </Text>
                                         </List.Item>
                                         <List.Item>
-                                            <Link href='#' link-style='dotted'>
+                                            <Link link-color='default' href='#' link-style='dotted'>
                                                 Подробнее
                                             </Link>
                                         </List.Item>
@@ -505,12 +505,12 @@ function ProductCart() {
                                 <Grid.Item>
                                     <List list-indent='s'>
                                         <List.Item>
-                                            <Link href='#' link-style='dotted'>
+                                            <Link link-color='default' href='#' link-style='dotted'>
                                                 Условия возврата
                                             </Link>
                                         </List.Item>
                                         <List.Item>
-                                            <Link href='#' link-style='dotted'>
+                                            <Link link-color='default' href='#' link-style='dotted'>
                                                 Регионы доставки
                                             </Link>
                                         </List.Item>
@@ -526,6 +526,7 @@ function ProductCart() {
                                                 href='#'
                                                 link-style='multi-line'
                                                 link-lheight='medium'
+                                                link-color='default'
                                             >
                                                 Защищаем покупки <br /> на 3 000 грн
                                             </Link>

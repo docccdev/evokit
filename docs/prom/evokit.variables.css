@@ -12,6 +12,7 @@
 
     --ek-body-min-width: 1000px;
     --ek-body-max-width: 1240px;
+    --ek-body-font-family: 'Open Sans',Arial,Tahoma,Helvetica,"Liberation Sans",sans-serif;
 
     --ek-font-size-h1: 24px;
     --ek-font-size-h2: 22px;
@@ -42,7 +43,7 @@
     --ek-primary-text-color: black;
     --ek-primary-link-color: black;
 
-    --ek-second-background-color: white;
+    --ek-second-background-color: linear-gradient(135deg, #39427f, #53165f);
     --ek-second-border-color: black;
     --ek-second-divider-color: black;
     --ek-second-text-color: black;
