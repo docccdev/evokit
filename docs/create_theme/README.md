@@ -127,7 +127,7 @@ export default class EvoKitCreateTheme extends React.Component {
     }
 
     componentDidMount() {
-        fetch('//unpkg.com/evokit/dist/theme-template.css').then((response) => {
+        fetch('//unpkg.com/evokit@latest/dist/theme-template.css').then((response) => {
             response.text().then((text) => {
                 this.setState({
                     template: rootConfig.trim() + '\n\n' + text.trim(),
