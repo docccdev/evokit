@@ -1,18 +1,16 @@
-[colors]: base/colors.md
 [media]: base/media.md
 
-[text-color]: #text-color
-[text-size]: #text-size
-[text-weight]: #text-weight
-[text-align]: #text-align
-[text-valign]: #text-valign
-[text-wrap]: #text-wrap
-[text-style]: #text-style
-[text-transform]: #text-transform
-[text-lheight]: #text-lheight
+[text-color]: #color
+[text-size]: #size
+[text-weight]: #weight
+[text-align]: #align
+[text-valign]: #valign
+[text-wrap]: #wrap
+[text-style]: #style
+[text-transform]: #transform
+[text-lheight]: #lheight
 
-
-[text]: #text
+[create_theme]: create_theme/
 
 # EvoKit - Text
 
@@ -22,30 +20,7 @@
 
 ---
 
-## Usage
-
-- [Text][text]
-
-```jsx
-// Common import for all blocks and css
-import { Text } from 'evokit';
-import 'evokit/dist/style.css';
-
-// Single import block and css
-import Text from 'evokit/dist/Text';
-import 'evokit/dist/Text/style.css';
-
-...
-
-<Text>
-    content
-</Text>
-
-```
-
----
-
-## Text
+## Props
 
 | Property | Type | Description |
 |----------|----------|-------------|
@@ -59,7 +34,13 @@ import 'evokit/dist/Text/style.css';
 | [text-transform] | `string`, `object`, `array` | Преобразование регистра |
 | [text-lheight]   | `string`, `object`, `array` | Межстрочный интервал |
 
-### `text-color`
+## Color
+
+Set the color depending on the [created theme][create_theme], used `text color` value.
+
+```jsx
+<Text text-color='...'></Text>
+```
 
 ```jsx
 /*react*/
@@ -69,7 +50,7 @@ const { Text, Example } = EvoKit;
 export default class ExampleList extends React.Component {
     render() {
         return (
-            <Example values={['danger', 'dark', 'default', 'info', 'light', 'minor', 'muted', 'primary', 'reset', 'second', 'success', 'warning']}>
+            <Example values={['success', 'info', 'warning', 'danger']}>
                 {(value) => (
                     <Text text-color={value}>
                         Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.." Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке, некоторые - намеренно (например, юмористические варианты).
@@ -82,7 +63,11 @@ export default class ExampleList extends React.Component {
 </script>
 ```
 
-### `text-size`
+## Size
+
+```jsx
+<Text text-size='...'></Text>
+```
 
 ```jsx
 /*react*/
@@ -105,7 +90,11 @@ export default class ExampleList extends React.Component {
 </script>
 ```
 
-### `text-weight`
+## Weight
+
+```jsx
+<Text text-weight='...'></Text>
+```
 
 ```jsx
 /*react*/
@@ -128,7 +117,11 @@ export default class ExampleList extends React.Component {
 </script>
 ```
 
-### `text-align`
+## Align
+
+```jsx
+<Text text-align='...'></Text>
+```
 
 ```jsx
 /*react*/
@@ -151,7 +144,11 @@ export default class ExampleList extends React.Component {
 </script>
 ```
 
-### `text-valign`
+## Valign
+
+```jsx
+<Text text-valign='...'></Text>
+```
 
 ```jsx
 /*react*/
@@ -181,7 +178,11 @@ export default class ExampleList extends React.Component {
 </script>
 ```
 
-### `text-wrap`
+## Wrap
+
+```jsx
+<Text text-wrap='...'></Text>
+```
 
 ```jsx
 /*react*/
@@ -205,7 +206,11 @@ export default class ExampleList extends React.Component {
 </script>
 ```
 
-### `text-style`
+## Style
+
+```jsx
+<Text text-style='...'></Text>
+```
 
 ```jsx
 /*react*/
@@ -228,7 +233,11 @@ export default class ExampleList extends React.Component {
 </script>
 ```
 
-### `text-transform`
+## Transform
+
+```jsx
+<Text text-transform='...'></Text>
+```
 
 ```jsx
 /*react*/
@@ -251,7 +260,11 @@ export default class ExampleList extends React.Component {
 </script>
 ```
 
-### `text-lheight`
+## Lheight
+
+```jsx
+<Text text-lheight='...'></Text>
+```
 
 ```jsx
 /*react*/

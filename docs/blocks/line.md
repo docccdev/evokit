@@ -1,11 +1,11 @@
 [sizes]: base/sizes.md
 [media]: base/media.md
 
-[line-indent]: #line-indent
-[line-color]: #line-color
-[line-style]: #line-style
+[line-indent]: #indent
+[line-color]: #color
+[line-style]: #style
 
-[line]: #line
+[create_theme]: create_theme/
 
 # EvoKit - Line
 
@@ -15,34 +15,19 @@
 
 ---
 
-## Usage
-
-- [Line][line]
-
-```jsx
-// Common import for all blocks and css
-import { Line } from 'evokit';
-import 'evokit/dist/style.css';
-
-// Single import block and css
-import Line from 'evokit/dist/Line';
-import 'evokit/dist/Line/style.css';
-
-...
-
-<Line />
-
-```
-
-## Line
+## Props
 
 | Property | Type | Description |
 |----------|----------|-------------|
 | [line-indent]    | `string`, `object`, `array` | Отступ сверху и снизу [sizes] |
-| [line-color]     | `string`, `object`, `array` | Цвет |
+| [line-color]     | `string`, `object`, `array` | Set the line color |
 | [line-style]     | `string`, `object`, `array` | Стиль |
 
-### `line-indent`
+## Indent
+
+```jsx
+<Line line-indent='...' />
+```
 
 ```jsx
 /*react*/
@@ -58,7 +43,7 @@ export default class ExampleLine extends React.Component {
                         <Example.Box style={{ display: 'inline-block' }}>
                             text
                         </Example.Box>
-                        <Line line-indent={value} />
+                        <Line line-color='default' line-indent={value} />
                         <Example.Box style={{ display: 'inline-block' }}>
                             text
                         </Example.Box>
@@ -71,7 +56,13 @@ export default class ExampleLine extends React.Component {
 </script>
 ```
 
-### `line-color`
+## Color
+
+Set the color depending on the [created theme][create_theme], used `border color` value.
+
+```jsx
+<Line line-color='...' />
+```
 
 ```jsx
 /*react*/
@@ -81,9 +72,9 @@ const { Line, Example } = EvoKit;
 export default class ExampleLine extends React.Component {
     render() {
         return (
-            <Example values={['danger', 'dark', 'default', 'info', 'light', 'minor', 'muted', 'primary', 'reset', 'second', 'success', 'warning']}>
+            <Example values={['success', 'info', 'warning', 'danger']}>
                 {(value) => (
-                    <Line line-color={value} />
+                    <Line line-color='default' line-color={value} />
                 )}
             </Example>
         )
@@ -92,7 +83,11 @@ export default class ExampleLine extends React.Component {
 </script>
 ```
 
-### `line-style`
+## Style
+
+```jsx
+<Line line-style='...' />
+```
 
 ```jsx
 /*react*/

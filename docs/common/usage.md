@@ -5,36 +5,39 @@
 
 # EvoKit
 
-Основа для разработки быстрых и мощных веб-интерфейсов. Он основан на принципе разделения интерфейса на независимые единицы. Это позволяет вам легко и быстро создавать интерфейс любой сложности и повторно использовать существующий код, избегая «Copy-Paste».
+Easy and fast React front-end framework. Based on the principle of dividing the interface into independent blocks.
 
 ---
 
-## Peer dependencies
+## Quick start
 
- - [react]
- - [prop-types]
- - [classnames]
+> Install dependencies [react], [prop-types], [classnames] to make it work.
 
-## Install
+```bash
+npm install react
+npm install prop-types
+npm install classnames
+```
+
+### Install
+
 ```bash
 npm install evokit
 ```
 
-## React usage (jsx)
+### Usage
 
-#### Step 1
-
-!> Insert [css variables][variables] on page!
-
-#### Step 2
+!> Insert [css variables][variables] on page.
 
 ```jsx
 import React from 'react';
 import { Grid } from 'evokit';
 import 'evokit/dist/style.css';
-import 'evokit/dist/themes.css';
 
-export default class EvokitExample extends React.Component {
+// import Grid from 'evokit/dist/Grid';
+// import 'evokit/dist/Grid/style.css';
+
+export default class EvoKitExample extends React.Component {
     render() {
         return (
             <Grid grid-align='justify'>
@@ -54,7 +57,7 @@ export default class EvokitExample extends React.Component {
 
 ## Static usage
 
-!> Insert [css variables][variables] on page!
+!> Insert [css variables][variables] on page.
 
 ```html
 <!DOCTYPE html>

@@ -1,13 +1,11 @@
 [mixes]: common/mixes.md
 
-[image-align]: #image-align
-[image-valign]: #image-valign
-[image-mirror]: #image-mirror
-[image-fit]: #image-fit
+[image-align]: #align
+[image-valign]: #valign
+[image-mirror]: #mirror
+[image-fit]: #fit
 
-[mix-round]: #mix-round
-
-[image]: #image
+[mix-round]: #Round
 
 # EvoKit - Image
 
@@ -15,30 +13,7 @@
 
 ---
 
-## Usage
-
-- [Image][image]
-
-```jsx
-// Common import for all blocks and css
-import { Image } from 'evokit';
-import 'evokit/dist/style.css';
-
-// Single import block and css
-import Image from 'evokit/dist/Image';
-import 'evokit/dist/Image/style.css';
-
-...
-
-<Image src='картинка.png' alt='картинка' />
-
-```
-
----
-
-## Image
-
-#### Base options:
+## Props
 
 | Property | Type | Description |
 |----------|----------|-------------|
@@ -46,14 +21,13 @@ import 'evokit/dist/Image/style.css';
 | [image-valign]    | `string`, `object`, `array` | Вертикальное выравнивание |
 | [image-mirror]     | `string`, `object`, `array` | Отзеркаливание |
 | [image-fit]     | `string`, `object`, `array` | Заполнение контейнера относительно его высоты и ширины |
-
-#### Mix options:
-
-| Property | About | Description |
-|----------|----------|-------------|
 | [mix-round] | [Mixes][mixes] | Скругление углов |
 
-### `image-align`
+## Align
+
+```jsx
+<Image src='' image-align='...' />
+```
 
 ```jsx
 /*react*/
@@ -79,7 +53,11 @@ export default class ExampleImage extends React.Component {
 </script>
 ```
 
-### `image-valign`
+## Valign
+
+```jsx
+<Image src='' image-valign='...' />
+```
 
 ```jsx
 /*react*/
@@ -113,7 +91,11 @@ export default class ExampleImage extends React.Component {
 </script>
 ```
 
-### `image-mirror`
+## Mirror
+
+```jsx
+<Image src='' image-mirror='...' />
+```
 
 ```jsx
 /*react*/
@@ -139,7 +121,11 @@ export default class ExampleImage extends React.Component {
 </script>
 ```
 
-### `image-fit`
+## Fit
+
+```jsx
+<Image src='' image-fit='...' />
+```
 
 ```jsx
 /*react*/
@@ -168,7 +154,13 @@ export default class ExampleImage extends React.Component {
 </script>
 ```
 
-### `mix-round`
+## Round
+
+Read more about [mixes][mixes]
+
+```jsx
+<Image src='' mix-round='...' />
+```
 
 ```jsx
 /*react*/

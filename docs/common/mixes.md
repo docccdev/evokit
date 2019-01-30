@@ -8,6 +8,8 @@
 
 Mixes are just the way to use common behaviors and styles.
 
+---
+
 ## Usage
 
 ```jsx
@@ -31,7 +33,7 @@ import { Box } from 'evokit';
 | [mix-round]  | `none`, `xxs`, `xs`, `s`, `m`, `l`, `xl`, `xxl`, `full` | Скругление углов |
 
 
-### `mix-width`
+## mix-width
 
 - **expand** - use only for [griditem]
 
@@ -66,7 +68,7 @@ export default class ExampleBox extends React.Component {
 ```
 
 
-### `mix-round`
+## mix-round
 
 - **mix-round-*** - additional options
 

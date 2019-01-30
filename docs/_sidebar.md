@@ -1,6 +1,6 @@
 * COMMON
 
-  * [Usage](/base/usage.md)
+  * [Usage](/common/usage.md)
   * [Variables](/base/variables.md)
   * [Media](/base/media.md)
   * [Sizes](/base/sizes.md)

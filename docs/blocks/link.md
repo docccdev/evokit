@@ -1,13 +1,13 @@
 [media]: base/media.md
 
-[link-color]: #link-color
-[link-size]: #link-size
-[link-weight]: #link-weight
-[link-valign]: #link-valign
-[link-style]: #link-style
-[link-lheight]: #link-lheight
+[link-color]: #color
+[link-size]: #size
+[link-weight]: #weight
+[link-valign]: #valign
+[link-style]: #style
+[link-lheight]: #lheight
 
-[link]: #link
+[create_theme]: create_theme/
 
 # EvoKit - Link
 
@@ -17,30 +17,7 @@
 
 ---
 
-## Usage
-
-- [Link][link]
-
-```jsx
-// Common import for all blocks and css
-import { Link } from 'evokit';
-import 'evokit/dist/style.css';
-
-// Single import block and css
-import Link from 'evokit/dist/Link';
-import 'evokit/dist/Link/style.css';
-
-...
-
-<Link href='#'>
-    link
-</Link>
-
-```
-
----
-
-## Link
+## Props
 
 | Property | Type | Description |
 |----------|----------|-------------|
@@ -52,7 +29,13 @@ import 'evokit/dist/Link/style.css';
 | [link-lheight]   | `string`, `object`, `array` | Межстрочный интервал |
 
 
-### `link-color`
+## Color
+
+Set the color depending on the [created theme][create_theme], used `text color` value.
+
+```jsx
+<Link href='' link-color='...'></Link>
+```
 
 ```jsx
 /*react*/
@@ -62,7 +45,7 @@ const { Link, Example } = EvoKit;
 export default class ExampleLink extends React.Component {
     render() {
         return (
-            <Example values={['danger', 'dark', 'default', 'info', 'light', 'minor', 'muted', 'primary', 'reset', 'second', 'success', 'warning']}>
+            <Example values={['success', 'info', 'warning', 'danger' ]}>
                 {(value) => (
                     <Link link-color={value}>
                         Ссылка
@@ -75,7 +58,11 @@ export default class ExampleLink extends React.Component {
 </script>
 ```
 
-### `link-size`
+## Size
+
+```jsx
+<Link href='' link-size='...'></Link>
+```
 
 ```jsx
 /*react*/
@@ -98,7 +85,11 @@ export default class ExampleLink extends React.Component {
 </script>
 ```
 
-### `link-weight`
+## Weight
+
+```jsx
+<Link href='' link-weight='...'></Link>
+```
 
 ```jsx
 /*react*/
@@ -121,7 +112,11 @@ export default class ExampleLink extends React.Component {
 </script>
 ```
 
-### `link-valign`
+## Valign
+
+```jsx
+<Link href='' link-valign='...'></Link>
+```
 
 ```jsx
 /*react*/
@@ -151,7 +146,11 @@ export default class ExampleLink extends React.Component {
 </script>
 ```
 
-### `link-style`
+## Style
+
+```jsx
+<Link href='' link-style='...'></Link>
+```
 
 ```jsx
 /*react*/
@@ -174,7 +173,11 @@ export default class ExampleLink extends React.Component {
 </script>
 ```
 
-### `link-lheight`
+## Lheight
+
+```jsx
+<Link href='' link-lheight='...'></Link>
+```
 
 ```jsx
 /*react*/
