@@ -12,6 +12,8 @@ import Line from './blocks/Line';
 import Image from './blocks/Image';
 import Mix from './blocks/Mix';
 
+const CSSModules = (block, css) => block.css = css;
+
 export {
     createBlock,
     Example,
@@ -25,4 +27,5 @@ export {
     Line,
     Image,
     Mix,
+    CSSModules,
 };

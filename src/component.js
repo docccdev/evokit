@@ -2,9 +2,9 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
 
-const getClassNameFromProps = function(classPrefix, propsPrefix, blockName, allowedMods, props) {
+const getClassNameFromProps = function(classPrefix, propsPrefix, blockName, allowedMods, css, props) {
     const blockClassName = `${classPrefix}${blockName}`;
-    const modsProps = [blockClassName];
+    const modsProps = [css ? css[blockClassName] : blockClassName];
 
     for (const key of allowedMods) {
         const propName = `${propsPrefix}${key}`;
@@ -14,8 +14,10 @@ const getClassNameFromProps = function(classPrefix, propsPrefix, blockName, allo
             let modsString = classNames(props[propName]);
 
             if (modsString) {
-                modsString = modsString.replace(/ /g, ` ${modName}_`);
-                modsProps.push(`${modName}_${modsString}`);
+                modsString.split(' ').forEach((value) => {
+                    const modClassName = `${modName}_${value}`;
+                    modsProps.push(css ? css[modClassName] : modClassName);
+                });
             }
         }
     }
@@ -33,6 +35,7 @@ export function createBlock(target) {
     target.blockMods = target.blockMods || [];
     target.mixMods = target.mixMods || [];
     target.displayName = target.displayName || `${target.classPrefix}${target.blockName}`;
+    target.css = null;
 
     target.propTypes['domRef'] = PropTypes.func;
 
@@ -57,6 +60,7 @@ export function createBlock(target) {
             target.propsPrefix,
             target.blockName,
             target.blockMods,
+            target.css,
             this.props,
         );
 
@@ -65,6 +69,7 @@ export function createBlock(target) {
             'mix-',
             'mix',
             target.mixMods,
+            target.css,
             this.props,
         ) : [];
 
