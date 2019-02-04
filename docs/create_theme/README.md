@@ -87,7 +87,7 @@ export default class EvoKitCreateTheme extends React.Component {
 
         this.state = {
             template: null,
-            sheme: PRESETS['primary'],
+            sheme: PRESETS['success'],
         };
 
         this.onChangeVar = this.onChangeVar.bind(this);
