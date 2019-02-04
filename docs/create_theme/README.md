@@ -16,22 +16,6 @@ const { Box, Text, Grid, List, Picture, Link, Line } = EvoKit;
 
 
 const PRESETS = {
-    'primary': {
-        '__TEMPLATE_NAME__': 'primary',
-        '__TEMPLATE_BACKGROUND_COLOR__': '#cce5ff',
-        '__TEMPLATE_BORDER_COLOR__': '#b8daff',
-        '__TEMPLATE_DIVIDER_COLOR__': '#b8daff',
-        '__TEMPLATE_TEXT_COLOR__': '#004085',
-        '__TEMPLATE_LINK_COLOR__': '#004085',
-    },
-    'secondary': {
-        '__TEMPLATE_NAME__': 'secondary',
-        '__TEMPLATE_BACKGROUND_COLOR__': '#e2e3e5',
-        '__TEMPLATE_BORDER_COLOR__': '#d6d8db',
-        '__TEMPLATE_DIVIDER_COLOR__': '#d6d8db',
-        '__TEMPLATE_TEXT_COLOR__': '#383d41',
-        '__TEMPLATE_LINK_COLOR__': '#383d41',
-    },
     'success': {
         '__TEMPLATE_NAME__': 'success',
         '__TEMPLATE_BACKGROUND_COLOR__': '#d4edda',
@@ -39,22 +23,6 @@ const PRESETS = {
         '__TEMPLATE_DIVIDER_COLOR__': '#c3e6cb',
         '__TEMPLATE_TEXT_COLOR__': '#155724',
         '__TEMPLATE_LINK_COLOR__': '#155724',
-    },
-    'danger': {
-        '__TEMPLATE_NAME__': 'danger',
-        '__TEMPLATE_BACKGROUND_COLOR__': '#f8d7da',
-        '__TEMPLATE_BORDER_COLOR__': '#f5c6cb',
-        '__TEMPLATE_DIVIDER_COLOR__': '#f5c6cb',
-        '__TEMPLATE_TEXT_COLOR__': '#721c24',
-        '__TEMPLATE_LINK_COLOR__': '#721c24',
-    },
-    'warning': {
-        '__TEMPLATE_NAME__': 'warning',
-        '__TEMPLATE_BACKGROUND_COLOR__': '#fff3cd',
-        '__TEMPLATE_BORDER_COLOR__': '#ffeeba',
-        '__TEMPLATE_DIVIDER_COLOR__': '#ffeeba',
-        '__TEMPLATE_TEXT_COLOR__': '#856404',
-        '__TEMPLATE_LINK_COLOR__': '#856404',
     },
     'info': {
         '__TEMPLATE_NAME__': 'info',
@@ -64,21 +32,21 @@ const PRESETS = {
         '__TEMPLATE_TEXT_COLOR__': '#0c5460',
         '__TEMPLATE_LINK_COLOR__': '#0c5460',
     },
-    'light': {
-        '__TEMPLATE_NAME__': 'light',
-        '__TEMPLATE_BACKGROUND_COLOR__': '#fefefe',
-        '__TEMPLATE_BORDER_COLOR__': '#fdfdfe',
-        '__TEMPLATE_DIVIDER_COLOR__': '#fdfdfe',
-        '__TEMPLATE_TEXT_COLOR__': '#818182',
-        '__TEMPLATE_LINK_COLOR__': '#818182',
+    'warning': {
+        '__TEMPLATE_NAME__': 'warning',
+        '__TEMPLATE_BACKGROUND_COLOR__': '#fff3cd',
+        '__TEMPLATE_BORDER_COLOR__': '#ffeeba',
+        '__TEMPLATE_DIVIDER_COLOR__': '#ffeeba',
+        '__TEMPLATE_TEXT_COLOR__': '#856404',
+        '__TEMPLATE_LINK_COLOR__': '#856404',
     },
-    'dark': {
-        '__TEMPLATE_NAME__': 'dark',
-        '__TEMPLATE_BACKGROUND_COLOR__': '#d6d8d9',
-        '__TEMPLATE_BORDER_COLOR__': '#c6c8ca',
-        '__TEMPLATE_DIVIDER_COLOR__': '#c6c8ca',
-        '__TEMPLATE_TEXT_COLOR__': '#1b1e21',
-        '__TEMPLATE_LINK_COLOR__': '#1b1e21',
+    'danger': {
+        '__TEMPLATE_NAME__': 'danger',
+        '__TEMPLATE_BACKGROUND_COLOR__': '#f8d7da',
+        '__TEMPLATE_BORDER_COLOR__': '#f5c6cb',
+        '__TEMPLATE_DIVIDER_COLOR__': '#f5c6cb',
+        '__TEMPLATE_TEXT_COLOR__': '#721c24',
+        '__TEMPLATE_LINK_COLOR__': '#721c24',
     },
 }
 
