@@ -26,8 +26,12 @@
 !> В версии **v2.0.0** и выше, изменился конфиг и некоторые названия класов!
 
 
+## 2.1.5
+- Init `CSSModules`.
+
+
 ## 2.1.4
-- Создан `theme-template.css` для [create_theme]
+- Создан `theme-template.css` для [create_theme].
 
 
 ## 2.1.3

@@ -14,15 +14,13 @@ Easy and fast React front-end framework. Based on the principle of dividing the 
 > Install dependencies [react], [prop-types], [classnames] to make it work.
 
 ```bash
-npm install react
-npm install prop-types
-npm install classnames
+npm i react prop-types classnames --save
 ```
 
 ### Install
 
 ```bash
-npm install evokit
+npm i evokit --save
 ```
 
 ### Usage
