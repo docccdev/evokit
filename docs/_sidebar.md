@@ -1,30 +1,30 @@
 * COMMON
 
   * [Usage](/common/usage.md)
-  * [Variables](/base/variables.md)
-  * [Media](/base/media.md)
-  * [Sizes](/base/sizes.md)
-  * [Mixes](/common/mixes.md)
+  * [Settings](/base/settings.md)
+  <!-- * [Variables](/base/variables.md) -->
+  <!-- * [Media](/base/media.md) -->
+  <!-- * [Sizes](/base/sizes.md) -->
+  <!-- * [Mixes](/common/mixes.md) -->
   <!-- * [Colors](/base/colors.md) -->
   <!-- * [Text](/base/text.md) -->
 
-* BASE
-
+* MODELS
   * [Box](blocks/box.md)
   * [Text](blocks/text.md)
+  * [Color](blocks/color.md)
+
+* BLOCKS
+  * [Body](blocks/body.md)
+  * [Grid](blocks/grid.md)
+  * [List](blocks/list.md)
   * [Link](blocks/link.md)
   * [Image](blocks/image.md)
   * [Line](blocks/line.md)
 
-* EXTRA
-
-  * [Body](blocks/body.md)
-  * [Grid](blocks/grid.md)
-  * [List](blocks/list.md)
-  * [Picture](blocks/picture.md)
-
-* COMPLEX
+* EXAMPLES
 
   * [Form](complex/form.md)
-  <!-- * [Card](complex/card.md) -->
   * [Progress](complex/progress.md)
+  * [Picture](blocks/picture.md)
+  <!-- * [Card](complex/card.md) -->
