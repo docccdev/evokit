@@ -7,7 +7,7 @@
     "test": "jest",
     "build": "webpack --progress --config webpack.config.js",
     "prepublishOnly": "webpack --config webpack.config.js",
-    "docs": "http-server ./ -p 9090"
+    "docs": "./node_modules/.bin/http-server ./ -p 9090"
   },
   "jest": {
     "snapshotSerializers": [
@@ -51,6 +51,7 @@
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.7.1",
     "enzyme-to-json": "^3.3.5",
+    "http-server": "^0.11.1",
     "jest": "^23.6.0",
     "mini-css-extract-plugin": "^0.4.4",
     "postcss-conditionals": "^2.1.0",
