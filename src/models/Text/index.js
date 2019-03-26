@@ -1,20 +1,11 @@
 import React from 'react';
 import { createBlock } from '../../component';
+import { textMods } from './mods';
 
 class Text extends React.Component {
     static blockTag = 'span';
     static blockName = 'text';
-    static blockMods = [
-        'color',
-        'size',
-        'weight',
-        'align',
-        'valign',
-        'wrap',
-        'style',
-        'transform',
-        'lheight',
-    ];
+    static blockMods = textMods;
 
     render() {
         return (

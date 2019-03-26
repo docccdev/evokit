@@ -11,8 +11,8 @@
 [box-position]: #position
 [box-place]: #place
 
-[mix-width]: #width
-[mix-round]: #round
+[box-width]: #width
+[box-round]: #round
 
 [create_theme]: create_theme/
 
@@ -36,8 +36,8 @@
 | [box-display]        | `string`, `object`, `array` | Отображение в документе |
 | [box-position]       | `string`, `object`, `array` | Cпособ позиционирования |
 | [box-place]          | `string`, `object`, `array` | Место позиционирования |
-| [mix-width] | [Mixes][mixes] | Ширина |
-| [mix-round] | [Mixes][mixes] | Скругление углов |
+| [box-width] | [Mixes][mixes] | Ширина |
+| [box-round] | [Mixes][mixes] | Скругление углов |
 
 
 ## Margin
@@ -346,7 +346,7 @@ export default class ExampleBox extends React.Component {
 Read more about [mixes][mixes]
 
 ```jsx
-<Box mix-width='...'></Box>
+<Box box-width='...'></Box>
 ```
 
 ```jsx
@@ -359,7 +359,7 @@ export default class ExampleBox extends React.Component {
         return (
             <Example values={['auto', '1-1', '1-10', '2-10', '3-10', '4-10', '5-10', '6-10', '7-10', '8-10', '9-10']}>
                 {(value) => (
-                    <Box mix-width={value}>
+                    <Box box-width={value}>
                         <Example.Box>
                             content
                         </Example.Box>
@@ -377,7 +377,7 @@ export default class ExampleBox extends React.Component {
 Read more about [mixes][mixes]
 
 ```jsx
-<Box mix-round='...'></Box>
+<Box box-round='...'></Box>
 ```
 
 ```jsx
@@ -391,32 +391,32 @@ export default class ExampleBox extends React.Component {
             <Example values={['none', 'xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl', 'full']}>
                 {(value) => (
                     <div>
-                        <Box mix-round={value} box-margin-tb='xs' box-padding='xs' box-border='success'>
-                            mix-round
+                        <Box box-round={value} box-margin-tb='xs' box-padding='xs' box-border='success'>
+                            box-round
                         </Box>
-                        <Box mix-round-top={value} box-margin-tb='xs' box-padding='xs' box-border='success'>
-                            mix-round-top
+                        <Box box-round-top={value} box-margin-tb='xs' box-padding='xs' box-border='success'>
+                            box-round-top
                         </Box>
-                        <Box mix-round-right={value} box-margin-tb='xs' box-padding='xs' box-border='success'>
-                            mix-round-right
+                        <Box box-round-right={value} box-margin-tb='xs' box-padding='xs' box-border='success'>
+                            box-round-right
                         </Box>
-                        <Box mix-round-bottom={value} box-margin-tb='xs' box-padding='xs' box-border='success'>
-                            mix-round-bottom
+                        <Box box-round-bottom={value} box-margin-tb='xs' box-padding='xs' box-border='success'>
+                            box-round-bottom
                         </Box>
-                        <Box mix-round-left={value} box-margin-tb='xs' box-padding='xs' box-border='success'>
-                            mix-round-left
+                        <Box box-round-left={value} box-margin-tb='xs' box-padding='xs' box-border='success'>
+                            box-round-left
                         </Box>
-                        <Box mix-round-top-left={value} box-margin-tb='xs' box-padding='xs' box-border='success'>
-                            mix-round-top-left
+                        <Box box-round-top-left={value} box-margin-tb='xs' box-padding='xs' box-border='success'>
+                            box-round-top-left
                         </Box>
-                        <Box mix-round-top-right={value} box-margin-tb='xs' box-padding='xs' box-border='success'>
-                            mix-round-top-right
+                        <Box box-round-top-right={value} box-margin-tb='xs' box-padding='xs' box-border='success'>
+                            box-round-top-right
                         </Box>
-                        <Box mix-round-bottom-left={value} box-margin-tb='xs' box-padding='xs' box-border='success'>
-                            mix-round-bottom-left
+                        <Box box-round-bottom-left={value} box-margin-tb='xs' box-padding='xs' box-border='success'>
+                            box-round-bottom-left
                         </Box>
-                        <Box mix-round-bottom-right={value} box-margin-tb='xs' box-padding='xs' box-border='success'>
-                            mix-round-bottom-right
+                        <Box box-round-bottom-right={value} box-margin-tb='xs' box-padding='xs' box-border='success'>
+                            box-round-bottom-right
                         </Box>
                     </div>
                 )}

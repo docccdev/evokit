@@ -82,24 +82,11 @@ export default class ExampleGrid extends React.Component {
                 </Box>
                 <Box box-background='muted' box-padding='xxl'>
                     <Grid grid-column='3' grid-indent='m'>
-                        <Grid.Item>
-                            {this.renderCard()}
-                        </Grid.Item>
-                        <Grid.Item>
-                            {this.renderCard()}
-                        </Grid.Item>
-                        <Grid.Item>
-                            {this.renderCard()}
-                        </Grid.Item>
-                        <Grid.Item>
-                            {this.renderCard()}
-                        </Grid.Item>
-                        <Grid.Item>
-                            {this.renderCard()}
-                        </Grid.Item>
-                        <Grid.Item>
-                            {this.renderCard()}
-                        </Grid.Item>
+                        {Array.from(Array(6).keys()).map((index) => (
+                            <Grid.Item key={index}>
+                                {this.renderCard()}
+                            </Grid.Item>
+                        ))}
                     </Grid>
                 </Box>
             </div>

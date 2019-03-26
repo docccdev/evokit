@@ -26,6 +26,29 @@
 !> В версии **v2.0.0** и выше, изменился конфиг и некоторые названия класов!
 
 
+## 3.0.0
+- Remove [mixes][Mixes] block. Props `mix-*` replaced with new `box-*` model, see examples:
+
+``` jsx
+<Grid.Item mix-width='1-2'>OLD</Grid.Item>
+<Grid.Item box-width='1-2'>NEW</Grid.Item>
+```
+- Remove themes from package:
+    - `themes.css`
+    - `theme.danger.css`
+    - `theme.dark.css`
+    - `theme.default.css`
+    - `theme.info.css`
+    - `theme.light.css`
+    - `theme.minor.css`
+    - `theme.muted.css`
+    - `theme.primary.css`
+    - `theme.reset.css`
+    - `theme.second.css`
+    - `theme.success.css`
+    - `theme.warning.css`
+
+
 ## 2.1.5
 - Init `CSSModules`.
 

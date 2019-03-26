@@ -1,16 +1,16 @@
 import { createBlock } from './component';
 import { Example } from './example';
 
+import Box from './models/Box';
+import Text from './models/Text';
+
 import Body from './blocks/Body';
-import Box from './blocks/Box';
 import Grid from './blocks/Grid';
 import List from './blocks/List';
 import Link from './blocks/Link';
 import Picture from './blocks/Picture';
-import Text from './blocks/Text';
 import Line from './blocks/Line';
 import Image from './blocks/Image';
-import Mix from './blocks/Mix';
 
 const CSSModules = (block, css) => block.css = css;
 
@@ -26,6 +26,5 @@ export {
     Text,
     Line,
     Image,
-    Mix,
     CSSModules,
 };

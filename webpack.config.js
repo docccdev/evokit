@@ -32,22 +32,15 @@ const THEMES_LIST = [
     'warning',
 ]
 
-function getThemesPath(blockName, blockPath) {
-    const result = {
-        [`${blockName}/themes`]: path.resolve(__dirname, `${blockPath}/${blockName}/themes`),
-    };
-    THEMES_LIST.forEach((themeName) => {
-        const srcPath = `${blockPath}/${blockName}/themes/${themeName}`;
-        const distPath = `${blockName}/theme.${themeName}`;
-        result[distPath] = path.resolve(__dirname, srcPath);
-    });
-    return result;
-}
-
 const ENTRY_LIST = {
+    'Box/index': path.resolve(__dirname, 'src/models/Box'),
+    'Box/style': path.resolve(__dirname, 'src/models/Box/style'),
+
+    'Text/index': path.resolve(__dirname, 'src/models/Text'),
+    'Text/style': path.resolve(__dirname, 'src/models/Text/style'),
+
     'Body/index': path.resolve(__dirname, 'src/blocks/Body'),
     'Body/style': path.resolve(__dirname, 'src/blocks/Body/style'),
-    ...getThemesPath('Body', 'src/blocks'),
 
     'Image/index': path.resolve(__dirname, 'src/blocks/Image'),
     'Image/style': path.resolve(__dirname, 'src/blocks/Image/style'),
@@ -55,33 +48,20 @@ const ENTRY_LIST = {
     'Picture/index': path.resolve(__dirname, 'src/blocks/Picture'),
     'Picture/style': path.resolve(__dirname, 'src/blocks/Picture/style'),
 
-    'Box/index': path.resolve(__dirname, 'src/blocks/Box'),
-    'Box/style': path.resolve(__dirname, 'src/blocks/Box/style'),
-    ...getThemesPath('Box', 'src/blocks'),
-
     'Grid/index': path.resolve(__dirname, 'src/blocks/Grid'),
     'Grid/style': path.resolve(__dirname, 'src/blocks/Grid/style'),
-    ...getThemesPath('Grid', 'src/blocks'),
 
     'List/index': path.resolve(__dirname, 'src/blocks/List'),
     'List/style': path.resolve(__dirname, 'src/blocks/List/style'),
-    ...getThemesPath('List', 'src/blocks'),
 
     'Link/index': path.resolve(__dirname, 'src/blocks/Link'),
     'Link/style': path.resolve(__dirname, 'src/blocks/Link/style'),
-    ...getThemesPath('Link', 'src/blocks'),
-
-    'Text/index': path.resolve(__dirname, 'src/blocks/Text'),
-    'Text/style': path.resolve(__dirname, 'src/blocks/Text/style'),
-    ...getThemesPath('Text', 'src/blocks'),
 
     'Line/index': path.resolve(__dirname, 'src/blocks/Line'),
     'Line/style': path.resolve(__dirname, 'src/blocks/Line/style'),
-    ...getThemesPath('Line', 'src/blocks'),
 
     './index': path.resolve(__dirname, 'src'),
     './style': path.resolve(__dirname, 'src/style'),
-    ...getThemesPath('.', 'src'),
 
     './theme-template': path.resolve(__dirname, 'src/theme-template'),
 };
