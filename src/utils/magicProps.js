@@ -1,4 +1,4 @@
-import { classNames } from './classNames';
+import { cnBlock } from './cnBlock';
 
 export const BLOCK_PROP_KEY = '__block__';
 
@@ -27,7 +27,7 @@ export const magicProps = ({ className, ...props }, allowProps, modKeys) => {
     modKeys
         .filter((key, index) => index === 0 || mapProps.hasOwnProperty(key))
         .forEach((key) => {
-            newCnList.push(classNames(key)(mapProps[key]));
+            newCnList.push(cnBlock(key)(mapProps[key]));
         });
 
     if (className) {
