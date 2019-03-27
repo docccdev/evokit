@@ -1,6 +1,7 @@
 * COMMON
 
   * [Usage](/common/usage.md)
+  * [API](/base/api.md)
   * [Settings](/base/settings.md)
   <!-- * [Variables](/base/variables.md) -->
   <!-- * [Media](/base/media.md) -->

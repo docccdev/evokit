@@ -6,6 +6,7 @@
 [size]: base/sizes.md
 [text]: base/text.md
 [colors]: base/colors.md
+[api]: base/api.md
 
 [mixes]: common/mixes.md
 
@@ -23,10 +24,11 @@
 
 # CHANGELOG
 
-!> В версии **v2.0.0** и выше, изменился конфиг и некоторые названия класов!
+!> Version **v3.0.0** new API and many critical changes, please update carefully.
 
 
 ## 3.0.0
+- New [API][api].
 - Remove [mixes][Mixes] block. Props `mix-*` replaced with new `box-*` model, see examples:
 
 ``` jsx
