@@ -1,5 +1,7 @@
 import { createBlock } from './component';
-import { Example } from './example';
+import { Example } from './utils/example';
+
+import React from 'react';
 
 import Box from './models/Box';
 import Text from './models/Text';
@@ -14,6 +16,38 @@ import Image from './blocks/Image';
 
 const CSSModules = (block, css) => block.css = css;
 
+
+import { newBlock, withProps } from './utils';
+
+const NewBox1 = newBlock({
+    name: 'box',
+    mods: [
+        'padding',
+        'margin'
+    ],
+    mix: [
+        {
+            name: 'text',
+            mods: [
+                'size',
+                'weight',
+            ],
+        },
+        {
+            name: 'color',
+            mods: [
+                'text',
+                'border',
+                'background',
+            ],
+        },
+    ]
+});
+
+
+const NewBox = withProps(NewBox1, { width: '100', className: 'fsdfds' });
+
+
 export {
     createBlock,
     Example,
@@ -27,4 +61,5 @@ export {
     Line,
     Image,
     CSSModules,
+    NewBox,
 };

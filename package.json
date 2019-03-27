@@ -14,7 +14,7 @@
       "enzyme-to-json/serializer"
     ],
     "setupFiles": [
-      "./src/setupTests.js"
+      "./setupTests.js"
     ]
   },
   "repository": {
