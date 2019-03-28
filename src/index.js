@@ -20,7 +20,9 @@ const CSSModules = (block, css) => block.css = css;
 import { newBlock, withProps } from './utils';
 
 const NewBox1 = newBlock({
+    tag: 'span',
     name: 'box',
+    css: null,
     mods: [
         'padding',
         'margin'
@@ -45,7 +47,12 @@ const NewBox1 = newBlock({
 });
 
 
-const NewBox = withProps(NewBox1, { width: '100', className: 'fsdfds' });
+const NewBox = withProps(NewBox1, {
+    'box-tag': 'section',
+    // 'box-css': {'ek-box': 'new_ek_box'},
+    width: '100',
+    className: 'fsdfds',
+});
 
 
 export {

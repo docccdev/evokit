@@ -20,7 +20,7 @@ export const withProps = (target, defautProps) => {
     )
 }
 
-export const newBlock = ({ tag='div', name, mods=[], mix=[] }) => {
+export const newBlock = ({ name, tag='div', css=null, mods=[], mix=[] }) => {
     if (typeof name !== 'string') {
         throw new Error('The argument "name" is not a string');
     }
@@ -28,22 +28,29 @@ export const newBlock = ({ tag='div', name, mods=[], mix=[] }) => {
     const modList = [{ name, mods }, ...mix];
     const modKeys = modList.map(({ name }) => name);
 
+    const defaultProps = {
+        [`${name}-tag`]: tag,
+        [`${name}-css`]: css,
+    };
+
     const allowProps = modList.reduce((acc, item) => {
         if(Array.isArray(item.mods)) {
             item.mods.forEach((value) => acc[`${item.name}-${value}`] = [item.name, value]);
         }
         return acc;
-    }, {
+    }, {});
+
+    Object.assign(allowProps, {
         [`${name}-tag`]: [BLOCK_PROP_KEY, 'tag'],
         [`${name}-css`]: [BLOCK_PROP_KEY, 'css'],
     });
 
     return reactFn(
         ({ children, ...props }) => {
-            const [newProps, newTag] = magicProps(props, allowProps, modKeys);
+            const [newProps, newTag] = magicProps(props, allowProps, defaultProps, modKeys);
 
             return React.createElement(
-                newTag || tag,
+                newTag,
                 newProps,
                 children,
             );

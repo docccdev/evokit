@@ -39,6 +39,14 @@ describe("import { cnBlock, withPreset } from 'evokit';", () => {
             expect(cn2(mods)).toBe('Block__Elem Block__Elem_modName Block__Elem_modName2_modVal');
         });
 
+        it('different values', () => {
+            const cn = cnBlock('Block');
+            expect(cn({ modName: { val1: true, val2: false, val3: 0 } }))
+                .toBe('Block Block_modName_val1');
+            expect(cn({ modName: ['val1', 'val2'] }))
+                .toBe('Block Block_modName_val1 Block_modName_val2');
+        });
+
         it('empty', () => {
             const cn = cnBlock('Block');
             expect(cn({})).toBe('Block');
@@ -115,7 +123,7 @@ describe("import { cnBlock, withPreset } from 'evokit';", () => {
         });
     });
 
-    describe('with preset only prefix', () => {
+    describe('with preset { b }', () => {
         const cnBlockPrefix = withPreset({
             b: 'Prefix-',
         });
@@ -150,6 +158,14 @@ describe("import { cnBlock, withPreset } from 'evokit';", () => {
                 expect(cn2(mods)).toBe('Prefix-Block__Elem Prefix-Block__Elem_modName Prefix-Block__Elem_modName2_modVal');
             });
 
+            it('different values', () => {
+                const cn = cnBlockPrefix('Block');
+                expect(cn({ modName: { val1: true, val2: false, val3: 0 } }))
+                    .toBe('Prefix-Block Prefix-Block_modName_val1');
+                expect(cn({ modName: ['val1', 'val2'] }))
+                    .toBe('Prefix-Block Prefix-Block_modName_val1 Prefix-Block_modName_val2');
+            });
+
             it('empty', () => {
                 const cn = cnBlockPrefix('Block');
                 expect(cn({})).toBe('Prefix-Block');
@@ -177,28 +193,60 @@ describe("import { cnBlock, withPreset } from 'evokit';", () => {
                 expect(cn(undefined)).toBe('Prefix-Block');
             });
         });
+    });
 
-        describe("with preset all custom", () => {
-            const cnBlockAllCustom = withPreset({
-                b: '_',
-                e: '-',
-                m: '^',
-                v: '@',
-            });
+    describe("with preset { b, e, m, v }", () => {
+        const cnBlockAllCustom = withPreset({
+            b: '_',
+            e: '-',
+            m: '^',
+            v: '@',
+        });
 
-            it('block', () => {
-                const cn = cnBlockAllCustom('Block');
-                expect(cn({ mod: true })).toBe('_Block _Block^mod');
-                expect(cn({ mod: false })).toBe('_Block');
-                expect(cn({ mod: 'value' })).toBe('_Block _Block^mod@value');
-            });
+        it('block', () => {
+            const cn = cnBlockAllCustom('Block');
+            expect(cn({ mod: true })).toBe('_Block _Block^mod');
+            expect(cn({ mod: false })).toBe('_Block');
+            expect(cn({ mod: 'value' })).toBe('_Block _Block^mod@value');
+        });
 
-            it('elem', () => {
-                const cn = cnBlockAllCustom('Block', 'Elem');
-                expect(cn({ mod: true })).toBe('_Block-Elem _Block-Elem^mod');
-                expect(cn({ mod: false })).toBe('_Block-Elem');
-                expect(cn({ mod: 'value' })).toBe('_Block-Elem _Block-Elem^mod@value');
-            });
+        it('elem', () => {
+            const cn = cnBlockAllCustom('Block', 'Elem');
+            expect(cn({ mod: true })).toBe('_Block-Elem _Block-Elem^mod');
+            expect(cn({ mod: false })).toBe('_Block-Elem');
+            expect(cn({ mod: 'value' })).toBe('_Block-Elem _Block-Elem^mod@value');
+        });
+    });
+
+    describe("with preset { css }", () => {
+        const cnBlockCssModules = withPreset({
+            css: {
+                'Block': 'cssBlock',
+                'Elem': 'cssElem',
+                'Block_mod': 'cssBlock_cssMod',
+                'Block_mod_value': 'cssBlock_cssMod_cssValue',
+                'Block__Elem': 'cssBlock__cssElem',
+                'Block__Elem_mod': 'cssBlock__cssElem_cssMod',
+                'Block__Elem_mod_value': 'cssBlock__cssElem_cssMod_cssValue',
+            },
+        });
+
+        it('block', () => {
+            const cn = cnBlockCssModules('Block');
+            expect(cn()).toBe('cssBlock');
+            expect(cn({ fakeMod: true })).toBe('cssBlock');
+            expect(cn({ mod: true })).toBe('cssBlock cssBlock_cssMod');
+            expect(cn({ mod: false })).toBe('cssBlock');
+            expect(cn({ mod: 'value' })).toBe('cssBlock cssBlock_cssMod_cssValue');
+        });
+
+        it('elem', () => {
+            const cn = cnBlockCssModules('Block', 'Elem');
+            expect(cn()).toBe('cssBlock__cssElem');
+            expect(cn({ fakeMod: true })).toBe('cssBlock__cssElem');
+            expect(cn({ mod: true })).toBe('cssBlock__cssElem cssBlock__cssElem_cssMod');
+            expect(cn({ mod: false })).toBe('cssBlock__cssElem');
+            expect(cn({ mod: 'value' })).toBe('cssBlock__cssElem cssBlock__cssElem_cssMod_cssValue');
         });
     });
 });

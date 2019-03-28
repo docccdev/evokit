@@ -1,12 +1,13 @@
-const DEFAULT_PERETS = {
+const DEFAULT_PERET = {
     b: '',
     e: '__',
     m: '_',
     v: '_',
+    css: null,
 };
 
 export const withPreset = (preset) => {
-    const { b, e, m, v } = Object.assign(DEFAULT_PERETS, preset);
+    const { b, e, m, v, css } = Object.assign({}, DEFAULT_PERET, preset);
 
     return (name, elem) => {
         if (typeof name !== 'string') {
@@ -29,7 +30,7 @@ export const withPreset = (preset) => {
                         appendFn(modVal.toString());
                     } else if (Array.isArray(modVal) && modVal.length) {
                         modVal.forEach(appendFn);
-                    } else if (modValType === 'object') {
+                    } else if (modValType === 'object' && modVal !== null) {
                         Object
                             .keys(modVal)
                             .filter((value) => !!modVal[value])
@@ -49,6 +50,13 @@ export const withPreset = (preset) => {
                         .filter((value) => !result.includes(value))
                         .forEach((value) => result.push(value));
                 });
+            }
+
+            if (typeof css === 'object' && css !== null) {
+                return result
+                    .filter((key) => css.hasOwnProperty(key))
+                    .map((key) => css[key])
+                    .join(' ');
             }
 
             return result.join(' ');
