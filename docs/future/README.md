@@ -24,17 +24,12 @@
 ```jsx
 /*react*/
 <script>
-const { Body, Grid, Box, List, Text, Link, Picture, Image, Line, NewBox } = EvoKit;
+const { Body, Grid, Box, List, Text, Link, Picture, Image, Line } = EvoKit;
 
 export default class ExampleLink extends React.Component {
     render() {
         return (
             <div>
-                <NewBox box-padding={{ xl: true }}>
-                    <NewBox box-tag='table' box-padding={{ xl: true }}>
-                        NewBox
-                    </NewBox>
-                </NewBox>
                 BODY:
                 <Body body-color='default' body-background='default' body-indent='m'>
                     <Body.Section>

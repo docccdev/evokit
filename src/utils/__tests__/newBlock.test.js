@@ -10,6 +10,12 @@ describe("import { newBlock } from 'evokit';", () => {
         expect(shallow(<Block>text</Block>).contains(<div className='block'>text</div>)).toBeTruthy();
     });
 
+    // it('elem', () => {
+    //     const Element = newBlock({ name: 'block', elem: 'item' });
+
+    //     expect(shallow(<Element />).html()).toBe("");
+    // });
+
     it('tag', () => {
         const Block = newBlock({ name: 'block', tag: 'span' });
         expect(shallow(<Block />).contains(<span className='block' />)).toBeTruthy();

@@ -33,11 +33,11 @@ const THEMES_LIST = [
 ]
 
 const ENTRY_LIST = {
-    'Box/index': path.resolve(__dirname, 'src/models/Box'),
-    'Box/style': path.resolve(__dirname, 'src/models/Box/style'),
+    'Box/index': path.resolve(__dirname, 'src/blocks/Box'),
+    'Box/style': path.resolve(__dirname, 'src/blocks/Box/style'),
 
-    'Text/index': path.resolve(__dirname, 'src/models/Text'),
-    'Text/style': path.resolve(__dirname, 'src/models/Text/style'),
+    'Text/index': path.resolve(__dirname, 'src/blocks/Text'),
+    'Text/style': path.resolve(__dirname, 'src/blocks/Text/style'),
 
     'Body/index': path.resolve(__dirname, 'src/blocks/Body'),
     'Body/style': path.resolve(__dirname, 'src/blocks/Body/style'),
