@@ -1,9 +1,10 @@
 import { withPreset } from './cnBlock';
 
 export const BLOCK_PROP_KEY = '__block__';
+export const PRESET_KEY = 'preset';
 
 export const magicProps = ({ className, ...props }, allowProps, defaultProps, modKeys) => {
-    const newProps = Object.assign({}, defaultProps, props);
+    const newProps = { ...defaultProps, ...props };
     const newCnList = [];
     const mapProps = {
         [BLOCK_PROP_KEY]: {},
@@ -14,20 +15,22 @@ export const magicProps = ({ className, ...props }, allowProps, defaultProps, mo
         .filter((key) => allowProps.hasOwnProperty(key))
         .forEach((key) => {
             const modData = allowProps[key];
+            let value = newProps[key];
 
             if (!mapProps.hasOwnProperty(modData[0])) {
                 mapProps[modData[0]] = {};
             }
 
-            mapProps[modData[0]][modData[1]] = newProps[key];
+            if (modData[1] === PRESET_KEY) {
+                value = { ...defaultProps[key], ...newProps[key] };
+            }
+
+            mapProps[modData[0]][modData[1]] = value;
 
             delete newProps[key];
         });
 
-    const cnBlock = withPreset({
-        b: 'ek-',
-        css: mapProps[BLOCK_PROP_KEY].css,
-    });
+    const cnBlock = withPreset(mapProps[BLOCK_PROP_KEY].preset);
 
     modKeys
         .filter((key, index) => index === 0 || mapProps.hasOwnProperty(key))
@@ -37,6 +40,10 @@ export const magicProps = ({ className, ...props }, allowProps, defaultProps, mo
 
     if (className) {
         newCnList.push(className);
+    }
+
+    if (mapProps[BLOCK_PROP_KEY].ref) {
+        newProps.ref = mapProps[BLOCK_PROP_KEY].ref;
     }
 
     newProps.className = newCnList.join(' ');

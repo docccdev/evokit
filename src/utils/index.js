@@ -20,7 +20,7 @@ export const withProps = (target, defautProps) => {
     )
 }
 
-export const newBlock = ({ name, tag='div', css=null, mods=[], mix=[] }) => {
+export const newBlock = ({ name, tag='div', preset=null, mods=[], mix=[] }) => {
     if (typeof name !== 'string') {
         throw new Error('The argument "name" is not a string');
     }
@@ -30,7 +30,7 @@ export const newBlock = ({ name, tag='div', css=null, mods=[], mix=[] }) => {
 
     const defaultProps = {
         [`${name}-tag`]: tag,
-        [`${name}-css`]: css,
+        [`${name}-preset`]: preset,
     };
 
     const allowProps = modList.reduce((acc, item) => {
@@ -42,7 +42,8 @@ export const newBlock = ({ name, tag='div', css=null, mods=[], mix=[] }) => {
 
     Object.assign(allowProps, {
         [`${name}-tag`]: [BLOCK_PROP_KEY, 'tag'],
-        [`${name}-css`]: [BLOCK_PROP_KEY, 'css'],
+        [`${name}-preset`]: [BLOCK_PROP_KEY, 'preset'],
+        [`${name}-ref`]: [BLOCK_PROP_KEY, 'ref'],
     });
 
     return reactFn(

@@ -20,9 +20,12 @@ const CSSModules = (block, css) => block.css = css;
 import { newBlock, withProps } from './utils';
 
 const NewBox1 = newBlock({
-    tag: 'span',
     name: 'box',
-    css: null,
+    tag: 'span',
+    preset: {
+        b: 'ek-',
+        // css: {'ek-box': 'new_ek_box'},
+    },
     mods: [
         'padding',
         'margin'
@@ -49,7 +52,10 @@ const NewBox1 = newBlock({
 
 const NewBox = withProps(NewBox1, {
     'box-tag': 'section',
-    // 'box-css': {'ek-box': 'new_ek_box'},
+    // 'box-preset': {
+    //     // b: 'ek-',
+    //     // css: {'ek-box': 'new_ek_box'},
+    // },
     width: '100',
     className: 'fsdfds',
 });

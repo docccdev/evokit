@@ -18,7 +18,6 @@ export const withPreset = (preset) => {
             const block = elem ? `${b}${name}${e}${elem}` : `${b}${name}`;
             const result = [block];
 
-
             if (mods) {
                 Object.keys(mods).forEach((key) => {
                     const modVal = mods[key];
