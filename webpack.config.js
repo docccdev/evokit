@@ -64,6 +64,8 @@ const ENTRY_LIST = {
     './style': path.resolve(__dirname, 'src/style'),
 
     './theme-template': path.resolve(__dirname, 'src/theme-template'),
+
+    './utils/index': path.resolve(__dirname, 'src/utils'),
 };
 
 module.exports = {

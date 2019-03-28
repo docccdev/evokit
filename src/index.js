@@ -3,7 +3,8 @@ import { Example } from './utils/example';
 
 import React from 'react';
 
-import Box from './blocks/Box';
+import { Box } from './blocks/Box';
+
 import Text from './blocks/Text';
 
 import Body from './blocks/Body';

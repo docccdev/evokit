@@ -29,13 +29,23 @@
 
 ## 3.0.0
 - New [API][api].
-- Remove [mixes][Mixes] block. Props `mix-*` replaced with new `box-*` model, see examples:
-
+- Replace `domRef` prop name to `${blockName}-ref`, see example:
 ``` jsx
-<Grid.Item mix-width='1-2'>OLD</Grid.Item>
-<Grid.Item box-width='1-2'>NEW</Grid.Item>
+<Box domRef={fn}> // bad
+<Box box-ref={fn}> // good
 ```
-- Remove themes from package:
+- Remove [mixes][Mixes] block. The prop `mix-*` replaced with props existing [box][Box] block, example:
+``` jsx
+// bad
+<Box mix-width=''>
+<Image mix-round=''>
+<Grid.Item mix-width=''>
+// good
+<Box box-width=''>
+<Image box-round=''>
+<Grid.Item box-width=''>
+```
+- Remove static themes from package, please use [Theme Creator][create_theme]:
     - `themes.css`
     - `theme.danger.css`
     - `theme.dark.css`
