@@ -43,7 +43,9 @@ export const withPreset = (preset) => {
             }
 
             if (Array.isArray(mix)) {
-                mix.forEach((item) => {
+                mix
+                    .filter((item) => typeof item === 'string')
+                    .forEach((item) => {
                     item
                         .split(' ')
                         .filter((value) => !result.includes(value))
