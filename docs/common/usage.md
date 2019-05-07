@@ -32,9 +32,6 @@ import React from 'react';
 import { Grid } from 'evokit';
 import 'evokit/dist/style.css';
 
-// import Grid from 'evokit/dist/Grid';
-// import 'evokit/dist/Grid/style.css';
-
 export default class EvoKitExample extends React.Component {
     render() {
         return (
