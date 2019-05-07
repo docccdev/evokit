@@ -1,13 +1,15 @@
+[variables]: /base/variables.md
+
 # Модификаторы размеров
 
 Для формирования модификаторов отступов, взята буквенная сетка размеров одежды.
-Определяется в css переменной `--ek-step-indent`.
+Определяется в [css variables][variables]: `--ek-step-indent`.
 
 ---
 
 ## Values
 
-|  Key   | Value (from css variable)   |
+|  Key   | Value                       |
 |--------|-----------------------------|
 | `none` |   var(--ek-step-indent) * 0 |
 | `xxs`  |   var(--ek-step-indent) * 1 |
@@ -30,7 +32,7 @@ const { Grid, Example } = EvoKit;
 export default class ExampleGrid extends React.Component {
     render() {
         return (
-            <Example values={['xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl']}>
+            <Example values={['none', 'xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl']}>
                 {(value) => (
                     <Grid grid-indent={value}>
                         {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((key) => (
