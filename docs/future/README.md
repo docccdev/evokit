@@ -24,23 +24,12 @@
 ```jsx
 /*react*/
 <script>
-const { Body, Grid, Box, List, Text, Link, Picture, Image, Line, NewBox, NewText } = EvoKit;
+const { Body, Grid, Box, List, Text, Link, Picture, Image, Line } = EvoKit;
 
 export default class ExampleLink extends React.Component {
     render() {
         return (
             <div>
-                <NewBox
-                    className='xyi'
-                    box-margin='xs'
-                    text-align='center'
-                    data-ololo='sdfds'
-                >
-                    gdfgdfgdfgfd
-                </NewBox>
-                <NewText text-align='center'>
-                    CENTER
-                </NewText>
                 BODY:
                 <Body body-color='default' body-background='default' body-indent='m'>
                     <Body.Section>

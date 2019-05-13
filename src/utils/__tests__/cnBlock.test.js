@@ -11,23 +11,23 @@ describe("import { cnBlock, withPreset } from 'evokit';", () => {
 
     it('block', () => {
         const cn = cnBlock('Block');
-        expect(cn()).toBe('Block');
+        expect(cn()).toBe('ek-Block');
     });
 
     it('elem', () => {
         const cn = cnBlock('Block', 'Elem');
-        expect(cn()).toBe('Block__Elem');
+        expect(cn()).toBe('ek-Block__Elem');
     });
 
     describe("modifiers", () => {
         it('block', () => {
             const cn = cnBlock('Block');
-            expect(cn({ modName: true })).toBe('Block Block_modName');
+            expect(cn({ modName: true })).toBe('ek-Block ek-Block_modName');
         });
 
         it('elem', () => {
             const cn = cnBlock('Block', 'Elem');
-            expect(cn({ modName: true })).toBe('Block__Elem Block__Elem_modName');
+            expect(cn({ modName: true })).toBe('ek-Block__Elem ek-Block__Elem_modName');
         });
 
         it('more than one', () => {
@@ -35,91 +35,91 @@ describe("import { cnBlock, withPreset } from 'evokit';", () => {
             const cn1 = cnBlock('Block');
             const cn2 = cnBlock('Block', 'Elem');
 
-            expect(cn1(mods)).toBe('Block Block_modName Block_modName2_modVal');
-            expect(cn2(mods)).toBe('Block__Elem Block__Elem_modName Block__Elem_modName2_modVal');
+            expect(cn1(mods)).toBe('ek-Block ek-Block_modName ek-Block_modName2_modVal');
+            expect(cn2(mods)).toBe('ek-Block__Elem ek-Block__Elem_modName ek-Block__Elem_modName2_modVal');
         });
 
         it('different values', () => {
             const cn = cnBlock('Block');
             expect(cn({ modName: { val1: true, val2: false, val3: 0 } }))
-                .toBe('Block Block_modName_val1');
+                .toBe('ek-Block ek-Block_modName_val1');
             expect(cn({ modName: ['val1', 'val2'] }))
-                .toBe('Block Block_modName_val1 Block_modName_val2');
+                .toBe('ek-Block ek-Block_modName_val1 ek-Block_modName_val2');
         });
 
         it('empty', () => {
             const cn = cnBlock('Block');
-            expect(cn({})).toBe('Block');
+            expect(cn({})).toBe('ek-Block');
         });
 
         it('falsy', () => {
             const cn = cnBlock('Block');
-            expect(cn({ modName: false })).toBe('Block');
+            expect(cn({ modName: false })).toBe('ek-Block');
         });
 
         it('with falsy', () => {
             const cn = cnBlock('Block');
-            expect(cn({ modName: false, mod: 'val' })).toBe('Block Block_mod_val');
+            expect(cn({ modName: false, mod: 'val' })).toBe('ek-Block ek-Block_mod_val');
         });
 
         it('zero or number', () => {
             const cn = cnBlock('Block');
-            expect(cn({ modName: 0 })).toBe('Block Block_modName_0');
-            expect(cn({ modName: 18 })).toBe('Block Block_modName_18');
+            expect(cn({ modName: 0 })).toBe('ek-Block ek-Block_modName_0');
+            expect(cn({ modName: 18 })).toBe('ek-Block ek-Block_modName_18');
         });
 
         it('undefined', () => {
             const cn = cnBlock('Block');
-            expect(cn({ modName: undefined })).toBe('Block');
-            expect(cn(undefined)).toBe('Block');
+            expect(cn({ modName: undefined })).toBe('ek-Block');
+            expect(cn(undefined)).toBe('ek-Block');
         });
     });
 
     describe("mix", () => {
         it('block', () => {
             const cn = cnBlock('Block');
-            expect(cn(null, ['mix1', 'mix2'])).toBe('Block mix1 mix2');
+            expect(cn(null, ['mix1', 'mix2'])).toBe('ek-Block mix1 mix2');
         });
 
         it('block with mods', () => {
             const cn = cnBlock('Block');
-            expect(cn({ theme: 'normal' }, ['mix'])).toBe('Block Block_theme_normal mix');
+            expect(cn({ theme: 'normal' }, ['mix'])).toBe('ek-Block ek-Block_theme_normal mix');
         });
 
         it('elem', () => {
             const cn = cnBlock('Block', 'Elem');
-            expect(cn(null, ['mix1', 'mix2'])).toBe('Block__Elem mix1 mix2');
+            expect(cn(null, ['mix1', 'mix2'])).toBe('ek-Block__Elem mix1 mix2');
         });
 
         it('elem with mods', () => {
             const cn = cnBlock('Block', 'Elem');
-            expect(cn({ theme: 'normal' }, ['mix'])).toBe('Block__Elem Block__Elem_theme_normal mix');
+            expect(cn({ theme: 'normal' }, ['mix'])).toBe('ek-Block__Elem ek-Block__Elem_theme_normal mix');
         });
 
         it('undefined', () => {
             const cn = cnBlock('Block');
-            expect(cn(null, undefined)).toBe('Block');
+            expect(cn(null, undefined)).toBe('ek-Block');
         });
 
         it('unique block', () => {
             const cn = cnBlock('Block');
-            expect(cn(null, ['Block'])).toBe('Block');
+            expect(cn(null, ['ek-Block'])).toBe('ek-Block');
         });
 
         it('unique block with mods', () => {
             const cn = cnBlock('Block');
-            expect(cn({ theme: 'normal' }, ['Block Block_size_m'])).toBe('Block Block_theme_normal Block_size_m');
+            expect(cn({ theme: 'normal' }, ['ek-Block ek-Block_size_m'])).toBe('ek-Block ek-Block_theme_normal ek-Block_size_m');
         });
 
         it('unique elem', () => {
             const cn = cnBlock('Block', 'Elem');
-            expect(cn(null, ['Block__Elem'])).toBe('Block__Elem');
+            expect(cn(null, ['ek-Block__Elem'])).toBe('ek-Block__Elem');
         });
 
         it('unique elem with mods', () => {
             const cn = cnBlock('Block', 'Elem');
-            expect(cn({ theme: 'normal' }, ['Block__Elem Block__Elem_size_m']))
-                .toBe('Block__Elem Block__Elem_theme_normal Block__Elem_size_m');
+            expect(cn({ theme: 'normal' }, ['ek-Block__Elem ek-Block__Elem_size_m']))
+                .toBe('ek-Block__Elem ek-Block__Elem_theme_normal ek-Block__Elem_size_m');
         });
     });
 
@@ -220,6 +220,7 @@ describe("import { cnBlock, withPreset } from 'evokit';", () => {
 
     describe("with preset { css }", () => {
         const cnBlockCssModules = withPreset({
+            b: '',
             css: {
                 'Block': 'cssBlock',
                 'Elem': 'cssElem',

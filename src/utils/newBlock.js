@@ -1,91 +1,10 @@
 import React from 'react';
-import { magicProps, BLOCK_PROP_KEY } from './magicProps';
+import PropTypes from 'prop-types';
 import { withPreset } from './cnBlock';
-
-const reactFn = (fn, displayName, propTypes) => {
-    fn.displayName = displayName;
-    fn.propTypes = propTypes;
-
-    return fn;
-};
-
-export const withProps = (target, defautProps) => {
-    if (typeof target !== 'function') {
-        throw new Error('The argument "target" is not a function');
-    }
-
-    return reactFn(
-        (props) => target({ ...defautProps, ...props }),
-        target.displayName,
-        target.propTypes,
-    )
-}
-
-export const newBlock = ({ name, tag='div', preset=null, mods=[], mix=[] }) => {
-    if (typeof name !== 'string') {
-        throw new Error('The argument "name" is not a string');
-    }
-
-    const modList = [{ name, mods }, ...mix];
-    const modKeys = modList.map(({ name }) => name);
-
-    const defaultProps = {
-        [`${name}-tag`]: tag,
-        [`${name}-preset`]: preset,
-    };
-
-    const allowProps = modList.reduce((acc, item) => {
-        if(Array.isArray(item.mods)) {
-            item.mods.forEach((value) => acc[`${item.name}-${value}`] = [item.name, value]);
-        }
-        return acc;
-    }, {});
-
-    Object.assign(allowProps, {
-        [`${name}-tag`]: [BLOCK_PROP_KEY, 'tag'],
-        [`${name}-preset`]: [BLOCK_PROP_KEY, 'preset'],
-        [`${name}-ref`]: [BLOCK_PROP_KEY, 'ref'],
-    });
-
-    return reactFn(
-        ({ children, ...props }) => {
-            const [newProps, newTag] = magicProps(props, allowProps, defaultProps, modKeys);
-
-            return React.createElement(
-                newTag,
-                newProps,
-                children,
-            );
-        },
-        name,
-    );
-}
-
-
-
-const getTagName = (prevTag, nextTag) => {
-    if (typeof nextTag === 'string') {
-        return nextTag;
-    }
-
-    return prevTag;
-}
-
-const getRef = (prevRef, nextRef) => {
-    if (typeof nextRef === 'function') {
-        return nextRef;
-    }
-
-    return prevRef;
-}
-
-const getPropKey = (...args) => {
-    return args.filter((key) => typeof key === 'string').join('-');
-};
 
 const divideProps = (props, ...divide) => {
     const propsKeys = Object.keys(props);
-    const divideKeys = divide.flat();
+    const divideKeys = [].concat(...divide);
     const result = [Object.create(null), ...divide.map(() => Object.create(null))];
 
     propsKeys.forEach((key) => {
@@ -105,67 +24,98 @@ const divideProps = (props, ...divide) => {
     return result;
 };
 
+const getPropKey = (...args) => {
+    return args
+        .reduce((acc, val) => [...acc, ...val.split('__')], [])
+        .filter((key) => typeof key === 'string')
+        .join('-');
+};
 
-export const newBlock2 = ({ name, tag='div', preset, mods=[], mix=[] }) => {
-    if (typeof name !== 'string') {
-        throw new Error('The argument "name" is not a string');
+const getBasePropTypes = (blockName) => ({
+    [getPropKey(blockName, 'tag')]: PropTypes.string,
+    [getPropKey(blockName, 'ref')]: PropTypes.func,
+    [getPropKey(blockName, 'preset')]: PropTypes.object,
+});
+
+const getModPropTypes = (blockName, blockMods) => {
+    return blockMods.reduce((acc, modName) => ({
+        ...acc,
+        ...{
+            [getPropKey(blockName, modName)]: PropTypes.oneOfType([
+                PropTypes.string,
+                PropTypes.number,
+                PropTypes.array,
+                PropTypes.object,
+            ]),
+        },
+    }), {});
+};
+
+const getMapPropMods = (blockName, blockMods) => {
+    return blockMods.reduce((acc, modName) => ({
+        ...acc,
+        ...{ [getPropKey(blockName, modName)]: modName },
+    }), {});
+};
+
+const renameKeys = (obj, keysMap) => {
+    return Object.keys(obj).reduce((acc, key) => ({
+        ...acc,
+        ...{ [keysMap[key] || key]: obj[key] },
+    }), {});
+};
+
+export const withProps = (target, defaultProps) => {
+    if (typeof target !== 'function') {
+        throw new Error('The first argument `target` is not a function');
     }
-    return (() => {
-        const basePropKeys = ['tag', 'ref'].map((key) => getPropKey(name, key));
-        const modPropKeys = mods.map((key) => getPropKey(name, key));
-        const mixModPropKeys = mix.map(({ modPropKeys }) => modPropKeys);
-        const mapOfNamePropMods = mods.reduce((target, key) => {
-            target[getPropKey(name, key)] = key;
-            return target;
-        }, {});
 
-        const getProp = (props, key) => props[getPropKey(name, key)];
+    const Block = (props) => target(props);
 
-        const getClassName = (props) => {
-            const mods = Object.keys(props).reduce((target, key) => {
-                target[mapOfNamePropMods[key]] = props[key];
-                return target;
-            }, {});
+    Block.defaultProps = {
+        ...target.defaultProps,
+        ...defaultProps,
+    };
+    Block.displayName = target.displayName;
+    Block.propTypes = target.propTypes;
 
-            return withPreset(preset)(name)(mods);
-        };
+    return Block;
+}
 
-        const Element = ({ ref, className, children, ...props }) => {
-            const [
-                cleanProps, modProps, baseProps, ...mixProps
-            ] = divideProps(props, modPropKeys, basePropKeys, ...mixModPropKeys);
+export const newBlock = (tagName='div', name, mods=[], preset) => {
+    if (typeof name !== 'string') {
+        throw new Error('The second argument `name` is not a string');
+    }
+    const basePropTypes = getBasePropTypes(name);
+    const modPropTypes = getModPropTypes(name, mods);
+    const mapPropMods = getMapPropMods(name, mods);
+    const basePropKeys = Object.keys(basePropTypes);
+    const modPropKeys = Object.keys(modPropTypes);
 
-            const newTagName = getTagName(tag, getProp(props, 'tag'));
-            const newRef = getRef(ref, getProp(props, 'ref'));
-            const newClassName = [getClassName(modProps)];
+    const getProp = (props, key) => props[getPropKey(name, key)];
 
-            mixProps
-                .filter((mixModMods) => !!Object.keys(mixModMods).length)
-                .forEach((mixModMods, index) => {
-                    newClassName.push(
-                        mix[index].getClassName(mixModMods)
-                    );
-                });
+    const Block = (props) => {
+        const { ref, className } = props;
+        const [
+            cleanProps, modProps, baseProps,
+        ] = divideProps(props, modPropKeys, basePropKeys);
+        const blockCn = withPreset(getProp(baseProps, 'preset'))(name);
 
-            if (className) {
-                newClassName.push(className);
-            }
+        return React.createElement(
+            getProp(baseProps, 'tag'),
+            {
+                ...cleanProps,
+                className: blockCn(renameKeys(modProps, mapPropMods), className),
+                ref: getProp(baseProps, 'ref') || ref,
+            },
+        );
+    };
 
-            return React.createElement(
-                newTagName,
-                {
-                    ref: newRef,
-                    className: newClassName.join(' '),
-                    ...cleanProps,
-                },
-                children,
-            );
-        };
+    Block.displayName = name;
+    Block.propTypes = {...basePropTypes, ...modPropTypes};
 
-        Element.modPropKeys = modPropKeys;
-        Element.getClassName = getClassName;
-        Element.displayName = name;
-
-        return Element;
-    })();
+    return withProps(Block, {
+        [getPropKey(name, 'tag')]: tagName,
+        [getPropKey(name, 'preset')]: preset,
+    });
 }

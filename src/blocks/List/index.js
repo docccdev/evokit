@@ -1,6 +1,10 @@
-import List from './List';
-import ListItem from './ListItem';
+import { newBlock } from '../../utils';
 
-List.Item = ListItem;
+export const List = newBlock('ul', 'list', [
+    'color',
+    'divider',
+    'style',
+    'indent',
+]);
 
-export default List;
+List.Item = newBlock('li', 'list__item');

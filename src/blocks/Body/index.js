@@ -1,6 +1,10 @@
-import Body from './Body';
-import BodySection from './BodySection';
+import { newBlock } from '../../utils';
 
-Body.Section = BodySection;
+export const Body = newBlock('body', 'body', [
+    'size',
+    'indent',
+    'background',
+    'color',
+]);
 
-export default Body;
+Body.Section = newBlock('div', 'body__section');

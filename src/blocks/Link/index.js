@@ -1,3 +1,10 @@
-import Link from './Link';
+import { newBlock } from '../../utils';
 
-export default Link;
+export const Link = newBlock('a', 'link', [
+    'color',
+    'size',
+    'weight',
+    'style',
+    'valign',
+    'lheight',
+]);

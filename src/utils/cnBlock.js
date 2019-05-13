@@ -1,5 +1,5 @@
-const DEFAULT_PERET = {
-    b: '',
+const DEFAULT_PRESET = {
+    b: 'ek-',
     e: '__',
     m: '_',
     v: '_',
@@ -7,7 +7,7 @@ const DEFAULT_PERET = {
 };
 
 export const withPreset = (preset) => {
-    const { b, e, m, v, css } = Object.assign({}, DEFAULT_PERET, preset);
+    const { b, e, m, v, css } = Object.assign({}, DEFAULT_PRESET, preset);
 
     return (name, elem) => {
         if (typeof name !== 'string') {
@@ -42,7 +42,9 @@ export const withPreset = (preset) => {
                 });
             }
 
-            if (Array.isArray(mix)) {
+            if (typeof mix === 'string') {
+                result.push(mix);
+            } else if (Array.isArray(mix)) {
                 mix
                     .filter((item) => typeof item === 'string')
                     .forEach((item) => {

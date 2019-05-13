@@ -1,21 +1,13 @@
-import React from 'react';
-import { createBlock } from '../../component';
-import { textMods } from './mods';
+import { newBlock } from '../../utils';
 
-class Text extends React.Component {
-    static blockTag = 'span';
-    static blockName = 'text';
-    static blockMods = textMods;
-
-    render() {
-        return (
-            React.createElement(
-                this.getTagName(),
-                this.getProps(),
-                this.props.children,
-            )
-        );
-    }
-}
-
-export default createBlock(Text);
+export const Text = newBlock('span', 'text', [
+    'color',
+    'size',
+    'weight',
+    'align',
+    'valign',
+    'wrap',
+    'style',
+    'transform',
+    'lheight',
+]);

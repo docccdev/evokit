@@ -1,3 +1,7 @@
-import Line from './Line';
+import { newBlock } from '../../utils';
 
-export default Line;
+export const Line = newBlock('hr', 'line', [
+    'indent',
+    'style',
+    'color',
+]);

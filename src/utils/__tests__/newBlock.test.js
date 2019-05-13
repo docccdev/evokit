@@ -4,65 +4,45 @@ import { newBlock, withProps } from '../index';
 
 describe("import { newBlock } from 'evokit';", () => {
     it('default', () => {
-        const Block = newBlock({ name: 'block' });
+        const Block = newBlock('div', 'block');
         expect(Block.displayName).toBe('block');
-        expect(shallow(<Block />).contains(<div className='block'></div>)).toBeTruthy();
-        expect(shallow(<Block>text</Block>).contains(<div className='block'>text</div>)).toBeTruthy();
+        expect(shallow(<Block />).contains(<div className='ek-block'></div>)).toBeTruthy();
+        expect(shallow(<Block>text</Block>).contains(<div className='ek-block'>text</div>)).toBeTruthy();
     });
 
-    // it('elem', () => {
-    //     const Element = newBlock({ name: 'block', elem: 'item' });
-
-    //     expect(shallow(<Element />).html()).toBe("");
-    // });
+    it('elem', () => {
+        const Element = newBlock('li', 'list__item');
+        expect(shallow(<Element />).contains(<li className='ek-list__item'></li>)).toBeTruthy();
+    });
 
     it('tag', () => {
-        const Block = newBlock({ name: 'block', tag: 'span' });
-        expect(shallow(<Block />).contains(<span className='block' />)).toBeTruthy();
+        const Block = newBlock('span', 'block');
+        expect(shallow(<Block />).contains(<span className='ek-block' />)).toBeTruthy();
     });
 
     it('mods', () => {
-        const Block = newBlock({ name: 'block', mods: ['modName'] });
+        const Block = newBlock('div', 'block', ['modName']);
         expect(
-            shallow(<Block block-modName='modValue' />).contains(<div className='block block_modName_modValue' />)
+            shallow(<Block block-modName='modValue' />).contains(<div className='ek-block ek-block_modName_modValue' />)
         ).toBeTruthy();
     });
 
-    it('mix', () => {
-        const Block = newBlock({
-            name: 'block',
-            mix: [
-                {
-                    name: 'mix',
-                    mods: ['modName']
-                }
-            ],
-        });
-        expect(shallow(<Block mix-modName='modValue' />).contains(<div className='block mix mix_modName_modValue' />)).toBeTruthy();
-    });
-
     describe("with props", () => {
-        const Block = newBlock({
-            name: 'block',
-            mods: ['modName'],
-            mix: [
-                {
-                    name: 'mix',
-                    mods: ['modName']
-                }
-            ],
+        const Block = newBlock('div', 'block', ['modName']);
+        const BlockItem = newBlock('div', 'block__item', ['elModName']);
+
+        it('elem', () => {
+            expect(
+                shallow(<BlockItem block-item-elModName='elModValue' />).contains(<div className='ek-block__item ek-block__item_elModName_elModValue'></div>)
+            ).toBeTruthy();
         });
 
         it('tag', () => {
-            expect(shallow(<Block block-tag='span' />).contains(<span className='block'></span>)).toBeTruthy();
+            expect(shallow(<Block block-tag='span' />).contains(<span className='ek-block'></span>)).toBeTruthy();
         });
 
         it('mods', () => {
-            expect(shallow(<Block block-modName='modValue' />).contains(<div className='block block_modName_modValue'></div>)).toBeTruthy();
-        });
-
-        it('mix', () => {
-            expect(shallow(<Block mix-modName='modValue' />).contains(<div className='block mix mix_modName_modValue'></div>)).toBeTruthy();
+            expect(shallow(<Block block-modName='modValue' />).contains(<div className='ek-block ek-block_modName_modValue'></div>)).toBeTruthy();
         });
 
         describe("custom class prefix", () => {
@@ -73,11 +53,6 @@ describe("import { newBlock } from 'evokit';", () => {
             it('mods', () => {
                 expect(shallow(<Block block-preset={{ b: 'ek-' }} block-modName='modValue' />)
                     .contains(<div className='ek-block ek-block_modName_modValue'></div>)).toBeTruthy();
-            });
-
-            it('mix', () => {
-                expect(shallow(<Block block-preset={{ b: 'ek-' }} mix-modName='modValue' />)
-                    .contains(<div className='ek-block ek-mix ek-mix_modName_modValue'></div>)).toBeTruthy();
             });
         });
     });

@@ -1,6 +1,16 @@
-import Grid from './Grid';
-import GridItem from './GridItem';
+import { newBlock } from '../../utils';
 
-Grid.Item = GridItem;
+export const Grid = newBlock('div', 'grid', [
+    'column',
+    'indent',
+    'direction',
+    'align',
+    'valign',
+    'divider',
+    'wrap',
+]);
 
-export default Grid;
+Grid.Item = newBlock('div', 'grid__item', [
+    'order',
+    'width',
+]);

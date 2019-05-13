@@ -1,6 +1,16 @@
-import Picture from './Picture';
-import PictureItem from './PictureItem';
+import { newBlock } from '../../utils';
 
-Picture.Item = PictureItem;
+export const Picture = newBlock('picture', 'picture', [
+    'fit',
+    'round',
+    'round-top',
+    'round-right',
+    'round-bottom',
+    'round-left',
+    'round-top-left',
+    'round-top-right',
+    'round-bottom-left',
+    'round-bottom-right',
+]);
 
-export default Picture;
+Picture.Item = newBlock('img', 'picture__item');
