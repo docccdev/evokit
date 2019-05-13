@@ -1,4 +1,5 @@
 import { Example } from './Example';
+import { ThemeGenerator } from './ThemeGenerator';
 
 import { Box } from '../packages/evokit-box';
 import { Text } from '../packages/evokit-text';
@@ -12,6 +13,7 @@ import { Image } from '../packages/evokit-image';
 
 export {
     Example,
+    ThemeGenerator,
     Body,
     Box,
     Grid,
