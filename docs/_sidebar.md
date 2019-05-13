@@ -10,12 +10,10 @@
   <!-- * [Colors](/base/colors.md) -->
   <!-- * [Text](/base/text.md) -->
 
-* MODELS
+* BLOCKS
   * [Box](blocks/box.md)
   * [Text](blocks/text.md)
   * [Color](blocks/color.md)
-
-* BLOCKS
   * [Body](blocks/body.md)
   * [Grid](blocks/grid.md)
   * [List](blocks/list.md)

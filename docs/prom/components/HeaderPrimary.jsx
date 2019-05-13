@@ -23,13 +23,13 @@ function HeaderPrimary() {
                     />
                 </a>
             </Grid.Item>
-            <Grid.Item mix-width='1-7'>
+            <Grid.Item grid-item-width='1-7'>
                 <Plug style={{ height: 36 }}>HeaderRegion</Plug>
             </Grid.Item>
-            <Grid.Item mix-width='expand'>
+            <Grid.Item grid-item-width='expand'>
                 <Plug style={{ height: 36 }}>HeaderSearch</Plug>
             </Grid.Item>
-            <Grid.Item mix-width='1-7'>
+            <Grid.Item grid-item-width='1-7'>
                 <Plug style={{ height: 36 }}>HeaderRegion</Plug>
             </Grid.Item>
             <Grid.Item>

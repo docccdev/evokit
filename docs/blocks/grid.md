@@ -11,9 +11,8 @@
 [grid-divider]: #grid-divider
 [grid-wrap]: #grid-wrap
 
-[grid-order]: #grid-order
-
-[mix-width]: #mix-width
+[grid-item-order]: #grid-item-order
+[grid-item-width]: #grid-item-width
 
 [grid]: #grid
 [griditem]: #griditem
@@ -166,7 +165,7 @@ export default class ExampleGrid extends React.Component {
                 {(value) => (
                     <Grid grid-wrap={value}>
                         {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((key) => (
-                            <Grid.Item mix-width='1-3'>
+                            <Grid.Item grid-item-width='1-3'>
                                 <Example.Box>
                                     item {key}
                                 </Example.Box>
@@ -276,15 +275,10 @@ export default class ExampleGrid extends React.Component {
 
 | Property | Type | Description |
 |----------|------|-------------|
-| [grid-order] | `string`, `object`, `array` or `number` | Задает порядок расположения ячейки |
+| [grid-item-order] | `string`, `object`, `array` or `number` | Задает порядок расположения ячейки |
+| [grid-item-width] | [Mixes][mixes] | Ширина |
 
-#### Mix options:
-
-| Property | About | Description |
-|----------|----------|-------------|
-| [mix-width] | [Mixes][mixes] | Ширина |
-
-### `grid-order`
+### `grid-item-order`
 
 ```jsx
 /*react*/
@@ -318,7 +312,7 @@ export default class ExampleGrid extends React.Component {
 </script>
 ```
 
-### `mix-width`
+### `grid-item-width`
 
 ```jsx
 /*react*/
@@ -331,9 +325,9 @@ export default class ExampleGrid extends React.Component {
             <Example values={['auto', 'expand', '1-1', '1-10', '2-10', '3-10', '4-10', '5-10', '6-10', '7-10', '8-10', '9-10']}>
                 {(value) => (
                     <Grid>
-                        <Grid.Item mix-width={value}>
+                        <Grid.Item grid-item-width={value}>
                             <Example.Box>
-                                content
+                                {`grid-item-width='${value || ''}'`}
                             </Example.Box>
                         </Grid.Item>
                         <Grid.Item>

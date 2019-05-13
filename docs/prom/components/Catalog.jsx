@@ -158,14 +158,14 @@ function Catalog() {
                     Свитеры и кардиганы женские в Украине
                 </Text>
             </Box>
-            <Box box-margin-bottom='m' mix-width='5-6' box-margin-left='auto'>
+            <Box box-margin-bottom='m' box-width='5-6' box-margin-left='auto'>
                 {Sort}
             </Box>
             <Grid grid-indent='xs'>
-                <Grid.Item mix-width='1-6'>
+                <Grid.Item grid-item-width='1-6'>
                     <Plug style={{ height: '25%' }}>Filter</Plug>
                 </Grid.Item>
-                <Grid.Item mix-width='expand'>
+                <Grid.Item grid-item-width='expand'>
                     <Grid grid-column={5} grid-indent='xs'>
                         <Grid.Item>
                             <Product src='https://images.ua.prom.st/1338955288_w200_h200_skmei_illuminator_main_700x700.jpg' />

@@ -59,17 +59,6 @@
         width: auto
 
 /**
- * Item order:
- *
- *  - grid__item_order_*
- *
- **/
-
-@each $value in (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
-    @mixin media .grid__item_order_$(value)
-        order: $value
-
-/**
  * Align:
  *
  *  - grid_align_*
@@ -129,3 +118,23 @@
 @each $value in (nowrap, wrap, wrap-reverse)
     @mixin media .grid_wrap_$(value)
         flex-wrap: $value
+
+/**
+ * Item order:
+ *
+ *  - grid__item_order_*
+ *
+ **/
+
+@each $value in (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+    @mixin media .grid__item_order_$(value)
+        order: $value
+
+/**
+ * Width:
+ *
+ *  - grid__item_width_*
+ *
+ **/
+
+@mixin grid-item-width .grid__item_width

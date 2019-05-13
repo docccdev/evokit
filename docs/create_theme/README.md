@@ -167,7 +167,7 @@ export default class EvoKitCreateTheme extends React.Component {
                 </Grid>
                 <Line line-indent='xl' />
                 <Grid grid-indent='xl'>
-                    <Grid.Item mix-width='expand'>
+                    <Grid.Item grid-item-width='expand'>
                         <style dangerouslySetInnerHTML={{__html: newTemplate}}></style>
                         <Box box-margin-bottom='xl'>
                             <Text text-size='h1'>
@@ -181,12 +181,12 @@ export default class EvoKitCreateTheme extends React.Component {
                             mix-round='m'
                         >
                             <Grid grid-indent='m'>
-                                <Grid.Item mix-width='2-10'>
+                                <Grid.Item grid-item-width='2-10'>
                                     <Picture>
                                         <Picture.Item src='https://picsum.photos/300/300' />
                                     </Picture>
                                 </Grid.Item>
-                                <Grid.Item mix-width='expand'>
+                                <Grid.Item grid-item-width='expand'>
                                     <Text text-size='h1' text-color={sheme['__TEMPLATE_NAME__']}>
                                         What is Lorem Ipsum?
                                     </Text>
@@ -207,7 +207,7 @@ export default class EvoKitCreateTheme extends React.Component {
                                 </Grid.Item>
                             </Grid>
                         </Box>
-                        <Box box-margin-lr='auto' box-margin-top='m' mix-width='3-10'>
+                        <Box box-margin-lr='auto' box-margin-top='m' box-width='3-10'>
                             <button
                                 type='button'
                                 style={{ width: '100%', padding: 10, cursor: 'pointer' }}
@@ -228,7 +228,7 @@ export default class EvoKitCreateTheme extends React.Component {
                             />
                         </pre>
                     </Grid.Item>
-                    <Grid.Item mix-width='2-10'>
+                    <Grid.Item grid-item-width='2-10'>
                         <Box box-margin-bottom='xl'>
                             <Text text-size='h3'>
                                 Settings
@@ -259,7 +259,7 @@ export default class EvoKitCreateTheme extends React.Component {
                                                         onChange={this.onChangeVar}
                                                     />
                                                 </Grid.Item>
-                                                <Grid.Item mix-width='expand'>
+                                                <Grid.Item grid-item-width='expand'>
                                                     <input
                                                         type='text'
                                                         value={sheme[key]}
