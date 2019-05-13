@@ -1,54 +1,57 @@
 import React from 'react';
-import { Box, Text, Grid, List, Picture, Link, Line } from './index';
+import PropTypes from 'prop-types';
+import {
+    Box, Text, Grid, List, Picture, Link, Line,
+} from './index';
 
 const PRESETS = {
-    'success': {
-        '__TEMPLATE_NAME__': 'success',
-        '__TEMPLATE_BACKGROUND_COLOR__': '#d4edda',
-        '__TEMPLATE_BORDER_COLOR__': '#c3e6cb',
-        '__TEMPLATE_DIVIDER_COLOR__': '#c3e6cb',
-        '__TEMPLATE_TEXT_COLOR__': '#155724',
-        '__TEMPLATE_LINK_COLOR__': '#155724',
+    success: {
+        __TEMPLATE_NAME__: 'success',
+        __TEMPLATE_BACKGROUND_COLOR__: '#d4edda',
+        __TEMPLATE_BORDER_COLOR__: '#c3e6cb',
+        __TEMPLATE_DIVIDER_COLOR__: '#c3e6cb',
+        __TEMPLATE_TEXT_COLOR__: '#155724',
+        __TEMPLATE_LINK_COLOR__: '#155724',
     },
-    'info': {
-        '__TEMPLATE_NAME__': 'info',
-        '__TEMPLATE_BACKGROUND_COLOR__': '#d1ecf1',
-        '__TEMPLATE_BORDER_COLOR__': '#bee5eb',
-        '__TEMPLATE_DIVIDER_COLOR__': '#bee5eb',
-        '__TEMPLATE_TEXT_COLOR__': '#0c5460',
-        '__TEMPLATE_LINK_COLOR__': '#0c5460',
+    info: {
+        __TEMPLATE_NAME__: 'info',
+        __TEMPLATE_BACKGROUND_COLOR__: '#d1ecf1',
+        __TEMPLATE_BORDER_COLOR__: '#bee5eb',
+        __TEMPLATE_DIVIDER_COLOR__: '#bee5eb',
+        __TEMPLATE_TEXT_COLOR__: '#0c5460',
+        __TEMPLATE_LINK_COLOR__: '#0c5460',
     },
-    'warning': {
-        '__TEMPLATE_NAME__': 'warning',
-        '__TEMPLATE_BACKGROUND_COLOR__': '#fff3cd',
-        '__TEMPLATE_BORDER_COLOR__': '#ffeeba',
-        '__TEMPLATE_DIVIDER_COLOR__': '#ffeeba',
-        '__TEMPLATE_TEXT_COLOR__': '#856404',
-        '__TEMPLATE_LINK_COLOR__': '#856404',
+    warning: {
+        __TEMPLATE_NAME__: 'warning',
+        __TEMPLATE_BACKGROUND_COLOR__: '#fff3cd',
+        __TEMPLATE_BORDER_COLOR__: '#ffeeba',
+        __TEMPLATE_DIVIDER_COLOR__: '#ffeeba',
+        __TEMPLATE_TEXT_COLOR__: '#856404',
+        __TEMPLATE_LINK_COLOR__: '#856404',
     },
-    'danger': {
-        '__TEMPLATE_NAME__': 'danger',
-        '__TEMPLATE_BACKGROUND_COLOR__': '#f8d7da',
-        '__TEMPLATE_BORDER_COLOR__': '#f5c6cb',
-        '__TEMPLATE_DIVIDER_COLOR__': '#f5c6cb',
-        '__TEMPLATE_TEXT_COLOR__': '#721c24',
-        '__TEMPLATE_LINK_COLOR__': '#721c24',
+    danger: {
+        __TEMPLATE_NAME__: 'danger',
+        __TEMPLATE_BACKGROUND_COLOR__: '#f8d7da',
+        __TEMPLATE_BORDER_COLOR__: '#f5c6cb',
+        __TEMPLATE_DIVIDER_COLOR__: '#f5c6cb',
+        __TEMPLATE_TEXT_COLOR__: '#721c24',
+        __TEMPLATE_LINK_COLOR__: '#721c24',
     },
-}
+};
 
 const SETTINGS_LABEL = {
-    '__TEMPLATE_NAME__': 'Template name',
-    '__TEMPLATE_BACKGROUND_COLOR__': 'Background color',
-    '__TEMPLATE_BORDER_COLOR__': 'Border color',
-    '__TEMPLATE_DIVIDER_COLOR__': 'Line color',
-    '__TEMPLATE_TEXT_COLOR__': 'Text color',
-    '__TEMPLATE_LINK_COLOR__': 'Link color',
+    __TEMPLATE_NAME__: 'Template name',
+    __TEMPLATE_BACKGROUND_COLOR__: 'Background color',
+    __TEMPLATE_BORDER_COLOR__: 'Border color',
+    __TEMPLATE_DIVIDER_COLOR__: 'Line color',
+    __TEMPLATE_TEXT_COLOR__: 'Text color',
+    __TEMPLATE_LINK_COLOR__: 'Link color',
 };
 
 const applyThemeSheme = (template, sheme) => {
     let result;
 
-    Object.keys(sheme).map((key) => {
+    Object.keys(sheme).forEach((key) => {
         const regex = new RegExp(key, 'g');
 
         result = (result || template).replace(regex, sheme[key]);
@@ -67,13 +70,30 @@ const rootConfig = `
 }
 `;
 
+const download = (filename, text) => {
+    const element = document.createElement('a');
+    element.setAttribute('href', `data:text/plain;charset=utf-8,${encodeURIComponent(text)}`);
+    element.setAttribute('download', filename);
+
+    element.style.display = 'none';
+    document.body.appendChild(element);
+
+    element.click();
+
+    document.body.removeChild(element);
+};
+
 export class ThemeGenerator extends React.Component {
+    static propTypes = {
+        templateUrl: PropTypes.string.isRequired,
+    };
+
     constructor(props) {
         super(props);
 
         this.state = {
             template: null,
-            sheme: PRESETS['success'],
+            sheme: PRESETS.success,
         };
 
         this.onChangeVar = this.onChangeVar.bind(this);
@@ -86,15 +106,17 @@ export class ThemeGenerator extends React.Component {
         fetch(templateUrl).then((response) => {
             response.text().then((text) => {
                 this.setState({
-                    template: rootConfig.trim() + '\n\n' + text.trim(),
+                    template: `${rootConfig.trim()}\n\n${text.trim()}`,
                 });
             });
         });
     }
 
     onChangeVar({ target }) {
+        const { sheme } = this.state;
+
         this.setState({
-            sheme: Object.assign(this.state.sheme, {
+            sheme: Object.assign(sheme, {
                 [target.name]: target.value,
             }),
         });
@@ -106,23 +128,10 @@ export class ThemeGenerator extends React.Component {
         });
     }
 
-    download(filename, text) {
-        var element = document.createElement('a');
-        element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
-        element.setAttribute('download', filename);
-
-        element.style.display = 'none';
-        document.body.appendChild(element);
-
-        element.click();
-
-        document.body.removeChild(element);
-    }
-
     render() {
         const { sheme, template } = this.state;
 
-        if(!template) {
+        if (!template) {
             return (
                 <Box box-padding='m'>
                     <Text text-align='center' text-size='h1'>
@@ -133,7 +142,7 @@ export class ThemeGenerator extends React.Component {
         }
 
         const newTemplate = applyThemeSheme(template, sheme);
-        const cssFileName = `theme-${sheme['__TEMPLATE_NAME__']}.css`;
+        const cssFileName = `theme-${sheme.__TEMPLATE_NAME__}.css`;
 
         return (
             <div>
@@ -156,16 +165,16 @@ export class ThemeGenerator extends React.Component {
                 <Line line-indent='xl' />
                 <Grid grid-indent='xl'>
                     <Grid.Item grid-item-width='expand'>
-                        <style dangerouslySetInnerHTML={{__html: newTemplate}}></style>
+                        <style dangerouslySetInnerHTML={{ __html: newTemplate }} />
                         <Box box-margin-bottom='xl'>
                             <Text text-size='h1'>
-                                Theme <Text text-weight='bold'>{sheme['__TEMPLATE_NAME__']}</Text>
+                                Theme <Text text-weight='bold'>{sheme.__TEMPLATE_NAME__}</Text>
                             </Text>
                         </Box>
                         <Box
                             box-padding='m'
-                            box-background={sheme['__TEMPLATE_NAME__']}
-                            box-border={sheme['__TEMPLATE_NAME__']}
+                            box-background={sheme.__TEMPLATE_NAME__}
+                            box-border={sheme.__TEMPLATE_NAME__}
                             box-round='m'
                         >
                             <Grid grid-indent='m'>
@@ -175,22 +184,29 @@ export class ThemeGenerator extends React.Component {
                                     </Picture>
                                 </Grid.Item>
                                 <Grid.Item grid-item-width='expand'>
-                                    <Text text-size='h1' text-color={sheme['__TEMPLATE_NAME__']}>
+                                    <Text text-size='h1' text-color={sheme.__TEMPLATE_NAME__}>
                                         What is Lorem Ipsum?
                                     </Text>
                                     <Line
                                         line-indent='s'
-                                        line-color={sheme['__TEMPLATE_NAME__']}
+                                        line-color={sheme.__TEMPLATE_NAME__}
                                     />
-                                    <Text text-lheight='medium' text-color={sheme['__TEMPLATE_NAME__']}>
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                                        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                                        It has survived not only five centuries, but also the leap into electronic typesetting,
-                                        remaining essentially unchanged.
+                                    <Text
+                                        text-lheight='medium'
+                                        text-color={sheme.__TEMPLATE_NAME__}
+                                    >
+                                        Lorem Ipsum is simply dummy text of the printing and
+                                        typesetting industry. Lorem Ipsum has been the industrys
+                                        standard dummy text ever since the 1500s, when an unknown
+                                        printer took a galley of type and scrambled it to make a
+                                        type specimen book. It has survived not only
+                                        five centuries, but also the leap into electronic
+                                        typesetting, remaining essentially unchanged.
                                     </Text>
                                     <Box box-margin-top='xs'>
-                                        <Link href="#" link-color={sheme['__TEMPLATE_NAME__']}>See More »</Link>
+                                        <Link href='#' link-color={sheme.__TEMPLATE_NAME__}>
+                                            See More »
+                                        </Link>
                                     </Box>
                                 </Grid.Item>
                             </Grid>
@@ -199,7 +215,7 @@ export class ThemeGenerator extends React.Component {
                             <button
                                 type='button'
                                 style={{ width: '100%', padding: 10, cursor: 'pointer' }}
-                                onClick={() => this.download(cssFileName, newTemplate)}
+                                onClick={() => download(cssFileName, newTemplate)}
                             >
                                 <Text text-lheight='medium' text-wrap='ellipsis'>
                                     Download&nbsp;
@@ -212,7 +228,7 @@ export class ThemeGenerator extends React.Component {
                         <pre style={{ display: 'none' }}>
                             <code
                                 className='language-css'
-                                dangerouslySetInnerHTML={{__html: newTemplate}}
+                                dangerouslySetInnerHTML={{ __html: newTemplate }}
                             />
                         </pre>
                     </Grid.Item>
@@ -223,7 +239,7 @@ export class ThemeGenerator extends React.Component {
                             </Text>
                         </Box>
                         <List list-indent='m'>
-                            {Object.keys(sheme).map((key) => (
+                            {Object.keys(sheme).map(key => (
                                 <List.Item key={key}>
                                     <Text text-weight='bold'>
                                         {SETTINGS_LABEL[key] || key}
@@ -265,6 +281,6 @@ export class ThemeGenerator extends React.Component {
                     </Grid.Item>
                 </Grid>
             </div>
-        )
+        );
     }
 }
