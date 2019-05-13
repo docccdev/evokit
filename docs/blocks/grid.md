@@ -297,13 +297,13 @@ export default class ExampleGrid extends React.Component {
             <Example values={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}>
                 {(value) => (
                     <Grid>
-                        <Grid.Item grid-order={value}>
+                        <Grid.Item grid-item-order={value}>
                             <Example.Box>
                                 item 1
                             </Example.Box>
                         </Grid.Item>
                         {[2, 3, 4, 5, 6, 7, 8, 9].map((key) => (
-                            <Grid.Item grid-order={key}>
+                            <Grid.Item grid-item-order={key}>
                                 <Example.Box style={{ background: '#f8f8f8', color: '#333' }}>
                                     item {key}
                                 </Example.Box>

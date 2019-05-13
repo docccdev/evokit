@@ -29,21 +29,30 @@
 
 ## 3.0.0
 - New [API][api].
-- Replace `domRef` prop name to `${blockName}-ref`, see example:
-``` jsx
-<Box domRef={fn}> // bad
-<Box box-ref={fn}> // good
-```
-- Remove [mixes][Mixes] block. The prop `mix-*` replaced with props existing [box][Box] block, example:
+- Replace prop `domRef` to `${blockName}-ref`, see example:
 ``` jsx
 // bad
-<Box mix-width=''>
-<Image mix-round=''>
-<Grid.Item mix-width=''>
+<Box domRef={fn}>
 // good
-<Box box-width=''>
-<Image box-round=''>
-<Grid.Item box-width=''>
+<Box box-ref={fn}>
+```
+- Replace block item prop:
+``` jsx
+// bad
+<Grid.Item grid-width={val}>
+// good
+<Grid.Item grid-item-width={val}>
+```
+- Remove [mixes][Mixes] block. The prop `mix-*` replaced with props target block, example:
+``` jsx
+// bad
+<Box mix-width={val}>
+<Image mix-round={val}>
+<Grid.Item mix-width={val}>
+// good
+<Box box-width={val}>
+<Image image-round={val}>
+<Grid.Item grid-item-width={val}>
 ```
 - Remove static themes from package, please use [Theme Creator][create_theme]:
     - `themes.css`
