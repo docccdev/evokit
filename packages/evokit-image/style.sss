@@ -1,0 +1,68 @@
+@import '../../src/mixins.sss'
+
+.image
+    outline: none
+    border: 0
+    max-width: 100%
+    max-height: 100%
+
+    &[alt]
+        word-wrap: break-word
+        word-break: break-word
+        hyphens: auto
+
+/**
+ * Horizontal align:
+ *
+ *  - image_align_left
+ *  - image_align_center
+ *  - image_align_right
+ *
+ **/
+
+@each $value in (left, center, right)
+    .image_align_$(value)
+        @if $value == center
+            display: block
+            margin-left: auto
+            margin-right: auto
+        @else
+            float: $value
+
+/**
+ * Vertical align:
+ *
+ *  - image_valign_*
+ *
+ **/
+
+@mixin vertical-align .image_valign
+
+/**
+ * Mirror:
+ *
+ *  - image_mirror_x
+ *  - image_mirror_y
+ *  - image_mirror_xy
+ *
+ **/
+
+.image_mirror_x
+    transform: scaleX(-1)
+
+.image_mirror_y
+    transform: scaleY(-1)
+
+.image_mirror_xy
+    transform: scale(-1, -1)
+
+/**
+ * Fix:
+ *
+ *  - image_fit_*
+ *
+ **/
+
+@each $value in (none, fill, contain, cover, scale-down)
+    .image_fit_$(value)
+        object-fit: $value

@@ -1,14 +1,14 @@
-import { Example } from './utils/example';
+import { Example } from './Example';
 
-import { Box } from './blocks/Box';
-import { Text } from './blocks/Text';
-import { Body } from './blocks/Body';
-import { Grid } from './blocks/Grid';
-import { List } from './blocks/List';
-import { Link } from './blocks/Link';
-import { Picture } from './blocks/Picture';
-import { Line } from './blocks/Line';
-import { Image } from './blocks/Image';
+import { Box } from '../packages/evokit-box';
+import { Text } from '../packages/evokit-text';
+import { Body } from '../packages/evokit-body';
+import { Grid } from '../packages/evokit-grid';
+import { List } from '../packages/evokit-list';
+import { Link } from '../packages/evokit-link';
+import { Picture } from '../packages/evokit-picture';
+import { Line } from '../packages/evokit-line';
+import { Image } from '../packages/evokit-image';
 
 export {
     Example,

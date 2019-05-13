@@ -1,0 +1,126 @@
+@import '../../src/mixins.sss'
+
+.text
+    display: inline
+    line-height: var(--ek-default-line-height)
+
+/**
+ * Font size:
+ *
+ *  - text_size_*
+ *
+ **/
+
+@mixin font-size .text_size
+
+/**
+ * Font weight:
+ *
+ *  - text_weight_*
+ *
+ **/
+
+@mixin font-weight .text_weight
+
+/**
+ * Align:
+ *
+ *  - text_align_*
+ *
+ **/
+
+@each $value in (left, center, right, justify)
+    @mixin media .text_align_$(value)
+        display: block
+        text-align: $value
+
+/**
+ * Valign:
+ *
+ *  - text_valign_*
+ *
+ **/
+
+@mixin vertical-align .text_valign
+
+
+/**
+ * Transform:
+ *
+ *  - text_transform_*
+ *
+ **/
+
+@each $value in (none, capitalize, lowercase, uppercase)
+    @mixin media .text_transform_$(value)
+        text-transform: $value
+
+/**
+ * Style:
+ *
+ *  - text_style_*
+ *
+ **/
+
+@each $value in (italic, strike, underline, overline)
+    .text_style_$(value)
+        @if $value == italic
+            font-style: italic
+        @else if $value == strike
+            text-decoration: line-through
+        @else if $value == underline
+            text-decoration: underline
+        @else if $value == overline
+            text-decoration: overline
+
+/**
+ * Line height:
+ *
+ *  - text_lheight_*
+ *
+ **/
+
+@mixin line-height .text_lheight
+
+
+/**
+ * Wrap:
+ *
+ *  - text_wrap_*
+ *
+ **/
+
+@each $value in (nowrap, break, ellipsis, three-line, two-line)
+    .text_wrap_$(value)
+        @if $value == nowrap
+            white-space: nowrap
+        @else if $value == break
+            word-wrap: break-word
+            word-break: break-word
+            hyphens: auto
+        @else if $value == ellipsis
+            display: block
+            overflow: hidden
+            text-overflow: ellipsis
+            white-space: nowrap
+        @else if $value == two-line
+            display: block
+            overflow: hidden
+            max-height: calc(var(--ek-default-line-height) * 2)
+
+            &[class*='text_lheight_medium']
+                max-height: calc((var(--ek-default-line-height) + var(--ek-step-line-height)) * 2)
+
+            &[class*='text_lheight_large']
+                max-height: calc((calc(var(--ek-default-line-height) + (var(--ek-step-line-height) * 2))) * 2)
+
+        @else if $value == three-line
+            display: block
+            overflow: hidden
+            max-height: calc(var(--ek-default-line-height) * 3)
+
+            &[class*='text_lheight_medium']
+                max-height: calc((var(--ek-default-line-height) + var(--ek-step-line-height)) * 3)
+
+            &[class*='text_lheight_large']
+                max-height: calc((calc(var(--ek-default-line-height) + (var(--ek-step-line-height) * 2))) * 3)

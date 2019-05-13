@@ -1,0 +1,31 @@
+@import '../../src/mixins.sss'
+
+.line
+    display: block
+    border-width: 1px 0 0
+    border-style: solid
+    border-color: transparent
+    margin: 0
+
+/**
+ * Indent:
+ *
+ *  - line_indent_*
+ *
+ **/
+
+@each $name, $i in (none, xxs, xs, s, m, l, xl, xxl)
+    @mixin media .line_indent_$(name)
+        margin-top: calc(var(--ek-step-indent) * $i)
+        margin-bottom: calc(var(--ek-step-indent) * $i)
+
+/**
+ * Style:
+ *
+ *  - line_style_*
+ *
+ **/
+
+@each $value in (dotted, dashed)
+    @mixin media .line_style_$(value)
+        border-top-style: $value

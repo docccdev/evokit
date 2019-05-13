@@ -17,55 +17,10 @@ var postcssMqpacker = require('css-mqpacker');
 
 var evokitConfig = require('./evokit.config.js');
 
-const THEMES_LIST = [
-    'danger',
-    'dark',
-    'default',
-    'info',
-    'light',
-    'minor',
-    'muted',
-    'primary',
-    'reset',
-    'second',
-    'success',
-    'warning',
-]
-
 const ENTRY_LIST = {
-    'Box/index': path.resolve(__dirname, 'src/blocks/Box'),
-    'Box/style': path.resolve(__dirname, 'src/blocks/Box/style'),
-
-    'Text/index': path.resolve(__dirname, 'src/blocks/Text'),
-    'Text/style': path.resolve(__dirname, 'src/blocks/Text/style'),
-
-    'Body/index': path.resolve(__dirname, 'src/blocks/Body'),
-    'Body/style': path.resolve(__dirname, 'src/blocks/Body/style'),
-
-    'Image/index': path.resolve(__dirname, 'src/blocks/Image'),
-    'Image/style': path.resolve(__dirname, 'src/blocks/Image/style'),
-
-    'Picture/index': path.resolve(__dirname, 'src/blocks/Picture'),
-    'Picture/style': path.resolve(__dirname, 'src/blocks/Picture/style'),
-
-    'Grid/index': path.resolve(__dirname, 'src/blocks/Grid'),
-    'Grid/style': path.resolve(__dirname, 'src/blocks/Grid/style'),
-
-    'List/index': path.resolve(__dirname, 'src/blocks/List'),
-    'List/style': path.resolve(__dirname, 'src/blocks/List/style'),
-
-    'Link/index': path.resolve(__dirname, 'src/blocks/Link'),
-    'Link/style': path.resolve(__dirname, 'src/blocks/Link/style'),
-
-    'Line/index': path.resolve(__dirname, 'src/blocks/Line'),
-    'Line/style': path.resolve(__dirname, 'src/blocks/Line/style'),
-
     './index': path.resolve(__dirname, 'src'),
     './style': path.resolve(__dirname, 'src/style'),
-
     './theme-template': path.resolve(__dirname, 'src/theme-template'),
-
-    './utils/index': path.resolve(__dirname, 'src/utils'),
 };
 
 module.exports = {
@@ -81,7 +36,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.js$/,
+                test: /\.jsx?$/,
                 loader: 'babel-loader',
                 exclude: /node_modules/,
             },
@@ -159,7 +114,7 @@ module.exports = {
     ],
     resolve: {
         modules: [path.resolve(PROJECT_DEPS, 'node_modules'), 'node_modules'],
-        extensions: ['.js', '.sss'],
+        extensions: ['.js', '.jsx', '.sss'],
     },
     resolveLoader: {
         modules: [path.resolve(PROJECT_DEPS, 'node_modules'), 'node_modules'],
