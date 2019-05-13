@@ -19,11 +19,11 @@
   * [List](blocks/list.md)
   * [Link](blocks/link.md)
   * [Image](blocks/image.md)
+  * [Picture](blocks/picture.md)
   * [Line](blocks/line.md)
 
 * EXAMPLES
 
   * [Form](complex/form.md)
   * [Progress](complex/progress.md)
-  * [Picture](blocks/picture.md)
   <!-- * [Card](complex/card.md) -->

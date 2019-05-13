@@ -5,7 +5,7 @@
 [image-mirror]: #mirror
 [image-fit]: #fit
 
-[mix-round]: #Round
+[image-round]: #image-round
 
 # EvoKit - Image
 
@@ -21,7 +21,7 @@
 | [image-valign]    | `string`, `object`, `array` | Вертикальное выравнивание |
 | [image-mirror]     | `string`, `object`, `array` | Отзеркаливание |
 | [image-fit]     | `string`, `object`, `array` | Заполнение контейнера относительно его высоты и ширины |
-| [mix-round] | [Mixes][mixes] | Скругление углов |
+| [image-round] | [Mixes][mixes] | Скругление углов |
 
 ## Align
 
@@ -154,12 +154,12 @@ export default class ExampleImage extends React.Component {
 </script>
 ```
 
-## Round
+## image-round
 
 Read more about [mixes][mixes]
 
 ```jsx
-<Image src='' mix-round='...' />
+<Image src='' image-round='...' />
 ```
 
 ```jsx
@@ -177,63 +177,63 @@ export default class ExampleImage extends React.Component {
                             src='https://picsum.photos/200/200'
                             width={100}
                             height={100}
-                            mix-round={value}
+                            image-round={value}
                         />
                         &nbsp;&nbsp;
                         <Image
                             src='https://picsum.photos/200/200'
                             width={100}
                             height={100}
-                            mix-round-top={value}
+                            image-round-top={value}
                         />
                         &nbsp;&nbsp;
                         <Image
                             src='https://picsum.photos/200/200'
                             width={100}
                             height={100}
-                            mix-round-right={value}
+                            image-round-right={value}
                         />
                         &nbsp;&nbsp;
                         <Image
                             src='https://picsum.photos/200/200'
                             width={100}
                             height={100}
-                            mix-round-bottom={value}
+                            image-round-bottom={value}
                         />
                         &nbsp;&nbsp;
                         <Image
                             src='https://picsum.photos/200/200'
                             width={100}
                             height={100}
-                            mix-round-left={value}
+                            image-round-left={value}
                         />
                         &nbsp;&nbsp;
                         <Image
                             src='https://picsum.photos/200/200'
                             width={100}
                             height={100}
-                            mix-round-top-left={value}
+                            image-round-top-left={value}
                         />
                         &nbsp;&nbsp;
                         <Image
                             src='https://picsum.photos/200/200'
                             width={100}
                             height={100}
-                            mix-round-top-right={value}
+                            image-round-top-right={value}
                         />
                         &nbsp;&nbsp;
                         <Image
                             src='https://picsum.photos/200/200'
                             width={100}
                             height={100}
-                            mix-round-bottom-left={value}
+                            image-round-bottom-left={value}
                         />
                         &nbsp;&nbsp;
                         <Image
                             src='https://picsum.photos/200/200'
                             width={100}
                             height={100}
-                            mix-round-bottom-right={value}
+                            image-round-bottom-right={value}
                         />
                     </div>
                 )}

@@ -32,13 +32,8 @@ Cетка вмещает до 10 столбцов.
 - [Grid.Item][griditem]
 
 ```jsx
-// Common import for all blocks and css
 import { Grid } from 'evokit';
 import 'evokit/dist/style.css';
-
-// Single import block and css
-import Grid from 'evokit/dist/Grid';
-import 'evokit/dist/Grid/style.css';
 
 ...
 

@@ -178,7 +178,7 @@ export default class EvoKitCreateTheme extends React.Component {
                             box-padding='m'
                             box-background={sheme['__TEMPLATE_NAME__']}
                             box-border={sheme['__TEMPLATE_NAME__']}
-                            mix-round='m'
+                            box-round='m'
                         >
                             <Grid grid-indent='m'>
                                 <Grid.Item grid-item-width='2-10'>

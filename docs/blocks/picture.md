@@ -1,10 +1,8 @@
 [mixes]: common/mixes.md
 
-[picture-fit]: #picture-fit
-
-[mix-round]: #mix-round
-
 [picture]: #picture
+[picture-fit]: #picture-fit
+[picture-round]: #picture-round
 
 # EvoKit - Picture
 
@@ -17,13 +15,8 @@
 - [Picture][picture]
 
 ```jsx
-// Common import for all blocks and css
 import { Picture } from 'evokit';
 import 'evokit/dist/style.css';
-
-// Single import block and css
-import Picture from 'evokit/dist/Picture';
-import 'evokit/dist/Picture/style.css';
 
 ...
 
@@ -37,17 +30,10 @@ import 'evokit/dist/Picture/style.css';
 
 ## Picture
 
-#### Base options:
-
 | Property | Type | Description |
 |----------|----------|-------------|
 | [picture-fit]    | `string`, `object`, `array` | Заполнение контейнера относительно его высоты и ширины |
-
-#### Mix options:
-
-| Property | About | Description |
-|----------|----------|-------------|
-| [mix-round] | [Mixes][mixes] | Скругление углов |
+| [picture-round] | [Mixes][mixes] | Скругление углов |
 
 ### `picture-fit`
 
@@ -81,7 +67,7 @@ export default class ExampleImage extends React.Component {
 </script>
 ```
 
-### `mix-round`
+### `picture-round`
 
 ```jsx
 /*react*/
@@ -95,47 +81,47 @@ export default class ExampleImage extends React.Component {
                 {(value) => (
                     <Grid grid-indent='xs' grid-column='expand'>
                         <Grid.Item>
-                            <Picture mix-round={value}>
+                            <Picture picture-round={value}>
                                 <Picture.Item src='https://picsum.photos/200/200' alt='' />
                             </Picture>
                         </Grid.Item>
                         <Grid.Item>
-                            <Picture mix-round-top={value}>
+                            <Picture picture-round-top={value}>
                                 <Picture.Item src='https://picsum.photos/200/200' alt='' />
                             </Picture>
                         </Grid.Item>
                         <Grid.Item>
-                            <Picture mix-round-right={value}>
+                            <Picture picture-round-right={value}>
                                 <Picture.Item src='https://picsum.photos/200/200' alt='' />
                             </Picture>
                         </Grid.Item>
                         <Grid.Item>
-                            <Picture mix-round-bottom={value}>
+                            <Picture picture-round-bottom={value}>
                                 <Picture.Item src='https://picsum.photos/200/200' alt='' />
                             </Picture>
                         </Grid.Item>
                         <Grid.Item>
-                            <Picture mix-round-left={value}>
+                            <Picture picture-round-left={value}>
                                 <Picture.Item src='https://picsum.photos/200/200' alt='' />
                             </Picture>
                         </Grid.Item>
                         <Grid.Item>
-                            <Picture mix-round-top-left={value}>
+                            <Picture picture-round-top-left={value}>
                                 <Picture.Item src='https://picsum.photos/200/200' alt='' />
                             </Picture>
                         </Grid.Item>
                         <Grid.Item>
-                            <Picture mix-round-top-right={value}>
+                            <Picture picture-round-top-right={value}>
                                 <Picture.Item src='https://picsum.photos/200/200' alt='' />
                             </Picture>
                         </Grid.Item>
                         <Grid.Item>
-                            <Picture mix-round-bottom-left={value}>
+                            <Picture picture-round-bottom-left={value}>
                                 <Picture.Item src='https://picsum.photos/200/200' alt='' />
                             </Picture>
                         </Grid.Item>
                         <Grid.Item>
-                            <Picture mix-round-bottom-right={value}>
+                            <Picture picture-round-bottom-right={value}>
                                 <Picture.Item src='https://picsum.photos/200/200' alt='' />
                             </Picture>
                         </Grid.Item>

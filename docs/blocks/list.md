@@ -24,13 +24,8 @@ Cоздает список.
 - [List.Item][listitem]
 
 ```jsx
-// Common import for all blocks and css
 import { List } from 'evokit';
 import 'evokit/dist/style.css';
-
-// Single import block and css
-import List from 'evokit/dist/List';
-import 'evokit/dist/List/style.css';
 
 ...
 

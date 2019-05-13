@@ -18,7 +18,7 @@ export default class ExampleGrid extends React.Component {
             <Grid grid-valign='middle' grid-indent='xs'>
                 <Grid.Item>
                     <div style={{ width: 30 }}>
-                        <Picture mix-round='full' picture-fit='cover'>
+                        <Picture picture-round='full' picture-fit='cover'>
                             <Picture.Item src='https://picsum.photos/60/40' alt='' />
                         </Picture>
                     </div>
@@ -32,8 +32,8 @@ export default class ExampleGrid extends React.Component {
         );
 
         return (
-            <Box box-background='minor' box-border='muted' mix-round='m'>
-                <Picture mix-round-top='m'>
+            <Box box-background='minor' box-border='muted' box-round='m'>
+                <Picture picture-round-top='m'>
                     <Picture.Item src='https://picsum.photos/600/600' alt='' />
                 </Picture>
                 <Box box-padding='m'>
