@@ -1,6 +1,5 @@
 [react]: //www.npmjs.com/package/react
 [prop-types]: //www.npmjs.com/package/prop-types
-[classnames]: //www.npmjs.com/package/classnames
 [variables]: /base/variables.md
 
 # EvoKit
@@ -11,10 +10,10 @@ Easy and fast React front-end framework. Based on the principle of dividing the 
 
 ## Quick start
 
-> Install dependencies [react], [prop-types], [classnames] to make it work.
+> Install dependencies [react], [prop-types] to make it work.
 
 ```bash
-npm i react prop-types classnames --save
+npm i react prop-types --save
 ```
 
 ### Install

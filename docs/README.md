@@ -1,6 +1,5 @@
 [react]: //www.npmjs.com/package/react
 [prop-types]: //www.npmjs.com/package/prop-types
-[classnames]: //www.npmjs.com/package/classnames
 [variables]: /docs/base/variables.md
 
 # EvoKit
@@ -18,7 +17,6 @@ Based on the principle of dividing the interface into independent blocks.
 
  - [react]
  - [prop-types]
- - [classnames]
 
 ## Install
 ```bash

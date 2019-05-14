@@ -1,6 +1,6 @@
-[panel]: blocks/removed_panel.md
-[tags]: blocks/removed_tags.md
-[width]: helpers/removed_width.md
+[panel]: NOT_USED/removed_panel.md
+[tags]: NOT_USED/removed_tags.md
+[width]: NOT_USED/removed_width.md
 
 [media]: base/media.md
 [size]: base/sizes.md
@@ -10,15 +10,15 @@
 
 [mixes]: common/mixes.md
 
-[body]: blocks/body.md
-[grid]: blocks/grid.md
-[box]: blocks/box.md
-[list]: blocks/list.md
-[text]: blocks/text.md
-[link]: blocks/link.md
-[picture]: blocks/picture.md
-[image]: blocks/image.md
-[line]: blocks/line.md
+[body]: packages/evokit-body/
+[grid]: packages/evokit-grid/
+[box]: packages/evokit-box/
+[list]: packages/evokit-list/
+[text]: packages/evokit-text/
+[link]: packages/evokit-link/
+[picture]: packages/evokit-picture/
+[image]: packages/evokit-image/
+[line]: packages/evokit-line/
 
 [create_theme]: create_theme/
 
@@ -29,6 +29,7 @@
 
 ## 3.0.0
 - New [API][api].
+- Remove peerDependencies `classnames`.
 - Replace prop `domRef` to `${blockName}-ref`, see example:
 ``` jsx
 // bad

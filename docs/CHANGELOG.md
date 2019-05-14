@@ -29,6 +29,7 @@
 
 ## 3.0.0
 - New [API][api].
+- Remove peerDependencies `classnames`.
 - Replace prop `domRef` to `${blockName}-ref`, see example:
 ``` jsx
 // bad

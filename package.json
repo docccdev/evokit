@@ -39,8 +39,7 @@
   "license": "MIT",
   "peerDependencies": {
     "react": "*",
-    "prop-types": "*",
-    "classnames": "*"
+    "prop-types": "*"
   },
   "devDependencies": {
     "@babel/core": "^7.4.0",
