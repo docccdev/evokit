@@ -1,4 +1,4 @@
-[colors]: base/colors.md
+[colors]: NOT_USED/removed_colors.md
 [sizes]: base/sizes.md
 [media]: base/media.md
 

@@ -1,7 +1,7 @@
-[sizes]: base/sizes.md
-[media]: base/media.md
+[create_theme]: create_theme/
 
-[mixes]: common/mixes.md
+[grid]: #grid
+[griditem]: #griditem
 
 [grid-column]: #grid-column
 [grid-indent]: #grid-indent
@@ -14,15 +14,9 @@
 [grid-item-order]: #grid-item-order
 [grid-item-width]: #grid-item-width
 
-[grid]: #grid
-[griditem]: #griditem
-
-
 # EvoKit - Grid
 
-Cетка вмещает до 10 столбцов.
-
-!> Модификаторы имеют [media] параметры.
+Cетка для размещения блоков на странице, вмещает до 10 столбцов.
 
 ---
 
@@ -32,14 +26,12 @@ Cетка вмещает до 10 столбцов.
 - [Grid.Item][griditem]
 
 ```jsx
-import { Grid } from 'evokit';
-import 'evokit/dist/style.css';
-
-...
+import { Grid } from 'evokit-grid';
+import 'evokit-grid/style.css';
 
 <Grid>
     <Grid.Item>
-        Item
+        content
     </Grid.Item>
 </Grid>
 
@@ -49,17 +41,25 @@ import 'evokit/dist/style.css';
 
 ## Grid
 
-| Property | Type | Description |
-|----------|----------|-------------|
-| [grid-column]    | `string`, `object`, `array` or `number` | Количество ячеек в ряду |
-| [grid-indent]    | `string`, `object`, `array` | Отступы между ячейками [sizes] |
-| [grid-direction] | `string`, `object`, `array` | Направление |
-| [grid-wrap]      | `string`, `object`, `array` | Правила переноса ячеек |
-| [grid-align]     | `string`, `object`, `array` | Горизонтальное выравнивание |
-| [grid-valign]    | `string`, `object`, `array` | Вертикальное выравние |
-| [grid-divider]   | `string`, `object`, `array` | Разделитель между ячейками |
+| Props | Values | Description |
+|-------|--------|-------------|
+| [grid-column]    | `1` `2` `3` `4` `5` `6` `7` `8` `9` `10` `auto` `expand` | Количество ячеек в ряду |
+| [grid-indent]    | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Отступы между ячейками |
+| [grid-direction] | `row` `row-reverse` `column` `column-reverse` | Направление ячеек |
+| [grid-wrap]      | `nowrap` `wrap` `wrap-reverse` | Правила переноса ячеек |
+| [grid-align]     | `left` `center` `right` `justify` | Горизонтальное выравнивание ячеек |
+| [grid-valign]    | `top` `middle` `bottom` `baseline` `justify` | Вертикальное выравние ячеек |
+| [grid-divider]   | `${themeName}` - [Create Theme][create_theme] | Цвет разделителя между ячейками |
 
 ### `grid-column`
+
+- `1, 2, 3, 4, 5, 6, 7, 8, 9, 10` - Количество ячеек в ряду
+- `auto` - Ширина ячеек зависит от контента
+- `expand` - Ширина ячеек пропорциональна их количеству
+
+```jsx
+<Grid grid-column='...'></Grid>
+```
 
 ```jsx
 /*react*/
@@ -69,7 +69,7 @@ const { Grid, Example } = EvoKit;
 export default class ExampleGrid extends React.Component {
     render() {
         return (
-            <Example values={['expand', 'auto', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}>
+            <Example values={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 'auto', 'expand' ]}>
                 {(value) => (
                     <Grid grid-column={value}>
                         {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((key) => (
@@ -89,6 +89,13 @@ export default class ExampleGrid extends React.Component {
 ```
 
 ### `grid-indent`
+
+- `none` - Расстояние между ячейками `0px`
+- `xxs, xs, s, m, l, xl, xxl` - Каждое последующее значение больше предыдущего на 5px, `xxs=5px`, `xs=10px`, `s=15px` и т.д.
+
+```jsx
+<Grid grid-indent='...'></Grid>
+```
 
 ```jsx
 /*react*/
@@ -119,6 +126,15 @@ export default class ExampleGrid extends React.Component {
 
 ### `grid-direction`
 
+- `row` - Направление ячеек слева на право
+- `row-reverse` - Направление ячеек справа на лево
+- `column` - Направление ячеек сверху вниз
+- `column-reverse` - Направление ячеек снизу вверх
+
+```jsx
+<Grid grid-direction='...'></Grid>
+```
+
 ```jsx
 /*react*/
 <script>
@@ -147,6 +163,14 @@ export default class ExampleGrid extends React.Component {
 ```
 
 ### `grid-wrap`
+
+- `nowrap` - Расположение ячеек в одну линиую
+- `wrap` - Ячейки которые не влазят по ширине в одну линию, смещаются вниз
+- `wrap-reverse` - Похожее поведение с `wrap` только смещение ячейки происходит вверх
+
+```jsx
+<Grid grid-wrap='...'></Grid>
+```
 
 ```jsx
 /*react*/
@@ -177,6 +201,15 @@ export default class ExampleGrid extends React.Component {
 
 ### `grid-align`
 
+- `left` - Выравнивание ячеек по левому краю
+- `center` - Выравнивание ячеек по центру
+- `right` - Выравнивание ячеек по правому краю
+- `justify` - Равномерно распределяет все ячейки по ширине
+
+```jsx
+<Grid grid-align='...'></Grid>
+```
+
 ```jsx
 /*react*/
 <script>
@@ -206,6 +239,16 @@ export default class ExampleGrid extends React.Component {
 
 ### `grid-valign`
 
+- `top` - Выравнивание ячеек по верхнему краю
+- `middle` - Выравнивание ячеек по середине
+- `bottom` - Выравнивание ячеек по нижнему краю
+- `baseline` - Выравнивание ячеек по базовой линии
+- `justify` - Равномерно распределяет все ячейки по высоте
+
+```jsx
+<Grid grid-valign='...'></Grid>
+```
+
 ```jsx
 /*react*/
 <script>
@@ -234,6 +277,10 @@ export default class ExampleGrid extends React.Component {
 ```
 
 ### `grid-divider`
+
+```jsx
+<Grid grid-divider='...'></Grid>
+```
 
 ```jsx
 /*react*/
@@ -266,14 +313,18 @@ export default class ExampleGrid extends React.Component {
 
 ## Grid.Item
 
-#### Base options:
-
-| Property | Type | Description |
-|----------|------|-------------|
-| [grid-item-order] | `string`, `object`, `array` or `number` | Задает порядок расположения ячейки |
-| [grid-item-width] | [Mixes][mixes] | Ширина |
+| Props | Values | Description |
+|-------|--------|-------------|
+| [grid-item-order] | `1` `2` `3` `4` `5` `6` `7` `8` `9` `10` | Задает порядок расположения ячейки |
+| [grid-item-width] | `auto` `expand` `1-1` `*-2` `*-3` `*-4` `*-5` `*-6` `*-7` `*-8` `*-9` `*-10` | Ширина `9-10 = 90%` |
 
 ### `grid-item-order`
+
+- `1, 2, 3, 4, 5, 6, 7, 8, 9, 10` - Определяет порядок ячейки
+
+```jsx
+<Grid.Item grid-item-order='...'></Grid.Item>
+```
 
 ```jsx
 /*react*/
@@ -309,6 +360,14 @@ export default class ExampleGrid extends React.Component {
 
 ### `grid-item-width`
 
+- `1-1 *-2 *-3 *-4 *-5 *-6 *-7 *-8 *-9 *-10` - Ширина ячейки, например: `1-1=100%`, `1-2=50%`, `1-3=33.333%`, `6-10=60%` и т.д.
+- `auto` - Ширина ячейки зависит от контента
+- `expand` - Ширина ячейки занимает свободное пространство
+
+```jsx
+<Grid.Item grid-item-width='...'></Grid.Item>
+```
+
 ```jsx
 /*react*/
 <script>
@@ -317,7 +376,7 @@ const { Grid, Example } = EvoKit;
 export default class ExampleGrid extends React.Component {
     render() {
         return (
-            <Example values={['auto', 'expand', '1-1', '1-10', '2-10', '3-10', '4-10', '5-10', '6-10', '7-10', '8-10', '9-10']}>
+            <Example values={['1-1', '1-10', '2-10', '3-10', '4-10', '5-10', '6-10', '7-10', '8-10', '9-10', 'auto', 'expand']}>
                 {(value) => (
                     <Grid>
                         <Grid.Item grid-item-width={value}>

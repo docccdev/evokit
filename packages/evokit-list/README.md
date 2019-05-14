@@ -1,20 +1,16 @@
-[colors]: base/colors
-[sizes]: base/sizes
-[media]: base/media
+[create_theme]: create_theme/
+
+[list]: #list
+[listitem]: #listitem
 
 [list-indent]: #list-indent
 [list-style]: #list-style
 [list-color]: #list-color
 [list-divider]: #list-divider
 
-[list]: #list
-[listitem]: #listitem
-
 # EvoKit - List
 
-Cоздает список.
-
-!> Модификаторы имеют [media] параметры.
+Список
 
 ---
 
@@ -24,14 +20,12 @@ Cоздает список.
 - [List.Item][listitem]
 
 ```jsx
-import { List } from 'evokit';
-import 'evokit/dist/style.css';
-
-...
+import { List } from 'evokit-list';
+import 'evokit-list/style.css';
 
 <List>
     <List.Item>
-        Item
+        content
     </List.Item>
 </List>
 
@@ -41,14 +35,21 @@ import 'evokit/dist/style.css';
 
 ## List
 
-| Property | Type | Description |
-|----------|----------|-------------|
-| [list-indent]  | `string`, `object`, `array` | Отступ между ячейками [sizes] |
-| [list-style]   | `string`, `object`, `array` | Тип маркера |
-| [list-color]   | `string`, `object`, `array` | Цвет маркера |
-| [list-divider] | `string`, `object`, `array` | Разделитель между ячейками |
+| Props | Values | Description |
+|-------|--------|-------------|
+| [list-indent]  | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Отступы между элементами |
+| [list-style]   | `dash` `decimal` `disc` | Тип маркера |
+| [list-color]   | `${themeName}` - [Create Theme][create_theme] | Цвет маркера |
+| [list-divider] | `${themeName}` - [Create Theme][create_theme] | Разделитель между элементами |
 
 ### `list-indent`
+
+- `none` - Расстояние между элементами `0px`
+- `xxs, xs, s, m, l, xl, xxl` - Каждое последующее значение больше предыдущего на 5px, `xxs=5px`, `xs=10px`, `s=15px` и т.д.
+
+```jsx
+<List list-indent='...'></List>
+```
 
 ```jsx
 /*react*/
@@ -78,6 +79,14 @@ export default class ExampleList extends React.Component {
 ```
 
 ### `list-style`
+
+- `dash` - Маркер в виде прочерка (—)
+- `decimal` - Арабские числа (1, 2, 3, 4,...).
+- `disc` - Маркер в виде точки (•)
+
+```jsx
+<List list-indent='...'></List>
+```
 
 ```jsx
 /*react*/
@@ -114,7 +123,7 @@ const { List, Example } = EvoKit;
 export default class ExampleList extends React.Component {
     render() {
         return (
-            <Example values={['danger', 'dark', 'default', 'info', 'light', 'minor', 'muted', 'primary', 'reset', 'second', 'success', 'warning']}>
+            <Example values={['success', 'info', 'warning', 'danger']}>
                 {(value) => (
                     <List list-style='disc' list-color={value}>
                         {[1, 2, 3].map((key) => (
@@ -141,7 +150,7 @@ const { List, Example } = EvoKit;
 export default class ExampleList extends React.Component {
     render() {
         return (
-            <Example values={['danger', 'dark', 'default', 'info', 'light', 'minor', 'muted', 'primary', 'reset', 'second', 'success', 'warning']}>
+            <Example values={['success', 'info', 'warning', 'danger']}>
                 {(value) => (
                     <List list-indent='m' list-divider={value}>
                         {[1, 2, 3].map((key) => (

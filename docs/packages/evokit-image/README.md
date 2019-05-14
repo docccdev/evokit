@@ -1,29 +1,41 @@
-[mixes]: common/mixes.md
-
-[image-align]: #align
-[image-valign]: #valign
-[image-mirror]: #mirror
-[image-fit]: #fit
-
+[image]: #image
+[image-align]: #image-align
+[image-valign]: #image-valign
+[image-mirror]: #image-mirror
+[image-fit]: #image-fit
 [image-round]: #image-round
 
 # EvoKit - Image
 
-Предназначен для отображения изображения.
+Предназначен для отображения изображения
 
 ---
 
-## Props
+## Usage
 
-| Property | Type | Description |
-|----------|----------|-------------|
-| [image-align]    | `string`, `object`, `array` | Горизонтальное выравнивание |
-| [image-valign]    | `string`, `object`, `array` | Вертикальное выравнивание |
-| [image-mirror]     | `string`, `object`, `array` | Отзеркаливание |
-| [image-fit]     | `string`, `object`, `array` | Заполнение контейнера относительно его высоты и ширины |
-| [image-round] | [Mixes][mixes] | Скругление углов |
+- [Image][image]
 
-## Align
+```jsx
+import { Image } from 'evokit-image';
+import 'evokit-image/style.css';
+
+<Image src='картинка.png' alt='картинка' />
+
+```
+
+---
+
+## Image
+
+| Props | Values | Description |
+|-------|--------|-------------|
+| [image-align]  | `left` `center` `right` | Горизонтальное выравнивание |
+| [image-valign] | `baseline` `bottom` `middle` `sub` `super` `text-bottom` `text-top` `top` | Вертикальное выравнивание |
+| [image-mirror] | `x` `y` `xy` | Отзеркаливание |
+| [image-fit]    | `none` `fill` `contain` `cover` `scale-down` | Заполнение контейнера относительно его высоты и ширины |
+| [image-round]  | `none` `full` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Скругление углов |
+
+### `image-align`
 
 ```jsx
 <Image src='' image-align='...' />
@@ -53,7 +65,7 @@ export default class ExampleImage extends React.Component {
 </script>
 ```
 
-## Valign
+### `image-valign`
 
 ```jsx
 <Image src='' image-valign='...' />
@@ -91,7 +103,7 @@ export default class ExampleImage extends React.Component {
 </script>
 ```
 
-## Mirror
+### `image-mirror`
 
 ```jsx
 <Image src='' image-mirror='...' />
@@ -121,7 +133,13 @@ export default class ExampleImage extends React.Component {
 </script>
 ```
 
-## Fit
+### `image-fit`
+
+- `none` - не изменяет свой размер и заполняет пространство
+- `fill` - меняет свой размер, чтобы заполнить всю область
+- `contain` - меняет свой размер, чтобы подстроится под область
+- `cover` - меняет свой размер, чтобы сохранять свои пропорции при заполнении блока
+- `scale-down` - изменяет размер, сравнивая разницу между `none` и `contain`, чтобы найти наименьший конкретный размер объекта
 
 ```jsx
 <Image src='' image-fit='...' />
@@ -154,9 +172,13 @@ export default class ExampleImage extends React.Component {
 </script>
 ```
 
-## image-round
+### `image-round`
 
-Read more about [mixes][mixes]
+> Имеет дополнительные параметры, например `image-round-top`, `image-round-top-right` и другие.
+
+- `none` - Скругление отсутствует
+- `full` - Полное скругление
+- `xxs, xs, s, m, l, xl, xxl` - Каждое последующее значение больше предыдущего на 2px, `xxs=2px`, `xs=4px`, `s=6px` и т.д.
 
 ```jsx
 <Image src='' image-round='...' />
@@ -170,7 +192,7 @@ const { Image, Example } = EvoKit;
 export default class ExampleImage extends React.Component {
     render() {
         return (
-            <Example values={['none', 'xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl', 'full']}>
+            <Example values={['none', 'full', 'xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl']}>
                 {(value) => (
                     <div>
                         <Image

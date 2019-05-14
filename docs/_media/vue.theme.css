@@ -382,27 +382,28 @@ body.sticky .sidebar,body.sticky .sidebar-toggle {
 .markdown-section table {
     border-collapse: collapse;
     border-spacing: 0;
-    display: block;
+    /*display: block;*/
+    /*overflow: auto;*/
     margin-bottom: 1rem;
-    overflow: auto;
     width: 100%
 }
 
 .markdown-section th {
-    font-weight: 700
+    font-weight: 700;
+    background-color: #f8f8f8;
 }
 
 .markdown-section td,.markdown-section th {
     border: 1px solid #ddd;
-    padding: 6px 13px
+    padding: 8px 12px
 }
 
 .markdown-section tr {
     border-top: 1px solid #ccc
 }
 
-.markdown-section p.tip,.markdown-section tr:nth-child(2n) {
-    background-color: #f8f8f8
+.markdown-section p.tip,.markdown-section tr:hover {
+    background-color: rgba(0,0,0, .01);
 }
 
 .markdown-section p.tip {
@@ -774,10 +775,11 @@ section.cover blockquote>p>a:hover {
 }
 
 .markdown-section code {
+    display: inline-block;
     border-radius: 2px;
     color: #e96900;
     font-size: .8rem;
-    margin: 0 2px;
+    margin: 2px;
     padding: 3px 5px;
     white-space: pre-wrap
 }

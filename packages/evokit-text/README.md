@@ -1,69 +1,53 @@
-[media]: base/media.md
-
-[text-color]: #color
-[text-size]: #size
-[text-weight]: #weight
-[text-align]: #align
-[text-valign]: #valign
-[text-wrap]: #wrap
-[text-style]: #style
-[text-transform]: #transform
-[text-lheight]: #lheight
-
 [create_theme]: create_theme/
+
+[text]: #text
+[text-color]: #text-color
+[text-size]: #text-size
+[text-weight]: #text-weight
+[text-align]: #text-align
+[text-valign]: #text-valign
+[text-wrap]: #text-wrap
+[text-style]: #text-style
+[text-transform]: #text-transform
+[text-lheight]: #text-lheight
 
 # EvoKit - Text
 
 Текстовый блок
 
-!> Модификаторы имеют [media] параметры.
+---
+
+## Usage
+
+- [Text][text]
+
+```jsx
+import { Text } from 'evokit-text';
+import 'evokit-text/style.css';
+
+<Text>
+    text
+</Text>
+
+```
 
 ---
 
-## Props
+## Text
 
-| Property | Type | Description |
-|----------|----------|-------------|
-| [text-color]     | `string`, `object`, `array` | Цвет текста |
-| [text-size]      | `string`, `object`, `array` | Размер текста |
-| [text-weight]    | `string`, `object`, `array` | Насыщенность |
-| [text-align]     | `string`, `object`, `array` | Горизонтальное выравнивание |
-| [text-valign]    | `string`, `object`, `array` | Вертикальное выравнивание |
-| [text-wrap]      | `string`, `object`, `array` | Перенос и обрезание |
-| [text-style]     | `string`, `object`, `array` | Стили (подчеркнутый/перечеркнутый) |
-| [text-transform] | `string`, `object`, `array` | Преобразование регистра |
-| [text-lheight]   | `string`, `object`, `array` | Межстрочный интервал |
+| props | Values | Description |
+|-------|--------|-------------|
+| [text-size]      | `small` `default` `big` `h1` `h2` `h3` `h4` `h5` `h6` | Размер текста |
+| [text-weight]    | `default` `thin` `light` `medium` `bold` `black` | Насыщенность |
+| [text-align]     | `left` `center` `right` `justify` | Горизонтальное выравнивание |
+| [text-valign]    | `baseline` `bottom` `middle` `sub` `super` `text-bottom` `text-top` `top` | Вертикальное выравнивание |
+| [text-wrap]      | `nowrap` `break` `ellipsis` `three-line` `two-line` | Перенос и обрезание |
+| [text-style]     | `italic` `strike` `underline` `overline` | Стили (подчеркнутый/перечеркнутый) |
+| [text-transform] | `none` `capitalize` `lowercase` `uppercase` | Преобразование регистра |
+| [text-lheight]   | `default` `medium` `large` | Межстрочный интервал |
+| [text-color]     | `${themeName}` - [Create Theme][create_theme] | Цвет текста |
 
-## Color
-
-Set the color depending on the [created theme][create_theme], used `text color` value.
-
-```jsx
-<Text text-color='...'></Text>
-```
-
-```jsx
-/*react*/
-<script>
-const { Text, Example } = EvoKit;
-
-export default class ExampleList extends React.Component {
-    render() {
-        return (
-            <Example values={['success', 'info', 'warning', 'danger']}>
-                {(value) => (
-                    <Text text-color={value}>
-                        Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.." Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке, некоторые - намеренно (например, юмористические варианты).
-                    </Text>
-                )}
-            </Example>
-        )
-    }
-}
-</script>
-```
-
-## Size
+### `text-size`
 
 ```jsx
 <Text text-size='...'></Text>
@@ -90,7 +74,7 @@ export default class ExampleList extends React.Component {
 </script>
 ```
 
-## Weight
+### `text-weight`
 
 ```jsx
 <Text text-weight='...'></Text>
@@ -117,7 +101,7 @@ export default class ExampleList extends React.Component {
 </script>
 ```
 
-## Align
+### `text-align`
 
 ```jsx
 <Text text-align='...'></Text>
@@ -144,7 +128,7 @@ export default class ExampleList extends React.Component {
 </script>
 ```
 
-## Valign
+### `text-valign`
 
 ```jsx
 <Text text-valign='...'></Text>
@@ -178,7 +162,7 @@ export default class ExampleList extends React.Component {
 </script>
 ```
 
-## Wrap
+### `text-wrap`
 
 ```jsx
 <Text text-wrap='...'></Text>
@@ -206,7 +190,7 @@ export default class ExampleList extends React.Component {
 </script>
 ```
 
-## Style
+### `text-style`
 
 ```jsx
 <Text text-style='...'></Text>
@@ -233,7 +217,7 @@ export default class ExampleList extends React.Component {
 </script>
 ```
 
-## Transform
+### `text-transform`
 
 ```jsx
 <Text text-transform='...'></Text>
@@ -260,7 +244,7 @@ export default class ExampleList extends React.Component {
 </script>
 ```
 
-## Lheight
+### `text-lheight`
 
 ```jsx
 <Text text-lheight='...'></Text>
@@ -277,6 +261,35 @@ export default class ExampleList extends React.Component {
             <Example values={['default', 'medium', 'large']}>
                 {(value) => (
                     <Text text-align='left' text-lheight={value}>
+                        Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.." Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке, некоторые - намеренно (например, юмористические варианты).
+                    </Text>
+                )}
+            </Example>
+        )
+    }
+}
+</script>
+```
+
+### `text-color`
+
+Set the color depending on the [created theme][create_theme], used `text color` value.
+
+```jsx
+<Text text-color='...'></Text>
+```
+
+```jsx
+/*react*/
+<script>
+const { Text, Example } = EvoKit;
+
+export default class ExampleList extends React.Component {
+    render() {
+        return (
+            <Example values={['success', 'info', 'warning', 'danger']}>
+                {(value) => (
+                    <Text text-color={value}>
                         Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.." Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке, некоторые - намеренно (например, юмористические варианты).
                     </Text>
                 )}

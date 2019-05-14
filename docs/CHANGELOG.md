@@ -37,7 +37,7 @@
 // good
 <Box box-ref={fn}>
 ```
-- Replace block item prop:
+- Replace block element prop:
 ``` jsx
 // bad
 <Grid.Item grid-width={val}>
