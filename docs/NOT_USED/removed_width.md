@@ -1,4 +1,4 @@
-[grid]: blocks/grid.md
+[grid]: packages/evokit-grid/
 
 # Width
 

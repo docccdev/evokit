@@ -1,7 +1,7 @@
-[list]: blocks/list.md
-[grid]: blocks/grid.md
-[box]: blocks/box.md
-[text]: blocks/text.md
+[list]: packages/evokit-list/
+[grid]: packages/evokit-grid/
+[box]: packages/evokit-box/
+[text]: packages/evokit-text/
 
 # Evokit - Form
 

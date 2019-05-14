@@ -2,6 +2,6 @@
 
 * [EXAMPLES](examples/)
 
-* [CHANGELOG](changelog/)
+* [CHANGELOG](CHANGELOG.md)
 
 * [FUTURE](future/)

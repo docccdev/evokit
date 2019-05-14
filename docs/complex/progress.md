@@ -1,5 +1,5 @@
-[box]: blocks/box.md
-[text]: blocks/text.md
+[box]: packages/evokit-box/
+[text]: packages/evokit-text/
 
 # Evokit - Progress
 

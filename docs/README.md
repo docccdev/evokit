@@ -1,11 +1,16 @@
 [react]: //www.npmjs.com/package/react
 [prop-types]: //www.npmjs.com/package/prop-types
 [classnames]: //www.npmjs.com/package/classnames
-[variables]: /base/variables.md
+[variables]: /docs/base/variables.md
 
 # EvoKit
 
-Основа для разработки быстрых и мощных веб-интерфейсов. Он основан на принципе разделения интерфейса на независимые единицы. Это позволяет вам легко и быстро создавать интерфейс любой сложности и повторно использовать существующий код, избегая «Copy-Paste».
+[![](https://img.shields.io/npm/v/evokit.svg?style=flat-square&colorB=blue)](https://www.npmjs.com/package/evokit)
+
+http://evokit.net
+
+Easy and fast React front-end framework.
+Based on the principle of dividing the interface into independent blocks.
 
 ---
 

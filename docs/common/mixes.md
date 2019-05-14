@@ -1,7 +1,7 @@
 [mix-round]: #mix-round
 [mix-width]: #mix-width
 
-[griditem]: blocks/grid.md#griditem
+[griditem]: packages/evokit-grid/#griditem
 
 
 # EvoKit - Mixes

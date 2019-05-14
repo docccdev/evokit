@@ -1,7 +1,7 @@
-[box]: blocks/box.md
-[text]: blocks/text.md
-[link]: blocks/link.md
-[list]: blocks/list.md
+[box]: packages/evokit-box/
+[text]: packages/evokit-text/
+[link]: packages/evokit-link/
+[list]: packages/evokit-list/
 
 # Палитра цветов
 

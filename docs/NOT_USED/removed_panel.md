@@ -2,7 +2,7 @@
 [sizes]: base/sizes.md
 [media]: base/media.md
 
-[grid]: blocks/grid.md
+[grid]: packages/evokit-grid/
 
 # Panel
 

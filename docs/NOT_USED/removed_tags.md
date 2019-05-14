@@ -1,7 +1,7 @@
 [colors]: base/colors.md
 
-[text]: blocks/text.md
-[link]: blocks/link.md
+[text]: packages/evokit-text/
+[link]: packages/evokit-link/
 
 # Tags
 
