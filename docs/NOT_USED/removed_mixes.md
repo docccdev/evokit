@@ -4,6 +4,8 @@
 [griditem]: packages/evokit-grid/#griditem
 
 
+!> DEPRECATED
+
 # EvoKit - Mixes
 
 Mixes are just the way to use common behaviors and styles.

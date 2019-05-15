@@ -8,18 +8,12 @@ Easy and fast React front-end framework. Based on the principle of dividing the 
 
 ---
 
-## Quick start
-
-> Install dependencies [react], [prop-types] to make it work.
-
-```bash
-npm i react prop-types --save
-```
-
 ### Install
 
+!> Install dependencies [react], [prop-types] to make it work.
+
 ```bash
-npm i evokit --save
+npm install evokit --save
 ```
 
 ### Usage

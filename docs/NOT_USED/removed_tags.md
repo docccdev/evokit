@@ -3,6 +3,8 @@
 [text]: packages/evokit-text/
 [link]: packages/evokit-link/
 
+!> DEPRECATED
+
 # Tags
 
 Блок `.ek-tags` создает "облако тегов".

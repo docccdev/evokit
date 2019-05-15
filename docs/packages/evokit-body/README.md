@@ -16,7 +16,7 @@
 
 # EvoKit - Body
 
-[![](https://img.shields.io/npm/v/evokit.svg?style=flat-square&colorB=blue)](https://www.npmjs.com/package/evokit)
+[![](https://img.shields.io/npm/v/evokit-body.svg?style=flat-square&colorB=blue)](https://www.npmjs.com/package/evokit-body)
 
 Used for body of the web page and sets the basic styles. Contains two elements `<Body>` and `<Body.Section>`.
 

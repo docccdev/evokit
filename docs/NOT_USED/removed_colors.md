@@ -3,6 +3,8 @@
 [link]: packages/evokit-link/
 [list]: packages/evokit-list/
 
+!> DEPRECATED
+
 # Палитра цветов
 
 По умолчанию блоки прозрачные.

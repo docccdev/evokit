@@ -4,8 +4,6 @@
   * [API](/base/api.md)
   * [Variables](/base/variables.md)
   * [Media](/base/media.md)
-  * [Sizes](/base/sizes.md)
-  * [Mixes](/common/mixes.md)
 
 * PACKAGES
   * [evokit-body](packages/evokit-body/)

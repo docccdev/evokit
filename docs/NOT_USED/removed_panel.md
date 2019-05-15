@@ -1,8 +1,10 @@
 [colors]: NOT_USED/removed_colors.md
-[sizes]: base/sizes.md
+[sizes]: NOT_USED/removed_sizes.md
 [media]: base/media.md
 
 [grid]: packages/evokit-grid/
+
+!> DEPRECATED
 
 # Panel
 

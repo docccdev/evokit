@@ -1,14 +1,14 @@
 [panel]: NOT_USED/removed_panel.md
 [tags]: NOT_USED/removed_tags.md
 [width]: NOT_USED/removed_width.md
+[mixes]: NOT_USED/removed_mixes.md
+[sizes]: NOT_USED/removed_sizes.md
 
 [media]: base/media.md
-[size]: base/sizes.md
 [text]: base/text.md
 [colors]: base/colors.md
 [api]: base/api.md
 
-[mixes]: common/mixes.md
 
 [body]: packages/evokit-body/
 [grid]: packages/evokit-grid/
@@ -544,7 +544,7 @@
 
 - Исправлен модификатор размера для [list][list].
 - Для модификатора `.ek-list_theme_divider` добавлены [media][media] правила.
-- Модификаторы для обнуления [size][size]:
+- Модификаторы для обнуления [sizes][sizes]:
     - `.ek-box_margin_none`
     - `.ek-box_padding_none`
     - `.ek-box_size_none`
