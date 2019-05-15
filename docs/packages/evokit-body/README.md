@@ -54,7 +54,7 @@ import 'evokit-body/style.css';
 
 #### Variables
 
-!> This set css variables is default, if you want to override one or more value, please use the rules [css-variable-usage], define them below the css import.
+!> This set of css variables is default, if you want to override one or more value, please use the rules [css-variable-usage], define them below the css import.
 
 ```css
 :root {
@@ -177,7 +177,7 @@ export default class ExampleBox extends React.Component {
 !> Set the background color depending on the [created theme][create_theme], used `background color` value.
 
 ```jsx
-<Body box-background='...'></Body>
+<Body body-background='...'></Body>
 ```
 
 ```jsx
