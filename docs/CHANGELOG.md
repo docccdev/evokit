@@ -28,34 +28,16 @@
 
 
 ## 3.0.0
+
+##### Added
+
 - New [API][api].
-- Remove peerDependencies `classnames`.
-- Replace prop `domRef` to `${blockName}-ref`, see example:
-``` jsx
-// bad
-<Box domRef={fn}>
-// good
-<Box box-ref={fn}>
-```
-- Replace block element prop:
-``` jsx
-// bad
-<Grid.Item grid-width={val}>
-// good
-<Grid.Item grid-item-width={val}>
-```
-- Remove [mixes][Mixes] block. The prop `mix-*` replaced with props target block, example:
-``` jsx
-// bad
-<Box mix-width={val}>
-<Image mix-round={val}>
-<Grid.Item mix-width={val}>
-// good
-<Box box-width={val}>
-<Image image-round={val}>
-<Grid.Item grid-item-width={val}>
-```
-- Remove static themes from package, please use [Theme Creator][create_theme]:
+
+##### Removed
+
+- PeerDependencies `classnames`.
+- [Mixes][Mixes] block.
+- Static themes from package, please use [Theme Creator][create_theme]:
     - `themes.css`
     - `theme.danger.css`
     - `theme.dark.css`
@@ -70,6 +52,34 @@
     - `theme.success.css`
     - `theme.warning.css`
 
+
+##### Changed
+
+- The prop `mix-*` replaced with props target block, example:
+``` jsx
+// bad
+<Box mix-width={val}>
+<Image mix-round={val}>
+<Grid.Item mix-width={val}>
+// good
+<Box box-width={val}>
+<Image image-round={val}>
+<Grid.Item grid-item-width={val}>
+```
+- Replace prop `domRef` to `${blockName}-ref`, see example:
+``` jsx
+// bad
+<Box domRef={fn}>
+// good
+<Box box-ref={fn}>
+```
+- Replace block element prop:
+``` jsx
+// bad
+<Grid.Item grid-width={val}>
+// good
+<Grid.Item grid-item-width={val}>
+```
 
 ## 2.1.5
 - Init `CSSModules`.
