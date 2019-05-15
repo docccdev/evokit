@@ -1,76 +1,179 @@
-[sizes]: base/sizes.md
+[create_theme]: create_theme/
 
-# Body
+[body]: #body
+[bodysection]: #bodysection
 
-Добавьте класс `.ek-body` для тега `<body>`, чтобы определить дефолтные стили на странице. Элемент `ek-body__section` ограничивает контент по ширине и центрирует его.
+[body-size]: #body-size
+[body-indent]: #body-indent
+[body-background]: #body-background
+[body-color]: #body-color
 
-|         Name        |             Value            |
-|---------------------|------------------------------|
-|  `font-family`      |  "Roboto", Arial, sans-serif |
-|  `font-size`        |  13px                        |
-|  `font-weight`      |  400                         |
-|  `color`            |  #3c3c3c                     |
-|  `background-color` |  #FFF                        |
-|  `min-width`        |  1000px                      |
+# EvoKit - Body
 
+Блок предназначен для хранения содержания контента страницы
 
 ---
 
-## Размер
+## Usage
 
-Модификатор размера задает максимальную ширину для `.ek-body__section`. По умолчаню `min-width: 1000px` и `max-width: 1200px`.
+- [Body][body]
+- [Body.Section][bodysection]
 
-|          Class        |        Description        |
-|-----------------------|---------------------------|
-|  `.ek-body_size_xl`   |  `max-width: 1440px`      |
-|  `.ek-body_size_xxl`  |  `max-width: 1640px`      |
-|  `.ek-body_size_xxxl` |  `max-width: 1840px`      |
+```jsx
+import { Body } from 'evokit-body';
+import 'evokit-body/style.css';
 
-``` html
-<div class='ek-body'>
-    <div class='ek-body__section'>
-        header
-    </div>
-    <div class='ek-body__section'>
+<Body>
+    <Body.Section>
         content
-    </div>
-    <div class='ek-body__section'>
-        footer
-    </div>
-</div>
+    <Body.Section>
+</Body>
+
 ```
 
 ---
 
-## Горизонтальные отступы
+## Body
 
-Модификатор задает отступ слева и справа.
+| props | Values | Description |
+|-------|--------|-------------|
+| [body-size]       | `xl` `xxl` `xxxl` | Максимальная ширина |
+| [body-indent]     | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Внутренние отступы по бокам |
+| [body-background] | `${themeName}` - [Create Theme][create_theme] | Цвет фона |
+| [body-color]      | `${themeName}` - [Create Theme][create_theme] | Цвет текста |
 
-|          Class        |        Description        |
-|-----------------------|---------------------------|
-| `.ek-body_indent_`[sizes] | отступ слева и справа |
+---
 
-``` html
-<div class='ek-body ek-body_indent_m'>
-    <div class='ek-body__section'>
-        content
-    </div>
-</div>
+### `body-size`
+
+> Задает максимальную ширину. По умолчаню `1200px`
+
+- `xl` - максимальная ширина `1440px`
+- `xxl` - максимальная ширина `1640px`
+- `xxxl` - максимальная ширина `1840px`
+
+```jsx
+<Body body-size='...'></Body>
 ```
 
 ```jsx
 /*react*/
 <script>
-const { Body } = EvoKit;
+const { Body, Example } = EvoKit;
 
-export default class Example extends React.Component {
+export default class ExampleBox extends React.Component {
     render() {
         return (
-            <Body body-indent='m'>
-                <Body.Section>
-                    content
-                </Body.Section>
-            </Body>
+            <Example values={['xl', 'xxl', 'xxxl']}>
+                {(value) => (
+                    <Body body-size={value}>
+                        <Body.Section>
+                            <Example.Box>
+                                {`body-size='${value || ''}'`}
+                            </Example.Box>
+                        </Body.Section>
+                    </Body>
+                )}
+            </Example>
+        )
+    }
+}
+</script>
+```
+
+---
+
+### `body-indent`
+
+- `none` - Отступы отсутствуют
+- `xxs, xs, s, m, l, xl, xxl` - Каждое последующее значение больше предыдущего на 5px, `xxs=5px`, `xs=10px`, `s=15px` и т.д.
+
+```jsx
+<Body body-indent='...'></Body>
+```
+
+```jsx
+/*react*/
+<script>
+const { Body, Example } = EvoKit;
+
+export default class ExampleBox extends React.Component {
+    render() {
+        return (
+            <Example values={['none', 'xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl']}>
+                {(value) => (
+                    <Body body-indent={value} body-background='muted'>
+                        <Body.Section>
+                            <Example.Box>
+                                {`body-indent='${value || ''}'`}
+                            </Example.Box>
+                        </Body.Section>
+                    </Body>
+                )}
+            </Example>
+        )
+    }
+}
+</script>
+```
+
+
+### `body-background`
+
+Set the background color depending on the [created theme][create_theme], used `background color` value.
+
+```jsx
+<Body box-background='...'></Body>
+```
+
+```jsx
+/*react*/
+<script>
+const { Body, Example } = EvoKit;
+
+export default class ExampleBox extends React.Component {
+    render() {
+        return (
+            <Example values={['success', 'info', 'warning', 'danger']}>
+                {(value) => (
+                    <Body body-background={value}>
+                        <Body.Section>
+                            {`body-indent='${value || ''}'`}
+                        </Body.Section>
+                    </Body>
+                )}
+            </Example>
+        )
+    }
+}
+</script>
+```
+
+### `body-color`
+
+Set the color depending on the [created theme][create_theme], used `text color` value.
+
+```jsx
+<Body body-color='...'></Body>
+```
+
+```jsx
+/*react*/
+<script>
+const { Body, Example } = EvoKit;
+
+export default class ExampleList extends React.Component {
+    render() {
+        return (
+            <Example values={['success', 'info', 'warning', 'danger']}>
+                {(value) => (
+                    <Body body-color={value}>
+                        <Body.Section>
+                            {`body-indent='${value || ''}'`}
+                        </Body.Section>
+                    </Body>
+                )}
+            </Example>
         )
     }
 }
