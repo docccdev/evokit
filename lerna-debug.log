@@ -1,6 +1,0 @@
-30 error Error: Command failed: git commit -F /tmp/578d3458-89d1-4b61-9de6-6124214ca699/lerna-commit.txt
-30 error На ветке v3.0.0_rethinking
-30 error нечего коммитить, нет изменений в рабочем каталоге
-30 error
-30 error     at makeError (/home/emarchenko/workspace/evokit/node_modules/execa/index.js:174:9)
-30 error     at Promise.all.then.arr (/home/emarchenko/workspace/evokit/node_modules/execa/index.js:278:16)
