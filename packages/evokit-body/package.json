@@ -4,7 +4,7 @@
   "description": "Used for body of the web page and sets the basic styles.",
   "main": "index.js",
   "scripts": {
-    "test": "echo testing test command"
+    "test": "echo testing test command test"
   },
   "repository": {
     "type": "git",
