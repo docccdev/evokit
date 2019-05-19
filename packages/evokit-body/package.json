@@ -1,6 +1,6 @@
 {
   "name": "evokit-body",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Used for body of the web page and sets the basic styles.",
   "main": "index.js",
   "scripts": {
