@@ -1,0 +1,15 @@
+{
+  "name": "evokit-body",
+  "version": "0.0.1",
+  "description": "Used for body of the web page and sets the basic styles.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo testing test command"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/docccdev/evokit.git"
+  },
+  "author": "docccdev",
+  "license": "MIT"
+}

@@ -12,7 +12,9 @@
     "docs:watch": "nodemon -e md --exec 'npm run docs:build'"
   },
   "nodemonConfig": {
-    "ignore": ["docs/*"]
+    "ignore": [
+      "docs/*"
+    ]
   },
   "jest": {
     "snapshotSerializers": [
@@ -38,8 +40,8 @@
   "author": "docccdev",
   "license": "MIT",
   "peerDependencies": {
-    "react": "*",
-    "prop-types": "*"
+    "prop-types": "*",
+    "react": "*"
   },
   "devDependencies": {
     "@babel/core": "^7.4.0",
@@ -64,6 +66,7 @@
     "eslint-plugin-react": "^7.13.0",
     "http-server": "^0.11.1",
     "jest": "^24.5.0",
+    "lerna": "^3.14.1",
     "mini-css-extract-plugin": "^0.4.4",
     "nodemon": "^1.19.0",
     "postcss-conditionals": "^2.1.0",
