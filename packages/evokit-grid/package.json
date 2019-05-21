@@ -1,7 +1,7 @@
 {
-  "name": "evokit-body",
+  "name": "evokit-grid",
   "version": "1.0.3",
-  "description": "Used for body of the web page and sets the basic styles.",
+  "description": "<Grid>",
   "main": "index.js",
   "scripts": {
     "test": "echo testing test command"
