@@ -87,5 +87,16 @@
     "webpack": "^4.19.1",
     "webpack-cli": "^3.1.1",
     "webpack-fix-style-only-entries": "0.0.4"
+  },
+  "dependencies": {
+    "evokit-body": "file:packages/evokit-body",
+    "evokit-box": "file:packages/evokit-box",
+    "evokit-grid": "file:packages/evokit-grid",
+    "evokit-image": "file:packages/evokit-image",
+    "evokit-line": "file:packages/evokit-line",
+    "evokit-link": "file:packages/evokit-link",
+    "evokit-list": "file:packages/evokit-list",
+    "evokit-picture": "file:packages/evokit-picture",
+    "evokit-text": "file:packages/evokit-text"
   }
 }

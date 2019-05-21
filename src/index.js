@@ -1,15 +1,15 @@
+import { Box } from 'evokit-box';
+import { Text } from 'evokit-text';
+import { Body } from 'evokit-body';
+import { Grid } from 'evokit-grid';
+import { List } from 'evokit-list';
+import { Link } from 'evokit-link';
+import { Picture } from 'evokit-picture';
+import { Line } from 'evokit-line';
+import { Image } from 'evokit-image';
+
 import { Example } from './Example';
 import { ThemeGenerator } from './ThemeGenerator';
-
-import { Box } from '../packages/evokit-box';
-import { Text } from '../packages/evokit-text';
-import { Body } from '../packages/evokit-body';
-import { Grid } from '../packages/evokit-grid';
-import { List } from '../packages/evokit-list';
-import { Link } from '../packages/evokit-link';
-import { Picture } from '../packages/evokit-picture';
-import { Line } from '../packages/evokit-line';
-import { Image } from '../packages/evokit-image';
 
 export {
     Example,
