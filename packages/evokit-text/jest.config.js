@@ -1,8 +1,1 @@
-module.exports = {
-    "snapshotSerializers": [
-        "enzyme-to-json/serializer"
-    ],
-    "setupFiles": [
-        "../../setupTests.js"
-    ]
-};
+module.exports = require('../../config/jest.config.js');

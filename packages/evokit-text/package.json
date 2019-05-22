@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --colors",
-    "build": "webpack --progress"
+    "build": "webpack --colors"
   },
   "repository": {
     "type": "git",
