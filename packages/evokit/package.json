@@ -1,0 +1,40 @@
+{
+  "name": "evokit",
+  "version": "3.0.0",
+  "description": "React UI Components for developing fast and powerful web interfaces",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "webpack --progress --config webpack.config.js",
+    "prepublishOnly": "webpack --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/docccdev/evokit.git"
+  },
+  "keywords": [
+    "uikit",
+    "bem",
+    "css",
+    "stylus",
+    "html",
+    "jsx",
+    "react"
+  ],
+  "author": "docccdev",
+  "license": "MIT",
+  "peerDependencies": {
+    "prop-types": "*",
+    "react": "*"
+  },
+  "dependencies": {
+    "evokit-body": "file:../evokit-body",
+    "evokit-box": "file:../evokit-box",
+    "evokit-grid": "file:../evokit-grid",
+    "evokit-image": "file:../evokit-image",
+    "evokit-line": "file:../evokit-line",
+    "evokit-link": "file:../evokit-link",
+    "evokit-list": "file:../evokit-list",
+    "evokit-picture": "file:../evokit-picture",
+    "evokit-text": "file:../evokit-text"
+  }
+}

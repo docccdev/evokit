@@ -4,7 +4,7 @@
   "description": "<Text>",
   "main": "index.js",
   "scripts": {
-    "test": "echo testing test command"
+    "test": "jest"
   },
   "repository": {
     "type": "git",

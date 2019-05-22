@@ -18,9 +18,9 @@ var postcssMqpacker = require('css-mqpacker');
 var evokitConfig = require('./evokit.config.js');
 
 const ENTRY_LIST = {
-    './index': path.resolve(__dirname, 'src'),
-    './style': path.resolve(__dirname, 'src/style'),
-    './theme-template': path.resolve(__dirname, 'src/theme-template'),
+    './index': path.resolve(__dirname, 'index'),
+    './style': path.resolve(__dirname, 'style'),
+    './theme-template': path.resolve(__dirname, 'theme-template'),
 };
 
 module.exports = {
@@ -37,7 +37,7 @@ module.exports = {
         rules: [
             {
                 test: /\.jsx?$/,
-                loader: ['babel-loader', 'eslint-loader'],
+                use: ['babel-loader', 'eslint-loader'],
                 exclude: /node_modules/,
             },
             {

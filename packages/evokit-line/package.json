@@ -3,9 +3,6 @@
   "version": "1.0.4",
   "description": "<Line>",
   "main": "index.js",
-  "scripts": {
-    "test": "echo testing test command"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/docccdev/evokit.git"
