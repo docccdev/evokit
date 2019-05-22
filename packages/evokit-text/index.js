@@ -1,13 +1,5 @@
-import { newBlock } from '../../lib/newBlock';
-
-export const Text = newBlock('span', 'text', [
-    'color',
-    'size',
-    'weight',
-    'align',
-    'valign',
-    'wrap',
-    'style',
-    'transform',
-    'lheight',
-]);
+if (process.env.NODE_ENV === 'production') {
+    module.exports = require('./evokit-text.min.js');
+} else {
+    module.exports = require('./evokit-text.js');
+}

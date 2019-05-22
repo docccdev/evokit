@@ -4,7 +4,9 @@
   "description": "<Text>",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --colors",
+    "build": "webpack --progress",
+    "build:min": "webpack --progress --env production"
   },
   "repository": {
     "type": "git",

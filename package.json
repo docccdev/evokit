@@ -2,6 +2,7 @@
   "scripts": {
     "test": "lerna run test",
     "build": "lerna run build",
+    "build:min": "lerna run build:min",
     "bootstrap": "lerna bootstrap",
     "docs": "http-server ./ -p 9090",
     "docs:build": "copyfiles ./*.md ./packages/**/*.md docs",
