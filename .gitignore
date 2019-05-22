@@ -2,6 +2,6 @@ node_modules
 dist
 lerna-debug.log
 .DS_Store
-packages/**/index.js
-packages/**/style.css
-packages/**/theme.css
+packages/*/index.js
+packages/*/style.css
+packages/*/theme.css

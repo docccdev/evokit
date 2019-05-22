@@ -1,6 +1,9 @@
-import { newBlock } from '../../lib/newBlock';
+import { newBlock } from '../../../lib/newBlock';
 
-export const Picture = newBlock('picture', 'picture', [
+export const Image = newBlock('img', 'image', [
+    'align',
+    'valign',
+    'mirror',
     'fit',
     'round',
     'round-top',
@@ -12,5 +15,3 @@ export const Picture = newBlock('picture', 'picture', [
     'round-bottom-left',
     'round-bottom-right',
 ]);
-
-Picture.Item = newBlock('img', 'picture__item');

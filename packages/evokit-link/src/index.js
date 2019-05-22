@@ -1,4 +1,4 @@
-import { newBlock } from '../../lib/newBlock';
+import { newBlock } from '../../../lib/newBlock';
 
 export const Link = newBlock('a', 'link', [
     'color',
