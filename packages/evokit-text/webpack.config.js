@@ -1,58 +1,67 @@
-module.exports = function(env) {
-    const isProd = env === 'production';
+var MiniCssExtractPlugin = require('mini-css-extract-plugin');
+var FixStyleOnlyEntriesPlugin = require('webpack-fix-style-only-entries');
 
-    return {
-        mode: isProd ? 'production' : 'development',
-        entry: './src/index',
-        output: {
-            library: 'EvoKitText',
-            path: __dirname,
-            filename: isProd ? 'evokit-text.min.js' : 'evokit-text.js',
-            libraryTarget: 'umd',
-            globalObject: 'this'
-        },
-        module: {
-            rules: [
-                {
-                    test: /\.jsx?$/,
-                    use: ['babel-loader', 'eslint-loader'],
-                    exclude: /node_modules/,
-                }
-            ],
-        },
-        externals: {
-            'react': {
-                root: 'React',
-                commonjs: 'react',
-                commonjs2: 'react',
-                amd: 'react',
+var LIBRARY_NAME = 'EvoKitText';
+var ENTRY = {
+    index: './src/index.js',
+    style: './style.sss',
+    theme: './theme-template.sss'
+};
+
+module.exports = {
+    mode: 'production',
+    entry: ENTRY,
+    output: {
+        library: LIBRARY_NAME,
+        path: __dirname,
+        filename: '[name].js',
+        libraryTarget: 'umd',
+        globalObject: 'this'
+    },
+    module: {
+        rules: [
+            {
+                test: /\.jsx?$/,
+                use: ['babel-loader', 'eslint-loader'],
+                exclude: /node_modules/
             },
-            'classnames': {
-                root: 'classNames',
-                commonjs: 'classnames',
-                commonjs2: 'classnames',
-                amd: 'classnames',
-            },
-            'prop-types': {
-                root: 'PropTypes',
-                commonjs: 'prop-types',
-                commonjs2: 'prop-types',
-                amd: 'prop-types',
+            {
+                test: /\.sss$/,
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    { loader: 'css-loader', options: { importLoaders: 1 }},
+                    'postcss-loader'
+                ]
             }
+        ]
+    },
+    externals: {
+        'react': {
+            root: 'React',
+            commonjs: 'react',
+            commonjs2: 'react',
+            amd: 'react'
         },
-        resolve: {
-            modules: ['node_modules'],
-            extensions: ['.js', '.jsx', '.sss'],
-        },
-        resolveLoader: {
-            modules: ['node_modules'],
-        },
-        stats: {
-            colors: true,
-            entrypoints: false,
-            children: false,
-            modules: false,
-            assetsSort: 'name',
+        'prop-types': {
+            root: 'PropTypes',
+            commonjs: 'prop-types',
+            commonjs2: 'prop-types',
+            amd: 'prop-types'
         }
-    };
+    },
+    plugins: [
+        new FixStyleOnlyEntriesPlugin({
+            extensions: ['sss']
+        }),
+        new MiniCssExtractPlugin({
+            filename: '[name].css'
+        }),
+    ],
+    stats: {
+        colors: true,
+        entrypoints: false,
+        children: false,
+        modules: false,
+        assetsSort: 'name'
+    }
 };
