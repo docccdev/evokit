@@ -39,7 +39,6 @@
     "babel-jest": "^24.5.0",
     "babel-loader": "^8.0.5",
     "babel-plugin-transform-class-properties": "^6.24.1",
-    "classnames": "^2.2.6",
     "copyfiles": "^2.1.0",
     "css-loader": "^1.0.0",
     "css-mqpacker": "^7.0.0",
@@ -68,9 +67,6 @@
     "postcss-mixins": "^6.2.0",
     "postcss-nested": "^4.1.0",
     "postcss-prefixer": "^2.1.0",
-    "prop-types": "^15.6.2",
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0",
     "sugarss": "^2.0.0",
     "webpack": "^4.19.1",
     "webpack-cli": "^3.1.1",
@@ -86,6 +82,9 @@
     "evokit-link": "file:packages/evokit-link",
     "evokit-list": "file:packages/evokit-list",
     "evokit-picture": "file:packages/evokit-picture",
-    "evokit-text": "file:packages/evokit-text"
+    "evokit-text": "file:packages/evokit-text",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
   }
 }

@@ -29,6 +29,7 @@
         "import/prefer-default-export": false,
         "import/no-cycle": false,
         "import/no-unresolved": 0,
+        "import/no-extraneous-dependencies": false,
         "no-underscore-dangle": 0,
         "arrow-body-style": 0,
         "arrow-parens": 0

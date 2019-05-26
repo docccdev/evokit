@@ -128,12 +128,6 @@ module.exports = {
             commonjs2: 'react',
             amd: 'react',
         },
-        'classnames': {
-            root: 'classNames',
-            commonjs: 'classnames',
-            commonjs2: 'classnames',
-            amd: 'classnames',
-        },
         'prop-types': {
             root: 'PropTypes',
             commonjs: 'prop-types',

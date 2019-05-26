@@ -25,16 +25,5 @@
   "peerDependencies": {
     "prop-types": "*",
     "react": "*"
-  },
-  "dependencies": {
-    "evokit-body": "file:../evokit-body",
-    "evokit-box": "file:../evokit-box",
-    "evokit-grid": "file:../evokit-grid",
-    "evokit-image": "file:../evokit-image",
-    "evokit-line": "file:../evokit-line",
-    "evokit-link": "file:../evokit-link",
-    "evokit-list": "file:../evokit-list",
-    "evokit-picture": "file:../evokit-picture",
-    "evokit-text": "file:../evokit-text"
   }
 }
