@@ -1,7 +1,8 @@
 {
   "scripts": {
     "test": "lerna run test",
-    "build": "lerna run build --ignore evokit && lerna run build --scope evokit",
+    "build": "lerna run --ignore evokit build && lerna run --scope evokit build",
+    "watch": "lerna run --parallel --stream watch",
     "bootstrap": "lerna bootstrap",
     "docs": "http-server ./ -p 9090",
     "docs:build": "copyfiles ./*.md ./packages/**/*.md docs",

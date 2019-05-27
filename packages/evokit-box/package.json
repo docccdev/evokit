@@ -4,7 +4,8 @@
   "description": "<Box>",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --colors"
+    "build": "webpack --colors",
+    "watch": "webpack --colors --progress --watch --mode=development"
   },
   "repository": {
     "type": "git",

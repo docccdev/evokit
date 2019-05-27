@@ -51,7 +51,8 @@ module.exports = function(libName, libPath, entry) {
         },
         plugins: [
             new FixStyleOnlyEntriesPlugin({
-                extensions: ['sss']
+                extensions: ['sss'],
+                silent: true
             }),
             new MiniCssExtractPlugin({
                 filename: '[name].css'
