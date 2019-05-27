@@ -35,6 +35,7 @@
 
 </head>
 <body>
+    <script src="./_media/docs.js"></script>
     <div id="app"></div>
     <button
         type="button"
@@ -55,24 +56,12 @@
         onClick="topFunction();"
         id="scrollToTopButton"
     >&uarr;</button>
-    <script src="//unpkg.com/react/umd/react.production.min.js"></script>
-    <script src="//unpkg.com/react-dom/umd/react-dom.production.min.js"></script>
-    <script src="//unpkg.com/prop-types/prop-types.min.js"></script>
-    <script src="//unpkg.com/classnames/index.js"></script>
-    <script src="//unpkg.com/babel-standalone@6/babel.min.js"></script>
-    <script src="//unpkg.com/docsify-demo-box-react/dist/docsify-demo-box-react.min.js"></script>
-
-    <!--
-    <script src="//unpkg.com/evokit/dist/index.js"></script>
-    -->
-    <script src="../packages/evokit/dist/index.js"></script>
 
     <script>
         var jsResources = [
             '<scr'+'ipt src="//unpkg.com/react/umd/react.production.min.js"></scr'+'ipt>',
             '<scr'+'ipt src="//unpkg.com/react-dom/umd/react-dom.production.min.js"></scr'+'ipt>',
             '<scr'+'ipt src="//unpkg.com/prop-types/prop-types.min.js"></scr'+'ipt>',
-            '<scr'+'ipt src="//unpkg.com/classnames/index.js"></scr'+'ipt>',
             '<scr'+'ipt src="//unpkg.com/evokit/dist/index.js"></scr'+'ipt>'
         ];
 
@@ -101,21 +90,6 @@
             ],
             onlyCover: true
         };
-
-        window.onscroll = function() {scrollFunction()};
-
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                document.getElementById("scrollToTopButton").style.display = "block";
-            } else {
-                document.getElementById("scrollToTopButton").style.display = "none";
-            }
-        }
-
-        function topFunction() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        }
     </script>
     <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
     <script src="//unpkg.com/prismjs/components/prism-bash.min.js"></script>

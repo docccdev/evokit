@@ -3,10 +3,10 @@
     "test": "lerna run test",
     "bootstrap": "lerna bootstrap",
     "build": "lerna run --ignore evokit build && lerna run --scope evokit build",
-    "build:docs": "copyfiles ./packages/**/*.md docs",
     "watch": "lerna run --parallel --stream watch",
-    "watch:docs": "nodemon -e md --exec 'npm run docs:build'",
-    "docs": "http-server ./ -p 9090"
+    "docs:build": "webpack --config webpack.docs.config.js && copyfiles ./packages/**/*.md docs",
+    "docs:run": "webpack-dev-server --config webpack.docs.config.js",
+    "docs:watch": "nodemon -e md,js,jsx --exec 'npm run docs:build'"
   },
   "nodemonConfig": {
     "ignore": [
@@ -40,9 +40,11 @@
     "babel-jest": "^24.5.0",
     "babel-loader": "^8.0.5",
     "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-standalone": "^6.26.0",
     "copyfiles": "^2.1.0",
     "css-loader": "^1.0.0",
     "css-mqpacker": "^7.0.0",
+    "docsify-demo-box-react": "^1.1.0",
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.7.1",
     "enzyme-to-json": "^3.3.5",
@@ -52,7 +54,6 @@
     "eslint-plugin-import": "^2.17.2",
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.13.0",
-    "http-server": "^0.11.1",
     "jest": "^24.5.0",
     "lerna": "^3.14.1",
     "mini-css-extract-plugin": "^0.6.0",
@@ -71,6 +72,7 @@
     "sugarss": "^2.0.0",
     "webpack": "^4.19.1",
     "webpack-cli": "^3.1.1",
+    "webpack-dev-server": "^3.4.1",
     "webpack-fix-style-only-entries": "^0.2.1"
   },
   "dependencies": {
