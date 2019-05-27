@@ -18,7 +18,7 @@ var postcssMqpacker = require('css-mqpacker');
 var evokitConfig = require('./evokit.config.js');
 
 const ENTRY_LIST = {
-    './index': path.resolve(__dirname, 'index'),
+    './index': './src/index.js',
     './style': './src/style.css',
     './theme-template': './src/theme.css'
 };
@@ -38,49 +38,8 @@ module.exports = {
             {
                 test: /\.jsx?$/,
                 use: ['babel-loader', 'eslint-loader'],
-                exclude: [/node_modules/, /evokit-(body|box|grid|image|line|link|list|picture|text)/],
+                exclude: [/node_modules/, /evokit-(.*\/)/],
             },
-            // {
-            //     test: /\.sss$/,
-            //     use: [
-            //         {
-            //             loader: MiniCssExtractPlugin.loader,
-            //         },
-            //         {
-            //             loader: 'css-loader',
-            //             options: {
-            //                 importLoaders: 1,
-            //             }
-            //         },
-            //         {
-            //             loader: 'postcss-loader',
-            //             options: {
-            //                 parser: 'sugarss',
-            //                 plugins: [
-            //                     postcssImport(),
-            //                     postcssMixins(),
-            //                     postcssEach(),
-            //                     postcssFor(),
-            //                     postcssMath(),
-            //                     postcssConditionals(),
-            //                     postcssNested(),
-            //                     // postcssCustomProperties({
-            //                     //     preserve: false,
-            //                     //     importFrom: [evokitConfig]
-            //                     // }),
-            //                     // postcsscustomMedia({
-            //                     //     preserve: false,
-            //                     //     importFrom: [evokitConfig]
-            //                     // }),
-            //                     postcssPrefixer({
-            //                         prefix: 'ek-'
-            //                     }),
-            //                     postcssMqpacker(),
-            //                 ]
-            //             }
-            //         }
-            //     ]
-            // },
             {
                 test: /\.css$/,
                 use: [
@@ -96,23 +55,6 @@ module.exports = {
                         options: {
                             plugins: [
                                 postcssImport(),
-                                // postcssMixins(),
-                                // postcssEach(),
-                                // postcssFor(),
-                                // postcssMath(),
-                                // postcssConditionals(),
-                                // postcssNested(),
-                                // postcssCustomProperties({
-                                //     preserve: false,
-                                //     importFrom: [evokitConfig]
-                                // }),
-                                // postcsscustomMedia({
-                                //     preserve: false,
-                                //     importFrom: [evokitConfig]
-                                // }),
-                                // postcssPrefixer({
-                                //     prefix: 'ek-'
-                                // }),
                                 postcssMqpacker(),
                             ]
                         }
