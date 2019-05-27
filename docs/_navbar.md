@@ -2,6 +2,6 @@
 
 * [EXAMPLES](examples/)
 
-* [CHANGELOG](CHANGELOG.md)
+* [CHANGELOG](packages/evokit/CHANGELOG.md)
 
 * [FUTURE](future/)

@@ -10,5 +10,5 @@
 
 * Based on the principle of dividing the interface into independent blocks
 
-[GitHub](https://github.com/docccdev/evokit)
-[Usage](/common/usage.md)
+[GITHUB](https://github.com/docccdev/evokit)
+[README](packages/evokit/README.md)

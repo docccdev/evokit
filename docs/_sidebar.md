@@ -5,19 +5,17 @@
   * [Variables](/base/variables.md)
   * [Media](/base/media.md)
 
-* PACKAGES
-  * [evokit-body](packages/evokit-body/)
-  * [evokit-box](packages/evokit-box/)
-  * [evokit-grid](packages/evokit-grid/)
-  * [evokit-image](packages/evokit-image/)
-  * [evokit-line](packages/evokit-line/)
-  * [evokit-link](packages/evokit-link/)
-  * [evokit-list](packages/evokit-list/)
-  * [evokit-picture](packages/evokit-picture/)
-  * [evokit-text](packages/evokit-text/)
+* BLOCKS
+  * [Body](packages/evokit-body/)
+  * [Box](packages/evokit-box/)
+  * [Grid](packages/evokit-grid/)
+  * [Image](packages/evokit-image/)
+  * [Line](packages/evokit-line/)
+  * [Link](packages/evokit-link/)
+  * [List](packages/evokit-list/)
+  * [Picture](packages/evokit-picture/)
+  * [Text](packages/evokit-text/)
 
-* EXAMPLES
-
-  * [Form](complex/form.md)
-  * [Progress](complex/progress.md)
+  <!-- * [Form](complex/form.md) -->
+  <!-- * [Progress](complex/progress.md) -->
   <!-- * [Card](complex/card.md) -->

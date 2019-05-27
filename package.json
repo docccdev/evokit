@@ -1,12 +1,12 @@
 {
   "scripts": {
     "test": "lerna run test",
-    "build": "lerna run --ignore evokit build && lerna run --scope evokit build",
-    "watch": "lerna run --parallel --stream watch",
     "bootstrap": "lerna bootstrap",
-    "docs": "http-server ./ -p 9090",
-    "docs:build": "copyfiles ./*.md ./packages/**/*.md docs",
-    "docs:watch": "nodemon -e md --exec 'npm run docs:build'"
+    "build": "lerna run --ignore evokit build && lerna run --scope evokit build",
+    "build:docs": "copyfiles ./packages/**/*.md docs",
+    "watch": "lerna run --parallel --stream watch",
+    "watch:docs": "nodemon -e md --exec 'npm run docs:build'",
+    "docs": "http-server ./ -p 9090"
   },
   "nodemonConfig": {
     "ignore": [
