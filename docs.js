@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import * as Babel from 'babel-standalone';
 import * as DemoBoxReact from 'docsify-demo-box-react/dist/docsify-demo-box-react.min';
 import * as EvoKit from 'evokit';
+import 'evokit/dist/style.css';
 
 window.React = React;
 window.ReactDOM = ReactDOM;

@@ -20,7 +20,7 @@
 [image]: packages/evokit-image/
 [line]: packages/evokit-line/
 
-[create_theme]: create_theme/
+[create_theme]: base/theme
 
 # CHANGELOG
 

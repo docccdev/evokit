@@ -1,4 +1,4 @@
-[create_theme]: create_theme/
+[create_theme]: base/theme
 
 [link]: #link
 [link-color]: #link-color

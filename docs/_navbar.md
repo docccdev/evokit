@@ -1,7 +1,5 @@
-* [CREATE THEME](create_theme/)
+* [CHANGELOG](packages/evokit/CHANGELOG.md)
 
 * [EXAMPLES](examples/)
-
-* [CHANGELOG](packages/evokit/CHANGELOG.md)
 
 * [FUTURE](future/)

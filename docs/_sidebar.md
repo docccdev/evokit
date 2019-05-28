@@ -1,8 +1,9 @@
-* COMMON
+* BASE
 
-  * [Usage](/common/usage.md)
+  * [Usage](/base/usage.md)
   * [API](/base/api.md)
   * [Variables](/base/variables.md)
+  * [Theme](/base/theme.md)
   * [Media](/base/media.md)
 
 * BLOCKS

@@ -1,4 +1,4 @@
-[create_theme]: create_theme/
+[create_theme]: base/theme
 
 [grid]: #grid
 [griditem]: #griditem

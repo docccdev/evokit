@@ -1,4 +1,4 @@
-[create_theme]: create_theme/
+[create_theme]: base/theme
 
 [box]: #box
 [box-margin]: #box-margin

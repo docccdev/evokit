@@ -1,4 +1,4 @@
-[create_theme]: create_theme/
+[create_theme]: base/theme
 
 [line]: #line
 [line-indent]: #line-indent

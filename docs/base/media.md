@@ -1,6 +1,6 @@
 [variables]: /base/variables.md
 
-# Медиа классы
+# Media
 
 Определяются в [css variables][variables]: `@custom-media`.
 
