@@ -2,9 +2,8 @@ var MiniCssExtractPlugin = require('mini-css-extract-plugin');
 var FixStyleOnlyEntriesPlugin = require('webpack-fix-style-only-entries');
 
 var babelConfig = require('./babel.config.js');
-var postcssConfig = require('./postcss.config.js');
 
-module.exports = function(libName, libPath, entry) {
+module.exports = function(libName, libPath, entry, postcssConfig) {
     return {
         mode: 'production',
         entry: entry,

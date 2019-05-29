@@ -87,8 +87,8 @@ import 'evokit-body/style.css';
 
 | Key | Values | Description |
 |-------|--------|-------------|
-| [body-size]       | `xl` `xxl` `xxxl` | Max width for children `<Body.Section>` |
-| [body-indent]     | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Padding on the side left and right for children `<Body.Section>` |
+| [body-size]       | `xl` `xxl` `xxxl` | Max width for `<Body.Section>` |
+| [body-indent]     | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Padding on the side left and right for `<Body.Section>` |
 | [body-background] | `${themeName}` - [Create Theme][create_theme] | Background color |
 | [body-color]      | `${themeName}` - [Create Theme][create_theme] | Text color |
 
@@ -192,7 +192,7 @@ export default class ExampleBox extends React.Component {
                 {(value) => (
                     <Body body-background={value}>
                         <Body.Section>
-                            {`body-indent='${value || ''}'`}
+                            {`body-background='${value || ''}'`}
                         </Body.Section>
                     </Body>
                 )}
@@ -223,7 +223,7 @@ export default class ExampleList extends React.Component {
                 {(value) => (
                     <Body body-color={value}>
                         <Body.Section>
-                            {`body-indent='${value || ''}'`}
+                            {`body-color='${value || ''}'`}
                         </Body.Section>
                     </Body>
                 )}

@@ -9,32 +9,44 @@ var postcssMixins = require('postcss-mixins');
 var postcssImport = require('postcss-import');
 var postcssPrefixer = require('postcss-prefixer');
 var postcssMqpacker = require('css-mqpacker');
+var postcssExtractMediaQuery = require('postcss-extract-media-query');
 // var evokitConfig = require('./evokit.config.js');
 
-module.exports = {
-    parser: 'sugarss',
-    plugins: {
+module.exports = function(emqEntry, emqPath, emqQueries) {
+    return {
         parser: 'sugarss',
-        plugins: [
-            postcssImport(),
-            postcssMixins(),
-            postcssEach(),
-            postcssFor(),
-            postcssMath(),
-            postcssConditionals(),
-            postcssNested(),
-            // postcssCustomProperties({
-            //     preserve: false,
-            //     importFrom: [evokitConfig]
-            // }),
-            // postcsscustomMedia({
-            //     preserve: false,
-            //     importFrom: [evokitConfig]
-            // }),
-            postcssPrefixer({
-                prefix: 'ek-'
-            }),
-            postcssMqpacker()
-        ]
-    }
-};
+        plugins: {
+            parser: 'sugarss',
+            plugins: [
+                postcssImport(),
+                postcssMixins(),
+                postcssEach(),
+                postcssFor(),
+                postcssMath(),
+                postcssConditionals(),
+                postcssNested(),
+                // postcssCustomProperties({
+                //     preserve: false,
+                //     importFrom: [evokitConfig]
+                // }),
+                // postcsscustomMedia({
+                //     preserve: false,
+                //     importFrom: [evokitConfig]
+                // }),
+                postcssPrefixer({
+                    prefix: 'ek-'
+                }),
+                postcssMqpacker(),
+                postcssExtractMediaQuery({
+                    whitelist: true,
+                    entry: emqEntry,
+                    queries: emqQueries,
+                    output: {
+                        name: '[name]@[query].css',
+                        path: emqPath
+                    }
+                })
+            ]
+        }
+    };
+}
