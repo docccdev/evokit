@@ -14,9 +14,15 @@
 [body-background]: #body-background
 [body-color]: #body-color
 
-# EvoKit - Body
+
+[README]: /packages/evokit-body/README.md
+[CHANGELOG]: /packages/evokit-body/CHANGELOG.md
 
 [![](https://img.shields.io/npm/v/evokit-body.svg?style=flat-square&colorB=blue)](https://www.npmjs.com/package/evokit-body)
+
+# EvoKit - Body
+
+**README** • [CHANGELOG]
 
 Used for body of the web page and sets the basic styles. Contains two elements `<Body>` and `<Body.Section>`.
 
@@ -27,7 +33,7 @@ Used for body of the web page and sets the basic styles. Contains two elements `
 
 #### Install
 
-!> Peer dependencies [react], [prop-types]
+> Peer dependencies [react], [prop-types]
 
 ```bash
 npm install evokit-body --save
@@ -37,7 +43,7 @@ npm install evokit-body --save
 
 #### Usage
 
-!> The styles use [css-variable] and will work in all modern browsers. If you need to support more old browsers such as Interner Explorer 11 or lower, use a tool [postcss] with [postcss-preset-env] for transforming css into something most browsers can understand.
+> The styles use [css-variable] and will work in all modern browsers. If you need to support more old browsers such as Interner Explorer 11 or lower, use a tool [postcss] with [postcss-preset-env] for transforming css into something most browsers can understand.
 
 
 ```jsx
@@ -54,7 +60,7 @@ import 'evokit-body/style.css';
 
 #### Variables
 
-!> This set of css variables is default, if you want to override one or more value, please use the rules [css-variable-usage], define them below the css import.
+> This set of css variables is default, if you want to override one or more value, please use the rules [css-variable-usage], define them below the css import.
 
 ```css
 @custom-media --ek-body-media-small only screen and (min-width: 480px);
@@ -180,7 +186,7 @@ export default class ExampleBox extends React.Component {
 
 ##### `body-background`
 
-!> Set the background color depending on the [created theme][create_theme], used `background color` value.
+> Set the background color depending on the [created theme][create_theme], used `background color` value.
 
 ```jsx
 <Body body-background='...'></Body>
@@ -211,7 +217,7 @@ export default class ExampleBox extends React.Component {
 
 ##### `body-color`
 
-!> Set the color depending on the [created theme][create_theme], used `text color` value.
+> Set the color depending on the [created theme][create_theme], used `text color` value.
 
 ```jsx
 <Body body-color='...'></Body>

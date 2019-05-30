@@ -4,7 +4,7 @@
     "bootstrap": "lerna bootstrap",
     "build": "lerna run --ignore evokit build && lerna run --scope evokit build",
     "watch": "lerna run --parallel --stream watch",
-    "docs:build": "webpack --config webpack.docs.config.js && copyfiles ./packages/**/*.md docs",
+    "docs:build": "copyfiles ./packages/**/*.md docs && webpack --config webpack.docs.config.js",
     "docs:run": "webpack-dev-server --config webpack.docs.config.js",
     "docs:watch": "nodemon -e md,js,jsx --exec 'npm run docs:build'"
   },
