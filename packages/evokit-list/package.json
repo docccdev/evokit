@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --colors",
-    "watch": "webpack --colors --progress --watch --mode=development"
+    "watch": "webpack --colors --progress --watch --mode=development",
+    "prepublishOnly": "webpack"
   },
   "repository": {
     "type": "git",
