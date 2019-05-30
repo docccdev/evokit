@@ -57,6 +57,12 @@ import 'evokit-body/style.css';
 !> This set of css variables is default, if you want to override one or more value, please use the rules [css-variable-usage], define them below the css import.
 
 ```css
+@custom-media --ek-body-media-small only screen and (min-width: 480px);
+@custom-media --ek-body-media-medium only screen and (min-width: 768px);
+@custom-media --ek-body-media-large only screen and (min-width: 960px);
+@custom-media --ek-body-media-wide only screen and (min-width: 1200px);
+@custom-media --ek-body-media-huge only screen and (min-width: 1400px);
+
 :root {
     // common
     --ek-body-font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
