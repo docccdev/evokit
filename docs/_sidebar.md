@@ -1,7 +1,7 @@
 * BASE
 
   * [Usage](/base/usage.md)
-  * [API](/base/api.md)
+  * [Core](packages/evokit-core/)
   * [Variables](/base/variables.md)
   * [Theme](/base/theme.md)
   * [Media](/base/media.md)
