@@ -9,8 +9,15 @@ Core lib for creating EvoKit blocks.
 
 ---
 
+##### Usage
 
-### createBlock()
+> Peer dependencies [react], [prop-types]
+
+```bash
+npm install evokit-core --save
+```
+
+##### `createBlock()`
 
 ```js
 createBlock(
@@ -20,14 +27,11 @@ createBlock(
 );
 ```
 
-##### Usage
-
-> Peer dependencies [react], [prop-types]
-
 ```jsx
 import { createBlock } from 'evokit-core';
 const Block = createBlock('block', 'div', ['padding']);
 
+<Block /> // <div class="ek-block"></div>
 <Block block-padding='xxl' /> // <div class="ek-block ek-block_padding_xxl"></div>
 
 // BLOCKS HAS A DEFAULT PROPS:

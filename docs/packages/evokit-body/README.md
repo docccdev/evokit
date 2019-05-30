@@ -1,5 +1,4 @@
-[react]: //www.npmjs.com/package/react
-[prop-types]: //www.npmjs.com/package/prop-types
+[evokit-core]: /packages/evokit-core/
 [css-variable]: //caniuse.com/#feat=css-variables
 [css-variable-usage]: //w3schools.com/css/css3_variables.asp
 [html-tag-body]: //www.w3schools.com/tags/tag_body.asp
@@ -36,7 +35,7 @@ Used for body of the web page and sets the basic styles. Contains two elements `
 
 #### Install
 
-> Peer dependencies [react], [prop-types]
+> Peer dependencies [evokit-core]
 
 ```bash
 npm install evokit-body --save
