@@ -7,9 +7,7 @@
 # EvoKit - Body
 
 - [README]
-- **CHANGELOG**
-- [CREATE THEME]
+- [CHANGELOG]
+- **CREATE THEME**
 
-## 1.0.5
-
-- initial commit.
+## Create theme

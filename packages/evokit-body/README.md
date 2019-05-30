@@ -17,12 +17,15 @@
 
 [README]: /packages/evokit-body/README.md
 [CHANGELOG]: /packages/evokit-body/CHANGELOG.md
+[CREATE THEME]: /packages/evokit-body/CREATE_THEME.md
 
 [![](https://img.shields.io/npm/v/evokit-body.svg?style=flat-square&colorB=blue)](https://www.npmjs.com/package/evokit-body)
 
 # EvoKit - Body
 
-**README** • [CHANGELOG]
+- **README**
+- [CHANGELOG]
+- [CREATE THEME]
 
 Used for body of the web page and sets the basic styles. Contains two elements `<Body>` and `<Body.Section>`.
 
@@ -39,7 +42,6 @@ Used for body of the web page and sets the basic styles. Contains two elements `
 npm install evokit-body --save
 ```
 
----
 
 #### Usage
 
@@ -53,7 +55,7 @@ import 'evokit-body/style.css';
 <Body>
     <Body.Section>
         content
-    <Body.Section>
+    </Body.Section>
 </Body>
 
 ```
@@ -93,8 +95,6 @@ import 'evokit-body/style.css';
 
 ```
 
----
-
 #### Props
 
 | Key | Values | Description |
@@ -104,7 +104,6 @@ import 'evokit-body/style.css';
 | [body-background] | `${themeName}` - [Create Theme][create_theme] | Background color |
 | [body-color]      | `${themeName}` - [Create Theme][create_theme] | Text color |
 
----
 
 ##### `body-size`
 
