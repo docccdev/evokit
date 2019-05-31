@@ -1,7 +1,7 @@
 var babelConfig = require('../../config/babel.config.js');
 
 module.exports = {
-    mode: 'development',
+    mode: 'production',
     entry: './src/index.js',
     output: {
         library: 'EvoKit',
