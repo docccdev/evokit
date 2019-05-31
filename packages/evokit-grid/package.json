@@ -20,6 +20,6 @@
   },
   "license": "MIT",
   "peerDependencies": {
-    "evokit": "^3.0.0"
+    "evokit": ">=3.0.0"
   }
 }

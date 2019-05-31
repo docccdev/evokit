@@ -1,4 +1,4 @@
-* [CHANGELOG](packages/evokit/CHANGELOG.md)
+* [CHANGELOG](CHANGELOG.md)
 
 * [EXAMPLES](examples/)
 

@@ -4,34 +4,14 @@
     "bootstrap": "lerna bootstrap",
     "build": "lerna run build",
     "watch": "lerna run --parallel --stream watch",
-    "docs:build": "copyfiles ./packages/**/*.md docs && webpack --config webpack.docs.config.js",
-    "docs:run": "webpack-dev-server --config webpack.docs.config.js",
-    "docs:watch": "nodemon -e md,js,jsx --exec 'npm run docs:build'"
-  },
-  "nodemonConfig": {
-    "ignore": [
-      "docs/*"
-    ]
+    "docs": "http-server ./"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/docccdev/evokit.git"
   },
-  "keywords": [
-    "uikit",
-    "bem",
-    "css",
-    "stylus",
-    "html",
-    "jsx",
-    "react"
-  ],
   "author": "docccdev",
   "license": "MIT",
-  "peerDependencies": {
-    "prop-types": "*",
-    "react": "*"
-  },
   "devDependencies": {
     "@babel/core": "^7.4.5",
     "@babel/preset-env": "^7.4.2",
@@ -41,7 +21,6 @@
     "babel-loader": "^8.0.5",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-standalone": "^6.26.0",
-    "copyfiles": "^2.1.0",
     "css-loader": "^1.0.0",
     "css-mqpacker": "^7.0.0",
     "docsify-demo-box-react": "^1.1.0",
@@ -54,10 +33,10 @@
     "eslint-plugin-import": "^2.17.2",
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.13.0",
+    "http-server": "^0.11.1",
     "jest": "^24.5.0",
     "lerna": "^3.14.1",
     "mini-css-extract-plugin": "^0.6.0",
-    "nodemon": "^1.19.0",
     "postcss-conditionals": "^2.1.0",
     "postcss-custom-media": "^7.0.4",
     "postcss-custom-properties": "^8.0.8",
