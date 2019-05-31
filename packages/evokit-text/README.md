@@ -1,4 +1,4 @@
-[create_theme]: base/theme
+[create_theme]: docs/base/theme
 
 [text]: #text
 [text-color]: #text-color
@@ -10,6 +10,8 @@
 [text-style]: #text-style
 [text-transform]: #text-transform
 [text-lheight]: #text-lheight
+
+[![](https://img.shields.io/npm/v/evokit-text.svg?style=flat-square&colorB=blue)](https://www.npmjs.com/package/evokit-text)
 
 # EvoKit - Text
 

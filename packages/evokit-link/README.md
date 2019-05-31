@@ -1,4 +1,4 @@
-[create_theme]: base/theme
+[create_theme]: docs/base/theme
 
 [link]: #link
 [link-color]: #link-color
@@ -7,6 +7,8 @@
 [link-valign]: #link-valign
 [link-style]: #link-style
 [link-lheight]: #link-lheight
+
+[![](https://img.shields.io/npm/v/evokit-link.svg?style=flat-square&colorB=blue)](https://www.npmjs.com/package/evokit-link)
 
 # EvoKit - Link
 

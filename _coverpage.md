@@ -1,6 +1,6 @@
 <!-- _coverpage.md -->
 
-![logo](_media/logo.svg)
+![logo](docs/_media/logo.svg)
 
 # [EvoKit](/)
 

@@ -1,14 +1,14 @@
-[panel]: NOT_USED/removed_panel.md
-[tags]: NOT_USED/removed_tags.md
-[width]: NOT_USED/removed_width.md
-[mixes]: NOT_USED/removed_mixes.md
-[sizes]: NOT_USED/removed_sizes.md
+[panel]: docs/deprecated/removed_panel.md
+[tags]: docs/deprecated/removed_tags.md
+[width]: docs/deprecated/removed_width.md
+[mixes]: docs/deprecated/removed_mixes.md
+[sizes]: docs/deprecated/removed_sizes.md
 
-[media]: base/media.md
-[text]: base/text.md
-[colors]: base/colors.md
-[api]: base/api.md
-
+[media]: docs/base/media.md
+[text]: docs/base/text.md
+[colors]: docs/base/colors.md
+[api]: docs/base/api.md
+[create_theme]: docs/base/theme.md
 
 [body]: packages/evokit-body/
 [grid]: packages/evokit-grid/
@@ -20,7 +20,6 @@
 [image]: packages/evokit-image/
 [line]: packages/evokit-line/
 
-[create_theme]: create_theme/
 
 # CHANGELOG
 

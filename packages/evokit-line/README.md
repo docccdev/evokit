@@ -1,9 +1,11 @@
-[create_theme]: base/theme
+[create_theme]: docs/base/theme
 
 [line]: #line
 [line-indent]: #line-indent
 [line-color]: #line-color
 [line-style]: #line-style
+
+[![](https://img.shields.io/npm/v/evokit-line.svg?style=flat-square&colorB=blue)](https://www.npmjs.com/package/evokit-line)
 
 # EvoKit - Line
 

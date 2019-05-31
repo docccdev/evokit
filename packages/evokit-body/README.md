@@ -6,7 +6,7 @@
 [postcss]: //postcss.org
 [postcss-preset-env]: //preset-env.cssdb.org
 
-[create_theme]: base/theme
+[create_theme]: docs/base/theme
 
 [body-size]: #body-size
 [body-indent]: #body-indent

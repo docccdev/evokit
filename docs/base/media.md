@@ -1,4 +1,4 @@
-[variables]: /base/variables.md
+[variables]: /docs/base/variables.md
 
 # Media
 

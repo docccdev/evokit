@@ -1,6 +1,6 @@
 [react]: //www.npmjs.com/package/react
 [prop-types]: //www.npmjs.com/package/prop-types
-[variables]: /base/variables.md
+[variables]: /docs/base/variables.md
 
 # EvoKit
 

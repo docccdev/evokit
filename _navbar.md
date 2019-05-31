@@ -1,5 +1,5 @@
 * [CHANGELOG](CHANGELOG.md)
 
-* [EXAMPLES](examples/)
+* [EXAMPLES](docs/examples/)
 
-* [FUTURE](future/)
+* [FUTURE](docs/future/)

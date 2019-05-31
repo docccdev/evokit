@@ -1,4 +1,4 @@
-[colors]: NOT_USED/removed_colors.md
+[colors]: docs/deprecated/removed_colors.md
 
 [text]: packages/evokit-text/
 [link]: packages/evokit-link/

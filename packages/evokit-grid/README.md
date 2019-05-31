@@ -1,4 +1,4 @@
-[create_theme]: base/theme
+[create_theme]: docs/base/theme
 
 [grid]: #grid
 [griditem]: #griditem
@@ -13,6 +13,8 @@
 
 [grid-item-order]: #grid-item-order
 [grid-item-width]: #grid-item-width
+
+[![](https://img.shields.io/npm/v/evokit-grid.svg?style=flat-square&colorB=blue)](https://www.npmjs.com/package/evokit-grid)
 
 # EvoKit - Grid
 

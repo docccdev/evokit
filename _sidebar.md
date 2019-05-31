@@ -1,9 +1,9 @@
 * BASE
 
-  * [Usage](/base/usage.md)
-  * [Variables](/base/variables.md)
-  * [Theme](/base/theme.md)
-  * [Media](/base/media.md)
+  * [Usage](/docs/base/usage.md)
+  * [Variables](/docs/base/variables.md)
+  * [Theme](/docs/base/theme.md)
+  * [Media](/docs/base/media.md)
 
 * BLOCKS
   * [Body](packages/evokit-body/)
@@ -15,7 +15,3 @@
   * [List](packages/evokit-list/)
   * [Picture](packages/evokit-picture/)
   * [Text](packages/evokit-text/)
-
-  <!-- * [Form](complex/form.md) -->
-  <!-- * [Progress](complex/progress.md) -->
-  <!-- * [Card](complex/card.md) -->
