@@ -1,6 +1,6 @@
 {
   "name": "evokit-text",
-  "version": "3.0.0",
+  "version": "2.1.5",
   "description": "<Text>",
   "main": "index.js",
   "scripts": {

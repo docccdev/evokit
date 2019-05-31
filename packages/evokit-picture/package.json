@@ -1,6 +1,6 @@
 {
   "name": "evokit-picture",
-  "version": "3.0.0",
+  "version": "2.1.5",
   "description": "<Picture>",
   "main": "index.js",
   "scripts": {
