@@ -8,9 +8,9 @@
 [list-color]: #list-color
 [list-divider]: #list-divider
 
-[![](https://img.shields.io/npm/v/evokit-list.svg?style=flat-square&colorB=blue)](https://www.npmjs.com/package/evokit-list)
-
 # EvoKit - List
+
+[![](https://img.shields.io/npm/v/evokit-list.svg)](https://www.npmjs.com/package/evokit-list)
 
 Список
 

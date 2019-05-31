@@ -4,9 +4,9 @@
 [picture-fit]: #picture-fit
 [picture-round]: #picture-round
 
-[![](https://img.shields.io/npm/v/evokit-picture.svg?style=flat-square&colorB=blue)](https://www.npmjs.com/package/evokit-picture)
-
 # EvoKit - Picture
+
+[![](https://img.shields.io/npm/v/evokit-picture.svg)](https://www.npmjs.com/package/evokit-picture)
 
 Создает квадрат с изображением.
 

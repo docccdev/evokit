@@ -11,9 +11,9 @@
 [text-transform]: #text-transform
 [text-lheight]: #text-lheight
 
-[![](https://img.shields.io/npm/v/evokit-text.svg?style=flat-square&colorB=blue)](https://www.npmjs.com/package/evokit-text)
-
 # EvoKit - Text
+
+[![](https://img.shields.io/npm/v/evokit-text.svg)](https://www.npmjs.com/package/evokit-text)
 
 Текстовый блок
 

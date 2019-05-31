@@ -5,9 +5,9 @@
 [line-color]: #line-color
 [line-style]: #line-style
 
-[![](https://img.shields.io/npm/v/evokit-line.svg?style=flat-square&colorB=blue)](https://www.npmjs.com/package/evokit-line)
-
 # EvoKit - Line
+
+[![](https://img.shields.io/npm/v/evokit-line.svg)](https://www.npmjs.com/package/evokit-line)
 
 Горизонтальная линия, применяется для разделения контента
 

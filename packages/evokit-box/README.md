@@ -11,9 +11,9 @@
 [box-background]: #box-background
 [box-border]: #box-border
 
-[![](https://img.shields.io/npm/v/evokit-box.svg?style=flat-square&colorB=blue)](https://www.npmjs.com/package/evokit-box)
-
 # EvoKit - Box
+
+[![](https://img.shields.io/npm/v/evokit-box.svg)](https://www.npmjs.com/package/evokit-box)
 
 Блок для контента, позволяет применить внутренние/внешние отступы и много другое.
 

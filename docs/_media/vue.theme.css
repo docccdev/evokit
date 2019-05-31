@@ -927,3 +927,7 @@ pre:after {
 .demo-block .source {
     overflow-x: auto;
 }
+
+img[data-origin] {
+    vertical-align: text-bottom;
+}

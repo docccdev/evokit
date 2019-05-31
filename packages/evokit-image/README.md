@@ -5,9 +5,9 @@
 [image-fit]: #image-fit
 [image-round]: #image-round
 
-[![](https://img.shields.io/npm/v/evokit-image.svg?style=flat-square&colorB=blue)](https://www.npmjs.com/package/evokit-image)
-
 # EvoKit - Image
+
+[![](https://img.shields.io/npm/v/evokit-image.svg)](https://www.npmjs.com/package/evokit-image)
 
 Предназначен для отображения изображения
 

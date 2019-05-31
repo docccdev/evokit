@@ -14,9 +14,9 @@
 [grid-item-order]: #grid-item-order
 [grid-item-width]: #grid-item-width
 
-[![](https://img.shields.io/npm/v/evokit-grid.svg?style=flat-square&colorB=blue)](https://www.npmjs.com/package/evokit-grid)
-
 # EvoKit - Grid
+
+[![](https://img.shields.io/npm/v/evokit-grid.svg)](https://www.npmjs.com/package/evokit-grid)
 
 Cетка для размещения блоков на странице, вмещает до 10 столбцов.
 

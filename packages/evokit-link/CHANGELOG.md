@@ -1,6 +1,6 @@
-# EvoKit - Body
+# EvoKit - Link
 
-[![](https://img.shields.io/npm/v/evokit-body.svg)](https://www.npmjs.com/package/evokit-body)
+[![](https://img.shields.io/npm/v/evokit-link.svg)](https://www.npmjs.com/package/evokit-link)
 
 ---
 

@@ -1,4 +1,4 @@
-* [CHANGELOG](CHANGELOG.md)
+* [CHANGELOG](docs/changelog/)
 
 * [EXAMPLES](docs/examples/)
 
