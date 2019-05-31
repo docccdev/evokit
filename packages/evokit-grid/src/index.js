@@ -1,6 +1,6 @@
-import { newBlock } from '../../../lib/newBlock';
+import { createBlock } from 'evokit';
 
-export const Grid = newBlock('div', 'grid', [
+export const Grid = createBlock('div', 'grid', [
     'column',
     'indent',
     'direction',
@@ -10,7 +10,7 @@ export const Grid = newBlock('div', 'grid', [
     'wrap',
 ]);
 
-Grid.Item = newBlock('div', 'grid__item', [
+Grid.Item = createBlock('div', 'grid__item', [
     'order',
     'width',
 ]);

@@ -1,17 +1,9 @@
-var makeWebpackConfig = require('../../config/webpack.config.js');
-var makePostcssConfig = require('../../config/postcss.config.js');
+var makeIndexConfig = require('../../config/webpack/index.config.js');
+var makeStyleConfig = require('../../config/webpack/style.config.js');
+var makeThemeConfig = require('../../config/webpack/theme.config.js');
 
-const postcssConfig = makePostcssConfig('./src/style.sss', __dirname,
-{
-    '(--ek-image-media-small)': 'small',
-    '(--ek-image-media-medium)': 'medium',
-    '(--ek-image-media-large)': 'large',
-    '(--ek-image-media-wide)': 'wide',
-    '(--ek-image-media-huge)': 'huge'
-});
-
-module.exports = makeWebpackConfig('EvoKitImage', __dirname, {
-    index: './src/index.js',
-    style: './src/style.sss',
-    theme: './src/theme.sss'
-}, postcssConfig);
+module.exports = [
+    makeIndexConfig(__dirname, 'EvoKitImage'),
+    makeStyleConfig(__dirname, 'image'),
+    makeThemeConfig(__dirname)
+];

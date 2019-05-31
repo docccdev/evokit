@@ -3,7 +3,7 @@ var babelConfig = require('../babel.config.js');
 
 module.exports = function(dirName, moduleName) {
     return {
-        mode: 'production',
+        mode: 'development',
         entry: path.resolve(dirName, 'src/index.js'),
         output: {
             library: moduleName,
@@ -25,17 +25,11 @@ module.exports = function(dirName, moduleName) {
             ]
         },
         externals: {
-            'react': {
-                root: 'React',
-                commonjs: 'react',
-                commonjs2: 'react',
-                amd: 'react'
-            },
-            'prop-types': {
-                root: 'PropTypes',
-                commonjs: 'prop-types',
-                commonjs2: 'prop-types',
-                amd: 'prop-types'
+            'evokit': {
+                root: 'EvoKit',
+                commonjs: 'evokit',
+                commonjs2: 'evokit',
+                amd: 'evokit'
             }
         },
         stats: {
@@ -45,4 +39,3 @@ module.exports = function(dirName, moduleName) {
         }
     };
 };
-

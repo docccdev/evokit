@@ -1,17 +1,9 @@
-var makeWebpackConfig = require('../../config/webpack.config.js');
-var makePostcssConfig = require('../../config/postcss.config.js');
+var makeIndexConfig = require('../../config/webpack/index.config.js');
+var makeStyleConfig = require('../../config/webpack/style.config.js');
+var makeThemeConfig = require('../../config/webpack/theme.config.js');
 
-const postcssConfig = makePostcssConfig('./src/style.sss', __dirname,
-{
-    '(--ek-grid-media-small)': 'small',
-    '(--ek-grid-media-medium)': 'medium',
-    '(--ek-grid-media-large)': 'large',
-    '(--ek-grid-media-wide)': 'wide',
-    '(--ek-grid-media-huge)': 'huge'
-});
-
-module.exports = makeWebpackConfig('EvoKitGrid', __dirname, {
-    index: './src/index.js',
-    style: './src/style.sss',
-    theme: './src/theme.sss'
-}, postcssConfig);
+module.exports = [
+    makeIndexConfig(__dirname, 'EvoKitGrid'),
+    makeStyleConfig(__dirname, 'grid'),
+    makeThemeConfig(__dirname)
+];

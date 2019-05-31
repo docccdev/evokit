@@ -1,6 +1,6 @@
-import { newBlock } from '../../../lib/newBlock';
+import { createBlock } from 'evokit';
 
-export const Image = newBlock('img', 'image', [
+export const Image = createBlock('img', 'image', [
     'align',
     'valign',
     'mirror',

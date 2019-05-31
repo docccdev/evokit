@@ -1,6 +1,6 @@
-import { newBlock } from '../../../lib/newBlock';
+import { createBlock } from 'evokit';
 
-export const Line = newBlock('hr', 'line', [
+export const Line = createBlock('hr', 'line', [
     'indent',
     'style',
     'color',

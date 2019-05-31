@@ -1,6 +1,6 @@
-import { newBlock } from '../../../lib/newBlock';
+import { createBlock } from 'evokit';
 
-export const Link = newBlock('a', 'link', [
+export const Link = createBlock('a', 'link', [
     'color',
     'size',
     'weight',

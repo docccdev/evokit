@@ -1,6 +1,6 @@
 {
   "name": "evokit-text",
-  "version": "1.0.4",
+  "version": "3.0.0",
   "description": "<Text>",
   "main": "index.js",
   "scripts": {
@@ -19,5 +19,8 @@
     "email": "doccc.dev@gmail.com",
     "url": "http://evokit.net"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "peerDependencies": {
+    "evokit": "^3.0.0"
+  }
 }

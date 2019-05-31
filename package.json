@@ -2,7 +2,7 @@
   "scripts": {
     "test": "lerna run test",
     "bootstrap": "lerna bootstrap",
-    "build": "lerna run --ignore evokit build && lerna run --scope evokit build",
+    "build": "lerna run build",
     "watch": "lerna run --parallel --stream watch",
     "docs:build": "copyfiles ./packages/**/*.md docs && webpack --config webpack.docs.config.js",
     "docs:run": "webpack-dev-server --config webpack.docs.config.js",

@@ -1,10 +1,10 @@
-import { newBlock } from '../../../lib/newBlock';
+import { createBlock } from 'evokit';
 
-export const Body = newBlock('body', 'body', [
+export const Body = createBlock('body', 'body', [
     'size',
     'indent',
     'background',
     'color',
 ]);
 
-Body.Section = newBlock('div', 'body__section');
+Body.Section = createBlock('div', 'body__section');

@@ -1,10 +1,10 @@
-import { newBlock } from '../../../lib/newBlock';
+import { createBlock } from 'evokit';
 
-export const List = newBlock('ul', 'list', [
+export const List = createBlock('ul', 'list', [
     'color',
     'divider',
     'style',
     'indent',
 ]);
 
-List.Item = newBlock('li', 'list__item');
+List.Item = createBlock('li', 'list__item');

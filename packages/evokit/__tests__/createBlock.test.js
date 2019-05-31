@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { createBlock, withProps } from '../createBlock';
+import { createBlock, withProps } from '../src/createBlock';
 
 describe("import { createBlock } from 'evokit';", () => {
     it('default', () => {
