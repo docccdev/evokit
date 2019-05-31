@@ -3,7 +3,7 @@ var babelConfig = require('../babel.config.js');
 
 module.exports = function(dirName, moduleName) {
     return {
-        mode: 'development',
+        mode: 'production',
         entry: path.resolve(dirName, 'src/index.js'),
         output: {
             library: moduleName,
