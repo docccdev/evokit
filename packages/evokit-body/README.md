@@ -1,4 +1,4 @@
-[evokit-core]: /packages/evokit-core/
+[evokit]: /packages/evokit/
 [css-variable]: //caniuse.com/#feat=css-variables
 [css-variable-usage]: //w3schools.com/css/css3_variables.asp
 [html-tag-body]: //www.w3schools.com/tags/tag_body.asp
@@ -35,7 +35,7 @@ Used for body of the web page and sets the basic styles. Contains two elements `
 
 #### Install
 
-> Peer dependencies [evokit-core]
+> Peer dependencies [evokit]
 
 ```bash
 npm install evokit-body --save
@@ -45,6 +45,8 @@ npm install evokit-body --save
 #### Usage
 
 > The styles use [css-variable] and will work in all modern browsers. If you need to support more old browsers such as Interner Explorer 11 or lower, use a tool [postcss] with [postcss-preset-env] for transforming css into something most browsers can understand.
+
+[cinwell website](https://codesandbox.io/embed/magical-cloud-kz6ss?fontsize=14 ':include :type=iframe width=100% height=500px')
 
 
 ```jsx
