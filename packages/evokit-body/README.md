@@ -19,9 +19,6 @@
 
 Used for body of the web page and sets the basic styles. Contains two elements `<Body>` and `<Body.Section>`.
 
-- `<Body>` has a default html tag [body][html-tag-body]
-- `<Body.Section>` has a default html tag [div][html-tag-div]
-
 ---
 
 #### Install
@@ -32,10 +29,12 @@ Used for body of the web page and sets the basic styles. Contains two elements `
 npm install evokit-body --save
 ```
 
-
 #### Usage
 
 > The styles use [css-variable] and will work in all modern browsers. If you need to support more old browsers such as Interner Explorer 11 or lower, use a tool [postcss] with [postcss-preset-env] for transforming css into something most browsers can understand.
+
+- `<Body>` has a default html tag [body][html-tag-body]
+- `<Body.Section>` has a default html tag [div][html-tag-div]
 
 ```jsx
 import { Body } from 'evokit-body';
@@ -48,26 +47,22 @@ import 'evokit-body/style.css';
 </Body>
 ```
 
-[![Edit body-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/magical-cloud-kz6ss?fontsize=14 ':include :type=iframe width=100% height=500px')
+[![Edit body-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/bodyusage-kz6ss?fontsize=14 ':include :type=iframe width=100% height=500px')
 
-#### Variables
+#### Customize
 
 > This set of css variables is default, if you want to override one or more value, please use the rules [css-variable-usage], define them below the css import.
 
 ```css
-@custom-media --ek-body-media-small only screen and (min-width: 480px);
-@custom-media --ek-body-media-medium only screen and (min-width: 768px);
-@custom-media --ek-body-media-large only screen and (min-width: 960px);
-@custom-media --ek-body-media-wide only screen and (min-width: 1200px);
-@custom-media --ek-body-media-huge only screen and (min-width: 1400px);
-
 :root {
+    /* base */
     --ek-body-font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
     --ek-body-font-size: 13px;
     --ek-body-font-weight: 400;
     --ek-body-line-height: 1em;
     --ek-body-min-width: 320px;
     --ek-body-max-width: 1240px;
+    /* prop 'body-indent' */
     --ek-body-indent-xxs: 5px;
     --ek-body-indent-xs: 10px;
     --ek-body-indent-s: 15px;
@@ -75,11 +70,11 @@ import 'evokit-body/style.css';
     --ek-body-indent-l: 25px;
     --ek-body-indent-xl: 30px;
     --ek-body-indent-xxl: 35px;
+    /* prop 'body-size' */
     --ek-body-max-width-xl: 1440px;
     --ek-body-max-width-xxl: 1640px;
     --ek-body-max-width-xxxl: 1840px;
 }
-
 ```
 
 #### Props

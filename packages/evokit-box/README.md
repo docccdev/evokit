@@ -1,6 +1,12 @@
+[evokit]: /packages/evokit/
+[css-variable]: //caniuse.com/#feat=css-variables
+[css-variable-usage]: //w3schools.com/css/css3_variables.asp
+[html-tag-div]: //www.w3schools.com/tags/tag_div.asp
+[postcss]: //postcss.org
+[postcss-preset-env]: //preset-env.cssdb.org
+
 [create_theme]: docs/base/theme
 
-[box]: #box
 [box-margin]: #box-margin
 [box-padding]: #box-padding
 [box-round]: #box-round
@@ -15,425 +21,207 @@
 
 [![](https://img.shields.io/npm/v/evokit-box.svg)](https://www.npmjs.com/package/evokit-box)
 
-Блок для контента, позволяет применить внутренние/внешние отступы и много другое.
-
-- [Box][box]
+The content block allows to apply indents, position and more.
 
 ---
+
+#### Install
+
+> Peer dependencies [evokit]
+
+```bash
+npm install evokit-box --save
+```
 
 #### Usage
 
+> The styles use [css-variable] and will work in all modern browsers. If you need to support more old browsers such as Interner Explorer 11 or lower, use a tool [postcss] with [postcss-preset-env] for transforming css into something most browsers can understand.
+
+- `<Box>` has a default html tag [div][html-tag-div]
+
 ```jsx
-import { Box } from 'evokit-box';
+import { Box } from 'evokit-Box';
 import 'evokit-box/style.css';
 
 <Box>
-    content
+    ...
 </Box>
-
 ```
 
----
+[![Edit body-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/boxusage-3r9iy?fontsize=14 ':include :type=iframe width=100% height=500px')
 
-## Box
+#### Customize
+
+> This set of css variables is default, if you want to override one or more value, please use the rules [css-variable-usage], define them below the css import.
+
+```css
+:root {
+    /* prop 'box-padding', 'box-margin' */
+    --ek-box-indent-xxs: 5px;
+    --ek-box-indent-xs: 10px;
+    --ek-box-indent-s: 15px;
+    --ek-box-indent-m: 20px;
+    --ek-box-indent-l: 25px;
+    --ek-box-indent-xl: 30px;
+    --ek-box-indent-xxl: 35px;
+    /* prop 'box-round' */
+    --ek-box-round-xxs: 2px;
+    --ek-box-round-xs: 4px;
+    --ek-box-round-s: 6px;
+    --ek-box-round-m: 8px;
+    --ek-box-round-l: 10px;
+    --ek-box-round-xl: 12px;
+    --ek-box-round-xxl: 14px;
+}
+```
+
+## Props
 
 | Props | Values | Description |
 |-------|--------|-------------|
-| [box-margin]     | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` `auto` | Внешний отступ |
-| [box-padding]    | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Внутренний отступ |
-| [box-round]      | `none` `full` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Скругление углов |
-| [box-width]      | `auto` `1-1` `*-2` `*-3` `*-4` `*-5` `*-6` `*-7` `*-8` `*-9` `*-10` | Ширина `9-10 = 90%` |
-| [box-display]    | `none` `inline` `inline-block` `block` | Отображение в документе |
-| [box-position]   | `static` `relative` `absolute` `fixed` | Cпособ позиционирования |
-| [box-place]      | `top` `top-left` `top-right` `center` `center-left` `center-right` `bottom` `bottom-left` `bottom-right` | Место позиционирования |
-| [box-border]     | `${themeName}` - [Create Theme][create_theme] | Добавляет рамку |
-| [box-background] | `${themeName}` - [Create Theme][create_theme] | Добавляет фон |
+| [box-margin]     | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` `auto` | Indent around block |
+| [box-padding]    | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Indent around an block content |
+| [box-round]      | `none` `full` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Corner rounding |
+| [box-width]      | `auto` `1-1` `*-2` `*-3` `*-4` `*-5` `*-6` `*-7` `*-8` `*-9` `*-10` | Set the width |
+| [box-display]    | `none` `inline` `inline-block` `block` | Display type |
+| [box-position]   | `static` `relative` `absolute` `fixed` | Positioning method |
+| [box-place]      | `top` `top-left` `top-right` `center` `center-left` `center-right` `bottom` `bottom-left` `bottom-right` | Position |
+| [box-border]     | `${themeName}` - [Create Theme][create_theme] | Border color |
+| [box-background] | `${themeName}` - [Create Theme][create_theme] | Background color |
+
+---
 
 ### `box-margin`
 
-> Имеет дополнительные параметры, например `box-margin-top`, `box-margin-lr` (left right), `box-margin-tb` (top bottom) и другие.
+> Has advanced props:
+> - `box-margin` - `top`, `right`, `bottom` or `left` for example **`box-margin-right`**
+> - `box-margin` - `lr` or `tb` for example **`box-margin-tb`**
+
+- `none` - value: `0px`
+- `auto` - value: `auto`
+- `xxs` - css variable `--ek-box-indent-xxs`, default value: `5px`
+- `xs` - css variable `--ek-box-indent-xs`, default value: `10px`
+- `s` - css variable `--ek-box-indent-s`, default value: `15px`
+- `m` - css variable `--ek-box-indent-m`, default value: `20px`
+- `l` - css variable `--ek-box-indent-l`, default value: `25px`
+- `xl` - css variable `--ek-box-indent-xl`, default value: `30px`
+- `xxl` - css variable `--ek-box-indent-xxl`, default value: `35px`
 
 ```jsx
-<Box box-margin='...'></Box>
-```
-
-```jsx
-/*react*/
-<script>
-const { Box, Example } = EvoKit;
-
-export default class ExampleBox extends React.Component {
-    render() {
-        return (
-            <Example values={['auto', 'xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl']}>
-                {(value) => (
-                    <div>
-                        <Example.Box style={{ background: '#f8f8f8', overflow: 'hidden', padding: 0, margin: '10px 0' }}>
-                            <Box box-margin={value}>
-                                <Example.Box>
-                                    {`box-margin='${value || ''}'`}
-                                </Example.Box>
-                            </Box>
-                        </Example.Box>
-                        <Example.Box style={{ background: '#f8f8f8', overflow: 'hidden', padding: 0, margin: '10px 0' }}>
-                            <Box box-margin-top={value}>
-                                <Example.Box>
-                                    {`box-margin-top='${value || ''}'`}
-                                </Example.Box>
-                            </Box>
-                        </Example.Box>
-                        <Example.Box style={{ background: '#f8f8f8', overflow: 'hidden', padding: 0, margin: '10px 0' }}>
-                            <Box box-margin-bottom={value}>
-                                <Example.Box>
-                                    {`box-margin-bottom='${value || ''}'`}
-                                </Example.Box>
-                            </Box>
-                        </Example.Box>
-                        <Example.Box style={{ background: '#f8f8f8', overflow: 'hidden', padding: 0, margin: '10px 0' }}>
-                            <Box box-margin-right={value}>
-                                <Example.Box>
-                                    {`box-margin-right='${value || ''}'`}
-                                </Example.Box>
-                            </Box>
-                        </Example.Box>
-                        <Example.Box style={{ background: '#f8f8f8', overflow: 'hidden', padding: 0, margin: '10px 0' }}>
-                            <Box box-margin-left={value}>
-                                <Example.Box>
-                                    {`box-margin-left='${value || ''}'`}
-                                </Example.Box>
-                            </Box>
-                        </Example.Box>
-                        <Example.Box style={{ background: '#f8f8f8', overflow: 'hidden', padding: 0, margin: '10px 0' }}>
-                            <Box box-margin-tb={value}>
-                                <Example.Box>
-                                    {`box-margin-tb='${value || ''}'`}
-                                </Example.Box>
-                            </Box>
-                        </Example.Box>
-                        <Example.Box style={{ background: '#f8f8f8', overflow: 'hidden', padding: 0, margin: '10px 0' }}>
-                            <Box box-margin-lr={value}>
-                                <Example.Box>
-                                    {`box-margin-lr='${value || ''}'`}
-                                </Example.Box>
-                            </Box>
-                        </Example.Box>
-                    </div>
-                )}
-            </Example>
-        )
-    }
-}
-</script>
+<Box box-margin='...'>
+    ...
+</Box>
 ```
 
 ### `box-padding`
 
-> Имеет дополнительные параметры, например `box-padding-top`, `box-padding-lr` (left right), `box-padding-tb` (top bottom) и другие.
+> Has advanced props:
+> - `box-padding` - `top`, `right`, `bottom` or `left` for example **`box-padding-right`**
+> - `box-padding` - `lr` or `tb` for example **`box-padding-tb`**
+
+- `none` - value: `0px`
+- `xxs` - css variable `--ek-box-indent-xxs`, default value: `5px`
+- `xs` - css variable `--ek-box-indent-xs`, default value: `10px`
+- `s` - css variable `--ek-box-indent-s`, default value: `15px`
+- `m` - css variable `--ek-box-indent-m`, default value: `20px`
+- `l` - css variable `--ek-box-indent-l`, default value: `25px`
+- `xl` - css variable `--ek-box-indent-xl`, default value: `30px`
+- `xxl` - css variable `--ek-box-indent-xxl`, default value: `35px`
 
 ```jsx
-<Box box-padding='...'></Box>
-```
-
-```jsx
-/*react*/
-<script>
-const { Box, Example } = EvoKit;
-
-export default class ExampleBox extends React.Component {
-    render() {
-        return (
-            <Example values={['xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl']}>
-                {(value) => (
-                    <div>
-                        <Example.Box style={{ background: '#f8f8f8', overflow: 'hidden', padding: 0, margin: '10px 0' }}>
-                            <Box box-padding={value}>
-                                <Example.Box>
-                                    {`box-padding='${value || ''}'`}
-                                </Example.Box>
-                            </Box>
-                        </Example.Box>
-                        <Example.Box style={{ background: '#f8f8f8', overflow: 'hidden', padding: 0, margin: '10px 0' }}>
-                            <Box box-padding-top={value}>
-                                <Example.Box>
-                                    {`box-padding-top='${value || ''}'`}
-                                </Example.Box>
-                            </Box>
-                        </Example.Box>
-                        <Example.Box style={{ background: '#f8f8f8', overflow: 'hidden', padding: 0, margin: '10px 0' }}>
-                            <Box box-padding-bottom={value}>
-                                <Example.Box>
-                                    {`box-padding-bottom='${value || ''}'`}
-                                </Example.Box>
-                            </Box>
-                        </Example.Box>
-                        <Example.Box style={{ background: '#f8f8f8', overflow: 'hidden', padding: 0, margin: '10px 0' }}>
-                            <Box box-padding-left={value}>
-                                <Example.Box>
-                                    {`box-padding-left='${value || ''}'`}
-                                </Example.Box>
-                            </Box>
-                        </Example.Box>
-                        <Example.Box style={{ background: '#f8f8f8', overflow: 'hidden', padding: 0, margin: '10px 0' }}>
-                            <Box box-padding-right={value}>
-                                <Example.Box>
-                                    {`box-padding-right='${value || ''}'`}
-                                </Example.Box>
-                            </Box>
-                        </Example.Box>
-                        <Example.Box style={{ background: '#f8f8f8', overflow: 'hidden', padding: 0, margin: '10px 0' }}>
-                            <Box box-padding-tb={value}>
-                                <Example.Box>
-                                    {`box-padding-tb='${value || ''}'`}
-                                </Example.Box>
-                            </Box>
-                        </Example.Box>
-                        <Example.Box style={{ background: '#f8f8f8', overflow: 'hidden', padding: 0, margin: '10px 0' }}>
-                            <Box box-padding-lr={value}>
-                                <Example.Box>
-                                    {`box-padding-lr='${value || ''}'`}
-                                </Example.Box>
-                            </Box>
-                        </Example.Box>
-                    </div>
-                )}
-            </Example>
-        )
-    }
-}
-</script>
+<Box box-padding='xl'>
+    ...
+</Box>
 ```
 
 ### `box-round`
 
-> Имеет дополнительные параметры, например `box-round-top`, `box-round-top-right` и другие.
+> Has advanced props:
+> - `box-round` - `top`, `right`, `bottom` or `left` for example **`box-round-right`**
+> - `box-round-top` - `left` or `right` for example **`box-round-top-right`**
+> - `box-round-bottom` - `left` or `right` for example **`box-round-bottom-right`**
 
-- `none` - Скругление отсутствует
-- `full` - Полное скругление
-- `xxs, xs, s, m, l, xl, xxl` - Каждое последующее значение больше предыдущего на 2px, `xxs=2px`, `xs=4px`, `s=6px` и т.д.
+- `none` - value: `0px`
+- `full` - value: `50%`
+- `xxs` - css variable `--ek-box-round-xxs`, default value: `2px`
+- `xs` - css variable `--ek-box-round-xs`, default value: `4px`
+- `s` - css variable `--ek-box-round-s`, default value: `6px`
+- `m` - css variable `--ek-box-round-m`, default value: `8px`
+- `l` - css variable `--ek-box-round-l`, default value: `10px`
+- `xl` - css variable `--ek-box-round-xl`, default value: `12px`
+- `xxl` - css variable `--ek-box-round-xxl`, default value: `14px`
 
 ```jsx
-<Box box-round='...'></Box>
-```
-
-```jsx
-/*react*/
-<script>
-const { Box, Example } = EvoKit;
-
-export default class ExampleBox extends React.Component {
-    render() {
-        return (
-            <Example values={['none', 'full', 'xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl']}>
-                {(value) => (
-                    <div>
-                        <Box box-round={value} box-margin-tb='xs' box-padding='xs' box-border='success'>
-                            box-round
-                        </Box>
-                        <Box box-round-top={value} box-margin-tb='xs' box-padding='xs' box-border='success'>
-                            box-round-top
-                        </Box>
-                        <Box box-round-right={value} box-margin-tb='xs' box-padding='xs' box-border='success'>
-                            box-round-right
-                        </Box>
-                        <Box box-round-bottom={value} box-margin-tb='xs' box-padding='xs' box-border='success'>
-                            box-round-bottom
-                        </Box>
-                        <Box box-round-left={value} box-margin-tb='xs' box-padding='xs' box-border='success'>
-                            box-round-left
-                        </Box>
-                        <Box box-round-top-left={value} box-margin-tb='xs' box-padding='xs' box-border='success'>
-                            box-round-top-left
-                        </Box>
-                        <Box box-round-top-right={value} box-margin-tb='xs' box-padding='xs' box-border='success'>
-                            box-round-top-right
-                        </Box>
-                        <Box box-round-bottom-left={value} box-margin-tb='xs' box-padding='xs' box-border='success'>
-                            box-round-bottom-left
-                        </Box>
-                        <Box box-round-bottom-right={value} box-margin-tb='xs' box-padding='xs' box-border='success'>
-                            box-round-bottom-right
-                        </Box>
-                    </div>
-                )}
-            </Example>
-        )
-    }
-}
-</script>
+<Box box-round='full'>
+    ...
+</Box>
 ```
 
 ### `box-width`
 
-```jsx
-<Box box-width='...'></Box>
-```
+- `auto` - value: `auto`
+- see table, for example value `1-2` = `50%`
+
+| |1|2|3|4|5|6|7|8|9|10|
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+|1|`100%`|`50%`|`33.33%`|`25%`|`20%`|`16.66%`|`14.28%`|`12.5%`|`11.11%`|`10%`|
+|2|---|`100%`|`66.66%`|`50%`|`40%`|`33.33%`|`28.57%`|`25%`|`22.22%`|`20%`|
+|3|---|---|`100%`|`75%`|`60%`|`50%`|`42.85%`|`37.5%`|`33.33%`|`30%`|
+|4|---|---|---|`100%`|`80%`|`66.66%`|`57.14%`|`50%`|`44.44%`|`40%`|
+|5|---|---|---|---|`100%`|`83.33%`|`71.42%`|`62.5%`|`55.55%`|`50%`|
+|6|---|---|---|---|---|`100%`|`85.71%`|`75%`|`66.66%`|`60%`|
+|7|---|---|---|---|---|---|`100%`|`87.5%`|`77.77%`|`70%`|
+|8|---|---|---|---|---|---|---|`100%`|`88.88%`|`80%`|
+|9|---|---|---|---|---|---|---|---|`100%`|`90%`|
+|10|---|---|---|---|---|---|---|---|---|`100%`|
+
 
 ```jsx
-/*react*/
-<script>
-const { Box, Example } = EvoKit;
-
-export default class ExampleBox extends React.Component {
-    render() {
-        return (
-            <Example values={['auto', '1-1', '1-10', '2-10', '3-10', '4-10', '5-10', '6-10', '7-10', '8-10', '9-10']}>
-                {(value) => (
-                    <Box box-width={value}>
-                        <Example.Box>
-                            content
-                        </Example.Box>
-                    </Box>
-                )}
-            </Example>
-        )
-    }
-}
-</script>
+<Box box-width='1-3'>
+    ...
+</Box>
 ```
 
 ### `box-display`
 
 ```jsx
-<Box box-display='...'></Box>
-```
-
-```jsx
-/*react*/
-<script>
-const { Box, Example } = EvoKit;
-
-export default class ExampleBox extends React.Component {
-    render() {
-        return (
-            <Example values={['none', 'inline', 'inline-block', 'block']}>
-                {(value) => (
-                    <Box box-display={value}>
-                        <Example.Box>
-                            content
-                        </Example.Box>
-                    </Box>
-                )}
-            </Example>
-        )
-    }
-}
-</script>
+<Box box-display='...'>
+    ...
+</Box>
 ```
 
 ### `box-position`
 
 ```jsx
-<Box box-position='...'></Box>
-```
-
-```jsx
-/*react*/
-<script>
-const { Box, Example } = EvoKit;
-
-export default class ExampleBox extends React.Component {
-    render() {
-        return (
-            <Example values={['static', 'relative', 'absolute', 'fixed']}>
-                {(value) => (
-                    <Box box-position={value}>
-                        <Example.Box>
-                            content
-                        </Example.Box>
-                    </Box>
-                )}
-            </Example>
-        )
-    }
-}
-</script>
+<Box box-position='...'>
+    ...
+</Box>
 ```
 
 ### `box-place`
 
 ```jsx
-<Box box-place='...'></Box>
-```
-
-```jsx
-/*react*/
-<script>
-const { Box, Example } = EvoKit;
-
-export default class ExampleBox extends React.Component {
-    render() {
-        return (
-            <Example values={['top', 'top-left', 'top-right', 'center', 'center-left', 'center-right', 'bottom', 'bottom-left', 'bottom-right']}>
-                {(value) => (
-                    <Box box-position='relative' style={{ background: '#f8f8f8', width: 200, height: 200 }}>
-                        <Box box-position='absolute' box-place={value}>
-                            <Example.Box>
-                                content
-                            </Example.Box>
-                        </Box>
-                    </Box>
-                )}
-            </Example>
-        )
-    }
-}
-</script>
+<Box box-position='absolute' box-place='...'>
+    ...
+</Box>
 ```
 
 ### `box-border`
 
-Set the border color depending on the [created theme][create_theme], used `border color` value.
+> Set the border color depending on the [created theme][create_theme], used `border color` value.
 
 ```jsx
-<Box box-border='...'></Box>
-```
-
-```jsx
-/*react*/
-<script>
-const { Box, Example } = EvoKit;
-
-export default class ExampleBox extends React.Component {
-    render() {
-        return (
-            <Example values={['success', 'info', 'warning', 'danger']}>
-                {(value) => (
-                    <Box box-padding='xs' box-border={value}>
-                        content
-                    </Box>
-                )}
-            </Example>
-        )
-    }
-}
-</script>
+<Box box-border={THEME_NAME}>
+    ...
+</Box>
 ```
 
 ### `box-background`
 
-Set the background color depending on the [created theme][create_theme], used `background color` value.
+> Set the background color depending on the [created theme][create_theme], used `background color` value.
 
 ```jsx
-<Box box-background='...'></Box>
-```
-
-```jsx
-/*react*/
-<script>
-const { Box, Example } = EvoKit;
-
-export default class ExampleBox extends React.Component {
-    render() {
-        return (
-            <Example values={['success', 'info', 'warning', 'danger']}>
-                {(value) => (
-                    <Box box-padding='xs' box-background={value}>
-                        content
-                    </Box>
-                )}
-            </Example>
-        )
-    }
-}
-</script>
+<Box box-background={THEME_NAME}>
+    ...
+</Box>
 ```
