@@ -1,4 +1,4 @@
-* [CHANGELOG](docs/changelog/)
+* [CHANGELOG](CHANGELOG)
 
 * [EXAMPLES](docs/examples/)
 
