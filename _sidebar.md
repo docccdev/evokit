@@ -1,8 +1,8 @@
 * BASE
 
-  * [Usage](/docs/base/usage.md)
-  * [Variables](/docs/base/variables.md)
-  * [Theme](/docs/base/theme.md)
+  * [Core](packages/evokit/)
+  * [Customize](/docs/base/variables.md)
+  * [Theming](/docs/base/theme.md)
   * [Media](/docs/base/media.md)
 
 * BLOCKS
