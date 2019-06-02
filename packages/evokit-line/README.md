@@ -1,6 +1,12 @@
+[evokit]: /packages/evokit/
+[css-variable]: //caniuse.com/#feat=css-variables
+[css-variable-usage]: //w3schools.com/css/css3_variables.asp
+[html-tag-hr]: //www.w3schools.com/tags/tag_hr.asp
+[postcss]: //postcss.org
+[postcss-preset-env]: //preset-env.cssdb.org
+
 [create_theme]: docs/base/theme
 
-[line]: #line
 [line-indent]: #line-indent
 [line-color]: #line-color
 [line-style]: #line-style
@@ -9,13 +15,23 @@
 
 [![](https://img.shields.io/npm/v/evokit-line.svg)](https://www.npmjs.com/package/evokit-line)
 
-Горизонтальная линия, применяется для разделения контента
+Horizontal line, used to separate content. Contains one element `<Line>`.
 
 ---
 
-## Usage
+#### Install
 
-- [Line][line]
+> Peer dependencies [evokit]
+
+```bash
+npm install evokit-line --save
+```
+
+#### Usage
+
+> The styles use [css-variable] and will work in all modern browsers. If you need to support more old browsers such as Interner Explorer 11 or lower, use a tool [postcss] with [postcss-preset-env] for transforming css into something most browsers can understand.
+
+- `<Line>` has a default html tag [hr][html-tag-hr]
 
 ```jsx
 import { Line } from 'evokit-line';
@@ -25,9 +41,7 @@ import 'evokit-line/style.css';
 
 ```
 
----
-
-## Line
+#### Props
 
 | Props | Values | Description |
 |-------|--------|-------------|
@@ -35,87 +49,24 @@ import 'evokit-line/style.css';
 | [line-style]  | `dotted` `dashed` | Стиль |
 | [line-color]  | `${themeName}` - [Create Theme][create_theme] | Цвет |
 
-### `line-indent`
+---
+
+##### `line-indent`
 
 ```jsx
 <Line line-indent='...' />
 ```
 
-```jsx
-/*react*/
-<script>
-const { Line, Example } = EvoKit;
-
-export default class ExampleLine extends React.Component {
-    render() {
-        return (
-            <Example values={['xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl']}>
-                {(value) => (
-                    <div>
-                        <Example.Box style={{ display: 'inline-block' }}>
-                            text
-                        </Example.Box>
-                        <Line line-color='default' line-indent={value} />
-                        <Example.Box style={{ display: 'inline-block' }}>
-                            text
-                        </Example.Box>
-                    </div>
-                )}
-            </Example>
-        )
-    }
-}
-</script>
-```
-
-### `line-style`
+##### `line-style`
 
 ```jsx
 <Line line-style='...' />
 ```
 
-```jsx
-/*react*/
-<script>
-const { Line, Example } = EvoKit;
-
-export default class ExampleLine extends React.Component {
-    render() {
-        return (
-            <Example values={['dotted', 'dashed']}>
-                {(value) => (
-                    <Line line-color='danger' line-style={value} />
-                )}
-            </Example>
-        )
-    }
-}
-</script>
-```
-
-### `line-color`
+##### `line-color`
 
 Set the color depending on the [created theme][create_theme], used `border color` value.
 
 ```jsx
 <Line line-color='...' />
-```
-
-```jsx
-/*react*/
-<script>
-const { Line, Example } = EvoKit;
-
-export default class ExampleLine extends React.Component {
-    render() {
-        return (
-            <Example values={['success', 'info', 'warning', 'danger']}>
-                {(value) => (
-                    <Line line-color='default' line-color={value} />
-                )}
-            </Example>
-        )
-    }
-}
-</script>
 ```

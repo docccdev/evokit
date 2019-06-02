@@ -31,7 +31,7 @@ The grid for placing content on the page, has 10 columns. Contains two elements 
 > Peer dependencies [evokit]
 
 ```bash
-npm install evokit-box --save
+npm install evokit-grid --save
 ```
 
 #### Usage
@@ -53,7 +53,7 @@ import 'evokit-grid/style.css';
 
 ```
 
-[![Edit box-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/gridusage-bweb5?fontsize=14 ':include :type=iframe width=100% height=500px')
+[![Edit grid-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/gridusage-bweb5?fontsize=14 ':include :type=iframe width=100% height=500px')
 
 #### Props
 
@@ -73,8 +73,8 @@ import 'evokit-grid/style.css';
 
 | Props | Values | Description |
 |-------|--------|-------------|
-| [grid-item-order] | `1` `2` `3` `4` `5` `6` `7` `8` `9` `10` | Задает порядок расположения ячейки |
-| [grid-item-width] | `auto` `expand` `1-1` `*-2` `*-3` `*-4` `*-5` `*-6` `*-7` `*-8` `*-9` `*-10` | Ширина `9-10 = 90%` |
+| [grid-item-order] | `1` `2` `3` `4` `5` `6` `7` `8` `9` `10` | Sets the order of the cell |
+| [grid-item-width] | `auto` `expand` `1-1` `*-2` `*-3` `*-4` `*-5` `*-6` `*-7` `*-8` `*-9` `*-10` | Cell width |
 
 #### Customize
 
@@ -211,7 +211,7 @@ import 'evokit-grid/style.css';
 > Set the border color depending on the [created theme][create_theme], used `border color` value.
 
 ```jsx
-<Grid grid-valign={THEME_NAME}>
+<Grid grid-divider={THEME_NAME}>
     <Grid.Item>
         {content}
     </Grid.Item>

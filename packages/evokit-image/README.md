@@ -1,4 +1,10 @@
-[image]: #image
+[evokit]: /packages/evokit/
+[css-variable]: //caniuse.com/#feat=css-variables
+[css-variable-usage]: //w3schools.com/css/css3_variables.asp
+[html-tag-img]: //www.w3schools.com/tags/tag_img.asp
+[postcss]: //postcss.org
+[postcss-preset-env]: //preset-env.cssdb.org
+
 [image-align]: #image-align
 [image-valign]: #image-valign
 [image-mirror]: #image-mirror
@@ -9,261 +15,126 @@
 
 [![](https://img.shields.io/npm/v/evokit-image.svg)](https://www.npmjs.com/package/evokit-image)
 
-Предназначен для отображения изображения
+Used to display the image. Contains one element `<Image>`.
 
 ---
 
-## Usage
+#### Install
 
-- [Image][image]
+> Peer dependencies [evokit]
+
+```bash
+npm install evokit-image --save
+```
+
+#### Usage
+
+> The styles use [css-variable] and will work in all modern browsers. If you need to support more old browsers such as Interner Explorer 11 or lower, use a tool [postcss] with [postcss-preset-env] for transforming css into something most browsers can understand.
+
+- `<Image>` has a default html tag [img][html-tag-img]
 
 ```jsx
 import { Image } from 'evokit-image';
 import 'evokit-image/style.css';
 
-<Image src='картинка.png' alt='картинка' />
+<Image src={imageSrc} alt='' />
 
+```
+[![Edit image-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/imageusage-7qyol?fontsize=14 ':include :type=iframe width=100% height=500px')
+
+#### Props
+
+| Props | Values | Description |
+|-------|--------|-------------|
+| [image-align]  | `left` `center` `right` | Horizontal alignment |
+| [image-valign] | `baseline` `bottom` `middle` `sub` `super` `text-bottom` `text-top` `top` | Vertical alignment |
+| [image-mirror] | `x` `y` `xy` | Mirroring |
+| [image-fit]    | `none` `fill` `contain` `cover` `scale-down` | Filling the container relative to its height and width |
+| [image-round]  | `none` `full` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Corner rounding |
+
+#### Customize
+
+> This set of css variables is default, if you want to override one or more value, please use the rules [css-variable-usage], define them below the css import.
+
+```css
+:root {
+    /* prop 'image-round' */
+    --ek-image-round-xxs: 2px;
+    --ek-image-round-xs: 4px;
+    --ek-image-round-s: 6px;
+    --ek-image-round-m: 8px;
+    --ek-image-round-l: 10px;
+    --ek-image-round-xl: 12px;
+    --ek-image-round-xxl: 14px;
+}
 ```
 
 ---
 
-## Image
+##### `image-align`
 
-| Props | Values | Description |
-|-------|--------|-------------|
-| [image-align]  | `left` `center` `right` | Горизонтальное выравнивание |
-| [image-valign] | `baseline` `bottom` `middle` `sub` `super` `text-bottom` `text-top` `top` | Вертикальное выравнивание |
-| [image-mirror] | `x` `y` `xy` | Отзеркаливание |
-| [image-fit]    | `none` `fill` `contain` `cover` `scale-down` | Заполнение контейнера относительно его высоты и ширины |
-| [image-round]  | `none` `full` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Скругление углов |
-
-### `image-align`
+- `left` - Align the image to the left
+- `center` - Center alignment
+- `right` - Align the image to the right
 
 ```jsx
-<Image src='' image-align='...' />
+<Image image-align='center' src={imageSrc} alt='' />
 ```
 
-```jsx
-/*react*/
-<script>
-const { Image, Example } = EvoKit;
+##### `image-valign`
 
-export default class ExampleImage extends React.Component {
-    render() {
-        return (
-            <Example values={['left', 'center', 'right']}>
-                {(value) => (
-                    <Image
-                        src='https://picsum.photos/200/200'
-                        width={100}
-                        height={100}
-                        image-align={value}
-                    />
-                )}
-            </Example>
-        )
-    }
-}
-</script>
+- `top` - Align the top edge of the element to the top of the tallest line item.
+- `bottom` - Aligns the base of the current element at the bottom of the element of the line below it all
+- `middle` - The alignment of the midpoint of the element at the baseline of the parent plus half the height of the parent element
+- `baseline` - Aligns the baseline of the current element to the parent's baseline
+- `sub` - The element is depicted as subscript, in the form of a subscript
+- `super` - The element is depicted as superscript, in the form of a superscript
+- `text-top` - The top border of the element is aligned to the highest text element of the current line
+- `text-bottom` - The bottom border of the element is aligned at the very bottom edge of the current line
+
+```jsx
+<Image image-valign='top' src={imageSrc} alt='' />
 ```
 
-### `image-valign`
+##### `image-mirror`
+
+- `x` - X-axis reflection
+- `y` - Y-axis reflection
+- `xy` - X and Y axis reflection
 
 ```jsx
-<Image src='' image-valign='...' />
+<Image image-mirror='x' src={imageSrc} alt='' />
 ```
 
-```jsx
-/*react*/
-<script>
-const { Image, Example } = EvoKit;
+##### `image-fit`
 
-export default class ExampleImage extends React.Component {
-    render() {
-        return (
-            <Example values={['baseline', 'top', 'bottom', 'middle', 'super', 'sub', 'text-top', 'text-bottom']}>
-                {(value) => (
-                    <div>
-                        <Example.Box style={{ display: 'inline-block' }}>
-                            text
-                        </Example.Box>
-                        <Image
-                            src='https://picsum.photos/120/120'
-                            width={60}
-                            height={60}
-                            image-valign={value}
-                        />
-                        <Example.Box style={{ display: 'inline-block' }}>
-                            text
-                        </Example.Box>
-                    </div>
-                )}
-            </Example>
-        )
-    }
-}
-</script>
+- `none` - Does not change its size and fills the space
+- `fill` - Resizes to fill the whole area
+- `contain` - Сhanges its size to fit the area
+- `cover` - Сhanges its size to maintain its proportions when filling the block
+- `scale-down` - Resizes by comparing the difference between `none` and` contain` to find the smallest object size
+
+```jsx
+<Image image-fit='cover' src={imageSrc} alt='' />
 ```
 
-### `image-mirror`
+##### `image-round`
+
+> Has advanced props:
+> - `image-round` - `top`, `right`, `bottom` or `left` for example **`image-round-right`**
+> - `image-round-top` - `left` or `right` for example **`image-round-top-right`**
+> - `image-round-bottom` - `left` or `right` for example **`image-round-bottom-right`**
+
+- `none` - value: `0px`
+- `full` - value: `50%`
+- `xxs` - css variable `--ek-image-round-xxs`, default value: `2px`
+- `xs` - css variable `--ek-image-round-xs`, default value: `4px`
+- `s` - css variable `--ek-image-round-s`, default value: `6px`
+- `m` - css variable `--ek-image-round-m`, default value: `8px`
+- `l` - css variable `--ek-image-round-l`, default value: `10px`
+- `xl` - css variable `--ek-image-round-xl`, default value: `12px`
+- `xxl` - css variable `--ek-image-round-xxl`, default value: `14px`
 
 ```jsx
-<Image src='' image-mirror='...' />
-```
-
-```jsx
-/*react*/
-<script>
-const { Image, Example } = EvoKit;
-
-export default class ExampleImage extends React.Component {
-    render() {
-        return (
-            <Example values={['x', 'y', 'xy']}>
-                {(value) => (
-                    <Image
-                        src='https://picsum.photos/200/200'
-                        width={100}
-                        height={100}
-                        image-mirror={value}
-                    />
-                )}
-            </Example>
-        )
-    }
-}
-</script>
-```
-
-### `image-fit`
-
-- `none` - не изменяет свой размер и заполняет пространство
-- `fill` - меняет свой размер, чтобы заполнить всю область
-- `contain` - меняет свой размер, чтобы подстроится под область
-- `cover` - меняет свой размер, чтобы сохранять свои пропорции при заполнении блока
-- `scale-down` - изменяет размер, сравнивая разницу между `none` и `contain`, чтобы найти наименьший конкретный размер объекта
-
-```jsx
-<Image src='' image-fit='...' />
-```
-
-```jsx
-/*react*/
-<script>
-const { Image, Example } = EvoKit;
-
-export default class ExampleImage extends React.Component {
-    render() {
-        return (
-            <Example values={['none', 'fill', 'contain', 'cover', 'scale-down']}>
-                {(value) => (
-                    <Example.Box style={{ display: 'inline-block', padding: 5 }}>
-                        <Image
-                            src='https://picsum.photos/200/100'
-                            width={100}
-                            height={100}
-                            image-fit={value}
-                            image-valign='top'
-                        />
-                    </Example.Box>
-                )}
-            </Example>
-        )
-    }
-}
-</script>
-```
-
-### `image-round`
-
-> Имеет дополнительные параметры, например `image-round-top`, `image-round-top-right` и другие.
-
-- `none` - Скругление отсутствует
-- `full` - Полное скругление
-- `xxs, xs, s, m, l, xl, xxl` - Каждое последующее значение больше предыдущего на 2px, `xxs=2px`, `xs=4px`, `s=6px` и т.д.
-
-```jsx
-<Image src='' image-round='...' />
-```
-
-```jsx
-/*react*/
-<script>
-const { Image, Example } = EvoKit;
-
-export default class ExampleImage extends React.Component {
-    render() {
-        return (
-            <Example values={['none', 'full', 'xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl']}>
-                {(value) => (
-                    <div>
-                        <Image
-                            src='https://picsum.photos/200/200'
-                            width={100}
-                            height={100}
-                            image-round={value}
-                        />
-                        &nbsp;&nbsp;
-                        <Image
-                            src='https://picsum.photos/200/200'
-                            width={100}
-                            height={100}
-                            image-round-top={value}
-                        />
-                        &nbsp;&nbsp;
-                        <Image
-                            src='https://picsum.photos/200/200'
-                            width={100}
-                            height={100}
-                            image-round-right={value}
-                        />
-                        &nbsp;&nbsp;
-                        <Image
-                            src='https://picsum.photos/200/200'
-                            width={100}
-                            height={100}
-                            image-round-bottom={value}
-                        />
-                        &nbsp;&nbsp;
-                        <Image
-                            src='https://picsum.photos/200/200'
-                            width={100}
-                            height={100}
-                            image-round-left={value}
-                        />
-                        &nbsp;&nbsp;
-                        <Image
-                            src='https://picsum.photos/200/200'
-                            width={100}
-                            height={100}
-                            image-round-top-left={value}
-                        />
-                        &nbsp;&nbsp;
-                        <Image
-                            src='https://picsum.photos/200/200'
-                            width={100}
-                            height={100}
-                            image-round-top-right={value}
-                        />
-                        &nbsp;&nbsp;
-                        <Image
-                            src='https://picsum.photos/200/200'
-                            width={100}
-                            height={100}
-                            image-round-bottom-left={value}
-                        />
-                        &nbsp;&nbsp;
-                        <Image
-                            src='https://picsum.photos/200/200'
-                            width={100}
-                            height={100}
-                            image-round-bottom-right={value}
-                        />
-                    </div>
-                )}
-            </Example>
-        )
-    }
-}
-</script>
+<Image image-round='full' src={imageSrc} alt='' />
 ```

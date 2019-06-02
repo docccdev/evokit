@@ -1,5 +1,21 @@
 @import './mixins.sss'
 
+@custom-media --ek-image-media-small only screen and (min-width: 480px)
+@custom-media --ek-image-media-medium only screen and (min-width: 768px)
+@custom-media --ek-image-media-large only screen and (min-width: 960px)
+@custom-media --ek-image-media-wide only screen and (min-width: 1200px)
+@custom-media --ek-image-media-huge only screen and (min-width: 1400px)
+
+:root
+    // prop 'image-round'
+    --ek-image-round-xxs: 2px
+    --ek-image-round-xs: 4px
+    --ek-image-round-s: 6px
+    --ek-image-round-m: 8px
+    --ek-image-round-l: 10px
+    --ek-image-round-xl: 12px
+    --ek-image-round-xxl: 14px
+
 .image
     outline: none
     border: 0
@@ -14,15 +30,14 @@
 /**
  * Horizontal align:
  *
- *  - image_align_left
- *  - image_align_center
- *  - image_align_right
+ *  - image_align_*
  *
  **/
 
 @each $value in (left, center, right)
-    .image_align_$(value)
+    @mixin media .image_align_$(value)
         @if $value == center
+            float: none
             display: block
             margin-left: auto
             margin-right: auto
@@ -36,24 +51,24 @@
  *
  **/
 
-@mixin vertical-align .image_valign
+@each $value in (baseline, bottom, middle, sub, super, text-bottom, text-top, top)
+    @mixin media .image_valign_$(value)
+        vertical-align: $value
 
 /**
  * Mirror:
  *
- *  - image_mirror_x
- *  - image_mirror_y
- *  - image_mirror_xy
+ *  - image_mirror_*
  *
  **/
 
-.image_mirror_x
+@mixin media .image_mirror_x
     transform: scaleX(-1)
 
-.image_mirror_y
+@mixin media .image_mirror_y
     transform: scaleY(-1)
 
-.image_mirror_xy
+@mixin media .image_mirror_xy
     transform: scale(-1, -1)
 
 /**
@@ -64,7 +79,7 @@
  **/
 
 @each $value in (none, fill, contain, cover, scale-down)
-    .image_fit_$(value)
+    @mixin media .image_fit_$(value)
         object-fit: $value
 
 /**
@@ -74,4 +89,87 @@
  *
  **/
 
-@mixin border-radius .image_round
+@each $value in (none, xxs, xs, s, m, l, xl, xxl, full)
+    @mixin media .image_round_$(value)
+        @if $value == none
+            border-radius: 0
+        @else if $value == full
+            border-radius: 50%
+        @else
+            border-radius: var(--ek-image-round-$(value))
+
+    @mixin media .image_round-top_$(value)
+        @if $value == none
+            border-top-left-radius: 0
+            border-top-right-radius: 0
+        @else if $value == full
+            border-top-left-radius: 50%
+            border-top-right-radius: 50%
+        @else
+            border-top-left-radius: var(--ek-image-round-$(value))
+            border-top-right-radius: var(--ek-image-round-$(value))
+
+    @mixin media .image_round-right_$(value)
+        @if $value == none
+            border-top-right-radius: 0
+            border-bottom-right-radius: 0
+        @else if $value == full
+            border-top-right-radius: 50%
+            border-bottom-right-radius: 50%
+        @else
+            border-top-right-radius: var(--ek-image-round-$(value))
+            border-bottom-right-radius: var(--ek-image-round-$(value))
+
+    @mixin media .image_round-bottom_$(value)
+        @if $value == none
+            border-bottom-left-radius: 0
+            border-bottom-right-radius: 0
+        @else if $value == full
+            border-bottom-left-radius: 50%
+            border-bottom-right-radius: 50%
+        @else
+            border-bottom-left-radius: var(--ek-image-round-$(value))
+            border-bottom-right-radius: var(--ek-image-round-$(value))
+
+    @mixin media .image_round-left_$(value)
+        @if $value == none
+            border-top-left-radius: 0
+            border-bottom-left-radius: 0
+        @else if $value == full
+            border-top-left-radius: 50%
+            border-bottom-left-radius: 50%
+        @else
+            border-top-left-radius: var(--ek-image-round-$(value))
+            border-bottom-left-radius: var(--ek-image-round-$(value))
+
+    @mixin media .image_round-top-left_$(value)
+        @if $value == none
+            border-top-left-radius: 0
+        @else if $value == full
+            border-top-left-radius: 50%
+        @else
+            border-top-left-radius: var(--ek-image-round-$(value))
+
+    @mixin media .image_round-top-right_$(value)
+        @if $value == none
+            border-top-right-radius: 0
+        @else if $value == full
+            border-top-right-radius: 50%
+        @else
+            border-top-right-radius: var(--ek-image-round-$(value))
+
+    @mixin media .image_round-bottom-right_$(value)
+        @if $value == none
+            border-bottom-right-radius: 0
+        @else if $value == full
+            border-bottom-right-radius: 50%
+        @else
+            border-bottom-right-radius: var(--ek-image-round-$(value))
+
+    @mixin media .image_round-bottom-left_$(value)
+        @if $value == none
+            border-bottom-left-radius: 0
+        @else if $value == full
+            border-bottom-left-radius: 50%
+        @else
+            border-bottom-left-radius: var(--ek-image-round-$(value))
