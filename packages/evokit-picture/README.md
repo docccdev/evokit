@@ -42,7 +42,7 @@ import 'evokit-picture/style.css';
 
 ```
 
-#### Picture
+#### Props
 
 | Props | Values | Description |
 |-------|--------|-------------|

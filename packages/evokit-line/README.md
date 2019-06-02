@@ -38,26 +38,56 @@ import { Line } from 'evokit-line';
 import 'evokit-line/style.css';
 
 <Line />
-
 ```
+
+[![Edit line-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/lineusage-mti8w?fontsize=14 ':include :type=iframe width=100% height=500px')
 
 #### Props
 
 | Props | Values | Description |
 |-------|--------|-------------|
-| [line-indent] | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Отступ сверху и снизу |
-| [line-style]  | `dotted` `dashed` | Стиль |
-| [line-color]  | `${themeName}` - [Create Theme][create_theme] | Цвет |
+| [line-indent] | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Indent above and below |
+| [line-style]  | `dotted` `dashed` | Style |
+| [line-color]  | `{THEME_NAME}` | Color - [Create Theme][create_theme] |
+
+#### Customize
+
+> This set of css variables is default, if you want to override one or more value, please use the rules [css-variable-usage], define them below the css import.
+
+```css
+:root {
+    /* prop 'line-indent' */
+    --ek-line-indent-xxs: 5px;
+    --ek-line-indent-xs: 10px;
+    --ek-line-indent-s: 15px;
+    --ek-line-indent-m: 20px;
+    --ek-line-indent-l: 25px;
+    --ek-line-indent-xl: 30px;
+    --ek-line-indent-xxl: 35px
+}
+```
 
 ---
 
 ##### `line-indent`
 
+- `none` - no indent, value: `0px`
+- `xxs` - css variable `--ek-line-indent-xxs`, default value: `5px`
+- `xs` - css variable `--ek-line-indent-xs`, default value: `10px`
+- `s` - css variable `--ek-line-indent-s`, default value: `15px`
+- `m` - css variable `--ek-line-indent-m`, default value: `20px`
+- `l` - css variable `--ek-line-indent-l`, default value: `25px`
+- `xl` - css variable `--ek-line-indent-xl`, default value: `30px`
+- `xxl` - css variable `--ek-line-indent-xxl`, default value: `35px`
+
 ```jsx
-<Line line-indent='...' />
+<Line line-indent='l' />
 ```
 
 ##### `line-style`
+
+- `dotted` - dotted style
+- `dashed` - dashed style
 
 ```jsx
 <Line line-style='...' />
@@ -65,8 +95,8 @@ import 'evokit-line/style.css';
 
 ##### `line-color`
 
-Set the color depending on the [created theme][create_theme], used `border color` value.
+> Set the border color depending on the [created theme][create_theme], used `border color` value.
 
 ```jsx
-<Line line-color='...' />
+<Line line-color={THEME_NAME} />
 ```
