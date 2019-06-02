@@ -21,7 +21,7 @@
 
 [![](https://img.shields.io/npm/v/evokit-box.svg)](https://www.npmjs.com/package/evokit-box)
 
-The content block allows to apply indents, position and more.
+The content block allows to apply indents, position and more. Contains one element `<Box>`.
 
 ---
 
@@ -48,7 +48,21 @@ import 'evokit-box/style.css';
 </Box>
 ```
 
-[![Edit body-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/boxusage-3r9iy?fontsize=14 ':include :type=iframe width=100% height=500px')
+[![Edit box-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/boxusage-3r9iy?fontsize=14 ':include :type=iframe width=100% height=500px')
+
+#### Props
+
+| Props | Values | Description |
+|-------|--------|-------------|
+| [box-margin]     | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` `auto` | Indent around block |
+| [box-padding]    | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Indent around an block content |
+| [box-round]      | `none` `full` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Corner rounding |
+| [box-width]      | `auto` `1-1` `*-2` `*-3` `*-4` `*-5` `*-6` `*-7` `*-8` `*-9` `*-10` | Set the width |
+| [box-display]    | `none` `inline` `inline-block` `block` | Display type |
+| [box-position]   | `static` `relative` `absolute` `fixed` | Positioning method |
+| [box-place]      | `top` `top-left` `top-right` `center` `center-left` `center-right` `bottom` `bottom-left` `bottom-right` | Position |
+| [box-border]     | `{THEME_NAME}` | Border color - [Create Theme][create_theme] |
+| [box-background] | `{THEME_NAME}` | Background color - [Create Theme][create_theme] |
 
 #### Customize
 
@@ -75,23 +89,9 @@ import 'evokit-box/style.css';
 }
 ```
 
-## Props
-
-| Props | Values | Description |
-|-------|--------|-------------|
-| [box-margin]     | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` `auto` | Indent around block |
-| [box-padding]    | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Indent around an block content |
-| [box-round]      | `none` `full` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Corner rounding |
-| [box-width]      | `auto` `1-1` `*-2` `*-3` `*-4` `*-5` `*-6` `*-7` `*-8` `*-9` `*-10` | Set the width |
-| [box-display]    | `none` `inline` `inline-block` `block` | Display type |
-| [box-position]   | `static` `relative` `absolute` `fixed` | Positioning method |
-| [box-place]      | `top` `top-left` `top-right` `center` `center-left` `center-right` `bottom` `bottom-left` `bottom-right` | Position |
-| [box-border]     | `${themeName}` - [Create Theme][create_theme] | Border color |
-| [box-background] | `${themeName}` - [Create Theme][create_theme] | Background color |
-
 ---
 
-### `box-margin`
+##### `box-margin`
 
 > Has advanced props:
 > - `box-margin` - `top`, `right`, `bottom` or `left` for example **`box-margin-right`**
@@ -108,12 +108,12 @@ import 'evokit-box/style.css';
 - `xxl` - css variable `--ek-box-indent-xxl`, default value: `35px`
 
 ```jsx
-<Box box-margin='...'>
+<Box box-margin='xs'>
     ...
 </Box>
 ```
 
-### `box-padding`
+##### `box-padding`
 
 > Has advanced props:
 > - `box-padding` - `top`, `right`, `bottom` or `left` for example **`box-padding-right`**
@@ -134,7 +134,7 @@ import 'evokit-box/style.css';
 </Box>
 ```
 
-### `box-round`
+##### `box-round`
 
 > Has advanced props:
 > - `box-round` - `top`, `right`, `bottom` or `left` for example **`box-round-right`**
@@ -157,10 +157,10 @@ import 'evokit-box/style.css';
 </Box>
 ```
 
-### `box-width`
+##### `box-width`
 
 - `auto` - value: `auto`
-- see table, for example value `1-2` = `50%`
+- See table, for example: `1-2` = `50%`
 
 | |1|2|3|4|5|6|7|8|9|10|
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
@@ -182,31 +182,31 @@ import 'evokit-box/style.css';
 </Box>
 ```
 
-### `box-display`
+##### `box-display`
 
 ```jsx
-<Box box-display='...'>
+<Box box-display='none'>
     ...
 </Box>
 ```
 
-### `box-position`
+##### `box-position`
 
 ```jsx
-<Box box-position='...'>
+<Box box-position='absolute'>
     ...
 </Box>
 ```
 
-### `box-place`
+##### `box-place`
 
 ```jsx
-<Box box-position='absolute' box-place='...'>
+<Box box-position='absolute' box-place='center'>
     ...
 </Box>
 ```
 
-### `box-border`
+##### `box-border`
 
 > Set the border color depending on the [created theme][create_theme], used `border color` value.
 
@@ -216,7 +216,7 @@ import 'evokit-box/style.css';
 </Box>
 ```
 
-### `box-background`
+##### `box-background`
 
 > Set the background color depending on the [created theme][create_theme], used `background color` value.
 

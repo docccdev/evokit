@@ -49,6 +49,15 @@ import 'evokit-body/style.css';
 
 [![Edit body-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/bodyusage-kz6ss?fontsize=14 ':include :type=iframe width=100% height=500px')
 
+#### Props
+
+| Key | Values | Description |
+|-------|--------|-------------|
+| [body-size]       | `xl` `xxl` `xxxl` | Max width for `<Body.Section>` |
+| [body-indent]     | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Padding on the side left and right for `<Body.Section>` |
+| [body-background] | `{THEME_NAME}` | Background color - [Create Theme][create_theme] |
+| [body-color]      | `{THEME_NAME}` | Text color - [Create Theme][create_theme] |
+
 #### Customize
 
 > This set of css variables is default, if you want to override one or more value, please use the rules [css-variable-usage], define them below the css import.
@@ -76,15 +85,6 @@ import 'evokit-body/style.css';
     --ek-body-max-width-xxxl: 1840px;
 }
 ```
-
-#### Props
-
-| Key | Values | Description |
-|-------|--------|-------------|
-| [body-size]       | `xl` `xxl` `xxxl` | Max width for `<Body.Section>` |
-| [body-indent]     | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Padding on the side left and right for `<Body.Section>` |
-| [body-background] | `${themeName}` - [Create Theme][create_theme] | Background color |
-| [body-color]      | `${themeName}` - [Create Theme][create_theme] | Text color |
 
 ---
 
