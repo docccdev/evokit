@@ -5,6 +5,7 @@
 [postcss]: //postcss.org
 [postcss-preset-env]: //preset-env.cssdb.org
 
+[base_props]: docs/base/props
 [create_theme]: docs/base/theme
 
 [link-color]: #link-color
@@ -49,6 +50,8 @@ import 'evokit-link/style.css';
 [![Edit link-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/linkusage-c7mgv?fontsize=14 ':include :type=iframe width=100% height=500px')
 
 #### Props
+
+Also have [base props][base_props]
 
 | Props | Values | Description |
 |-------|--------|-------------|

@@ -5,6 +5,7 @@
 [postcss]: //postcss.org
 [postcss-preset-env]: //preset-env.cssdb.org
 
+[base_props]: docs/base/props
 [create_theme]: docs/base/theme
 
 [line-indent]: #line-indent
@@ -43,6 +44,8 @@ import 'evokit-line/style.css';
 [![Edit line-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/lineusage-mti8w?fontsize=14 ':include :type=iframe width=100% height=500px')
 
 #### Props
+
+Also have [base props][base_props]
 
 | Props | Values | Description |
 |-------|--------|-------------|

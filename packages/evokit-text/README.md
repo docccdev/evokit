@@ -5,6 +5,7 @@
 [postcss]: //postcss.org
 [postcss-preset-env]: //preset-env.cssdb.org
 
+[base_props]: docs/base/props
 [create_theme]: docs/base/theme
 
 [text-color]: #text-color
@@ -51,6 +52,8 @@ import 'evokit-text/style.css';
 [![Edit text-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/textusage-wm53d?fontsize=14 ':include :type=iframe width=100% height=500px')
 
 #### Props
+
+Also have [base props][base_props]
 
 | props | Values | Description |
 |-------|--------|-------------|

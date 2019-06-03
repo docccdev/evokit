@@ -5,6 +5,7 @@
 [postcss]: //postcss.org
 [postcss-preset-env]: //preset-env.cssdb.org
 
+[base_props]: docs/base/props
 [create_theme]: docs/base/theme
 
 [grid-column]: #grid-column
@@ -56,6 +57,8 @@ import 'evokit-grid/style.css';
 [![Edit grid-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/gridusage-bweb5?fontsize=14 ':include :type=iframe width=100% height=500px')
 
 #### Props
+
+Also have [base props][base_props]
 
 ##### Grid
 

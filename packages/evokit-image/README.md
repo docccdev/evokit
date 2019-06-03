@@ -5,6 +5,8 @@
 [postcss]: //postcss.org
 [postcss-preset-env]: //preset-env.cssdb.org
 
+[base_props]: docs/base/props
+
 [image-align]: #image-align
 [image-valign]: #image-valign
 [image-mirror]: #image-mirror
@@ -44,6 +46,8 @@ import 'evokit-image/style.css';
 [![Edit image-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/imageusage-7qyol?fontsize=14 ':include :type=iframe width=100% height=500px')
 
 #### Props
+
+Also have [base props][base_props]
 
 | Props | Values | Description |
 |-------|--------|-------------|

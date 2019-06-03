@@ -1,6 +1,7 @@
 * BASE
 
   * [Core](packages/evokit/)
+  * [Props](/docs/base/props.md)
   * [Customize](/docs/base/variables.md)
   * [Theming](/docs/base/theme.md)
   * [Media](/docs/base/media.md)

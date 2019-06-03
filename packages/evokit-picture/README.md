@@ -6,6 +6,8 @@
 [postcss]: //postcss.org
 [postcss-preset-env]: //preset-env.cssdb.org
 
+[base_props]: docs/base/props
+
 [picture-fit]: #picture-fit
 [picture-round]: #picture-round
 
@@ -45,6 +47,8 @@ import 'evokit-picture/style.css';
 [![Edit picture-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/pictureusage-q6brs?fontsize=14 ':include :type=iframe width=100% height=500px')
 
 #### Props
+
+Also have [base props][base_props]
 
 | Props | Values | Description |
 |-------|--------|-------------|

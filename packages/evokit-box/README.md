@@ -5,6 +5,7 @@
 [postcss]: //postcss.org
 [postcss-preset-env]: //preset-env.cssdb.org
 
+[base_props]: docs/base/props
 [create_theme]: docs/base/theme
 
 [box-margin]: #box-margin
@@ -51,6 +52,8 @@ import 'evokit-box/style.css';
 [![Edit box-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/boxusage-3r9iy?fontsize=14 ':include :type=iframe width=100% height=500px')
 
 #### Props
+
+Also have [base props][base_props]
 
 | Props | Values | Description |
 |-------|--------|-------------|
