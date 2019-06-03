@@ -42,53 +42,83 @@ import 'evokit-list/style.css';
 
 <List>
     <List.Item>
-        content
+        ...
     </List.Item>
 </List>
 
 ```
 
+[![Edit list-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/listusage-ycfx4?fontsize=14 ':include :type=iframe width=100% height=500px')
+
 #### Props
 
 | Props | Values | Description |
 |-------|--------|-------------|
-| [list-indent]  | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Отступы между элементами |
-| [list-style]   | `dash` `decimal` `disc` | Тип маркера |
-| [list-color]   | `${themeName}` - [Create Theme][create_theme] | Цвет маркера |
-| [list-divider] | `${themeName}` - [Create Theme][create_theme] | Разделитель между элементами |
+| [list-indent]  | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Indentation between elements |
+| [list-style]   | `dash` `decimal` `disc` | Marker type |
+| [list-color]   | `{THEME_NAME}` | Marker color - [Create Theme][create_theme] |
+| [list-divider] | `{THEME_NAME}` | Color separator between elements - [Create Theme][create_theme] |
+
+#### Customize
+
+> This set of css variables is default, if you want to override one or more value, please use the rules [css-variable-usage], define them below the css import.
+
+```css
+:root {
+    /* prop 'list-indent' */
+    --ek-list-indent-xxs: 5px;
+    --ek-list-indent-xs: 10px;
+    --ek-list-indent-s: 15px;
+    --ek-list-indent-m: 20px;
+    --ek-list-indent-l: 25px;
+    --ek-list-indent-xl: 30px;
+    --ek-list-indent-xxl: 35px;
+}
+```
 
 ---
 
 ##### `list-indent`
 
-- `none` - Расстояние между элементами `0px`
-- `xxs, xs, s, m, l, xl, xxl` - Каждое последующее значение больше предыдущего на 5px, `xxs=5px`, `xs=10px`, `s=15px` и т.д.
+- `none` - no indent, value: `0px`
+- `xxs` - css variable `--ek-list-indent-xxs`, default value: `5px`
+- `xs` - css variable `--ek-list-indent-xs`, default value: `10px`
+- `s` - css variable `--ek-list-indent-s`, default value: `15px`
+- `m` - css variable `--ek-list-indent-m`, default value: `20px`
+- `l` - css variable `--ek-list-indent-l`, default value: `25px`
+- `xl` - css variable `--ek-list-indent-xl`, default value: `30px`
+- `xxl` - css variable `--ek-list-indent-xxl`, default value: `35px`
 
 ```jsx
-<List list-indent='...'></List>
+<List list-indent='xxl'>
+    <List.Item>
+        ...
+    </List.Item>
+</List>
 ```
 
 ##### `list-style`
 
-- `dash` - Маркер в виде прочерка (—)
-- `decimal` - Арабские числа (1, 2, 3, 4,...).
-- `disc` - Маркер в виде точки (•)
+- `dash` - Dash marker (—)
+- `decimal` - Arabic numbers (1, 2, 3, 4,...).
+- `disc` - Dotted markerи (•)
 
 ```jsx
-<List list-indent='...'></List>
+<List list-style='decimal'>
+    <List.Item>
+        ...
+    </List.Item>
+</List>
 ```
 
-### ##`list-color`
+##### `list-color`
 
 > Set the text color depending on the [created theme][create_theme], used `text color` value.
 
 ```jsx
-<List list-divider={THEME_NAME}>
+<List list-color={THEME_NAME}>
     <List.Item>
-        {content}
-    </List.Item>
-    <List.Item>
-        {content}
+        ...
     </List.Item>
 </List>
 ```
@@ -100,10 +130,7 @@ import 'evokit-list/style.css';
 ```jsx
 <List list-divider={THEME_NAME}>
     <List.Item>
-        {content}
-    </List.Item>
-    <List.Item>
-        {content}
+        ...
     </List.Item>
 </List>
 ```

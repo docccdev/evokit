@@ -41,7 +41,7 @@ import { Link } from 'evokit-link';
 import 'evokit-link/style.css';
 
 <Link href='#'>
-    text
+    ...
 </Link>
 
 ```

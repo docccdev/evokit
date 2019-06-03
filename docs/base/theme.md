@@ -1,9 +1,10 @@
-# THEME
+# Theming
 
 Coming soon...
 
+---
 
-!> Tool for creating custom themes
+> Tool for creating custom block theme
 
 <style>
     .demo-box-react .meta,

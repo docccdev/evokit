@@ -47,7 +47,7 @@ import 'evokit-grid/style.css';
 
 <Grid>
     <Grid.Item>
-        {content}
+        ...
     </Grid.Item>
 </Grid>
 
@@ -104,10 +104,7 @@ import 'evokit-grid/style.css';
 ```jsx
 <Grid grid-column='2'>
     <Grid.Item>
-        {content}
-    </Grid.Item>
-    <Grid.Item>
-        {content}
+        ...
     </Grid.Item>
 </Grid>
 ```
@@ -126,10 +123,7 @@ import 'evokit-grid/style.css';
 ```jsx
 <Grid grid-indent='m'>
     <Grid.Item>
-        {content}
-    </Grid.Item>
-    <Grid.Item>
-        {content}
+        ...
     </Grid.Item>
 </Grid>
 ```
@@ -144,10 +138,7 @@ import 'evokit-grid/style.css';
 ```jsx
 <Grid grid-direction='row-reverse'>
     <Grid.Item>
-        {content}
-    </Grid.Item>
-    <Grid.Item>
-        {content}
+        ...
     </Grid.Item>
 </Grid>
 ```
@@ -161,10 +152,7 @@ import 'evokit-grid/style.css';
 ```jsx
 <Grid grid-wrap='nowrap'>
     <Grid.Item>
-        {content}
-    </Grid.Item>
-    <Grid.Item>
-        {content}
+        ...
     </Grid.Item>
 </Grid>
 ```
@@ -179,10 +167,7 @@ import 'evokit-grid/style.css';
 ```jsx
 <Grid grid-align='center'>
     <Grid.Item>
-        {content}
-    </Grid.Item>
-    <Grid.Item>
-        {content}
+        ...
     </Grid.Item>
 </Grid>
 ```
@@ -198,10 +183,7 @@ import 'evokit-grid/style.css';
 ```jsx
 <Grid grid-valign='middle'>
     <Grid.Item>
-        {content}
-    </Grid.Item>
-    <Grid.Item>
-        {content}
+        ...
     </Grid.Item>
 </Grid>
 ```
@@ -213,10 +195,7 @@ import 'evokit-grid/style.css';
 ```jsx
 <Grid grid-divider={THEME_NAME}>
     <Grid.Item>
-        {content}
-    </Grid.Item>
-    <Grid.Item>
-        {content}
+        ...
     </Grid.Item>
 </Grid>
 ```
@@ -228,10 +207,10 @@ import 'evokit-grid/style.css';
 ```jsx
 <Grid>
     <Grid.Item grid-item-order='2'>
-        {content}
+        ...
     </Grid.Item>
     <Grid.Item>
-        {content}
+        ...
     </Grid.Item>
 </Grid>
 ```
@@ -259,10 +238,10 @@ import 'evokit-grid/style.css';
 ```jsx
 <Grid>
     <Grid.Item grid-item-width='expand'>
-        {content}
+        ...
     </Grid.Item>
     <Grid.Item grid-item-width='3-10'>
-        {content}
+        ...
     </Grid.Item>
 </Grid>
 ```

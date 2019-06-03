@@ -42,7 +42,7 @@ import 'evokit-body/style.css';
 
 <Body>
     <Body.Section>
-        content
+        ...
     </Body.Section>
 </Body>
 ```

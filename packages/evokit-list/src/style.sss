@@ -1,5 +1,21 @@
 @import './mixins.sss'
 
+@custom-media --ek-list-media-small only screen and (min-width: 480px)
+@custom-media --ek-list-media-medium only screen and (min-width: 768px)
+@custom-media --ek-list-media-large only screen and (min-width: 960px)
+@custom-media --ek-list-media-wide only screen and (min-width: 1200px)
+@custom-media --ek-list-media-huge only screen and (min-width: 1400px)
+
+:root
+    // prop 'list-indent'
+    --ek-list-indent-xxs: 5px
+    --ek-list-indent-xs: 10px
+    --ek-list-indent-s: 15px
+    --ek-list-indent-m: 20px
+    --ek-list-indent-l: 25px
+    --ek-list-indent-xl: 30px
+    --ek-list-indent-xxl: 35px
+
 .list
     display: block
     list-style: none
@@ -16,22 +32,38 @@
  *
  **/
 
-@each $name, $i in (none, xxs, xs, s, m, l, xl, xxl)
-    @mixin media .list_indent_$(name)
-        margin-top: calc(var(--ek-step-indent) * -$i  / 2)
-        margin-bottom: calc(var(--ek-step-indent) * -$i  / 2)
-
-        & > .list__item
-            padding-top: calc(var(--ek-step-indent) * $i / 2)
-            padding-bottom: calc(var(--ek-step-indent) * $i / 2)
-
-        &[class*='list_divider']
-            margin-top: calc(var(--ek-step-indent) * -$i)
-            margin-bottom: calc(var(--ek-step-indent) * -$i)
+@each $value in (none, xxs, xs, s, m, l, xl, xxl)
+    @mixin media .list_indent_$(value)
+        @if $value == none
+            margin-top: 0
+            margin-bottom: 0
 
             & > .list__item
-                padding-top: calc(var(--ek-step-indent) * $i)
-                padding-bottom: calc(var(--ek-step-indent) * $i)
+                padding-top: 0
+                padding-bottom: 0
+
+            &[class*='list_divider']
+                margin-top: 0
+                margin-bottom: 0
+
+                & > .list__item
+                    padding-top: 0
+                    padding-bottom: 0
+        @else
+            margin-top: calc(var(--ek-list-indent-$(value))  / 2)
+            margin-bottom: calc(var(--ek-list-indent-$(value))  / 2)
+
+            & > .list__item
+                padding-top: calc(var(--ek-list-indent-$(value)) / 2)
+                padding-bottom: calc(var(--ek-list-indent-$(value)) / 2)
+
+            &[class*='list_divider']
+                margin-top: calc(var(--ek-list-indent-$(value)) * -1)
+                margin-bottom: calc(var(--ek-list-indent-$(value)) * -1)
+
+                & > .list__item
+                    padding-top: var(--ek-list-indent-$(value))
+                    padding-bottom: var(--ek-list-indent-$(value))
 
 /**
  * Style:
@@ -40,9 +72,9 @@
  *
  **/
 
-@each $name in (dash, decimal, disc)
-    .list_style_$(name)
-        @if $name == decimal
+@each $value in (dash, decimal, disc)
+    .list_style_$(value)
+        @if $value == decimal
             counter-reset: item-index
 
         & > .list__item
@@ -54,11 +86,11 @@
                 margin-left: -20px
                 width: 20px
                 text-align: center
-                @if $name == dash
+                @if $value == dash
                     content: '\2014'
-                @else if $name == decimal
+                @else if $value == decimal
                     content: counter(item-index) '.'
                     counter-increment: item-index
-                @else if $name == disc
+                @else if $value == disc
                     content: '\2022'
                     font-weight: bold
