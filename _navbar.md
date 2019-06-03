@@ -2,4 +2,6 @@
 
 * [EXAMPLES](docs/examples/)
 
+<!--
 * [FUTURE](docs/future/)
+-->

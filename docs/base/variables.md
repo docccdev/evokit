@@ -1,5 +1,8 @@
-# Css variables
+# Customize
 
+Coming soon...
+
+<!--
 ```html
 <style>
     @custom-media --ek-media-small only screen and (min-width: 480px);
@@ -30,5 +33,5 @@
         --ek-default-line-height: 1em;
     }
 </style>
-
 ```
+-->

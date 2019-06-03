@@ -70,4 +70,4 @@ import boxCss from 'evokit-box/style.css'; // return for example {'ek-box': 'ek-
 
 ---
 
-[![Edit box-props](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/boxprops-dn6w9?fontsize=14 ':include :type=iframe width=100% height=500px')
+[![Edit box-props](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/boxprops-dn6w9?fontsize=14 ':include :type=iframe width=100% height=700px')

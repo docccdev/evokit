@@ -2,7 +2,7 @@
 
 Coming soon...
 
----
+<!--
 
 > Tool for creating custom block theme
 
@@ -25,5 +25,4 @@ export default class EvoKitThemeGenerator extends React.Component {
 }
 </script>
 ```
-
-
+-->

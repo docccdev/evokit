@@ -47,16 +47,16 @@
                 & > .grid__item
                     padding: 0
         @else
-            margin: calc(var(--ek-box-indent-$(value)) / 2)
+            margin: calc(var(--ek-grid-indent-$(value)) / 2 * -1)
 
             & > .grid__item
-                padding: calc(var(--ek-box-indent-$(value)) / 2)
+                padding: calc(var(--ek-grid-indent-$(value)) / 2)
 
             &[class*='grid_divider']
                 margin: 0
 
                 & > .grid__item
-                    padding: var(--ek-box-indent-$(value))
+                    padding: var(--ek-grid-indent-$(value))
 
 /**
  * Colum:
