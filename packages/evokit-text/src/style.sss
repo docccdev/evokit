@@ -1,8 +1,32 @@
 @import './mixins.sss'
 
+@custom-media --ek-text-media-small only screen and (min-width: 480px)
+@custom-media --ek-text-media-medium only screen and (min-width: 768px)
+@custom-media --ek-text-media-large only screen and (min-width: 960px)
+@custom-media --ek-text-media-wide only screen and (min-width: 1200px)
+@custom-media --ek-text-media-huge only screen and (min-width: 1400px)
+
+:root
+    // base
+    --ek-text-line-height: 1em
+    // prop 'text-size'
+    --ek-text-size-small: 11px
+    --ek-text-size-default: 13px
+    --ek-text-size-big: 15px
+    --ek-text-size-h1: 24px
+    --ek-text-size-h2: 22px
+    --ek-text-size-h3: 20px
+    --ek-text-size-h4: 18px
+    --ek-text-size-h5: 16px
+    --ek-text-size-h6: 14px
+    // prop 'text-lheight'
+    --ek-text-line-height-default: var(--ek-text-line-height)
+    --ek-text-line-height-medium: 1.25em
+    --ek-text-line-height-large: 1.5em
+
 .text
     display: inline
-    line-height: var(--ek-default-line-height)
+    line-height: var(--ek-text-line-height)
 
 /**
  * Font size:
@@ -11,7 +35,9 @@
  *
  **/
 
-@mixin font-size .text_size
+@each $value in (small, default, big, h1, h2, h3, h4, h5, h6)
+    @mixin media .text_size_$(value)
+        font-size: var(--ek-text-size-$(value))
 
 /**
  * Font weight:
@@ -20,7 +46,20 @@
  *
  **/
 
-@mixin font-weight .text_weight
+@each $value in (default, thin, light, medium, bold, black)
+    @mixin media .text_weight_$(value)
+        @if $value == default
+            font-weight: 400
+        @else if $value == thin
+            font-weight: 100
+        @else if $value == light
+            font-weight: 300
+        @else if $value == medium
+            font-weight: 500
+        @else if $value == bold
+            font-weight: 700
+        @else if $value == black
+            font-weight: 900
 
 /**
  * Align:
@@ -41,8 +80,9 @@
  *
  **/
 
-@mixin vertical-align .text_valign
-
+@each $value in (baseline, bottom, middle, sub, super, text-bottom, text-top, top)
+    @mixin media .text_valign_$(value)
+        vertical-align: $value
 
 /**
  * Transform:
@@ -63,7 +103,7 @@
  **/
 
 @each $value in (italic, strike, underline, overline)
-    .text_style_$(value)
+    @mixin media .text_style_$(value)
         @if $value == italic
             font-style: italic
         @else if $value == strike
@@ -80,8 +120,9 @@
  *
  **/
 
-@mixin line-height .text_lheight
-
+@each $value in (default, medium, large)
+    @mixin media .text_lheight_$(value)
+        line-height: var(--ek-text-line-height-$(value))
 
 /**
  * Wrap:
@@ -91,7 +132,7 @@
  **/
 
 @each $value in (nowrap, break, ellipsis, three-line, two-line)
-    .text_wrap_$(value)
+    @mixin media .text_wrap_$(value)
         @if $value == nowrap
             white-space: nowrap
         @else if $value == break
@@ -106,21 +147,21 @@
         @else if $value == two-line
             display: block
             overflow: hidden
-            max-height: calc(var(--ek-default-line-height) * 2)
+            max-height: calc(var(--ek-text-line-height) * 2)
 
             &[class*='text_lheight_medium']
-                max-height: calc((var(--ek-default-line-height) + var(--ek-step-line-height)) * 2)
+                max-height: calc(var(--ek-text-line-height-medium) * 2)
 
             &[class*='text_lheight_large']
-                max-height: calc((calc(var(--ek-default-line-height) + (var(--ek-step-line-height) * 2))) * 2)
+                max-height: calc(var(--ek-text-line-height-large) * 2)
 
         @else if $value == three-line
             display: block
             overflow: hidden
-            max-height: calc(var(--ek-default-line-height) * 3)
+            max-height: calc(var(--ek-text-line-height) * 3)
 
             &[class*='text_lheight_medium']
-                max-height: calc((var(--ek-default-line-height) + var(--ek-step-line-height)) * 3)
+                max-height: calc(var(--ek-text-line-height-medium) * 3)
 
             &[class*='text_lheight_large']
-                max-height: calc((calc(var(--ek-default-line-height) + (var(--ek-step-line-height) * 2))) * 3)
+                max-height: calc(var(--ek-text-line-height-large) * 3)
