@@ -18,12 +18,12 @@ export default class ExampleGrid extends React.Component {
             <Grid grid-valign='middle' grid-indent='xs'>
                 <Grid.Item>
                     <div style={{ width: 30 }}>
-                        <Picture mix-round='full' picture-fit='cover'>
+                        <Picture picture-round='full' picture-fit='cover'>
                             <Picture.Item src='https://picsum.photos/60/40' alt='' />
                         </Picture>
                     </div>
                 </Grid.Item>
-                <Grid.Item mix-width='expand'>
+                <Grid.Item grid-item-width='expand'>
                     <Text text-lheight='medium' text-wrap='ellipsis'>
                          Margenko Evgene Sergeyevich
                     </Text>
@@ -32,8 +32,8 @@ export default class ExampleGrid extends React.Component {
         );
 
         return (
-            <Box box-background='minor' box-border='muted' mix-round='m'>
-                <Picture mix-round-top='m'>
+            <Box box-background='minor' box-border='muted' box-round='m'>
+                <Picture picture-round-top='m'>
                     <Picture.Item src='https://picsum.photos/600/600' alt='' />
                 </Picture>
                 <Box box-padding='m'>
@@ -61,7 +61,7 @@ export default class ExampleGrid extends React.Component {
     render() {
         return (
             <div>
-                <Box box-padding-tb='xxl' box-margin-lr='auto' mix-width='6-10'>
+                <Box box-padding-tb='xxl' box-margin-lr='auto' box-width='6-10'>
                     <Box box-margin-bottom='m'>
                         <Text text-size='h1' text-weight='bold' text-align='center'>
                             Album example
@@ -82,24 +82,11 @@ export default class ExampleGrid extends React.Component {
                 </Box>
                 <Box box-background='muted' box-padding='xxl'>
                     <Grid grid-column='3' grid-indent='m'>
-                        <Grid.Item>
-                            {this.renderCard()}
-                        </Grid.Item>
-                        <Grid.Item>
-                            {this.renderCard()}
-                        </Grid.Item>
-                        <Grid.Item>
-                            {this.renderCard()}
-                        </Grid.Item>
-                        <Grid.Item>
-                            {this.renderCard()}
-                        </Grid.Item>
-                        <Grid.Item>
-                            {this.renderCard()}
-                        </Grid.Item>
-                        <Grid.Item>
-                            {this.renderCard()}
-                        </Grid.Item>
+                        {Array.from(Array(6).keys()).map((index) => (
+                            <Grid.Item key={index}>
+                                {this.renderCard()}
+                            </Grid.Item>
+                        ))}
                     </Grid>
                 </Box>
             </div>

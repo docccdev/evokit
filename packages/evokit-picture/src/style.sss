@@ -1,0 +1,148 @@
+@import './mixins.sss'
+
+@custom-media --ek-picture-media-small only screen and (min-width: 480px)
+@custom-media --ek-picture-media-medium only screen and (min-width: 768px)
+@custom-media --ek-picture-media-large only screen and (min-width: 960px)
+@custom-media --ek-picture-media-wide only screen and (min-width: 1200px)
+@custom-media --ek-picture-media-huge only screen and (min-width: 1400px)
+
+:root
+    // prop 'picture-round'
+    --ek-picture-round-xxs: 2px
+    --ek-picture-round-xs: 4px
+    --ek-picture-round-s: 6px
+    --ek-picture-round-m: 8px
+    --ek-picture-round-l: 10px
+    --ek-picture-round-xl: 12px
+    --ek-picture-round-xxl: 14px
+
+.picture
+    display: block
+    position: relative
+    padding-top: 100%
+    overflow: hidden
+
+.picture__item
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    max-width: 100%
+    max-height: 100%
+    margin: auto
+    outline: none
+    border: 0
+
+    &[alt]
+        word-wrap: break-word
+        word-break: break-word
+        hyphens: auto
+
+/**
+ * Fit:
+ *
+ *  - picture_fit_*
+ *
+ **/
+
+@each $value in (none, fill, contain, cover, scale-down)
+    @mixin media .picture_fit_$(value)
+        transform: translatez(0)
+
+        & > .picture__item
+            object-fit: $value
+            width: 100%
+            height: 100%
+
+/**
+ * Round:
+ *
+ *  - picture_round_*
+ *
+ **/
+
+@each $value in (none, xxs, xs, s, m, l, xl, xxl, full)
+    @mixin media .picture_round_$(value)
+        @if $value == none
+            border-radius: 0
+        @else if $value == full
+            border-radius: 50%
+        @else
+            border-radius: var(--ek-picture-round-$(value))
+
+    @mixin media .picture_round-top_$(value)
+        @if $value == none
+            border-top-left-radius: 0
+            border-top-right-radius: 0
+        @else if $value == full
+            border-top-left-radius: 50%
+            border-top-right-radius: 50%
+        @else
+            border-top-left-radius: var(--ek-picture-round-$(value))
+            border-top-right-radius: var(--ek-picture-round-$(value))
+
+    @mixin media .picture_round-right_$(value)
+        @if $value == none
+            border-top-right-radius: 0
+            border-bottom-right-radius: 0
+        @else if $value == full
+            border-top-right-radius: 50%
+            border-bottom-right-radius: 50%
+        @else
+            border-top-right-radius: var(--ek-picture-round-$(value))
+            border-bottom-right-radius: var(--ek-picture-round-$(value))
+
+    @mixin media .picture_round-bottom_$(value)
+        @if $value == none
+            border-bottom-left-radius: 0
+            border-bottom-right-radius: 0
+        @else if $value == full
+            border-bottom-left-radius: 50%
+            border-bottom-right-radius: 50%
+        @else
+            border-bottom-left-radius: var(--ek-picture-round-$(value))
+            border-bottom-right-radius: var(--ek-picture-round-$(value))
+
+    @mixin media .picture_round-left_$(value)
+        @if $value == none
+            border-top-left-radius: 0
+            border-bottom-left-radius: 0
+        @else if $value == full
+            border-top-left-radius: 50%
+            border-bottom-left-radius: 50%
+        @else
+            border-top-left-radius: var(--ek-picture-round-$(value))
+            border-bottom-left-radius: var(--ek-picture-round-$(value))
+
+    @mixin media .picture_round-top-left_$(value)
+        @if $value == none
+            border-top-left-radius: 0
+        @else if $value == full
+            border-top-left-radius: 50%
+        @else
+            border-top-left-radius: var(--ek-picture-round-$(value))
+
+    @mixin media .picture_round-top-right_$(value)
+        @if $value == none
+            border-top-right-radius: 0
+        @else if $value == full
+            border-top-right-radius: 50%
+        @else
+            border-top-right-radius: var(--ek-picture-round-$(value))
+
+    @mixin media .picture_round-bottom-right_$(value)
+        @if $value == none
+            border-bottom-right-radius: 0
+        @else if $value == full
+            border-bottom-right-radius: 50%
+        @else
+            border-bottom-right-radius: var(--ek-picture-round-$(value))
+
+    @mixin media .picture_round-bottom-left_$(value)
+        @if $value == none
+            border-bottom-left-radius: 0
+        @else if $value == full
+            border-bottom-left-radius: 50%
+        @else
+            border-bottom-left-radius: var(--ek-picture-round-$(value))

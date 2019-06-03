@@ -1,0 +1,34 @@
+{
+  "name": "evokit",
+  "version": "3.0.0-alpha.1",
+  "description": "EvoKit tool for creating UI React blocks",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --colors",
+    "build": "webpack --colors",
+    "prepublishOnly": "webpack --colors"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/docccdev/evokit.git"
+  },
+  "homepage": "http://evokit.net",
+  "keywords": [
+    "evokit",
+    "blocks",
+    "uikit",
+    "react",
+    "bem",
+    "ui"
+  ],
+  "author": {
+    "author": "docccdev",
+    "email": "doccc.dev@gmail.com",
+    "url": "http://evokit.net"
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "prop-types": "*",
+    "react": "*"
+  }
+}

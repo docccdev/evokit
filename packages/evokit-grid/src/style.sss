@@ -1,0 +1,181 @@
+@import './mixins.sss'
+
+@custom-media --ek-grid-media-small only screen and (min-width: 480px)
+@custom-media --ek-grid-media-medium only screen and (min-width: 768px)
+@custom-media --ek-grid-media-large only screen and (min-width: 960px)
+@custom-media --ek-grid-media-wide only screen and (min-width: 1200px)
+@custom-media --ek-grid-media-huge only screen and (min-width: 1400px)
+
+:root
+    // prop 'grid-indent'
+    --ek-grid-indent-xxs: 5px
+    --ek-grid-indent-xs: 10px
+    --ek-grid-indent-s: 15px
+    --ek-grid-indent-m: 20px
+    --ek-grid-indent-l: 25px
+    --ek-grid-indent-xl: 30px
+    --ek-grid-indent-xxl: 35px
+
+.grid
+    display: flex
+    flex-wrap: wrap
+    min-width: 0
+
+.grid__item
+    box-sizing: border-box
+    min-width: 0
+    max-width: 100%
+
+/**
+ * Indent:
+ *
+ *  - grid_indent_*
+ *
+ **/
+
+@each $value in (none, xxs, xs, s, m, l, xl, xxl)
+    @mixin media .grid_indent_$(value)
+        @if $value == none
+            margin: 0
+
+            & > .grid__item
+                padding: 0
+
+            &[class*='grid_divider']
+                margin: 0
+
+                & > .grid__item
+                    padding: 0
+        @else
+            margin: calc(var(--ek-box-indent-$(value)) / 2)
+
+            & > .grid__item
+                padding: calc(var(--ek-box-indent-$(value)) / 2)
+
+            &[class*='grid_divider']
+                margin: 0
+
+                & > .grid__item
+                    padding: var(--ek-box-indent-$(value))
+
+/**
+ * Colum:
+ *
+ *  - grid_column_*
+ *
+ **/
+
+@each $value in (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+    @mixin media .grid_column_$(value)
+        & > .grid__item
+            flex: none
+            width: calc(100% / $value)
+
+        &[class*='grid_divider']
+
+            & > .grid__item
+                @mixin grid-divider-item $value
+
+@mixin media .grid_column_expand
+    & > .grid__item
+        flex: 1
+        width: auto
+
+@mixin media .grid_column_auto
+    & > .grid__item
+        flex: none
+        width: auto
+
+/**
+ * Align:
+ *
+ *  - grid_align_*
+ *
+ **/
+
+@each $value in (left, center, right, justify)
+    @mixin media .grid_align_$(value)
+        @if $value == left
+            justify-content: flex-start
+        @else if $value == center
+            justify-content: center
+        @else if $value == right
+            justify-content: flex-end
+        @else if $value == justify
+            justify-content: space-between
+
+/**
+ * Valign:
+ *
+ *  - grid_valign_*
+ *
+ **/
+
+@each $value in (top, middle, bottom, baseline, justify)
+    @mixin media .grid_valign_$(value)
+        @if $value == top
+            align-items: flex-start
+        @else if $value == middle
+            align-items: center
+        @else if $value == bottom
+            align-content: flex-end
+            align-items: flex-end
+        @else if $value == baseline
+            align-items: baseline
+        @else if $value == justify
+            align-content: space-between
+
+/**
+ * Direction:
+ *
+ *  - grid_direction_*
+ *
+ **/
+
+@each $value in (row, row-reverse, column, column-reverse)
+    @mixin media .grid_direction_$(value)
+        flex-direction: $value
+
+/**
+ * Wrap:
+ *
+ *  - grid_wrap_*
+ *
+ **/
+
+@each $value in (nowrap, wrap, wrap-reverse)
+    @mixin media .grid_wrap_$(value)
+        flex-wrap: $value
+
+/**
+ * Item order:
+ *
+ *  - grid__item_order_*
+ *
+ **/
+
+@each $value in (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+    @mixin media .grid__item_order_$(value)
+        order: $value
+
+/**
+ * Width:
+ *
+ *  - grid__item_width_*
+ *
+ **/
+
+@each $to in (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+    @each $from in (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+        @if $from < $to or ($from == 1 and $to == 1)
+            @mixin media .grid__item_width_$(from)-$(to)
+                flex: none
+                width: calc($from / $to * 100%)
+
+@mixin media .grid__item_width_expand
+    flex: 1
+    width: auto
+
+@mixin media .grid__item_width_auto
+    flex: none
+    width: auto

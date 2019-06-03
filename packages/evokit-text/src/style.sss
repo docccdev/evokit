@@ -1,0 +1,167 @@
+@import './mixins.sss'
+
+@custom-media --ek-text-media-small only screen and (min-width: 480px)
+@custom-media --ek-text-media-medium only screen and (min-width: 768px)
+@custom-media --ek-text-media-large only screen and (min-width: 960px)
+@custom-media --ek-text-media-wide only screen and (min-width: 1200px)
+@custom-media --ek-text-media-huge only screen and (min-width: 1400px)
+
+:root
+    // base
+    --ek-text-line-height: 1em
+    // prop 'text-size'
+    --ek-text-size-small: 11px
+    --ek-text-size-default: 13px
+    --ek-text-size-big: 15px
+    --ek-text-size-h1: 24px
+    --ek-text-size-h2: 22px
+    --ek-text-size-h3: 20px
+    --ek-text-size-h4: 18px
+    --ek-text-size-h5: 16px
+    --ek-text-size-h6: 14px
+    // prop 'text-lheight'
+    --ek-text-line-height-default: var(--ek-text-line-height)
+    --ek-text-line-height-medium: 1.25em
+    --ek-text-line-height-large: 1.5em
+
+.text
+    display: inline
+    line-height: var(--ek-text-line-height)
+
+/**
+ * Font size:
+ *
+ *  - text_size_*
+ *
+ **/
+
+@each $value in (small, default, big, h1, h2, h3, h4, h5, h6)
+    @mixin media .text_size_$(value)
+        font-size: var(--ek-text-size-$(value))
+
+/**
+ * Font weight:
+ *
+ *  - text_weight_*
+ *
+ **/
+
+@each $value in (default, thin, light, medium, bold, black)
+    @mixin media .text_weight_$(value)
+        @if $value == default
+            font-weight: 400
+        @else if $value == thin
+            font-weight: 100
+        @else if $value == light
+            font-weight: 300
+        @else if $value == medium
+            font-weight: 500
+        @else if $value == bold
+            font-weight: 700
+        @else if $value == black
+            font-weight: 900
+
+/**
+ * Align:
+ *
+ *  - text_align_*
+ *
+ **/
+
+@each $value in (left, center, right, justify)
+    @mixin media .text_align_$(value)
+        display: block
+        text-align: $value
+
+/**
+ * Valign:
+ *
+ *  - text_valign_*
+ *
+ **/
+
+@each $value in (baseline, bottom, middle, sub, super, text-bottom, text-top, top)
+    @mixin media .text_valign_$(value)
+        vertical-align: $value
+
+/**
+ * Transform:
+ *
+ *  - text_transform_*
+ *
+ **/
+
+@each $value in (none, capitalize, lowercase, uppercase)
+    @mixin media .text_transform_$(value)
+        text-transform: $value
+
+/**
+ * Style:
+ *
+ *  - text_style_*
+ *
+ **/
+
+@each $value in (italic, strike, underline, overline)
+    @mixin media .text_style_$(value)
+        @if $value == italic
+            font-style: italic
+        @else if $value == strike
+            text-decoration: line-through
+        @else if $value == underline
+            text-decoration: underline
+        @else if $value == overline
+            text-decoration: overline
+
+/**
+ * Line height:
+ *
+ *  - text_lheight_*
+ *
+ **/
+
+@each $value in (default, medium, large)
+    @mixin media .text_lheight_$(value)
+        line-height: var(--ek-text-line-height-$(value))
+
+/**
+ * Wrap:
+ *
+ *  - text_wrap_*
+ *
+ **/
+
+@each $value in (nowrap, break, ellipsis, three-line, two-line)
+    @mixin media .text_wrap_$(value)
+        @if $value == nowrap
+            white-space: nowrap
+        @else if $value == break
+            word-wrap: break-word
+            word-break: break-word
+            hyphens: auto
+        @else if $value == ellipsis
+            display: block
+            overflow: hidden
+            text-overflow: ellipsis
+            white-space: nowrap
+        @else if $value == two-line
+            display: block
+            overflow: hidden
+            max-height: calc(var(--ek-text-line-height) * 2)
+
+            &[class*='text_lheight_medium']
+                max-height: calc(var(--ek-text-line-height-medium) * 2)
+
+            &[class*='text_lheight_large']
+                max-height: calc(var(--ek-text-line-height-large) * 2)
+
+        @else if $value == three-line
+            display: block
+            overflow: hidden
+            max-height: calc(var(--ek-text-line-height) * 3)
+
+            &[class*='text_lheight_medium']
+                max-height: calc(var(--ek-text-line-height-medium) * 3)
+
+            &[class*='text_lheight_large']
+                max-height: calc(var(--ek-text-line-height-large) * 3)

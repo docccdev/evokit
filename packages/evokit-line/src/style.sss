@@ -1,0 +1,51 @@
+@import './mixins.sss'
+
+@custom-media --ek-line-media-small only screen and (min-width: 480px)
+@custom-media --ek-line-media-medium only screen and (min-width: 768px)
+@custom-media --ek-line-media-large only screen and (min-width: 960px)
+@custom-media --ek-line-media-wide only screen and (min-width: 1200px)
+@custom-media --ek-line-media-huge only screen and (min-width: 1400px)
+
+:root
+    // prop 'line-indent'
+    --ek-line-indent-xxs: 5px
+    --ek-line-indent-xs: 10px
+    --ek-line-indent-s: 15px
+    --ek-line-indent-m: 20px
+    --ek-line-indent-l: 25px
+    --ek-line-indent-xl: 30px
+    --ek-line-indent-xxl: 35px
+
+.line
+    display: block
+    border-width: 1px 0 0
+    border-style: solid
+    border-color: transparent
+    margin: 0
+
+/**
+ * Indent:
+ *
+ *  - line_indent_*
+ *
+ **/
+
+@each $value in (none, xxs, xs, s, m, l, xl, xxl)
+    @mixin media .line_indent_$(name)
+        @if $value == none
+            margin-top: 0
+            margin-bottom: 0
+        @else
+            margin-top: var(--ek-line-indent-$(value))
+            margin-bottom: var(--ek-line-indent-$(value))
+
+/**
+ * Style:
+ *
+ *  - line_style_*
+ *
+ **/
+
+@each $value in (dotted, dashed)
+    @mixin media .line_style_$(value)
+        border-top-style: $value

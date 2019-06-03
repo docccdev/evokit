@@ -1,0 +1,37 @@
+{
+    "env": {
+        "browser": true,
+        "jest": true
+    },
+    "parser": "babel-eslint",
+    "extends": [
+        "airbnb"
+    ],
+    "rules": {
+        "indent": [2, 4],
+        "react/jsx-indent": [2, 4],
+        "react/jsx-indent-props": [2, 4],
+        "react/jsx-no-target-blank": 0,
+        "react/jsx-one-expression-per-line": 0,
+        "react/no-danger": false,
+        "jsx-a11y/no-static-element-interactions": false,
+        "jsx-a11y/anchor-is-valid": false,
+        "jsx-a11y/label-has-for": [ 2, {
+            "required": {
+                "some": [ "nesting", "id" ]
+            },
+            "allowChildren": true,
+        }],
+        "no-undef": 0,
+        "no-restricted-syntax": ["error", "ForInStatement", "LabeledStatement", "WithStatement"],
+        "react/forbid-prop-types": false,
+        "jsx-quotes": ["error", "prefer-single"],
+        "import/prefer-default-export": false,
+        "import/no-cycle": false,
+        "import/no-unresolved": 0,
+        "import/no-extraneous-dependencies": false,
+        "no-underscore-dangle": 0,
+        "arrow-body-style": 0,
+        "arrow-parens": 0
+    }
+}

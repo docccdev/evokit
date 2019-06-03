@@ -1,0 +1,116 @@
+@import './mixins.sss'
+
+@custom-media --ek-link-media-small only screen and (min-width: 480px)
+@custom-media --ek-link-media-medium only screen and (min-width: 768px)
+@custom-media --ek-link-media-large only screen and (min-width: 960px)
+@custom-media --ek-link-media-wide only screen and (min-width: 1200px)
+@custom-media --ek-link-media-huge only screen and (min-width: 1400px)
+
+:root
+    // base
+    --ek-link-line-height: 1em
+    // prop 'link-size'
+    --ek-link-size-small: 11px
+    --ek-link-size-default: 13px
+    --ek-link-size-big: 15px
+    --ek-link-size-h1: 24px
+    --ek-link-size-h2: 22px
+    --ek-link-size-h3: 20px
+    --ek-link-size-h4: 18px
+    --ek-link-size-h5: 16px
+    --ek-link-size-h6: 14px
+    // prop 'link-lheight'
+    --ek-link-line-height-default: var(--ek-link-line-height)
+    --ek-link-line-height-medium: 1.25em
+    --ek-link-line-height-large: 1.5em
+
+.link
+    display: inline
+    color: inherit
+    line-height: var(--ek-link-line-height)
+    text-decoration: none
+
+    @mixin hover
+        cursor: pointer
+        text-decoration: underline
+
+/**
+ * Font size:
+ *
+ *  - link_size_*
+ *
+ **/
+
+@each $value in (small, default, big, h1, h2, h3, h4, h5, h6)
+    @mixin media .link_size_$(value)
+        font-size: var(--ek-link-size-$(value))
+
+/**
+ * Font weight:
+ *
+ *  - link_weight_*
+ *
+ **/
+
+@each $value in (default, thin, light, medium, bold, black)
+    @mixin media .link_weight_$(value)
+        @if $value == default
+            font-weight: 400
+        @else if $value == thin
+            font-weight: 100
+        @else if $value == light
+            font-weight: 300
+        @else if $value == medium
+            font-weight: 500
+        @else if $value == bold
+            font-weight: 700
+        @else if $value == black
+            font-weight: 900
+
+/**
+ * Valign:
+ *
+ *  - link_valign_*
+ *
+ **/
+
+@each $value in (baseline, bottom, middle, sub, super, text-bottom, text-top, top)
+    @mixin media .link_valign_$(value)
+        vertical-align: $value
+
+/**
+ * Line height:
+ *
+ *  - link_lheight_*
+ *
+ **/
+
+@each $value in (default, medium, large)
+    @mixin media .link_lheight_$(value)
+        line-height: var(--ek-link-line-height-$(value))
+
+/**
+ * Style:
+ *
+ *  - link_style_*
+ *
+ **/
+
+.link_style_dotted
+    border-bottom: 1px dotted
+
+    @mixin hover
+        text-decoration: none
+        border-bottom-color: transparent
+
+.link_style_multi-line
+    position: relative
+    display: inline-block
+
+    &:after
+        content: ''
+        position: absolute
+        left: 0
+        top: 0
+        right: 0
+        bottom: 0

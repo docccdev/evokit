@@ -1,0 +1,75 @@
+@import './mixins.sss'
+
+@custom-media --ek-body-media-small only screen and (min-width: 480px)
+@custom-media --ek-body-media-medium only screen and (min-width: 768px)
+@custom-media --ek-body-media-large only screen and (min-width: 960px)
+@custom-media --ek-body-media-wide only screen and (min-width: 1200px)
+@custom-media --ek-body-media-huge only screen and (min-width: 1400px)
+
+:root
+    // base
+    --ek-body-font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif
+    --ek-body-font-size: 13px
+    --ek-body-font-weight: 400
+    --ek-body-line-height: 1em
+    --ek-body-min-width: 320px
+    --ek-body-max-width: 1240px
+    // prop 'body-indent'
+    --ek-body-indent-xxs: 5px
+    --ek-body-indent-xs: 10px
+    --ek-body-indent-s: 15px
+    --ek-body-indent-m: 20px
+    --ek-body-indent-l: 25px
+    --ek-body-indent-xl: 30px
+    --ek-body-indent-xxl: 35px
+    // prop 'body-size'
+    --ek-body-max-width-xl: 1440px
+    --ek-body-max-width-xxl: 1640px
+    --ek-body-max-width-xxxl: 1840px
+
+.body
+    font-family: var(--ek-body-font-family)
+    font-size: var(--ek-body-font-size)
+    line-height: var(--ek-body-line-height)
+    font-weight: var(--ek-body-font-weight)
+    min-width: var(--ek-body-min-width)
+    margin: 0
+    text-size-adjust: 100%
+    -webkit-font-smoothing: subpixel-antialiased
+
+.body__section
+    display: block
+    box-sizing: border-box
+    margin-left: auto
+    margin-right: auto
+    min-width: var(--ek-body-min-width)
+    max-width: var(--ek-body-max-width)
+
+/**
+ * body-size:
+ *
+ *  - body_size_[xl|xxl|xxxl]
+ *
+ **/
+
+@each $value in (xl, xxl, xxxl)
+    @mixin media .body_size_$(value)
+        .body__section
+            max-width: var(--ek-body-max-width-$(value))
+
+/**
+ * body-indent:
+ *
+ *  - body_indent_[none|xxs|xs|s|m|l|xl|xxl]
+ *
+ **/
+
+@each $value in (none, xxs, xs, s, m, l, xl, xxl)
+    @mixin media .body_indent_$(value)
+        .body__section
+            @if $value == none
+                padding-left: 0
+                padding-right: 0
+            @else
+                padding-left: var(--ek-body-indent-$(value))
+                padding-right: var(--ek-body-indent-$(value))

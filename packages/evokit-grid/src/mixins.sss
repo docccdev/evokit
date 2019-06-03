@@ -1,0 +1,41 @@
+@define-mixin media $selector
+    $selector
+        @mixin-content
+
+    @media (--ek-grid-media-small)
+        $(selector)\@small
+            @mixin-content
+
+    @media (--ek-grid-media-medium)
+        $(selector)\@medium
+            @mixin-content
+
+    @media (--ek-grid-media-large)
+        $(selector)\@large
+            @mixin-content
+
+    @media (--ek-grid-media-wide)
+        $(selector)\@wide
+            @mixin-content
+
+    @media (--ek-grid-media-huge)
+        $(selector)\@huge
+            @mixin-content
+
+
+@define-mixin grid-divider-item $value
+    & + .grid__item
+        border-left-width: 0
+
+    @for $index from 1 to $value
+        &:nth-child(resolve($value)n-resolve($value - $index))
+            @if $index == $value
+                border-right-width: 0
+            @else
+                border-right-width: 1px
+
+            &:nth-last-child(-n+resolve($value - $index + 1))
+                border-bottom-width: 0
+
+            &:not(:nth-last-child(-n+resolve($value - $index + 1)))
+                border-bottom-width: 1px

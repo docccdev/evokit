@@ -1,0 +1,15 @@
+{
+    "command": {
+        "publish": {
+            "ignoreChanges": [
+                "package-lock.json",
+                "*.md"
+            ]
+        }
+    },
+    "packages": [
+        "packages/evokit",
+        "packages/evokit-*"
+    ],
+    "version": "independent"
+}

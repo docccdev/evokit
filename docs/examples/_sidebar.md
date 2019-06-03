@@ -1,3 +1,3 @@
 * EXAMPLES
 
-  * [album](/examples/album.md)
+  * [album](/docs/examples/album.md)
