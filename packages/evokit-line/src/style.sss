@@ -31,7 +31,7 @@
  **/
 
 @each $value in (none, xxs, xs, s, m, l, xl, xxl)
-    @mixin media .line_indent_$(name)
+    @mixin media .line_indent_$(value)
         @if $value == none
             margin-top: 0
             margin-bottom: 0
