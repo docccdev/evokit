@@ -40,6 +40,7 @@ import 'evokit-image/style.css';
 <Image src={imageSrc} alt='' />
 
 ```
+
 [![Edit image-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/imageusage-7qyol?fontsize=14 ':include :type=iframe width=100% height=500px')
 
 #### Props

@@ -1,7 +1,7 @@
 [evokit]: /packages/evokit/
 [css-variable]: //caniuse.com/#feat=css-variables
 [css-variable-usage]: //w3schools.com/css/css3_variables.asp
-[html-tag-div]: //www.w3schools.com/tags/tag_div.asp
+[html-tag-picture]: //www.w3schools.com/tags/tag_picture.asp
 [html-tag-img]: //www.w3schools.com/tags/tag_img.asp
 [postcss]: //postcss.org
 [postcss-preset-env]: //preset-env.cssdb.org
@@ -29,7 +29,7 @@ npm install evokit-picture --save
 
 > The styles use [css-variable] and will work in all modern browsers. If you need to support more old browsers such as Interner Explorer 11 or lower, use a tool [postcss] with [postcss-preset-env] for transforming css into something most browsers can understand.
 
-- `<Picture>` has a default html tag [div][html-tag-div]
+- `<Picture>` has a default html tag [picture][html-tag-picture]
 - `<Picture.Item>` has a default html tag [img][html-tag-img]
 
 ```jsx
@@ -37,10 +37,12 @@ import { Picture } from 'evokit-picture';
 import 'evokit-picture/style.css';
 
 <Picture>
-    <Picture.Item src={imageSrc} alt='' />
+    <Picture.Item src='' alt='' />
 </Picture>
 
 ```
+
+[![Edit picture-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/pictureusage-q6brs?fontsize=14 ':include :type=iframe width=100% height=500px')
 
 #### Props
 
@@ -48,6 +50,23 @@ import 'evokit-picture/style.css';
 |-------|--------|-------------|
 | [picture-fit]   | `none` `fill` `contain` `cover` `scale-down` | Filling the container relative to its height and width |
 | [picture-round] | `none` `full` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Corner rounding |
+
+#### Customize
+
+> This set of css variables is default, if you want to override one or more value, please use the rules [css-variable-usage], define them below the css import.
+
+```css
+:root {
+    /* prop 'picture-round' */
+    --ek-picture-round-xxs: 2px;
+    --ek-picture-round-xs: 4px;
+    --ek-picture-round-s: 6px;
+    --ek-picture-round-m: 8px;
+    --ek-picture-round-l: 10px;
+    --ek-picture-round-xl: 12px;
+    --ek-picture-round-xxl: 14px;
+}
+```
 
 ---
 
@@ -61,29 +80,29 @@ import 'evokit-picture/style.css';
 
 ```jsx
 <Picture picture-fit='cover'>
-    <Picture.Item src={imageSrc} alt='' />
+    <Picture.Item src='' alt='' />
 </Picture>
 ```
 
 ##### `picture-round`
 
 > Has advanced props:
-> - `image-round` - `top`, `right`, `bottom` or `left` for example **`image-round-right`**
-> - `image-round-top` - `left` or `right` for example **`image-round-top-right`**
-> - `image-round-bottom` - `left` or `right` for example **`image-round-bottom-right`**
+> - `picture-round` - `top`, `right`, `bottom` or `left` for example **`picture-round-right`**
+> - `picture-round-top` - `left` or `right` for example **`picture-round-top-right`**
+> - `picture-round-bottom` - `left` or `right` for example **`picture-round-bottom-right`**
 
 - `none` - value: `0px`
 - `full` - value: `50%`
-- `xxs` - css variable `--ek-image-round-xxs`, default value: `2px`
-- `xs` - css variable `--ek-image-round-xs`, default value: `4px`
-- `s` - css variable `--ek-image-round-s`, default value: `6px`
-- `m` - css variable `--ek-image-round-m`, default value: `8px`
-- `l` - css variable `--ek-image-round-l`, default value: `10px`
-- `xl` - css variable `--ek-image-round-xl`, default value: `12px`
-- `xxl` - css variable `--ek-image-round-xxl`, default value: `14px`
+- `xxs` - css variable `--ek-picture-round-xxs`, default value: `2px`
+- `xs` - css variable `--ek-picture-round-xs`, default value: `4px`
+- `s` - css variable `--ek-picture-round-s`, default value: `6px`
+- `m` - css variable `--ek-picture-round-m`, default value: `8px`
+- `l` - css variable `--ek-picture-round-l`, default value: `10px`
+- `xl` - css variable `--ek-picture-round-xl`, default value: `12px`
+- `xxl` - css variable `--ek-picture-round-xxl`, default value: `14px`
 
 ```jsx
 <Picture picture-round='full'>
-    <Picture.Item src={imageSrc} alt='' />
+    <Picture.Item src='' alt='' />
 </Picture>
 ```
