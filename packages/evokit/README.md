@@ -23,7 +23,8 @@ npm install evokit --save
 createBlock(
     tagName, // string
     blockName, // string
-    [...blockMods] // array of string
+    [...blockMods], // array of string
+    preset // object { b: <string>, e: <string>, m: <string>, v: <string>, css: <object CSS Module classes> }
 );
 ```
 

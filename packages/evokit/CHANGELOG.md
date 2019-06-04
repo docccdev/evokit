@@ -7,36 +7,41 @@
 [media]: docs/base/media.md
 [text]: docs/base/text.md
 [colors]: docs/base/colors.md
-[api]: docs/base/api.md
 [create_theme]: docs/base/theme
 
+[evokit]: packages/evokit/
 [body]: packages/evokit-body/
-[grid]: packages/evokit-grid/
 [box]: packages/evokit-box/
-[list]: packages/evokit-list/
-[text]: packages/evokit-text/
-[link]: packages/evokit-link/
-[picture]: packages/evokit-picture/
+[grid]: packages/evokit-grid/
 [image]: packages/evokit-image/
 [line]: packages/evokit-line/
+[link]: packages/evokit-link/
+[list]: packages/evokit-list/
+[picture]: packages/evokit-picture/
+[text]: packages/evokit-text/
 
 
 # CHANGELOG
 
-!> Version **v3.0.0** new API and many critical changes, please update carefully.
+!> In version 3.0.0 there are no more UI blocks, they are all in separate packages, please update carefully.
 
 
 ## 3.0.0
 
-##### Added
-
-- New [API][api].
-
-##### Removed
-
-- PeerDependencies `classnames`.
-- [Mixes][Mixes] block.
-- Static themes from package, please use [Theme Creator][create_theme]:
+- **Added** New core [evokit][evokit].
+- **Added** Separated all UI blocks in packages:
+    - [evokit-body][body]
+    - [evokit-box][box]
+    - [evokit-grid][grid]
+    - [evokit-image][image]
+    - [evokit-line][line]
+    - [evokit-link][link]
+    - [evokit-list][list]
+    - [evokit-picture][picture]
+    - [evokit-text][text]
+- **Removed** PeerDependencies `classnames`.
+- **Removed** [Mixes][Mixes] block.
+- **Removed** Static themes from package, please use [Theme Creator][create_theme]:
     - `themes.css`
     - `theme.danger.css`
     - `theme.dark.css`
@@ -50,11 +55,7 @@
     - `theme.second.css`
     - `theme.success.css`
     - `theme.warning.css`
-
-
-##### Changed
-
-- The prop `mix-*` replaced with props target block, example:
+- **Changed** The prop `mix-*` replaced with props target block, example:
 ``` jsx
 // bad
 <Box mix-width={val}>
@@ -65,14 +66,14 @@
 <Image image-round={val}>
 <Grid.Item grid-item-width={val}>
 ```
-- Replace prop `domRef` to `${blockName}-ref`, see example:
+- **Changed** Replace prop `domRef` to `${blockName}-ref`, see example:
 ``` jsx
 // bad
 <Box domRef={fn}>
 // good
 <Box box-ref={fn}>
 ```
-- Replace block element prop:
+- **Changed** Replace block element prop:
 ``` jsx
 // bad
 <Grid.Item grid-width={val}>
