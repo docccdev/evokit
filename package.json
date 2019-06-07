@@ -3,6 +3,7 @@
     "test": "lerna run test",
     "bootstrap": "lerna bootstrap",
     "build": "lerna run build",
+    "prepublishOnly": "lerna run prepublishOnly",
     "watch": "lerna run --parallel --stream watch",
     "docs": "http-server ./"
   },
