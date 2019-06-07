@@ -6,12 +6,14 @@
 [postcss-preset-env]: //preset-env.cssdb.org
 
 [base_props]: docs/base/props
+[create_theme]: docs/base/theme
 
 [image-align]: #image-align
 [image-valign]: #image-valign
 [image-mirror]: #image-mirror
 [image-fit]: #image-fit
 [image-round]: #image-round
+[image-border]: #image-border
 
 # EvoKit - Image
 
@@ -39,7 +41,7 @@ npm install evokit-image --save
 import { Image } from 'evokit-image';
 import 'evokit-image/style.css';
 
-<Image src={imageSrc} alt='' />
+<Image src='' alt='' />
 
 ```
 
@@ -56,6 +58,7 @@ Also have [base props][base_props]
 | [image-mirror] | `x` `y` `xy` | Mirroring |
 | [image-fit]    | `none` `fill` `contain` `cover` `scale-down` | Filling the container relative to its height and width |
 | [image-round]  | `none` `full` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Corner rounding |
+| [image-border]     | `{THEME_NAME}` | Border color - [Create Theme][create_theme] |
 
 #### Customize
 
@@ -83,7 +86,7 @@ Also have [base props][base_props]
 - `right` - Align the image to the right
 
 ```jsx
-<Image image-align='center' src={imageSrc} alt='' />
+<Image image-align='center' src='' alt='' />
 ```
 
 ##### `image-valign`
@@ -98,7 +101,7 @@ Also have [base props][base_props]
 - `text-bottom` - The bottom border of the element is aligned at the very bottom edge of the current line
 
 ```jsx
-<Image image-valign='top' src={imageSrc} alt='' />
+<Image image-valign='top' src='' alt='' />
 ```
 
 ##### `image-mirror`
@@ -108,7 +111,7 @@ Also have [base props][base_props]
 - `xy` - X and Y axis reflection
 
 ```jsx
-<Image image-mirror='x' src={imageSrc} alt='' />
+<Image image-mirror='x' src='' alt='' />
 ```
 
 ##### `image-fit`
@@ -120,7 +123,7 @@ Also have [base props][base_props]
 - `scale-down` - Resizes by comparing the difference between `none` and` contain` to find the smallest object size
 
 ```jsx
-<Image image-fit='cover' src={imageSrc} alt='' />
+<Image image-fit='cover' src='' alt='' />
 ```
 
 ##### `image-round`
@@ -141,5 +144,13 @@ Also have [base props][base_props]
 - `xxl` - css variable `--ek-image-round-xxl`, default value: `14px`
 
 ```jsx
-<Image image-round='full' src={imageSrc} alt='' />
+<Image image-round='full' src='' alt='' />
+```
+
+##### `image-border`
+
+> Set the border color depending on the [created theme][create_theme], used `border color` value.
+
+```jsx
+<Image image-border={THEME_NAME} src='' alt='' />
 ```

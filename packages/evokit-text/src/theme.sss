@@ -1,4 +1,7 @@
 @import './mixins.sss'
 
-@mixin media .text_color___TEMPLATE_NAME__
-    color: var(--ek-__TEMPLATE_NAME__-text-color)
+:root
+    --ek-text-color-TEMPLATE_NAME: var(--color)
+
+@mixin media .text_color_TEMPLATE_NAME
+    color: var(--ek-text-color-TEMPLATE_NAME)

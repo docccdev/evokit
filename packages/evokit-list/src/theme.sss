@@ -1,11 +1,15 @@
 @import './mixins.sss'
 
-@mixin media .list_color___TEMPLATE_NAME__
+:root
+    --ek-list-border-TEMPLATE_NAME: var(--border)
+    --ek-list-color-TEMPLATE_NAME: var(--color)
+
+@mixin media .list_color_TEMPLATE_NAME
     & > .list__item
         &:before
-            color: var(--ek-__TEMPLATE_NAME__-text-color)
+            color: var(--ek-list-color-TEMPLATE_NAME)
 
-@mixin media .list_divider___TEMPLATE_NAME__
+@mixin media .list_divider_TEMPLATE_NAME
     & > .list__item
         & + .list__item
-            border-top: 1px solid var(--ek-__TEMPLATE_NAME__-divider-color)
+            border-top: 1px solid var(--ek-list-border-TEMPLATE_NAME)

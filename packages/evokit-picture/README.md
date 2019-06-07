@@ -7,9 +7,11 @@
 [postcss-preset-env]: //preset-env.cssdb.org
 
 [base_props]: docs/base/props
+[create_theme]: docs/base/theme
 
 [picture-fit]: #picture-fit
 [picture-round]: #picture-round
+[picture-border]: #picture-border
 
 # EvoKit - Picture
 
@@ -52,8 +54,9 @@ Also have [base props][base_props]
 
 | Props | Values | Description |
 |-------|--------|-------------|
-| [picture-fit]   | `none` `fill` `contain` `cover` `scale-down` | Filling the container relative to its height and width |
-| [picture-round] | `none` `full` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Corner rounding |
+| [picture-fit]    | `none` `fill` `contain` `cover` `scale-down` | Filling the container relative to its height and width |
+| [picture-round]  | `none` `full` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Corner rounding |
+| [picture-border] | `{THEME_NAME}` | Border color - [Create Theme][create_theme] |
 
 #### Customize
 
@@ -107,6 +110,16 @@ Also have [base props][base_props]
 
 ```jsx
 <Picture picture-round='full'>
+    <Picture.Item src='' alt='' />
+</Picture>
+```
+
+##### `picture-border`
+
+> Set the border color depending on the [created theme][create_theme], used `border color` value.
+
+```jsx
+<Picture picture-border={THEME_NAME}>
     <Picture.Item src='' alt='' />
 </Picture>
 ```

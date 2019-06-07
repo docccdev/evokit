@@ -1,7 +1,11 @@
 @import './mixins.sss'
 
-@mixin media .body_background___TEMPLATE_NAME__
-    background: var(--ek-__TEMPLATE_NAME__-background-color)
+:root
+    --ek-body-background-TEMPLATE_NAME: var(--background)
+    --ek-body-color-TEMPLATE_NAME: var(--color)
 
-@mixin media .body_color___TEMPLATE_NAME__
-    color: var(--ek-__TEMPLATE_NAME__-text-color)
+@mixin media .body_background_TEMPLATE_NAME
+    background: var(--ek-body-background-TEMPLATE_NAME)
+
+@mixin media .body_color_TEMPLATE_NAME
+    color: var(--ek-body-color-TEMPLATE_NAME)

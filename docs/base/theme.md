@@ -1,28 +1,3 @@
 # Theming
 
-Coming soon...
-
-<!--
-
-> Tool for creating custom block theme
-
-<style>
-    .demo-box-react .meta,
-    .demo-box-react .demo-block-control {
-        display: none !important;
-    }
-</style>
-
-```jsx
-/*react*/
-<script>
-const { ThemeGenerator } = EvoKit;
-
-export default class EvoKitThemeGenerator extends React.Component {
-    render() {
-        return <ThemeGenerator templateUrl='//unpkg.com/evokit@latest/dist/theme-template.css' />;
-    }
-}
-</script>
-```
--->
+[![Edit albom-example](//codesandbox.io/static/img/play-codesandbox.svg)](//codesandbox.io/embed/themecreator-2yvf9?fontsize=14&view=preview ':include :type=iframe width=100% height=700px')

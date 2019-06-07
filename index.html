@@ -10,16 +10,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/docs/_media/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/docs/_media/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/docs/_media/favicon-16x16.png">
-
-    <script src="/docs/_media/docs.js"></script>
-    <link href="/docs/_media/docs.css" rel="stylesheet">
-
     <link rel="stylesheet" href="/docs/_media/vue.theme.css">
-    <link rel="stylesheet" href="/docs/_media/evokit.default.theme.css">
-    <link rel="stylesheet" href="/docs/_media/theme-success.css">
-    <link rel="stylesheet" href="/docs/_media/theme-info.css">
-    <link rel="stylesheet" href="/docs/_media/theme-warning.css">
-    <link rel="stylesheet" href="/docs/_media/theme-danger.css">
 </head>
 <body>
     <div id="app"></div>
@@ -44,20 +35,6 @@
     >&uarr;</button>
 
     <script>
-        var jsResources = [
-            '<scr'+'ipt src="//unpkg.com/react/umd/react.production.min.js"></scr'+'ipt>',
-            '<scr'+'ipt src="//unpkg.com/react-dom/umd/react-dom.production.min.js"></scr'+'ipt>',
-            '<scr'+'ipt src="//unpkg.com/prop-types/prop-types.min.js"></scr'+'ipt>',
-            '<scr'+'ipt src="//unpkg.com/evokit/dist/index.js"></scr'+'ipt>'
-        ];
-
-        var cssResources = [
-            '@import url("//cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css");',
-            '@import url("//evokit.net/docs/_media/evokit.default.theme.css");',
-            '@import url("//unpkg.com/evokit/dist/style.css");',
-            '@import url("//unpkg.com/evokit/dist/themes.css");'
-        ];
-
         window.$docsify = {
             ga: 'UA-125255834-1',
             search: 'auto',
@@ -71,9 +48,6 @@
                 placeholder: 'Search...',
             },
             auto2top: true,
-            plugins: [
-                DemoBoxReact.create(jsResources.join('\n'), cssResources.join('\n'))
-            ],
             onlyCover: true
         };
     </script>

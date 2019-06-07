@@ -1,9 +1,12 @@
 @import './mixins.sss'
 
-@mixin media .grid_divider___TEMPLATE_NAME__
+:root
+    --ek-grid-border-TEMPLATE_NAME: var(--border)
+
+@mixin media .grid_divider_TEMPLATE_NAME
 
     & > .grid__item
-        border: 0 solid var(--ek-__TEMPLATE_NAME__-divider-color)
+        border: 0 solid var(--ek-grid-border-TEMPLATE_NAME)
 
         & + .grid__item
             border-left-width: 1px

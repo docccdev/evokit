@@ -22,8 +22,6 @@
 ## Test
 
 ```jsx
-/*react*/
-<script>
 const { Body, Grid, Box, List, Text, Link, Picture, Image, Line } = EvoKit;
 
 export default class ExampleLink extends React.Component {
@@ -112,5 +110,4 @@ export default class ExampleLink extends React.Component {
         )
     }
 }
-</script>
 ```

@@ -21,34 +21,3 @@
 | `l`    |   var(--ek-step-indent) * 5 |
 | `xl`   |   var(--ek-step-indent) * 6 |
 | `xxl`  |   var(--ek-step-indent) * 7 |
-
----
-
-## Example
-
-```jsx
-/*react*/
-<script>
-const { Grid, Example } = EvoKit;
-
-export default class ExampleGrid extends React.Component {
-    render() {
-        return (
-            <Example values={['none', 'xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl']}>
-                {(value) => (
-                    <Grid grid-indent={value}>
-                        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((key) => (
-                            <Grid.Item>
-                                <Example.Box>
-                                    item {key}
-                                </Example.Box>
-                            </Grid.Item>
-                        ))}
-                    </Grid>
-                )}
-            </Example>
-        )
-    }
-}
-</script>
-```
