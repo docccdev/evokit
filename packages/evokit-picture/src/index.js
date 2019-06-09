@@ -11,6 +11,7 @@ export const Picture = createBlock('picture', 'picture', [
     'round-top-right',
     'round-bottom-left',
     'round-bottom-right',
+    'border',
 ]);
 
 Picture.Item = createBlock('img', 'picture__item');

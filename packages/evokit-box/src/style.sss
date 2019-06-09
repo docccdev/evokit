@@ -339,3 +339,36 @@
 
 @mixin media .box_width_auto
     width: auto
+
+/**
+ * Height:
+ *
+ *  - box_height_*
+ *
+ **/
+
+@each $to in (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+    @mixin media .box_height_1-$(to)
+        height: calc(1 / $to * 100%)
+
+@mixin media .box_height_auto
+    height: auto
+
+/**
+ * Overflow:
+ *
+ *  - box_overflow_*
+ *  - box_overflow-x_*
+ *  - box_overflow-y_*
+ *
+ **/
+
+@each $value in (auto, hidden, scroll, visible)
+    @mixin media .box_overflow_$(value)
+        overflow: $value
+
+    @mixin media .box_overflow-x_$(value)
+        overflow-x: $value
+
+    @mixin media .box_overflow-y_$(value)
+        overflow-y: $value

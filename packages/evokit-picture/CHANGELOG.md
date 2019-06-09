@@ -9,3 +9,4 @@
 #### 3.0.0
 
 - Initial version independent package. The [previous changelog](packages/evokit/CHANGELOG.md) in another package.
+- **Added** new theme prop `picture-border`

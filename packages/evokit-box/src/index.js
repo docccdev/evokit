@@ -30,4 +30,8 @@ export const Box = createBlock('div', 'box', [
     'round-bottom-left',
     'round-bottom-right',
     'width',
+    'height',
+    'overflow',
+    'overflow-x',
+    'overflow-y',
 ]);

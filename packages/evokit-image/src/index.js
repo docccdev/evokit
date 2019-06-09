@@ -14,4 +14,5 @@ export const Image = createBlock('img', 'image', [
     'round-top-right',
     'round-bottom-left',
     'round-bottom-right',
+    'border',
 ]);
