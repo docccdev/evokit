@@ -6,9 +6,9 @@
 
 [![](https://img.shields.io/npm/v/evokit.svg?style=flat-square&colorB=blue)](https://www.npmjs.com/package/evokit)
 
-> Create your React UI Block
+> Create React UI Block
 
-* Based on the principle of dividing the interface into independent blocks
+* The principle of dividing the interface into independent blocks
 
 [GITHUB](https://github.com/docccdev/evokit)
 [README](packages/evokit/)

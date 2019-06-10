@@ -1,7 +1,7 @@
 {
   "name": "evokit",
   "version": "3.0.0-alpha.2",
-  "description": "EvoKit tool for creating UI React blocks",
+  "description": "EvoKit — Tool for creating React UI Block",
   "main": "index.js",
   "scripts": {
     "test": "jest --colors",
@@ -12,14 +12,14 @@
     "type": "git",
     "url": "https://github.com/docccdev/evokit.git"
   },
-  "homepage": "http://evokit.net",
+  "homepage": "https://evokit.net/",
   "keywords": [
     "evokit",
-    "blocks",
-    "uikit",
     "react",
-    "bem",
-    "ui"
+    "ui",
+    "block",
+    "uikit",
+    "core"
   ],
   "author": {
     "author": "docccdev",

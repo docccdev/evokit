@@ -1,18 +1,26 @@
 {
   "name": "evokit-line",
   "version": "3.0.0-alpha.5",
-  "description": "<Line>",
+  "description": "Horizontal line, used to separate content",
   "main": "index.js",
   "scripts": {
     "build": "webpack --colors",
-    "watch": "webpack --colors --progress --watch --mode=development",
+    "watch": "webpack --colors --progress --watch",
     "prepublishOnly": "webpack"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/docccdev/evokit.git"
   },
-  "homepage": "https://github.com/docccdev/evokit",
+  "homepage": "https://evokit.net/#/packages/evokit-line/",
+  "keywords": [
+    "evokit",
+    "react",
+    "ui",
+    "block",
+    "uikit",
+    "line"
+  ],
   "author": {
     "author": "docccdev",
     "email": "doccc.dev@gmail.com",

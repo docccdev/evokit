@@ -1,11 +1,11 @@
 [react]: //www.npmjs.com/package/react
 [prop-types]: //www.npmjs.com/package/prop-types
 
-[![](https://img.shields.io/npm/v/evokit.svg?style=flat-square&colorB=blue)](https://www.npmjs.com/package/evokit)
-
 # EvoKit
 
-Tool for creating UI React blocks.
+[![](https://img.shields.io/npm/v/evokit.svg?style=flat-square&colorB=blue)](https://www.npmjs.com/package/evokit)
+
+Tool for creating React UI block.
 
 ---
 

@@ -1,19 +1,27 @@
 {
   "name": "evokit-text",
   "version": "3.0.0-alpha.4",
-  "description": "<Text>",
+  "description": "Used for text",
   "main": "index.js",
   "scripts": {
     "test": "jest --colors",
     "build": "webpack --colors",
-    "watch": "webpack --colors --progress --watch --mode=development",
+    "watch": "webpack --colors --progress --watch",
     "prepublishOnly": "webpack"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/docccdev/evokit.git"
   },
-  "homepage": "https://github.com/docccdev/evokit",
+  "homepage": "https://evokit.net/#/packages/evokit-text/",
+  "keywords": [
+    "evokit",
+    "react",
+    "ui",
+    "block",
+    "uikit",
+    "text"
+  ],
   "author": {
     "author": "docccdev",
     "email": "doccc.dev@gmail.com",

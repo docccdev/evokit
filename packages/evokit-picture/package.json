@@ -1,18 +1,26 @@
 {
   "name": "evokit-picture",
   "version": "3.0.0-alpha.4",
-  "description": "<Picture>",
+  "description": "Creates a square with an image",
   "main": "index.js",
   "scripts": {
     "build": "webpack --colors",
-    "watch": "webpack --colors --progress --watch --mode=development",
+    "watch": "webpack --colors --progress --watch",
     "prepublishOnly": "webpack"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/docccdev/evokit.git"
   },
-  "homepage": "https://github.com/docccdev/evokit",
+  "homepage": "https://evokit.net/#/packages/evokit-picture/",
+  "keywords": [
+    "evokit",
+    "react",
+    "ui",
+    "block",
+    "uikit",
+    "picture"
+  ],
   "author": {
     "author": "docccdev",
     "email": "doccc.dev@gmail.com",
