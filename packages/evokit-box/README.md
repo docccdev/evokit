@@ -63,7 +63,7 @@ Also have [base props][base_props]
 | [box-padding]    | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Indent around an block content |
 | [box-round]      | `none` `full` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Corner rounding |
 | [box-width]      | `auto` `1-1` `*-2` `*-3` `*-4` `*-5` `*-6` `*-7` `*-8` `*-9` `*-10` | Set the width |
-| [box-height]     | `auto` `1-1` `1-2` `1-3` `1-4` `1-5` `1-6` `1-7` `1-8` `1-9` `1-10` | Set the height |
+| [box-height]     | `auto` `1-1` | Set the height |
 | [box-display]    | `none` `inline` `inline-block` `block` | Display type |
 | [box-position]   | `static` `relative` `absolute` `fixed` | Positioning method |
 | [box-place]      | `top` `top-left` `top-right` `center` `center-left` `center-right` `bottom` `bottom-left` `bottom-right` | Position |
@@ -182,17 +182,19 @@ Also have [base props][base_props]
 |9|---|---|---|---|---|---|---|---|`100%`|`90%`|
 |10|---|---|---|---|---|---|---|---|---|`100%`|
 
+```jsx
+<Box box-width='3-4'>
+    ...
+</Box>
+```
+
 ##### `box-height`
 
 - `auto` - value: `auto`
-- See table, for example: `1-2` = `50%`
-
-| |1|2|3|4|5|6|7|8|9|10|
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-|1|`100%`|`50%`|`33.33%`|`25%`|`20%`|`16.66%`|`14.28%`|`12.5%`|`11.11%`|`10%`|
+- `1-1` - value: `100%`
 
 ```jsx
-<Box box-width='1-3'>
+<Box box-height='1-1'>
     ...
 </Box>
 ```
