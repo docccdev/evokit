@@ -1,6 +1,6 @@
 {
   "name": "evokit-line",
-  "version": "3.0.0-alpha.5",
+  "version": "3.0.0",
   "description": "Horizontal line, used to separate content",
   "main": "index.js",
   "scripts": {
