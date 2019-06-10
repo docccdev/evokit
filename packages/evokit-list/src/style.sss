@@ -50,8 +50,8 @@
                     padding-top: 0
                     padding-bottom: 0
         @else
-            margin-top: calc(var(--ek-list-indent-$(value))  / 2)
-            margin-bottom: calc(var(--ek-list-indent-$(value))  / 2)
+            margin-top: calc(var(--ek-list-indent-$(value)) / 2  * -1)
+            margin-bottom: calc(var(--ek-list-indent-$(value)) / 2  * -1)
 
             & > .list__item
                 padding-top: calc(var(--ek-list-indent-$(value)) / 2)
