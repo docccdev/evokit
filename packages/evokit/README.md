@@ -5,7 +5,7 @@
 
 [![](https://img.shields.io/npm/v/evokit.svg?style=flat-square&colorB=blue)](https://www.npmjs.com/package/evokit)
 
-Tool for creating React UI block.
+Allows you to divide the user interface into independent blocks and think about them separately. EvoKit blocks can be declared with `createBlock`.
 
 ---
 
