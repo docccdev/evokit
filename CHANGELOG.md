@@ -16,8 +16,9 @@
 ---
 
 *(19.06.2019)*
-  - [evokit] - **v3.0.1**
-  - [evokit-body] - **v3.0.1**
-  - [evokit-grid] - **v3.0.1**
-  - [evokit-list] - **v3.0.2**
-  - [evokit-picture] - **v3.0.1**
+
+- [evokit]: **3.0.0** → **3.0.1**
+- [evokit-body]: **3.0.0** → **3.0.1**
+- [evokit-grid]: **3.0.0** → **3.0.1**
+- [evokit-list]: **3.0.1** → **3.0.2**
+- [evokit-picture]: **3.0.0** → **3.0.1**
