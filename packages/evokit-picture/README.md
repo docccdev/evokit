@@ -17,7 +17,7 @@
 
 [![](https://img.shields.io/npm/v/evokit-picture.svg)](https://www.npmjs.com/package/evokit-picture)
 
-Creates a square with an image. Contains two elements `<Picture>` and `<Picture.Item>`.
+Creates a square with an image. Contains two elements `<Picture>` and `<PictureItem>`
 
 ---
 
@@ -34,14 +34,14 @@ npm install evokit-picture --save
 > The styles use [css-variable] and will work in all modern browsers. If you need to support more old browsers such as Interner Explorer 11 or lower, use a tool [postcss] with [postcss-preset-env] for transforming css into something most browsers can understand.
 
 - `<Picture>` has a default html tag [picture][html-tag-picture]
-- `<Picture.Item>` has a default html tag [img][html-tag-img]
+- `<PictureItem>` has a default html tag [img][html-tag-img]
 
 ```jsx
-import { Picture } from 'evokit-picture';
+import { Picture, PictureItem } from 'evokit-picture';
 import 'evokit-picture/style.css';
 
 <Picture>
-    <Picture.Item src='' alt='' />
+    <PictureItem src='' alt='' />
 </Picture>
 
 ```
@@ -87,7 +87,7 @@ Also have [additioanl props][base_props]
 
 ```jsx
 <Picture picture-fit='cover'>
-    <Picture.Item src='' alt='' />
+    <PictureItem src='' alt='' />
 </Picture>
 ```
 
@@ -110,7 +110,7 @@ Also have [additioanl props][base_props]
 
 ```jsx
 <Picture picture-round='full'>
-    <Picture.Item src='' alt='' />
+    <PictureItem src='' alt='' />
 </Picture>
 ```
 
@@ -120,6 +120,6 @@ Also have [additioanl props][base_props]
 
 ```jsx
 <Picture picture-border={THEME_NAME}>
-    <Picture.Item src='' alt='' />
+    <PictureItem src='' alt='' />
 </Picture>
 ```

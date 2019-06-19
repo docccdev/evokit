@@ -18,7 +18,7 @@
 
 [![](https://img.shields.io/npm/v/evokit-list.svg)](https://www.npmjs.com/package/evokit-list)
 
-Used to create list. Contains two elements `<List>` and `<List.Item>`.
+Used to create list. Contains two elements `<List>` and `<ListItem>`
 
 ---
 
@@ -35,16 +35,16 @@ npm install evokit-list --save
 > The styles use [css-variable] and will work in all modern browsers. If you need to support more old browsers such as Interner Explorer 11 or lower, use a tool [postcss] with [postcss-preset-env] for transforming css into something most browsers can understand.
 
 - `<List>` has a default html tag [ul][html-tag-ul]
-- `<List.Item>` has a default html tag [li][html-tag-li]
+- `<ListItem>` has a default html tag [li][html-tag-li]
 
 ```jsx
-import { List } from 'evokit-list';
+import { List, ListItem } from 'evokit-list';
 import 'evokit-list/style.css';
 
 <List>
-    <List.Item>
+    <ListItem>
         ...
-    </List.Item>
+    </ListItem>
 </List>
 
 ```
@@ -94,9 +94,9 @@ Also have [additioanl props][base_props]
 
 ```jsx
 <List list-indent='xxl'>
-    <List.Item>
+    <ListItem>
         ...
-    </List.Item>
+    </ListItem>
 </List>
 ```
 
@@ -108,9 +108,9 @@ Also have [additioanl props][base_props]
 
 ```jsx
 <List list-style='decimal'>
-    <List.Item>
+    <ListItem>
         ...
-    </List.Item>
+    </ListItem>
 </List>
 ```
 
@@ -120,9 +120,9 @@ Also have [additioanl props][base_props]
 
 ```jsx
 <List list-color={THEME_NAME}>
-    <List.Item>
+    <ListItem>
         ...
-    </List.Item>
+    </ListItem>
 </List>
 ```
 
@@ -132,8 +132,8 @@ Also have [additioanl props][base_props]
 
 ```jsx
 <List list-divider={THEME_NAME}>
-    <List.Item>
+    <ListItem>
         ...
-    </List.Item>
+    </ListItem>
 </List>
 ```

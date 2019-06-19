@@ -24,7 +24,7 @@
 
 [![](https://img.shields.io/npm/v/evokit-box.svg)](https://www.npmjs.com/package/evokit-box)
 
-The content block allows to apply indents, position and more. Contains one element `<Box>`.
+The content block allows to apply indents, position and more. Contains one element `<Box>`
 
 ---
 

@@ -23,7 +23,7 @@
 
 [![](https://img.shields.io/npm/v/evokit-grid.svg)](https://www.npmjs.com/package/evokit-grid)
 
-The grid for placing content on the page, has 10 columns. Contains two elements `<Grid>` and `<Grid.Item>`.
+The grid for placing content on the page, has 10 columns. Contains two elements `<Grid>` and `<GridItem>`
 
 ---
 
@@ -40,16 +40,16 @@ npm install evokit-grid --save
 > The styles use [css-variable] and will work in all modern browsers. If you need to support more old browsers such as Interner Explorer 11 or lower, use a tool [postcss] with [postcss-preset-env] for transforming css into something most browsers can understand.
 
 - `<Grid>` has a default html tag [div][html-tag-div]
-- `<Grid.Item>` has a default html tag [div][html-tag-div]
+- `<GridItem>` has a default html tag [div][html-tag-div]
 
 ```jsx
-import { Grid } from 'evokit-grid';
+import { Grid, GridItem } from 'evokit-grid';
 import 'evokit-grid/style.css';
 
 <Grid>
-    <Grid.Item>
+    <GridItem>
         ...
-    </Grid.Item>
+    </GridItem>
 </Grid>
 
 ```
@@ -72,7 +72,7 @@ Also have [additioanl props][base_props]
 | [grid-valign]    | `top` `middle` `bottom` `baseline` `justify` | Vertical Cell Alignment |
 | [grid-divider]   | `{THEME_NAME}` | Color border between cells - [Create Theme][create_theme] |
 
-##### Grid.Item
+##### GridItem
 
 | Props | Values | Description |
 |-------|--------|-------------|
@@ -106,9 +106,9 @@ Also have [additioanl props][base_props]
 
 ```jsx
 <Grid grid-column='2'>
-    <Grid.Item>
+    <GridItem>
         ...
-    </Grid.Item>
+    </GridItem>
 </Grid>
 ```
 
@@ -125,9 +125,9 @@ Also have [additioanl props][base_props]
 
 ```jsx
 <Grid grid-indent='m'>
-    <Grid.Item>
+    <GridItem>
         ...
-    </Grid.Item>
+    </GridItem>
 </Grid>
 ```
 
@@ -140,9 +140,9 @@ Also have [additioanl props][base_props]
 
 ```jsx
 <Grid grid-direction='row-reverse'>
-    <Grid.Item>
+    <GridItem>
         ...
-    </Grid.Item>
+    </GridItem>
 </Grid>
 ```
 
@@ -154,9 +154,9 @@ Also have [additioanl props][base_props]
 
 ```jsx
 <Grid grid-wrap='nowrap'>
-    <Grid.Item>
+    <GridItem>
         ...
-    </Grid.Item>
+    </GridItem>
 </Grid>
 ```
 
@@ -169,9 +169,9 @@ Also have [additioanl props][base_props]
 
 ```jsx
 <Grid grid-align='center'>
-    <Grid.Item>
+    <GridItem>
         ...
-    </Grid.Item>
+    </GridItem>
 </Grid>
 ```
 
@@ -185,9 +185,9 @@ Also have [additioanl props][base_props]
 
 ```jsx
 <Grid grid-valign='middle'>
-    <Grid.Item>
+    <GridItem>
         ...
-    </Grid.Item>
+    </GridItem>
 </Grid>
 ```
 
@@ -197,9 +197,9 @@ Also have [additioanl props][base_props]
 
 ```jsx
 <Grid grid-divider={THEME_NAME}>
-    <Grid.Item>
+    <GridItem>
         ...
-    </Grid.Item>
+    </GridItem>
 </Grid>
 ```
 
@@ -209,12 +209,12 @@ Also have [additioanl props][base_props]
 
 ```jsx
 <Grid>
-    <Grid.Item grid-item-order='2'>
+    <GridItem grid-item-order='2'>
         ...
-    </Grid.Item>
-    <Grid.Item>
+    </GridItem>
+    <GridItem>
         ...
-    </Grid.Item>
+    </GridItem>
 </Grid>
 ```
 
@@ -240,11 +240,11 @@ Also have [additioanl props][base_props]
 
 ```jsx
 <Grid>
-    <Grid.Item grid-item-width='expand'>
+    <GridItem grid-item-width='expand'>
         ...
-    </Grid.Item>
-    <Grid.Item grid-item-width='3-10'>
+    </GridItem>
+    <GridItem grid-item-width='3-10'>
         ...
-    </Grid.Item>
+    </GridItem>
 </Grid>
 ```

@@ -19,7 +19,7 @@
 
 [![](https://img.shields.io/npm/v/evokit-link.svg)](https://www.npmjs.com/package/evokit-link)
 
-Used to create link. Contains one element `<Link>`.
+Used to create link. Contains one element `<Link>`
 
 ---
 

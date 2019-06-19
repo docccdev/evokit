@@ -18,7 +18,7 @@
 
 [![](https://img.shields.io/npm/v/evokit-body.svg)](https://www.npmjs.com/package/evokit-body)
 
-Used for body of the web page and sets the basic styles. Contains two elements `<Body>` and `<Body.Section>`.
+Used for body of the web page and sets the basic styles. Contains two elements `<Body>` and `<BodySection>`
 
 ---
 
@@ -35,16 +35,22 @@ npm install evokit-body --save
 > The styles use [css-variable] and will work in all modern browsers. If you need to support more old browsers such as Interner Explorer 11 or lower, use a tool [postcss] with [postcss-preset-env] for transforming css into something most browsers can understand.
 
 - `<Body>` has a default html tag [body][html-tag-body]
-- `<Body.Section>` has a default html tag [div][html-tag-div]
+- `<BodySection>` has a default html tag [div][html-tag-div]
 
 ```jsx
-import { Body } from 'evokit-body';
+import { Body, BodySection } from 'evokit-body';
 import 'evokit-body/style.css';
 
 <Body>
-    <Body.Section>
-        ...
-    </Body.Section>
+    <BodySection>
+        header
+    </BodySection>
+    <BodySection>
+        content
+    </BodySection>
+    <BodySection>
+        footer
+    </BodySection>
 </Body>
 ```
 
@@ -56,8 +62,8 @@ Also have [additioanl props][base_props]
 
 | Key | Values | Description |
 |-------|--------|-------------|
-| [body-size]       | `xl` `xxl` `xxxl` | Max width for `<Body.Section>` |
-| [body-indent]     | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Padding on the side left and right for `<Body.Section>` |
+| [body-size]       | `xl` `xxl` `xxxl` | Max width for `<BodySection>` |
+| [body-indent]     | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Padding on the side left and right for `<BodySection>` |
 | [body-background] | `{THEME_NAME}` | Background color - [Create Theme][create_theme] |
 | [body-color]      | `{THEME_NAME}` | Text color - [Create Theme][create_theme] |
 

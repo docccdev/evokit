@@ -19,7 +19,7 @@
 
 [![](https://img.shields.io/npm/v/evokit-image.svg)](https://www.npmjs.com/package/evokit-image)
 
-Used to display the image. Contains one element `<Image>`.
+Used to display the image. Contains one element `<Image>`
 
 ---
 

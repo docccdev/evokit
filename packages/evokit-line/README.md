@@ -16,7 +16,7 @@
 
 [![](https://img.shields.io/npm/v/evokit-line.svg)](https://www.npmjs.com/package/evokit-line)
 
-Horizontal line, used to separate content. Contains one element `<Line>`.
+Horizontal line, used to separate content. Contains one element `<Line>`
 
 ---
 
