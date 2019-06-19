@@ -6,6 +6,10 @@
 
 ### CHANGELOG
 
+#### 3.0.1 *(19.06.2019)*
+
+- Added export `PictureItem`, for example `import { Picture, PictureItem } from 'evokit-picture';`
+
 #### 3.0.0
 
 - Initial version independent package. The [previous changelog](packages/evokit/CHANGELOG.md) in another package.

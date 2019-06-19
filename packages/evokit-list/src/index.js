@@ -7,4 +7,6 @@ export const List = createBlock('ul', 'list', [
     'indent',
 ]);
 
-List.Item = createBlock('li', 'list__item');
+export const ListItem = createBlock('li', 'list__item');
+
+List.Item = ListItem;

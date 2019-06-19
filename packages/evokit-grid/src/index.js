@@ -10,7 +10,9 @@ export const Grid = createBlock('div', 'grid', [
     'wrap',
 ]);
 
-Grid.Item = createBlock('div', 'grid__item', [
+export const GridItem = createBlock('div', 'grid__item', [
     'order',
     'width',
 ]);
+
+Grid.Item = GridItem;

@@ -1,8 +1,8 @@
 [evokit-box]: /packages/evokit-box/
 
-# Base props
+# Props
 
-All blocks have default props, such as `tag`, `ref`, `preset`.
+All blocks have additioanl props, such as `tag`, `ref`, `preset`.
 
 - `{BLOCK_NAME}-tag` - type `string`, used to change the HTML tag
 - `{BLOCK_NAME}-ref` - type `function`, used to get a NODE reference
@@ -40,16 +40,13 @@ import 'evokit-box/style.css';
 ##### `box-preset`
 
 By default, uses the rules BEM naming and class prefix `ek-`
-- `ek-block`
-- `ek-block_modName_modVal`
-- `ek-block__elem`
-- `ek-block__elem_modName_modVal`
+- `ek-blockName`
+- `ek-blockName_modName_modVal`
 
 ```js
 {
-    b: 'ek-', // block class name prefix => {b}block => ek-block
-    e: '__', // element class name separator => block{e}elem => block__elem
-    m: '_', // element modifier name separator => block{m}modName => block_modName
+    b: 'ek-', // block class name prefix => {b}blockName => ek-blockName
+    m: '_', // element modifier name separator => blockName{m}modName => block_modName
     v: '_', // element modifier value separator => modName{v}modVal => modName_modVal
     css: null // object CSS Module classes
 }

@@ -7,4 +7,6 @@ export const Body = createBlock('body', 'body', [
     'color',
 ]);
 
-Body.Section = createBlock('div', 'body__section');
+export const BodySection = createBlock('div', 'body__section');
+
+Body.Section = BodySection;

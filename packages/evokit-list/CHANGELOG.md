@@ -6,6 +6,10 @@
 
 ### CHANGELOG
 
+#### 3.0.2 *(19.06.2019)*
+
+- Added export `ListItem`, for example `import { List, ListItem } from 'evokit-list';`
+
 #### 3.0.1
 
 - Fixed bug with prop `list-indent`

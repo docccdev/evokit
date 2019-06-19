@@ -52,7 +52,7 @@ import 'evokit-body/style.css';
 
 #### Props
 
-Also have [base props][base_props]
+Also have [additioanl props][base_props]
 
 | Key | Values | Description |
 |-------|--------|-------------|

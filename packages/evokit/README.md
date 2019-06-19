@@ -1,3 +1,5 @@
+[css-modules]: //github.com/css-modules/css-modules
+
 [react]: //www.npmjs.com/package/react
 [prop-types]: //www.npmjs.com/package/prop-types
 
@@ -17,38 +19,79 @@ Allows you to divide the user interface into independent blocks and think about 
 npm install evokit --save
 ```
 
-##### `createBlock()`
+---
 
-```js
-createBlock(
-    tagName, // string
-    blockName, // string
-    [...blockMods], // array of string
-    preset // object { b: <string>, e: <string>, m: <string>, v: <string>, css: <object CSS Module classes> }
-);
+##### `createBlock(tagName, blockName, blockMods, preset)`
+
+- `tagName` - string, html tag
+- `blockName` - string, block name
+- `blockMods` - array of string, block modifier key list
+- `preset` - object, default value: `{ b: 'ek-', m: '_', v: '_', css: null}`
+
+```jsx
+import { createBlock } from 'evokit';
+
+const Footer = createBlock('div', 'footer', ['padding']);
+
+<Footer /> // <div class="ek-footer"></div>
+<Footer footer-padding='xxl' /> // <div class="ek-footer ek-footer_padding_xxl"></div>
+
+// ADDITIONAL PROPS:
+<Footer footer-tag='span' /> // <span class="ek-footer ek-footer_padding_xxl"></span>
+<Footer footer-ref={(target) => {}} /> // React ref
+<Footer footer-preset={{ css: cssModules }} /> // CSS Modules
 ```
 
-##### `default preset`
+CSS Modules with custom class prefix `mp-`:
+
 ```js
-{
-    b: 'ek-', // block class name prefix => {b}block => ek-block
-    e: '__', // element class name separator => block{e}elem => block__elem
-    m: '_', // element modifier name separator => block{m}modName => block_modName
-    v: '_', // element modifier value separator => modName{v}modVal => modName_modVal
-    css: null // object CSS Module classes
-}
+// css-modules.css
+
+.mp-footer {}
+.mp-footer_padding_xxl {}
 ```
 
 ```jsx
 import { createBlock } from 'evokit';
-const Block = createBlock('div', 'block', ['padding']);
+import styles from 'css-modules.css';
 
-<Block /> // <div class="ek-block"></div>
-<Block block-padding='xxl' /> // <div class="ek-block ek-block_padding_xxl"></div>
+const Footer = createBlock('div', 'footer', ['padding'], {
+    b: 'mp-',
+    css: styles,
+});
+```
 
-// BLOCKS HAS A DEFAULT PROPS:
-<Block block-tag='span' /> // <span class="ek-block ek-block_padding_xxl"></span>
-<Block block-ref={(target) => {}} /> // React ref
-<Block block-preset={{ css: cssMap }} /> // CSS Modules => cssMap['.ek-block'] and cssMap['.ek-block_padding_xxl']
+More about default preset:
 
+| Key   | Type     | Value | Description |
+|-------|----------|---|-------------|
+| `b`   | `string` | `ek-`  | block class name prefix: `{b}blockName` => `ek-blockName` |
+| `m`   | `string` | `_`    | block modifier name separator: `blockName{m}modName` => `block_modName` |
+| `v`   | `string` | `_`    | block modifier value separator: `modName{v}modVal` => `modName_modVal` |
+| `css` | `object` | `null` | object [CSS Modules][css-modules] classes |
+
+##### `withProps(Block, props)`
+
+Return block with default props
+
+```jsx
+import { createBlock, withProps } from 'evokit';
+// import styles from 'css-modules.css';
+
+const Footer = createBlock('div', 'footer', ['padding']);
+
+const FooterXXL = withProps(Footer, {
+    'footer-tag': 'table',
+    'footer-padding': 'xxl',
+});
+
+// const FooterCssModules = withProps(Footer, {
+//     'footer-preset': {
+//         css: styles,
+//     },
+// });
+
+<Footer /> // <div class="ek-footer"></div>
+<FooterXXL /> // <table class="ek-footer ek-footer_padding_xxl"></table>
+<FooterXXL footer-tag='span' footer-padding='m' /> // <span class="ek-footer ek-footer_padding_m"></span>
 ```

@@ -53,7 +53,7 @@ import 'evokit-list/style.css';
 
 #### Props
 
-Also have [base props][base_props]
+Also have [additioanl props][base_props]
 
 | Props | Values | Description |
 |-------|--------|-------------|

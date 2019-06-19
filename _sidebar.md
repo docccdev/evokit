@@ -1,9 +1,9 @@
 * BASE
 
-  * [Core](packages/evokit/)
+  * [EvoKit](packages/evokit/)
   * [Props](/docs/base/props.md)
-  * [Theming](/docs/base/theme.md)
   * [Media](/docs/base/media.md)
+  * [Theming](/docs/base/theme.md)
 
 * BLOCKS
   * [Body](packages/evokit-body/)
