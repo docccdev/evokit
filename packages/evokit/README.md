@@ -28,6 +28,17 @@ createBlock(
 );
 ```
 
+##### `default preset`
+```js
+{
+    b: 'ek-', // block class name prefix => {b}block => ek-block
+    e: '__', // element class name separator => block{e}elem => block__elem
+    m: '_', // element modifier name separator => block{m}modName => block_modName
+    v: '_', // element modifier value separator => modName{v}modVal => modName_modVal
+    css: null // object CSS Module classes
+}
+```
+
 ```jsx
 import { createBlock } from 'evokit';
 const Block = createBlock('div', 'block', ['padding']);
