@@ -6,6 +6,10 @@
 
 ### CHANGELOG
 
+#### 3.0.1 *(20.06.2019)*
+
+- **Added** new prop `box-align`
+
 #### 3.0.0
 
 - Initial version independent package. The [previous changelog](packages/evokit/CHANGELOG.md) in another package.

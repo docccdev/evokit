@@ -36,6 +36,31 @@
         display: table
 
 /**
+ * Align:
+ *
+ *  - box_align_none
+ *  - box_align_left
+ *  - box_align_center
+ *  - box_align_right
+ *
+ **/
+
+@each $value in (none, left, center, right)
+    @mixin media .box_align_$(value)
+        @if $value == center
+            float: none
+            display: inline-block
+            position: relative
+            left: 50%
+            transform: translateX(-50%)
+        @else
+            float: $value
+            display: block
+            position: static
+            left: 0
+            transform: translateX(0)
+
+/**
  * Display:
  *
  *  - box_display_*

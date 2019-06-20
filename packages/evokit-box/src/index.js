@@ -1,6 +1,7 @@
 import { createBlock } from 'evokit';
 
 export const Box = createBlock('div', 'box', [
+    'align',
     'background',
     'border',
     'margin',

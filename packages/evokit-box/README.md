@@ -8,6 +8,7 @@
 [base_props]: docs/base/props
 [create_theme]: docs/base/theme
 
+[box-align]: #box-align
 [box-margin]: #box-margin
 [box-padding]: #box-padding
 [box-round]: #box-round
@@ -59,6 +60,7 @@ Also have [additioanl props][base_props]
 
 | Props | Values | Description |
 |-------|--------|-------------|
+| [box-align]      | `none` `left` `center` `right` | Horizontal alignment |
 | [box-margin]     | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` `auto` | Indent around block |
 | [box-padding]    | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Indent around an block content |
 | [box-round]      | `none` `full` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Corner rounding |
@@ -97,6 +99,19 @@ Also have [additioanl props][base_props]
 ```
 
 ---
+
+##### `box-align`
+
+- `none` - No alignment
+- `left` - Align to the left
+- `center` - Center alignment
+- `right` - Align to the right
+
+```jsx
+<Box box-align='center'>
+    ...
+</Box>
+```
 
 ##### `box-margin`
 
