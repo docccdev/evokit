@@ -1,6 +1,7 @@
 * BASE
 
   * [EvoKit](packages/evokit/)
+  * [Create block](/docs/base/create-block.md)
   * [Base props](/docs/base/props.md)
   * [Block props](/docs/base/block-props.md)
   * [Media props](/docs/base/media.md)
