@@ -1,8 +1,8 @@
 [evokit-box]: /packages/evokit-box/
 
-# Props
+# Base props
 
-All blocks have additioanl props, such as `tag`, `ref`, `preset`.
+All blocks have base props, such as `tag`, `ref`, `preset`.
 
 - `{BLOCK_NAME}-tag` - type `string`, used to change the HTML tag
 - `{BLOCK_NAME}-ref` - type `function`, used to get a NODE reference
@@ -10,7 +10,9 @@ All blocks have additioanl props, such as `tag`, `ref`, `preset`.
 
 ---
 
-> For examples, consider the use default props on the [Box][evokit-box] block.
+#### Props
+
+For examples, consider the use base props on the [Box][evokit-box] block.
 
 ##### `box-tag`
 
@@ -65,6 +67,6 @@ import boxCss from 'evokit-box/style.css'; // return for example {'ek-box': 'ek-
 
 ```
 
----
+#### Live demo
 
 [![Edit box-props](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/boxprops-dn6w9?fontsize=14 ':include :type=iframe width=100% height=700px')

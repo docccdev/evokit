@@ -54,8 +54,6 @@ import 'evokit-grid/style.css';
 
 ```
 
-[![Edit grid-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/gridusage-bweb5?fontsize=14 ':include :type=iframe width=100% height=500px')
-
 #### Props
 
 Also have [additioanl props][base_props]
@@ -95,6 +93,10 @@ Also have [additioanl props][base_props]
     --ek-grid-indent-xxl: 35px;
 }
 ```
+
+#### Live demo
+
+[![Edit grid-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/gridusage-bweb5?fontsize=14 ':include :type=iframe width=100% height=500px')
 
 ---
 

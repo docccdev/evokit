@@ -54,8 +54,6 @@ import 'evokit-body/style.css';
 </Body>
 ```
 
-[![Edit body-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/bodyusage-kz6ss?fontsize=14 ':include :type=iframe width=100% height=500px')
-
 #### Props
 
 Also have [additioanl props][base_props]
@@ -94,6 +92,10 @@ Also have [additioanl props][base_props]
     --ek-body-max-width-xxxl: 1840px;
 }
 ```
+
+#### Live demo
+
+[![Edit body-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/bodyusage-kz6ss?fontsize=14 ':include :type=iframe width=100% height=500px')
 
 ---
 

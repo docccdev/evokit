@@ -49,8 +49,6 @@ import 'evokit-list/style.css';
 
 ```
 
-[![Edit list-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/listusage-ycfx4?fontsize=14 ':include :type=iframe width=100% height=500px')
-
 #### Props
 
 Also have [additioanl props][base_props]
@@ -78,6 +76,10 @@ Also have [additioanl props][base_props]
     --ek-list-indent-xxl: 35px;
 }
 ```
+
+#### Live demo
+
+[![Edit list-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/listusage-ycfx4?fontsize=14 ':include :type=iframe width=100% height=500px')
 
 ---
 

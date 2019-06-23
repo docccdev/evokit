@@ -52,8 +52,6 @@ import 'evokit-box/style.css';
 </Box>
 ```
 
-[![Edit box-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/boxusage-3r9iy?fontsize=14 ':include :type=iframe width=100% height=500px')
-
 #### Props
 
 Also have [additioanl props][base_props]
@@ -97,6 +95,10 @@ Also have [additioanl props][base_props]
     --ek-box-round-xxl: 14px;
 }
 ```
+
+#### Live demo
+
+[![Edit box-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/boxusage-3r9iy?fontsize=14 ':include :type=iframe width=100% height=500px')
 
 ---
 

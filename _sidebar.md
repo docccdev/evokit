@@ -1,9 +1,10 @@
 * BASE
 
   * [EvoKit](packages/evokit/)
-  * [Props](/docs/base/props.md)
-  * [Media](/docs/base/media.md)
-  * [Theming](/docs/base/theme.md)
+  * [Base props](/docs/base/props.md)
+  * [Block props](/docs/base/block-props.md)
+  * [Media props](/docs/base/media.md)
+  * [Create theme](/docs/base/theme.md)
 
 * BLOCKS
   * [Body](packages/evokit-body/)

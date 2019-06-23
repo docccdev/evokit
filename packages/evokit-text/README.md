@@ -49,8 +49,6 @@ import 'evokit-text/style.css';
 </Text>
 ```
 
-[![Edit text-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/textusage-wm53d?fontsize=14 ':include :type=iframe width=100% height=500px')
-
 #### Props
 
 Also have [additioanl props][base_props]
@@ -91,6 +89,10 @@ Also have [additioanl props][base_props]
     --ek-text-line-height-large: 1.5em;
 }
 ```
+
+#### Live demo
+
+[![Edit text-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/textusage-wm53d?fontsize=14 ':include :type=iframe width=100% height=500px')
 
 ---
 

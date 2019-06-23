@@ -47,8 +47,6 @@ import 'evokit-link/style.css';
 
 ```
 
-[![Edit link-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/linkusage-c7mgv?fontsize=14 ':include :type=iframe width=100% height=500px')
-
 #### Props
 
 Also have [additioanl props][base_props]
@@ -86,6 +84,10 @@ Also have [additioanl props][base_props]
     --ek-link-line-height-large: 1.5em;
 }
 ```
+
+#### Live demo
+
+[![Edit link-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/linkusage-c7mgv?fontsize=14 ':include :type=iframe width=100% height=500px')
 
 ---
 
