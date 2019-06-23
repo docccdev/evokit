@@ -6,7 +6,7 @@ To create a new block, use the function `createBlock` from the npm package [evok
 
 ---
 
-#### Files and structure
+#### Structure
 
 - `MyBlock/`
     - `index.js`

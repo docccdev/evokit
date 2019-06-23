@@ -3,6 +3,9 @@
 [react]: //www.npmjs.com/package/react
 [prop-types]: //www.npmjs.com/package/prop-types
 
+[create-block]: /docs/base/create-block
+[with-props]: /docs/base/with-props
+
 # EvoKit
 
 [![](https://img.shields.io/npm/v/evokit.svg?style=flat-square&colorB=blue)](https://www.npmjs.com/package/evokit)
@@ -22,6 +25,8 @@ npm install evokit --save
 ---
 
 ##### `createBlock(tagName, blockName, blockMods, preset)`
+
+See example [create block][create-block]
 
 - `tagName` - string, html tag
 - `blockName` - string, block name
@@ -73,6 +78,8 @@ More about default preset:
 ##### `withProps(Block, props)`
 
 Return block with default props
+
+See example [with props][with-props]
 
 ```jsx
 import { createBlock, withProps } from 'evokit';

@@ -2,7 +2,7 @@
 
 # Block props
 
-For examples, consider the use base props on the [Box][evokit-box] block.
+For examples, consider the use props on the [Box][evokit-box] block.
 
 ---
 
