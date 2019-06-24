@@ -1,12 +1,14 @@
 * BASE
 
+  * [About](/docs/base/about.md)
   * [EvoKit](packages/evokit/)
+
+* GUIDE
   * [Create block](/docs/base/create-block.md)
   * [With props](/docs/base/with-props.md)
   * [Base props](/docs/base/props.md)
   * [Block props](/docs/base/block-props.md)
   * [Media props](/docs/base/media.md)
-  * [Create theme](/docs/base/theme.md)
 
 * BLOCKS
   * [Body](packages/evokit-body/)

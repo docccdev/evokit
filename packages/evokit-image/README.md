@@ -63,6 +63,12 @@ Also have [additioanl props][base_props]
 > This set of css variables is default, if you want to override one or more value, please use the rules [css-variable-usage], define them below the css import.
 
 ```css
+@custom-media --ek-image-media-small only screen and (min-width: 480px);
+@custom-media --ek-image-media-medium only screen and (min-width: 768px);
+@custom-media --ek-image-media-large only screen and (min-width: 960px);
+@custom-media --ek-image-media-wide only screen and (min-width: 1200px);
+@custom-media --ek-image-media-huge only screen and (min-width: 1400px);
+
 :root {
     /* prop 'image-round' */
     --ek-image-round-xxs: 2px;

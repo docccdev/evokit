@@ -65,6 +65,12 @@ Also have [additioanl props][base_props]
 > This set of css variables is default, if you want to override one or more value, please use the rules [css-variable-usage], define them below the css import.
 
 ```css
+@custom-media --ek-list-media-small only screen and (min-width: 480px);
+@custom-media --ek-list-media-medium only screen and (min-width: 768px);
+@custom-media --ek-list-media-large only screen and (min-width: 960px);
+@custom-media --ek-list-media-wide only screen and (min-width: 1200px);
+@custom-media --ek-list-media-huge only screen and (min-width: 1400px);
+
 :root {
     /* prop 'list-indent' */
     --ek-list-indent-xxs: 5px;

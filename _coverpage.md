@@ -11,4 +11,4 @@
 * The principle of dividing the interface into independent blocks
 
 [GITHUB](https://github.com/docccdev/evokit)
-[README](packages/evokit/)
+[README](docs/base/about.md)

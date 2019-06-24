@@ -65,6 +65,12 @@ Also have [additioanl props][base_props]
 > This set of css variables is default, if you want to override one or more value, please use the rules [css-variable-usage], define them below the css import.
 
 ```css
+@custom-media --ek-link-media-small only screen and (min-width: 480px);
+@custom-media --ek-link-media-medium only screen and (min-width: 768px);
+@custom-media --ek-link-media-large only screen and (min-width: 960px);
+@custom-media --ek-link-media-wide only screen and (min-width: 1200px);
+@custom-media --ek-link-media-huge only screen and (min-width: 1400px);
+
 :root {
     /* base */
     --ek-link-line-height: 1em;
