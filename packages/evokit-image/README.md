@@ -12,6 +12,7 @@
 [image-valign]: #image-valign
 [image-mirror]: #image-mirror
 [image-fit]: #image-fit
+[image-width]: #image-width
 [image-round]: #image-round
 [image-border]: #image-border
 
@@ -55,8 +56,9 @@ Also have [additioanl props][base_props]
 | [image-valign] | `baseline` `bottom` `middle` `sub` `super` `text-bottom` `text-top` `top` | Vertical alignment |
 | [image-mirror] | `x` `y` `xy` | Mirroring |
 | [image-fit]    | `none` `fill` `contain` `cover` `scale-down` | Filling the container relative to its height and width |
+| [image-width]  | `auto` `1-1` `*-2` `*-3` `*-4` `*-5` `*-6` `*-7` `*-8` `*-9` `*-10` | Set the width |
 | [image-round]  | `none` `full` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Corner rounding |
-| [image-border]     | `{THEME_NAME}` | Border color - [Create Theme][create_theme] |
+| [image-border] | `{THEME_NAME}` | Border color - [Create Theme][create_theme] |
 
 #### Customize
 
@@ -132,6 +134,28 @@ Also have [additioanl props][base_props]
 
 ```jsx
 <Image image-fit='cover' src='' alt='' />
+```
+
+##### `image-width`
+
+- `auto` - value: `auto`
+- See table, for example: `3-4` = `75%`
+
+| |1|2|3|4|5|6|7|8|9|10|
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+|1|`100%`|`50%`|`33.33%`|`25%`|`20%`|`16.66%`|`14.28%`|`12.5%`|`11.11%`|`10%`|
+|2|---|`100%`|`66.66%`|`50%`|`40%`|`33.33%`|`28.57%`|`25%`|`22.22%`|`20%`|
+|3|---|---|`100%`|`75%`|`60%`|`50%`|`42.85%`|`37.5%`|`33.33%`|`30%`|
+|4|---|---|---|`100%`|`80%`|`66.66%`|`57.14%`|`50%`|`44.44%`|`40%`|
+|5|---|---|---|---|`100%`|`83.33%`|`71.42%`|`62.5%`|`55.55%`|`50%`|
+|6|---|---|---|---|---|`100%`|`85.71%`|`75%`|`66.66%`|`60%`|
+|7|---|---|---|---|---|---|`100%`|`87.5%`|`77.77%`|`70%`|
+|8|---|---|---|---|---|---|---|`100%`|`88.88%`|`80%`|
+|9|---|---|---|---|---|---|---|---|`100%`|`90%`|
+|10|---|---|---|---|---|---|---|---|---|`100%`|
+
+```jsx
+<Image image-width='3-4' src='' alt='' />
 ```
 
 ##### `image-round`
