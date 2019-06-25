@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Image /> props className 1`] = `
+<img
+  alt=""
+  className="ek-image ololo"
+  src=""
+/>
+`;
+
+exports[`<Image /> props image-align 1`] = `
+<img
+  className="ek-image ek-image_align_left"
+/>
+`;
+
+exports[`<Image /> props image-border 1`] = `
+<img
+  className="ek-image ek-image_border_THEME_NAME"
+/>
+`;
+
+exports[`<Image /> props image-fit 1`] = `
+<img
+  className="ek-image ek-image_fit_cover"
+/>
+`;
+
+exports[`<Image /> props image-mirror 1`] = `
+<img
+  className="ek-image ek-image_mirror_xy"
+/>
+`;
+
+exports[`<Image /> props image-round 1`] = `
+<img
+  className="ek-image ek-image_round_full"
+/>
+`;
+
+exports[`<Image /> props image-tag 1`] = `
+<span
+  className="ek-image"
+/>
+`;
+
+exports[`<Image /> props image-valign 1`] = `
+<img
+  className="ek-image ek-image_valign_middle"
+/>
+`;
+
+exports[`<Image /> props image-width 1`] = `
+<img
+  className="ek-image ek-image_width_1-7"
+/>
+`;
+
+exports[`<Image /> render 1`] = `
+<img
+  alt="test alt"
+  className="ek-image"
+  src="test.jpg"
+/>
+`;
