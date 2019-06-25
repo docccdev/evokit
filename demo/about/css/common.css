@@ -1,0 +1,124 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    font-size: 13px;
+    font-family: -apple-system,BlinkMacSystemFont,Roboto,Open Sans,Helvetica Neue,sans-serif;
+    overflow: hidden;
+    user-select: none;
+    cursor: default;
+}
+
+img {
+    max-height: 100vh !important;
+}
+
+[data-slider-canvas] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    transition: transform .28s ease-out;
+    transform: translateX(-100%);
+}
+[data-slider-canvas].active {
+    transform: translateX(0);
+}
+[data-slider-canvas].active ~ [data-slider-canvas] {
+    transform: translateX(100%);
+}
+
+[data-slider-canvas-case] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    transition: transform .2s ease-out;
+    transform: translateY(-100%);
+}
+[data-slider-canvas-case].active {
+    transform: translateY(0);
+}
+[data-slider-canvas-case].active ~ [data-slider-canvas-case] {
+    transform: translateY(100%);
+}
+
+.diff {
+    font-style: normal;
+    padding: 1px 3px;
+    color: #000;
+    background: #fc0;
+}
+
+.copyright {
+    position: fixed;
+    left: 50%;
+    bottom: 0;
+    padding: 20px;
+    font-size: 11px;
+    z-index: 99999;
+    opacity: .6;
+    white-space: nowrap;
+    transform: translateX(-50%);
+    box-sizing: border-box;
+}
+
+.pages {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    margin: 20px;
+    font-size: 16px;
+    z-index: 99999;
+    opacity: .6;
+}
+
+.nav {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 99999;
+    margin: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    padding-top: 33px;
+    user-select: none;
+}
+
+.nav-item:first-child {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0 0 6px;
+}
+
+.nav-item {
+    width: 25px;
+    height: 25px;
+    background: #5a5a5a;
+    margin: 0 3px;
+    color: #fff;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    opacity: .7;
+    cursor: pointer;
+    transition: opacity .07s ease-out;
+}
+
+.nav-item.disable {
+    opacity: .2 !important;
+    cursor: default;
+}
+
+.nav-item.active, .nav-item:active {
+    opacity: 1;
+}
