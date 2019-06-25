@@ -1,0 +1,6 @@
+.project-logo {
+    opacity: .2;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    vertical-align: top;
+}
