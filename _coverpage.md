@@ -6,9 +6,9 @@
 
 [![](https://img.shields.io/npm/v/evokit.svg?style=flat-square&colorB=blue)](https://www.npmjs.com/package/evokit)
 
-> Create React UI Block
+> React primitive UI blocks
 
-* The principle of dividing the interface into independent blocks
+* 9 core UI blocks to serve as the basis for design systems
 
 [GITHUB](https://github.com/docccdev/evokit)
 [README](docs/base/about.md)
