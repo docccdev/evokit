@@ -19,6 +19,7 @@ export const withPreset = (preset) => {
         return (mods, mix) => {
             const block = elem ? `${b}${name}${e}${elem}` : `${b}${name}`;
             const result = [block];
+            const mixResult = [];
 
             if (mods) {
                 Object.keys(mods).forEach((key) => {
@@ -51,7 +52,7 @@ export const withPreset = (preset) => {
             }
 
             if (typeof mix === 'string') {
-                result.push(mix);
+                mixResult.push(mix);
             } else if (Array.isArray(mix)) {
                 mix
                     .filter((item) => typeof item === 'string')
@@ -59,18 +60,19 @@ export const withPreset = (preset) => {
                         item
                             .split(' ')
                             .filter((value) => !result.includes(value))
-                            .forEach((value) => result.push(value));
+                            .forEach((value) => mixResult.push(value));
                     });
             }
 
             if (typeof css === 'object' && css !== null) {
-                return result
+                const cssModuleResult = result
                     .filter((key) => Object.prototype.hasOwnProperty.call(css, key))
-                    .map((key) => css[key])
-                    .join(' ');
+                    .map((key) => css[key]);
+
+                return [...cssModuleResult, ...mixResult].join(' ');
             }
 
-            return result.join(' ');
+            return [...result, ...mixResult].join(' ');
         };
     };
 };

@@ -20,10 +20,15 @@
 [picture]: packages/evokit-picture/
 [text]: packages/evokit-text/
 
+[issues/3]: //github.com/docccdev/evokit/issues/3
 
 # CHANGELOG
 
 !> In version 3.0.0 there are no more UI blocks, they are all in separate packages, please update carefully.
+
+#### 3.0.2 *(04.07.2019)*
+
+- Fixed default prop `className` for css modules Blocks [#3][issues/3]
 
 #### 3.0.1 *(19.06.2019)*
 

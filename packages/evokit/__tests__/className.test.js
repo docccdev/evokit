@@ -249,5 +249,54 @@ describe("import { className, withPreset } from 'evokit';", () => {
             expect(cn({ mod: false })).toBe('cssBlock__cssElem');
             expect(cn({ mod: 'value' })).toBe('cssBlock__cssElem cssBlock__cssElem_cssMod_cssValue');
         });
+
+        describe("mix", () => {
+            it('block', () => {
+                const cn = cnBlockCssModules('Block');
+                expect(cn(null, ['mix1', 'mix2'])).toBe('cssBlock mix1 mix2');
+            });
+
+            it('block with mods', () => {
+                const cn = cnBlockCssModules('Block');
+                expect(cn({ mod: 'value' }, ['mix'])).toBe('cssBlock cssBlock_cssMod_cssValue mix');
+            });
+
+            it('elem', () => {
+                const cn = cnBlockCssModules('Block', 'Elem');
+                expect(cn(null, ['mix1', 'mix2'])).toBe('cssBlock__cssElem mix1 mix2');
+            });
+
+            it('elem with mods', () => {
+                const cn = cnBlockCssModules('Block', 'Elem');
+                expect(cn({ mod: 'value' }, ['mix'])).toBe('cssBlock__cssElem cssBlock__cssElem_cssMod_cssValue mix');
+            });
+
+            it('undefined', () => {
+                const cn = cnBlockCssModules('Block');
+                expect(cn(null, undefined)).toBe('cssBlock');
+            });
+
+            it('unique block', () => {
+                const cn = cnBlockCssModules('Block');
+                expect(cn(null, ['Block'])).toBe('cssBlock');
+            });
+
+            it('unique block with mods', () => {
+                const cn = cnBlockCssModules('Block');
+                expect(cn({ mod: 'value' }, ['Block Block_mod_value'])).toBe('cssBlock cssBlock_cssMod_cssValue');
+            });
+
+            it('unique elem', () => {
+                const cn = cnBlockCssModules('Block', 'Elem');
+                expect(cn(null, ['Block__Elem'])).toBe('cssBlock__cssElem');
+            });
+
+            it('unique elem with mods', () => {
+                const cn = cnBlockCssModules('Block', 'Elem');
+                expect(cn({ mod: 'value' }, ['Block__Elem Block__Elem_mod_value']))
+                    .toBe('cssBlock__cssElem cssBlock__cssElem_cssMod_cssValue');
+            });
+        });
+
     });
 });
