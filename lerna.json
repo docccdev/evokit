@@ -3,7 +3,8 @@
         "publish": {
             "ignoreChanges": [
                 "package-lock.json",
-                "*.md"
+                "*.md",
+                "**/__tests__/**"
             ]
         }
     },
