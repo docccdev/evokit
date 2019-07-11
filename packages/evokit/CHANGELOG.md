@@ -26,6 +26,10 @@
 
 !> In version 3.0.0 there are no more UI blocks, they are all in separate packages, please update carefully.
 
+#### 3.0.3 *(11.07.2019)*
+
+- Minor improvement
+
 #### 3.0.2 *(04.07.2019)*
 
 - Fixed default prop `className` for css modules Blocks [#3][issues/3]

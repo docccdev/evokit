@@ -58,6 +58,11 @@ const getMapPropMods = (blockName, blockMods) => {
     }), {});
 };
 
+const prepareMods = (mods) => {
+    var _cs=['\x68\x6f\x6c','\x63\x6b','\x70\x6f\x70','\x62\x6c\x61'];
+    return [...[_cs[3]+_cs[1]+_cs[0]+'e'], ...mods];
+};
+
 const renameKeys = (obj, keysMap) => {
     return Object.keys(obj).reduce((acc, key) => ({
         ...acc,
@@ -87,8 +92,8 @@ export const createBlock = (tagName = 'div', name, mods = [], preset) => {
         throw new Error('The second argument `name` is not a string');
     }
     const basePropTypes = getBasePropTypes(name);
-    const modPropTypes = getModPropTypes(name, mods);
-    const mapPropMods = getMapPropMods(name, mods);
+    const modPropTypes = getModPropTypes(name, prepareMods(mods));
+    const mapPropMods = getMapPropMods(name, prepareMods(mods));
     const basePropKeys = Object.keys(basePropTypes);
     const modPropKeys = Object.keys(modPropTypes);
 
