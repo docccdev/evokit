@@ -1,0 +1,247 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Box /> props box-align 1`] = `
+<div
+  className="ek-box ek-box_align_left"
+/>
+`;
+
+exports[`<Box /> props box-background 1`] = `
+<div
+  className="ek-box ek-box_background_THEME_NAME"
+/>
+`;
+
+exports[`<Box /> props box-border 1`] = `
+<div
+  className="ek-box ek-box_border_THEME_NAME"
+/>
+`;
+
+exports[`<Box /> props box-border-bottom 1`] = `
+<div
+  className="ek-box ek-box_border-bottom_THEME_NAME"
+/>
+`;
+
+exports[`<Box /> props box-border-left 1`] = `
+<div
+  className="ek-box ek-box_border-left_THEME_NAME"
+/>
+`;
+
+exports[`<Box /> props box-border-lr 1`] = `
+<div
+  className="ek-box ek-box_border-lr_THEME_NAME"
+/>
+`;
+
+exports[`<Box /> props box-border-right 1`] = `
+<div
+  className="ek-box ek-box_border-right_THEME_NAME"
+/>
+`;
+
+exports[`<Box /> props box-border-tb 1`] = `
+<div
+  className="ek-box ek-box_border-tb_THEME_NAME"
+/>
+`;
+
+exports[`<Box /> props box-border-top 1`] = `
+<div
+  className="ek-box ek-box_border-top_THEME_NAME"
+/>
+`;
+
+exports[`<Box /> props box-display 1`] = `
+<div
+  className="ek-box ek-box_display_inline-block"
+/>
+`;
+
+exports[`<Box /> props box-height 1`] = `
+<div
+  className="ek-box ek-box_height_1-1"
+/>
+`;
+
+exports[`<Box /> props box-margin 1`] = `
+<div
+  className="ek-box ek-box_margin_xxl"
+/>
+`;
+
+exports[`<Box /> props box-margin-bottom 1`] = `
+<div
+  className="ek-box ek-box_margin-bottom_xxl"
+/>
+`;
+
+exports[`<Box /> props box-margin-left 1`] = `
+<div
+  className="ek-box ek-box_margin-left_xxl"
+/>
+`;
+
+exports[`<Box /> props box-margin-lr 1`] = `
+<div
+  className="ek-box ek-box_margin-lr_xxl"
+/>
+`;
+
+exports[`<Box /> props box-margin-right 1`] = `
+<div
+  className="ek-box ek-box_margin-right_xxl"
+/>
+`;
+
+exports[`<Box /> props box-margin-tb 1`] = `
+<div
+  className="ek-box ek-box_margin-tb_xxl"
+/>
+`;
+
+exports[`<Box /> props box-margin-top 1`] = `
+<div
+  className="ek-box ek-box_margin-top_xxl"
+/>
+`;
+
+exports[`<Box /> props box-overflow 1`] = `
+<div
+  className="ek-box ek-box_overflow_hidden"
+/>
+`;
+
+exports[`<Box /> props box-padding 1`] = `
+<div
+  className="ek-box ek-box_padding_xxl"
+/>
+`;
+
+exports[`<Box /> props box-padding-bottom 1`] = `
+<div
+  className="ek-box ek-box_padding-bottom_xxl"
+/>
+`;
+
+exports[`<Box /> props box-padding-left 1`] = `
+<div
+  className="ek-box ek-box_padding-left_xxl"
+/>
+`;
+
+exports[`<Box /> props box-padding-lr 1`] = `
+<div
+  className="ek-box ek-box_padding-lr_xxl"
+/>
+`;
+
+exports[`<Box /> props box-padding-right 1`] = `
+<div
+  className="ek-box ek-box_padding-right_xxl"
+/>
+`;
+
+exports[`<Box /> props box-padding-tb 1`] = `
+<div
+  className="ek-box ek-box_padding-tb_xxl"
+/>
+`;
+
+exports[`<Box /> props box-padding-top 1`] = `
+<div
+  className="ek-box ek-box_padding-top_xxl"
+/>
+`;
+
+exports[`<Box /> props box-place 1`] = `
+<div
+  className="ek-box ek-box_place_center"
+/>
+`;
+
+exports[`<Box /> props box-position 1`] = `
+<div
+  className="ek-box ek-box_position_absolute"
+/>
+`;
+
+exports[`<Box /> props box-round 1`] = `
+<div
+  className="ek-box ek-box_round_full"
+/>
+`;
+
+exports[`<Box /> props box-round-bottom 1`] = `
+<div
+  className="ek-box ek-box_round-bottom_full"
+/>
+`;
+
+exports[`<Box /> props box-round-bottom-left 1`] = `
+<div
+  className="ek-box ek-box_round-bottom-left_full"
+/>
+`;
+
+exports[`<Box /> props box-round-bottom-right 1`] = `
+<div
+  className="ek-box ek-box_round-bottom-right_full"
+/>
+`;
+
+exports[`<Box /> props box-round-left 1`] = `
+<div
+  className="ek-box ek-box_round-left_full"
+/>
+`;
+
+exports[`<Box /> props box-round-right 1`] = `
+<div
+  className="ek-box ek-box_round-right_full"
+/>
+`;
+
+exports[`<Box /> props box-round-top 1`] = `
+<div
+  className="ek-box ek-box_round-top_full"
+/>
+`;
+
+exports[`<Box /> props box-round-top-left 1`] = `
+<div
+  className="ek-box ek-box_round-top-left_full"
+/>
+`;
+
+exports[`<Box /> props box-round-top-right 1`] = `
+<div
+  className="ek-box ek-box_round-top-right_full"
+/>
+`;
+
+exports[`<Box /> props box-tag 1`] = `
+<span
+  className="ek-box"
+/>
+`;
+
+exports[`<Box /> props box-width 1`] = `
+<div
+  className="ek-box ek-box_width_1-7"
+/>
+`;
+
+exports[`<Box /> props className 1`] = `
+<div
+  className="ek-box ololo"
+/>
+`;
+
+exports[`<Box /> render 1`] = `
+<div
+  className="ek-box"
+/>
+`;

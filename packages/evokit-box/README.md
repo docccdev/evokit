@@ -240,6 +240,8 @@ Also have [additioanl props][base_props]
 
 ##### `box-place`
 
+> Use with prop `box-position`
+
 ```jsx
 <Box box-position='absolute' box-place='center'>
     ...
@@ -264,7 +266,11 @@ Also have [additioanl props][base_props]
 
 ##### `box-border`
 
-> Set the border color depending on the [created theme][create_theme], used `border color` value.
+> Set the border color depending on the [created theme][create_theme], used `border` value.
+
+> Has advanced props:
+> - `box-border` - `top`, `right`, `bottom` or `left` for example **`box-border-right`**
+> - `box-border` - `tb` or `lr` for example **`box-border-tb`**
 
 ```jsx
 <Box box-border={THEME_NAME}>
