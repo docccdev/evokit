@@ -27,6 +27,13 @@ describe("import { createBlock } from 'evokit';", () => {
         ).toBeTruthy();
     });
 
+    it('blackhole', () => {
+        const Block = createBlock('div', 'block', ['modName']);
+        expect(
+            shallow(<Block block-blackhole='sucks' block-modName='modValue' />).contains(<div className='ek-block ek-block_blackhole_sucks ek-block_modName_modValue' />)
+        ).toBeTruthy();
+    });
+
     describe("with props", () => {
         const Block = createBlock('div', 'block', ['modName']);
         const BlockItem = createBlock('div', 'block__item', ['elModName']);

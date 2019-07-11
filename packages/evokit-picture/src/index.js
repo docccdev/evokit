@@ -12,6 +12,12 @@ export const Picture = createBlock('picture', 'picture', [
     'round-bottom-left',
     'round-bottom-right',
     'border',
+    'border-top',
+    'border-right',
+    'border-bottom',
+    'border-left',
+    'border-tb',
+    'border-lr',
 ]);
 
 export const PictureItem = createBlock('img', 'picture__item');

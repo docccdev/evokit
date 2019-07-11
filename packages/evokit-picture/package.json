@@ -4,6 +4,7 @@
   "description": "Creates a square with an image",
   "main": "index.js",
   "scripts": {
+    "test": "jest --colors",
     "build": "webpack --colors",
     "watch": "webpack --colors --progress --watch",
     "prepublishOnly": "webpack"
