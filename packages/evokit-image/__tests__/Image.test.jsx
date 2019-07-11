@@ -76,11 +76,123 @@ describe('<Image />', () => {
         expect(wrapper.render().hasClass('ek-image_round_full')).toBeTruthy();
     });
 
+    it('props image-round-top', () => {
+        const wrapper = shallow(<Image image-round-top='full' />);
+        expect(wrapper).toMatchSnapshot();
+
+        expect(wrapper.contains(<img className='ek-image ek-image_round-top_full' />)).toBeTruthy();
+        expect(wrapper.render().hasClass('ek-image ek-image_round-top_full')).toBeTruthy();
+    });
+
+    it('props image-round-right', () => {
+        const wrapper = shallow(<Image image-round-right='full' />);
+        expect(wrapper).toMatchSnapshot();
+
+        expect(wrapper.contains(<img className='ek-image ek-image_round-right_full' />)).toBeTruthy();
+        expect(wrapper.render().hasClass('ek-image ek-image_round-right_full')).toBeTruthy();
+    });
+
+    it('props image-round-bottom', () => {
+        const wrapper = shallow(<Image image-round-bottom='full' />);
+        expect(wrapper).toMatchSnapshot();
+
+        expect(wrapper.contains(<img className='ek-image ek-image_round-bottom_full' />)).toBeTruthy();
+        expect(wrapper.render().hasClass('ek-image ek-image_round-bottom_full')).toBeTruthy();
+    });
+
+    it('props image-round-left', () => {
+        const wrapper = shallow(<Image image-round-left='full' />);
+        expect(wrapper).toMatchSnapshot();
+
+        expect(wrapper.contains(<img className='ek-image ek-image_round-left_full' />)).toBeTruthy();
+        expect(wrapper.render().hasClass('ek-image ek-image_round-left_full')).toBeTruthy();
+    });
+
+    it('props image-round-top-left', () => {
+        const wrapper = shallow(<Image image-round-top-left='full' />);
+        expect(wrapper).toMatchSnapshot();
+
+        expect(wrapper.contains(<img className='ek-image ek-image_round-top-left_full' />)).toBeTruthy();
+        expect(wrapper.render().hasClass('ek-image ek-image_round-top-left_full')).toBeTruthy();
+    });
+
+    it('props image-round-top-right', () => {
+        const wrapper = shallow(<Image image-round-top-right='full' />);
+        expect(wrapper).toMatchSnapshot();
+
+        expect(wrapper.contains(<img className='ek-image ek-image_round-top-right_full' />)).toBeTruthy();
+        expect(wrapper.render().hasClass('ek-image ek-image_round-top-right_full')).toBeTruthy();
+    });
+
+    it('props image-round-bottom-left', () => {
+        const wrapper = shallow(<Image image-round-bottom-left='full' />);
+        expect(wrapper).toMatchSnapshot();
+
+        expect(wrapper.contains(<img className='ek-image ek-image_round-bottom-left_full' />)).toBeTruthy();
+        expect(wrapper.render().hasClass('ek-image ek-image_round-bottom-left_full')).toBeTruthy();
+    });
+
+    it('props image-round-bottom-right', () => {
+        const wrapper = shallow(<Image image-round-bottom-right='full' />);
+        expect(wrapper).toMatchSnapshot();
+
+        expect(wrapper.contains(<img className='ek-image ek-image_round-bottom-right_full' />)).toBeTruthy();
+        expect(wrapper.render().hasClass('ek-image ek-image_round-bottom-right_full')).toBeTruthy();
+    });
+
     it('props image-border', () => {
         const wrapper = shallow(<Image image-border='THEME_NAME' />);
         expect(wrapper).toMatchSnapshot();
 
         expect(wrapper.contains(<img className='ek-image ek-image_border_THEME_NAME' />)).toBeTruthy();
         expect(wrapper.render().hasClass('ek-image_border_THEME_NAME')).toBeTruthy();
+    });
+
+    it('props image-border-top', () => {
+        const wrapper = shallow(<Image image-border-top='THEME_NAME' />);
+        expect(wrapper).toMatchSnapshot();
+
+        expect(wrapper.contains(<img className='ek-image ek-image_border-top_THEME_NAME' />)).toBeTruthy();
+        expect(wrapper.render().hasClass('ek-image ek-image_border-top_THEME_NAME')).toBeTruthy();
+    });
+
+    it('props image-border-right', () => {
+        const wrapper = shallow(<Image image-border-right='THEME_NAME' />);
+        expect(wrapper).toMatchSnapshot();
+
+        expect(wrapper.contains(<img className='ek-image ek-image_border-right_THEME_NAME' />)).toBeTruthy();
+        expect(wrapper.render().hasClass('ek-image ek-image_border-right_THEME_NAME')).toBeTruthy();
+    });
+
+    it('props image-border-bottom', () => {
+        const wrapper = shallow(<Image image-border-bottom='THEME_NAME' />);
+        expect(wrapper).toMatchSnapshot();
+
+        expect(wrapper.contains(<img className='ek-image ek-image_border-bottom_THEME_NAME' />)).toBeTruthy();
+        expect(wrapper.render().hasClass('ek-image ek-image_border-bottom_THEME_NAME')).toBeTruthy();
+    });
+
+    it('props image-border-left', () => {
+        const wrapper = shallow(<Image image-border-left='THEME_NAME' />);
+        expect(wrapper).toMatchSnapshot();
+
+        expect(wrapper.contains(<img className='ek-image ek-image_border-left_THEME_NAME' />)).toBeTruthy();
+        expect(wrapper.render().hasClass('ek-image ek-image_border-left_THEME_NAME')).toBeTruthy();
+    });
+
+    it('props image-border-tb', () => {
+        const wrapper = shallow(<Image image-border-tb='THEME_NAME' />);
+        expect(wrapper).toMatchSnapshot();
+
+        expect(wrapper.contains(<img className='ek-image ek-image_border-tb_THEME_NAME' />)).toBeTruthy();
+        expect(wrapper.render().hasClass('ek-image ek-image_border-tb_THEME_NAME')).toBeTruthy();
+    });
+
+    it('props image-border-lr', () => {
+        const wrapper = shallow(<Image image-border-lr='THEME_NAME' />);
+        expect(wrapper).toMatchSnapshot();
+
+        expect(wrapper.contains(<img className='ek-image ek-image_border-lr_THEME_NAME' />)).toBeTruthy();
+        expect(wrapper.render().hasClass('ek-image ek-image_border-lr_THEME_NAME')).toBeTruthy();
     });
 });

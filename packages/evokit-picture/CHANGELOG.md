@@ -1,3 +1,5 @@
+[create_theme]: docs/base/theme
+
 # EvoKit - Picture
 
 [![](https://img.shields.io/npm/v/evokit-picture.svg)](https://www.npmjs.com/package/evokit-picture)
@@ -15,6 +17,7 @@
     - `picture-border-left`
     - `picture-border-tb`
     - `picture-border-lr`
+- Please [update theme][create_theme]
 
 #### 3.0.1 *(19.06.2019)*
 

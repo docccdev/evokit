@@ -20,6 +20,42 @@ exports[`<Image /> props image-border 1`] = `
 />
 `;
 
+exports[`<Image /> props image-border-bottom 1`] = `
+<img
+  className="ek-image ek-image_border-bottom_THEME_NAME"
+/>
+`;
+
+exports[`<Image /> props image-border-left 1`] = `
+<img
+  className="ek-image ek-image_border-left_THEME_NAME"
+/>
+`;
+
+exports[`<Image /> props image-border-lr 1`] = `
+<img
+  className="ek-image ek-image_border-lr_THEME_NAME"
+/>
+`;
+
+exports[`<Image /> props image-border-right 1`] = `
+<img
+  className="ek-image ek-image_border-right_THEME_NAME"
+/>
+`;
+
+exports[`<Image /> props image-border-tb 1`] = `
+<img
+  className="ek-image ek-image_border-tb_THEME_NAME"
+/>
+`;
+
+exports[`<Image /> props image-border-top 1`] = `
+<img
+  className="ek-image ek-image_border-top_THEME_NAME"
+/>
+`;
+
 exports[`<Image /> props image-fit 1`] = `
 <img
   className="ek-image ek-image_fit_cover"
@@ -35,6 +71,54 @@ exports[`<Image /> props image-mirror 1`] = `
 exports[`<Image /> props image-round 1`] = `
 <img
   className="ek-image ek-image_round_full"
+/>
+`;
+
+exports[`<Image /> props image-round-bottom 1`] = `
+<img
+  className="ek-image ek-image_round-bottom_full"
+/>
+`;
+
+exports[`<Image /> props image-round-bottom-left 1`] = `
+<img
+  className="ek-image ek-image_round-bottom-left_full"
+/>
+`;
+
+exports[`<Image /> props image-round-bottom-right 1`] = `
+<img
+  className="ek-image ek-image_round-bottom-right_full"
+/>
+`;
+
+exports[`<Image /> props image-round-left 1`] = `
+<img
+  className="ek-image ek-image_round-left_full"
+/>
+`;
+
+exports[`<Image /> props image-round-right 1`] = `
+<img
+  className="ek-image ek-image_round-right_full"
+/>
+`;
+
+exports[`<Image /> props image-round-top 1`] = `
+<img
+  className="ek-image ek-image_round-top_full"
+/>
+`;
+
+exports[`<Image /> props image-round-top-left 1`] = `
+<img
+  className="ek-image ek-image_round-top-left_full"
+/>
+`;
+
+exports[`<Image /> props image-round-top-right 1`] = `
+<img
+  className="ek-image ek-image_round-top-right_full"
 />
 `;
 

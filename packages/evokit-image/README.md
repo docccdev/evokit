@@ -181,7 +181,11 @@ Also have [additioanl props][base_props]
 
 ##### `image-border`
 
-> Set the border color depending on the [created theme][create_theme], used `border color` value.
+> Set the border color depending on the [created theme][create_theme], used `border` value.
+
+> Has advanced props:
+> - `image-border` - `top`, `right`, `bottom` or `left` for example **`image-border-right`**
+> - `image-border` - `tb` or `lr` for example **`image-border-tb`**
 
 ```jsx
 <Image image-border={THEME_NAME} src='' alt='' />
