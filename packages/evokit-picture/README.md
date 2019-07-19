@@ -1,17 +1,21 @@
 [evokit]: /packages/evokit/
 [css-variable]: //caniuse.com/#feat=css-variables
 [css-variable-usage]: //w3schools.com/css/css3_variables.asp
-[html-tag-picture]: //www.w3schools.com/tags/tag_picture.asp
-[html-tag-img]: //www.w3schools.com/tags/tag_img.asp
+[html-all-tags]: //www.w3schools.com/tags/default.asp
 [postcss]: //postcss.org
 [postcss-preset-env]: //preset-env.cssdb.org
 
-[base_props]: docs/base/props
 [create_theme]: docs/base/theme
 
+[picture-tag]: #picture-tag
+[picture-item-tag]: #picture-item-tag
 [picture-fit]: #picture-fit
 [picture-round]: #picture-round
 [picture-border]: #picture-border
+
+[base-props]: #base-props
+[main-props]: #main-props
+[color-props]: #color-props
 
 # EvoKit - Picture
 
@@ -33,9 +37,6 @@ npm install evokit-picture --save
 
 > The styles use [css-variable] and will work in all modern browsers. If you need to support more old browsers such as Interner Explorer 11 or lower, use a tool [postcss] with [postcss-preset-env] for transforming css into something most browsers can understand.
 
-- `<Picture>` has a default html tag [picture][html-tag-picture]
-- `<PictureItem>` has a default html tag [img][html-tag-img]
-
 ```jsx
 import { Picture, PictureItem } from 'evokit-picture';
 import 'evokit-picture/style.css';
@@ -48,13 +49,29 @@ import 'evokit-picture/style.css';
 
 #### Props
 
-Also have [additioanl props][base_props]
+> Also supports other valid props of the React Element
 
-| Props | Values | Description |
-|-------|--------|-------------|
-| [picture-fit]    | `none` `fill` `contain` `cover` `scale-down` | Filling the container relative to its height and width |
-| [picture-round]  | `none` `full` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Corner rounding |
-| [picture-border] | `{THEME_NAME}` | Border color - [Create Theme][create_theme] |
+###### [Base][base-props]
+
+| Prop name          | Default value | Possible value             | Description |
+|--------------------|---------------|----------------------------|-------------|
+| [picture-tag]      | `picture`     | [html tags][html-all-tags] | HTML tag    |
+| [picture-item-tag] | `img`         | [html tags][html-all-tags] | HTML tag    |
+
+###### [Main][main-props]
+
+| Prop name       | Default value | Possible value | Description |
+|-----------------|---------------|----------------|-------------|
+| [picture-fit]   | `null`        | `none` `fill` `contain` `cover` `scale-down`    | Filling the container relative to its height and width |
+| [picture-round] | `none`        | `none` `full` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Corner rounding |
+
+###### [Color][color-props]
+
+> Use [theming][create_theme] for creating custom colors.
+
+| Prop name        | Default value  | Possible value | Description  |
+|------------------|----------------|----------------|--------------|
+| [picture-border] | `null`         | `{THEME_NAME}` | Border color |
 
 #### Customize
 
@@ -84,6 +101,31 @@ Also have [additioanl props][base_props]
 [![Edit picture-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/pictureusage-q6brs?fontsize=14 ':include :type=iframe width=100% height=500px')
 
 ---
+
+#### Base props
+
+##### `picture-tag`
+
+- Default value `picture`
+
+```jsx
+<Picture picture-tag='picture'>
+    ...
+</Picture>
+```
+
+##### `picture-item-tag`
+
+- Default value `img`
+
+```jsx
+<Picture>
+    <PictureItem picture-item-tag='img' src='' alt='' />
+</Picture>
+```
+
+
+#### Main props
 
 ##### `picture-fit`
 
@@ -122,9 +164,12 @@ Also have [additioanl props][base_props]
 </Picture>
 ```
 
-##### `picture-border`
 
-> Set the border color depending on the [created theme][create_theme], used `border` value.
+#### Color props
+
+> Set the THEME NAME depending on the [theming][create_theme]
+
+##### `picture-border`
 
 > Has advanced props:
 > - `picture-border` - `top`, `right`, `bottom` or `left` for example **`picture-border-right`**

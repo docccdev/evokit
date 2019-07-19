@@ -1,19 +1,23 @@
 [evokit]: /packages/evokit/
 [css-variable]: //caniuse.com/#feat=css-variables
 [css-variable-usage]: //w3schools.com/css/css3_variables.asp
-[html-tag-a]: //www.w3schools.com/tags/tag_a.asp
+[html-all-tags]: //www.w3schools.com/tags/default.asp
 [postcss]: //postcss.org
 [postcss-preset-env]: //preset-env.cssdb.org
 
-[base_props]: docs/base/props
 [create_theme]: docs/base/theme
 
+[link-tag]: #link-tag
 [link-color]: #link-color
 [link-size]: #link-size
 [link-weight]: #link-weight
 [link-valign]: #link-valign
 [link-style]: #link-style
 [link-lheight]: #link-lheight
+
+[base-props]: #base-props
+[main-props]: #main-props
+[color-props]: #color-props
 
 # EvoKit - Link
 
@@ -35,8 +39,6 @@ npm install evokit-link --save
 
 > The styles use [css-variable] and will work in all modern browsers. If you need to support more old browsers such as Interner Explorer 11 or lower, use a tool [postcss] with [postcss-preset-env] for transforming css into something most browsers can understand.
 
-- `<Link>` has a default html tag [a][html-tag-a]
-
 ```jsx
 import { Link } from 'evokit-link';
 import 'evokit-link/style.css';
@@ -49,16 +51,31 @@ import 'evokit-link/style.css';
 
 #### Props
 
-Also have [additioanl props][base_props]
+> Also supports other valid props of the React Element
 
-| Props | Values | Description |
-|-------|--------|-------------|
-| [link-size]    | `small` `default` `big` `h1` `h2` `h3` `h4` `h5` `h6` | Font size |
-| [link-weight]  | `default` `thin` `light` `medium` `bold` `black` | Font weight |
-| [link-valign]  | `baseline` `bottom` `middle` `sub` `super` `text-bottom` `text-top` `top` | Aligns text vertically |
-| [link-style]   | `dotted` `multi-line` | Decoration styles |
-| [link-lheight] | `default` `medium` `large` | Line spacing |
-| [link-color]   | `{THEME_NAME}` | Text color - [Create Theme][create_theme] |
+###### [Base][base-props]
+
+| Prop name  | Default value | Possible value             | Description |
+|------------|---------------|----------------------------|-------------|
+| [link-tag] | `a`           | [html tags][html-all-tags] | HTML tag    |
+
+###### [Main][main-props]
+
+| Prop name      | Default value | Possible value         | Description |
+|----------------|---------------|------------------------|-------------|
+| [link-size]    | `default`     | `default` `small` `big` `h1` `h2` `h3` `h4` `h5` `h6` | Font size |
+| [link-weight]  | `default`     | `default` `thin` `light` `medium` `bold` `black` | Font weight |
+| [link-valign]  | `null`        | `baseline` `bottom` `middle` `sub` `super` `text-bottom` `text-top` `top` | Aligns text vertically |
+| [link-style]   | `null`        | `dotted` `multi-line` | Decoration styles |
+| [link-lheight] | `default`     | `default` `medium` `large` | Line spacing |
+
+###### [Color][color-props]
+
+> Use [theming][create_theme] for creating custom colors.
+
+| Prop name        | Default value  | Possible value | Description  |
+|------------------|----------------|----------------|--------------|
+| [link-color]     | `null`         |`{THEME_NAME}`  | Text color   |
 
 #### Customize
 
@@ -97,6 +114,21 @@ Also have [additioanl props][base_props]
 
 ---
 
+#### Base props
+
+##### `link-tag`
+
+- Default value `a`
+
+```jsx
+<Link link-tag='a' href='#'>
+    ...
+</Link>
+```
+
+
+#### Main props
+
 ##### `link-size`
 
 - `small` - css variable `--ek-link-size-small`, default value: `11px`
@@ -110,7 +142,7 @@ Also have [additioanl props][base_props]
 - `h6` - css variable `--ek-link-size-h6`, default value: `14px`
 
 ```jsx
-<Link href='#' link-size='h1'>
+<Link link-size='h1' href='#'>
     ...
 </Link>
 ```
@@ -125,7 +157,7 @@ Also have [additioanl props][base_props]
 - `black` - value: `900`
 
 ```jsx
-<Link href='#' link-weight='bold'>
+<Link link-weight='bold' href='#'>
     ...
 </Link>
 ```
@@ -142,7 +174,7 @@ Also have [additioanl props][base_props]
 - `text-bottom` - The bottom border of the element is aligned at the very bottom edge of the current line
 
 ```jsx
-<Link href='#' link-valign='middle'>
+<Link link-valign='middle' href='#'>
     ...
 </Link>
 ```
@@ -153,7 +185,7 @@ Also have [additioanl props][base_props]
 - `multi-line` - for multiline links (fix cursor pointer)
 
 ```jsx
-<Link href='#' link-style='dotted'>
+<Link link-style='dotted' href='#'>
     ...
 </Link>
 ```
@@ -165,17 +197,20 @@ Also have [additioanl props][base_props]
 - `large` - css variable `--ek-link-line-height-large`, default value: `1.5em`
 
 ```jsx
-<Link href='#' link-lheight='medium'>
+<Link link-lheight='medium' href='#'>
     ...
 </Link>
 ```
 
+
+#### Color props
+
+> Set the THEME NAME depending on the [theming][create_theme]
+
 ##### `link-color`
 
-> Set the text color depending on the [created theme][create_theme], used `text color` value.
-
 ```jsx
-<Link href='#' link-color={THEME_NAME}>
+<Link link-color={THEME_NAME} href='#'>
     ...
 </Link>
 ```

@@ -1,12 +1,13 @@
 [evokit]: /packages/evokit/
 [css-variable]: //caniuse.com/#feat=css-variables
 [css-variable-usage]: //w3schools.com/css/css3_variables.asp
-[html-tag-div]: //www.w3schools.com/tags/tag_div.asp
+[html-all-tags]: //www.w3schools.com/tags/default.asp
 [postcss]: //postcss.org
 [postcss-preset-env]: //preset-env.cssdb.org
 
-[base_props]: docs/base/props
 [create_theme]: docs/base/theme
+
+[box-tag]: #box-tag
 
 [box-align]: #box-align
 [box-margin]: #box-margin
@@ -18,8 +19,13 @@
 [box-position]: #box-position
 [box-place]: #box-place
 [box-overflow]: #box-overflow
+
 [box-background]: #box-background
 [box-border]: #box-border
+
+[base-props]: #base-props
+[main-props]: #main-props
+[color-props]: #color-props
 
 # EvoKit - Box
 
@@ -41,8 +47,6 @@ npm install evokit-box --save
 
 > The styles use [css-variable] and will work in all modern browsers. If you need to support more old browsers such as Interner Explorer 11 or lower, use a tool [postcss] with [postcss-preset-env] for transforming css into something most browsers can understand.
 
-- `<Box>` has a default html tag [div][html-tag-div]
-
 ```jsx
 import { Box } from 'evokit-Box';
 import 'evokit-box/style.css';
@@ -54,22 +58,37 @@ import 'evokit-box/style.css';
 
 #### Props
 
-Also have [additioanl props][base_props]
+> Also supports other valid props of the React Element
 
-| Props | Values | Description |
-|-------|--------|-------------|
-| [box-align]      | `none` `left` `center` `right` | Horizontal alignment |
-| [box-margin]     | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` `auto` | Indent around block |
-| [box-padding]    | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Indent around an block content |
-| [box-round]      | `none` `full` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Corner rounding |
-| [box-width]      | `auto` `1-1` `*-2` `*-3` `*-4` `*-5` `*-6` `*-7` `*-8` `*-9` `*-10` | Set the width |
-| [box-height]     | `auto` `1-1` | Set the height |
-| [box-display]    | `none` `inline` `inline-block` `block` | Display type |
-| [box-position]   | `static` `relative` `absolute` `fixed` | Positioning method |
-| [box-place]      | `top` `top-left` `top-right` `center` `center-left` `center-right` `bottom` `bottom-left` `bottom-right` | Position |
-| [box-overflow]   | `auto` `hidden` `scroll` `visible` | Display overflow block content |
-| [box-border]     | `{THEME_NAME}` | Border color - [Create Theme][create_theme] |
-| [box-background] | `{THEME_NAME}` | Background color - [Create Theme][create_theme] |
+###### [Base][base-props]
+
+| Prop name | Default value | Possible value             | Description |
+|-----------|---------------|----------------------------|-------------|
+| [box-tag] | `div`         | [html tags][html-all-tags] | HTML tag    |
+
+###### [Main][main-props]
+
+| Prop name        | Default value | Possible value | Description |
+|------------------|---------------|----------------|-------------|
+| [box-align]      | `none`        | `none` `left` `center` `right` | Horizontal alignment |
+| [box-margin]     | `none`        | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` `auto` | Indent around block |
+| [box-padding]    | `none`        | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Indent around an block content |
+| [box-round]      | `none`        | `none` `full` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Corner rounding |
+| [box-width]      | `auto`        | `auto` `1-1` `*-2` `*-3` `*-4` `*-5` `*-6` `*-7` `*-8` `*-9` `*-10` | Set the width |
+| [box-height]     | `auto`        | `auto` `1-1` | Set the height |
+| [box-display]    | `block`       | `none` `inline` `inline-block` `block` | Display type |
+| [box-position]   | `static`      | `static` `relative` `absolute` `fixed` | Positioning method |
+| [box-place]      | `null`        | `top` `top-left` `top-right` `center` `center-left` `center-right` `bottom` `bottom-left` `bottom-right` | Position place |
+| [box-overflow]   | `scroll`      | `auto` `hidden` `scroll` `visible` | Display overflow block content |
+
+###### [Color][color-props]
+
+> Use [theming][create_theme] for creating custom colors.
+
+| Prop name        | Default value | Possible value | Description       |
+|------------------|---------------|-----------------|------------------|
+| [box-border]     | `null`        | `{THEME_NAME}`  | Border color     |
+| [box-background] | `null`        | `{THEME_NAME}`  | Background color |
 
 #### Customize
 
@@ -107,6 +126,22 @@ Also have [additioanl props][base_props]
 [![Edit box-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/boxusage-3r9iy?fontsize=14 ':include :type=iframe width=100% height=500px')
 
 ---
+
+
+#### Base props
+
+##### `box-tag`
+
+Default value `div`
+
+```jsx
+<Box box-tag='div'>
+    ...
+</Box>
+```
+
+
+#### Main props
 
 ##### `box-align`
 
@@ -264,9 +299,12 @@ Also have [additioanl props][base_props]
 </Box>
 ```
 
-##### `box-border`
 
-> Set the border color depending on the [created theme][create_theme], used `border` value.
+#### Color props
+
+> Set the THEME NAME depending on the [theming][create_theme]
+
+##### `box-border`
 
 > Has advanced props:
 > - `box-border` - `top`, `right`, `bottom` or `left` for example **`box-border-right`**
@@ -279,8 +317,6 @@ Also have [additioanl props][base_props]
 ```
 
 ##### `box-background`
-
-> Set the background color depending on the [created theme][create_theme], used `background color` value.
 
 ```jsx
 <Box box-background={THEME_NAME}>

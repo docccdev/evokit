@@ -391,6 +391,12 @@ body.sticky .sidebar,body.sticky .sidebar-toggle {
 .markdown-section th {
     font-weight: 700;
     background-color: #f8f8f8;
+    white-space: nowrap;
+    text-align: left;
+}
+
+.markdown-section td:first-child {
+    white-space: nowrap;
 }
 
 .markdown-section td,.markdown-section th {

@@ -1,13 +1,13 @@
 [evokit]: /packages/evokit/
 [css-variable]: //caniuse.com/#feat=css-variables
 [css-variable-usage]: //w3schools.com/css/css3_variables.asp
-[html-tag-span]: //www.w3schools.com/tags/tag_span.asp
+[html-all-tags]: //www.w3schools.com/tags/default.asp
 [postcss]: //postcss.org
 [postcss-preset-env]: //preset-env.cssdb.org
 
-[base_props]: docs/base/props
 [create_theme]: docs/base/theme
 
+[text-tag]: #text-tag
 [text-color]: #text-color
 [text-size]: #text-size
 [text-weight]: #text-weight
@@ -17,6 +17,10 @@
 [text-style]: #text-style
 [text-transform]: #text-transform
 [text-lheight]: #text-lheight
+
+[base-props]: #base-props
+[main-props]: #main-props
+[color-props]: #color-props
 
 # EvoKit - Text
 
@@ -38,8 +42,6 @@ npm install evokit-text --save
 
 > The styles use [css-variable] and will work in all modern browsers. If you need to support more old browsers such as Interner Explorer 11 or lower, use a tool [postcss] with [postcss-preset-env] for transforming css into something most browsers can understand.
 
-- `<Text>` has a default html tag [span][html-tag-span]
-
 ```jsx
 import { Text } from 'evokit-text';
 import 'evokit-text/style.css';
@@ -51,19 +53,34 @@ import 'evokit-text/style.css';
 
 #### Props
 
-Also have [additioanl props][base_props]
+> Also supports other valid props of the React Element
 
-| props | Values | Description |
-|-------|--------|-------------|
-| [text-size]      | `small` `default` `big` `h1` `h2` `h3` `h4` `h5` `h6` | Font size |
-| [text-weight]    | `default` `thin` `light` `medium` `bold` `black` | Font weight |
-| [text-align]     | `left` `center` `right` `justify` | Horizontal alignment |
-| [text-valign]    | `baseline` `bottom` `middle` `sub` `super` `text-bottom` `text-top` `top` | Vertical alignment |
-| [text-wrap]      | `nowrap` `break` `ellipsis` `three-line` `two-line` | Transferring and cutting text |
-| [text-style]     | `italic` `strike` `underline` `overline` | Text style |
-| [text-transform] | `none` `capitalize` `lowercase` `uppercase` | Text case conversion |
-| [text-lheight]   | `default` `medium` `large` | Line spacing |
-| [text-color]     | `{THEME_NAME}`  | Text color - [Create Theme][create_theme] |
+###### [Base][base-props]
+
+| Prop name   | Default value | Possible value             | Description |
+|-------------|---------------|----------------------------|-------------|
+| [text-tag]  | `span`        | [html tags][html-all-tags] | HTML tag    |
+
+###### [Main][main-props]
+
+| Prop name        | Default value | Possible value   | Description |
+|------------------|---------------|------------------|-------------|
+| [text-size]      | `default`     | `default` `small` `big` `h1` `h2` `h3` `h4` `h5` `h6` | Font size |
+| [text-weight]    | `default`     | `default` `thin` `light` `medium` `bold` `black` | Font weight |
+| [text-align]     | `left`        | `left` `center` `right` `justify` | Horizontal alignment |
+| [text-valign]    | `null`        | `baseline` `bottom` `middle` `sub` `super` `text-bottom` `text-top` `top` | Vertical alignment |
+| [text-wrap]      | `null`        | `nowrap` `break` `ellipsis` `three-line` `two-line` | Transferring and cutting text |
+| [text-style]     | `null`        | `italic` `strike` `underline` `overline` | Text style |
+| [text-transform] | `none`        | `none` `capitalize` `lowercase` `uppercase` | Text case conversion |
+| [text-lheight]   | `default`     | `default` `medium` `large` | Line spacing |
+
+###### [Color][color-props]
+
+> Use [theming][create_theme] for creating custom colors.
+
+| Prop name        | Default value | Possible value | Description  |
+|------------------|---------------|----------------|--------------|
+| [text-color]     | `null`        | `{THEME_NAME}` | Text color  |
 
 #### Customize
 
@@ -101,6 +118,21 @@ Also have [additioanl props][base_props]
 [![Edit text-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/textusage-wm53d?fontsize=14 ':include :type=iframe width=100% height=500px')
 
 ---
+
+#### Base props
+
+##### `text-tag`
+
+- Default value `span`
+
+```jsx
+<Text text-tag='span'>
+    ...
+</Text>
+```
+
+
+#### Main props
 
 ### `text-size`
 
@@ -215,9 +247,12 @@ Also have [additioanl props][base_props]
 </Text>
 ```
 
-### `text-color`
 
-> Set the text color depending on the [created theme][create_theme], used `text color` value.
+#### Color props
+
+> Set the THEME NAME depending on the [theming][create_theme]
+
+### `text-color`
 
 ```jsx
 <Text text-color={THEME_NAME}>

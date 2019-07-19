@@ -1,18 +1,23 @@
 [evokit]: /packages/evokit/
 [css-variable]: //caniuse.com/#feat=css-variables
 [css-variable-usage]: //w3schools.com/css/css3_variables.asp
-[html-tag-body]: //www.w3schools.com/tags/tag_body.asp
-[html-tag-div]: //www.w3schools.com/tags/tag_div.asp
+[html-all-tags]: //www.w3schools.com/tags/default.asp
 [postcss]: //postcss.org
 [postcss-preset-env]: //preset-env.cssdb.org
 
-[base_props]: docs/base/props
 [create_theme]: docs/base/theme
+
+[body-tag]: #body-tag
+[body-section-tag]: #body-section-tag
 
 [body-size]: #body-size
 [body-indent]: #body-indent
 [body-background]: #body-background
 [body-color]: #body-color
+
+[base-props]: #base-props
+[main-props]: #main-props
+[color-props]: #color-props
 
 # EvoKit - Body
 
@@ -34,9 +39,6 @@ npm install evokit-body --save
 
 > The styles use [css-variable] and will work in all modern browsers. If you need to support more old browsers such as Interner Explorer 11 or lower, use a tool [postcss] with [postcss-preset-env] for transforming css into something most browsers can understand.
 
-- `<Body>` has a default html tag [body][html-tag-body]
-- `<BodySection>` has a default html tag [div][html-tag-div]
-
 ```jsx
 import { Body, BodySection } from 'evokit-body';
 import 'evokit-body/style.css';
@@ -56,14 +58,30 @@ import 'evokit-body/style.css';
 
 #### Props
 
-Also have [additioanl props][base_props]
+> Also supports other valid props of the React Element
 
-| Key | Values | Description |
-|-------|--------|-------------|
-| [body-size]       | `xl` `xxl` `xxxl` | Max width for `<BodySection>` |
-| [body-indent]     | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Padding on the side left and right for `<BodySection>` |
-| [body-background] | `{THEME_NAME}` | Background color - [Create Theme][create_theme] |
-| [body-color]      | `{THEME_NAME}` | Text color - [Create Theme][create_theme] |
+###### [Base][base-props]
+
+| Prop name          | Default value | Possible value             | Description |
+|--------------------|---------------|----------------------------|-------------|
+| [body-tag]         | `body`        | [html tags][html-all-tags] | HTML tag    |
+| [body-section-tag] | `div`         | [html tags][html-all-tags] | HTML tag    |
+
+###### [Main][main-props]
+
+| Prop name     | Default value | Possible value | Description |
+|---------------|---------------|-------------------|-------------|
+| [body-size]   | `null`        | `xl` `xxl` `xxxl` | Max width for `<BodySection>` |
+| [body-indent] | `none`        | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Padding on the side left and right for `<BodySection>` |
+
+###### [Color][color-props]
+
+> Use [theming][create_theme] for creating custom colors.
+
+| Prop name         | Default value | Possible value | Description |
+|-------------------|--------|----------------|--------------------|
+| [body-background] | `null` | `{THEME_NAME}` | Background color   |
+| [body-color]      | `null` | `{THEME_NAME}` | Text color         |
 
 #### Customize
 
@@ -105,6 +123,34 @@ Also have [additioanl props][base_props]
 
 ---
 
+
+#### Base props
+
+##### `body-tag`
+
+Default value `body`
+
+```jsx
+<Body body-tag='body'>
+    ...
+</Body>
+```
+
+##### `body-section-tag`
+
+Default value `div`
+
+```jsx
+<Body>
+    <BodySection body-section-tag='div'>
+        ...
+    </BodySection>
+</Body>
+```
+
+
+#### Main props
+
 ##### `body-size`
 
 - `xl` - css variable `--ek-body-max-width-xl`, default value: `1440px`
@@ -134,9 +180,12 @@ Also have [additioanl props][base_props]
 </Body>
 ```
 
-##### `body-background`
 
-> Set the background color depending on the [created theme][create_theme], used `background color` value.
+#### Color props
+
+> Set the THEME NAME depending on the [theming][create_theme]
+
+##### `body-background`
 
 ```jsx
 <Body body-background={THEME_NAME}>
@@ -145,8 +194,6 @@ Also have [additioanl props][base_props]
 ```
 
 ##### `body-color`
-
-> Set the color depending on the [created theme][create_theme], used `text color` value.
 
 ```jsx
 <Body body-color={THEME_NAME}>

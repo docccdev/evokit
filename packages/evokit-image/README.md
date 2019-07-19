@@ -1,13 +1,13 @@
 [evokit]: /packages/evokit/
 [css-variable]: //caniuse.com/#feat=css-variables
 [css-variable-usage]: //w3schools.com/css/css3_variables.asp
-[html-tag-img]: //www.w3schools.com/tags/tag_img.asp
+[html-all-tags]: //www.w3schools.com/tags/default.asp
 [postcss]: //postcss.org
 [postcss-preset-env]: //preset-env.cssdb.org
 
-[base_props]: docs/base/props
 [create_theme]: docs/base/theme
 
+[image-tag]: #image-tag
 [image-align]: #image-align
 [image-valign]: #image-valign
 [image-mirror]: #image-mirror
@@ -15,6 +15,10 @@
 [image-width]: #image-width
 [image-round]: #image-round
 [image-border]: #image-border
+
+[base-props]: #base-props
+[main-props]: #main-props
+[color-props]: #color-props
 
 # EvoKit - Image
 
@@ -36,8 +40,6 @@ npm install evokit-image --save
 
 > The styles use [css-variable] and will work in all modern browsers. If you need to support more old browsers such as Interner Explorer 11 or lower, use a tool [postcss] with [postcss-preset-env] for transforming css into something most browsers can understand.
 
-- `<Image>` has a default html tag [img][html-tag-img]
-
 ```jsx
 import { Image } from 'evokit-image';
 import 'evokit-image/style.css';
@@ -48,17 +50,32 @@ import 'evokit-image/style.css';
 
 #### Props
 
-Also have [additioanl props][base_props]
+> Also supports other valid props of the React Element
 
-| Props | Values | Description |
-|-------|--------|-------------|
-| [image-align]  | `left` `center` `right` | Horizontal alignment |
-| [image-valign] | `baseline` `bottom` `middle` `sub` `super` `text-bottom` `text-top` `top` | Vertical alignment |
-| [image-mirror] | `x` `y` `xy` | Mirroring |
-| [image-fit]    | `none` `fill` `contain` `cover` `scale-down` | Filling the container relative to its height and width |
-| [image-width]  | `auto` `1-1` `*-2` `*-3` `*-4` `*-5` `*-6` `*-7` `*-8` `*-9` `*-10` | Set the width |
-| [image-round]  | `none` `full` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Corner rounding |
-| [image-border] | `{THEME_NAME}` | Border color - [Create Theme][create_theme] |
+###### [Base][base-props]
+
+| Prop name   | Default value | Possible value             | Description |
+|-------------|---------------|----------------------------|-------------|
+| [image-tag] | `img`         | [html tags][html-all-tags] | HTML tag    |
+
+###### [Main][main-props]
+
+| Prop name      | Default value | Possible value          | Description      |
+|----------------|---------------|-------------------------|------------------|
+| [image-align]  | `null`        | `left` `center` `right` | Horizontal alignment |
+| [image-valign] | `null`        | `baseline` `bottom` `middle` `sub` `super` `text-bottom` `text-top` `top` | Vertical alignment |
+| [image-mirror] | `null`        | `x` `y` `xy` | Mirroring |
+| [image-fit]    | `null`        | `none` `fill` `contain` `cover` `scale-down` | Filling the container relative to its height and width |
+| [image-width]  | `auto`        | `auto` `1-1` `*-2` `*-3` `*-4` `*-5` `*-6` `*-7` `*-8` `*-9` `*-10` | Set the width |
+| [image-round]  | `none`        | `none` `full` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Corner rounding |
+
+###### [Color][color-props]
+
+> Use [theming][create_theme] for creating custom colors.
+
+| Prop name        | Default value | Possible value | Description  |
+|------------------|---------------|----------------|--------------|
+| [image-border]   | `null`        | `{THEME_NAME}` | Border color |
 
 #### Customize
 
@@ -88,6 +105,19 @@ Also have [additioanl props][base_props]
 [![Edit image-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/imageusage-7qyol?fontsize=14 ':include :type=iframe width=100% height=500px')
 
 ---
+
+#### Base props
+
+##### `image-tag`
+
+- Default value `img`
+
+```jsx
+<Image image-tag='img' src='' alt='' />
+```
+
+
+#### Main props
 
 ##### `image-align`
 
@@ -179,9 +209,12 @@ Also have [additioanl props][base_props]
 <Image image-round='full' src='' alt='' />
 ```
 
-##### `image-border`
 
-> Set the border color depending on the [created theme][create_theme], used `border` value.
+#### Color props
+
+> Set the THEME NAME depending on the [theming][create_theme]
+
+##### `image-border`
 
 > Has advanced props:
 > - `image-border` - `top`, `right`, `bottom` or `left` for example **`image-border-right`**

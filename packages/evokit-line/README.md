@@ -1,16 +1,20 @@
 [evokit]: /packages/evokit/
 [css-variable]: //caniuse.com/#feat=css-variables
 [css-variable-usage]: //w3schools.com/css/css3_variables.asp
-[html-tag-hr]: //www.w3schools.com/tags/tag_hr.asp
+[html-all-tags]: //www.w3schools.com/tags/default.asp
 [postcss]: //postcss.org
 [postcss-preset-env]: //preset-env.cssdb.org
 
-[base_props]: docs/base/props
 [create_theme]: docs/base/theme
 
+[line-tag]: #line-tag
 [line-indent]: #line-indent
-[line-color]: #line-color
 [line-style]: #line-style
+[line-color]: #line-color
+
+[base-props]: #base-props
+[main-props]: #main-props
+[color-props]: #color-props
 
 # EvoKit - Line
 
@@ -32,8 +36,6 @@ npm install evokit-line --save
 
 > The styles use [css-variable] and will work in all modern browsers. If you need to support more old browsers such as Interner Explorer 11 or lower, use a tool [postcss] with [postcss-preset-env] for transforming css into something most browsers can understand.
 
-- `<Line>` has a default html tag [hr][html-tag-hr]
-
 ```jsx
 import { Line } from 'evokit-line';
 import 'evokit-line/style.css';
@@ -43,13 +45,28 @@ import 'evokit-line/style.css';
 
 #### Props
 
-Also have [additioanl props][base_props]
+> Also supports other valid props of the React Element
 
-| Props | Values | Description |
-|-------|--------|-------------|
-| [line-indent] | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Indent above and below |
-| [line-style]  | `dotted` `dashed` | Style |
-| [line-color]  | `{THEME_NAME}` | Color - [Create Theme][create_theme] |
+###### [Base][base-props]
+
+| Prop name  | Default value | Possible value             | Description |
+|------------|---------------|----------------------------|-------------|
+| [line-tag] | `hr`          | [html tags][html-all-tags] | HTML tag    |
+
+###### [Main][main-props]
+
+| Prop name     | Default value | Possible value | Description  |
+|---------------|---------------|----------------|--------------|
+| [line-indent] | `none`        | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Indent above and below |
+| [line-style]  | `null`        | `dotted` `dashed` | Border style |
+
+###### [Color][color-props]
+
+> Use [theming][create_theme] for creating custom colors.
+
+| Prop name        | Default value | Possible value | Description  |
+|------------------|---------------|----------------|--------------|
+| [line-color]     | `null`        | `{THEME_NAME}` | Border color |
 
 #### Customize
 
@@ -80,6 +97,19 @@ Also have [additioanl props][base_props]
 
 ---
 
+#### Base props
+
+##### `line-tag`
+
+Default value `hr`
+
+```jsx
+<Line line-tag='hr' />
+```
+
+
+#### Main props
+
 ##### `line-indent`
 
 - `none` - no indent, value: `0px`
@@ -104,9 +134,12 @@ Also have [additioanl props][base_props]
 <Line line-style='...' />
 ```
 
-##### `line-color`
 
-> Set the border color depending on the [created theme][create_theme], used `border color` value.
+#### Color props
+
+> Set the THEME NAME depending on the [theming][create_theme]
+
+##### `line-color`
 
 ```jsx
 <Line line-color={THEME_NAME} />

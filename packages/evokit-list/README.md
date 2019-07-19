@@ -1,18 +1,22 @@
 [evokit]: /packages/evokit/
 [css-variable]: //caniuse.com/#feat=css-variables
 [css-variable-usage]: //w3schools.com/css/css3_variables.asp
-[html-tag-ul]: //www.w3schools.com/tags/tag_ul.asp
-[html-tag-li]: //www.w3schools.com/tags/tag_li.asp
+[html-all-tags]: //www.w3schools.com/tags/default.asp
 [postcss]: //postcss.org
 [postcss-preset-env]: //preset-env.cssdb.org
 
-[base_props]: docs/base/props
 [create_theme]: docs/base/theme
 
+[list-tag]: #list-tag
+[list-item-tag]: #list-item-tag
 [list-indent]: #list-indent
 [list-style]: #list-style
 [list-color]: #list-color
 [list-divider]: #list-divider
+
+[base-props]: #base-props
+[main-props]: #main-props
+[color-props]: #color-props
 
 # EvoKit - List
 
@@ -34,9 +38,6 @@ npm install evokit-list --save
 
 > The styles use [css-variable] and will work in all modern browsers. If you need to support more old browsers such as Interner Explorer 11 or lower, use a tool [postcss] with [postcss-preset-env] for transforming css into something most browsers can understand.
 
-- `<List>` has a default html tag [ul][html-tag-ul]
-- `<ListItem>` has a default html tag [li][html-tag-li]
-
 ```jsx
 import { List, ListItem } from 'evokit-list';
 import 'evokit-list/style.css';
@@ -51,14 +52,30 @@ import 'evokit-list/style.css';
 
 #### Props
 
-Also have [additioanl props][base_props]
+> Also supports other valid props of the React Element
 
-| Props | Values | Description |
-|-------|--------|-------------|
-| [list-indent]  | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Indentation between elements |
-| [list-style]   | `dash` `decimal` `disc` | Marker type |
-| [list-color]   | `{THEME_NAME}` | Marker color - [Create Theme][create_theme] |
-| [list-divider] | `{THEME_NAME}` | Color separator between elements - [Create Theme][create_theme] |
+###### [Base][base-props]
+
+| Prop name       | Default value | Possible value             | Description |
+|-----------------|---------------|----------------------------|-------------|
+| [list-tag]      | `ul`          | [html tags][html-all-tags] | HTML tag    |
+| [list-item-tag] | `li`          | [html tags][html-all-tags] | HTML tag    |
+
+###### [Main][main-props]
+
+| Prop name     | Default value | Possible value | Description |
+|---------------|---------------|----------------|-------------|
+| [list-indent] | `none`        | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Indentation between elements |
+| [list-style]  | `null`        | `dash` `decimal` `disc` | Marker type |
+
+###### [Color][color-props]
+
+> Use [theming][create_theme] for creating custom colors.
+
+| Prop name      | Default value | Possible value | Description  |
+|----------------|---------------|----------------|--------------|
+| [list-color]   | `null`        | `{THEME_NAME}` | Marker color |
+| [list-divider] | `null`        | `{THEME_NAME}` | Color separator between elements |
 
 #### Customize
 
@@ -88,6 +105,33 @@ Also have [additioanl props][base_props]
 [![Edit list-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/listusage-ycfx4?fontsize=14 ':include :type=iframe width=100% height=500px')
 
 ---
+
+#### Base props
+
+##### `list-tag`
+
+- Default value `ul`
+
+```jsx
+<List list-tag='ul'>
+    ...
+</List>
+```
+
+##### `list-item-tag`
+
+- Default value `li`
+
+```jsx
+<List>
+    <ListItem list-item-tag='li'>
+        ...
+    </ListItem>
+</List>
+```
+
+
+#### Main props
 
 ##### `list-indent`
 
@@ -122,9 +166,12 @@ Also have [additioanl props][base_props]
 </List>
 ```
 
-##### `list-color`
 
-> Set the text color depending on the [created theme][create_theme], used `text color` value.
+#### Color props
+
+> Set the THEME NAME depending on the [theming][create_theme]
+
+##### `list-color`
 
 ```jsx
 <List list-color={THEME_NAME}>
@@ -135,8 +182,6 @@ Also have [additioanl props][base_props]
 ```
 
 ##### `list-divider`
-
-> Set the border color depending on the [created theme][create_theme], used `border color` value.
 
 ```jsx
 <List list-divider={THEME_NAME}>
