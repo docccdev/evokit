@@ -1,6 +1,6 @@
 [evokit-box]: /packages/evokit-box/
 
-# Base props
+# Props
 
 All blocks have base props, such as `tag`, `ref`, `preset`. Also supports other valid props of the React Element
 
@@ -65,6 +65,38 @@ import boxCss from 'evokit-box/style.css'; // return for example {'ek-box': 'ek-
 // output:
 <div class='ek-box-hF7j' />
 
+```
+
+#### Use cases
+
+#### Single value
+
+```jsx
+// input:
+<Box box-padding='xl' />
+
+// output:
+<div class='ek-box ek-box_padding_xl' />
+```
+
+#### Multi values
+
+```jsx
+// input:
+<Box box-padding={['s', 'xl']} />
+
+// output:
+<div class='ek-box ek-box_padding_s ek-box_padding_xl' />
+```
+
+#### Optional values
+
+```jsx
+// input:
+<Box box-padding={{ s: true, xl: false }} />
+
+// output:
+<div class='ek-box ek-box_padding_s' />
 ```
 
 #### Live demo

@@ -4,7 +4,7 @@
 [mixes]: docs/deprecated/removed_mixes.md
 [sizes]: docs/deprecated/removed_sizes.md
 
-[media]: docs/base/media.md
+[media]: docs/getting-started/media.md
 [text]: docs/base/text.md
 [colors]: docs/base/colors.md
 [create_theme]: docs/base/theme

@@ -1,14 +1,16 @@
-* BASE
+* GETTING STARTED
 
-  * [About](/docs/base/about.md)
-  * [EvoKit](packages/evokit/)
+  * [Introduction](/docs/getting-started/introduction.md)
+  * [Installation](/docs/getting-started/installation.md)
+  * [Quick start](/docs/getting-started/quick-start.md)
+  * [Webpack](/docs/getting-started/webpack.md)
+  * [Props](/docs/getting-started/props.md)
+  * [Media](/docs/getting-started/media.md)
 
-* GUIDE
-  * [Create block](/docs/base/create-block.md)
-  * [With props](/docs/base/with-props.md)
-  * [Base props](/docs/base/props.md)
-  * [Block props](/docs/base/block-props.md)
-  * [Media props](/docs/base/media.md)
+* EVOKIT
+  * [Core](packages/evokit/)
+  * [createBlock()](/docs/base/create-block.md)
+  * [widthProps()](/docs/base/with-props.md)
 
 * BLOCKS
   * [Body](packages/evokit-body/)

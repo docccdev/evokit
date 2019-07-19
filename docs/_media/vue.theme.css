@@ -452,6 +452,15 @@ body.sticky .sidebar,body.sticky .sidebar-toggle {
     padding: 1rem
 }
 
+.markdown-section details + details {
+    margin-top: 10px;
+}
+
+.markdown-section summary {
+    cursor: pointer;
+    outline: none;
+}
+
 body.close .sidebar {
     transform: translateX(-300px)
 }

@@ -8,13 +8,17 @@ To create a new block, use the function `createBlock` from the npm package [evok
 
 #### Structure
 
-- `MyBlock/`
-    - `index.js`
-    - `style.css`
+```
+├── MyBlock
+│   └── index.js
+│   └── style.css
+└── App.jsx
+```
 
-##### index.js
+<details>
+<summary>MyBlock/index.js</summary>
 
-``` jsx
+```jsx
 // simple
 import { createBlock } from 'evokit';
 export const MyBlock = createBlock('div', 'myblock');
@@ -33,9 +37,12 @@ import styles from 'style.css';
 export const MyBlock = createBlock('div', 'myblock', ['color', 'size'], { b: 'prefix-', css: styles });
 ```
 
-##### style.css
+</details>
 
-``` css
+<details>
+<summary>MyBlock/style.css</summary>
+
+```css
 .ek-myblock {
     display: block;
     width: 50px;
@@ -52,20 +59,28 @@ export const MyBlock = createBlock('div', 'myblock', ['color', 'size'], { b: 'pr
 }
 ```
 
-#### Usage
+</details>
 
-``` jsx
-import { MyBlock } from "MyBlock";
-import "MyBlock/style.css";
+<details open>
+<summary>App.jsx</summary>
 
-<MyBlock
-    myblock-color='red'
-    myblock-size='big'
-    onClick={() => alert('awesome')}
->
-    content
-</MyBlock>
+```jsx
+import React from "react";
+import { MyBlock } from "./MyBlock";
+import "./MyBlock/style.css";
+
+const App = () => (
+    <MyBlock
+        myblock-color="red"
+        myblock-size="big"
+        onClick={() => alert("awesome")}
+    >
+        content
+    </MyBlock>
+);
 ```
+
+</details>
 
 #### Live demo
 

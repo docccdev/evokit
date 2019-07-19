@@ -5,7 +5,6 @@
 [postcss]: //postcss.org
 [postcss-preset-env]: //preset-env.cssdb.org
 
-[base_props]: docs/base/props
 [create_theme]: docs/base/theme
 
 [grid-tag]: #grid-tag

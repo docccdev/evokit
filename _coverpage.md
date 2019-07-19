@@ -11,4 +11,4 @@
 * 9 core UI blocks to serve as the basis for design systems
 
 [GITHUB](https://github.com/docccdev/evokit)
-[README](docs/base/about.md)
+[README](docs/getting-started/introduction.md)

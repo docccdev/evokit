@@ -1,8 +1,8 @@
 [evokit-grid]: /packages/evokit-grid/
 
-# About
+# Introduction
 
-Divide the user interface into independent blocks and think about them separately.
+Divide the user interface into independent blocks.
 
 ---
 
