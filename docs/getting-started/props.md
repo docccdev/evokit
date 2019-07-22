@@ -1,6 +1,6 @@
 [evokit-box]: /packages/evokit-box/
 
-# Props
+# Use props
 
 All blocks have base props, such as `tag`, `ref`, `preset`. Also supports other valid props of the React Element
 

@@ -1,5 +1,5 @@
 [evokit-text]: packages/evokit-text/
-[advanced-usage]: #_2-advanced-usage
+[advanced-mode]: #_2-advanced
 
 # Quick start
 
@@ -19,9 +19,9 @@ const App = () => (
 );
 ```
 
-#### 2. Advanced usage
+#### 2. Advanced
 
-> Recommend using advanced usage. To do this, you will need to create a UI folder in the project where the configured blocks.
+> Recommend using advanced mode. To do this, you will need to create a UI folder in the project where the configured blocks.
 
 ```
 ├── UI/
@@ -94,9 +94,9 @@ const App = () => (
 </details>
 
 
-#### 3. CSS Modules usage
+#### 3. CSS Modules
 
-> Consider the same files structure as [Advanced usage][advanced-usage].
+> Consider the same files structure as [Advanced mode][advanced-mode].
 
 <details open>
 <summary>UI/Text/index.js</summary>
