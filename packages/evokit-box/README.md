@@ -48,7 +48,7 @@ npm install evokit-box --save
 > The styles use [css-variable] and will work in all modern browsers. If you need to support more old browsers such as Interner Explorer 11 or lower, use a tool [postcss] with [postcss-preset-env] for transforming css into something most browsers can understand.
 
 ```jsx
-import { Box } from 'evokit-Box';
+import { Box } from 'evokit-box';
 import 'evokit-box/style.css';
 
 <Box>
