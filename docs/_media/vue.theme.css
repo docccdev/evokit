@@ -946,3 +946,8 @@ pre:after {
 img[data-origin] {
     vertical-align: text-bottom;
 }
+
+/*need for copy to clipboard button*/
+.docsify-copy-code-button {
+    font-size: 13px !important;
+}
