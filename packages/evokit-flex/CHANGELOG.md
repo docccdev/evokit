@@ -6,6 +6,6 @@
 
 ### CHANGELOG
 
-#### 3.0.0 aplha 0
+#### 3.0.0-alpha.0
 
 - Initial version.
