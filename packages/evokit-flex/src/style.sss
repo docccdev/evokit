@@ -1,0 +1,124 @@
+@import './mixins.sss'
+
+@custom-media --ek-flex-media-small only screen and (min-width: 480px)
+@custom-media --ek-flex-media-medium only screen and (min-width: 768px)
+@custom-media --ek-flex-media-large only screen and (min-width: 960px)
+@custom-media --ek-flex-media-wide only screen and (min-width: 1200px)
+@custom-media --ek-flex-media-huge only screen and (min-width: 1400px)
+
+.flex
+    display: flex
+
+/**
+ * Display:
+ *
+ *  - flex_display_flex
+ *  - flex_display_inline-flex
+ *  - flex_display_block
+ *  - flex_display_none
+ *
+ **/
+
+@each $value in (flex, inline-flex, block, none)
+    @mixin media .flex_display_$(value)
+        display: $value
+
+/**
+ * Align items:
+ *
+ *  - flex_align-items_stretch
+ *  - flex_align-items_top
+ *  - flex_align-items_middle
+ *  - flex_align-items_bottom
+ *
+ **/
+
+@each $value in (stretch, top, middle, bottom)
+    @mixin media .flex_align-items_$(value)
+        @if $value == top
+            align-items: flex-start
+        @else if $value == middle
+            align-items: center
+        @else if $value == bottom
+            align-items: flex-end
+        @else
+            align-items: $value
+
+/**
+ * Align content:
+ *
+ *  - flex_align-content_stretch
+ *  - flex_align-content_top
+ *  - flex_align-content_middle
+ *  - flex_align-content_bottom
+ *  - flex_align-content_between
+ *  - flex_align-content_around
+ *
+ **/
+
+@each $value in (stretch, top, middle, bottom, between, around)
+    @mixin media .flex_align-content_$(value)
+        @if $value == top
+            align-content: flex-start
+        @else if $value == middle
+            align-content: center
+        @else if $value == bottom
+            align-content: flex-end
+        @else if $value == between
+            align-content: space-between
+        @else if $value == around
+            align-content: space-around
+        @else
+            align-content: $value
+
+/**
+ * Justify content:
+ *
+ *  - flex_justify-content_left
+ *  - flex_justify-content_center
+ *  - flex_justify-content_right
+ *  - flex_justify-content_between
+ *  - flex_justify-content_around
+ *
+ **/
+
+@each $value in (left, center, right, between, around)
+    @mixin media .flex_justify-content_$(value)
+        @if $value == left
+            justify-content: flex-start
+        @else if $value == right
+            justify-content: flex-end
+        @else if $value == between
+            justify-content: space-between
+        @else if $value == around
+            justify-content: space-around
+        @else
+            justify-content: $value
+
+/**
+ * Direction:
+ *
+ *  - flex_direction_row
+ *  - flex_direction_row-reverse
+ *  - flex_direction_column
+ *  - flex_direction_column-reverse
+ *
+ **/
+
+@each $value in (row, row-reverse, column, column-reverse)
+    @mixin media .flex_direction_$(value)
+        flex-direction: $value
+
+
+/**
+ * Wrap:
+ *
+ *  - flex_wrap_nowrap
+ *  - flex_wrap_wrap
+ *  - flex_wrap_wrap-reverse
+ *
+ **/
+
+@each $value in (nowrap, wrap, wrap-reverse)
+    @mixin media .flex_wrap_$(value)
+        flex-wrap: $value

@@ -15,6 +15,7 @@
 * BLOCKS
   * [Body](packages/evokit-body/)
   * [Box](packages/evokit-box/)
+  * [Flex](packages/evokit-flex/)
   * [Grid](packages/evokit-grid/)
   * [Image](packages/evokit-image/)
   * [Line](packages/evokit-line/)

@@ -8,7 +8,7 @@
 
 > React primitive UI blocks
 
-* 9 core UI blocks to serve as the basis for design systems
+* Basis for creating an interface
 
 [GITHUB](https://github.com/docccdev/evokit)
 [README](docs/getting-started/introduction.md)

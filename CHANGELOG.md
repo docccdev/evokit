@@ -1,6 +1,7 @@
 [evokit]: packages/evokit/CHANGELOG.md
 [evokit-body]: packages/evokit-body/CHANGELOG.md
 [evokit-box]: packages/evokit-box/CHANGELOG.md
+[evokit-flex]: packages/evokit-flex/CHANGELOG.md
 [evokit-grid]: packages/evokit-grid/CHANGELOG.md
 [evokit-image]: packages/evokit-image/CHANGELOG.md
 [evokit-line]: packages/evokit-line/CHANGELOG.md
@@ -14,6 +15,10 @@
 [evokit] • [evokit-body] • [evokit-box] • [evokit-grid] • [evokit-image] • [evokit-line] • [evokit-link] • [evokit-list] • [evokit-picture] • [evokit-text]
 
 ---
+
+*(25.07.2019)*
+
+- [evokit-flex]: **3.0.0 aplha 0**
 
 *(11.07.2019)*
 
