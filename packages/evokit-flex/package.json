@@ -1,6 +1,6 @@
 {
   "name": "evokit-flex",
-  "version": "3.0.0-alpha.0",
+  "version": "3.0.0-alpha.1",
   "description": "The Flex block has an essential role in building layouts",
   "main": "index.js",
   "scripts": {
