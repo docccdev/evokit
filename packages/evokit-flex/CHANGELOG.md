@@ -6,6 +6,11 @@
 
 ### CHANGELOG
 
+#### 3.0.0-alpha.1
+
+- Improvement props
+- Update docs
+
 #### 3.0.0-alpha.0
 
 - Initial version.

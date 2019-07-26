@@ -12,9 +12,13 @@
 
 # CHANGELOG
 
-[evokit] • [evokit-body] • [evokit-box] • [evokit-grid] • [evokit-image] • [evokit-line] • [evokit-link] • [evokit-list] • [evokit-picture] • [evokit-text]
+[evokit] • [evokit-body] • [evokit-box] • [evokit-flex] • [evokit-grid] • [evokit-image] • [evokit-line] • [evokit-link] • [evokit-list] • [evokit-picture] • [evokit-text]
 
 ---
+
+*(26.07.2019)*
+
+- [evokit-flex]: **3.0.0-alpha.1**
 
 *(25.07.2019)*
 
