@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width='484' height='262' viewBox="0 0 484 262">
+    <defs>
+        <pattern id='checker' width='20' height='20' patternUnits='userSpaceOnUse'>
+            <rect x='0' y='0' width='10' height='10' fill='#eee' />
+            <rect x='10' y='10' width='10' height='10' fill='#eee' />
+            <rect x='0' y='10' width='10' height='10' fill='#ccc' />
+            <rect x='10' y='0' width='10' height='10' fill='#ccc' />
+        </pattern>
+    </defs>
+    <style>
+        text { font-family: sans-serif; font-weight: bold; font-size: 30px; text-anchor: middle; }
+        rect { stroke-width: 2px; stroke: #888; }
+        g > rect:nth-child(1) { fill: #888 }
+        g > rect:nth-child(2) { fill: #fcc; }
+        g > rect:nth-child(3) { fill: #cfc; }
+        g > rect:nth-child(4) { fill: #ccf; }
+        g > rect:nth-child(5) { fill: transparent; }
+    </style>
+    <g transform="translate(2,2)">
+        <rect x='0' y='0' width='480' height='50' />
+        <rect x='0' y='0' width='160' height='50' />
+        <rect x='160' y='0' width='160' height='50' />
+        <rect x='320' y='0' width='160' height='50' />
+        <text x='240' y='35'>nowrap</text>
+    </g>
+    <g transform="translate(2,56)">
+        <rect x='0' y='0' width='480' height='100' />
+        <rect x='0' y='0' width='240' height='50' />
+        <rect x='240' y='0' width='240' height='50' />
+        <rect x='0' y='50' width='160' height='50' />
+        <rect x='0' y='0' width='480' height='50' />
+        <text x='240' y='58'>wrap</text>
+    </g>
+    <g transform="translate(2,160)">
+        <rect x='0' y='0' width='480' height='100' />
+        <rect x='0' y='50' width='240' height='50' />
+        <rect x='240' y='50' width='240' height='50' />
+        <rect x='0' y='0' width='160' height='50' />
+        <rect x='0' y='0' width='480' height='50' />
+        <text x='240' y='58'>wrap-reverse</text>
+    </g>
+</svg>

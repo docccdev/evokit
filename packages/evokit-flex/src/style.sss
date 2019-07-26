@@ -8,6 +8,7 @@
 
 .flex
     display: flex
+    min-width: 0
 
 /**
  * Display:
@@ -26,20 +27,19 @@
 /**
  * Align items:
  *
+ *  - flex_align-items_start
+ *  - flex_align-items_end
+ *  - flex_align-items_center
+ *  - flex_align-items_baseline
  *  - flex_align-items_stretch
- *  - flex_align-items_top
- *  - flex_align-items_middle
- *  - flex_align-items_bottom
  *
  **/
 
-@each $value in (stretch, top, middle, bottom)
+@each $value in (start, end, center, baseline, stretch)
     @mixin media .flex_align-items_$(value)
-        @if $value == top
+        @if $value == start
             align-items: flex-start
-        @else if $value == middle
-            align-items: center
-        @else if $value == bottom
+        @else if $value == end
             align-items: flex-end
         @else
             align-items: $value
@@ -47,22 +47,20 @@
 /**
  * Align content:
  *
- *  - flex_align-content_stretch
- *  - flex_align-content_top
- *  - flex_align-content_middle
- *  - flex_align-content_bottom
+ *  - flex_align-content_start
+ *  - flex_align-content_end
+ *  - flex_align-content_center
  *  - flex_align-content_between
  *  - flex_align-content_around
+ *  - flex_align-content_stretch
  *
  **/
 
-@each $value in (stretch, top, middle, bottom, between, around)
+@each $value in (start, end, center, between, around, stretch)
     @mixin media .flex_align-content_$(value)
-        @if $value == top
+        @if $value == start
             align-content: flex-start
-        @else if $value == middle
-            align-content: center
-        @else if $value == bottom
+        @else if $value == end
             align-content: flex-end
         @else if $value == between
             align-content: space-between
@@ -74,19 +72,19 @@
 /**
  * Justify content:
  *
- *  - flex_justify-content_left
+ *  - flex_justify-content_start
+ *  - flex_justify-content_end
  *  - flex_justify-content_center
- *  - flex_justify-content_right
  *  - flex_justify-content_between
  *  - flex_justify-content_around
  *
  **/
 
-@each $value in (left, center, right, between, around)
+@each $value in (start, end, center, between, around)
     @mixin media .flex_justify-content_$(value)
-        @if $value == left
+        @if $value == start
             justify-content: flex-start
-        @else if $value == right
+        @else if $value == end
             justify-content: flex-end
         @else if $value == between
             justify-content: space-between

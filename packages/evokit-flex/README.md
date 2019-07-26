@@ -68,12 +68,23 @@ import 'evokit-flex/style.css';
 | Prop name        | Default value    | Possible value | Description |
 |------------------|------------------|----------------|-------------|
 | [flex-display]         | `flex`     | `flex`, `flex-inline`, `block`, `none` | Display type |
-| [flex-align-items]     | `initial`  | `stretch`, `top`, `middle`, `bottom` | Alignment of all items on the cross axis |
-| [flex-align-content]   | `initial`  | `stretch`, `top`, `middle`, `bottom`, `between`, `around` | Space between flex lines on the cross axis |
-| [flex-justify-content] | `initial`  | `left`, `center`, `right`, `between`, `around` | Alignment of all items on the main axis |
-| [flex-direction]       | `initial`  | `row`, `row-reverse`, `column`, `column-reverse` | Direction of all items |
-| [flex-wrap]            | `initial`  | `nowrap`, `wrap`, `wrap-reverse` | Wrap rules |
+| [flex-align-items]     | `stretch`  | `start`, `end`, `center`, `baseline`, `stretch` | Alignment of all items on the cross axis |
+| [flex-align-content]   | `stretch`  | `start`, `end`, `center`, `between`, `around`, `stretch` | Space between flex lines on the cross axis |
+| [flex-justify-content] | `start`    | `start`, `end`, `center`, `between`, `around` | Alignment of all items on the main axis |
+| [flex-direction]       | `row`      | `row`, `row-reverse`, `column`, `column-reverse` | Direction of all items |
+| [flex-wrap]            | `nowrap`   | `nowrap`, `wrap`, `wrap-reverse` | Wrap rules |
 
+#### Customize
+
+> This set of css variables is default, if you want to override one or more value, please use the rules [css-variable-usage], define them below the css import.
+
+```css
+@custom-media --ek-flex-media-small only screen and (min-width: 480px);
+@custom-media --ek-flex-media-medium only screen and (min-width: 768px);
+@custom-media --ek-flex-media-large only screen and (min-width: 960px);
+@custom-media --ek-flex-media-wide only screen and (min-width: 1200px);
+@custom-media --ek-flex-media-huge only screen and (min-width: 1400px);
+```
 
 #### Live demo
 
@@ -101,6 +112,84 @@ Default value `div`
 
 ```jsx
 <Flex flex-display='flex-inline'>
+    ...
+</Flex>
+```
+
+##### `flex-align-items`
+
+- `start` - The cross-start margin edges of the flex items are flushed with the cross-start edge of the line
+- `end` - The cross-end margin edges of the flex items are flushed with the cross-end edge of the line
+- `center` - The flex items' margin boxes are centered within the line on the cross-axis
+- `baseline` - All flex items are aligned such that their flex container baselines align
+- `stretch` - Flex items are stretched such that the cross-size of the item's margin box is the same as the line while respecting width and height constraints
+
+![align-items](_media/align-items.svg)
+
+```jsx
+<Flex flex-align-items='center'>
+    ...
+</Flex>
+```
+
+##### `flex-align-content`
+
+- `start` - Lines are packed toward the start of the flex container
+- `end` - Lines are packed toward the end of the flex container
+- `center` - Lines are packed toward the center of the flex container
+- `between` - Lines are evenly distributed in the flex container. If the leftover free-space is negative or there is only a single flex line in the flex container, this value is identical to flex-start
+- `around` - Lines are evenly distributed in the flex container, with half-size spaces on either end
+- `stretch` - Lines stretch to take up the remaining space
+
+![align-content](_media/align-content.svg)
+
+```jsx
+<Flex flex-align-content='center'>
+    ...
+</Flex>
+```
+
+##### `flex-justify-content`
+
+- `start` - Flex items are packed toward the start of the line
+- `end` - Flex items are packed toward the end of the line
+- `center` - Flex items are packed toward the center of the line
+- `between` - Flex items are evenly distributed in the line
+- `around` - Flex items are evenly distributed in the line, with half-size spaces on either end
+
+![justify-content](_media/justify-content.svg)
+
+```jsx
+<Flex flex-justify-content='center'>
+    ...
+</Flex>
+```
+
+##### `flex-direction`
+
+- `row` - The flex container’s main axis has the same orientation as the inline axis of the current writing mode
+- `row-reverse` - Same as row, except the main-start and main-end directions are swapped
+- `column` - The flex container’s main axis has the same orientation as the block axis of the current writing mode
+- `column-reverse` - Same as column, except the main-start and main-end directions are swapped
+
+![direction](_media/direction.svg)
+
+```jsx
+<Flex flex-direction='column'>
+    ...
+</Flex>
+```
+
+##### `flex-wrap`
+
+- `nowrap` - The flex container is single-line
+- `wrap` - The flex container is multi-line
+- `wrap-reverse` - Same as wrap, except the directions are swapped
+
+![wrap](_media/wrap.svg)
+
+```jsx
+<Flex flex-wrap='wrap'>
     ...
 </Flex>
 ```

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width='504' height='312' viewBox="0 0 504 312">
+    <defs>
+        <pattern id='checker' width='20' height='20' patternUnits='userSpaceOnUse'>
+            <rect x='0' y='0' width='10' height='10' fill='#eee' />
+            <rect x='10' y='10' width='10' height='10' fill='#eee' />
+            <rect x='0' y='10' width='10' height='10' fill='#ccc' />
+            <rect x='10' y='0' width='10' height='10' fill='#ccc' />
+        </pattern>
+    </defs>
+    <style>
+        text { font-family: sans-serif; font-weight: bold; font-size: 30px; text-anchor: middle; }
+        rect { stroke-width: 2px; stroke: #888; }
+        g > rect:nth-child(1) { fill: #888 }
+        g > rect:nth-child(2) { fill: #fcc; }
+        g > rect:nth-child(3) { fill: #cfc; }
+        g > rect:nth-child(4) { fill: #ccf; }
+        g > rect:nth-child(5) { fill: transparent; }
+        g.reverse > rect:nth-child(4) { fill: #fcc; }
+        g.reverse > rect:nth-child(3) { fill: #cfc; }
+        g.reverse > rect:nth-child(2) { fill: #ccf; }
+    </style>
+    <g transform="translate(2,2)">
+        <rect x='0' y='0' width='500' height='50' />
+        <rect x='0' y='0' width='100' height='50' />
+        <rect x='100' y='0' width='80' height='50' />
+        <rect x='180' y='0' width='200' height='50' />
+        <rect x='0' y='0' width='500' height='50' />
+        <text x='250' y='35'>row</text>
+    </g>
+    <g transform="translate(2,56)" class='reverse'>
+        <rect x='0' y='0' width='500' height='50' />
+        <rect x='120' y='0' width='200' height='50' />
+        <rect x='320' y='0' width='80' height='50' />
+        <rect x='400' y='0' width='100' height='50' />
+        <rect x='0' y='0' width='500' height='50' />
+        <text x='250' y='35'>row-rewerse</text>
+    </g>
+    <g transform="translate(2,110)">
+        <rect x='0' y='0' width='248' height='200' />
+        <rect x='0' y='0' width='248' height='50' />
+        <rect x='0' y='50' width='248' height='50' />
+        <rect x='0' y='100' width='248' height='50' />
+        <rect x='0' y='0' width='248' height='200' />
+        <text x='125' y='108'>column</text>
+    </g>
+    <g transform="translate(254,110)" class='reverse'>
+        <rect x='0' y='0' width='248' height='200' />
+        <rect x='0' y='50' width='248' height='50' />
+        <rect x='0' y='100' width='248' height='50' />
+        <rect x='0' y='150' width='248' height='50' />
+        <rect x='0' y='0' width='248' height='200' />
+        <text x='125' y='108'>column-reverse</text>
+    </g>
+</svg>
