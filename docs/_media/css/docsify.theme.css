@@ -1,4 +1,8 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto+Mono|Source+Sans+Pro:300,400,600");
+
+:root {
+    --theme-color: #42b983;
+}
+
 body {
     -webkit-font-smoothing: antialiased;
     -webkit-overflow-scrolling: touch;
@@ -44,6 +48,11 @@ div#app:empty:before {
     z-index: 5
 }
 
+.search  {
+    width: 300px;
+    box-sizing: border-box;
+}
+
 .search .search-keyword,.search a:hover {
     color: var(--theme-color,#42b983)
 }
@@ -58,14 +67,15 @@ body,html {
 }
 
 body {
+    text-size-adjust: 100%;
     -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
+    -webkit-font-smoothing: subpixel-antialiased;
     color: #34495e;
-    font-family: Source Sans Pro,Helvetica Neue,Arial,sans-serif;
-    font-size: 15px;
+    font-family: -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+    font-size: 14px;
     letter-spacing: 0;
     margin: 0;
-    overflow-x: hidden
+    overflow-x: hidden;
 }
 
 img {
@@ -233,9 +243,14 @@ main.hidden {
     text-decoration: underline
 }
 
+body[data-page="README.md"] .app-nav {
+    display: none;
+}
+
 .sidebar {
     border-right: 1px solid rgba(0,0,0,.07);
     overflow-y: auto;
+    overflow-x: hidden;
     padding: 40px 0 0;
     position: absolute;
     top: 0;
@@ -247,6 +262,7 @@ main.hidden {
 }
 
 .sidebar>h1 {
+    display: none;
     margin: 0 auto 1rem;
     font-size: 1.5rem;
     font-weight: 300;
@@ -273,22 +289,33 @@ main.hidden {
 }
 
 .sidebar ul {
-    margin: 0 0 0 15px;
+    margin: 0;
     padding: 0
 }
 
-.sidebar li>p {
-    font-weight: 700;
-    margin: 0
+.sidebar li > p {
+    font-weight: 400;
+    margin: 10px 0 0;
+    padding-left: 20px;
+    color: rgba(0,0,0,0.45);
 }
 
-.sidebar ul,.sidebar ul li {
+.sidebar li li > p {
+    padding-left: 40px;
+}
+
+.sidebar li li li > p {
+    padding-left: 60px;
+}
+
+.sidebar ul,
+.sidebar ul li {
     list-style: none
 }
 
 .sidebar ul li a {
     border-bottom: none;
-    display: block
+    display: block;
 }
 
 .sidebar ul li ul {
@@ -296,6 +323,10 @@ main.hidden {
 }
 
 .sidebar::-webkit-scrollbar {
+    width: 0
+}
+
+.sidebar:hover::-webkit-scrollbar {
     width: 4px
 }
 
@@ -355,8 +386,9 @@ body.sticky .sidebar,body.sticky .sidebar-toggle {
 
 .markdown-section {
     margin: 0 auto;
-    max-width: 1200px;
-    padding: 30px 30px 40px;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 30px 6% 6%;
     position: relative
 }
 
@@ -395,21 +427,33 @@ body.sticky .sidebar,body.sticky .sidebar-toggle {
     text-align: left;
 }
 
+.markdown-section th[align="center"] {
+    text-align: center;
+}
+
 .markdown-section td:first-child {
     white-space: nowrap;
 }
 
 .markdown-section td,.markdown-section th {
     border: 1px solid #ddd;
-    padding: 8px 12px
+    padding: 12px 23px;
 }
 
 .markdown-section tr {
     border-top: 1px solid #ccc
 }
 
-.markdown-section p.tip,.markdown-section tr:hover {
+.markdown-section tr:hover {
     background-color: rgba(0,0,0, .01);
+}
+
+.markdown-section p.tip {
+    background-color: #fef0f0;
+}
+
+.markdown-section p.tip a {
+    color: #f66
 }
 
 .markdown-section p.tip {
@@ -417,8 +461,8 @@ body.sticky .sidebar,body.sticky .sidebar-toggle {
     border-left: 4px solid #f66;
     border-top-right-radius: 2px;
     margin: 2em 0;
-    padding: 12px 24px 12px 30px;
-    position: relative
+    padding: 12px 24px 12px 20px;
+    position: relative;
 }
 
 .markdown-section p.tip:before {
@@ -449,7 +493,7 @@ body.sticky .sidebar,body.sticky .sidebar-toggle {
 .markdown-section p.warn {
     background: rgba(66,185,131,.1);
     border-radius: 2px;
-    padding: 1rem
+    padding: 12px 18px;
 }
 
 .markdown-section details + details {
@@ -480,8 +524,28 @@ body.close .content {
 }
 
 @media screen and (max-width: 768px) {
+    .markdown-section table {
+        display: block;
+        overflow: auto;
+    }
+
+    .markdown-section {
+        padding: 45px 20px 20px;
+    }
+
     .github-corner,.sidebar,.sidebar-toggle {
         position:fixed
+    }
+
+    .app-nav ul {
+        padding-left: 5px;
+    }
+
+    .app-nav {
+        white-space: nowrap;
+        left: 0;
+        overflow-x: auto;
+        overflow-y: hidden;
     }
 
     .app-nav {
@@ -685,7 +749,7 @@ section.cover blockquote>p>a:hover {
 }
 
 .sidebar li {
-    margin: 6px 0
+    margin: 0;
 }
 
 .sidebar ul li a {
@@ -695,11 +759,25 @@ section.cover blockquote>p>a:hover {
     overflow: hidden;
     text-decoration: none;
     text-overflow: ellipsis;
-    white-space: nowrap
+    white-space: nowrap;
+    padding: 6px;
 }
 
 .sidebar ul li a:hover {
-    text-decoration: underline
+    text-decoration: none;
+    color: var(--theme-color,#42b983);
+}
+
+.sidebar ul li a {
+    padding-left: 20px;
+}
+
+.sidebar ul li li a {
+    padding-left: 40px;
+}
+
+.sidebar ul li li li a {
+    padding-left: 60px;
 }
 
 .sidebar ul li ul {
@@ -707,9 +785,14 @@ section.cover blockquote>p>a:hover {
 }
 
 .sidebar ul li.active>a {
-    border-right: 2px solid;
+    border-right: 3px solid;
     color: var(--theme-color,#42b983);
-    font-weight: 600
+    background: #def4ec;
+    cursor: default;
+}
+
+.sidebar:hover ul li.active>a {
+    border-color: transparent;
 }
 
 .app-sub-sidebar li:before {
@@ -718,42 +801,52 @@ section.cover blockquote>p>a:hover {
     float: left
 }
 
-.markdown-section h1,.markdown-section h2,.markdown-section h3,.markdown-section h4,.markdown-section strong {
-    color: #2c3e50;
-    font-weight: 600
+.markdown-section strong {
+    font-weight: 600;
+}
+
+.markdown-section h1,.markdown-section h2,.markdown-section h3,.markdown-section h4 {
+    font-weight: 400;
 }
 
 .markdown-section a:not(.ek-link) {
     color: var(--theme-color,#42b983);
-    font-weight: 600
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.markdown-section a:not(.ek-link):hover {
+    text-decoration: underline;
 }
 
 .markdown-section h1:not(.ek-text) {
-    font-size: 2rem;
-    margin: 0 0 1rem
+    font-size: 30px;
+    margin: 0 0 20px;
 }
 
 .markdown-section h2:not(.ek-text) {
-    font-size: 1.75rem;
-    margin: 45px 0 .8rem
+    font-size: 24px;
+    margin: 1.6em 0 .6em;
 }
 
 .markdown-section h3:not(.ek-text) {
-    font-size: 1.5rem;
-    margin: 40px 0 .6rem
+    font-size: 18px;
+    margin: 1.6em 0 .6em;
 }
 
 .markdown-section h4:not(.ek-text) {
-    font-size: 1.25rem
+    font-size: 16px;
+    margin: 1.6em 0 .6em;
 }
 
 .markdown-section h5:not(.ek-text) {
-    font-size: 1rem
+    font-size: 14px;
+    margin: 1.6em 0 .6em;
 }
 
 .markdown-section h6:not(.ek-text) {
-    color: #777;
-    font-size: 1rem
+    font-size: 12px;
+    margin: 1.6em 0 .6em;
 }
 
 .markdown-section figure,.markdown-section p {
@@ -770,15 +863,17 @@ section.cover blockquote>p>a:hover {
 }
 
 .markdown-section blockquote {
-    border-left: 4px solid var(--theme-color,#42b983);
+    border-left: 4px solid #ebedf0;
     color: #858585;
     margin: 2em 0;
-    padding-left: 20px
+    padding: 0 24px 0 20px;
+    font-size: 95%;
 }
 
 .markdown-section blockquote p {
-    font-weight: 600;
-    margin-left: 0
+    font-weight: 400;
+    margin-left: 0;
+    line-height: 1.2rem;
 }
 
 .markdown-section iframe {
@@ -792,16 +887,21 @@ section.cover blockquote>p>a:hover {
 .markdown-section code {
     display: inline-block;
     border-radius: 2px;
-    color: #e96900;
-    font-size: .8rem;
-    margin: 2px;
+    font-size: .9em;
+    margin: 4px 2px;
     padding: 3px 5px;
-    white-space: pre-wrap
+    white-space: pre-wrap;
+    line-height: normal;
 }
 
-.markdown-section code,.markdown-section pre {
-    background-color: #f8f8f8;
-    font-family: Roboto Mono,Monaco,courier,monospace
+.markdown-section code {
+    border: 1px solid #eee;
+    border-radius: 3px;
+}
+
+.markdown-section code, .markdown-section pre {
+    background-color: #f2f4f5;
+    font-family: 'Lucida Console',Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;
 }
 
 .markdown-section pre {
@@ -812,7 +912,8 @@ section.cover blockquote>p>a:hover {
     overflow: auto;
     padding: 0 1.4rem;
     position: relative;
-    word-wrap: normal
+    word-wrap: normal;
+    border-radius: 2px;
 }
 
 .token.cdata,.token.comment,.token.doctype,.token.prolog {
@@ -840,7 +941,7 @@ section.cover blockquote>p>a:hover {
 }
 
 .token.string {
-    color: var(--theme-color,#42b983)
+    color: #389c6f
 }
 
 .token.selector {
@@ -856,7 +957,7 @@ section.cover blockquote>p>a:hover {
 }
 
 .token.attr-value,.token.control,.token.directive,.token.unit {
-    color: var(--theme-color,#42b983)
+    color: #389c6f
 }
 
 .token.keyword {
@@ -899,18 +1000,20 @@ section.cover blockquote>p>a:hover {
 .markdown-section pre>code {
     -moz-osx-font-smoothing: initial;
     -webkit-font-smoothing: initial;
-    background-color: #f8f8f8;
+    background-color: #f2f4f5;
     border-radius: 2px;
     color: #525252;
     display: block;
-    font-family: Roboto Mono,Monaco,courier,monospace;
-    font-size: .8rem;
+    font-family: 'Lucida Console',Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;
+    font-size: 14px;
     line-height: inherit;
-    margin: 0 2px;
+    margin: 0 1px;
     max-width: inherit;
     overflow: inherit;
-    padding: 2.2em 5px;
-    white-space: inherit
+    padding: 20px 0;
+    white-space: inherit;
+    border-radius: 0;
+    border: none;
 }
 
 .markdown-section code:after,.markdown-section code:before {

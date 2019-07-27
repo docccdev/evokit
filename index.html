@@ -10,30 +10,10 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/docs/_media/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/docs/_media/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/docs/_media/favicon-16x16.png">
-    <link rel="stylesheet" href="/docs/_media/vue.theme.css">
+    <link rel="stylesheet" href="/docs/_media/css/docsify.theme.css">
 </head>
 <body>
     <div id="app"></div>
-    <button
-        type="button"
-        style="
-            position: fixed;
-            right: 20px;
-            bottom: 20px;
-            z-index: 9999;
-            cursor: pointer;
-            background: #42b983;
-            border: 0;
-            color: #fff;
-            font-weight: bold;
-            font-size: 20px;
-            padding: 4px 10px;
-            display: none;
-        "
-        onClick="topFunction();"
-        id="scrollToTopButton"
-    >&uarr;</button>
-
     <script>
         window.$docsify = {
             ga: 'UA-125255834-1',
@@ -48,17 +28,18 @@
                 placeholder: 'Search...',
             },
             auto2top: true,
-            onlyCover: true
+            onlyCover: true,
+            externalLinkTarget: '_blank'
         };
     </script>
-    <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
-    <script src="//unpkg.com/prismjs/components/prism-bash.min.js"></script>
-    <script src="//unpkg.com/prismjs/components/prism-jsx.min.js"></script>
-    <script src="//unpkg.com/docsify/lib/plugins/ga.min.js"></script>
-    <script src="//unpkg.com/docsify/lib/plugins/search.min.js"></script>
-    <script src="//unpkg.com/docsify/lib/plugins/emoji.min.js"></script>
-    <script src="//unpkg.com/docsify-copy-code"></script>
-    <script src="//unpkg.com/vanilla-back-to-top/dist/vanilla-back-to-top.min.js"></script>
+    <script src="/docs/_media/js/docsify.min.js"></script>
+    <script src="/docs/_media/js/prism-bash.min.js"></script>
+    <script src="/docs/_media/js/prism-jsx.min.js"></script>
+    <script src="/docs/_media/js/docsify.plugin.ga.min.js"></script>
+    <script src="/docs/_media/js/docsify.plugin.search.min.js"></script>
+    <script src="/docs/_media/js/docsify.plugin.emoji.min.js"></script>
+    <script src="/docs/_media/js/docsify-copy-code.min.js"></script>
+    <script src="/docs/_media/js/vanilla-back-to-top.min.js"></script>
     <script>
         addBackToTop({
             diameter: 56,

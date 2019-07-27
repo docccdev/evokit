@@ -21,7 +21,7 @@ All blocks have additional styles for Media Rules, this will reduce the size of 
 
 ---
 
-#### Usage
+## Usage
 
 See demo how to use media styles on the example of the [Box][evokit-box] block.
 
@@ -37,7 +37,7 @@ import 'evokit-box/style@wide.css';
 </Box>
 ```
 
-#### Customize
+## Customize
 
 > All blocks has css variables for media is default. If you want to override one or more media, please define them below the css import.
 
@@ -51,6 +51,6 @@ Notice the pattern custom media: `--ek-{BLOCK_NAME}-media-{MEDIA_NAME}`.
 @custom-media --ek-box-media-huge only screen and (min-width: 1400px);
 ```
 
-#### Live demo
+## Live demo
 
 [![Edit box-media](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/boxmedia-kygtc?fontsize=14 ':include :type=iframe width=100% height=500px')

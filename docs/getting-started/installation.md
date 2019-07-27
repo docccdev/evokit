@@ -14,7 +14,7 @@
 
 # Installation
 
-#### 1. Peer dependencies
+## 1. Peer dependencies
 
 [react], [prop-types]
 
@@ -22,7 +22,7 @@
 npm install react prop-types --save
 ```
 
-#### 2. Core
+## 2. Core
 
 [evokit]
 
@@ -30,7 +30,7 @@ npm install react prop-types --save
 npm install evokit --save
 ```
 
-#### 3. Block
+## 3. Block
 
 For example block [evokit-box](packages/evokit-box/)
 

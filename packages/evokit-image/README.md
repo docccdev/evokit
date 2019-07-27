@@ -28,7 +28,7 @@ Used to display the image. Contains one element `<Image>`
 
 ---
 
-#### Install
+## Install
 
 > Peer dependencies [evokit]
 
@@ -36,7 +36,7 @@ Used to display the image. Contains one element `<Image>`
 npm install evokit-image --save
 ```
 
-#### Usage
+## Usage
 
 > The styles use [css-variable] and will work in all modern browsers. If you need to support more old browsers such as Interner Explorer 11 or lower, use a tool [postcss] with [postcss-preset-env] for transforming css into something most browsers can understand.
 
@@ -48,17 +48,17 @@ import 'evokit-image/style.css';
 
 ```
 
-#### Props
+## Props
 
 > Also supports other valid props of the React Element
 
-###### [Base][base-props]
+### [Base][base-props]
 
 | Prop name   | Default value | Possible value             | Description |
 |-------------|---------------|----------------------------|-------------|
 | [image-tag] | `img`         | [html tags][html-all-tags] | HTML tag    |
 
-###### [Main][main-props]
+### [Main][main-props]
 
 | Prop name      | Default value | Possible value          | Description      |
 |----------------|---------------|-------------------------|------------------|
@@ -69,7 +69,7 @@ import 'evokit-image/style.css';
 | [image-width]  | `auto`        | `auto` `1-1` `*-2` `*-3` `*-4` `*-5` `*-6` `*-7` `*-8` `*-9` `*-10` | Set the width |
 | [image-round]  | `none`        | `none` `full` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Corner rounding |
 
-###### [Color][color-props]
+### [Color][color-props]
 
 > Use [theming][create_theme] for creating custom colors.
 
@@ -77,7 +77,7 @@ import 'evokit-image/style.css';
 |------------------|---------------|----------------|--------------|
 | [image-border]   | `null`        | `{THEME_NAME}` | Border color |
 
-#### Customize
+## Customize
 
 > This set of css variables is default, if you want to override one or more value, please use the rules [css-variable-usage], define them below the css import.
 
@@ -100,15 +100,15 @@ import 'evokit-image/style.css';
 }
 ```
 
-#### Live demo
+## Live demo
 
 [![Edit image-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/imageusage-7qyol?fontsize=14 ':include :type=iframe width=100% height=500px')
 
 ---
 
-#### Base props
+## Base props
 
-##### `image-tag`
+### `image-tag`
 
 - Default value `img`
 
@@ -117,9 +117,9 @@ import 'evokit-image/style.css';
 ```
 
 
-#### Main props
+## Main props
 
-##### `image-align`
+### `image-align`
 
 - `left` - Align the image to the left
 - `center` - Center alignment
@@ -129,7 +129,7 @@ import 'evokit-image/style.css';
 <Image image-align='center' src='' alt='' />
 ```
 
-##### `image-valign`
+### `image-valign`
 
 - `top` - Align the top edge of the element to the top of the tallest line item.
 - `bottom` - Aligns the base of the current element at the bottom of the element of the line below it all
@@ -144,7 +144,7 @@ import 'evokit-image/style.css';
 <Image image-valign='top' src='' alt='' />
 ```
 
-##### `image-mirror`
+### `image-mirror`
 
 - `x` - X-axis reflection
 - `y` - Y-axis reflection
@@ -154,7 +154,7 @@ import 'evokit-image/style.css';
 <Image image-mirror='x' src='' alt='' />
 ```
 
-##### `image-fit`
+### `image-fit`
 
 - `none` - Does not change its size and fills the space
 - `fill` - Resizes to fill the whole area
@@ -166,7 +166,7 @@ import 'evokit-image/style.css';
 <Image image-fit='cover' src='' alt='' />
 ```
 
-##### `image-width`
+### `image-width`
 
 - `auto` - value: `auto`
 - See table, for example: `3-4` = `75%`
@@ -188,7 +188,7 @@ import 'evokit-image/style.css';
 <Image image-width='3-4' src='' alt='' />
 ```
 
-##### `image-round`
+### `image-round`
 
 > Has advanced props:
 > - `image-round` - `top`, `right`, `bottom` or `left` for example **`image-round-right`**
@@ -210,11 +210,11 @@ import 'evokit-image/style.css';
 ```
 
 
-#### Color props
+## Color props
 
 > Set the THEME NAME depending on the [theming][create_theme]
 
-##### `image-border`
+### `image-border`
 
 > Has advanced props:
 > - `image-border` - `top`, `right`, `bottom` or `left` for example **`image-border-right`**

@@ -6,7 +6,7 @@ To create a new block, use the function `createBlock` from the npm package [evok
 
 ---
 
-#### Structure
+## Structure
 
 ```
 ├── MyBlock
@@ -82,6 +82,6 @@ const App = () => (
 
 </details>
 
-#### Live demo
+## Live demo
 
 [![Edit create-block](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/create-block-m4q9e?fontsize=14 ':include :type=iframe width=100% height=500px')

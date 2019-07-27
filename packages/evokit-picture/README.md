@@ -25,7 +25,7 @@ Creates a square with an image. Contains two elements `<Picture>` and `<PictureI
 
 ---
 
-#### Install
+## Install
 
 > Peer dependencies [evokit]
 
@@ -33,7 +33,7 @@ Creates a square with an image. Contains two elements `<Picture>` and `<PictureI
 npm install evokit-picture --save
 ```
 
-#### Usage
+## Usage
 
 > The styles use [css-variable] and will work in all modern browsers. If you need to support more old browsers such as Interner Explorer 11 or lower, use a tool [postcss] with [postcss-preset-env] for transforming css into something most browsers can understand.
 
@@ -47,25 +47,25 @@ import 'evokit-picture/style.css';
 
 ```
 
-#### Props
+## Props
 
 > Also supports other valid props of the React Element
 
-###### [Base][base-props]
+### [Base][base-props]
 
 | Prop name          | Default value | Possible value             | Description |
 |--------------------|---------------|----------------------------|-------------|
 | [picture-tag]      | `picture`     | [html tags][html-all-tags] | HTML tag    |
 | [picture-item-tag] | `img`         | [html tags][html-all-tags] | HTML tag    |
 
-###### [Main][main-props]
+### [Main][main-props]
 
 | Prop name       | Default value | Possible value | Description |
 |-----------------|---------------|----------------|-------------|
 | [picture-fit]   | `null`        | `none` `fill` `contain` `cover` `scale-down`    | Filling the container relative to its height and width |
 | [picture-round] | `none`        | `none` `full` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Corner rounding |
 
-###### [Color][color-props]
+### [Color][color-props]
 
 > Use [theming][create_theme] for creating custom colors.
 
@@ -73,7 +73,7 @@ import 'evokit-picture/style.css';
 |------------------|----------------|----------------|--------------|
 | [picture-border] | `null`         | `{THEME_NAME}` | Border color |
 
-#### Customize
+## Customize
 
 > This set of css variables is default, if you want to override one or more value, please use the rules [css-variable-usage], define them below the css import.
 
@@ -96,15 +96,15 @@ import 'evokit-picture/style.css';
 }
 ```
 
-#### Live demo
+## Live demo
 
 [![Edit picture-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/pictureusage-q6brs?fontsize=14 ':include :type=iframe width=100% height=500px')
 
 ---
 
-#### Base props
+## Base props
 
-##### `picture-tag`
+### `picture-tag`
 
 - Default value `picture`
 
@@ -114,7 +114,7 @@ import 'evokit-picture/style.css';
 </Picture>
 ```
 
-##### `picture-item-tag`
+### `picture-item-tag`
 
 - Default value `img`
 
@@ -125,9 +125,9 @@ import 'evokit-picture/style.css';
 ```
 
 
-#### Main props
+## Main props
 
-##### `picture-fit`
+### `picture-fit`
 
 - `none` - Does not change its size and fills the space
 - `fill` - Resizes to fill the whole area
@@ -141,7 +141,7 @@ import 'evokit-picture/style.css';
 </Picture>
 ```
 
-##### `picture-round`
+### `picture-round`
 
 > Has advanced props:
 > - `picture-round` - `top`, `right`, `bottom` or `left` for example **`picture-round-right`**
@@ -165,11 +165,11 @@ import 'evokit-picture/style.css';
 ```
 
 
-#### Color props
+## Color props
 
 > Set the THEME NAME depending on the [theming][create_theme]
 
-##### `picture-border`
+### `picture-border`
 
 > Has advanced props:
 > - `picture-border` - `top`, `right`, `bottom` or `left` for example **`picture-border-right`**

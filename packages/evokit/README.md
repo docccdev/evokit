@@ -14,7 +14,7 @@ Allows you to divide the user interface into independent blocks and think about 
 
 ---
 
-##### Usage
+## Usage
 
 > Peer dependencies [react], [prop-types]
 
@@ -24,7 +24,9 @@ npm install evokit --save
 
 ---
 
-##### `createBlock(tagName, blockName, blockMods, preset)`
+## Create block
+
+`createBlock(tagName, blockName, blockMods, preset)`
 
 See example [create block][create-block]
 
@@ -75,7 +77,9 @@ More about default preset:
 | `v`   | `string` | `_`    | block modifier value separator: `modName{v}modVal` => `modName_modVal` |
 | `css` | `object` | `null` | object [CSS Modules][css-modules] classes |
 
-##### `withProps(Block, props)`
+## With props
+
+`withProps(Block, props)`
 
 Return block with default props
 

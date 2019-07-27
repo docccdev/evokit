@@ -27,7 +27,7 @@ Used for body of the web page and sets the basic styles. Contains two elements `
 
 ---
 
-#### Install
+## Install
 
 > Peer dependencies [evokit]
 
@@ -35,7 +35,7 @@ Used for body of the web page and sets the basic styles. Contains two elements `
 npm install evokit-body --save
 ```
 
-#### Usage
+## Usage
 
 > The styles use [css-variable] and will work in all modern browsers. If you need to support more old browsers such as Interner Explorer 11 or lower, use a tool [postcss] with [postcss-preset-env] for transforming css into something most browsers can understand.
 
@@ -56,25 +56,25 @@ import 'evokit-body/style.css';
 </Body>
 ```
 
-#### Props
+## Props
 
 > Also supports other valid props of the React Element
 
-###### [Base][base-props]
+### [Base][base-props]
 
 | Prop name          | Default value | Possible value             | Description |
 |--------------------|---------------|----------------------------|-------------|
 | [body-tag]         | `body`        | [html tags][html-all-tags] | HTML tag    |
 | [body-section-tag] | `div`         | [html tags][html-all-tags] | HTML tag    |
 
-###### [Main][main-props]
+### [Main][main-props]
 
 | Prop name     | Default value | Possible value | Description |
 |---------------|---------------|-------------------|-------------|
 | [body-size]   | `null`        | `xl` `xxl` `xxxl` | Max width for `<BodySection>` |
 | [body-indent] | `none`        | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Padding on the side left and right for `<BodySection>` |
 
-###### [Color][color-props]
+### [Color][color-props]
 
 > Use [theming][create_theme] for creating custom colors.
 
@@ -83,7 +83,7 @@ import 'evokit-body/style.css';
 | [body-background] | `null` | `{THEME_NAME}` | Background color   |
 | [body-color]      | `null` | `{THEME_NAME}` | Text color         |
 
-#### Customize
+## Customize
 
 > This set of css variables is default, if you want to override one or more value, please use the rules [css-variable-usage], define them below the css import.
 
@@ -117,16 +117,16 @@ import 'evokit-body/style.css';
 }
 ```
 
-#### Live demo
+## Live demo
 
 [![Edit body-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/bodyusage-kz6ss?fontsize=14 ':include :type=iframe width=100% height=500px')
 
 ---
 
 
-#### Base props
+## Base props
 
-##### `body-tag`
+### `body-tag`
 
 Default value `body`
 
@@ -136,7 +136,7 @@ Default value `body`
 </Body>
 ```
 
-##### `body-section-tag`
+### `body-section-tag`
 
 Default value `div`
 
@@ -149,9 +149,9 @@ Default value `div`
 ```
 
 
-#### Main props
+## Main props
 
-##### `body-size`
+### `body-size`
 
 - `xl` - css variable `--ek-body-max-width-xl`, default value: `1440px`
 - `xxl` - css variable `--ek-body-max-width-xxl`, default value: `1640px`
@@ -163,7 +163,7 @@ Default value `div`
 </Body>
 ```
 
-##### `body-indent`
+### `body-indent`
 
 - `none` - no indent, value: `0px`
 - `xxs` - css variable `--ek-body-indent-xxs`, default value: `5px`
@@ -181,11 +181,11 @@ Default value `div`
 ```
 
 
-#### Color props
+## Color props
 
 > Set the THEME NAME depending on the [theming][create_theme]
 
-##### `body-background`
+### `body-background`
 
 ```jsx
 <Body body-background={THEME_NAME}>
@@ -193,7 +193,7 @@ Default value `div`
 </Body>
 ```
 
-##### `body-color`
+### `body-color`
 
 ```jsx
 <Body body-color={THEME_NAME}>

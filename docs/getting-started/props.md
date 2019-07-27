@@ -10,11 +10,11 @@ All blocks have base props, such as `tag`, `ref`, `preset`. Also supports other 
 
 ---
 
-#### Props
+## Props
 
 For examples, consider the use base props on the [Box][evokit-box] block.
 
-##### `box-tag`
+### `box-tag`
 
 The block will have a tag `span`
 
@@ -28,7 +28,7 @@ import 'evokit-box/style.css';
 <span class='ek-box' />
 ```
 
-##### `box-ref`
+### `box-ref`
 
 The passed function will receive a `target` argument that refers to the current DOM node.
 
@@ -39,7 +39,7 @@ import 'evokit-box/style.css';
 <Box box-ref={(target) => console.log(target)} />
 ```
 
-##### `box-preset`
+### `box-preset`
 
 By default, uses the rules BEM naming and class prefix `ek-`
 - `ek-blockName`
@@ -67,9 +67,9 @@ import boxCss from 'evokit-box/style.css'; // return for example {'ek-box': 'ek-
 
 ```
 
-#### Use cases
+## Use cases
 
-#### Single value
+### Single value
 
 ```jsx
 // input:
@@ -79,7 +79,7 @@ import boxCss from 'evokit-box/style.css'; // return for example {'ek-box': 'ek-
 <div class='ek-box ek-box_padding_xl' />
 ```
 
-#### Multi values
+### Multi values
 
 ```jsx
 // input:
@@ -89,7 +89,7 @@ import boxCss from 'evokit-box/style.css'; // return for example {'ek-box': 'ek-
 <div class='ek-box ek-box_padding_s ek-box_padding_xl' />
 ```
 
-#### Optional values
+### Optional values
 
 ```jsx
 // input:
@@ -99,6 +99,6 @@ import boxCss from 'evokit-box/style.css'; // return for example {'ek-box': 'ek-
 <div class='ek-box ek-box_padding_s' />
 ```
 
-#### Live demo
+## Live demo
 
 [![Edit box-props](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/boxprops-dn6w9?fontsize=14 ':include :type=iframe width=100% height=700px')

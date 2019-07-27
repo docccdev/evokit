@@ -24,7 +24,7 @@ Horizontal line, used to separate content. Contains one element `<Line>`
 
 ---
 
-#### Install
+## Install
 
 > Peer dependencies [evokit]
 
@@ -32,7 +32,7 @@ Horizontal line, used to separate content. Contains one element `<Line>`
 npm install evokit-line --save
 ```
 
-#### Usage
+## Usage
 
 > The styles use [css-variable] and will work in all modern browsers. If you need to support more old browsers such as Interner Explorer 11 or lower, use a tool [postcss] with [postcss-preset-env] for transforming css into something most browsers can understand.
 
@@ -43,24 +43,24 @@ import 'evokit-line/style.css';
 <Line />
 ```
 
-#### Props
+## Props
 
 > Also supports other valid props of the React Element
 
-###### [Base][base-props]
+### [Base][base-props]
 
 | Prop name  | Default value | Possible value             | Description |
 |------------|---------------|----------------------------|-------------|
 | [line-tag] | `hr`          | [html tags][html-all-tags] | HTML tag    |
 
-###### [Main][main-props]
+### [Main][main-props]
 
 | Prop name     | Default value | Possible value | Description  |
 |---------------|---------------|----------------|--------------|
 | [line-indent] | `none`        | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Indent above and below |
 | [line-style]  | `null`        | `dotted` `dashed` | Border style |
 
-###### [Color][color-props]
+### [Color][color-props]
 
 > Use [theming][create_theme] for creating custom colors.
 
@@ -68,7 +68,7 @@ import 'evokit-line/style.css';
 |------------------|---------------|----------------|--------------|
 | [line-color]     | `null`        | `{THEME_NAME}` | Border color |
 
-#### Customize
+## Customize
 
 > This set of css variables is default, if you want to override one or more value, please use the rules [css-variable-usage], define them below the css import.
 
@@ -91,15 +91,15 @@ import 'evokit-line/style.css';
 }
 ```
 
-#### Live demo
+## Live demo
 
 [![Edit line-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/lineusage-mti8w?fontsize=14 ':include :type=iframe width=100% height=500px')
 
 ---
 
-#### Base props
+## Base props
 
-##### `line-tag`
+### `line-tag`
 
 Default value `hr`
 
@@ -108,9 +108,9 @@ Default value `hr`
 ```
 
 
-#### Main props
+## Main props
 
-##### `line-indent`
+### `line-indent`
 
 - `none` - no indent, value: `0px`
 - `xxs` - css variable `--ek-line-indent-xxs`, default value: `5px`
@@ -125,7 +125,7 @@ Default value `hr`
 <Line line-indent='l' />
 ```
 
-##### `line-style`
+### `line-style`
 
 - `dotted` - dotted style
 - `dashed` - dashed style
@@ -135,11 +135,11 @@ Default value `hr`
 ```
 
 
-#### Color props
+## Color props
 
 > Set the THEME NAME depending on the [theming][create_theme]
 
-##### `line-color`
+### `line-color`
 
 ```jsx
 <Line line-color={THEME_NAME} />

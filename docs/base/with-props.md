@@ -7,7 +7,7 @@ The function `withProps`from the npm package [evokit], set the default props for
 
 ---
 
-#### Usage
+## Usage
 
 For examples, consider the use on the [Link][evokit-link] block.
 
@@ -26,7 +26,8 @@ const LinkNofollow = withProps(Link, {
 <a href='#' class='ek-link ek-link_color_gray' rel='nofollow' />
 ```
 
-Override default props:
+### Override default props:
+
 ``` jsx
 // input:
 <LinkNofollow href='#' link-color='red' rel='help' />
@@ -34,7 +35,8 @@ Override default props:
 <a href='#' class='ek-link ek-link_color_red' rel='help' />
 ```
 
-Remove default props:
+### Remove default props:
+
 ``` jsx
 // input:
 <LinkNofollow href='#' link-color={null} rel={null} />

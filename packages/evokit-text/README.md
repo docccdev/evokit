@@ -30,7 +30,7 @@ Used for text.  Contains one element `<Text>`
 
 ---
 
-#### Install
+## Install
 
 > Peer dependencies [evokit]
 
@@ -38,7 +38,7 @@ Used for text.  Contains one element `<Text>`
 npm install evokit-text --save
 ```
 
-#### Usage
+## Usage
 
 > The styles use [css-variable] and will work in all modern browsers. If you need to support more old browsers such as Interner Explorer 11 or lower, use a tool [postcss] with [postcss-preset-env] for transforming css into something most browsers can understand.
 
@@ -51,17 +51,17 @@ import 'evokit-text/style.css';
 </Text>
 ```
 
-#### Props
+## Props
 
 > Also supports other valid props of the React Element
 
-###### [Base][base-props]
+### [Base][base-props]
 
 | Prop name   | Default value | Possible value             | Description |
 |-------------|---------------|----------------------------|-------------|
 | [text-tag]  | `span`        | [html tags][html-all-tags] | HTML tag    |
 
-###### [Main][main-props]
+### [Main][main-props]
 
 | Prop name        | Default value | Possible value   | Description |
 |------------------|---------------|------------------|-------------|
@@ -74,7 +74,7 @@ import 'evokit-text/style.css';
 | [text-transform] | `none`        | `none` `capitalize` `lowercase` `uppercase` | Text case conversion |
 | [text-lheight]   | `default`     | `default` `medium` `large` | Line spacing |
 
-###### [Color][color-props]
+### [Color][color-props]
 
 > Use [theming][create_theme] for creating custom colors.
 
@@ -82,7 +82,7 @@ import 'evokit-text/style.css';
 |------------------|---------------|----------------|--------------|
 | [text-color]     | `null`        | `{THEME_NAME}` | Text color  |
 
-#### Customize
+## Customize
 
 > This set of css variables is default, if you want to override one or more value, please use the rules [css-variable-usage], define them below the css import.
 
@@ -113,15 +113,15 @@ import 'evokit-text/style.css';
 }
 ```
 
-#### Live demo
+## Live demo
 
 [![Edit text-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/textusage-wm53d?fontsize=14 ':include :type=iframe width=100% height=500px')
 
 ---
 
-#### Base props
+## Base props
 
-##### `text-tag`
+### `text-tag`
 
 - Default value `span`
 
@@ -132,7 +132,7 @@ import 'evokit-text/style.css';
 ```
 
 
-#### Main props
+## Main props
 
 ### `text-size`
 
@@ -248,7 +248,7 @@ import 'evokit-text/style.css';
 ```
 
 
-#### Color props
+## Color props
 
 > Set the THEME NAME depending on the [theming][create_theme]
 

@@ -26,7 +26,7 @@ Used to create list. Contains two elements `<List>` and `<ListItem>`
 
 ---
 
-#### Install
+## Install
 
 > Peer dependencies [evokit]
 
@@ -34,7 +34,7 @@ Used to create list. Contains two elements `<List>` and `<ListItem>`
 npm install evokit-list --save
 ```
 
-#### Usage
+## Usage
 
 > The styles use [css-variable] and will work in all modern browsers. If you need to support more old browsers such as Interner Explorer 11 or lower, use a tool [postcss] with [postcss-preset-env] for transforming css into something most browsers can understand.
 
@@ -50,25 +50,25 @@ import 'evokit-list/style.css';
 
 ```
 
-#### Props
+## Props
 
 > Also supports other valid props of the React Element
 
-###### [Base][base-props]
+### [Base][base-props]
 
 | Prop name       | Default value | Possible value             | Description |
 |-----------------|---------------|----------------------------|-------------|
 | [list-tag]      | `ul`          | [html tags][html-all-tags] | HTML tag    |
 | [list-item-tag] | `li`          | [html tags][html-all-tags] | HTML tag    |
 
-###### [Main][main-props]
+### [Main][main-props]
 
 | Prop name     | Default value | Possible value | Description |
 |---------------|---------------|----------------|-------------|
 | [list-indent] | `none`        | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Indentation between elements |
 | [list-style]  | `null`        | `dash` `decimal` `disc` | Marker type |
 
-###### [Color][color-props]
+### [Color][color-props]
 
 > Use [theming][create_theme] for creating custom colors.
 
@@ -77,7 +77,7 @@ import 'evokit-list/style.css';
 | [list-color]   | `null`        | `{THEME_NAME}` | Marker color |
 | [list-divider] | `null`        | `{THEME_NAME}` | Color separator between elements |
 
-#### Customize
+## Customize
 
 > This set of css variables is default, if you want to override one or more value, please use the rules [css-variable-usage], define them below the css import.
 
@@ -100,15 +100,15 @@ import 'evokit-list/style.css';
 }
 ```
 
-#### Live demo
+## Live demo
 
 [![Edit list-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/listusage-ycfx4?fontsize=14 ':include :type=iframe width=100% height=500px')
 
 ---
 
-#### Base props
+## Base props
 
-##### `list-tag`
+### `list-tag`
 
 - Default value `ul`
 
@@ -118,7 +118,7 @@ import 'evokit-list/style.css';
 </List>
 ```
 
-##### `list-item-tag`
+### `list-item-tag`
 
 - Default value `li`
 
@@ -131,9 +131,9 @@ import 'evokit-list/style.css';
 ```
 
 
-#### Main props
+## Main props
 
-##### `list-indent`
+### `list-indent`
 
 - `none` - no indent, value: `0px`
 - `xxs` - css variable `--ek-list-indent-xxs`, default value: `5px`
@@ -152,7 +152,7 @@ import 'evokit-list/style.css';
 </List>
 ```
 
-##### `list-style`
+### `list-style`
 
 - `dash` - Dash marker (—)
 - `decimal` - Arabic numbers (1, 2, 3, 4,...).
@@ -167,11 +167,11 @@ import 'evokit-list/style.css';
 ```
 
 
-#### Color props
+## Color props
 
 > Set the THEME NAME depending on the [theming][create_theme]
 
-##### `list-color`
+### `list-color`
 
 ```jsx
 <List list-color={THEME_NAME}>
@@ -181,7 +181,7 @@ import 'evokit-list/style.css';
 </List>
 ```
 
-##### `list-divider`
+### `list-divider`
 
 ```jsx
 <List list-divider={THEME_NAME}>

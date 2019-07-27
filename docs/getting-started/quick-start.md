@@ -3,9 +3,9 @@
 
 # Quick start
 
-#### 1. Simple usage
+## 1. Simple usage
 
-> Simple use, allows you to quickly use the block with the default settings
+Simple use, allows you to quickly use the block with the default settings
 
 ```jsx
 import React from 'react';
@@ -19,9 +19,9 @@ const App = () => (
 );
 ```
 
-#### 2. Advanced
+## 2. Advanced
 
-> Recommend using advanced mode. To do this, you will need to create a UI folder in the project where the configured blocks.
+Recommend using advanced mode. To do this, you will need to create a UI folder in the project where the configured blocks.
 
 ```
 ├── UI/
@@ -94,9 +94,9 @@ const App = () => (
 </details>
 
 
-#### 3. CSS Modules
+## 3. CSS Modules
 
-> Consider the same files structure as [Advanced mode][advanced-mode].
+Consider the same files structure as [Advanced mode][advanced-mode].
 
 <details open>
 <summary>UI/Text/index.js</summary>

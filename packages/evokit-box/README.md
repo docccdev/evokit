@@ -35,7 +35,7 @@ The content block allows to apply indents, position and more. Contains one eleme
 
 ---
 
-#### Install
+## Install
 
 > Peer dependencies [evokit]
 
@@ -43,7 +43,7 @@ The content block allows to apply indents, position and more. Contains one eleme
 npm install evokit-box --save
 ```
 
-#### Usage
+## Usage
 
 > The styles use [css-variable] and will work in all modern browsers. If you need to support more old browsers such as Interner Explorer 11 or lower, use a tool [postcss] with [postcss-preset-env] for transforming css into something most browsers can understand.
 
@@ -56,17 +56,17 @@ import 'evokit-box/style.css';
 </Box>
 ```
 
-#### Props
+## Props
 
 > Also supports other valid props of the React Element
 
-###### [Base][base-props]
+### [Base][base-props]
 
 | Prop name | Default value | Possible value             | Description |
 |-----------|---------------|----------------------------|-------------|
 | [box-tag] | `div`         | [html tags][html-all-tags] | HTML tag    |
 
-###### [Main][main-props]
+### [Main][main-props]
 
 | Prop name        | Default value | Possible value | Description |
 |------------------|---------------|----------------|-------------|
@@ -81,7 +81,7 @@ import 'evokit-box/style.css';
 | [box-place]      | `null`        | `top` `top-left` `top-right` `center` `center-left` `center-right` `bottom` `bottom-left` `bottom-right` | Position place |
 | [box-overflow]   | `scroll`      | `auto` `hidden` `scroll` `visible` | Display overflow block content |
 
-###### [Color][color-props]
+### [Color][color-props]
 
 > Use [theming][create_theme] for creating custom colors.
 
@@ -90,7 +90,7 @@ import 'evokit-box/style.css';
 | [box-border]     | `null`        | `{THEME_NAME}`  | Border color     |
 | [box-background] | `null`        | `{THEME_NAME}`  | Background color |
 
-#### Customize
+## Customize
 
 > This set of css variables is default, if you want to override one or more value, please use the rules [css-variable-usage], define them below the css import.
 
@@ -121,16 +121,16 @@ import 'evokit-box/style.css';
 }
 ```
 
-#### Live demo
+## Live demo
 
 [![Edit box-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/boxusage-3r9iy?fontsize=14 ':include :type=iframe width=100% height=500px')
 
 ---
 
 
-#### Base props
+## Base props
 
-##### `box-tag`
+### `box-tag`
 
 Default value `div`
 
@@ -141,9 +141,9 @@ Default value `div`
 ```
 
 
-#### Main props
+## Main props
 
-##### `box-align`
+### `box-align`
 
 - `none` - No alignment
 - `left` - Align to the left
@@ -156,7 +156,7 @@ Default value `div`
 </Box>
 ```
 
-##### `box-margin`
+### `box-margin`
 
 > Has advanced props:
 > - `box-margin` - `top`, `right`, `bottom` or `left` for example **`box-margin-right`**
@@ -178,7 +178,7 @@ Default value `div`
 </Box>
 ```
 
-##### `box-padding`
+### `box-padding`
 
 > Has advanced props:
 > - `box-padding` - `top`, `right`, `bottom` or `left` for example **`box-padding-right`**
@@ -199,7 +199,7 @@ Default value `div`
 </Box>
 ```
 
-##### `box-round`
+### `box-round`
 
 > Has advanced props:
 > - `box-round` - `top`, `right`, `bottom` or `left` for example **`box-round-right`**
@@ -222,7 +222,7 @@ Default value `div`
 </Box>
 ```
 
-##### `box-width`
+### `box-width`
 
 - `auto` - value: `auto`
 - See table, for example: `3-4` = `75%`
@@ -246,7 +246,7 @@ Default value `div`
 </Box>
 ```
 
-##### `box-height`
+### `box-height`
 
 - `auto` - value: `auto`
 - `1-1` - value: `100%`
@@ -257,7 +257,7 @@ Default value `div`
 </Box>
 ```
 
-##### `box-display`
+### `box-display`
 
 ```jsx
 <Box box-display='none'>
@@ -265,7 +265,7 @@ Default value `div`
 </Box>
 ```
 
-##### `box-position`
+### `box-position`
 
 ```jsx
 <Box box-position='absolute'>
@@ -273,7 +273,7 @@ Default value `div`
 </Box>
 ```
 
-##### `box-place`
+### `box-place`
 
 > Use with prop `box-position`
 
@@ -283,7 +283,7 @@ Default value `div`
 </Box>
 ```
 
-##### `box-overflow`
+### `box-overflow`
 
 > Has advanced props:
 > - `box-overflow-x` and `box-overflow-y`
@@ -300,11 +300,11 @@ Default value `div`
 ```
 
 
-#### Color props
+## Color props
 
 > Set the THEME NAME depending on the [theming][create_theme]
 
-##### `box-border`
+### `box-border`
 
 > Has advanced props:
 > - `box-border` - `top`, `right`, `bottom` or `left` for example **`box-border-right`**
@@ -316,7 +316,7 @@ Default value `div`
 </Box>
 ```
 
-##### `box-background`
+### `box-background`
 
 ```jsx
 <Box box-background={THEME_NAME}>

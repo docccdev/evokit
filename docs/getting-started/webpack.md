@@ -56,7 +56,7 @@ module.exports = {
 
 ```
 
-#### Postcss dependencies
+## Postcss dependencies
 
 - [postcss]
 - [postcss-preset-env]

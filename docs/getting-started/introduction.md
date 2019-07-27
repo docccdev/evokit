@@ -6,7 +6,7 @@ Divide the user interface into independent blocks.
 
 ---
 
-#### Packages list
+## Packages list
 
 Core:
   * [evokit](packages/evokit/)
@@ -23,7 +23,7 @@ Blocks:
   * [evokit-picture](packages/evokit-picture/)
   * [evokit-text](packages/evokit-text/)
 
-#### Let's look at an example of creating a three-column list of product list with 10px indentation between cells
+### Let's look at an example of creating a three-column list of product list with 10px indentation between cells
 
 Every time if you need to place something in the grid, you have to create new styles only for this case without being able to flexibly reuse in other components.
 
