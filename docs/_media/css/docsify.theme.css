@@ -502,7 +502,7 @@ body.sticky .sidebar,body.sticky .sidebar-toggle {
 }
 
 .markdown-section details + details {
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 .markdown-section summary {
