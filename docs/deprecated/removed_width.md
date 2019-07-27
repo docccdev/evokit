@@ -1,4 +1,4 @@
-[grid]: packages/evokit-grid/
+[grid]: /packages/evokit-grid/
 
 !> DEPRECATED
 

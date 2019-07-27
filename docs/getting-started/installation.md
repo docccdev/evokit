@@ -1,16 +1,17 @@
 [react]: //www.npmjs.com/package/react
 [prop-types]: //www.npmjs.com/package/prop-types
 
-[evokit]: packages/evokit/
-[evokit-body]: packages/evokit-body/
-[evokit-box]: packages/evokit-box/
-[evokit-grid]: packages/evokit-grid/
-[evokit-image]: packages/evokit-image/
-[evokit-line]: packages/evokit-line/
-[evokit-link]: packages/evokit-link/
-[evokit-list]: packages/evokit-list/
-[evokit-picture]: packages/evokit-picture/
-[evokit-text]: packages/evokit-text/
+[evokit]: /packages/evokit/
+[evokit-body]: /packages/evokit-body/
+[evokit-box]: /packages/evokit-box/
+[evokit-flex]: /packages/evokit-flex/
+[evokit-grid]: /packages/evokit-grid/
+[evokit-image]: /packages/evokit-image/
+[evokit-line]: /packages/evokit-line/
+[evokit-link]: /packages/evokit-link/
+[evokit-list]: /packages/evokit-list/
+[evokit-picture]: /packages/evokit-picture/
+[evokit-text]: /packages/evokit-text/
 
 # Installation
 
@@ -32,7 +33,7 @@ npm install evokit --save
 
 ## 3. Block
 
-For example block [evokit-box](packages/evokit-box/)
+For example block [evokit-box]
 
 ```bash
 npm install evokit-box --save
@@ -41,6 +42,7 @@ npm install evokit-box --save
 List of blocks:
   * [evokit-body]
   * [evokit-box]
+  * [evokit-flex]
   * [evokit-grid]
   * [evokit-image]
   * [evokit-line]

@@ -1,11 +1,12 @@
 [evokit]: /packages/evokit/
+
 [css-variable]: //caniuse.com/#feat=css-variables
 [css-variable-usage]: //w3schools.com/css/css3_variables.asp
 [html-all-tags]: //www.w3schools.com/tags/default.asp
 [postcss]: //postcss.org
 [postcss-preset-env]: //preset-env.cssdb.org
 
-[create_theme]: docs/base/theme
+[create_theme]: /docs/base/theme.md
 
 [line-tag]: #line-tag
 [line-indent]: #line-indent

@@ -1,8 +1,8 @@
-[colors]: docs/deprecated/removed_colors.md
-[sizes]: docs/deprecated/removed_sizes.md
-[media]: docs/getting-started/media.md
+[colors]: /docs/deprecated/removed_colors.md
+[sizes]: /docs/deprecated/removed_sizes.md
+[media]: /docs/getting-started/media.md
 
-[grid]: packages/evokit-grid/
+[grid]: /packages/evokit-grid/
 
 !> DEPRECATED
 

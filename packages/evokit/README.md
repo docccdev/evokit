@@ -1,10 +1,9 @@
 [css-modules]: //github.com/css-modules/css-modules
-
 [react]: //www.npmjs.com/package/react
 [prop-types]: //www.npmjs.com/package/prop-types
 
-[create-block]: /docs/base/create-block
-[with-props]: /docs/base/with-props
+[create-block]: /docs/base/create-block.md
+[with-props]: /docs/base/with-props.md
 
 # EvoKit
 

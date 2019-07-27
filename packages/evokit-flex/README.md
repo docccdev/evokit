@@ -1,13 +1,13 @@
+[evokit]: /packages/evokit/
+
 [react]: //www.npmjs.com/package/react
 [prop-types]: //www.npmjs.com/package/prop-types
-
-[evokit]: /packages/evokit/
 [css-variable-usage]: //w3schools.com/css/css3_variables.asp
 [html-all-tags]: //www.w3schools.com/tags/default.asp
 
-[installation]: docs/getting-started/installation.md
-[quik-start]: docs/getting-started/quick-start.md
-[use-props]: docs/getting-started/props.md
+[installation]: /docs/getting-started/installation.md
+[quik-start]: /docs/getting-started/quick-start.md
+[use-props]: /docs/getting-started/props.md
 
 [flex-tag]: #flex-tag
 

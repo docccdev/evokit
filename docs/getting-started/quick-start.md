@@ -1,4 +1,4 @@
-[evokit-text]: packages/evokit-text/
+[evokit-text]: /packages/evokit-text/
 [advanced-mode]: #_2-advanced
 
 # Quick start

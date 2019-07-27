@@ -2,6 +2,6 @@
 
 * [THEMING](/docs/base/theme.md)
 
-* [EXAMPLES](docs/examples/)
+* [EXAMPLES](/docs/examples/)
 
-* [CHANGELOG](CHANGELOG)
+* [CHANGELOG](/CHANGELOG.md)

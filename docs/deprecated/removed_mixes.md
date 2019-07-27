@@ -1,7 +1,7 @@
 [mix-round]: #mix-round
 [mix-width]: #mix-width
 
-[griditem]: packages/evokit-grid/#griditem
+[griditem]: /packages/evokit-grid/#griditem
 
 
 !> DEPRECATED

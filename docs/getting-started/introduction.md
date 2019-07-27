@@ -1,4 +1,14 @@
+[evokit]: /packages/evokit/
+[evokit-body]: /packages/evokit-body/
+[evokit-box]: /packages/evokit-box/
+[evokit-flex]: /packages/evokit-flex/
 [evokit-grid]: /packages/evokit-grid/
+[evokit-image]: /packages/evokit-image/
+[evokit-line]: /packages/evokit-line/
+[evokit-link]: /packages/evokit-link/
+[evokit-list]: /packages/evokit-list/
+[evokit-picture]: /packages/evokit-picture/
+[evokit-text]: /packages/evokit-text/
 
 # Introduction
 
@@ -9,19 +19,19 @@ Divide the user interface into independent blocks.
 ## Packages list
 
 Core:
-  * [evokit](packages/evokit/)
+  * [evokit]
 
 Blocks:
-  * [evokit-body](packages/evokit-body/)
-  * [evokit-box](packages/evokit-box/)
-  * [evokit-flex](packages/evokit-flex/)
-  * [evokit-grid](packages/evokit-grid/)
-  * [evokit-image](packages/evokit-image/)
-  * [evokit-line](packages/evokit-line/)
-  * [evokit-link](packages/evokit-link/)
-  * [evokit-list](packages/evokit-list/)
-  * [evokit-picture](packages/evokit-picture/)
-  * [evokit-text](packages/evokit-text/)
+  * [evokit-body]
+  * [evokit-box]
+  * [evokit-flex]
+  * [evokit-grid]
+  * [evokit-image]
+  * [evokit-line]
+  * [evokit-link]
+  * [evokit-list]
+  * [evokit-picture]
+  * [evokit-text]
 
 ### Let's look at an example of creating a three-column list of product list with 10px indentation between cells
 

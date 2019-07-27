@@ -5,7 +5,7 @@
 [postcss]: //postcss.org
 [postcss-preset-env]: //preset-env.cssdb.org
 
-[create_theme]: docs/base/theme
+[create_theme]: /docs/base/theme.md
 
 [body-tag]: #body-tag
 [body-section-tag]: #body-section-tag

@@ -11,4 +11,4 @@
 * Basis for creating an interface
 
 [GITHUB](https://github.com/docccdev/evokit)
-[README](docs/getting-started/introduction.md)
+[README](/docs/getting-started/introduction.md)

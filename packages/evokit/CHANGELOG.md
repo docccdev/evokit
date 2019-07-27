@@ -1,24 +1,24 @@
-[panel]: docs/deprecated/removed_panel.md
-[tags]: docs/deprecated/removed_tags.md
-[width]: docs/deprecated/removed_width.md
-[mixes]: docs/deprecated/removed_mixes.md
-[sizes]: docs/deprecated/removed_sizes.md
+[panel]: /docs/deprecated/removed_panel.md
+[tags]: /docs/deprecated/removed_tags.md
+[width]: /docs/deprecated/removed_width.md
+[mixes]: /docs/deprecated/removed_mixes.md
+[sizes]: /docs/deprecated/removed_sizes.md
 
-[media]: docs/getting-started/media.md
-[text]: docs/base/text.md
-[colors]: docs/base/colors.md
-[create_theme]: docs/base/theme
+[media]: /docs/getting-started/media.md
+[text]: /docs/base/text.md
+[colors]: /docs/base/colors.md
+[create_theme]: /docs/base/theme.md
 
-[evokit]: packages/evokit/
-[body]: packages/evokit-body/
-[box]: packages/evokit-box/
-[grid]: packages/evokit-grid/
-[image]: packages/evokit-image/
-[line]: packages/evokit-line/
-[link]: packages/evokit-link/
-[list]: packages/evokit-list/
-[picture]: packages/evokit-picture/
-[text]: packages/evokit-text/
+[evokit]: /packages/evokit/
+[body]: /packages/evokit-body/
+[box]: /packages/evokit-box/
+[grid]: /packages/evokit-grid/
+[image]: /packages/evokit-image/
+[line]: /packages/evokit-line/
+[link]: /packages/evokit-link/
+[list]: /packages/evokit-list/
+[picture]: /packages/evokit-picture/
+[text]: /packages/evokit-text/
 
 [issues/3]: //github.com/docccdev/evokit/issues/3
 
@@ -26,19 +26,19 @@
 
 !> In version 3.0.0 there are no more UI blocks, they are all in separate packages, please update carefully.
 
-#### 3.0.3 *(11.07.2019)*
+### 3.0.3 *(11.07.2019)*
 
 - Minor improvement
 
-#### 3.0.2 *(04.07.2019)*
+### 3.0.2 *(04.07.2019)*
 
 - Fixed default prop `className` for css modules Blocks [#3][issues/3]
 
-#### 3.0.1 *(19.06.2019)*
+### 3.0.1 *(19.06.2019)*
 
 - Added function `withProps`
 
-#### 3.0.0
+### 3.0.0
 
 - **Added** New core [evokit][evokit].
 - **Added** Separated all UI blocks in packages:
@@ -93,15 +93,15 @@
 <Grid.Item grid-item-width={val}>
 ```
 
-#### 2.1.5
+### 2.1.5
 - Init `CSSModules`.
 
 
-#### 2.1.4
+### 2.1.4
 - Создан `theme-template.css` для [create_theme].
 
 
-#### 2.1.3
+### 2.1.3
 - Добавлено свойство `body-color` для блока [Body][body].
 - Добавлена в конфиг переменная `--ek-body-font-family` для блока [Body][body].
 - Удален цвет фона и текста по умолчанию для [Body][body].
@@ -110,28 +110,28 @@
 - Исправлена проблема с `background gradient`.
 
 
-#### 2.1.2
+### 2.1.2
 - Для блока [Box][box] свойство `box-width` заменено на `mix-width`.
 - Для элемента [Grid.Item][grid] свойство `grid-width` заменено на `mix-width`.
 
 
-#### 2.1.1
+### 2.1.1
 - Исправлено очищение [Mixes][mixes] свойств.
 
 
-#### 2.1.0
+### 2.1.0
 - Добавлены [Mixes][mixes].
 - Для блока [Box][box] свойства `box-round` и `box-round-*` заменены на `mix-round` и `mix-round-*`.
 - Для блока [Image][image] свойства `image-round` и `image-round-*` заменены на `mix-round` и `mix-round-*`.
 - Для блока [Picture][picture] свойства `picture-round` и `picture-round-*` заменены на `mix-round` и `mix-round-*`.
 
 
-#### 2.0.9
+### 2.0.9
 - Удален модификатор `picture-size` для блока [picture].
 - Для блоков [image], [picture] добавлен модификатор `*-fit`:
 
 
-#### 2.0.8
+### 2.0.8
 - Добавлено значение `full` для модификатора`*-round` блока [box].
 - Удален модификатор `picture-style` для блока [picture].
 - Елемент `<Picture.Item />` блока [picture] вынесен отдельно и обязателен для использования.
@@ -147,39 +147,39 @@
     - `*-round-bottom-right`
 
 
-#### 2.0.7
+### 2.0.7
 - Исправлен импорт `React` для `Example` блока.
 
 
-#### 2.0.6
+### 2.0.6
 - Добавлен модификатор `grid-width='auto'` и `grid-column='auto'` для блока [grid].
 - Добавлен модификатор `box-width='auto'` для блока [box].
 
 
-#### 2.0.5
+### 2.0.5
 - Исправлена ошибка рендера [picture][picture].
 - Добавлен файл со всеми темами `dist/themes.css`.
 
 
-#### 2.0.4
+### 2.0.4
 - Добавлен `Example` блок для документации.
 
 
-#### 2.0.3
+### 2.0.3
 - Добавлен модификатор `background` для блока [body][body].
 
 
-#### 2.0.2
+### 2.0.2
 - Исправлен баг в `theme.warning.css`.
 - Добавлен дефолтный `line-height` для [text][text], [link][link].
 - Исправлен модификатор `width` для jsx блоков [box][box].
 
 
-#### 2.0.1
+### 2.0.1
 - Исправлен баг в темах для [box][box], [grid][grid], [list][list].
 
 
-#### 2.0.0
+### 2.0.0
 - Удален блок [panel][panel].
 - Удален блок [tags][tags].
 - Переименованные переменные `evokit.config.js`:
@@ -262,24 +262,24 @@
     - `theme.warning.css`
 
 
-#### 1.1.6
+### 1.1.6
 - Исправлен `evokit.config.js`.
 
 
-#### 1.1.5
+### 1.1.5
 - Исправлены модификаторы ширины для [grid].
 
 
-#### 1.1.4
+### 1.1.4
 - Добавлен `line-height: var(--EKLineHeight)` для [body][body].
 - Исправлены модификаторы ширины для [grid].
 
 
-#### 1.1.3
+### 1.1.3
 - Откат jsx блоков с `React.PureComponent` на `React.Component`.
 
 
-#### 1.1.2
+### 1.1.2
 - Обновлен `evokit.config.js`.
 - Обновлен `package.json`.
 - Изменен дефолтный префикс для всех`jsx` блоков c `ek-` на `{blockName}-`, пример:
@@ -289,7 +289,7 @@
     - `<Text text-tag='h1' text-size='h1'>...</Text>`
 
 
-#### 1.1.1
+### 1.1.1
 - Добавлены медиа параметрами для модификаторов ширины `*-expand`.
 - Удалены отступы для [body][body].
 - Добавлены модификаторы горизонтальных отступов для [body][body]:
@@ -305,25 +305,25 @@
     - Переименовано `EKMediaXxlarge` -> `EKMediaHuge`
 
 
-#### 1.1.0
+### 1.1.0
 - Установлен дефолтный префикс `ek-` для css класов
 
 
-#### 1.0.12
+### 1.0.12
 - Исправлены внешние зависимости. В версии `1.0.11` была сломана `commonjs` сборка
 
 
-#### 1.0.11
+### 1.0.11
 - Библиотека стала доступна для внешнего подключения `window.EvoKit`
 - Блоки стали `PureComponent`
 
 
-#### 1.0.10
+### 1.0.10
 - Добавлены модификаторы цвета [line][line]:
     - `.ek-line_color_*`
 
 
-#### 1.0.9
+### 1.0.9
 - Добавлены модификаторы для [text][text]:
     - `.ek-text_transform_none`
     - `.ek-text_transform_capitalize`
@@ -331,7 +331,7 @@
     - `.ek-text_transform_uppercase`
 
 
-#### 1.0.8
+### 1.0.8
 - Добавлены модификаторы `position` для [box][box]:
     - `.ek-box_position_absolute`
     - `.ek-box_position_fixed`
@@ -350,21 +350,21 @@
 - Добавлен модификатор `style` для [box][box]:
     - `.ek-box_style_round`
 
-#### 1.0.7
+### 1.0.7
 - Установлен дефолтный class prefix `ek-`.
 
 
-#### 1.0.6
+### 1.0.6
 - Добавлены media модификаторы для:
     - `ek-text_align_*`
     - `ek-text_valign_*`
 
 
-#### 1.0.5
+### 1.0.5
 - Удалена переменная `--EKFontFamily`, используется `system-ui`.
 
 
-#### 0.1.59 beta (24.05.2018)
+### 0.1.59 beta (24.05.2018)
 - Добавлен белый цвет текста [colors][colors]:
     - `.ek-text_color_white`
     - `.ek-link_color_white`
@@ -381,17 +381,17 @@
     - `.ek-box_display_none`
 
 
-#### 0.1.58 beta (25.04.2018)
+### 0.1.58 beta (25.04.2018)
 - Fix warning `Unknown prop domRef on <div> tag`
 
 
-#### 0.1.57 beta (25.04.2018)
+### 0.1.57 beta (25.04.2018)
 - Добавлен метов `domRef` для всех `jsx` блоков, пример: `domRef={(node) => this.node = node}`
 - Добавлен новый блок в `jsx`:
      - [UiTags][tags]
 
 
-#### 0.1.56 beta (20.03.2018)
+### 0.1.56 beta (20.03.2018)
 - Блок [link][link] получил свойство `display: inline` и базовый `line-height: 1.3em`.
 - Добавлен модификатор для [link][link]:
     - `.ek-link_style_multi-line`
@@ -403,13 +403,13 @@
     - `.ek-text_align_*`
     - `.ek-text_wrap_*`
 
-#### 0.1.55 beta (14.03.2018)
+### 0.1.55 beta (14.03.2018)
 - Добавлены модификаторы `display` для `jsx` блоков:
      - [UiBox][box]
      - [UiText][text]
 
 
-#### 0.1.54 beta (14.03.2018)
+### 0.1.54 beta (14.03.2018)
 - Изменен тег c `<div>` на `<span>` для jsx компонента [UiText][text].
 - Изменен тег c `<a>` на `<hr>` для jsx компонента [UiLine][line].
 - Блок [box][box] получил свойство `display: block`.
@@ -420,7 +420,7 @@
 - Добавлены модификаторы отображения [text][text]:
     - `.ek-text_display_*`
 
-#### 0.1.53 beta (12.03.2018)
+### 0.1.53 beta (12.03.2018)
 - Новый раздел [colors][colors].
 - Изменен модификатор насыщенности с `regular` на `base` для [text][text].
 - Установлен базовый `font-weight: 400` для [body][body].
@@ -435,33 +435,33 @@
     - `.ek-link_weight_*`
 
 
-#### 0.1.52 beta (19.01.2018)
+### 0.1.52 beta (19.01.2018)
 - Добавлен новый блок в `jsx`:
      - [UiImage][image]
 
 
-#### 0.1.51 beta (14.12.2017)
+### 0.1.51 beta (14.12.2017)
 - Новый блок [tags][tags].
 
 
-#### 0.1.50 beta (27.09.2017)
+### 0.1.50 beta (27.09.2017)
 - Добавлены модификаторы переноса [grid][grid]:
     - `.ek-grid_wrap_nowrap`
     - `.ek-grid_wrap_wrap`
     - `.ek-grid_wrap_wrap-reverse`
 
 
-#### 0.1.49 beta (14.09.2017)
+### 0.1.49 beta (14.09.2017)
 - Добавлены модификаторы стиля для [line][line]:
     - `.ek-line_style_dotted`
     - `.ek-line_style_dashed`
 
 
-#### 0.1.48 beta (13.09.2017)
+### 0.1.48 beta (13.09.2017)
 - Исправлены названия компононетов для `React Developer Tools`.
 
 
-#### 0.1.46 beta (06.09.2017)
+### 0.1.46 beta (06.09.2017)
 - Оптимизирован размер `.js` бандла.
 - Добавлены модификаторы в `jsx` для блока [picture][picture]:
     - `ek-size`
@@ -470,12 +470,12 @@
     - [UiImage][image]
 
 
-#### 0.1.45 beta (04.09.2017)
+### 0.1.45 beta (04.09.2017)
 - Добавлен новый блок в `jsx`:
      - [UiList][list]
 
 
-#### 0.1.44 beta (31.08.2017)
+### 0.1.44 beta (31.08.2017)
 - Добавлены блоки `jsx`:
      - [UiGrid][grid]
      - [UiPanel][panel]
@@ -486,18 +486,18 @@
      - [UiLine][line]
 
 
-#### 0.1.43 beta (30.08.2017)
+### 0.1.43 beta (30.08.2017)
 - Исправлены стили  [picture][picture].
 - Добавлен модификатор закругления для [picture][picture]:
     - `.ek-picture_size_cover`
     - `.ek-picture_style_round`
 
 
-#### 0.1.42 beta (28.08.2017)
+### 0.1.42 beta (28.08.2017)
 - Новый блок [image][image].
 
 
-#### 0.1.41 beta (16.08.2017)
+### 0.1.41 beta (16.08.2017)
 - Добавлены два цвета для [text][text]:
     - `.ek-text_color_red`
     - `.ek-text_color_yellow`
@@ -512,18 +512,18 @@
     - `.ek-list_color_error`
 
 
-#### 0.1.40 beta (10.08.2017)
+### 0.1.40 beta (10.08.2017)
 - **УДАЛЕН** блок `.ek-page`
 - **УДАЛЕН** блок `.ek-title-*`
 - **УДАЛЕН** блок `.ek-text-*`
 
 
-#### 0.1.39 beta (03.08.2017)
+### 0.1.39 beta (03.08.2017)
 - Добавлен новый элемент `.ek-body__section` для блока [body][body]:
     - **НЕ ИСПОЛЬЗОВАТЬ** блок `.ek-page`, замените его на `.ek-body__section`
 
 
-#### 0.1.38 beta (28.07.2017)
+### 0.1.38 beta (28.07.2017)
 - Новый блок [body][body].
 - Новый блок [text][text]:
     - **НЕ ИСПОЛЬЗОВАТЬ** вспомогательные классы `.ek-title-*`, замените их на `.ek-text`
@@ -541,18 +541,18 @@
     - `.ek-panel_theme_error`
 
 
-#### 0.1.37 beta (25.07.2017)
+### 0.1.37 beta (25.07.2017)
 - Увеличена скорость компиляции стилей в 6 раз.
 - **Удален** миксин для комбинирования медиа стилей. Использовать [postcss](http://postcss.org) плагин.
 
 
-#### 0.1.36 beta (11.07.2017)
+### 0.1.36 beta (11.07.2017)
 
 - Новое [media][media] правило `xxxlarge`.
 - Добавлен модификатор `.ek-page_size_xxxl` для блока `.ek-page`.
 
 
-#### 0.1.35 beta (20.06.2017)
+### 0.1.35 beta (20.06.2017)
 
 - Исправлен модификатор размера для [list][list].
 - Для модификатора `.ek-list_theme_divider` добавлены [media][media] правила.
@@ -566,7 +566,7 @@
     - `.ek-panel_size_none`
 
 
-#### 0.1.34 beta (19.04.2017)
+### 0.1.34 beta (19.04.2017)
 
 - Добавлены стили `border-radius` и `padding` к элементу`.ek-panel__body` для блока [panel][panel].
 - Добавлен модификатор `.ek-panel_theme_blue` для [panel][panel].
@@ -579,29 +579,29 @@
     - `.ek-box_margin-tb_auto`
     - `.ek-box_margin-lr_auto`
 
-#### 0.1.33 beta (18.04.2017)
+### 0.1.33 beta (18.04.2017)
 
 - Добавлен модификатор `.ek-box_theme_blue` для [box][box].
 - Обновлен список переменных.
 
 
-#### 0.1.32 beta (13.04.2017)
+### 0.1.32 beta (13.04.2017)
 
 - Added [picture][picture] to portable bundle.
 - Added min and max width for `.ek-grid__item`.
 
 
-#### 0.1.31 beta (27.03.2017)
+### 0.1.31 beta (27.03.2017)
 
 - Fixed bug with [grid][grid] item padding when applied theme divider.
 
 
-#### 0.1.30 beta (23.03.2017)
+### 0.1.30 beta (23.03.2017)
 
 - Исправлена ошибка с повторяющимися стилями.
 
 
-#### 0.1.29 beta (23.03.2017)
+### 0.1.29 beta (23.03.2017)
 
 - Big update [grid][grid] divider:
     - `Responsive`
@@ -609,7 +609,7 @@
     - `Horizontal and vertical divider`
 
 
-#### 0.1.28 beta (06.03.2017)
+### 0.1.28 beta (06.03.2017)
 
 - Added font weight class for [text][text]:
     - `.ek-text-thin`
@@ -619,7 +619,7 @@
     - `.ek-text-black`
 
 
-#### 0.1.27 beta (06.03.2017)
+### 0.1.27 beta (06.03.2017)
 
 - Добавлен модификатор `.ek-box_theme_transparent` для [box][box].
 - Добавлен модификатор `.ek-panel_theme_transparent` для [panel][panel].
@@ -627,7 +627,7 @@
 - Added [media][media] rules for all [panel][panel] modifiers.
 
 
-#### 0.1.26 beta (01.03.2017)
+### 0.1.26 beta (01.03.2017)
 
 - Добавлен цвет текста `.ek-text-muted` для [text][text].
 - Добавлен модификатор `.ek-panel_style_border` для [panel][panel].
@@ -635,7 +635,7 @@
 - Reset margin-bottom for `.ek-grid_theme_divider`.
 
 
-#### 0.1.25 beta (20.02.2017)
+### 0.1.25 beta (20.02.2017)
 
 - Added modifiers for [grid][grid]:
     - `.ek-grid_direction_row`
@@ -647,7 +647,7 @@
 - Added [media][media] rules for all grid modifiers.
 
 
-#### 0.1.24 beta (06.02.2017)
+### 0.1.24 beta (06.02.2017)
 
 - Новый блок [link][link].
 - Added modifiers for [box][box] padding:
@@ -662,7 +662,7 @@
     - `.ek-box_margin-bottom_*`
 
 
-#### 0.1.23 beta (24.01.2017)
+### 0.1.23 beta (24.01.2017)
 
 - Новый блок [picture][picture].
 - Added ek-width class `.ek-width-auto`.
@@ -672,14 +672,14 @@
 - Changed the design documentation and add preview block.
 
 
-#### 0.1.21 beta (16.01.2017)
+### 0.1.21 beta (16.01.2017)
 
 - Added modifier `.ek-grid_column_*` for [grid][grid].
 - Added description for [media][media] rules.
 - Changed all media class from `.ek-width-xl-1-2` to `.ek-width-1-2@xlarge`.
 
 
-#### 0.1.20 beta (13.01.2017)
+### 0.1.20 beta (13.01.2017)
 
 - Новый блок [box][box].
 - **УДАЛЕН** блок `.ek-block`.

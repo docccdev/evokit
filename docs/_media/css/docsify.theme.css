@@ -138,7 +138,11 @@ li input[type=checkbox] {
     color: inherit;
     font-size: 16px;
     text-decoration: none;
-    transition: color .3s
+}
+
+.app-nav a:hover {
+    text-decoration: none;
+    border-bottom: 1px solid var(--theme-color,#42b983)
 }
 
 .app-nav a.active,.app-nav a:hover {
@@ -146,6 +150,7 @@ li input[type=checkbox] {
 }
 
 .app-nav a.active {
+    cursor: default;
     border-bottom: 2px solid var(--theme-color,#42b983)
 }
 

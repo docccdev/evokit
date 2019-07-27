@@ -1,7 +1,7 @@
-[box]: packages/evokit-box/
-[text]: packages/evokit-text/
-[link]: packages/evokit-link/
-[list]: packages/evokit-list/
+[box]: /packages/evokit-box/
+[text]: /packages/evokit-text/
+[link]: /packages/evokit-link/
+[list]: /packages/evokit-list/
 
 !> DEPRECATED
 
