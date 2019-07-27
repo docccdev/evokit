@@ -32,7 +32,7 @@ See example [create block][create-block]
 - `tagName` - string, html tag
 - `blockName` - string, block name
 - `blockMods` - array of string, block modifier key list
-- `preset` - object, default value: `{ b: 'ek-', m: '_', v: '_', css: null}`
+- `preset` - object, default value: `{ b: 'ek-', m: '_', v: '_', css: null }`
 
 ```jsx
 import { createBlock } from 'evokit';
