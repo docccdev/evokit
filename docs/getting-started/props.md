@@ -19,7 +19,7 @@ For examples, consider the use base props on the [Box][evokit-box] block.
 The block will have a tag `span`
 
 ```jsx
-import { Box } from 'evokit-Box';
+import { Box } from 'evokit-box';
 import 'evokit-box/style.css';
 
 // input:
@@ -33,7 +33,7 @@ import 'evokit-box/style.css';
 The passed function will receive a `target` argument that refers to the current DOM node.
 
 ```jsx
-import { Box } from 'evokit-Box';
+import { Box } from 'evokit-box';
 import 'evokit-box/style.css';
 
 <Box box-ref={(target) => console.log(target)} />
@@ -48,8 +48,8 @@ By default, uses the rules BEM naming and class prefix `ek-`
 ```js
 {
     b: 'ek-', // block class name prefix => {b}blockName => ek-blockName
-    m: '_', // element modifier name separator => blockName{m}modName => block_modName
-    v: '_', // element modifier value separator => modName{v}modVal => modName_modVal
+    m: '_', // block modifier name separator => blockName{m}modName => block_modName
+    v: '_', // block modifier value separator => modName{v}modVal => modName_modVal
     css: null // object CSS Module classes
 }
 ```
@@ -57,7 +57,7 @@ By default, uses the rules BEM naming and class prefix `ek-`
 Example CSS Module
 
 ```jsx
-import { Box } from 'evokit-Box';
+import { Box } from 'evokit-box';
 import boxCss from 'evokit-box/style.css'; // return for example {'ek-box': 'ek-box-hF7j'};
 
 // input:
