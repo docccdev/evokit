@@ -78,7 +78,7 @@ export { Text };
 </details>
 
 <details open>
-<summary>UI/App.jsx</summary>
+<summary>App.jsx</summary>
 
 ```jsx
 import React from 'react';
