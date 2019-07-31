@@ -12,8 +12,9 @@
 [flex-tag]: #flex-tag
 
 [flex-display]: #flex-display
-[flex-align-items]: #flex-align-items
 [flex-align-content]: #flex-align-content
+[flex-align-items]: #flex-align-items
+[flex-align-self]: #flex-align-self
 [flex-justify-content]: #flex-justify-content
 [flex-direction]: #flex-direction
 [flex-wrap]: #flex-wrap
@@ -68,8 +69,9 @@ import 'evokit-flex/style.css';
 | Prop name        | Default value    | Possible value | Description |
 |------------------|------------------|----------------|-------------|
 | [flex-display]         | `flex`     | `flex` `flex-inline` `block` `none` | Display type |
-| [flex-align-items]     | `stretch`  | `start` `end` `center` `baseline` `stretch` | Alignment of all items on the cross axis |
 | [flex-align-content]   | `stretch`  | `start` `end` `center` `between` `around` `stretch` | Space between flex lines on the cross axis |
+| [flex-align-items]     | `stretch`  | `start` `end` `center` `baseline` `stretch` | Alignment of all items on the cross axis |
+| [flex-align-self]      | `stretch`  | `start` `end` `center` `baseline` `stretch` | Alignment item on the cross axis |
 | [flex-justify-content] | `start`    | `start` `end` `center` `between` `around` | Alignment of all items on the main axis |
 | [flex-direction]       | `row`      | `row` `row-reverse` `column` `column-reverse` | Direction of all items |
 | [flex-wrap]            | `nowrap`   | `nowrap` `wrap` `wrap-reverse` | Wrap rules |
@@ -116,6 +118,23 @@ Default value `div`
 </Flex>
 ```
 
+### `flex-align-content`
+
+- `start` - Lines are packed toward the start of the flex container
+- `end` - Lines are packed toward the end of the flex container
+- `center` - Lines are packed toward the center of the flex container
+- `between` - Lines are evenly distributed in the flex container. If the leftover free-space is negative or there is only a single flex line in the flex container, this value is identical to flex-start
+- `around` - Lines are evenly distributed in the flex container, with half-size spaces on either end
+- `stretch` - Lines stretch to take up the remaining space
+
+![align-content](_media/align-content.svg)
+
+```jsx
+<Flex flex-align-content='center'>
+    ...
+</Flex>
+```
+
 ### `flex-align-items`
 
 - `start` - The cross-start margin edges of the flex items are flushed with the cross-start edge of the line
@@ -132,19 +151,18 @@ Default value `div`
 </Flex>
 ```
 
-### `flex-align-content`
+### `flex-align-self`
 
-- `start` - Lines are packed toward the start of the flex container
-- `end` - Lines are packed toward the end of the flex container
-- `center` - Lines are packed toward the center of the flex container
-- `between` - Lines are evenly distributed in the flex container. If the leftover free-space is negative or there is only a single flex line in the flex container, this value is identical to flex-start
-- `around` - Lines are evenly distributed in the flex container, with half-size spaces on either end
-- `stretch` - Lines stretch to take up the remaining space
+- `start` - The cross-start margin edges of the flex item are flushed with the cross-start edge of the line
+- `end` - The cross-end margin edges of the flex item are flushed with the cross-end edge of the line
+- `center` - The flex item' margin boxes are centered within the line on the cross-axis
+- `baseline` - All flex item are aligned such that their flex container baselines align
+- `stretch` - Flex item are stretched such that the cross-size of the item's margin box is the same as the line while respecting width and height constraints
 
-![align-content](_media/align-content.svg)
+![align-self](_media/align-self.svg)
 
 ```jsx
-<Flex flex-align-content='center'>
+<Flex flex-align-self='center'>
     ...
 </Flex>
 ```

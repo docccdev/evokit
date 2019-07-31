@@ -25,26 +25,6 @@
         display: $value
 
 /**
- * Align items:
- *
- *  - flex_align-items_start
- *  - flex_align-items_end
- *  - flex_align-items_center
- *  - flex_align-items_baseline
- *  - flex_align-items_stretch
- *
- **/
-
-@each $value in (start, end, center, baseline, stretch)
-    @mixin media .flex_align-items_$(value)
-        @if $value == start
-            align-items: flex-start
-        @else if $value == end
-            align-items: flex-end
-        @else
-            align-items: $value
-
-/**
  * Align content:
  *
  *  - flex_align-content_start
@@ -68,6 +48,46 @@
             align-content: space-around
         @else
             align-content: $value
+
+/**
+ * Align items:
+ *
+ *  - flex_align-items_start
+ *  - flex_align-items_end
+ *  - flex_align-items_center
+ *  - flex_align-items_baseline
+ *  - flex_align-items_stretch
+ *
+ **/
+
+@each $value in (start, end, center, baseline, stretch)
+    @mixin media .flex_align-items_$(value)
+        @if $value == start
+            align-items: flex-start
+        @else if $value == end
+            align-items: flex-end
+        @else
+            align-items: $value
+
+/**
+ * Align self:
+ *
+ *  - flex_align-self_start
+ *  - flex_align-self_end
+ *  - flex_align-self_center
+ *  - flex_align-self_baseline
+ *  - flex_align-self_stretch
+ *
+ **/
+
+@each $value in (start, end, center, baseline, stretch)
+    @mixin media .flex_align-self_$(value)
+        @if $value == start
+            align-self: flex-start
+        @else if $value == end
+            align-self: flex-end
+        @else
+            align-self: $value
 
 /**
  * Justify content:
