@@ -34,6 +34,15 @@ See example [create block][create-block]
 - `blockMods` - array of string, block modifier key list
 - `preset` - object, default value: `{ b: 'ek-', m: '_', v: '_', css: null }`
 
+More about preset:
+
+| Key   | Type     | Default value | Description |
+|-------|----------|--------|-------------|
+| `b`   | `string` | `ek-`  | block class name prefix: `{b}blockName` => `ek-blockName` |
+| `m`   | `string` | `_`    | block modifier name separator: `blockName{m}modName` => `blockName_modName` |
+| `v`   | `string` | `_`    | block modifier value separator: `modName{v}modVal` => `modName_modVal` |
+| `css` | `object` | `null` | object [CSS Modules][css-modules] classes |
+
 ```jsx
 import { createBlock } from 'evokit';
 
@@ -69,15 +78,6 @@ const Footer = createBlock('div', 'footer', ['padding'], {
 <Footer /> // <div class="mp-footer"></div>
 <Footer footer-padding='xs' /> // <div class="mp-footer mp-footer_padding_xs"></div>
 ```
-
-More about default preset:
-
-| Key   | Type     | Value | Description |
-|-------|----------|---|-------------|
-| `b`   | `string` | `ek-`  | block class name prefix: `{b}blockName` => `ek-blockName` |
-| `m`   | `string` | `_`    | block modifier name separator: `blockName{m}modName` => `blockName_modName` |
-| `v`   | `string` | `_`    | block modifier value separator: `modName{v}modVal` => `modName_modVal` |
-| `css` | `object` | `null` | object [CSS Modules][css-modules] classes |
 
 ## With props
 
