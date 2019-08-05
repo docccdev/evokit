@@ -50,8 +50,8 @@ const Footer = createBlock('div', 'footer', ['padding']);
 
 CSS Modules with custom class prefix `mp-`:
 
-```js
-// css-modules.css
+```css
+/* css-modules.css */
 
 .mp-footer {}
 .mp-footer_padding_xxl {}
@@ -65,6 +65,9 @@ const Footer = createBlock('div', 'footer', ['padding'], {
     b: 'mp-',
     css: styles,
 });
+
+<Footer /> // <div class="mp-footer"></div>
+<Footer footer-padding='xs' /> // <div class="mp-footer mp-footer_padding_xs"></div>
 ```
 
 More about default preset:
