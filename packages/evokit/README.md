@@ -54,7 +54,7 @@ CSS Modules with custom class prefix `mp-`:
 /* css-modules.css */
 
 .mp-footer {}
-.mp-footer_padding_xxl {}
+.mp-footer_padding_xs {}
 ```
 
 ```jsx
