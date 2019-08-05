@@ -48,7 +48,7 @@ By default, uses the rules BEM naming and class prefix `ek-`
 ```js
 {
     b: 'ek-', // block class name prefix => {b}blockName => ek-blockName
-    m: '_', // block modifier name separator => blockName{m}modName => block_modName
+    m: '_', // block modifier name separator => blockName{m}modName => blockName_modName
     v: '_', // block modifier value separator => modName{v}modVal => modName_modVal
     css: null // object CSS Module classes
 }

@@ -72,7 +72,7 @@ More about default preset:
 | Key   | Type     | Value | Description |
 |-------|----------|---|-------------|
 | `b`   | `string` | `ek-`  | block class name prefix: `{b}blockName` => `ek-blockName` |
-| `m`   | `string` | `_`    | block modifier name separator: `blockName{m}modName` => `block_modName` |
+| `m`   | `string` | `_`    | block modifier name separator: `blockName{m}modName` => `blockName_modName` |
 | `v`   | `string` | `_`    | block modifier value separator: `modName{v}modVal` => `modName_modVal` |
 | `css` | `object` | `null` | object [CSS Modules][css-modules] classes |
 
