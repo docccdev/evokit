@@ -1,7 +1,8 @@
 # EvoKit
 
 Tool for creating UI React blocks.
-Based on the principle of dividing the interface into independent blocks.
+
+**Recipe** : `html` + `css` = `block`
 
 [![](https://img.shields.io/npm/v/evokit.svg)](https://www.npmjs.com/package/evokit)
 
