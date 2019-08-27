@@ -12,10 +12,10 @@
         .label { font-family: sans-serif; font-weight: bold; font-size: 30px; text-anchor: middle; }
         .bg { fill: #888 }
         .border { fill: transparent; }
-        .one   { fill: #fcc; }
+        .one   { fill: #cfc; }
         .two   { fill: #cfc; }
         .three { fill: #ccf; }
-        .four  { fill: #cff; }
+        .four  { fill: #cfc; }
         rect { stroke-width: 2; stroke: #888; }
     </style>
     <svg x='2' y='2' width='250' height='120'>

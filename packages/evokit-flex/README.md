@@ -45,11 +45,11 @@ npm install evokit-flex --save
 > More about [usage][quik-start]
 
 ```jsx
-import { Flex } from 'evokit-flex';
+import { Flex, FlexItem } from 'evokit-flex';
 import 'evokit-flex/style.css';
 
 <Flex>
-    ...
+    <FlexItem>...</FlexItem> // some <Flex.Item>...<Flex.Item>
 </Flex>
 
 ```
@@ -60,21 +60,21 @@ import 'evokit-flex/style.css';
 
 ### [Base][base-props]
 
-| Prop name  | Default value | Possible value             | Description |
-|------------|---------------|----------------------------|-------------|
-| [flex-tag] | `div`         | [html tags][html-all-tags] | HTML tag    |
+| Prop name     | Default value | Possible value             | Description |
+|---------------|---------------|----------------------------|-------------|
+| [flex-tag]    | `div`         | [html tags][html-all-tags] | HTML tag    |
+| flex-item-tag | `div`         | [html tags][html-all-tags] | HTML tag    |
 
 ### [Main][main-props]
 
 | Prop name        | Default value    | Possible value | Description |
 |------------------|------------------|----------------|-------------|
 | [flex-display]         | `flex`     | `flex` `flex-inline` `block` `none` | Display type |
-| [flex-align-content]   | `stretch`  | `start` `end` `center` `between` `around` `stretch` | Space between flex lines on the cross axis |
-| [flex-align-items]     | `stretch`  | `start` `end` `center` `baseline` `stretch` | Alignment of all items on the cross axis |
-| [flex-align-self]      | `stretch`  | `start` `end` `center` `baseline` `stretch` | Alignment item on the cross axis |
-| [flex-justify-content] | `start`    | `start` `end` `center` `between` `around` | Alignment of all items on the main axis |
+| flex-content           | `start`    | `start` `end` `center` `between` `around` `stretch` | Space between flex lines on the cross axis |
+| flex-items             | `start`    | `start` `end` `center` `baseline` `stretch` | Alignment of all items on the cross axis |
 | [flex-direction]       | `row`      | `row` `row-reverse` `column` `column-reverse` | Direction of all items |
-| [flex-wrap]            | `nowrap`   | `nowrap` `wrap` `wrap-reverse` | Wrap rules |
+| [flex-wrap]            | `wrap`   | `nowrap` `wrap` `wrap-reverse` | Wrap rules |
+| flex-item-align        | `start`    | `start` `end` `center` `baseline` `stretch` | Alignment item on the cross axis |
 
 ## Customize
 
