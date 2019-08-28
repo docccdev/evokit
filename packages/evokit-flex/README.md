@@ -22,6 +22,10 @@
 
 [![](https://img.shields.io/npm/v/evokit-flex.svg)](https://www.npmjs.com/package/evokit-flex)
 
+<!--
+[![npm peer dependency version](https://img.shields.io/npm/dependency-version/evokit-flex/peer/evokit)](https://www.npmjs.com/package/evokit)
+-->
+
 The Flex block has an essential role in building layouts
 
 ---
