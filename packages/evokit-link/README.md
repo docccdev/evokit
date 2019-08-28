@@ -1,12 +1,12 @@
 [evokit]: /packages/evokit/
 
-[css-variable]: //caniuse.com/#feat=css-variables
 [css-variable-usage]: //w3schools.com/css/css3_variables.asp
 [html-all-tags]: //www.w3schools.com/tags/default.asp
-[postcss]: //postcss.org
-[postcss-preset-env]: //preset-env.cssdb.org
 
 [create_theme]: /docs/base/theme.md
+[installation]: /docs/getting-started/installation.md
+[quik-start]: /docs/getting-started/quick-start.md
+[use-props]: /docs/getting-started/props.md
 
 [link-tag]: #link-tag
 [link-color]: #link-color
@@ -15,10 +15,6 @@
 [link-valign]: #link-valign
 [link-style]: #link-style
 [link-lheight]: #link-lheight
-
-[base-props]: #base-props
-[main-props]: #main-props
-[color-props]: #color-props
 
 # EvoKit - Link
 
@@ -30,7 +26,7 @@ Used to create link. Contains one element `<Link>`
 
 ## Install
 
-> Peer dependencies [evokit]
+> Peer dependencies [evokit]. More about [install][installation]
 
 ```bash
 npm install evokit-link --save
@@ -38,7 +34,7 @@ npm install evokit-link --save
 
 ## Usage
 
-> The styles use [css-variable] and will work in all modern browsers. If you need to support more old browsers such as Interner Explorer 11 or lower, use a tool [postcss] with [postcss-preset-env] for transforming css into something most browsers can understand.
+> More about [usage][quik-start]
 
 ```jsx
 import { Link } from 'evokit-link';
@@ -52,27 +48,20 @@ import 'evokit-link/style.css';
 
 ## Props
 
-> Also supports other valid props of the React Element
+> Also supports other valid props of the React Element. More about [use props][use-props]
 
-### [Base][base-props]
-
-| Prop name  | Default value | Possible value             | Description |
-|------------|---------------|----------------------------|-------------|
-| [link-tag] | `a`           | [html tags][html-all-tags] | HTML tag    |
-
-### [Main][main-props]
+### `<Link />`
 
 | Prop name      | Default value | Possible value         | Description |
 |----------------|---------------|------------------------|-------------|
+| [link-tag]     | `a`           | [html tags][html-all-tags] | HTML tag    |
 | [link-size]    | `default`     | `default` `small` `big` `h1` `h2` `h3` `h4` `h5` `h6` | Font size |
 | [link-weight]  | `default`     | `default` `thin` `light` `medium` `bold` `black` | Font weight |
 | [link-valign]  | `null`        | `baseline` `bottom` `middle` `sub` `super` `text-bottom` `text-top` `top` | Aligns text vertically |
 | [link-style]   | `null`        | `dotted` `multi-line` | Decoration styles |
 | [link-lheight] | `default`     | `default` `medium` `large` | Line spacing |
 
-### [Color][color-props]
-
-> Use [theming][create_theme] for creating custom colors.
+> Use [theming][create_theme] for creating custom `{THEME_NAME}`.
 
 | Prop name        | Default value  | Possible value | Description  |
 |------------------|----------------|----------------|--------------|
@@ -115,9 +104,7 @@ import 'evokit-link/style.css';
 
 ---
 
-## Base props
-
-### `link-tag`
+## `link-tag`
 
 - Default value `a`
 
@@ -127,10 +114,7 @@ import 'evokit-link/style.css';
 </Link>
 ```
 
-
-## Main props
-
-### `link-size`
+## `link-size`
 
 - `small` - css variable `--ek-link-size-small`, default value: `11px`
 - `default` - css variable `--ek-link-size-default`, default value: `13px`
@@ -148,7 +132,7 @@ import 'evokit-link/style.css';
 </Link>
 ```
 
-### `link-weight`
+## `link-weight`
 
 - `default` - value: `400`
 - `thin` - value: `100`
@@ -163,7 +147,7 @@ import 'evokit-link/style.css';
 </Link>
 ```
 
-### `link-valign`
+## `link-valign`
 
 - `top` - Align the top edge of the element to the top of the tallest line item.
 - `bottom` - Aligns the base of the current element at the bottom of the element of the line below it all
@@ -180,7 +164,7 @@ import 'evokit-link/style.css';
 </Link>
 ```
 
-### `link-style`
+## `link-style`
 
 - `dotted` - dotted style
 - `multi-line` - for multiline links (fix cursor pointer)
@@ -191,7 +175,7 @@ import 'evokit-link/style.css';
 </Link>
 ```
 
-### `link-lheight`
+## `link-lheight`
 
 - `default` - css variable `--ek-link-line-height-default`, default value: `1em`
 - `medium` - css variable `--ek-link-line-height-medium`, default value: `1.25em`
@@ -203,12 +187,9 @@ import 'evokit-link/style.css';
 </Link>
 ```
 
+## `link-color`
 
-## Color props
-
-> Set the THEME NAME depending on the [theming][create_theme]
-
-### `link-color`
+> Set the `THEME_NAME` depending on the [theming][create_theme]
 
 ```jsx
 <Link link-color={THEME_NAME} href='#'>

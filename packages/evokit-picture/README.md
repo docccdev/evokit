@@ -1,22 +1,18 @@
 [evokit]: /packages/evokit/
 
-[css-variable]: //caniuse.com/#feat=css-variables
 [css-variable-usage]: //w3schools.com/css/css3_variables.asp
 [html-all-tags]: //www.w3schools.com/tags/default.asp
-[postcss]: //postcss.org
-[postcss-preset-env]: //preset-env.cssdb.org
 
 [create_theme]: /docs/base/theme.md
+[installation]: /docs/getting-started/installation.md
+[quik-start]: /docs/getting-started/quick-start.md
+[use-props]: /docs/getting-started/props.md
 
 [picture-tag]: #picture-tag
 [picture-item-tag]: #picture-item-tag
 [picture-fit]: #picture-fit
 [picture-round]: #picture-round
 [picture-border]: #picture-border
-
-[base-props]: #base-props
-[main-props]: #main-props
-[color-props]: #color-props
 
 # EvoKit - Picture
 
@@ -28,7 +24,7 @@ Creates a square with an image. Contains two elements `<Picture>` and `<PictureI
 
 ## Install
 
-> Peer dependencies [evokit]
+> Peer dependencies [evokit]. More about [install][installation]
 
 ```bash
 npm install evokit-picture --save
@@ -36,7 +32,7 @@ npm install evokit-picture --save
 
 ## Usage
 
-> The styles use [css-variable] and will work in all modern browsers. If you need to support more old browsers such as Interner Explorer 11 or lower, use a tool [postcss] with [postcss-preset-env] for transforming css into something most browsers can understand.
+> More about [usage][quik-start]
 
 ```jsx
 import { Picture, PictureItem } from 'evokit-picture';
@@ -50,29 +46,27 @@ import 'evokit-picture/style.css';
 
 ## Props
 
-> Also supports other valid props of the React Element
+> Also supports other valid props of the React Element. More about [use props][use-props]
 
-### [Base][base-props]
-
-| Prop name          | Default value | Possible value             | Description |
-|--------------------|---------------|----------------------------|-------------|
-| [picture-tag]      | `picture`     | [html tags][html-all-tags] | HTML tag    |
-| [picture-item-tag] | `img`         | [html tags][html-all-tags] | HTML tag    |
-
-### [Main][main-props]
+### `<Picture />`
 
 | Prop name       | Default value | Possible value | Description |
 |-----------------|---------------|----------------|-------------|
+| [picture-tag]   | `picture`     | [html tags][html-all-tags] | HTML tag    |
 | [picture-fit]   | `null`        | `none` `fill` `contain` `cover` `scale-down`    | Filling the container relative to its height and width |
 | [picture-round] | `none`        | `none` `full` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Corner rounding |
 
-### [Color][color-props]
-
-> Use [theming][create_theme] for creating custom colors.
+> Use [theming][create_theme] for creating custom `{THEME_NAME}`.
 
 | Prop name        | Default value  | Possible value | Description  |
 |------------------|----------------|----------------|--------------|
 | [picture-border] | `null`         | `{THEME_NAME}` | Border color |
+
+### `<PictureItem />`
+
+| Prop name          | Default value | Possible value             | Description |
+|--------------------|---------------|----------------------------|-------------|
+| [picture-item-tag] | `img`         | [html tags][html-all-tags] | HTML tag    |
 
 ## Customize
 
@@ -103,9 +97,7 @@ import 'evokit-picture/style.css';
 
 ---
 
-## Base props
-
-### `picture-tag`
+## `picture-tag`
 
 - Default value `picture`
 
@@ -115,7 +107,7 @@ import 'evokit-picture/style.css';
 </Picture>
 ```
 
-### `picture-item-tag`
+## `picture-item-tag`
 
 - Default value `img`
 
@@ -125,10 +117,7 @@ import 'evokit-picture/style.css';
 </Picture>
 ```
 
-
-## Main props
-
-### `picture-fit`
+## `picture-fit`
 
 - `none` - Does not change its size and fills the space
 - `fill` - Resizes to fill the whole area
@@ -142,7 +131,7 @@ import 'evokit-picture/style.css';
 </Picture>
 ```
 
-### `picture-round`
+## `picture-round`
 
 > Has advanced props:
 > - `picture-round` - `top`, `right`, `bottom` or `left` for example **`picture-round-right`**
@@ -165,12 +154,9 @@ import 'evokit-picture/style.css';
 </Picture>
 ```
 
+## `picture-border`
 
-## Color props
-
-> Set the THEME NAME depending on the [theming][create_theme]
-
-### `picture-border`
+> Set the `THEME_NAME` depending on the [theming][create_theme]
 
 > Has advanced props:
 > - `picture-border` - `top`, `right`, `bottom` or `left` for example **`picture-border-right`**

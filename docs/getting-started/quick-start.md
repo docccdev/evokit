@@ -1,7 +1,13 @@
 [evokit-text]: /packages/evokit-text/
 [advanced-mode]: #_2-advanced
 
+[css-variable]: //caniuse.com/#feat=css-variables
+[postcss]: //postcss.org
+[postcss-preset-env]: //preset-env.cssdb.org
+
 # Quick start
+
+> The blocks styles use [css-variable] and will work in all modern browsers. If you need to support more old browsers such as Interner Explorer 11 or lower, use a tool [postcss] with [postcss-preset-env] for transforming css into something most browsers can understand.
 
 ## 1. Simple usage
 

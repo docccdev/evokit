@@ -1,12 +1,12 @@
 [evokit]: /packages/evokit/
 
-[css-variable]: //caniuse.com/#feat=css-variables
 [css-variable-usage]: //w3schools.com/css/css3_variables.asp
 [html-all-tags]: //www.w3schools.com/tags/default.asp
-[postcss]: //postcss.org
-[postcss-preset-env]: //preset-env.cssdb.org
 
 [create_theme]: /docs/base/theme.md
+[installation]: /docs/getting-started/installation.md
+[quik-start]: /docs/getting-started/quick-start.md
+[use-props]: /docs/getting-started/props.md
 
 [text-tag]: #text-tag
 [text-color]: #text-color
@@ -19,21 +19,17 @@
 [text-transform]: #text-transform
 [text-lheight]: #text-lheight
 
-[base-props]: #base-props
-[main-props]: #main-props
-[color-props]: #color-props
-
 # EvoKit - Text
 
 [![](https://img.shields.io/npm/v/evokit-text.svg)](https://www.npmjs.com/package/evokit-text)
 
-Used for text.  Contains one element `<Text>`
+Used for text. Contains one element `<Text>`
 
 ---
 
 ## Install
 
-> Peer dependencies [evokit]
+> Peer dependencies [evokit]. More about [install][installation]
 
 ```bash
 npm install evokit-text --save
@@ -41,7 +37,7 @@ npm install evokit-text --save
 
 ## Usage
 
-> The styles use [css-variable] and will work in all modern browsers. If you need to support more old browsers such as Interner Explorer 11 or lower, use a tool [postcss] with [postcss-preset-env] for transforming css into something most browsers can understand.
+> More about [usage][quik-start]
 
 ```jsx
 import { Text } from 'evokit-text';
@@ -54,18 +50,13 @@ import 'evokit-text/style.css';
 
 ## Props
 
-> Also supports other valid props of the React Element
+> Also supports other valid props of the React Element. More about [use props][use-props]
 
-### [Base][base-props]
-
-| Prop name   | Default value | Possible value             | Description |
-|-------------|---------------|----------------------------|-------------|
-| [text-tag]  | `span`        | [html tags][html-all-tags] | HTML tag    |
-
-### [Main][main-props]
+### `<Text />`
 
 | Prop name        | Default value | Possible value   | Description |
 |------------------|---------------|------------------|-------------|
+| [text-tag]       | `span`        | [html tags][html-all-tags] | HTML tag    |
 | [text-size]      | `default`     | `default` `small` `big` `h1` `h2` `h3` `h4` `h5` `h6` | Font size |
 | [text-weight]    | `default`     | `default` `thin` `light` `medium` `bold` `black` | Font weight |
 | [text-align]     | `left`        | `left` `center` `right` `justify` | Horizontal alignment |
@@ -75,9 +66,7 @@ import 'evokit-text/style.css';
 | [text-transform] | `none`        | `none` `capitalize` `lowercase` `uppercase` | Text case conversion |
 | [text-lheight]   | `default`     | `default` `medium` `large` | Line spacing |
 
-### [Color][color-props]
-
-> Use [theming][create_theme] for creating custom colors.
+> Use [theming][create_theme] for creating custom `{THEME_NAME}`.
 
 | Prop name        | Default value | Possible value | Description  |
 |------------------|---------------|----------------|--------------|
@@ -120,9 +109,7 @@ import 'evokit-text/style.css';
 
 ---
 
-## Base props
-
-### `text-tag`
+## `text-tag`
 
 - Default value `span`
 
@@ -132,10 +119,7 @@ import 'evokit-text/style.css';
 </Text>
 ```
 
-
-## Main props
-
-### `text-size`
+## `text-size`
 
 - `small` - css variable `--ek-text-size-small`, default value: `11px`
 - `default` - css variable `--ek-text-size-default`, default value: `13px`
@@ -153,7 +137,7 @@ import 'evokit-text/style.css';
 </Text>
 ```
 
-### `text-weight`
+## `text-weight`
 
 - `default` - value: `400`
 - `thin` - value: `100`
@@ -168,7 +152,7 @@ import 'evokit-text/style.css';
 </Text>
 ```
 
-### `text-align`
+## `text-align`
 
 - `left` - Align text to the left
 - `center` - Center alignment of text
@@ -179,7 +163,7 @@ import 'evokit-text/style.css';
 <Text text-align='...'></Text>
 ```
 
-### `text-valign`
+## `text-valign`
 
 - `top` - Align the top edge of the element to the top of the tallest line item.
 - `bottom` - Aligns the base of the current element at the bottom of the element of the line below it all
@@ -196,7 +180,7 @@ import 'evokit-text/style.css';
 </Text>
 ```
 
-### `text-wrap`
+## `text-wrap`
 
 - `nowrap` - All text is displayed in one line
 - `break` - Line wrapping is added automatically
@@ -210,7 +194,7 @@ import 'evokit-text/style.css';
 </Text>
 ```
 
-### `text-style`
+## `text-style`
 
 - `italic` - Cursive text
 - `strike` - Creates strikethrough text
@@ -223,7 +207,7 @@ import 'evokit-text/style.css';
 </Text>
 ```
 
-### `text-transform`
+## `text-transform`
 
 - `none` - Does not change the case of characters
 - `capitalize` - The first character of each word in the sentence will be capitalized
@@ -236,7 +220,7 @@ import 'evokit-text/style.css';
 </Text>
 ```
 
-### `text-lheight`
+## `text-lheight`
 
 - `default` - css variable `--ek-text-line-height-default`, default value: `1em`
 - `medium` - css variable `--ek-text-line-height-medium`, default value: `1.25em`
@@ -248,12 +232,9 @@ import 'evokit-text/style.css';
 </Text>
 ```
 
+## `text-color`
 
-## Color props
-
-> Set the THEME NAME depending on the [theming][create_theme]
-
-### `text-color`
+> Set the `THEME_NAME` depending on the [theming][create_theme]
 
 ```jsx
 <Text text-color={THEME_NAME}>

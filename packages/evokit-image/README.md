@@ -1,12 +1,12 @@
 [evokit]: /packages/evokit/
 
-[css-variable]: //caniuse.com/#feat=css-variables
 [css-variable-usage]: //w3schools.com/css/css3_variables.asp
 [html-all-tags]: //www.w3schools.com/tags/default.asp
-[postcss]: //postcss.org
-[postcss-preset-env]: //preset-env.cssdb.org
 
 [create_theme]: /docs/base/theme.md
+[installation]: /docs/getting-started/installation.md
+[quik-start]: /docs/getting-started/quick-start.md
+[use-props]: /docs/getting-started/props.md
 
 [image-tag]: #image-tag
 [image-align]: #image-align
@@ -16,10 +16,6 @@
 [image-width]: #image-width
 [image-round]: #image-round
 [image-border]: #image-border
-
-[base-props]: #base-props
-[main-props]: #main-props
-[color-props]: #color-props
 
 # EvoKit - Image
 
@@ -31,7 +27,7 @@ Used to display the image. Contains one element `<Image>`
 
 ## Install
 
-> Peer dependencies [evokit]
+> Peer dependencies [evokit]. More about [install][installation]
 
 ```bash
 npm install evokit-image --save
@@ -39,7 +35,7 @@ npm install evokit-image --save
 
 ## Usage
 
-> The styles use [css-variable] and will work in all modern browsers. If you need to support more old browsers such as Interner Explorer 11 or lower, use a tool [postcss] with [postcss-preset-env] for transforming css into something most browsers can understand.
+> More about [usage][quik-start]
 
 ```jsx
 import { Image } from 'evokit-image';
@@ -51,18 +47,13 @@ import 'evokit-image/style.css';
 
 ## Props
 
-> Also supports other valid props of the React Element
+> Also supports other valid props of the React Element. More about [use props][use-props]
 
-### [Base][base-props]
-
-| Prop name   | Default value | Possible value             | Description |
-|-------------|---------------|----------------------------|-------------|
-| [image-tag] | `img`         | [html tags][html-all-tags] | HTML tag    |
-
-### [Main][main-props]
+### `<Image />`
 
 | Prop name      | Default value | Possible value          | Description      |
 |----------------|---------------|-------------------------|------------------|
+| [image-tag]    | `img`         | [html tags][html-all-tags] | HTML tag    |
 | [image-align]  | `null`        | `left` `center` `right` | Horizontal alignment |
 | [image-valign] | `null`        | `baseline` `bottom` `middle` `sub` `super` `text-bottom` `text-top` `top` | Vertical alignment |
 | [image-mirror] | `null`        | `x` `y` `xy` | Mirroring |
@@ -70,9 +61,7 @@ import 'evokit-image/style.css';
 | [image-width]  | `auto`        | `auto` `1-1` `*-2` `*-3` `*-4` `*-5` `*-6` `*-7` `*-8` `*-9` `*-10` | Set the width |
 | [image-round]  | `none`        | `none` `full` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Corner rounding |
 
-### [Color][color-props]
-
-> Use [theming][create_theme] for creating custom colors.
+> Use [theming][create_theme] for creating custom `{THEME_NAME}`.
 
 | Prop name        | Default value | Possible value | Description  |
 |------------------|---------------|----------------|--------------|
@@ -107,9 +96,7 @@ import 'evokit-image/style.css';
 
 ---
 
-## Base props
-
-### `image-tag`
+## `image-tag`
 
 - Default value `img`
 
@@ -117,10 +104,7 @@ import 'evokit-image/style.css';
 <Image image-tag='img' src='' alt='' />
 ```
 
-
-## Main props
-
-### `image-align`
+## `image-align`
 
 - `left` - Align the image to the left
 - `center` - Center alignment
@@ -130,7 +114,7 @@ import 'evokit-image/style.css';
 <Image image-align='center' src='' alt='' />
 ```
 
-### `image-valign`
+## `image-valign`
 
 - `top` - Align the top edge of the element to the top of the tallest line item.
 - `bottom` - Aligns the base of the current element at the bottom of the element of the line below it all
@@ -145,7 +129,7 @@ import 'evokit-image/style.css';
 <Image image-valign='top' src='' alt='' />
 ```
 
-### `image-mirror`
+## `image-mirror`
 
 - `x` - X-axis reflection
 - `y` - Y-axis reflection
@@ -155,7 +139,7 @@ import 'evokit-image/style.css';
 <Image image-mirror='x' src='' alt='' />
 ```
 
-### `image-fit`
+## `image-fit`
 
 - `none` - Does not change its size and fills the space
 - `fill` - Resizes to fill the whole area
@@ -167,7 +151,7 @@ import 'evokit-image/style.css';
 <Image image-fit='cover' src='' alt='' />
 ```
 
-### `image-width`
+## `image-width`
 
 - `auto` - value: `auto`
 - See table, for example: `3-4` = `75%`
@@ -189,7 +173,7 @@ import 'evokit-image/style.css';
 <Image image-width='3-4' src='' alt='' />
 ```
 
-### `image-round`
+## `image-round`
 
 > Has advanced props:
 > - `image-round` - `top`, `right`, `bottom` or `left` for example **`image-round-right`**
@@ -210,12 +194,9 @@ import 'evokit-image/style.css';
 <Image image-round='full' src='' alt='' />
 ```
 
+## `image-border`
 
-## Color props
-
-> Set the THEME NAME depending on the [theming][create_theme]
-
-### `image-border`
+> Set the `THEME_NAME` depending on the [theming][create_theme]
 
 > Has advanced props:
 > - `image-border` - `top`, `right`, `bottom` or `left` for example **`image-border-right`**

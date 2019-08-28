@@ -1,12 +1,12 @@
 [evokit]: /packages/evokit/
 
-[css-variable]: //caniuse.com/#feat=css-variables
 [css-variable-usage]: //w3schools.com/css/css3_variables.asp
 [html-all-tags]: //www.w3schools.com/tags/default.asp
-[postcss]: //postcss.org
-[postcss-preset-env]: //preset-env.cssdb.org
 
 [create_theme]: /docs/base/theme.md
+[installation]: /docs/getting-started/installation.md
+[quik-start]: /docs/getting-started/quick-start.md
+[use-props]: /docs/getting-started/props.md
 
 [list-tag]: #list-tag
 [list-item-tag]: #list-item-tag
@@ -14,10 +14,6 @@
 [list-style]: #list-style
 [list-color]: #list-color
 [list-divider]: #list-divider
-
-[base-props]: #base-props
-[main-props]: #main-props
-[color-props]: #color-props
 
 # EvoKit - List
 
@@ -29,7 +25,7 @@ Used to create list. Contains two elements `<List>` and `<ListItem>`
 
 ## Install
 
-> Peer dependencies [evokit]
+> Peer dependencies [evokit]. More about [install][installation]
 
 ```bash
 npm install evokit-list --save
@@ -37,7 +33,7 @@ npm install evokit-list --save
 
 ## Usage
 
-> The styles use [css-variable] and will work in all modern browsers. If you need to support more old browsers such as Interner Explorer 11 or lower, use a tool [postcss] with [postcss-preset-env] for transforming css into something most browsers can understand.
+> More about [usage][quik-start]
 
 ```jsx
 import { List, ListItem } from 'evokit-list';
@@ -53,30 +49,28 @@ import 'evokit-list/style.css';
 
 ## Props
 
-> Also supports other valid props of the React Element
+> Also supports other valid props of the React Element. More about [use props][use-props]
 
-### [Base][base-props]
-
-| Prop name       | Default value | Possible value             | Description |
-|-----------------|---------------|----------------------------|-------------|
-| [list-tag]      | `ul`          | [html tags][html-all-tags] | HTML tag    |
-| [list-item-tag] | `li`          | [html tags][html-all-tags] | HTML tag    |
-
-### [Main][main-props]
+### `<List />`
 
 | Prop name     | Default value | Possible value | Description |
 |---------------|---------------|----------------|-------------|
+| [list-tag]    | `ul`          | [html tags][html-all-tags] | HTML tag    |
 | [list-indent] | `none`        | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Indentation between elements |
 | [list-style]  | `null`        | `dash` `decimal` `disc` | Marker type |
 
-### [Color][color-props]
-
-> Use [theming][create_theme] for creating custom colors.
+> Use [theming][create_theme] for creating custom `{THEME_NAME}`.
 
 | Prop name      | Default value | Possible value | Description  |
 |----------------|---------------|----------------|--------------|
 | [list-color]   | `null`        | `{THEME_NAME}` | Marker color |
 | [list-divider] | `null`        | `{THEME_NAME}` | Color separator between elements |
+
+### `<ListItem />`
+
+| Prop name       | Default value | Possible value             | Description |
+|-----------------|---------------|----------------------------|-------------|
+| [list-item-tag] | `li`          | [html tags][html-all-tags] | HTML tag    |
 
 ## Customize
 
@@ -107,9 +101,7 @@ import 'evokit-list/style.css';
 
 ---
 
-## Base props
-
-### `list-tag`
+## `list-tag`
 
 - Default value `ul`
 
@@ -119,7 +111,7 @@ import 'evokit-list/style.css';
 </List>
 ```
 
-### `list-item-tag`
+## `list-item-tag`
 
 - Default value `li`
 
@@ -131,10 +123,7 @@ import 'evokit-list/style.css';
 </List>
 ```
 
-
-## Main props
-
-### `list-indent`
+## `list-indent`
 
 - `none` - no indent, value: `0px`
 - `xxs` - css variable `--ek-list-indent-xxs`, default value: `5px`
@@ -153,7 +142,7 @@ import 'evokit-list/style.css';
 </List>
 ```
 
-### `list-style`
+## `list-style`
 
 - `dash` - Dash marker (—)
 - `decimal` - Arabic numbers (1, 2, 3, 4,...).
@@ -167,12 +156,9 @@ import 'evokit-list/style.css';
 </List>
 ```
 
+## `list-color`
 
-## Color props
-
-> Set the THEME NAME depending on the [theming][create_theme]
-
-### `list-color`
+> Set the `THEME_NAME` depending on the [theming][create_theme]
 
 ```jsx
 <List list-color={THEME_NAME}>
@@ -182,7 +168,9 @@ import 'evokit-list/style.css';
 </List>
 ```
 
-### `list-divider`
+## `list-divider`
+
+> Set the `THEME_NAME` depending on the [theming][create_theme]
 
 ```jsx
 <List list-divider={THEME_NAME}>

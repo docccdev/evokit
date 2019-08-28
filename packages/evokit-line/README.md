@@ -1,21 +1,17 @@
 [evokit]: /packages/evokit/
 
-[css-variable]: //caniuse.com/#feat=css-variables
 [css-variable-usage]: //w3schools.com/css/css3_variables.asp
 [html-all-tags]: //www.w3schools.com/tags/default.asp
-[postcss]: //postcss.org
-[postcss-preset-env]: //preset-env.cssdb.org
 
 [create_theme]: /docs/base/theme.md
+[installation]: /docs/getting-started/installation.md
+[quik-start]: /docs/getting-started/quick-start.md
+[use-props]: /docs/getting-started/props.md
 
 [line-tag]: #line-tag
 [line-indent]: #line-indent
 [line-style]: #line-style
 [line-color]: #line-color
-
-[base-props]: #base-props
-[main-props]: #main-props
-[color-props]: #color-props
 
 # EvoKit - Line
 
@@ -27,7 +23,7 @@ Horizontal line, used to separate content. Contains one element `<Line>`
 
 ## Install
 
-> Peer dependencies [evokit]
+> Peer dependencies [evokit]. More about [install][installation]
 
 ```bash
 npm install evokit-line --save
@@ -35,7 +31,7 @@ npm install evokit-line --save
 
 ## Usage
 
-> The styles use [css-variable] and will work in all modern browsers. If you need to support more old browsers such as Interner Explorer 11 or lower, use a tool [postcss] with [postcss-preset-env] for transforming css into something most browsers can understand.
+> More about [usage][quik-start]
 
 ```jsx
 import { Line } from 'evokit-line';
@@ -46,24 +42,17 @@ import 'evokit-line/style.css';
 
 ## Props
 
-> Also supports other valid props of the React Element
+> Also supports other valid props of the React Element. More about [use props][use-props]
 
-### [Base][base-props]
-
-| Prop name  | Default value | Possible value             | Description |
-|------------|---------------|----------------------------|-------------|
-| [line-tag] | `hr`          | [html tags][html-all-tags] | HTML tag    |
-
-### [Main][main-props]
+### `<Line />`
 
 | Prop name     | Default value | Possible value | Description  |
 |---------------|---------------|----------------|--------------|
+| [line-tag]    | `hr`          | [html tags][html-all-tags] | HTML tag    |
 | [line-indent] | `none`        | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Indent above and below |
 | [line-style]  | `null`        | `dotted` `dashed` | Border style |
 
-### [Color][color-props]
-
-> Use [theming][create_theme] for creating custom colors.
+> Use [theming][create_theme] for creating custom `{THEME_NAME}`.
 
 | Prop name        | Default value | Possible value | Description  |
 |------------------|---------------|----------------|--------------|
@@ -98,9 +87,7 @@ import 'evokit-line/style.css';
 
 ---
 
-## Base props
-
-### `line-tag`
+## `line-tag`
 
 Default value `hr`
 
@@ -108,10 +95,7 @@ Default value `hr`
 <Line line-tag='hr' />
 ```
 
-
-## Main props
-
-### `line-indent`
+## `line-indent`
 
 - `none` - no indent, value: `0px`
 - `xxs` - css variable `--ek-line-indent-xxs`, default value: `5px`
@@ -126,7 +110,7 @@ Default value `hr`
 <Line line-indent='l' />
 ```
 
-### `line-style`
+## `line-style`
 
 - `dotted` - dotted style
 - `dashed` - dashed style
@@ -135,12 +119,9 @@ Default value `hr`
 <Line line-style='...' />
 ```
 
+## `line-color`
 
-## Color props
-
-> Set the THEME NAME depending on the [theming][create_theme]
-
-### `line-color`
+> Set the `THEME_NAME` depending on the [theming][create_theme]
 
 ```jsx
 <Line line-color={THEME_NAME} />

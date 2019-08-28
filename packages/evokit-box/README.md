@@ -1,12 +1,12 @@
 [evokit]: /packages/evokit/
 
-[css-variable]: //caniuse.com/#feat=css-variables
 [css-variable-usage]: //w3schools.com/css/css3_variables.asp
 [html-all-tags]: //www.w3schools.com/tags/default.asp
-[postcss]: //postcss.org
-[postcss-preset-env]: //preset-env.cssdb.org
 
 [create_theme]: /docs/base/theme.md
+[installation]: /docs/getting-started/installation.md
+[quik-start]: /docs/getting-started/quick-start.md
+[use-props]: /docs/getting-started/props.md
 
 [box-tag]: #box-tag
 
@@ -24,10 +24,6 @@
 [box-background]: #box-background
 [box-border]: #box-border
 
-[base-props]: #base-props
-[main-props]: #main-props
-[color-props]: #color-props
-
 # EvoKit - Box
 
 [![](https://img.shields.io/npm/v/evokit-box.svg)](https://www.npmjs.com/package/evokit-box)
@@ -38,7 +34,7 @@ The content block allows to apply indents, position and more. Contains one eleme
 
 ## Install
 
-> Peer dependencies [evokit]
+> Peer dependencies [evokit]. More about [install][installation]
 
 ```bash
 npm install evokit-box --save
@@ -46,7 +42,7 @@ npm install evokit-box --save
 
 ## Usage
 
-> The styles use [css-variable] and will work in all modern browsers. If you need to support more old browsers such as Interner Explorer 11 or lower, use a tool [postcss] with [postcss-preset-env] for transforming css into something most browsers can understand.
+> More about [usage][quik-start]
 
 ```jsx
 import { Box } from 'evokit-box';
@@ -59,18 +55,13 @@ import 'evokit-box/style.css';
 
 ## Props
 
-> Also supports other valid props of the React Element
+> Also supports other valid props of the React Element. More about [use props][use-props]
 
-### [Base][base-props]
-
-| Prop name | Default value | Possible value             | Description |
-|-----------|---------------|----------------------------|-------------|
-| [box-tag] | `div`         | [html tags][html-all-tags] | HTML tag    |
-
-### [Main][main-props]
+### `<Box />`
 
 | Prop name        | Default value | Possible value | Description |
 |------------------|---------------|----------------|-------------|
+| [box-tag]        | `div`         | [html tags][html-all-tags] | HTML tag    |
 | [box-align]      | `none`        | `none` `left` `center` `right` | Horizontal alignment |
 | [box-margin]     | `none`        | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` `auto` | Indent around block |
 | [box-padding]    | `none`        | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Indent around an block content |
@@ -82,9 +73,7 @@ import 'evokit-box/style.css';
 | [box-place]      | `null`        | `top` `top-left` `top-right` `center` `center-left` `center-right` `bottom` `bottom-left` `bottom-right` | Position place |
 | [box-overflow]   | `scroll`      | `auto` `hidden` `scroll` `visible` | Display overflow block content |
 
-### [Color][color-props]
-
-> Use [theming][create_theme] for creating custom colors.
+> Use [theming][create_theme] for creating custom `{THEME_NAME}`.
 
 | Prop name        | Default value | Possible value | Description       |
 |------------------|---------------|-----------------|------------------|
@@ -128,10 +117,7 @@ import 'evokit-box/style.css';
 
 ---
 
-
-## Base props
-
-### `box-tag`
+## `box-tag`
 
 Default value `div`
 
@@ -141,10 +127,7 @@ Default value `div`
 </Box>
 ```
 
-
-## Main props
-
-### `box-align`
+## `box-align`
 
 - `none` - No alignment
 - `left` - Align to the left
@@ -157,7 +140,7 @@ Default value `div`
 </Box>
 ```
 
-### `box-margin`
+## `box-margin`
 
 > Has advanced props:
 > - `box-margin` - `top`, `right`, `bottom` or `left` for example **`box-margin-right`**
@@ -179,7 +162,7 @@ Default value `div`
 </Box>
 ```
 
-### `box-padding`
+## `box-padding`
 
 > Has advanced props:
 > - `box-padding` - `top`, `right`, `bottom` or `left` for example **`box-padding-right`**
@@ -200,7 +183,7 @@ Default value `div`
 </Box>
 ```
 
-### `box-round`
+## `box-round`
 
 > Has advanced props:
 > - `box-round` - `top`, `right`, `bottom` or `left` for example **`box-round-right`**
@@ -223,7 +206,7 @@ Default value `div`
 </Box>
 ```
 
-### `box-width`
+## `box-width`
 
 - `auto` - value: `auto`
 - See table, for example: `3-4` = `75%`
@@ -247,7 +230,7 @@ Default value `div`
 </Box>
 ```
 
-### `box-height`
+## `box-height`
 
 - `auto` - value: `auto`
 - `1-1` - value: `100%`
@@ -258,7 +241,7 @@ Default value `div`
 </Box>
 ```
 
-### `box-display`
+## `box-display`
 
 ```jsx
 <Box box-display='none'>
@@ -266,7 +249,7 @@ Default value `div`
 </Box>
 ```
 
-### `box-position`
+## `box-position`
 
 ```jsx
 <Box box-position='absolute'>
@@ -274,7 +257,7 @@ Default value `div`
 </Box>
 ```
 
-### `box-place`
+## `box-place`
 
 > Use with prop `box-position`
 
@@ -284,7 +267,7 @@ Default value `div`
 </Box>
 ```
 
-### `box-overflow`
+## `box-overflow`
 
 > Has advanced props:
 > - `box-overflow-x` and `box-overflow-y`
@@ -300,12 +283,9 @@ Default value `div`
 </Box>
 ```
 
+## `box-border`
 
-## Color props
-
-> Set the THEME NAME depending on the [theming][create_theme]
-
-### `box-border`
+> Set the `THEME_NAME` depending on the [theming][create_theme]
 
 > Has advanced props:
 > - `box-border` - `top`, `right`, `bottom` or `left` for example **`box-border-right`**
@@ -317,7 +297,9 @@ Default value `div`
 </Box>
 ```
 
-### `box-background`
+## `box-background`
+
+> Set the `THEME_NAME` depending on the [theming][create_theme]
 
 ```jsx
 <Box box-background={THEME_NAME}>

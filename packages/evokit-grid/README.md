@@ -1,12 +1,12 @@
 [evokit]: /packages/evokit/
 
-[css-variable]: //caniuse.com/#feat=css-variables
 [css-variable-usage]: //w3schools.com/css/css3_variables.asp
 [html-all-tags]: //www.w3schools.com/tags/default.asp
-[postcss]: //postcss.org
-[postcss-preset-env]: //preset-env.cssdb.org
 
 [create_theme]: /docs/base/theme.md
+[installation]: /docs/getting-started/installation.md
+[quik-start]: /docs/getting-started/quick-start.md
+[use-props]: /docs/getting-started/props.md
 
 [grid-tag]: #grid-tag
 [grid-item-tag]: #grid-item-tag
@@ -21,10 +21,6 @@
 [grid-item-order]: #grid-item-order
 [grid-item-width]: #grid-item-width
 
-[base-props]: #base-props
-[main-props]: #main-props
-[color-props]: #color-props
-
 # EvoKit - Grid
 
 [![](https://img.shields.io/npm/v/evokit-grid.svg)](https://www.npmjs.com/package/evokit-grid)
@@ -35,7 +31,7 @@ The grid for placing content on the page, has 10 columns. Contains two elements 
 
 ## Install
 
-> Peer dependencies [evokit]
+> Peer dependencies [evokit]. More about [install][installation]
 
 ```bash
 npm install evokit-grid --save
@@ -43,7 +39,7 @@ npm install evokit-grid --save
 
 ## Usage
 
-> The styles use [css-variable] and will work in all modern browsers. If you need to support more old browsers such as Interner Explorer 11 or lower, use a tool [postcss] with [postcss-preset-env] for transforming css into something most browsers can understand.
+> More about [usage][quik-start]
 
 ```jsx
 import { Grid, GridItem } from 'evokit-grid';
@@ -59,19 +55,13 @@ import 'evokit-grid/style.css';
 
 ## Props
 
-> Also supports other valid props of the React Element
+> Also supports other valid props of the React Element. More about [use props][use-props]
 
-### [Base][base-props]
-
-| Prop name          | Default value | Possible value             | Description |
-|--------------------|---------------|----------------------------|-------------|
-| [grid-tag]         | `div`         | [html tags][html-all-tags] | HTML tag    |
-| [grid-item-tag]    | `div`         | [html tags][html-all-tags] | HTML tag    |
-
-### [Main][main-props]
+### `<Grid />`
 
 | Prop name         | Default value | Possible value             | Description                 |
 |-------------------|---------------|----------------------------|-----------------------------|
+| [grid-tag]        | `div`         | [html tags][html-all-tags] | HTML tag    |
 | [grid-column]     | `auto`        | `auto` `1` `2` `3` `4` `5` `6` `7` `8` `9` `10` `expand` | Number of cells in a row |
 | [grid-indent]     | `none`        | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Indentation between cells |
 | [grid-direction]  | `row`         | `row` `row-reverse` `column` `column-reverse` | Cell direction |
@@ -81,13 +71,17 @@ import 'evokit-grid/style.css';
 | [grid-item-order] | `null`        | `1` `2` `3` `4` `5` `6` `7` `8` `9` `10` | Sets the order of the cell |
 | [grid-item-width] | `auto`        | `auto` `expand` `1-1` `*-2` `*-3` `*-4` `*-5` `*-6` `*-7` `*-8` `*-9` `*-10` | Cell width |
 
-### [Color][color-props]
-
-> Use [theming][create_theme] for creating custom colors.
+> Use [theming][create_theme] for creating custom `{THEME_NAME}`.
 
 | Prop name         | Default value | Possible value | Description                |
 |-------------------|---------------|----------------|----------------------------|
 | [grid-divider]    | `null`        | `{THEME_NAME}` | Color border between cells |
+
+### `<GridItem />`
+
+| Prop name          | Default value | Possible value             | Description |
+|--------------------|---------------|----------------------------|-------------|
+| [grid-item-tag]    | `div`         | [html tags][html-all-tags] | HTML tag    |
 
 ## Customize
 
@@ -118,9 +112,7 @@ import 'evokit-grid/style.css';
 
 ---
 
-## Base props
-
-### `grid-tag`
+## `grid-tag`
 
 Default value `div`
 
@@ -130,7 +122,7 @@ Default value `div`
 </Grid>
 ```
 
-### `grid-item-tag`
+## `grid-item-tag`
 
 Default value `div`
 
@@ -142,10 +134,7 @@ Default value `div`
 </Grid>
 ```
 
-
-## Main props
-
-### `grid-column`
+## `grid-column`
 
 - `1, 2, 3, 4, 5, 6, 7, 8, 9, 10` - Number of cells in a row
 - `auto` - The width of the cells depends on the content
@@ -159,7 +148,7 @@ Default value `div`
 </Grid>
 ```
 
-### `grid-indent`
+## `grid-indent`
 
 - `none` - no indent, value: `0px`
 - `xxs` - css variable `--ek-grid-indent-xxs`, default value: `5px`
@@ -178,7 +167,7 @@ Default value `div`
 </Grid>
 ```
 
-### `grid-direction`
+## `grid-direction`
 
 - `row` - Cell direction from left to right
 - `row-reverse` - Cell direction from right to left
@@ -193,7 +182,7 @@ Default value `div`
 </Grid>
 ```
 
-### `grid-wrap`
+## `grid-wrap`
 
 - `nowrap` - The location of the cells in one line
 - `wrap` - Cells that do not fit one line in width are shifted down
@@ -207,7 +196,7 @@ Default value `div`
 </Grid>
 ```
 
-### `grid-align`
+## `grid-align`
 
 - `left` - Align cells to the left
 - `center` - Center alignment of cells
@@ -222,7 +211,7 @@ Default value `div`
 </Grid>
 ```
 
-### `grid-valign`
+## `grid-valign`
 
 - `top` - Align cells to top
 - `middle` - Alignment of cells in the middle
@@ -238,7 +227,7 @@ Default value `div`
 </Grid>
 ```
 
-### `grid-item-order`
+## `grid-item-order`
 
 - `1, 2, 3, 4, 5, 6, 7, 8, 9, 10` - Determines the cell order
 
@@ -253,7 +242,7 @@ Default value `div`
 </Grid>
 ```
 
-### `grid-item-width`
+## `grid-item-width`
 
 - `auto` - Cell width depends on content, value: `auto`
 - `expand` - Cell width occupies free space
@@ -285,11 +274,9 @@ Default value `div`
 ```
 
 
-## Color props
+## `grid-divider`
 
-> Set the THEME NAME depending on the [theming][create_theme]
-
-### `grid-divider`
+> Set the `THEME_NAME` depending on the [theming][create_theme]
 
 ```jsx
 <Grid grid-divider={THEME_NAME}>

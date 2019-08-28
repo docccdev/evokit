@@ -1,7 +1,5 @@
 [evokit]: /packages/evokit/
 
-[react]: //www.npmjs.com/package/react
-[prop-types]: //www.npmjs.com/package/prop-types
 [css-variable-usage]: //w3schools.com/css/css3_variables.asp
 [html-all-tags]: //www.w3schools.com/tags/default.asp
 
@@ -10,6 +8,7 @@
 [use-props]: /docs/getting-started/props.md
 
 [flex-tag]: #flex-tag
+[flex-item-tag]: #flex-item-tag
 
 [flex-display]: #flex-display
 [flex-align-content]: #flex-align-content
@@ -18,9 +17,6 @@
 [flex-justify-content]: #flex-justify-content
 [flex-direction]: #flex-direction
 [flex-wrap]: #flex-wrap
-
-[base-props]: #base-props
-[main-props]: #main-props
 
 # EvoKit - Flex
 
@@ -34,7 +30,7 @@ The Flex block has an essential role in building layouts
 
 ## Install
 
-> Peer dependencies [react], [prop-types], [evokit]. More about [install][installation]
+> Peer dependencies [evokit]. More about [install][installation]
 
 ```bash
 npm install evokit-flex --save
@@ -56,25 +52,25 @@ import 'evokit-flex/style.css';
 
 ## Props
 
-> Also supports other valid props of the React Element. More about [use props][use-props]
+> Also supports other valid props of the React Element. More about [use props][use-props]. More about [use props][use-props]
 
-### [Base][base-props]
-
-| Prop name     | Default value | Possible value             | Description |
-|---------------|---------------|----------------------------|-------------|
-| [flex-tag]    | `div`         | [html tags][html-all-tags] | HTML tag    |
-| flex-item-tag | `div`         | [html tags][html-all-tags] | HTML tag    |
-
-### [Main][main-props]
+### `<Flex />`
 
 | Prop name        | Default value    | Possible value | Description |
 |------------------|------------------|----------------|-------------|
-| [flex-display]         | `flex`     | `flex` `flex-inline` `block` `none` | Display type |
-| flex-content           | `start`    | `start` `end` `center` `between` `around` `stretch` | Space between flex lines on the cross axis |
-| flex-items             | `start`    | `start` `end` `center` `baseline` `stretch` | Alignment of all items on the cross axis |
-| [flex-direction]       | `row`      | `row` `row-reverse` `column` `column-reverse` | Direction of all items |
-| [flex-wrap]            | `wrap`   | `nowrap` `wrap` `wrap-reverse` | Wrap rules |
-| flex-item-align        | `start`    | `start` `end` `center` `baseline` `stretch` | Alignment item on the cross axis |
+| [flex-tag]       | `div`         | [html tags][html-all-tags] | HTML tag    |
+| [flex-display]   | `flex`     | `flex` `flex-inline` `block` `none` | Display type |
+| flex-content     | `start`    | `start` `end` `center` `between` `around` `stretch` | Space between flex lines on the cross axis |
+| flex-items       | `start`    | `start` `end` `center` `baseline` `stretch` | Alignment of all items on the cross axis |
+| [flex-direction] | `row`      | `row` `row-reverse` `column` `column-reverse` | Direction of all items |
+| [flex-wrap]      | `wrap`   | `nowrap` `wrap` `wrap-reverse` | Wrap rules |
+
+### `<FlexItem />`
+
+| Prop name        | Default value    | Possible value | Description |
+|------------------|------------------|----------------|-------------|
+| [flex-item-tag]  | `div`         | [html tags][html-all-tags] | HTML tag    |
+| flex-item-align  | `start`    | `start` `end` `center` `baseline` `stretch` | Alignment item on the cross axis |
 
 ## Customize
 
@@ -94,10 +90,7 @@ import 'evokit-flex/style.css';
 
 ---
 
-
-## Base props
-
-### `flex-tag`
+## `flex-tag`
 
 Default value `div`
 
@@ -107,10 +100,19 @@ Default value `div`
 </Flex>
 ```
 
+## `flex-item-tag`
 
-## Main props
+Default value `div`
 
-### `flex-display`
+```jsx
+<Flex>
+    <FlexItem flex-item-tag='div'>
+        ...
+    </FlexItem>
+</Flex>
+```
+
+## `flex-display`
 
 ```jsx
 <Flex flex-display='flex-inline'>
@@ -118,7 +120,7 @@ Default value `div`
 </Flex>
 ```
 
-### `flex-align-content`
+## `flex-align-content`
 
 - `start` - Lines are packed toward the start of the flex container
 - `end` - Lines are packed toward the end of the flex container
@@ -135,7 +137,7 @@ Default value `div`
 </Flex>
 ```
 
-### `flex-align-items`
+## `flex-align-items`
 
 - `start` - The cross-start margin edges of the flex items are flushed with the cross-start edge of the line
 - `end` - The cross-end margin edges of the flex items are flushed with the cross-end edge of the line
@@ -151,7 +153,7 @@ Default value `div`
 </Flex>
 ```
 
-### `flex-align-self`
+## `flex-align-self`
 
 - `start` - The cross-start margin edges of the flex item are flushed with the cross-start edge of the line
 - `end` - The cross-end margin edges of the flex item are flushed with the cross-end edge of the line
@@ -167,7 +169,7 @@ Default value `div`
 </Flex>
 ```
 
-### `flex-justify-content`
+## `flex-justify-content`
 
 - `start` - Flex items are packed toward the start of the line
 - `end` - Flex items are packed toward the end of the line
@@ -183,7 +185,7 @@ Default value `div`
 </Flex>
 ```
 
-### `flex-direction`
+## `flex-direction`
 
 - `row` - The flex container’s main axis has the same orientation as the inline axis of the current writing mode
 - `row-reverse` - Same as row, except the main-start and main-end directions are swapped
@@ -198,7 +200,7 @@ Default value `div`
 </Flex>
 ```
 
-### `flex-wrap`
+## `flex-wrap`
 
 - `nowrap` - The flex container is single-line
 - `wrap` - The flex container is multi-line
