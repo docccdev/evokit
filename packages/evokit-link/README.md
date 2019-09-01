@@ -102,7 +102,7 @@ import 'evokit-link/style.css';
 
 ## Live demo
 
-[![Edit link-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/linkusage-c7mgv?fontsize=14 ':include :type=iframe width=100% height=500px')
+[![Edit link-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/linkusage-c7mgv?fontsize=14&runonclick=0 ':include :type=iframe width=100% height=500px')
 
 ---
 

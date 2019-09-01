@@ -53,4 +53,4 @@ Notice the pattern custom media: `--ek-{BLOCK_NAME}-media-{MEDIA_NAME}`.
 
 ## Live demo
 
-[![Edit box-media](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/boxmedia-kygtc?fontsize=14 ':include :type=iframe width=100% height=500px')
+[![Edit box-media](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/boxmedia-kygtc?fontsize=14&runonclick=0 ':include :type=iframe width=100% height=500px')

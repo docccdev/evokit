@@ -87,7 +87,7 @@ import 'evokit-line/style.css';
 
 ## Live demo
 
-[![Edit line-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/lineusage-mti8w?fontsize=14 ':include :type=iframe width=100% height=500px')
+[![Edit line-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/lineusage-mti8w?fontsize=14&runonclick=0 ':include :type=iframe width=100% height=500px')
 
 ---
 

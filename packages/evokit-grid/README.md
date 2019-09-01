@@ -110,7 +110,7 @@ import 'evokit-grid/style.css';
 
 ## Live demo
 
-[![Edit grid-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/gridusage-bweb5?fontsize=14 ':include :type=iframe width=100% height=500px')
+[![Edit grid-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/gridusage-bweb5?fontsize=14&runonclick=0 ':include :type=iframe width=100% height=500px')
 
 ---
 

@@ -1,1 +1,1 @@
-[![View example-prom](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/example-prom-krsj1?fontsize=14&view=preview&module=%2Fsrc%2Fproduct.js&moduleview=1 ':include :type=iframe width=100% height=800px')
+[![View example-prom](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/example-prom-krsj1?fontsize=14&view=preview&module=%2Fsrc%2Fproduct.js&moduleview=1&runonclick=0 ':include :type=iframe width=100% height=800px')

@@ -115,7 +115,7 @@ import 'evokit-box/style.css';
 
 ## Live demo
 
-[![Edit box-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/boxusage-3r9iy?fontsize=14 ':include :type=iframe width=100% height=500px')
+[![Edit box-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/boxusage-3r9iy?fontsize=14&runonclick=0 ':include :type=iframe width=100% height=500px')
 
 ---
 

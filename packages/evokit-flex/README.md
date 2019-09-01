@@ -98,7 +98,7 @@ import 'evokit-flex/style.css';
 
 ## Live demo
 
-[![Edit flex-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/flex-usage-d85tn?fontsize=14 ':include :type=iframe width=100% height=500px')
+[![Edit flex-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/flex-usage-d85tn?fontsize=14&runonclick=0 ':include :type=iframe width=100% height=500px')
 
 ---
 

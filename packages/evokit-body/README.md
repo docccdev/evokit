@@ -117,7 +117,7 @@ import 'evokit-body/style.css';
 
 ## Live demo
 
-[![Edit body-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/bodyusage-kz6ss?fontsize=14 ':include :type=iframe width=100% height=500px')
+[![Edit body-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/bodyusage-kz6ss?fontsize=14&runonclick=0 ':include :type=iframe width=100% height=500px')
 
 ---
 

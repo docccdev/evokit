@@ -1,1 +1,1 @@
-[![View example-albom](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/example-albom-voxhq?fontsize=14&view=preview ':include :type=iframe width=100% height=800px')
+[![View example-albom](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/example-albom-voxhq?fontsize=14&view=preview&runonclick=0 ':include :type=iframe width=100% height=800px')

@@ -107,7 +107,7 @@ import 'evokit-text/style.css';
 
 ## Live demo
 
-[![Edit text-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/textusage-wm53d?fontsize=14 ':include :type=iframe width=100% height=500px')
+[![Edit text-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/textusage-wm53d?fontsize=14&runonclick=0 ':include :type=iframe width=100% height=500px')
 
 ---
 

@@ -99,7 +99,7 @@ import 'evokit-list/style.css';
 
 ## Live demo
 
-[![Edit list-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/listusage-ycfx4?fontsize=14 ':include :type=iframe width=100% height=500px')
+[![Edit list-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/listusage-ycfx4?fontsize=14&runonclick=0 ':include :type=iframe width=100% height=500px')
 
 ---
 
