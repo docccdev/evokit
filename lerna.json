@@ -2,6 +2,7 @@
     "command": {
         "publish": {
             "ignoreChanges": [
+                "package.json",
                 "package-lock.json",
                 "*.md",
                 "**/__tests__/**"
