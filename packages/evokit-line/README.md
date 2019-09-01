@@ -1,4 +1,5 @@
 [evokit]: /packages/evokit/
+[CHANGELOG]: /packages/evokit-line/CHANGELOG.md
 
 [css-variable-usage]: //w3schools.com/css/css3_variables.asp
 [html-all-tags]: //www.w3schools.com/tags/default.asp
@@ -17,6 +18,7 @@
 # EvoKit - Line
 
 [![](https://img.shields.io/npm/v/evokit-line.svg)](https://www.npmjs.com/package/evokit-line)
+[![](https://img.shields.io/badge/page-CHANGELOG-42b983)][CHANGELOG]
 
 Horizontal line, used to separate content. Contains one element `<Line>`
 

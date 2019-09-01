@@ -14,12 +14,25 @@
     min-width: 0
 
 .flex__item
+    display: block
     box-sizing: border-box
     min-width: 0
     min-height: 0
 
     &:empty
         display: none
+
+/**
+ * Item display:
+ *
+ *  - flex__item_display_block
+ *  - flex__item_display_none
+ *
+ **/
+
+@each $value in (block, none)
+    @mixin media .flex__item_display_$(value)
+        display: $value
 
 /**
  * Item align:
@@ -42,16 +55,26 @@
             align-self: $value
 
 /**
+ * Item order:
+ *
+ *  - flex__item_order_*
+ *
+ **/
+
+@each $value in (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+    @mixin media .flex__item_order_$(value)
+        order: $value
+
+/**
  * Display:
  *
  *  - flex_display_flex
  *  - flex_display_inline-flex
- *  - flex_display_block
  *  - flex_display_none
  *
  **/
 
-@each $value in (flex, inline-flex, block, none)
+@each $value in (flex, inline-flex, none)
     @mixin media .flex_display_$(value)
         display: $value
 

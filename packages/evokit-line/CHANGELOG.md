@@ -1,6 +1,9 @@
+[README]: /packages/evokit-line/README.md
+
 # EvoKit - Line
 
 [![](https://img.shields.io/npm/v/evokit-line.svg)](https://www.npmjs.com/package/evokit-line)
+[![](https://img.shields.io/badge/page-README-42b983)][README]
 
 ---
 

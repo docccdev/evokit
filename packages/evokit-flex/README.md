@@ -1,4 +1,5 @@
 [evokit]: /packages/evokit/
+[CHANGELOG]: /packages/evokit-flex/CHANGELOG.md
 
 [css-variable-usage]: //w3schools.com/css/css3_variables.asp
 [html-all-tags]: //www.w3schools.com/tags/default.asp
@@ -18,9 +19,14 @@
 [flex-direction]: #flex-direction
 [flex-wrap]: #flex-wrap
 
+[flex-item-display]: #flex-item-display
+[flex-item-align]: #flex-item-align
+[flex-item-order]: #flex-item-order
+
 # EvoKit - Flex
 
 [![](https://img.shields.io/npm/v/evokit-flex.svg)](https://www.npmjs.com/package/evokit-flex)
+[![](https://img.shields.io/badge/page-CHANGELOG-42b983)][CHANGELOG]
 
 <!--
 [![npm peer dependency version](https://img.shields.io/npm/dependency-version/evokit-flex/peer/evokit)](https://www.npmjs.com/package/evokit)
@@ -63,7 +69,7 @@ import 'evokit-flex/style.css';
 | Prop name        | Default value    | Possible value | Description |
 |------------------|------------------|----------------|-------------|
 | [flex-tag]       | `div`         | [html tags][html-all-tags] | HTML tag    |
-| [flex-display]   | `flex`     | `flex` `flex-inline` `block` `none` | Display type |
+| [flex-display]   | `flex`     | `flex` `flex-inline` `none` | Display type |
 | flex-content     | `start`    | `start` `end` `center` `between` `around` `stretch` | Space between flex lines on the cross axis |
 | flex-items       | `start`    | `start` `end` `center` `baseline` `stretch` | Alignment of all items on the cross axis |
 | [flex-direction] | `row`      | `row` `row-reverse` `column` `column-reverse` | Direction of all items |
@@ -71,10 +77,12 @@ import 'evokit-flex/style.css';
 
 ### `<FlexItem />`
 
-| Prop name        | Default value    | Possible value | Description |
-|------------------|------------------|----------------|-------------|
-| [flex-item-tag]  | `div`         | [html tags][html-all-tags] | HTML tag    |
-| flex-item-align  | `start`    | `start` `end` `center` `baseline` `stretch` | Alignment item on the cross axis |
+| Prop name           | Default value    | Possible value | Description |
+|---------------------|------------------|----------------|-------------|
+| [flex-item-tag]     | `div`    | [html tags][html-all-tags] | HTML tag    |
+| [flex-item-display] | `block`  | `block` `none` | Display type |
+| [flex-item-align]   | `start`  | `start` `end` `center` `baseline` `stretch` | Alignment item on the cross axis |
+| [flex-item-order]   | `0`      | `0` `1` `2` `3` `4` `5` `6` `7` `8` `9` `10` | Set the order |
 
 ## Customize
 
@@ -215,5 +223,30 @@ Default value `div`
 ```jsx
 <Flex flex-wrap='wrap'>
     ...
+</Flex>
+```
+
+## `flex-item-display`
+
+- `block` - shown as blocky (default)
+- `none` - remove block from document
+
+```jsx
+<Flex>
+    <FlexItem flex-item-display='none'>
+        ...
+    </FlexItem>
+</Flex>
+```
+
+## `flex-item-order`
+
+- `0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10` - only affects the visual order
+
+```jsx
+<Flex>
+    <FlexItem flex-item-order='2'>
+        ...
+    </FlexItem>
 </Flex>
 ```

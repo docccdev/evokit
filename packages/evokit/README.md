@@ -1,3 +1,5 @@
+[CHANGELOG]: /packages/evokit/CHANGELOG.md
+
 [css-modules]: //github.com/css-modules/css-modules
 [react]: //www.npmjs.com/package/react
 [prop-types]: //www.npmjs.com/package/prop-types
@@ -7,7 +9,8 @@
 
 # EvoKit
 
-[![](https://img.shields.io/npm/v/evokit.svg?style=flat-square&colorB=blue)](https://www.npmjs.com/package/evokit)
+[![](https://img.shields.io/npm/v/evokit.svg)](https://www.npmjs.com/package/evokit)
+[![](https://img.shields.io/badge/page-CHANGELOG-42b983)][CHANGELOG]
 
 Allows you to divide the user interface into independent blocks and think about them separately. EvoKit blocks can be declared with `createBlock`.
 

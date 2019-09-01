@@ -1,4 +1,5 @@
 [evokit]: /packages/evokit/
+[CHANGELOG]: /packages/evokit-list/CHANGELOG.md
 
 [css-variable-usage]: //w3schools.com/css/css3_variables.asp
 [html-all-tags]: //www.w3schools.com/tags/default.asp
@@ -18,6 +19,7 @@
 # EvoKit - List
 
 [![](https://img.shields.io/npm/v/evokit-list.svg)](https://www.npmjs.com/package/evokit-list)
+[![](https://img.shields.io/badge/page-CHANGELOG-42b983)][CHANGELOG]
 
 Used to create list. Contains two elements `<List>` and `<ListItem>`
 

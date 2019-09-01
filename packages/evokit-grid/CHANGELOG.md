@@ -1,6 +1,9 @@
+[README]: /packages/evokit-grid/README.md
+
 # EvoKit - Grid
 
 [![](https://img.shields.io/npm/v/evokit-grid.svg)](https://www.npmjs.com/package/evokit-grid)
+[![](https://img.shields.io/badge/page-README-42b983)][README]
 
 ---
 

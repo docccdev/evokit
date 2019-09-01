@@ -1,4 +1,5 @@
 [evokit]: /packages/evokit/
+[CHANGELOG]: /packages/evokit-body/CHANGELOG.md
 
 [css-variable-usage]: //w3schools.com/css/css3_variables.asp
 [html-all-tags]: //www.w3schools.com/tags/default.asp
@@ -19,6 +20,7 @@
 # EvoKit - Body
 
 [![](https://img.shields.io/npm/v/evokit-body.svg)](https://www.npmjs.com/package/evokit-body)
+[![](https://img.shields.io/badge/page-CHANGELOG-42b983)][CHANGELOG]
 
 Used for body of the web page and sets the basic styles. Contains two elements `<Body>` and `<BodySection>`
 

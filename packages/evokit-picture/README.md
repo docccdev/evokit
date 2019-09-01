@@ -1,4 +1,5 @@
 [evokit]: /packages/evokit/
+[CHANGELOG]: /packages/evokit-picture/CHANGELOG.md
 
 [css-variable-usage]: //w3schools.com/css/css3_variables.asp
 [html-all-tags]: //www.w3schools.com/tags/default.asp
@@ -17,6 +18,7 @@
 # EvoKit - Picture
 
 [![](https://img.shields.io/npm/v/evokit-picture.svg)](https://www.npmjs.com/package/evokit-picture)
+[![](https://img.shields.io/badge/page-CHANGELOG-42b983)][CHANGELOG]
 
 Creates a square with an image. Contains two elements `<Picture>` and `<PictureItem>`
 

@@ -1,3 +1,5 @@
+[README]: /packages/evokit/README.md
+
 [panel]: /docs/deprecated/removed_panel.md
 [tags]: /docs/deprecated/removed_tags.md
 [width]: /docs/deprecated/removed_width.md
@@ -22,7 +24,14 @@
 
 [issues/3]: //github.com/docccdev/evokit/issues/3
 
-# CHANGELOG
+# EvoKit
+
+[![](https://img.shields.io/npm/v/evokit.svg)](https://www.npmjs.com/package/evokit)
+[![](https://img.shields.io/badge/page-README-42b983)][README]
+
+---
+
+## CHANGELOG
 
 !> In version 3.0.0 there are no more UI blocks, they are all in separate packages, please update carefully.
 

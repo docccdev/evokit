@@ -1,8 +1,11 @@
+[README]: /packages/evokit-box/README.md
+
 [create_theme]: /docs/base/theme.md
 
 # EvoKit - Box
 
 [![](https://img.shields.io/npm/v/evokit-box.svg)](https://www.npmjs.com/package/evokit-box)
+[![](https://img.shields.io/badge/page-README-42b983)][README]
 
 ---
 

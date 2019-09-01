@@ -1,6 +1,9 @@
+[README]: /packages/evokit-body/README.md
+
 # EvoKit - Body
 
 [![](https://img.shields.io/npm/v/evokit-body.svg)](https://www.npmjs.com/package/evokit-body)
+[![](https://img.shields.io/badge/page-README-42b983)][README]
 
 ---
 
