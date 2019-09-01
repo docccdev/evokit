@@ -2,11 +2,17 @@
 
 Tool for creating UI React blocks.
 
-**Recipe** : `html` + `css` = `block`
+---
 
-[![](https://img.shields.io/npm/v/evokit.svg)](https://www.npmjs.com/package/evokit)
+## Recipe
 
-Documentation [evokit.net](http://evokit.net).
+`html tag` + `css rules` = `evokit block`
+
+## Documentation
+
+[evokit.net](http://evokit.net)
+
+## Packages
 
 Core:
   * [evokit](/packages/evokit/)
