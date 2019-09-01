@@ -24,6 +24,17 @@
     margin: 0
 
 /**
+ * Style:
+ *
+ *  - line_display_*
+ *
+ **/
+
+@each $value in (block, none)
+    @mixin media .line_display_$(value)
+        display: $value
+
+/**
  * Indent:
  *
  *  - line_indent_*
@@ -46,6 +57,6 @@
  *
  **/
 
-@each $value in (dotted, dashed)
+@each $value in (solid, dotted, dashed)
     @mixin media .line_style_$(value)
         border-top-style: $value

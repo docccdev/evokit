@@ -62,13 +62,13 @@ import 'evokit-box/style.css';
 | Prop name        | Default value | Possible value | Description |
 |------------------|---------------|----------------|-------------|
 | [box-tag]        | `div`         | [html tags][html-all-tags] | HTML tag    |
+| [box-display]    | `block`       | `block` `inline-block` `inline` `none` | Display type |
 | [box-align]      | `none`        | `none` `left` `center` `right` | Horizontal alignment |
 | [box-margin]     | `none`        | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` `auto` | Indent around block |
 | [box-padding]    | `none`        | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Indent around an block content |
 | [box-round]      | `none`        | `none` `full` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Corner rounding |
 | [box-width]      | `auto`        | `auto` `1-1` `*-2` `*-3` `*-4` `*-5` `*-6` `*-7` `*-8` `*-9` `*-10` | Set the width |
 | [box-height]     | `auto`        | `auto` `1-1` | Set the height |
-| [box-display]    | `block`       | `none` `inline` `inline-block` `block` | Display type |
 | [box-position]   | `static`      | `static` `relative` `absolute` `fixed` | Positioning method |
 | [box-place]      | `null`        | `top` `top-left` `top-right` `center` `center-left` `center-right` `bottom` `bottom-left` `bottom-right` | Position place |
 | [box-overflow]   | `scroll`      | `auto` `hidden` `scroll` `visible` | Display overflow block content |
@@ -123,6 +123,14 @@ Default value `div`
 
 ```jsx
 <Box box-tag='div'>
+    ...
+</Box>
+```
+
+## `box-display`
+
+```jsx
+<Box box-display='none'>
     ...
 </Box>
 ```
@@ -237,14 +245,6 @@ Default value `div`
 
 ```jsx
 <Box box-height='1-1'>
-    ...
-</Box>
-```
-
-## `box-display`
-
-```jsx
-<Box box-display='none'>
     ...
 </Box>
 ```

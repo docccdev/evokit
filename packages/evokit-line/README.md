@@ -9,6 +9,7 @@
 [use-props]: /docs/getting-started/props.md
 
 [line-tag]: #line-tag
+[line-display]: #line-display
 [line-indent]: #line-indent
 [line-style]: #line-style
 [line-color]: #line-color
@@ -46,11 +47,12 @@ import 'evokit-line/style.css';
 
 ### `<Line />`
 
-| Prop name     | Default value | Possible value | Description  |
-|---------------|---------------|----------------|--------------|
-| [line-tag]    | `hr`          | [html tags][html-all-tags] | HTML tag    |
-| [line-indent] | `none`        | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Indent above and below |
-| [line-style]  | `null`        | `dotted` `dashed` | Border style |
+| Prop name      | Default value | Possible value | Description  |
+|----------------|---------------|----------------|--------------|
+| [line-tag]     | `hr`          | [html tags][html-all-tags] | HTML tag    |
+| [line-display] | `block`       | `block` `none` | Display type |
+| [line-indent]  | `none`        | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Set the margin top and bottom |
+| [line-style]   | `solid`       | `solid` `dotted` `dashed` | Border style |
 
 > Use [theming][create_theme] for creating custom `{THEME_NAME}`.
 
@@ -95,9 +97,18 @@ Default value `hr`
 <Line line-tag='hr' />
 ```
 
+## `line-display`
+
+- `block` - shown as blocky (default)
+- `none` - remove block from document
+
+```jsx
+<Line line-display='block' />
+```
+
 ## `line-indent`
 
-- `none` - no indent, value: `0px`
+- `none` - no indent, value: `0px` (default)
 - `xxs` - css variable `--ek-line-indent-xxs`, default value: `5px`
 - `xs` - css variable `--ek-line-indent-xs`, default value: `10px`
 - `s` - css variable `--ek-line-indent-s`, default value: `15px`
@@ -112,11 +123,12 @@ Default value `hr`
 
 ## `line-style`
 
+- `solid` - solid style (default)
 - `dotted` - dotted style
 - `dashed` - dashed style
 
 ```jsx
-<Line line-style='...' />
+<Line line-style='dotted' />
 ```
 
 ## `line-color`
