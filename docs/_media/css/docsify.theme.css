@@ -414,11 +414,12 @@ body.sticky .sidebar,body.sticky .sidebar-toggle {
 
 .markdown-section iframe {
     border: 1px solid #eee;
-}
-
-.markdown-section iframe[src*="view=preview"] {
     max-width: 1280px;
 }
+
+/* .markdown-section iframe[src*="view=preview"] {
+    max-width: 1280px;
+} */
 
 
 .markdown-section table {
