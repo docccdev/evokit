@@ -35,6 +35,10 @@
 
 !> In version 3.0.0 there are no more UI blocks, they are all in separate packages, please update carefully.
 
+### 3.1.0 *(xx.09.2019)*
+
+- Coming soon...
+
 ### 3.0.3 *(11.07.2019)*
 
 - Minor improvement
