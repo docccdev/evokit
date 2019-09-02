@@ -73,7 +73,7 @@ import 'evokit-box/style.css';
 | [box-height]     | `auto`        | `auto` `1-1` | Set the height |
 | [box-position]   | `static`      | `static` `relative` `absolute` `fixed` | Positioning method |
 | [box-place]      | `null`        | `top` `top-left` `top-right` `center` `center-left` `center-right` `bottom` `bottom-left` `bottom-right` | Position place |
-| [box-overflow]   | `scroll`      | `auto` `hidden` `scroll` `visible` | Display overflow block content |
+| [box-overflow]   | `visible`      | `auto` `hidden` `scroll` `visible` | Display overflow block content |
 
 > Use [theming][create_theme] for creating custom `{THEME_NAME}`.
 
