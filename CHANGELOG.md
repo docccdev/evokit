@@ -10,6 +10,8 @@
 [evokit-picture]: /packages/evokit-picture/CHANGELOG.md
 [evokit-text]: /packages/evokit-text/CHANGELOG.md
 
+[theming]: /docs/base/theme.md
+
 # CHANGELOG
 
 [![evokit changelog](https://img.shields.io/npm/v/evokit.svg?label=evokit)][evokit]
@@ -29,6 +31,7 @@
 ### *(01.09.2019)*
 
 - [evokit-line]: _3.0.0_ → **3.0.1**
+- [theming]: _1.0.0_ → **1.1.0**
 
 ### *(27.08.2019)*
 
