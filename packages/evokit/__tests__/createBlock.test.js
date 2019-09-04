@@ -44,6 +44,11 @@ describe("import { createBlock } from 'evokit';", () => {
         ).toBeTruthy();
     });
 
+    it('with children', () => {
+        const Block = createBlock('div', 'block');
+        expect(shallow(<Block>ololo</Block>).contains(<div className='ek-block'>ololo</div>)).toBeTruthy();
+    });
+
     describe("with props", () => {
         const Block = createBlock('div', 'block', ['modName']);
         const BlockItem = createBlock('div', 'block__item', ['elModName']);

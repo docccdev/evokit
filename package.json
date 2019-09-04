@@ -20,7 +20,6 @@
     "babel-eslint": "10.0.3",
     "babel-jest": "24.9.0",
     "babel-loader": "8.0.5",
-    "babel-standalone": "6.26.0",
     "css-loader": "1.0.0",
     "css-mqpacker": "7.0.0",
     "enzyme": "3.10.0",

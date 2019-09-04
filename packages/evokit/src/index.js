@@ -1,5 +1,6 @@
 import { className } from './className';
-import { createBlock, withProps } from './createBlock';
+import { createBlock } from './createBlock';
+import { withProps } from './withProps';
 
 export {
     className,
