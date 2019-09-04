@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import { createBlock, withProps } from '../src/createBlock';
 
 describe("import { createBlock } from 'evokit';", () => {
@@ -9,6 +9,16 @@ describe("import { createBlock } from 'evokit';", () => {
         expect(shallow(<Block />).contains(<div className='ek-block'></div>)).toBeTruthy();
         expect(shallow(<Block>text</Block>).contains(<div className='ek-block'>text</div>)).toBeTruthy();
     });
+
+    // it('createRef()', () => {
+    //     const Block = createBlock('div', 'block');
+    //     const blockRef = React.createRef();
+    //     const wrapper = mount(<><Block ref={blockRef}>ololo</Block></>);
+
+    //     expect(wrapper.find('div').text()).toEqual('ololo');
+    //     expect(wrapper.find('div').instance()).toEqual(blockRef.current);
+    //     expect(blockRef.current.innerText).toEqual('ololo');
+    // });
 
     it('elem', () => {
         const Element = createBlock('li', 'list__item');
