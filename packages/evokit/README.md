@@ -56,7 +56,6 @@ const Footer = createBlock('div', 'footer', ['padding']);
 
 // ADDITIONAL PROPS:
 <Footer footer-tag='span' /> // <span class="ek-footer ek-footer_padding_xxl"></span>
-<Footer footer-ref={(target) => {}} /> // React ref
 <Footer footer-preset={{ css: cssModules }} /> // CSS Modules
 ```
 

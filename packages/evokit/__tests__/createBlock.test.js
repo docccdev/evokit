@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import { createBlock, withProps } from '../src/createBlock';
+import { createBlock } from '../src';
 
 describe("import { createBlock } from 'evokit';", () => {
     it('default', () => {
@@ -10,15 +10,23 @@ describe("import { createBlock } from 'evokit';", () => {
         expect(shallow(<Block>text</Block>).contains(<div className='ek-block'>text</div>)).toBeTruthy();
     });
 
-    // it('createRef()', () => {
-    //     const Block = createBlock('div', 'block');
-    //     const blockRef = React.createRef();
-    //     const wrapper = mount(<><Block ref={blockRef}>ololo</Block></>);
+    it('createRef()', () => {
+        const Block = createBlock('div', 'block');
+        const blockRef = React.createRef();
+        const wrapper = mount(<><Block ref={blockRef}>ololo</Block></>);
 
-    //     expect(wrapper.find('div').text()).toEqual('ololo');
-    //     expect(wrapper.find('div').instance()).toEqual(blockRef.current);
-    //     expect(blockRef.current.innerText).toEqual('ololo');
-    // });
+        expect(wrapper.find('div').text()).toEqual('ololo');
+        expect(wrapper.find('div').instance()).toEqual(blockRef.current);
+    });
+
+    it('DEPRECATED prop ref', () => {
+        const Block = createBlock('div', 'block');
+        let blockRef = null;
+        const wrapper = mount(<><Block block-ref={(target) => { blockRef = target }}>ololo</Block></>);
+
+        expect(wrapper.find('div').text()).toEqual('ololo');
+        expect(wrapper.find('div').instance()).toEqual(blockRef);
+    });
 
     it('elem', () => {
         const Element = createBlock('li', 'list__item');

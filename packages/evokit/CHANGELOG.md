@@ -37,7 +37,7 @@
 
 ### 3.1.0 *(xx.09.2019)*
 
-- Coming soon...
+- **Fixed** React ref prop. The prop `{BLOCK_NAME}-ref` is now deprecated
 
 ### 3.0.3 *(11.07.2019)*
 

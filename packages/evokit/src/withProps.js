@@ -1,15 +1,13 @@
-export const withProps = (target, defaultProps) => {
-    if (typeof target !== 'function') {
-        throw new Error('The first argument `target` is not a function');
-    }
+import { forwardRef, createElement } from 'react';
 
-    const Block = (props) => target(props);
+export const withProps = (target, defaultProps) => {
+    const Block = forwardRef((props, ref) => createElement(target, { ...props, ref }));
 
     Block.defaultProps = {
         ...target.defaultProps,
         ...defaultProps,
     };
-    Block.displayName = target.displayName;
+    Block.displayName = 'withProps';
     Block.propTypes = target.propTypes;
 
     return Block;

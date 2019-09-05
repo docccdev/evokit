@@ -1,4 +1,4 @@
-import { createElement } from 'react';
+import { createElement, forwardRef } from 'react';
 import { withPreset } from './className';
 import {
     divideProps,
@@ -19,7 +19,7 @@ export const createBlock = (tagName = 'div', name, mods = [], preset) => {
 
     const getProp = (props, key) => props[getPropKey(name, key)];
 
-    const Block = ({ ref, className, children, ...props }) => {
+    const Block = forwardRef(({ className, children, ...props }, ref) => {
         const [cleanProps, modProps] = divideProps(props, modPropKeys, basePropKeys);
         const modKeys = renameKeys(modProps, mapPropMods);
         const newRef = getProp(props, 'ref') || ref;
@@ -32,7 +32,7 @@ export const createBlock = (tagName = 'div', name, mods = [], preset) => {
             className: newClassName,
             ref: newRef,
         }, children);
-    };
+    });
 
     Block.displayName = name;
     Block.propTypes = { ...basePropTypes, ...modPropTypes };
