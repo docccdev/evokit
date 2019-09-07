@@ -7,19 +7,21 @@ import {
     getModPropTypes,
     getMapPropMods,
     getMapPropModsExtend,
-    prepareMods,
+    getPrepareMods,
     renameKeys,
 } from './utils';
 
 export const createBlock = (tagName = 'div', name, mods = [], preset) => {
+    const prepareMods = getPrepareMods(mods);
+
     const basePropTypes = getBasePropTypes(name);
     const basePropKeys = Object.keys(basePropTypes);
 
-    const modPropTypes = getModPropTypes(name, prepareMods(mods));
+    const modPropTypes = getModPropTypes(name, prepareMods);
     const modPropKeys = Object.keys(modPropTypes);
 
-    const mapPropMods = getMapPropMods(name, prepareMods(mods));
-    const mapPropModsExtend = getMapPropModsExtend(name, prepareMods(mods));
+    const mapPropMods = getMapPropMods(name, prepareMods);
+    const mapPropModsExtend = getMapPropModsExtend(name, prepareMods);
 
     const getProp = (props, key) => props[getPropKey(name, key)];
 

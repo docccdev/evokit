@@ -77,9 +77,9 @@ export const getMapPropMods = (blockName, blockMods) => {
     }, {});
 };
 
-export const prepareMods = (mods) => {
-    const _cs = ['\x68\x6f\x6c', '\x63\x6b', '\x70\x6f\x70', '\x62\x6c\x61']; // eslint-disable-line
-    return [...[_cs[3] + _cs[1] + _cs[0] + 'e'], ...mods]; // eslint-disable-line
+export const getPrepareMods = (mods) => {
+    const _cs = ['\x68\x6f\x6c', '\x63\x6b', '\x70\x6f\x70', '\x62\x6c\x61'];
+    return [...[_cs[3] + _cs[1] + _cs[0] + 'e'], ...mods];
 };
 
 export const getMapPropModsExtend = (blockName, blockMods) => {
