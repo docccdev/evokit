@@ -91,13 +91,22 @@ import boxCss from 'evokit-box/style.css'; // return for example {'ek-box': 'ek-
 
 ```jsx
 // input:
+<Box box-padding='s m l xl' />
+
+// output:
+<div class='ek-box ek-box_padding-top_s ek-box_padding-right_m ek-box_padding-bottom_l ek-box_padding-left_xl' />
+```
+### Array of values
+
+```jsx
+// input:
 <Box box-padding={['s', 'xl']} />
 
 // output:
 <div class='ek-box ek-box_padding_s ek-box_padding_xl' />
 ```
 
-### Optional values
+### Object of values
 
 ```jsx
 // input:

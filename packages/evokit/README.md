@@ -28,7 +28,7 @@ npm install evokit --save
 
 ## Create block
 
-`createBlock(tagName, blockName, blockMods, preset)`
+?> createBlock(*tagName*, *blockName*, *blockMods*, *preset*)
 
 See example [create block][create-block]
 
@@ -83,7 +83,8 @@ const Footer = createBlock('div', 'footer', ['padding'], {
 
 ## With props
 
-`withProps(Block, props)`
+?> withProps(*Block*, *props*)
+
 
 Return block with default props
 
