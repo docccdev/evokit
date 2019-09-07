@@ -35,6 +35,7 @@
         "arrow-parens": 0,
         "prefer-object-spread": 0,
         "max-len": 0,
-        "object-curly-newline": 0
+        "object-curly-newline": 0,
+        "no-extra-boolean-cast": 0
     }
 }

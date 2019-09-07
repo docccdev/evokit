@@ -75,6 +75,24 @@ describe("import { className, withPreset } from 'evokit';", () => {
         });
     });
 
+    describe("extended modifiers", () => {
+        it('existing extend', () => {
+            const cn = className('Block');
+            const extendMods = { modName: ['modName1', 'modName2'] };
+
+            expect(cn({ modName: 'modValue' }, '', extendMods)).toBe('ek-Block ek-Block_modName_modValue');
+            expect(cn({ modName1: 'modValue1' }, '', extendMods)).toBe('ek-Block ek-Block_modName1_modValue1');
+            expect(cn({ modName2: 'modValue2' }, '', extendMods)).toBe('ek-Block ek-Block_modName2_modValue2');
+            expect(cn({ modName: 'modValue1 modValue2' }, '', extendMods)).toBe('ek-Block ek-Block_modName1_modValue1 ek-Block_modName2_modValue2');
+            expect(cn({ modName: 'modValue', modName2: 'modValue2' }, '', extendMods)).toBe('ek-Block ek-Block_modName_modValue ek-Block_modName2_modValue2');
+        });
+
+        it('no existing extend', () => {
+            const cn = className('Block');
+            expect(cn({ modName: 'modValue ololo' })).toBe('ek-Block ek-Block_modName_modValue');
+        });
+    });
+
     describe("mix", () => {
         it('block', () => {
             const cn = className('Block');
@@ -297,6 +315,5 @@ describe("import { className, withPreset } from 'evokit';", () => {
                     .toBe('cssBlock__cssElem cssBlock__cssElem_cssMod_cssValue');
             });
         });
-
     });
 });

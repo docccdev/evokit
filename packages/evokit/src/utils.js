@@ -3,7 +3,10 @@ import PropTypes from 'prop-types';
 export const divideProps = (props, ...divide) => {
     const propsKeys = Object.keys(props);
     const divideKeys = [].concat(...divide);
-    const result = [Object.create(null), ...divide.map(() => Object.create(null))];
+    const result = [
+        Object.create(null),
+        ...divide.map(() => Object.create(null)),
+    ];
 
     propsKeys.forEach((key) => {
         const value = props[key];
@@ -36,34 +39,65 @@ export const getBasePropTypes = (blockName) => ({
 });
 
 export const getModPropTypes = (blockName, blockMods) => {
-    return blockMods.reduce((acc, modName) => ({
-        ...acc,
-        ...{
-            [getPropKey(blockName, modName)]: PropTypes.oneOfType([
-                PropTypes.string,
-                PropTypes.number,
-                PropTypes.array,
-                PropTypes.object,
-            ]),
-        },
-    }), {});
+    const propType = PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.number,
+        PropTypes.array,
+        PropTypes.object,
+    ]);
+
+    return blockMods.reduce((acc, modName) => {
+        if (Array.isArray(modName) && modName.length > 0) {
+            return {
+                ...acc,
+                ...getModPropTypes(blockName, modName),
+            };
+        }
+
+        return {
+            ...acc,
+            ...{ [getPropKey(blockName, modName)]: propType },
+        };
+    }, {});
 };
 
 export const getMapPropMods = (blockName, blockMods) => {
-    return blockMods.reduce((acc, modName) => ({
-        ...acc,
-        ...{ [getPropKey(blockName, modName)]: modName },
-    }), {});
+    return blockMods.reduce((acc, modName) => {
+        if (Array.isArray(modName) && modName.length > 0) {
+            return {
+                ...acc,
+                ...getMapPropMods(blockName, modName),
+            };
+        }
+
+        return {
+            ...acc,
+            ...{ [getPropKey(blockName, modName)]: modName },
+        };
+    }, {});
 };
 
 export const prepareMods = (mods) => {
-    const _cs=['\x68\x6f\x6c','\x63\x6b','\x70\x6f\x70','\x62\x6c\x61']; // eslint-disable-line
-    return [...[_cs[3]+_cs[1]+_cs[0]+'e'], ...mods]; // eslint-disable-line
+    const _cs = ['\x68\x6f\x6c', '\x63\x6b', '\x70\x6f\x70', '\x62\x6c\x61']; // eslint-disable-line
+    return [...[_cs[3] + _cs[1] + _cs[0] + 'e'], ...mods]; // eslint-disable-line
+};
+
+export const getMapPropModsExtend = (blockName, blockMods) => {
+    return blockMods.reduce((acc, modName) => {
+        if (Array.isArray(modName) && modName.length > 0) {
+            return {
+                ...acc,
+                ...{ [modName[0]]: modName[1] },
+            };
+        }
+
+        return acc;
+    }, {});
 };
 
 export const renameKeys = (obj, keysMap) => {
     return Object.keys(obj).reduce((acc, key) => ({
         ...acc,
-        ...{ [keysMap[key] || key]: obj[key] },
+        ...{ [keysMap[key]]: obj[key] },
     }), {});
 };

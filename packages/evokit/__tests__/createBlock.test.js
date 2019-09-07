@@ -45,6 +45,25 @@ describe("import { createBlock } from 'evokit';", () => {
         ).toBeTruthy();
     });
 
+    it('extended mods', () => {
+        const Block = createBlock('div', 'block', [
+            'modName',
+            ['border', ['border-color', 'border-weight', 'border-solid']],
+        ]);
+        expect(shallow(<Block block-modName='modValue' />).html()).toEqual(
+            '<div class="ek-block ek-block_modName_modValue"></div>'
+        );
+        expect(shallow(<Block block-modName='modValue ololo' />).html()).toEqual(
+            '<div class="ek-block ek-block_modName_modValue"></div>'
+        );
+        expect(shallow(<Block block-border='value' />).html()).toEqual(
+            '<div class="ek-block ek-block_border_value"></div>'
+        );
+        expect(shallow(<Block block-border='color weight solid' />).html()).toEqual(
+            '<div class="ek-block ek-block_border-color_color ek-block_border-weight_weight ek-block_border-solid_solid"></div>'
+        );
+    });
+
     it('blackhole', () => {
         const Block = createBlock('div', 'block', ['modName']);
         expect(
