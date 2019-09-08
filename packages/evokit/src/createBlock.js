@@ -11,27 +11,42 @@ import {
     renameKeys,
 } from './utils';
 
-export const createBlock = (tagName = 'div', name, mods = [], preset) => {
-    const prepareMods = getPrepareMods(mods);
+import {
+    checkTagName,
+    checkBlockName,
+    checkBlockMods,
+    checkBlockPreset,
+    checkPropDeprecated,
+} from './checks';
 
-    const basePropTypes = getBasePropTypes(name);
+export const createBlock = (tagName = 'div', blockName, blockMods, blockPreset) => {
+    checkTagName(tagName);
+    checkBlockName(blockName);
+    checkBlockMods(blockMods);
+    checkBlockPreset(blockPreset);
+
+    const prepareMods = getPrepareMods(blockMods);
+
+    const basePropTypes = getBasePropTypes(blockName);
     const basePropKeys = Object.keys(basePropTypes);
 
-    const modPropTypes = getModPropTypes(name, prepareMods);
+    const modPropTypes = getModPropTypes(blockName, prepareMods);
     const modPropKeys = Object.keys(modPropTypes);
 
-    const mapPropMods = getMapPropMods(name, prepareMods);
-    const mapPropModsExtend = getMapPropModsExtend(name, prepareMods);
+    const mapPropMods = getMapPropMods(blockName, prepareMods);
+    const mapPropModsExtend = getMapPropModsExtend(blockName, prepareMods);
 
-    const getProp = (props, key) => props[getPropKey(name, key)];
+    const getProp = (props, key) => props[getPropKey(blockName, key)];
 
     const Block = forwardRef(({ className, children, ...props }, ref) => {
+        checkPropDeprecated(!!getProp(props, 'ref'), getPropKey(blockName, 'ref'), 'ref');
+
         const [cleanProps, modProps] = divideProps(props, modPropKeys, basePropKeys);
         const reanameModProps = renameKeys(modProps, mapPropMods);
-        const newRef = getProp(props, 'ref') || ref;
+        const newRef = ref || getProp(props, 'ref');
         const newTag = getProp(props, 'tag') || tagName;
-        const newPreset = getProp(props, 'preset') || preset;
-        const newClassName = withPreset(newPreset)(name)(
+        const newPreset = getProp(props, 'preset') || blockPreset;
+        const newClassName = withPreset(newPreset)(blockName)(
             reanameModProps,
             className,
             mapPropModsExtend,
@@ -48,7 +63,7 @@ export const createBlock = (tagName = 'div', name, mods = [], preset) => {
         );
     });
 
-    Block.displayName = name;
+    Block.displayName = blockName;
     Block.propTypes = { ...basePropTypes, ...modPropTypes };
 
     return Block;
