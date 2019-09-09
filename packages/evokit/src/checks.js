@@ -19,7 +19,7 @@ export function checkPropDeprecated(condition, oldProp, newProp) {
 export function checkTagName(tag) {
     if (process.env.NODE_ENV !== 'production') {
         if (typeof tag !== 'string') {
-            throw new Error(`Expected blockName to be a string but received ${typeof tag} instead`);
+            throw new Error(`Expected tagName to be a string but received ${typeof tag} instead`);
         }
     }
 }
