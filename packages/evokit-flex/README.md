@@ -68,21 +68,23 @@ import 'evokit-flex/style.css';
 
 | Prop name        | Default value    | Possible value | Description |
 |------------------|------------------|----------------|-------------|
-| [flex-tag]       | `div`         | [html tags][html-all-tags] | HTML tag    |
-| [flex-display]   | `flex`     | `flex` `flex-inline` `none` | Display type |
-| flex-content     | `start`    | `start` `end` `center` `between` `around` `stretch` | Space between flex lines on the cross axis |
-| flex-items       | `start`    | `start` `end` `center` `baseline` `stretch` | Alignment of all items on the cross axis |
 | [flex-direction] | `row`      | `row` `row-reverse` `column` `column-reverse` | Direction of all items |
+| [flex-display]   | `flex`     | `flex` `flex-inline` `none` | Display type |
+| [flex-tag]       | `div`         | [html tags][html-all-tags] | HTML tag    |
 | [flex-wrap]      | `wrap`   | `nowrap` `wrap` `wrap-reverse` | Wrap rules |
+| flex-content `*` | `start`    | `start` `end` `center` `between` `around` `stretch` | Space between flex lines on the cross axis |
+| flex-items       | `start`    | `start` `end` `center` `baseline` `stretch` | Alignment of all items on the cross axis |
 
 ### `<FlexItem />`
 
 | Prop name           | Default value    | Possible value | Description |
 |---------------------|------------------|----------------|-------------|
-| [flex-item-tag]     | `div`    | [html tags][html-all-tags] | HTML tag    |
-| [flex-item-display] | `block`  | `block` `none` | Display type |
 | [flex-item-align]   | `start`  | `start` `end` `center` `baseline` `stretch` | Alignment item on the cross axis |
+| [flex-item-display] | `block`  | `block` `none` | Display type |
 | [flex-item-order]   | `0`      | `0` `1` `2` `3` `4` `5` `6` `7` `8` `9` `10` | Set the order |
+| [flex-item-tag]     | `div`    | [html tags][html-all-tags] | HTML tag    |
+
+> `*` — prop has advanced params <br>
 
 ## Customize
 

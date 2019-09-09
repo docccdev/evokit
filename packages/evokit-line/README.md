@@ -51,16 +51,19 @@ import 'evokit-line/style.css';
 
 | Prop name      | Default value | Possible value | Description  |
 |----------------|---------------|----------------|--------------|
-| [line-tag]     | `hr`          | [html tags][html-all-tags] | HTML tag    |
 | [line-display] | `block`       | `block` `none` | Display type |
 | [line-indent]  | `none`        | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Set the margin top and bottom |
 | [line-style]   | `solid`       | `solid` `dotted` `dashed` | Border style |
+| [line-tag]     | `hr`          | [html tags][html-all-tags] | HTML tag    |
 
-> Use [theming][create_theme] for creating custom `{THEME_NAME}`.
+**Themes**
 
 | Prop name        | Default value | Possible value | Description  |
 |------------------|---------------|----------------|--------------|
 | [line-color]     | `null`        | `{THEME_NAME}` | Border color |
+
+> `{THEME_NAME}` — use [theming][create_theme] for create custom theme
+
 
 ## Customize
 

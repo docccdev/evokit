@@ -53,21 +53,24 @@ import 'evokit-image/style.css';
 
 ### `<Image />`
 
-| Prop name      | Default value | Possible value          | Description      |
-|----------------|---------------|-------------------------|------------------|
-| [image-tag]    | `img`         | [html tags][html-all-tags] | HTML tag    |
-| [image-align]  | `null`        | `left` `center` `right` | Horizontal alignment |
-| [image-valign] | `null`        | `baseline` `bottom` `middle` `sub` `super` `text-bottom` `text-top` `top` | Vertical alignment |
-| [image-mirror] | `null`        | `x` `y` `xy` | Mirroring |
-| [image-fit]    | `null`        | `none` `fill` `contain` `cover` `scale-down` | Filling the container relative to its height and width |
-| [image-width]  | `auto`        | `auto` `1-1` `*-2` `*-3` `*-4` `*-5` `*-6` `*-7` `*-8` `*-9` `*-10` | Set the width |
-| [image-round]  | `none`        | `none` `full` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Corner rounding |
+| Prop name          | Default value | Possible value          | Description      |
+|--------------------|---------------|-------------------------|------------------|
+| [image-align]      | `null`        | `left` `center` `right` | Horizontal alignment |
+| [image-fit]        | `null`        | `none` `fill` `contain` `cover` `scale-down` | Filling the container relative to its height and width |
+| [image-mirror]     | `null`        | `x` `y` `xy` | Mirroring |
+| [image-round] `*`  | `none`        | `none` `full` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Corner rounding |
+| [image-tag]        | `img`         | [html tags][html-all-tags] | HTML tag    |
+| [image-valign]     | `null`        | `baseline` `bottom` `middle` `sub` `super` `text-bottom` `text-top` `top` | Vertical alignment |
+| [image-width]      | `auto`        | `auto` `1-1` `*-2` `*-3` `*-4` `*-5` `*-6` `*-7` `*-8` `*-9` `*-10` | Set the width |
 
-> Use [theming][create_theme] for creating custom `{THEME_NAME}`.
+**Themes**
 
 | Prop name        | Default value | Possible value | Description  |
 |------------------|---------------|----------------|--------------|
 | [image-border]   | `null`        | `{THEME_NAME}` | Border color |
+
+> `*` — prop has advanced params <br>
+> `{THEME_NAME}` — use [theming][create_theme] for create custom theme
 
 ## Customize
 

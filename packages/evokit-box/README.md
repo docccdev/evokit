@@ -61,26 +61,29 @@ import 'evokit-box/style.css';
 
 ### `<Box />`
 
-| Prop name        | Default value | Possible value | Description |
-|------------------|---------------|----------------|-------------|
-| [box-tag]        | `div`         | [html tags][html-all-tags] | HTML tag    |
-| [box-display]    | `block`       | `block` `inline-block` `inline` `none` | Display type |
-| [box-align]      | `none`        | `none` `left` `center` `right` | Horizontal alignment |
-| [box-margin]     | `none`        | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` `auto` | Indent around block |
-| [box-padding]    | `none`        | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Indent around an block content |
-| [box-round]      | `none`        | `none` `full` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Corner rounding |
-| [box-width]      | `auto`        | `auto` `1-1` `*-2` `*-3` `*-4` `*-5` `*-6` `*-7` `*-8` `*-9` `*-10` | Set the width |
-| [box-height]     | `auto`        | `auto` `1-1` | Set the height |
-| [box-position]   | `static`      | `static` `relative` `absolute` `fixed` | Positioning method |
-| [box-place]      | `null`        | `top` `top-left` `top-right` `center` `center-left` `center-right` `bottom` `bottom-left` `bottom-right` | Position place |
-| [box-overflow]   | `visible`      | `auto` `hidden` `scroll` `visible` | Display overflow block content |
+| Prop name          | Default value | Possible value | Description |
+|--------------------|---------------|----------------|-------------|
+| [box-align]        | `none`        | `none` `left` `center` `right` | Horizontal alignment |
+| [box-display]      | `block`       | `block` `inline-block` `inline` `none` | Display type |
+| [box-height]       | `auto`        | `auto` `1-1` | Set the height |
+| [box-margin] `*`   | `none`        | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` `auto` | Indent around block |
+| [box-overflow] `*` | `visible`     | `auto` `hidden` `scroll` `visible` | Display overflow block content |
+| [box-padding] `*`  | `none`        | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Indent around an block content |
+| [box-place] `*`    | `null`      | `top` `top-left` `top-right` `center` `center-left` `center-right` `bottom` `bottom-left` `bottom-right` | Position place |
+| [box-position]     | `static`      | `static` `relative` `absolute` `fixed` | Positioning method |
+| [box-round] `*`    | `none`        | `none` `full` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Corner rounding |
+| [box-tag]          | `div`         | [html tags][html-all-tags] | HTML tag    |
+| [box-width]        | `auto`        | `auto` `1-1` `*-2` `*-3` `*-4` `*-5` `*-6` `*-7` `*-8` `*-9` `*-10` | Set the width |
 
-> Use [theming][create_theme] for creating custom `{THEME_NAME}`.
+**Themes**
 
 | Prop name        | Default value | Possible value | Description       |
 |------------------|---------------|-----------------|------------------|
-| [box-border]     | `null`        | `{THEME_NAME}`  | Border color     |
 | [box-background] | `null`        | `{THEME_NAME}`  | Background color |
+| [box-border] `*` | `null`        | `{THEME_NAME}`  | Border color     |
+
+> `*` — prop has advanced params <br>
+> `{THEME_NAME}` — use [theming][create_theme] for create custom theme
 
 ## Customize
 
@@ -152,24 +155,56 @@ Default value `div`
 
 ## `box-margin`
 
-> Has advanced props:
-> - `box-margin` - `top`, `right`, `bottom` or `left` for example **`box-margin-right`**
-> - `box-margin` - `lr` or `tb` for example **`box-margin-tb`**
+The property allows you to set the indentation value for all sides of an element at once or to determine it only for specified sides.
 
-- `none` - value: `0px`
-- `auto` - value: `auto`
-- `xxs` - css variable `--ek-box-indent-xxs`, default value: `5px`
-- `xs` - css variable `--ek-box-indent-xs`, default value: `10px`
-- `s` - css variable `--ek-box-indent-s`, default value: `15px`
-- `m` - css variable `--ek-box-indent-m`, default value: `20px`
-- `l` - css variable `--ek-box-indent-l`, default value: `25px`
-- `xl` - css variable `--ek-box-indent-xl`, default value: `30px`
-- `xxl` - css variable `--ek-box-indent-xxl`, default value: `35px`
+**Advanced**
+
+1. `box-margin-top`
+2. `box-margin-right`
+3. `box-margin-bottom`
+4. `box-margin-left`
+
+**Set value separated by a space**
+
+- `box-margin="{1,3} {2,4}"`
+- `box-margin="{1} {2} {3} {4}"`
+
+> **DEPRECATED**, use separated values
+>
+> - ~~`box-margin-lr`~~
+> - ~~`box-margin-tb`~~
+
+**Values**
+
+| Value | CSS var | CSS value |
+|-------|--------------|-------|
+| `none` |    --         | `0px`   |
+| `auto` | ---             | `auto`   |
+| `xxs` | `--ek-box-indent-xxs`  | `5px`   |
+| `xs` | `--ek-box-indent-xs`  | `10px`   |
+| `s` | `--ek-box-indent-s`  | `15px`   |
+| `m` | `--ek-box-indent-m`  | `20px`   |
+| `l` | `--ek-box-indent-l`  | `25px`   |
+| `xl` | `--ek-box-indent-xl`  | `30px`   |
+| `xxl` | `--ek-box-indent-xxl`  | `35px`   |
 
 ```jsx
 <Box box-margin='xs'>
-    ...
+    // all sides XS value
 </Box>
+
+<Box box-margin='xs xl'>
+    // top and bottom XS, left and right XL
+</Box>
+
+<Box box-margin='xs xl m'>
+    // top XS, left and right XL, bottom M
+</Box>
+
+<Box box-margin='s m l xl'>
+    // top S, right M, bottom L, left XL
+</Box>
+
 ```
 
 ## `box-padding`

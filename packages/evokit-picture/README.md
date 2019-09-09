@@ -52,13 +52,13 @@ import 'evokit-picture/style.css';
 
 ### `<Picture />`
 
-| Prop name       | Default value | Possible value | Description |
-|-----------------|---------------|----------------|-------------|
-| [picture-tag]   | `picture`     | [html tags][html-all-tags] | HTML tag    |
-| [picture-fit]   | `null`        | `none` `fill` `contain` `cover` `scale-down`    | Filling the container relative to its height and width |
-| [picture-round] | `none`        | `none` `full` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Corner rounding |
+| Prop name           | Default value | Possible value | Description |
+|---------------------|---------------|----------------|-------------|
+| [picture-fit]       | `null`        | `none` `fill` `contain` `cover` `scale-down`    | Filling the container relative to its height and width |
+| [picture-round] `*` | `none`        | `none` `full` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Corner rounding |
+| [picture-tag]       | `picture`     | [html tags][html-all-tags] | HTML tag    |
 
-> Use [theming][create_theme] for creating custom `{THEME_NAME}`.
+**Themes**
 
 | Prop name        | Default value  | Possible value | Description  |
 |------------------|----------------|----------------|--------------|
@@ -69,6 +69,9 @@ import 'evokit-picture/style.css';
 | Prop name          | Default value | Possible value             | Description |
 |--------------------|---------------|----------------------------|-------------|
 | [picture-item-tag] | `img`         | [html tags][html-all-tags] | HTML tag    |
+
+> `*` — prop has advanced params <br>
+> `{THEME_NAME}` — use [theming][create_theme] for create custom theme
 
 ## Customize
 

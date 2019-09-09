@@ -63,23 +63,24 @@ import 'evokit-body/style.css';
 
 | Prop name         | Default value | Possible value | Description    |
 |-------------------|---------------|-------------------|-------------|
-| [body-tag]        | `body`        | [html tags][html-all-tags] | HTML tag    |
-| [body-size]       | `null`        | `xl` `xxl` `xxxl` | Max width for children `<BodySection />` |
 | [body-indent]     | `none`        | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Padding on the side left and right for children `<BodySection />` |
+| [body-size]       | `null`        | `xl` `xxl` `xxxl` | Max width for children `<BodySection />` |
+| [body-tag]        | `body`        | [html tags][html-all-tags] | HTML tag    |
 
-> Use [theming][create_theme] for creating custom `{THEME_NAME}`.
+**Themes**
 
 | Prop name         | Default value | Possible value | Description |
 |-------------------|--------|----------------|--------------------|
 | [body-background] | `null` | `{THEME_NAME}` | Background color   |
 | [body-color]      | `null` | `{THEME_NAME}` | Text color         |
 
+> `{THEME_NAME}` — use [theming][create_theme] for create custom theme
+
 ### `<BodySection />`
 
 | Prop name          | Default value | Possible value             | Description |
 |--------------------|---------------|----------------------------|-------------|
 | [body-section-tag] | `div`         | [html tags][html-all-tags] | HTML tag    |
-
 
 ## Customize
 

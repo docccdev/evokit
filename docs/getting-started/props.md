@@ -5,7 +5,7 @@
 All blocks have base props, such as `tag`, `ref`, `preset`. Also supports other valid props of the React Element
 
 - `{BLOCK_NAME}-tag` - type `string`, used to change the HTML tag
-- `{BLOCK_NAME}-ref` - type `function`, used to get a NODE reference (**DEPRECATED**)
+- ~~`{BLOCK_NAME}-ref` - type `function`, used to get a NODE reference~~ (**DEPRECATED**)
 - `{BLOCK_NAME}-preset` - type `object`, used to customize the generation of class names and CSS Modules
 
 ---
@@ -29,7 +29,7 @@ import 'evokit-box/style.css';
 <span class='ek-box' />
 ```
 
-### `box-ref`
+### ~~`box-ref`~~
 
 !> This prop is **DEPRECATED**! Please use React ref prop.
 

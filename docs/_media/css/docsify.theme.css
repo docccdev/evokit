@@ -1065,3 +1065,7 @@ img[data-origin] {
 .docsify-copy-code-button {
     font-size: 13px !important;
 }
+
+del code {
+    text-decoration: line-through;
+}

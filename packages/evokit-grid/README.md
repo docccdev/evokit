@@ -63,15 +63,15 @@ import 'evokit-grid/style.css';
 
 | Prop name         | Default value | Possible value             | Description                 |
 |-------------------|---------------|----------------------------|-----------------------------|
-| [grid-tag]        | `div`         | [html tags][html-all-tags] | HTML tag    |
-| [grid-column]     | `auto`        | `auto` `1` `2` `3` `4` `5` `6` `7` `8` `9` `10` `expand` | Number of cells in a row |
-| [grid-indent]     | `none`        | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Indentation between cells |
-| [grid-direction]  | `row`         | `row` `row-reverse` `column` `column-reverse` | Cell direction |
-| [grid-wrap]       | `wrap`        | `wrap` `nowrap` `wrap-reverse` | Wrap rules |
 | [grid-align]      | `left`        | `left` `center` `right` `justify` | Horizontal alignment of cells |
+| [grid-column]     | `auto`        | `auto` `1` `2` `3` `4` `5` `6` `7` `8` `9` `10` `expand` | Number of cells in a row |
+| [grid-direction]  | `row`         | `row` `row-reverse` `column` `column-reverse` | Cell direction |
+| [grid-indent] `*` | `none`        | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Indentation between cells |
+| [grid-tag]        | `div`         | [html tags][html-all-tags] | HTML tag    |
 | [grid-valign]     | `top`         | `top` `middle` `bottom` `baseline` `justify` | Vertical Cell Alignment |
+| [grid-wrap]       | `wrap`        | `wrap` `nowrap` `wrap-reverse` | Wrap rules |
 
-> Use [theming][create_theme] for creating custom `{THEME_NAME}`.
+**Themes**
 
 | Prop name         | Default value | Possible value | Description                |
 |-------------------|---------------|----------------|----------------------------|
@@ -81,9 +81,12 @@ import 'evokit-grid/style.css';
 
 | Prop name          | Default value | Possible value             | Description |
 |--------------------|---------------|----------------------------|-------------|
-| [grid-item-tag]    | `div`         | [html tags][html-all-tags] | HTML tag    |
 | [grid-item-order]  | `null`        | `1` `2` `3` `4` `5` `6` `7` `8` `9` `10` | Sets the order of the cell |
+| [grid-item-tag]    | `div`         | [html tags][html-all-tags] | HTML tag    |
 | [grid-item-width]  | `auto`        | `auto` `expand` `1-1` `*-2` `*-3` `*-4` `*-5` `*-6` `*-7` `*-8` `*-9` `*-10` | Cell width |
+
+> `*` — prop has advanced params <br>
+> `{THEME_NAME}` — use [theming][create_theme] for create custom theme
 
 ## Customize
 

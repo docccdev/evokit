@@ -57,16 +57,19 @@ import 'evokit-list/style.css';
 
 | Prop name     | Default value | Possible value | Description |
 |---------------|---------------|----------------|-------------|
-| [list-tag]    | `ul`          | [html tags][html-all-tags] | HTML tag    |
 | [list-indent] | `none`        | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Indentation between elements |
 | [list-style]  | `null`        | `dash` `decimal` `disc` | Marker type |
+| [list-tag]    | `ul`          | [html tags][html-all-tags] | HTML tag    |
 
-> Use [theming][create_theme] for creating custom `{THEME_NAME}`.
+**Themes**
 
 | Prop name      | Default value | Possible value | Description  |
 |----------------|---------------|----------------|--------------|
 | [list-color]   | `null`        | `{THEME_NAME}` | Marker color |
 | [list-divider] | `null`        | `{THEME_NAME}` | Color separator between elements |
+
+> `{THEME_NAME}` — use [theming][create_theme] for create custom theme
+
 
 ### `<ListItem />`
 
