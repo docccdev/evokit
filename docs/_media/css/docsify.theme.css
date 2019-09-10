@@ -448,7 +448,7 @@ body.sticky .sidebar,body.sticky .sidebar-toggle {
 
 .markdown-section td,.markdown-section th {
     border: 1px solid #ddd;
-    padding: 12px 23px;
+    padding: 10px 20px;
 }
 
 .markdown-section tr {
@@ -494,7 +494,8 @@ body.sticky .sidebar,body.sticky .sidebar-toggle {
 }
 
 .markdown-section p.tip code {
-    background-color: #efefef
+    background-color: #fffbfb;
+    border-color: #ff9a9a;
 }
 
 .markdown-section p.tip em {
@@ -505,6 +506,11 @@ body.sticky .sidebar,body.sticky .sidebar-toggle {
     background: rgba(66,185,131,.1);
     border-radius: 2px;
     padding: 12px 18px;
+}
+
+.markdown-section p.warn code {
+    background-color: #f7f7f7;
+    border-color: #b9ccc4;
 }
 
 .markdown-section details + details {
@@ -826,6 +832,10 @@ section.cover blockquote>p>a:hover {
     text-decoration: none;
 }
 
+.markdown-section a:not(.ek-link) code {
+    color: #30a771;
+}
+
 .markdown-section a:not(.ek-link):hover {
     text-decoration: underline;
 }
@@ -840,9 +850,17 @@ section.cover blockquote>p>a:hover {
     margin: 1.6em 0 .6em;
 }
 
+.markdown-section h2:not(.ek-text) code {
+    padding: 7px 9px;
+}
+
 .markdown-section h3:not(.ek-text) {
     font-size: 18px;
     margin: 1.6em 0 .6em;
+}
+
+.markdown-section h3:not(.ek-text) code {
+    padding: 5px 7px;
 }
 
 .markdown-section h4:not(.ek-text) {
@@ -900,13 +918,13 @@ section.cover blockquote>p>a:hover {
     border-radius: 2px;
     font-size: .9em;
     margin: 4px 2px;
-    padding: 3px 5px;
+    padding: 5px 7px;
     white-space: pre-wrap;
     line-height: normal;
 }
 
 .markdown-section code {
-    border: 1px solid #eee;
+    border: 1px solid #e0dddd;
     border-radius: 3px;
 }
 

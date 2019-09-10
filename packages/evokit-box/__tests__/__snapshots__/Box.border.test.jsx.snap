@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Box box-border="..." /> props box-border 1`] = `
+<div
+  className="ek-box ek-box_border_THEME_NAME"
+/>
+`;
+
+exports[`<Box box-border="..." /> props box-border-bottom 1`] = `
+<div
+  className="ek-box ek-box_border-bottom_THEME_NAME"
+/>
+`;
+
+exports[`<Box box-border="..." /> props box-border-left 1`] = `
+<div
+  className="ek-box ek-box_border-left_THEME_NAME"
+/>
+`;
+
+exports[`<Box box-border="..." /> props box-border-lr 1`] = `
+<div
+  className="ek-box ek-box_border-lr_THEME_NAME"
+/>
+`;
+
+exports[`<Box box-border="..." /> props box-border-right 1`] = `
+<div
+  className="ek-box ek-box_border-right_THEME_NAME"
+/>
+`;
+
+exports[`<Box box-border="..." /> props box-border-tb 1`] = `
+<div
+  className="ek-box ek-box_border-tb_THEME_NAME"
+/>
+`;
+
+exports[`<Box box-border="..." /> props box-border-top 1`] = `
+<div
+  className="ek-box ek-box_border-top_THEME_NAME"
+/>
+`;

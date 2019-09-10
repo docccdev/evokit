@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<List /> props className 1`] = `
+<ul
+  className="ek-list ololo"
+/>
+`;
+
+exports[`<List /> props className 2`] = `
+<li
+  className="ek-list__item ololo"
+/>
+`;
+
+exports[`<List /> props list-tag 1`] = `
+<span
+  className="ek-list"
+/>
+`;
+
+exports[`<List /> props list-tag 2`] = `
+<span
+  className="ek-list__item"
+/>
+`;
+
+exports[`<List /> render 1`] = `
+<ul
+  className="ek-list"
+/>
+`;
+
+exports[`<List /> render 2`] = `
+<li
+  className="ek-list__item"
+/>
+`;

@@ -1,5 +1,6 @@
 import React from 'react';
-import { className, withPreset } from '../src/className';
+import { className } from '../src';
+import { withPreset } from '../src/className';
 
 describe("import { className, withPreset } from 'evokit';", () => {
     it('common', () => {

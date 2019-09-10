@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Body /> props body-tag 1`] = `
+<span
+  className="ek-body"
+/>
+`;
+
+exports[`<Body /> props body-tag 2`] = `
+<span
+  className="ek-body__section"
+/>
+`;
+
+exports[`<Body /> props className 1`] = `
+<body
+  className="ek-body ololo"
+/>
+`;
+
+exports[`<Body /> props className 2`] = `
+<div
+  className="ek-body__section ololo"
+/>
+`;
+
+exports[`<Body /> render 1`] = `
+<body
+  className="ek-body"
+/>
+`;
+
+exports[`<Body /> render 2`] = `
+<div
+  className="ek-body__section"
+/>
+`;

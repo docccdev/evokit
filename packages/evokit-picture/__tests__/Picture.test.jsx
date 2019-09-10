@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { Picture, PictureItem } from '../index.js';
+import { Picture, PictureItem } from '../src';
 
 describe('<Picture />', () => {
     it('render', () => {

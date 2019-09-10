@@ -69,7 +69,7 @@ import 'evokit-box/style.css';
 | [box-margin] `*`   | `none`        | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` `auto` | Indent around block |
 | [box-overflow] `*` | `visible`     | `auto` `hidden` `scroll` `visible` | Display overflow block content |
 | [box-padding] `*`  | `none`        | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Indent around an block content |
-| [box-place] `*`    | `null`      | `top` `top-left` `top-right` `center` `center-left` `center-right` `bottom` `bottom-left` `bottom-right` | Position place |
+| [box-place]        | `null`      | `top` `top-left` `top-right` `center` `center-left` `center-right` `bottom` `bottom-left` `bottom-right` | Position place |
 | [box-position]     | `static`      | `static` `relative` `absolute` `fixed` | Positioning method |
 | [box-round] `*`    | `none`        | `none` `full` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Corner rounding |
 | [box-tag]          | `div`         | [html tags][html-all-tags] | HTML tag    |
@@ -157,98 +157,137 @@ Default value `div`
 
 The property allows you to set the indentation value for all sides of an element at once or to determine it only for specified sides.
 
-**Advanced**
+!> **DEPRECATED** props `box-margin-lr` and `box-margin-tb`, please use multi values
+
+**Advanced props**
 
 1. `box-margin-top`
 2. `box-margin-right`
 3. `box-margin-bottom`
 4. `box-margin-left`
 
-**Set value separated by a space**
+**Multi values** _(set value separated by a space)_
 
 - `box-margin="{1,3} {2,4}"`
+- `box-margin="{1} {2,4} {3}"`
 - `box-margin="{1} {2} {3} {4}"`
 
-> **DEPRECATED**, use separated values
->
-> - ~~`box-margin-lr`~~
-> - ~~`box-margin-tb`~~
+**List of values**
 
-**Values**
-
-| Value | CSS var | CSS value |
-|-------|--------------|-------|
-| `none` |    --         | `0px`   |
-| `auto` | ---             | `auto`   |
-| `xxs` | `--ek-box-indent-xxs`  | `5px`   |
-| `xs` | `--ek-box-indent-xs`  | `10px`   |
-| `s` | `--ek-box-indent-s`  | `15px`   |
-| `m` | `--ek-box-indent-m`  | `20px`   |
-| `l` | `--ek-box-indent-l`  | `25px`   |
-| `xl` | `--ek-box-indent-xl`  | `30px`   |
-| `xxl` | `--ek-box-indent-xxl`  | `35px`   |
+| Value  | CSS var               | CSS value |
+|--------|-----------------------|-----------|
+| `none` | ---                   | `0px`     |
+| `auto` | ---                   | `auto`    |
+| `xxs`  | `--ek-box-indent-xxs` | `5px`     |
+| `xs`   | `--ek-box-indent-xs`  | `10px`    |
+| `s`    | `--ek-box-indent-s`   | `15px`    |
+| `m`    | `--ek-box-indent-m`   | `20px`    |
+| `l`    | `--ek-box-indent-l`   | `25px`    |
+| `xl`   | `--ek-box-indent-xl`  | `30px`    |
+| `xxl`  | `--ek-box-indent-xxl` | `35px`    |
 
 ```jsx
-<Box box-margin='xs'>
-    // all sides XS value
-</Box>
-
-<Box box-margin='xs xl'>
-    // top and bottom XS, left and right XL
-</Box>
-
-<Box box-margin='xs xl m'>
-    // top XS, left and right XL, bottom M
-</Box>
-
-<Box box-margin='s m l xl'>
-    // top S, right M, bottom L, left XL
-</Box>
-
+<Box box-margin='s' />
+<Box box-margin='s m' />
+<Box box-margin='s m l' />
+<Box box-margin='s m l xl' />
+<Box
+    box-margin-top='s'
+    box-margin-right='m'
+    box-margin-bottom='l'
+    box-margin-left='xl'
+/>
 ```
 
 ## `box-padding`
 
-> Has advanced props:
-> - `box-padding` - `top`, `right`, `bottom` or `left` for example **`box-padding-right`**
-> - `box-padding` - `lr` or `tb` for example **`box-padding-tb`**
+The property allows you to set the indentation value for all sides of an element at once or to determine it only for specified sides.
 
-- `none` - value: `0px`
-- `xxs` - css variable `--ek-box-indent-xxs`, default value: `5px`
-- `xs` - css variable `--ek-box-indent-xs`, default value: `10px`
-- `s` - css variable `--ek-box-indent-s`, default value: `15px`
-- `m` - css variable `--ek-box-indent-m`, default value: `20px`
-- `l` - css variable `--ek-box-indent-l`, default value: `25px`
-- `xl` - css variable `--ek-box-indent-xl`, default value: `30px`
-- `xxl` - css variable `--ek-box-indent-xxl`, default value: `35px`
+!> **DEPRECATED** props `box-padding-lr` and `box-padding-tb`, please use multi values
+
+**Advanced props**
+
+1. `box-padding-top`
+2. `box-padding-right`
+3. `box-padding-bottom`
+4. `box-padding-left`
+
+**Multi values** _(set value separated by a space)_
+
+- `box-padding="{1,3} {2,4}"`
+- `box-padding="{1} {2,4} {3}"`
+- `box-padding="{1} {2} {3} {4}"`
+
+**List of values**
+
+| Value  | CSS var               | CSS value |
+|--------|-----------------------|-----------|
+| `none` | ---                   | `0px`     |
+| `xxs`  | `--ek-box-indent-xxs` | `5px`     |
+| `xs`   | `--ek-box-indent-xs`  | `10px`    |
+| `s`    | `--ek-box-indent-s`   | `15px`    |
+| `m`    | `--ek-box-indent-m`   | `20px`    |
+| `l`    | `--ek-box-indent-l`   | `25px`    |
+| `xl`   | `--ek-box-indent-xl`  | `30px`    |
+| `xxl`  | `--ek-box-indent-xxl` | `35px`    |
 
 ```jsx
-<Box box-padding='xl'>
-    ...
-</Box>
+<Box box-padding='s' />
+<Box box-padding='s m' />
+<Box box-padding='s m l' />
+<Box box-padding='s m l xl' />
+<Box
+    box-padding-top='s'
+    box-padding-right='m'
+    box-padding-bottom='l'
+    box-padding-left='xl'
+/>
 ```
 
 ## `box-round`
 
-> Has advanced props:
-> - `box-round` - `top`, `right`, `bottom` or `left` for example **`box-round-right`**
-> - `box-round-top` - `left` or `right` for example **`box-round-top-right`**
-> - `box-round-bottom` - `left` or `right` for example **`box-round-bottom-right`**
+The property allows you to set the fillet value for all corners of the element at the same time or to determine it only for the specified angle.
 
-- `none` - value: `0px`
-- `full` - value: `50%`
-- `xxs` - css variable `--ek-box-round-xxs`, default value: `2px`
-- `xs` - css variable `--ek-box-round-xs`, default value: `4px`
-- `s` - css variable `--ek-box-round-s`, default value: `6px`
-- `m` - css variable `--ek-box-round-m`, default value: `8px`
-- `l` - css variable `--ek-box-round-l`, default value: `10px`
-- `xl` - css variable `--ek-box-round-xl`, default value: `12px`
-- `xxl` - css variable `--ek-box-round-xxl`, default value: `14px`
+!> **DEPRECATED** props `box-round-top`, `box-round-right`, `box-round-bottom` and `box-round-left`, please use multi values
+
+**Advanced props**
+
+1. `box-round-top-left`
+2. `box-round-top-right`
+3. `box-round-bottom-right`
+4. `box-round-bottom-left`
+
+**Multi values** _(set value separated by a space)_
+
+- `box-round="{1,3} {2,4}"`
+- `box-round="{1} {2,4} {3}"`
+- `box-round="{1} {2} {3} {4}"`
+
+**List of values**
+
+| Value  | CSS var               | CSS value |
+|--------|-----------------------|-----------|
+| `none` | ---                   | `0px`     |
+| `full` | ---                   | `50%`     |
+| `xxs`  | `--ek-box-round-xxs`  | `2px`     |
+| `xs`   | `--ek-box-round-xs`   | `4px`    |
+| `s`    | `--ek-box-round-s`    | `6px`    |
+| `m`    | `--ek-box-round-m`    | `8px`    |
+| `l`    | `--ek-box-round-l`    | `10px`    |
+| `xl`   | `--ek-box-round-xl`   | `12px`    |
+| `xxl`  | `--ek-box-round-xxl`  | `14px`    |
 
 ```jsx
-<Box box-round='full'>
-    ...
-</Box>
+<Box box-round='s' />
+<Box box-round='s m' />
+<Box box-round='s m l' />
+<Box box-round='s m l xl' />
+<Box
+    box-round-top-left='s'
+    box-round-top-right='m'
+    box-round-bottom-right='l'
+    box-round-bottom-left='xl'
+/>
 ```
 
 ## `box-width`
@@ -306,8 +345,18 @@ The property allows you to set the indentation value for all sides of an element
 
 ## `box-overflow`
 
-> Has advanced props:
-> - `box-overflow-x` and `box-overflow-y`
+The property allows you to set the value for all axes at the same time or to determine it only for the specified axis
+
+**Advanced props**
+
+1. `box-overflow-x`
+2. `box-overflow-y`
+
+**Multi values** _(set value separated by a space)_
+
+- `box-overflow="{1} {2}"`
+
+**List of values**
 
 - `auto` - Scroll bars are added only when needed
 - `hidden` - Only the area inside the element is displayed, the rest will be hidden
@@ -315,9 +364,9 @@ The property allows you to set the indentation value for all sides of an element
 - `visible` - The entire content of the element is displayed, even beyond the specified height and width
 
 ```jsx
-<Box box-overflow='scroll'>
-    ...
-</Box>
+<Box box-overflow='scroll' />
+<Box box-overflow='visible scroll' />
+<Box box-overflow-x='visible' box-overflow-y='scroll' />
 ```
 
 ## `box-border`

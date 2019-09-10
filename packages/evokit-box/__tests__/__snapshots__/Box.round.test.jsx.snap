@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Box box-round="..." /> DEPRECATED props props box-round-bottom 1`] = `
+<div
+  className="ek-box ek-box_round-bottom_full"
+/>
+`;
+
+exports[`<Box box-round="..." /> DEPRECATED props props box-round-left 1`] = `
+<div
+  className="ek-box ek-box_round-left_full"
+/>
+`;
+
+exports[`<Box box-round="..." /> DEPRECATED props props box-round-right 1`] = `
+<div
+  className="ek-box ek-box_round-right_full"
+/>
+`;
+
+exports[`<Box box-round="..." /> DEPRECATED props props box-round-top 1`] = `
+<div
+  className="ek-box ek-box_round-top_full"
+/>
+`;
+
+exports[`<Box box-round="..." /> extend 2 props box-round 1`] = `
+<div
+  className="ek-box ek-box_round-top-left_xs ek-box_round-bottom-right_xs ek-box_round-top-right_xl ek-box_round-bottom-left_xl"
+/>
+`;
+
+exports[`<Box box-round="..." /> extend 3 props box-round 1`] = `
+<div
+  className="ek-box ek-box_round-top-left_xs ek-box_round-top-right_xl ek-box_round-bottom-left_xl ek-box_round-bottom-right_m"
+/>
+`;
+
+exports[`<Box box-round="..." /> extend 4 props box-round 1`] = `
+<div
+  className="ek-box ek-box_round-top-left_s ek-box_round-top-right_m ek-box_round-bottom-right_l ek-box_round-bottom-left_xl"
+/>
+`;
+
+exports[`<Box box-round="..." /> props box-round 1`] = `
+<div
+  className="ek-box ek-box_round_full"
+/>
+`;
+
+exports[`<Box box-round="..." /> props box-round-bottom-left 1`] = `
+<div
+  className="ek-box ek-box_round-bottom-left_full"
+/>
+`;
+
+exports[`<Box box-round="..." /> props box-round-bottom-right 1`] = `
+<div
+  className="ek-box ek-box_round-bottom-right_full"
+/>
+`;
+
+exports[`<Box box-round="..." /> props box-round-top-left 1`] = `
+<div
+  className="ek-box ek-box_round-top-left_full"
+/>
+`;
+
+exports[`<Box box-round="..." /> props box-round-top-right 1`] = `
+<div
+  className="ek-box ek-box_round-top-right_full"
+/>
+`;

@@ -29,11 +29,11 @@ import 'evokit-box/style.css';
 <span class='ek-box' />
 ```
 
-### ~~`box-ref`~~
+### `box-ref`
 
-!> This prop is **DEPRECATED**! Please use React ref prop.
+!> **DEPRECATED** prop `box-ref`, please use React `ref`
 
-~~The passed function will receive a `target` argument that refers to the current DOM node.~~
+The passed function will receive a `target` argument that refers to the current DOM node.
 
 ```jsx
 import { Box } from 'evokit-box';

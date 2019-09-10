@@ -35,8 +35,20 @@ export const withPreset = (preset) => {
 
                         if (splitVal.length > 1 && Object.prototype.hasOwnProperty.call(modsExtended, key)) {
                             splitVal.forEach((val, index) => {
-                                if (modsExtended[key][index]) {
-                                    result.push(cnFn(modsExtended[key][index], val));
+                                const extendedVal = modsExtended[key];
+                                const extendedKey = extendedVal[index];
+
+                                if (extendedKey) {
+                                    if (Array.isArray(extendedKey)) {
+                                        extendedKey.filter((extKey, i) => {
+                                            const extIndex = extendedVal.indexOf(extKey);
+                                            return i === 0 || (extIndex !== -1 && !splitVal[extIndex]);
+                                        }).forEach((extKey) => {
+                                            result.push(cnFn(extKey, val));
+                                        });
+                                    } else {
+                                        result.push(cnFn(extendedKey, val));
+                                    }
                                 }
                             });
                         } else {

@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Line /> props className 1`] = `
+<hr
+  className="ek-line ololo"
+/>
+`;
+
+exports[`<Line /> props line-tag 1`] = `
+<span
+  className="ek-line"
+/>
+`;
+
+exports[`<Line /> render 1`] = `
+<hr
+  className="ek-line"
+/>
+`;

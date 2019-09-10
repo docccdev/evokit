@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { Text } from '../index.js';
+import { Text } from '../src';
 
 describe('<Text />', () => {
     it('render', () => {

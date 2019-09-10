@@ -1,5 +1,9 @@
 [README]: /packages/evokit-box/README.md
 
+[box-margin]: /packages/evokit-box/?id=box-margin
+[box-overflow]: /packages/evokit-box/?id=box-overflow
+[box-padding]: /packages/evokit-box/?id=box-padding
+[box-round]: /packages/evokit-box/?id=box-round
 [create_theme]: /docs/base/theme.md
 
 # EvoKit - Box
@@ -10,6 +14,22 @@
 ---
 
 ## CHANGELOG
+
+### 3.1.0 *(xx.09.2019)*
+- **Added** multi values for props:
+    - [`box-margin`][box-margin]
+    - [`box-overflow`][box-overflow]
+    - [`box-padding`][box-padding]
+    - [`box-round`][box-round]
+- **Deprecated** some props are outdated and will be deleted:
+    - `box-margin-lr`
+    - `box-margin-tb`
+    - `box-padding-lr`
+    - `box-padding-tb`
+    - `box-round-top`,
+    - `box-round-right`
+    - `box-round-bottom`
+    - `box-round-left`
 
 ### 3.0.2 *(11.07.2019)*
 

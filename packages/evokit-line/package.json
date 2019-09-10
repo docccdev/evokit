@@ -4,6 +4,7 @@
   "description": "Horizontal line, used to separate content",
   "main": "index.js",
   "scripts": {
+    "test": "jest --colors",
     "build": "webpack --colors",
     "watch": "webpack --colors --progress --watch",
     "prepublishOnly": "webpack"
