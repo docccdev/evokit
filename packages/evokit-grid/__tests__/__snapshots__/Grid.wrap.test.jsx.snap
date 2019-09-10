@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Grid grid-wrap="..." /> props grid-wrap 1`] = `
+<div
+  className="ek-grid ek-grid_wrap_value"
+/>
+`;

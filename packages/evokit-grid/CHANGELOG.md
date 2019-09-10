@@ -13,7 +13,10 @@
 
 ### 3.1.0 *(xx.09.2019)*
 
-- **Added** multi values for [`grid-indent`][grid-indent] prop
+- **Added** new advanced indent props:
+     - `grid-indent-x`
+     - `grid-indent-y`
+- **Added** multi values for [`grid-indent`][grid-indent]
 
 ### 3.0.1 *(19.06.2019)*
 

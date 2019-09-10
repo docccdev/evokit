@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<GridItem grid-item-order="..." /> props grid-item-order 1`] = `
+<div
+  className="ek-grid__item ek-grid__item_order_value"
+/>
+`;
