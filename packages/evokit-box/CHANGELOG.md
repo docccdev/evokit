@@ -16,6 +16,7 @@
 ## CHANGELOG
 
 ### 3.1.0 *(xx.09.2019)*
+
 - **Added** multi values for props:
     - [`box-margin`][box-margin]
     - [`box-overflow`][box-overflow]

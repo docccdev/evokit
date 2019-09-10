@@ -155,21 +155,38 @@ Default value `div`
 
 ## `grid-indent`
 
-- `none` - no indent, value: `0px`
-- `xxs` - css variable `--ek-grid-indent-xxs`, default value: `5px`
-- `xs` - css variable `--ek-grid-indent-xs`, default value: `10px`
-- `s` - css variable `--ek-grid-indent-s`, default value: `15px`
-- `m` - css variable `--ek-grid-indent-m`, default value: `20px`
-- `l` - css variable `--ek-grid-indent-l`, default value: `25px`
-- `xl` - css variable `--ek-grid-indent-xl`, default value: `30px`
-- `xxl` - css variable `--ek-grid-indent-xxl`, default value: `35px`
+The property allows you to set the indentation value for all sides of an element at once or to determine it only for specified sides.
+
+**Advanced props**
+
+1. `grid-indent-x`
+2. `grid-indent-y`
+
+**Multi values** _(set value separated by a space)_
+
+- `grid-indent="{1} {2}"`
+
+
+**List of values**
+
+| Value  | CSS var                | CSS value |
+|--------|------------------------|-----------|
+| `none` | ---                    | `0px`     |
+| `xxs`  | `--ek-grid-indent-xxs` | `5px`     |
+| `xs`   | `--ek-grid-indent-xs`  | `10px`    |
+| `s`    | `--ek-grid-indent-s`   | `15px`    |
+| `m`    | `--ek-grid-indent-m`   | `20px`    |
+| `l`    | `--ek-grid-indent-l`   | `25px`    |
+| `xl`   | `--ek-grid-indent-xl`  | `30px`    |
+| `xxl`  | `--ek-grid-indent-xxl` | `35px`    |
 
 ```jsx
-<Grid grid-indent='m'>
-    <GridItem>
-        ...
-    </GridItem>
-</Grid>
+<Grid grid-indent='xs' />
+<Grid grid-indent='xs xl' />
+<Grid
+    grid-indent-x='xs'
+    grid-indent-y='xl'
+/>
 ```
 
 ## `grid-direction`

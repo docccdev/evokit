@@ -1,5 +1,7 @@
 [README]: /packages/evokit-grid/README.md
 
+[grid-indent]: /packages/evokit-grid/?id=grid-indent
+
 # EvoKit - Grid
 
 [![](https://img.shields.io/npm/v/evokit-grid.svg)](https://www.npmjs.com/package/evokit-grid)
@@ -8,6 +10,10 @@
 ---
 
 ## CHANGELOG
+
+### 3.1.0 *(xx.09.2019)*
+
+- **Added** multi values for [`grid-indent`][grid-indent] prop
 
 ### 3.0.1 *(19.06.2019)*
 

@@ -2,7 +2,10 @@ import { createBlock } from 'evokit';
 
 export const Grid = createBlock('div', 'grid', [
     'column',
-    'indent',
+    ['indent', [
+        'indent-x',
+        'indent-y',
+    ]],
     'direction',
     'align',
     'valign',
