@@ -55,27 +55,19 @@ import 'evokit-list/style.css';
 
 ### `<List />`
 
-| Prop name     | Default value | Possible value | Description |
-|---------------|---------------|----------------|-------------|
-| [list-indent] | `none`        | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Indentation between elements |
-| [list-style]  | `null`        | `dash` `decimal` `disc` | Marker type |
-| [list-tag]    | `ul`          | [html tags][html-all-tags] | HTML tag    |
-
-**Themes**
-
-| Prop name      | Default value | Possible value | Description  |
-|----------------|---------------|----------------|--------------|
-| [list-color]   | `null`        | `{THEME_NAME}` | Marker color |
-| [list-divider] | `null`        | `{THEME_NAME}` | Color separator between elements |
-
-> `{THEME_NAME}` — use [theming][create_theme] for create custom theme
-
+| Prop name      | Default value | Possible value | Description |
+|----------------|---------------|----------------|-------------|
+| [list-color]   | `null`        | [Create theme][create_theme] | Marker color |
+| [list-divider] | `null`        | [Create theme][create_theme] | Color separator between elements |
+| [list-indent]  | `none`        | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Indentation between elements |
+| [list-style]   | `null`        | `dash` `decimal` `disc` | Marker type |
+| [list-tag]     | `ul`          | [HTML tags][html-all-tags] | HTML tag    |
 
 ### `<ListItem />`
 
 | Prop name       | Default value | Possible value             | Description |
 |-----------------|---------------|----------------------------|-------------|
-| [list-item-tag] | `li`          | [html tags][html-all-tags] | HTML tag    |
+| [list-item-tag] | `li`          | [HTML tags][html-all-tags] | HTML tag    |
 
 ## Customize
 

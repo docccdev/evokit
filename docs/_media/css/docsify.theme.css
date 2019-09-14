@@ -1056,17 +1056,18 @@ code .token {
 }
 
 pre:after {
-    color: #ccc;
+    color: #000;
     content: attr(data-lang);
     font-size: .6rem;
     font-weight: 600;
     height: 15px;
     line-height: 15px;
-    padding: 5px 10px 0;
+    padding: 3px 8px;
     position: absolute;
     right: 0;
     text-align: right;
-    top: 0
+    bottom: 0;
+    background: #dce0e2
 }
 
 /*need for react preview plugin*/

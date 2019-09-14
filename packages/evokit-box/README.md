@@ -64,6 +64,8 @@ import 'evokit-box/style.css';
 | Prop name          | Default value | Possible value | Description |
 |--------------------|---------------|----------------|-------------|
 | [box-align]        | `none`        | `none` `left` `center` `right` | Horizontal alignment |
+| [box-background]   | `null`        | [Create theme][create_theme]  | Background color |
+| [box-border] `*`   | `null`        | [Create theme][create_theme]  | Border color     |
 | [box-display]      | `block`       | `block` `inline-block` `inline` `none` | Display type |
 | [box-height]       | `auto`        | `auto` `1-1` | Set the height |
 | [box-margin] `*`   | `none`        | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` `auto` | Indent around block |
@@ -72,18 +74,10 @@ import 'evokit-box/style.css';
 | [box-place]        | `null`      | `top` `top-left` `top-right` `center` `center-left` `center-right` `bottom` `bottom-left` `bottom-right` | Position place |
 | [box-position]     | `static`      | `static` `relative` `absolute` `fixed` | Positioning method |
 | [box-round] `*`    | `none`        | `none` `full` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Corner rounding |
-| [box-tag]          | `div`         | [html tags][html-all-tags] | HTML tag    |
+| [box-tag]          | `div`         | [HTML tags][html-all-tags] | HTML tag    |
 | [box-width]        | `auto`        | `auto` `1-1` `*-2` `*-3` `*-4` `*-5` `*-6` `*-7` `*-8` `*-9` `*-10` | Set the width |
 
-**Themes**
-
-| Prop name        | Default value | Possible value | Description       |
-|------------------|---------------|-----------------|------------------|
-| [box-background] | `null`        | `{THEME_NAME}`  | Background color |
-| [box-border] `*` | `null`        | `{THEME_NAME}`  | Border color     |
-
 > `*` — prop has advanced params <br>
-> `{THEME_NAME}` — use [theming][create_theme] for create custom theme
 
 ## Customize
 

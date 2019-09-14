@@ -56,21 +56,13 @@ import 'evokit-link/style.css';
 
 | Prop name      | Default value | Possible value         | Description |
 |----------------|---------------|------------------------|-------------|
+| [link-color]   | `null`        | [Create theme][create_theme]  | Text color   |
 | [link-lheight] | `default`     | `default` `medium` `large` | Line spacing |
 | [link-size]    | `default`     | `default` `small` `big` `h1` `h2` `h3` `h4` `h5` `h6` | Font size |
 | [link-style]   | `null`        | `dotted` `multi-line` | Decoration styles |
-| [link-tag]     | `a`           | [html tags][html-all-tags] | HTML tag    |
+| [link-tag]     | `a`           | [HTML tags][html-all-tags] | HTML tag    |
 | [link-valign]  | `null`        | `baseline` `bottom` `middle` `sub` `super` `text-bottom` `text-top` `top` | Aligns text vertically |
 | [link-weight]  | `default`     | `default` `thin` `light` `medium` `bold` `black` | Font weight |
-
-**Themes**
-
-| Prop name        | Default value  | Possible value | Description  |
-|------------------|----------------|----------------|--------------|
-| [link-color]     | `null`         |`{THEME_NAME}`  | Text color   |
-
-> `{THEME_NAME}` — use [theming][create_theme] for create custom theme
-
 
 ## Customize
 

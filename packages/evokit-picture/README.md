@@ -54,24 +54,18 @@ import 'evokit-picture/style.css';
 
 | Prop name           | Default value | Possible value | Description |
 |---------------------|---------------|----------------|-------------|
+| [picture-border]    | `null`        | [Create theme][create_theme] | Border color |
 | [picture-fit]       | `null`        | `none` `fill` `contain` `cover` `scale-down`    | Filling the container relative to its height and width |
 | [picture-round] `*` | `none`        | `none` `full` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Corner rounding |
-| [picture-tag]       | `picture`     | [html tags][html-all-tags] | HTML tag    |
-
-**Themes**
-
-| Prop name        | Default value  | Possible value | Description  |
-|------------------|----------------|----------------|--------------|
-| [picture-border] | `null`         | `{THEME_NAME}` | Border color |
+| [picture-tag]       | `picture`     | [HTML tags][html-all-tags] | HTML tag    |
 
 ### `<PictureItem />`
 
 | Prop name          | Default value | Possible value             | Description |
 |--------------------|---------------|----------------------------|-------------|
-| [picture-item-tag] | `img`         | [html tags][html-all-tags] | HTML tag    |
+| [picture-item-tag] | `img`         | [HTML tags][html-all-tags] | HTML tag    |
 
 > `*` — prop has advanced params <br>
-> `{THEME_NAME}` — use [theming][create_theme] for create custom theme
 
 ## Customize
 
