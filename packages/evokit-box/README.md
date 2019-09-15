@@ -128,6 +128,11 @@ Default value `div`
 
 ## `box-display`
 
+- `block` - shown as blocky
+- `block-inline` - block element that is wrapped around by other elements
+- `inline` - displayed as inline
+- `none` - remove from a document
+
 ```jsx
 <Box box-display='none'>
     ...

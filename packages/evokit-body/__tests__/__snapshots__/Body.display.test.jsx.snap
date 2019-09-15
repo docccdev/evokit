@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Body body-display="..." /> props body-display 1`] = `
+<body
+  className="ek-body ek-body_display_value"
+/>
+`;

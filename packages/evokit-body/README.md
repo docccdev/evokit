@@ -10,9 +10,11 @@
 [use-props]: /docs/getting-started/props.md
 
 [body-tag]: #body-tag
+[body-section-display]: #body-section-display
 [body-section-tag]: #body-section-tag
 
 [body-size]: #body-size
+[body-display]: #body-display
 [body-indent]: #body-indent
 [body-background]: #body-background
 [body-color]: #body-color
@@ -63,17 +65,20 @@ import 'evokit-body/style.css';
 
 | Prop name         | Default value | Possible value | Description    |
 |-------------------|---------------|-------------------|-------------|
-| [body-background] | `null`        | [Create theme][create_theme] | Background color   |
-| [body-color]      | `null`        | [Create theme][create_theme] | Text color         |
+| [body-background] | `null`        | [Create theme][create_theme]    | Background color   |
+| [body-color]      | `null`        | [Create theme][create_theme]    | Text color         |
+| [body-display]    | `block`       | `block` `none` | Display type   |
 | [body-indent]     | `none`        | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Padding on the side left and right for children `<BodySection />` |
 | [body-size]       | `null`        | `xl` `xxl` `xxxl` | Max width for children `<BodySection />` |
 | [body-tag]        | `body`        | [HTML tags][html-all-tags] | HTML tag    |
 
 ### `<BodySection />`
 
-| Prop name          | Default value | Possible value             | Description |
-|--------------------|---------------|----------------------------|-------------|
-| [body-section-tag] | `div`         | [HTML tags][html-all-tags] | HTML tag    |
+| Prop name              | Default value | Possible value             | Description |
+|------------------------|---------------|----------------------------|-------------|
+| [body-section-display] | `block`       | `block` `none`             | Display type   |
+| [body-section-tag]     | `div`         | [HTML tags][html-all-tags] | HTML tag    |
+
 
 ## Customize
 
@@ -125,15 +130,14 @@ Default value `body`
 </Body>
 ```
 
-## `body-section-tag`
+## `body-display`
 
-Default value `div`
+- `block` - shown as blocky
+- `none` - remove from a document
 
 ```jsx
-<Body>
-    <BodySection body-section-tag='div'>
-        ...
-    </BodySection>
+<Body body-display='none'>
+    ...
 </Body>
 ```
 
@@ -183,5 +187,30 @@ Default value `div`
 ```jsx
 <Body body-color={THEME_NAME}>
     ...
+</Body>
+```
+
+## `body-section-tag`
+
+Default value `div`
+
+```jsx
+<Body>
+    <BodySection body-section-tag='div'>
+        ...
+    </BodySection>
+</Body>
+```
+
+## `body-section-display`
+
+- `block` - shown as blocky
+- `none` - remove from a document
+
+```jsx
+<Body>
+    <BodySection body-section-display='none'>
+        ...
+    </BodySection>
 </Body>
 ```

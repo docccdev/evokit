@@ -1,5 +1,9 @@
 [README]: /packages/evokit-body/README.md
 
+[body-display]: /packages/evokit-body/?id=body-display
+[body-section-display]: /packages/evokit-body/?id=body-section-display
+
+
 # EvoKit - Body
 
 [![](https://img.shields.io/npm/v/evokit-body.svg)](https://www.npmjs.com/package/evokit-body)
@@ -8,6 +12,12 @@
 ---
 
 ## CHANGELOG
+
+### 3.1.0 *(xx.09.2019)*
+
+- **Added** new props:
+    - [`body-display`][body-display]
+    - [`body-section-display`][body-section-display]
 
 ### 3.0.1 *(19.06.2019)*
 
