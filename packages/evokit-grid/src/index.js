@@ -1,19 +1,21 @@
 import { createBlock } from 'evokit';
 
 export const Grid = createBlock('div', 'grid', [
+    'align',
     'column',
+    'direction',
+    'display',
+    'divider',
+    'valign',
+    'wrap',
     ['indent', [
         'indent-x',
         'indent-y',
     ]],
-    'direction',
-    'align',
-    'valign',
-    'divider',
-    'wrap',
 ]);
 
 export const GridItem = createBlock('div', 'grid__item', [
+    'display',
     'order',
     'width',
 ]);

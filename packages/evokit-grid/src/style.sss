@@ -22,9 +22,34 @@
     min-width: 0
 
 .grid__item
+    display: block
     box-sizing: border-box
     min-width: 0
     max-width: 100%
+
+/**
+ * Display:
+ *
+ *  - grid_display_flex
+ *  - grid_display_none
+ *
+ **/
+
+@each $value in (flex, none)
+    @mixin media .grid_display_$(value)
+        display: $value
+
+/**
+ * Item display:
+ *
+ *  - grid__item_display_block
+ *  - grid__item_display_none
+ *
+ **/
+
+@each $value in (block, none)
+    @mixin media .grid__item_display_$(value)
+        display: $value
 
 /**
  * Indent:

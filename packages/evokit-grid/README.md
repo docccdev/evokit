@@ -12,8 +12,10 @@
 [grid-align]: #grid-align
 [grid-column]: #grid-column
 [grid-direction]: #grid-direction
+[grid-display]: #grid-display
 [grid-divider]: #grid-divider
 [grid-indent]: #grid-indent
+[grid-item-display]: #grid-item-display
 [grid-item-order]: #grid-item-order
 [grid-item-tag]: #grid-item-tag
 [grid-item-width]: #grid-item-width
@@ -51,7 +53,6 @@ import 'evokit-grid/style.css';
         ...
     </GridItem>
 </Grid>
-
 ```
 
 ## Props
@@ -65,6 +66,7 @@ import 'evokit-grid/style.css';
 | [grid-align]      | `left`        | `left` `center` `right` `justify` | Horizontal alignment of cells |
 | [grid-column]     | `auto`        | `auto` `1` `2` `3` `4` `5` `6` `7` `8` `9` `10` `expand` | Number of cells in a row |
 | [grid-direction]  | `row`         | `row` `row-reverse` `column` `column-reverse` | Cell direction |
+| [grid-display]    | `flex`        | `flex` `none` | Display type |
 | [grid-divider]    | `null`        | [Create theme][create_theme] | Color border between cells |
 | [grid-indent] `*` | `none`        | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Indentation between cells |
 | [grid-tag]        | `div`         | [HTML tags][html-all-tags] | HTML tag    |
@@ -73,11 +75,12 @@ import 'evokit-grid/style.css';
 
 ### `<GridItem />`
 
-| Prop name          | Default value | Possible value             | Description |
-|--------------------|---------------|----------------------------|-------------|
-| [grid-item-order]  | `null`        | `1` `2` `3` `4` `5` `6` `7` `8` `9` `10` | Sets the order of the cell |
-| [grid-item-tag]    | `div`         | [HTML tags][html-all-tags] | HTML tag    |
-| [grid-item-width]  | `auto`        | `auto` `expand` `1-1` `*-2` `*-3` `*-4` `*-5` `*-6` `*-7` `*-8` `*-9` `*-10` | Cell width |
+| Prop name           | Default value | Possible value             | Description |
+|---------------------|---------------|----------------------------|-------------|
+| [grid-item-order]   | `null`        | `1` `2` `3` `4` `5` `6` `7` `8` `9` `10` | Sets the order of the cell |
+| [grid-item-tag]     | `div`         | [HTML tags][html-all-tags] | HTML tag    |
+| [grid-item-width]   | `auto`        | `auto` `expand` `1-1` `*-2` `*-3` `*-4` `*-5` `*-6` `*-7` `*-8` `*-9` `*-10` | Cell width |
+| [grid-item-display] | `block`       | `block` `none` | Display type |
 
 > `*` — prop has advanced params <br>
 
@@ -120,15 +123,14 @@ Default value `div`
 </Grid>
 ```
 
-## `grid-item-tag`
+## `grid-display`
 
-Default value `div`
+- `flex` - shown as blocky
+- `none` - remove from a document
 
 ```jsx
-<Grid>
-    <GridItem grid-item-tag='div'>
+<Grid grid-display='none'>
     ...
-    <GridItem>
 </Grid>
 ```
 
@@ -242,6 +244,43 @@ The property allows you to set the indentation value for all sides of an element
 </Grid>
 ```
 
+## `grid-divider`
+
+> Set the `THEME_NAME` depending on the [theming][create_theme]
+
+```jsx
+<Grid grid-divider={THEME_NAME}>
+    <GridItem>
+        ...
+    </GridItem>
+</Grid>
+```
+
+## `grid-item-tag`
+
+Default value `div`
+
+```jsx
+<Grid>
+    <GridItem grid-item-tag='div'>
+        ...
+    <GridItem>
+</Grid>
+```
+
+## `grid-item-display`
+
+- `block` - shown as blocky
+- `none` - remove from a document
+
+```jsx
+<Grid >
+    <GridItem grid-item-display='none'>
+        ...
+    </GridItem>
+</Grid>
+```
+
 ## `grid-item-order`
 
 - `1, 2, 3, 4, 5, 6, 7, 8, 9, 10` - Determines the cell order
@@ -283,19 +322,6 @@ The property allows you to set the indentation value for all sides of an element
         ...
     </GridItem>
     <GridItem grid-item-width='3-10'>
-        ...
-    </GridItem>
-</Grid>
-```
-
-
-## `grid-divider`
-
-> Set the `THEME_NAME` depending on the [theming][create_theme]
-
-```jsx
-<Grid grid-divider={THEME_NAME}>
-    <GridItem>
         ...
     </GridItem>
 </Grid>
