@@ -1,4 +1,5 @@
 [README]: /packages/evokit-body/README.md
+[evokit]: /packages/evokit/README.md
 
 [body-display]: /packages/evokit-body/?id=body-display
 [body-section-display]: /packages/evokit-body/?id=body-section-display
@@ -15,6 +16,7 @@
 
 ### 3.1.0 *(xx.09.2019)*
 
+- **Updated** peer dependencies [`evokit`][evokit] >= **v3.1.0**
 - **Added** new props:
     - [`body-display`][body-display]
     - [`body-section-display`][body-section-display]

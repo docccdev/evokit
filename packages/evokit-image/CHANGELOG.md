@@ -1,4 +1,6 @@
 [README]: /packages/evokit-image/README.md
+[evokit]: /packages/evokit/README.md
+
 [image-round]: /packages/evokit-image/?id=image-round
 [image-display]: /packages/evokit-image/?id=image-display
 
@@ -15,6 +17,7 @@
 
 ### 3.1.0 *(xx.09.2019)*
 
+- **Updated** peer dependencies [`evokit`][evokit] >= **v3.1.0**
 - **Added** new prop [`image-display`][image-display]
 - **Added** multi values for [`image-round`][image-round]
 - **Deprecated** some props are outdated and will be deleted:

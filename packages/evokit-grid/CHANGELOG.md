@@ -1,4 +1,5 @@
 [README]: /packages/evokit-grid/README.md
+[evokit]: /packages/evokit/README.md
 
 [grid-indent]: /packages/evokit-grid/?id=grid-indent
 
@@ -13,6 +14,7 @@
 
 ### 3.1.0 *(xx.09.2019)*
 
+- **Updated** peer dependencies [`evokit`][evokit] >= **v3.1.0**
 - **Added** new advanced indent props:
      - `grid-indent-x`
      - `grid-indent-y`

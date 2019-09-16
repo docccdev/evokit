@@ -1,4 +1,6 @@
 [README]: /packages/evokit-box/README.md
+[evokit]: /packages/evokit/README.md
+
 [box-margin]: /packages/evokit-box/?id=box-margin
 [box-overflow]: /packages/evokit-box/?id=box-overflow
 [box-padding]: /packages/evokit-box/?id=box-padding
@@ -17,6 +19,7 @@
 
 ### 3.1.0 *(xx.09.2019)*
 
+- **Updated** peer dependencies [`evokit`][evokit] >= **v3.1.0**
 - **Added** multi values for props:
     - [`box-margin`][box-margin]
     - [`box-overflow`][box-overflow]
