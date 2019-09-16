@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Link link-color="..." /> props link-color 1`] = `
+<a
+  className="ek-link ek-link_color_value"
+/>
+`;

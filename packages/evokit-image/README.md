@@ -112,7 +112,6 @@ import 'evokit-image/style.css';
 
 ```jsx
 <Image image-display='none' src='' alt='' />
-
 ```
 
 ## `image-align`

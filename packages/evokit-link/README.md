@@ -10,6 +10,7 @@
 [use-props]: /docs/getting-started/props.md
 
 [link-color]: #link-color
+[link-display]: #link-display
 [link-lheight]: #link-lheight
 [link-size]: #link-size
 [link-style]: #link-style
@@ -57,7 +58,8 @@ import 'evokit-link/style.css';
 | Prop name      | Default value | Possible value         | Description |
 |----------------|---------------|------------------------|-------------|
 | [link-color]   | `null`        | [Create theme][create_theme]  | Text color   |
-| [link-lheight] | `default`     | `default` `medium` `large` | Line spacing |
+| [link-display] | `inline`      | `inline` `none`               | Display type |
+| [link-lheight] | `default`     | `default` `medium` `large`    | Line spacing |
 | [link-size]    | `default`     | `default` `small` `big` `h1` `h2` `h3` `h4` `h5` `h6` | Font size |
 | [link-style]   | `null`        | `dotted` `multi-line` | Decoration styles |
 | [link-tag]     | `a`           | [HTML tags][html-all-tags] | HTML tag    |
@@ -107,6 +109,17 @@ import 'evokit-link/style.css';
 
 ```jsx
 <Link link-tag='a' href='#'>
+    ...
+</Link>
+```
+
+## `link-display`
+
+- `inline` - displayed as inline
+- `none` - remove from a document
+
+```jsx
+<Link link-display='none' href='#'>
     ...
 </Link>
 ```

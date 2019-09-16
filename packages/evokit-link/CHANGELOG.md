@@ -1,4 +1,8 @@
 [README]: /packages/evokit-link/README.md
+[evokit]: /packages/evokit/README.md
+
+[link-display]: /packages/evokit-link/?id=link-display
+
 
 # EvoKit - Link
 
@@ -8,6 +12,11 @@
 ---
 
 ## CHANGELOG
+
+### 3.1.0 *(xx.09.2019)*
+
+- **Updated** peer dependencies [`evokit`][evokit] >= **v3.1.0**
+- **Added** new prop [`link-display`][link-display]
 
 ### 3.0.0
 
