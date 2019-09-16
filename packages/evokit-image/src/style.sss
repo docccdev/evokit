@@ -17,6 +17,7 @@
     --ek-image-round-xxl: 14px
 
 .image
+    display: inline
     outline: none
     border: 0
     max-width: 100%
@@ -26,6 +27,18 @@
         word-wrap: break-word
         word-break: break-word
         hyphens: auto
+
+/**
+ * Display:
+ *
+ *  - image_display_inline
+ *  - image_display_none
+ *
+ **/
+
+@each $value in (inline, none)
+    @mixin media .image_display_$(value)
+        display: $value
 
 /**
  * Horizontal align:

@@ -9,21 +9,19 @@
 [quik-start]: /docs/getting-started/quick-start.md
 [use-props]: /docs/getting-started/props.md
 
-[box-tag]: #box-tag
-
 [box-align]: #box-align
-[box-margin]: #box-margin
-[box-padding]: #box-padding
-[box-round]: #box-round
-[box-width]: #box-width
-[box-height]: #box-height
-[box-display]: #box-display
-[box-position]: #box-position
-[box-place]: #box-place
-[box-overflow]: #box-overflow
-
 [box-background]: #box-background
 [box-border]: #box-border
+[box-display]: #box-display
+[box-height]: #box-height
+[box-margin]: #box-margin
+[box-overflow]: #box-overflow
+[box-padding]: #box-padding
+[box-place]: #box-place
+[box-position]: #box-position
+[box-round]: #box-round
+[box-tag]: #box-tag
+[box-width]: #box-width
 
 # EvoKit - Box
 

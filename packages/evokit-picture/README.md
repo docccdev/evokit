@@ -9,11 +9,11 @@
 [quik-start]: /docs/getting-started/quick-start.md
 [use-props]: /docs/getting-started/props.md
 
-[picture-tag]: #picture-tag
-[picture-item-tag]: #picture-item-tag
-[picture-fit]: #picture-fit
-[picture-round]: #picture-round
 [picture-border]: #picture-border
+[picture-fit]: #picture-fit
+[picture-item-tag]: #picture-item-tag
+[picture-round]: #picture-round
+[picture-tag]: #picture-tag
 
 # EvoKit - Picture
 

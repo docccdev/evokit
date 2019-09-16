@@ -9,11 +9,11 @@
 [quik-start]: /docs/getting-started/quick-start.md
 [use-props]: /docs/getting-started/props.md
 
-[line-tag]: #line-tag
+[line-color]: #line-color
 [line-display]: #line-display
 [line-indent]: #line-indent
 [line-style]: #line-style
-[line-color]: #line-color
+[line-tag]: #line-tag
 
 # EvoKit - Line
 

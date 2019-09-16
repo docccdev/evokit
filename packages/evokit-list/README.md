@@ -9,12 +9,12 @@
 [quik-start]: /docs/getting-started/quick-start.md
 [use-props]: /docs/getting-started/props.md
 
-[list-tag]: #list-tag
-[list-item-tag]: #list-item-tag
-[list-indent]: #list-indent
-[list-style]: #list-style
 [list-color]: #list-color
 [list-divider]: #list-divider
+[list-indent]: #list-indent
+[list-item-tag]: #list-item-tag
+[list-style]: #list-style
+[list-tag]: #list-tag
 
 # EvoKit - List
 

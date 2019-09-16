@@ -9,18 +9,17 @@
 [quik-start]: /docs/getting-started/quick-start.md
 [use-props]: /docs/getting-started/props.md
 
-[grid-tag]: #grid-tag
-[grid-item-tag]: #grid-item-tag
-
-[grid-column]: #grid-column
-[grid-indent]: #grid-indent
-[grid-direction]: #grid-direction
 [grid-align]: #grid-align
-[grid-valign]: #grid-valign
+[grid-column]: #grid-column
+[grid-direction]: #grid-direction
 [grid-divider]: #grid-divider
-[grid-wrap]: #grid-wrap
+[grid-indent]: #grid-indent
 [grid-item-order]: #grid-item-order
+[grid-item-tag]: #grid-item-tag
 [grid-item-width]: #grid-item-width
+[grid-tag]: #grid-tag
+[grid-valign]: #grid-valign
+[grid-wrap]: #grid-wrap
 
 # EvoKit - Grid
 

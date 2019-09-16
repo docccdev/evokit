@@ -1,4 +1,6 @@
 [README]: /packages/evokit-image/README.md
+[image-round]: /packages/evokit-image/?id=image-round
+[image-display]: /packages/evokit-image/?id=image-display
 
 [create_theme]: /docs/base/theme.md
 
@@ -10,6 +12,16 @@
 ---
 
 ## CHANGELOG
+
+### 3.1.0 *(xx.09.2019)*
+
+- **Added** new prop [`image-display`][image-display]
+- **Added** multi values for [`image-round`][image-round]
+- **Deprecated** some props are outdated and will be deleted:
+    - `image-round-top`
+    - `image-round-right`
+    - `image-round-bottom`
+    - `image-round-left`
 
 ### 3.0.2 *(11.07.2019)*
 

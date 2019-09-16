@@ -9,16 +9,16 @@
 [quik-start]: /docs/getting-started/quick-start.md
 [use-props]: /docs/getting-started/props.md
 
-[text-tag]: #text-tag
-[text-color]: #text-color
-[text-size]: #text-size
-[text-weight]: #text-weight
 [text-align]: #text-align
-[text-valign]: #text-valign
-[text-wrap]: #text-wrap
-[text-style]: #text-style
-[text-transform]: #text-transform
+[text-color]: #text-color
 [text-lheight]: #text-lheight
+[text-size]: #text-size
+[text-style]: #text-style
+[text-tag]: #text-tag
+[text-transform]: #text-transform
+[text-valign]: #text-valign
+[text-weight]: #text-weight
+[text-wrap]: #text-wrap
 
 # EvoKit - Text
 

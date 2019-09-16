@@ -8,20 +8,18 @@
 [quik-start]: /docs/getting-started/quick-start.md
 [use-props]: /docs/getting-started/props.md
 
-[flex-tag]: #flex-tag
-[flex-item-tag]: #flex-item-tag
-
-[flex-display]: #flex-display
 [flex-align-content]: #flex-align-content
 [flex-align-items]: #flex-align-items
 [flex-align-self]: #flex-align-self
-[flex-justify-content]: #flex-justify-content
 [flex-direction]: #flex-direction
-[flex-wrap]: #flex-wrap
-
-[flex-item-display]: #flex-item-display
+[flex-display]: #flex-display
 [flex-item-align]: #flex-item-align
+[flex-item-display]: #flex-item-display
 [flex-item-order]: #flex-item-order
+[flex-item-tag]: #flex-item-tag
+[flex-justify-content]: #flex-justify-content
+[flex-tag]: #flex-tag
+[flex-wrap]: #flex-wrap
 
 # EvoKit - Flex
 

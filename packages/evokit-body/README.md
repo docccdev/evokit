@@ -9,15 +9,14 @@
 [quik-start]: /docs/getting-started/quick-start.md
 [use-props]: /docs/getting-started/props.md
 
-[body-tag]: #body-tag
-[body-section-display]: #body-section-display
-[body-section-tag]: #body-section-tag
-
-[body-size]: #body-size
-[body-display]: #body-display
-[body-indent]: #body-indent
 [body-background]: #body-background
 [body-color]: #body-color
+[body-display]: #body-display
+[body-indent]: #body-indent
+[body-section-display]: #body-section-display
+[body-section-tag]: #body-section-tag
+[body-size]: #body-size
+[body-tag]: #body-tag
 
 # EvoKit - Body
 
@@ -67,7 +66,7 @@ import 'evokit-body/style.css';
 |-------------------|---------------|-------------------|-------------|
 | [body-background] | `null`        | [Create theme][create_theme]    | Background color   |
 | [body-color]      | `null`        | [Create theme][create_theme]    | Text color         |
-| [body-display]    | `block`       | `block` `none` | Display type   |
+| [body-display]    | `block`       | `block` `none`                  | Display type   |
 | [body-indent]     | `none`        | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Padding on the side left and right for children `<BodySection />` |
 | [body-size]       | `null`        | `xl` `xxl` `xxxl` | Max width for children `<BodySection />` |
 | [body-tag]        | `body`        | [HTML tags][html-all-tags] | HTML tag    |

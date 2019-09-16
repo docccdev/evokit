@@ -9,13 +9,13 @@
 [quik-start]: /docs/getting-started/quick-start.md
 [use-props]: /docs/getting-started/props.md
 
-[link-tag]: #link-tag
 [link-color]: #link-color
-[link-size]: #link-size
-[link-weight]: #link-weight
-[link-valign]: #link-valign
-[link-style]: #link-style
 [link-lheight]: #link-lheight
+[link-size]: #link-size
+[link-style]: #link-style
+[link-tag]: #link-tag
+[link-valign]: #link-valign
+[link-weight]: #link-weight
 
 # EvoKit - Link
 
