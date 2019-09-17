@@ -72,7 +72,7 @@ const App = () => (
 | [picture-item-tag]       | `img`         | [HTML tags][html-all-tags] | HTML tag     |
 
 
-> `*` — prop has advanced params <br>
+> `*` — prop has advanced params
 
 ## Customize
 

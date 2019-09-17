@@ -85,7 +85,7 @@ const App = () => (
 | [grid-item-width]   | `auto`        | `auto` `expand` `1-1` `*-2` `*-3` `*-4` `*-5` `*-6` `*-7` `*-8` `*-9` `*-10` | Cell width |
 | [grid-item-display] | `block`       | `block` `none` | Display type |
 
-> `*` — prop has advanced params <br>
+> `*` — prop has advanced params
 
 ## Customize
 

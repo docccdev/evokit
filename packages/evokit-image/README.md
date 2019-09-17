@@ -68,7 +68,7 @@ const App = () => (
 | [image-valign]     | `null`        | `baseline` `bottom` `middle` `sub` `super` `text-bottom` `text-top` `top` | Vertical alignment |
 | [image-width]      | `auto`        | `auto` `1-1` `*-2` `*-3` `*-4` `*-5` `*-6` `*-7` `*-8` `*-9` `*-10` | Set the width |
 
-> `*` — prop has advanced params <br>
+> `*` — prop has advanced params
 
 ## Customize
 

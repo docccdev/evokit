@@ -78,7 +78,7 @@ const App = () => (
 | [box-tag]          | `div`         | [HTML tags][html-all-tags] | HTML tag    |
 | [box-width]        | `auto`        | `auto` `1-1` `*-2` `*-3` `*-4` `*-5` `*-6` `*-7` `*-8` `*-9` `*-10` | Set the width |
 
-> `*` — prop has advanced params <br>
+> `*` — prop has advanced params
 
 ## Customize
 
