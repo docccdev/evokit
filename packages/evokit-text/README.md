@@ -9,6 +9,7 @@
 [quik-start]: /docs/getting-started/quick-start.md
 [use-props]: /docs/getting-started/props.md
 
+[text-display]: #text-display
 [text-align]: #text-align
 [text-color]: #text-color
 [text-lheight]: #text-lheight
@@ -62,6 +63,7 @@ const App = () => (
 | Prop name        | Default value | Possible value   | Description |
 |------------------|---------------|------------------|-------------|
 | [text-align]     | `left`        | `left` `center` `right` `justify` | Horizontal alignment |
+| [text-display]   | `inline`      | `inline` `none`  | Display type |
 | [text-color]     | `null`        | [Create theme][create_theme] | Text color  |
 | [text-lheight]   | `default`     | `default` `medium` `large` | Line spacing |
 | [text-size]      | `default`     | `default` `small` `big` `h1` `h2` `h3` `h4` `h5` `h6` | Font size |
@@ -115,6 +117,17 @@ const App = () => (
 
 ```jsx
 <Text text-tag='span'>
+    ...
+</Text>
+```
+
+## `text-display`
+
+- `inline` - displayed as inline
+- `none` - remove from a document
+
+```jsx
+<Text text-display='none'>
     ...
 </Text>
 ```

@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Text text-display="..." /> props text-display 1`] = `
+<span
+  className="ek-text ek-text_display_value"
+/>
+`;
