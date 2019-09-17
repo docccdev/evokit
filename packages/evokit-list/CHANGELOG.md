@@ -1,4 +1,8 @@
 [README]: /packages/evokit-list/README.md
+[evokit]: /packages/evokit/README.md
+
+[list-display]: /packages/evokit-list/?id=list-display
+[list-item-display]: /packages/evokit-list/?id=list-item-display
 
 # EvoKit - List
 
@@ -8,6 +12,13 @@
 ---
 
 ## CHANGELOG
+
+### 3.1.0 *(xx.09.2019)*
+
+- **Updated** peer dependencies [`evokit`][evokit] >= **v3.1.0**
+- **Added** new props:
+    - [`list-display`][list-display]
+    - [`list-item-display`][list-item-display]
 
 ### 3.0.2 *(19.06.2019)*
 

@@ -37,10 +37,13 @@ npm install evokit-line --save
 > More about [usage][quik-start]
 
 ```jsx
+import React from 'react';
 import { Line } from 'evokit-line';
 import 'evokit-line/style.css';
 
-<Line />
+const App = () => (
+    <Line line-indent='xl' />
+);
 ```
 
 ## Props

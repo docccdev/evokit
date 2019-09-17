@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<List list-color="..." /> props list-color 1`] = `
+<ul
+  className="ek-list ek-list_color_value"
+/>
+`;

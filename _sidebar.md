@@ -10,7 +10,7 @@
 * CORE
   * [EvoKit](/packages/evokit/)
   * [createBlock()](/docs/base/create-block.md)
-  * [widthProps()](/docs/base/with-props.md)
+  * [withProps()](/docs/base/with-props.md)
 
 * BLOCKS
   * [Body](/packages/evokit-body/)

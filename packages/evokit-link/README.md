@@ -40,13 +40,15 @@ npm install evokit-link --save
 > More about [usage][quik-start]
 
 ```jsx
+import React from 'react';
 import { Link } from 'evokit-link';
 import 'evokit-link/style.css';
 
-<Link href='#'>
-    ...
-</Link>
-
+const App = () => (
+    <Link link-weight='bold' href='#'>
+        ...
+    </Link>
+);
 ```
 
 ## Props

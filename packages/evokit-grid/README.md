@@ -42,17 +42,20 @@ npm install evokit-grid --save
 
 ## Usage
 
-> More about [usage][quik-start]
+> More about [usage][quik-start]. You can also use `<Grid.Item>` instead of `<GridItem>`
 
 ```jsx
+import React from 'react';
 import { Grid, GridItem } from 'evokit-grid';
 import 'evokit-grid/style.css';
 
-<Grid>
-    <GridItem>
-        ...
-    </GridItem>
-</Grid>
+const App = () => (
+    <Grid grid-column='3'>
+        <GridItem>
+            ...
+        </GridItem>
+    </Grid>
+);
 ```
 
 ## Props

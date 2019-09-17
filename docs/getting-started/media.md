@@ -29,9 +29,9 @@ See demo how to use media styles on the example of the [Box][evokit-box] block.
 ```jsx
 import { Box } from 'evokit-box';
 import 'evokit-box/style.css';
-/* import 'evokit-box/style@small.css'; */
-/* import 'evokit-box/style@medium.css'; */
-/* import 'evokit-box/style@large.css'; */
+// import 'evokit-box/style@small.css';
+// import 'evokit-box/style@medium.css';
+// import 'evokit-box/style@large.css';
 import 'evokit-box/style@wide.css';
 import 'evokit-box/style@huge.css';
 

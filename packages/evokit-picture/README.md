@@ -34,16 +34,18 @@ npm install evokit-picture --save
 
 ## Usage
 
-> More about [usage][quik-start]
+> More about [usage][quik-start]. You can also use `<Picture.Item>` instead of `<PictureItem>`
 
 ```jsx
+import React from 'react';
 import { Picture, PictureItem } from 'evokit-picture';
 import 'evokit-picture/style.css';
 
-<Picture>
-    <PictureItem src='' alt='' />
-</Picture>
-
+const App = () => (
+    <Picture picture-round='full'>
+        <PictureItem src='...' alt='...' />
+    </Picture>
+);
 ```
 
 ## Props

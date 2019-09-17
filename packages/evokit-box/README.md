@@ -45,12 +45,15 @@ npm install evokit-box --save
 > More about [usage][quik-start]
 
 ```jsx
+import React from 'react';
 import { Box } from 'evokit-box';
 import 'evokit-box/style.css';
 
-<Box>
-    ...
-</Box>
+const App = () => (
+    <Box box-margin='xs xl'>
+        ...
+    </Box>
+);
 ```
 
 ## Props

@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<List list-indent="..." /> props list-indent 1`] = `
+<ul
+  className="ek-list ek-list_indent_value"
+/>
+`;

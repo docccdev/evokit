@@ -37,23 +37,26 @@ npm install evokit-body --save
 
 ## Usage
 
-> More about [usage][quik-start]
+> More about [usage][quik-start]. You can also use `<Body.Section>` instead of `<BodySection>`
 
 ```jsx
+import React from 'react';
 import { Body, BodySection } from 'evokit-body';
 import 'evokit-body/style.css';
 
-<Body>
-    <BodySection>
-        header
-    </BodySection>
-    <BodySection>
-        content
-    </BodySection>
-    <BodySection>
-        footer
-    </BodySection>
-</Body>
+const App = () => (
+    <Body body-indent='xl'>
+        <BodySection>
+            header
+        </BodySection>
+        <BodySection>
+            content
+        </BodySection>
+        <BodySection>
+            footer
+        </BodySection>
+    </Body>
+);
 ```
 
 ## Props

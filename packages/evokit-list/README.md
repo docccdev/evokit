@@ -10,8 +10,10 @@
 [use-props]: /docs/getting-started/props.md
 
 [list-color]: #list-color
+[list-display]: #list-display
 [list-divider]: #list-divider
 [list-indent]: #list-indent
+[list-item-display]: #list-item-display
 [list-item-tag]: #list-item-tag
 [list-style]: #list-style
 [list-tag]: #list-tag
@@ -35,18 +37,20 @@ npm install evokit-list --save
 
 ## Usage
 
-> More about [usage][quik-start]
+> More about [usage][quik-start]. You can also use `<List.Item>` instead of `<ListItem>`
 
 ```jsx
+import React from 'react';
 import { List, ListItem } from 'evokit-list';
 import 'evokit-list/style.css';
 
-<List>
-    <ListItem>
-        ...
-    </ListItem>
-</List>
-
+const App = () => (
+    <List list-indent='m'>
+        <ListItem>
+            ...
+        </ListItem>
+    </List>
+);
 ```
 
 ## Props
@@ -57,6 +61,7 @@ import 'evokit-list/style.css';
 
 | Prop name      | Default value | Possible value | Description |
 |----------------|---------------|----------------|-------------|
+| [list-display] | `block`       | `block` `none` | Display type |
 | [list-color]   | `null`        | [Create theme][create_theme] | Marker color |
 | [list-divider] | `null`        | [Create theme][create_theme] | Color separator between elements |
 | [list-indent]  | `none`        | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Indentation between elements |
@@ -65,9 +70,11 @@ import 'evokit-list/style.css';
 
 ### `<ListItem />`
 
-| Prop name       | Default value | Possible value             | Description |
-|-----------------|---------------|----------------------------|-------------|
-| [list-item-tag] | `li`          | [HTML tags][html-all-tags] | HTML tag    |
+| Prop name           | Default value | Possible value             | Description  |
+|---------------------|---------------|----------------------------|--------------|
+| [list-item-display] | `block`       | `block` `none`             | Display type |
+| [list-item-tag]     | `li`          | [HTML tags][html-all-tags] | HTML tag     |
+
 
 ## Customize
 
@@ -108,13 +115,14 @@ import 'evokit-list/style.css';
 </List>
 ```
 
-## `list-item-tag`
+## `list-display`
 
-- Default value `li`
+- `block` - shown as blocky (default)
+- `none` - remove block from document
 
 ```jsx
-<List>
-    <ListItem list-item-tag='li'>
+<List list-display='none'>
+    <ListItem>
         ...
     </ListItem>
 </List>
@@ -172,6 +180,31 @@ import 'evokit-list/style.css';
 ```jsx
 <List list-divider={THEME_NAME}>
     <ListItem>
+        ...
+    </ListItem>
+</List>
+```
+
+## `list-item-tag`
+
+- Default value `li`
+
+```jsx
+<List>
+    <ListItem list-item-tag='li'>
+        ...
+    </ListItem>
+</List>
+```
+
+## `list-item-display`
+
+- `block` - shown as blocky (default)
+- `none` - remove block from document
+
+```jsx
+<List>
+    <ListItem list-item-display='none'>
         ...
     </ListItem>
 </List>

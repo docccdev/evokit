@@ -41,11 +41,13 @@ npm install evokit-image --save
 > More about [usage][quik-start]
 
 ```jsx
+import React from 'react';
 import { Image } from 'evokit-image';
 import 'evokit-image/style.css';
 
-<Image src='' alt='' />
-
+const App = () => (
+    <Image image-align='center' src='...' alt='...' />
+);
 ```
 
 ## Props

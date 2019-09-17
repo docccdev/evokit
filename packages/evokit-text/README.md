@@ -42,12 +42,15 @@ npm install evokit-text --save
 > More about [usage][quik-start]
 
 ```jsx
+import React from 'react';
 import { Text } from 'evokit-text';
 import 'evokit-text/style.css';
 
-<Text>
-    ...
-</Text>
+const App = () => (
+    <Text text-align='center'>
+        ...
+    </Text>
+);
 ```
 
 ## Props

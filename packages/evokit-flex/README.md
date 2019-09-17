@@ -46,16 +46,18 @@ npm install evokit-flex --save
 
 ## Usage
 
-> More about [usage][quik-start]
+> More about [usage][quik-start]. You can also use `<Flex.Item>` instead of `<FlexItem>`
 
 ```jsx
+import React from 'react';
 import { Flex, FlexItem } from 'evokit-flex';
 import 'evokit-flex/style.css';
 
-<Flex>
-    <FlexItem>...</FlexItem> // some <Flex.Item>...<Flex.Item>
-</Flex>
-
+const App = () => (
+    <Flex flex-content='center'>
+        <FlexItem>...</FlexItem>
+    </Flex>
+);
 ```
 
 ## Props
