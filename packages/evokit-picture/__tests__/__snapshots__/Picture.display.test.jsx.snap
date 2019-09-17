@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Picture picture-display="..." /> props picture-display 1`] = `
+<picture
+  className="ek-picture ek-picture_display_value"
+/>
+`;

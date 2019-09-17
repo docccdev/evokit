@@ -59,8 +59,8 @@ const App = () => (
 
 ### `<List />`
 
-| Prop name      | Default value | Possible value | Description |
-|----------------|---------------|----------------|-------------|
+| Prop name      | Default value | Possible value | Description  |
+|----------------|---------------|----------------|--------------|
 | [list-display] | `block`       | `block` `none` | Display type |
 | [list-color]   | `null`        | [Create theme][create_theme] | Marker color |
 | [list-divider] | `null`        | [Create theme][create_theme] | Color separator between elements |

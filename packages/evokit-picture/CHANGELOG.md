@@ -1,4 +1,9 @@
 [README]: /packages/evokit-picture/README.md
+[evokit]: /packages/evokit/README.md
+
+[picture-round]: /packages/evokit-picture/?id=picture-round
+[picture-display]: /packages/evokit-picture/?id=picture-display
+[picture-item-display]: /packages/evokit-picture/?id=picture-item-display
 
 [create_theme]: /docs/base/theme.md
 
@@ -10,6 +15,19 @@
 ---
 
 ## CHANGELOG
+
+### 3.1.0 *(xx.09.2019)*
+
+- **Updated** peer dependencies [`evokit`][evokit] >= **v3.1.0**
+- **Added** new props:
+    - [`picture-display`][picture-display]
+    - [`picture-item-display`][picture-item-display]
+- **Added** multi values for [`picture-round`][picture-round]
+- **Deprecated** some props are outdated and will be deleted:
+    - `picture-round-top`
+    - `picture-round-right`
+    - `picture-round-bottom`
+    - `picture-round-left`
 
 ### 3.0.2 *(11.07.2019)*
 

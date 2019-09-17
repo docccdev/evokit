@@ -40,6 +40,30 @@
         hyphens: auto
 
 /**
+ * Display:
+ *
+ *  - picture_display_block
+ *  - picture_display_none
+ *
+ **/
+
+@each $value in (block, none)
+    @mixin media .picture_display_$(value)
+        display: $value
+
+/**
+ * Item display:
+ *
+ *  - picture__item_display_block
+ *  - picture__item_display_none
+ *
+ **/
+
+@each $value in (block, none)
+    @mixin media .picture__item_display_$(value)
+        display: $value
+
+/**
  * Fit:
  *
  *  - picture_fit_*
