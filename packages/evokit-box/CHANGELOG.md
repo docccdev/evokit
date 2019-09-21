@@ -5,6 +5,10 @@
 [box-overflow]: /packages/evokit-box/?id=box-overflow
 [box-padding]: /packages/evokit-box/?id=box-padding
 [box-round]: /packages/evokit-box/?id=box-round
+[box-border]: /packages/evokit-box/?id=box-border
+[box-border-color]: /packages/evokit-box/?id=box-border-color
+[box-border-width]: /packages/evokit-box/?id=box-border-width
+[box-border-style]: /packages/evokit-box/?id=box-border-style
 
 [create_theme]: /docs/base/theme.md
 
@@ -20,6 +24,10 @@
 ### 3.1.0 *(xx.09.2019)*
 
 - **Updated** peer dependencies [`evokit`][evokit] >= **v3.1.0**
+- **Added** new props:
+    - [`box-border-color`][box-border-color]
+    - [`box-border-width`][box-border-width]
+    - [`box-border-style`][box-border-style]
 - **Added** multi values for props:
     - [`box-margin`][box-margin]
     - [`box-overflow`][box-overflow]

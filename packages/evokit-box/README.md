@@ -12,6 +12,9 @@
 [box-align]: #box-align
 [box-background]: #box-background
 [box-border]: #box-border
+[box-border-color]: #box-border-color
+[box-border-width]: #box-border-width
+[box-border-style]: #box-border-style
 [box-display]: #box-display
 [box-height]: #box-height
 [box-margin]: #box-margin
@@ -62,21 +65,24 @@ const App = () => (
 
 ### `<Box />`
 
-| Prop name          | Default value | Possible value | Description |
-|--------------------|---------------|----------------|-------------|
-| [box-align]        | `none`        | `none` `left` `center` `right` | Horizontal alignment |
-| [box-background]   | `null`        | [Create theme][create_theme]  | Background color |
-| [box-border] `*`   | `null`        | [Create theme][create_theme]  | Border color     |
-| [box-display]      | `block`       | `block` `inline-block` `inline` `none` | Display type |
-| [box-height]       | `auto`        | `auto` `1-1` | Set the height |
-| [box-margin] `*`   | `none`        | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` `auto` | Indent around block |
-| [box-overflow] `*` | `visible`     | `auto` `hidden` `scroll` `visible` | Display overflow block content |
-| [box-padding] `*`  | `none`        | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Indent around an block content |
-| [box-place]        | `null`      | `top` `top-left` `top-right` `center` `center-left` `center-right` `bottom` `bottom-left` `bottom-right` | Position place |
-| [box-position]     | `static`      | `static` `relative` `absolute` `fixed` | Positioning method |
-| [box-round] `*`    | `none`        | `none` `full` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Corner rounding |
-| [box-tag]          | `div`         | [HTML tags][html-all-tags] | HTML tag    |
-| [box-width]        | `auto`        | `auto` `1-1` `*-2` `*-3` `*-4` `*-5` `*-6` `*-7` `*-8` `*-9` `*-10` | Set the width |
+| Prop name              | Default value | Possible value | Description |
+|------------------------|---------------|----------------|-------------|
+| [box-align]            | `none`    | `none` `left` `center` `right` | Horizontal alignment |
+| [box-background]       | `null`    | [Create theme][create_theme]  | Background color |
+| [box-border] `*`       | `null`    | [Create theme][create_theme]  | Border color, width and style     |
+| [box-border-color] `*` | `null`    | [Create theme][create_theme]  | Border color     |
+| [box-border-width] `*` | `none`    | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl`  | Border width     |
+| [box-border-style] `*` | `solid`   | `solid` `dotted` `dashed`  | Border style     |
+| [box-display]          | `block`   | `block` `inline-block` `inline` `none` | Display type |
+| [box-height]           | `auto`    | `auto` `1-1` | Set the height |
+| [box-margin] `*`       | `none`    | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` `auto` | Indent around block |
+| [box-overflow] `*`     | `visible` | `auto` `hidden` `scroll` `visible` | Display overflow block content |
+| [box-padding] `*`      | `none`    | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Indent around an block content |
+| [box-place]            | `null`    | `top` `top-left` `top-right` `center` `center-left` `center-right` `bottom` `bottom-left` `bottom-right` | Position place |
+| [box-position]         | `static`  | `static` `relative` `absolute` `fixed` | Positioning method |
+| [box-round] `*`        | `none`    | `none` `full` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Corner rounding |
+| [box-tag]              | `div`     | [HTML tags][html-all-tags] | HTML tag    |
+| [box-width]            | `auto`    | `auto` `1-1` `*-2` `*-3` `*-4` `*-5` `*-6` `*-7` `*-8` `*-9` `*-10` | Set the width |
 
 > `*` — prop has advanced params
 
@@ -169,16 +175,18 @@ The property allows you to set the indentation value for all sides of an element
 
 **Advanced props**
 
-1. `box-margin-top`
-2. `box-margin-right`
-3. `box-margin-bottom`
-4. `box-margin-left`
+- `box-margin-top`
+- `box-margin-right`
+- `box-margin-bottom`
+- `box-margin-left`
 
 **Multi values** _(set value separated by a space)_
 
 - `box-margin="{1,3} {2,4}"`
 - `box-margin="{1} {2,4} {3}"`
 - `box-margin="{1} {2} {3} {4}"`
+
+> {1} - top, {2} - right, {3} - bottom, {4} - left
 
 **List of values**
 
@@ -215,16 +223,18 @@ The property allows you to set the indentation value for all sides of an element
 
 **Advanced props**
 
-1. `box-padding-top`
-2. `box-padding-right`
-3. `box-padding-bottom`
-4. `box-padding-left`
+- `box-padding-top`
+- `box-padding-right`
+- `box-padding-bottom`
+- `box-padding-left`
 
 **Multi values** _(set value separated by a space)_
 
 - `box-padding="{1,3} {2,4}"`
 - `box-padding="{1} {2,4} {3}"`
 - `box-padding="{1} {2} {3} {4}"`
+
+> {1} - top, {2} - right, {3} - bottom, {4} - left
 
 **List of values**
 
@@ -260,16 +270,18 @@ The property allows you to set the fillet value for all corners of the element a
 
 **Advanced props**
 
-1. `box-round-top-left`
-2. `box-round-top-right`
-3. `box-round-bottom-right`
-4. `box-round-bottom-left`
+- `box-round-top-left`
+- `box-round-top-right`
+- `box-round-bottom-right`
+- `box-round-bottom-left`
 
 **Multi values** _(set value separated by a space)_
 
 - `box-round="{1,3} {2,4}"`
 - `box-round="{1} {2,4} {3}"`
 - `box-round="{1} {2} {3} {4}"`
+
+> {1} - top-left, {2} - top-right, {3} - bottom-right, {4} - bottom-left
 
 **List of values**
 
@@ -364,6 +376,8 @@ The property allows you to set the value for all axes at the same time or to det
 
 - `box-overflow="{1} {2}"`
 
+> {1} - overflow-x, {2} - overflow-y
+
 **List of values**
 
 - `auto` - Scroll bars are added only when needed
@@ -379,16 +393,33 @@ The property allows you to set the value for all axes at the same time or to det
 
 ## `box-border`
 
-> Set the `THEME_NAME` depending on the [theming][create_theme]
+Set the `THEME_NAME` depending on the [theming][create_theme]
 
-> Has advanced props:
-> - `box-border` - `top`, `right`, `bottom` or `left` for example **`box-border-right`**
-> - `box-border` - `tb` or `lr` for example **`box-border-tb`**
+!> **DEPRECATED** props `box-border-lr` and `box-border-tb`, please use the separately `box-border-left` and `box-border-right` or `box-border-top` and `box-border-bottom`
+
+**Advanced props**
+
+- `box-border-top`
+- `box-border-right`
+- `box-border-bottom`
+- `box-border-left`
+
+**Multi values** _(set value separated by a space)_
+
+- `box-border="{1}"`
+- `box-border="{1} {2}"`
+- `box-border="{1} {2} {3}"`
+
+> {1} - [color][box-border-color], {2} - [width][box-border-width], {3} - [style][box-border-style]
 
 ```jsx
-<Box box-border={THEME_NAME}>
-    ...
-</Box>
+<Box box-border="{THEME_NAME}" />
+<Box box-border="{THEME_NAME} xs" />
+<Box box-border="{THEME_NAME} xs dotted" />
+
+<Box box-border-top="{THEME_NAME}" />
+<Box box-border-top="{THEME_NAME} xs" />
+<Box box-border-top="{THEME_NAME} xs dotted" />
 ```
 
 ## `box-background`

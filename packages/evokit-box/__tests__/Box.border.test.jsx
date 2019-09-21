@@ -38,17 +38,19 @@ describe('<Box box-border="..." />', () => {
         expect(wrapper.html()).toEqual('<div class="ek-box ek-box_border-left_THEME_NAME"></div>');
     });
 
-    it('props box-border-tb', () => {
-        const wrapper = shallow(<Box box-border-tb='THEME_NAME' />);
-        expect(wrapper).toMatchSnapshot();
+    describe("DEPRECATED props", () => {
+        it('props box-border-tb', () => {
+            const wrapper = shallow(<Box box-border-tb='THEME_NAME' />);
+            expect(wrapper).toMatchSnapshot();
 
-        expect(wrapper.html()).toEqual('<div class="ek-box ek-box_border-tb_THEME_NAME"></div>');
-    });
+            expect(wrapper.html()).toEqual('<div class="ek-box ek-box_border-tb_THEME_NAME"></div>');
+        });
 
-    it('props box-border-lr', () => {
-        const wrapper = shallow(<Box box-border-lr='THEME_NAME' />);
-        expect(wrapper).toMatchSnapshot();
+        it('props box-border-lr', () => {
+            const wrapper = shallow(<Box box-border-lr='THEME_NAME' />);
+            expect(wrapper).toMatchSnapshot();
 
-        expect(wrapper.html()).toEqual('<div class="ek-box ek-box_border-lr_THEME_NAME"></div>');
+            expect(wrapper.html()).toEqual('<div class="ek-box ek-box_border-lr_THEME_NAME"></div>');
+        });
     });
 });

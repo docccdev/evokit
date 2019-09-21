@@ -9,28 +9,28 @@ export const Box = createBlock('div', 'box', [
     'position',
     'width',
     ['border', [
-        'border-color', 
-        'border-width', 
+        'border-color',
+        'border-width',
         'border-style',
     ]],
     ['border-top', [
-        'border-top-color', 
-        'border-top-width', 
+        'border-top-color',
+        'border-top-width',
         'border-top-style',
     ]],
     ['border-right', [
-        'border-right-color', 
-        'border-right-width', 
+        'border-right-color',
+        'border-right-width',
         'border-right-style',
     ]],
-    ['border-bottom', [ 
-        'border-bottom-color', 
-        'border-bottom-width', 
+    ['border-bottom', [
+        'border-bottom-color',
+        'border-bottom-width',
         'border-bottom-style',
     ]],
     ['border-left', [
-        'border-left-color', 
-        'border-left-width', 
+        'border-left-color',
+        'border-left-width',
         'border-left-style',
     ]],
     ['margin', [
