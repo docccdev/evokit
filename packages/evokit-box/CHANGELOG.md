@@ -25,6 +25,7 @@
     - [`box-overflow`][box-overflow]
     - [`box-padding`][box-padding]
     - [`box-round`][box-round]
+    - [`box-border`][box-border]
 - **Deprecated** some props are outdated and will be deleted:
     - `box-margin-lr`
     - `box-margin-tb`
@@ -34,6 +35,8 @@
     - `box-round-right`
     - `box-round-bottom`
     - `box-round-left`
+    - `box-border-lr`
+    - `box-border-tb`
 
 ### 3.0.2 *(11.07.2019)*
 

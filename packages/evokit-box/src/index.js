@@ -3,18 +3,36 @@ import { createBlock } from 'evokit';
 export const Box = createBlock('div', 'box', [
     'align',
     'background',
-    'border',
-    'border-bottom',
-    'border-left',
-    'border-lr',
-    'border-right',
-    'border-tb',
-    'border-top',
     'display',
     'height',
     'place',
     'position',
     'width',
+    ['border', [
+        'border-color', 
+        'border-width', 
+        'border-style',
+    ]],
+    ['border-top', [
+        'border-top-color', 
+        'border-top-width', 
+        'border-top-style',
+    ]],
+    ['border-right', [
+        'border-right-color', 
+        'border-right-width', 
+        'border-right-style',
+    ]],
+    ['border-bottom', [ 
+        'border-bottom-color', 
+        'border-bottom-width', 
+        'border-bottom-style',
+    ]],
+    ['border-left', [
+        'border-left-color', 
+        'border-left-width', 
+        'border-left-style',
+    ]],
     ['margin', [
         ['margin-top', 'margin-bottom'],
         ['margin-right', 'margin-left'],
@@ -46,4 +64,6 @@ export const Box = createBlock('div', 'box', [
     'round-left',
     'round-right',
     'round-top',
+    'border-lr',
+    'border-tb',
 ]);

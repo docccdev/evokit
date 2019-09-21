@@ -108,6 +108,14 @@ const App = () => (
     --ek-box-round-l: 10px;
     --ek-box-round-xl: 12px;
     --ek-box-round-xxl: 14px;
+    /* prop 'box-border-width' */
+    --ek-box-border-width-xxs: 1px;
+    --ek-box-border-width-xs: 2px;
+    --ek-box-border-width-s: 3px;
+    --ek-box-border-width-m: 4px;
+    --ek-box-border-width-l: 5px;
+    --ek-box-border-width-xl: 6px;
+    --ek-box-border-width-xxl: 7px;
 }
 ```
 
