@@ -48,7 +48,19 @@ describe("import { createBlock } from 'evokit';", () => {
     it('extended mods', () => {
         const Block = createBlock('div', 'block', [
             'modName',
-            ['border', ['border-color', 'border-weight', 'border-solid']],
+            ['border', ['border-color', 'border-weight', 'border-style']],
+            ['border-color', [
+                ['border-color-top', 'border-color-bottom'],
+                ['border-color-right', 'border-color-left'],
+                'border-color-bottom',
+                'border-color-left',
+            ]],
+            ['border-weight', [
+                ['border-weight-top', 'border-weight-bottom'],
+                ['border-weight-right', 'border-weight-left'],
+                'border-weight-bottom',
+                'border-weight-left',
+            ]],
         ]);
         expect(shallow(<Block block-modName='modValue' />).html()).toEqual(
             '<div class="ek-block ek-block_modName_modValue"></div>'
@@ -59,8 +71,23 @@ describe("import { createBlock } from 'evokit';", () => {
         expect(shallow(<Block block-border='value' />).html()).toEqual(
             '<div class="ek-block ek-block_border_value"></div>'
         );
+        expect(shallow(<Block block-border='color weight' />).html()).toEqual(
+            '<div class="ek-block ek-block_border-color_color ek-block_border-weight_weight"></div>'
+        );
         expect(shallow(<Block block-border='color weight solid' />).html()).toEqual(
-            '<div class="ek-block ek-block_border-color_color ek-block_border-weight_weight ek-block_border-solid_solid"></div>'
+            '<div class="ek-block ek-block_border-color_color ek-block_border-weight_weight ek-block_border-style_solid"></div>'
+        );
+        expect(shallow(<Block block-border-color='value' />).html()).toEqual(
+            '<div class="ek-block ek-block_border-color_value"></div>'
+        );
+        expect(shallow(<Block block-border-color='color1 color2' />).html()).toEqual(
+            '<div class="ek-block ek-block_border-color-top_color1 ek-block_border-color-bottom_color1 ek-block_border-color-right_color2 ek-block_border-color-left_color2"></div>'
+        );
+        expect(shallow(<Block block-border-color='color1 color2 color3' />).html()).toEqual(
+            '<div class="ek-block ek-block_border-color-top_color1 ek-block_border-color-right_color2 ek-block_border-color-left_color2 ek-block_border-color-bottom_color3"></div>'
+        );
+        expect(shallow(<Block block-border-color='color1 color2 color3 color4' />).html()).toEqual(
+            '<div class="ek-block ek-block_border-color-top_color1 ek-block_border-color-right_color2 ek-block_border-color-bottom_color3 ek-block_border-color-left_color4"></div>'
         );
     });
 
