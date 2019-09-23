@@ -422,6 +422,51 @@ Set the `THEME_NAME` depending on the [theming][create_theme]
 <Box box-border-top="{THEME_NAME} xs dotted" />
 ```
 
+## `box-border-width`
+
+The property allows you to set the border width for all sides of an element at once or to determine it only for specified sides.
+
+**Advanced props**
+
+- `box-border-width-top`
+- `box-border-width-right`
+- `box-border-width-bottom`
+- `box-border-width-left`
+
+**Multi values** _(set value separated by a space)_
+
+- `box-border-width="{1,3} {2,4}"`
+- `box-border-width="{1} {2,4} {3}"`
+- `box-border-width="{1} {2} {3} {4}"`
+
+> {1} - top, {2} - right, {3} - bottom, {4} - left
+
+**List of values**
+
+| Value  | CSS var                      | CSS value |
+|--------|------------------------------|-----------|
+| `none` | ---                          | `0px`     |
+| `xxs`  | `--ek-box-border-width-xxs`  | `1px`     |
+| `xs`   | `--ek-box-border-width-xs`   | `2px`     |
+| `s`    | `--ek-box-border-width-s`    | `3px`     |
+| `m`    | `--ek-box-border-width-m`    | `4px`     |
+| `l`    | `--ek-box-border-width-l`    | `5px`     |
+| `xl`   | `--ek-box-border-width-xl`   | `6px`     |
+| `xxl`  | `--ek-box-border-width-xxl`  | `7px`     |
+
+```jsx
+<Box box-border-width='s' />
+<Box box-border-width='s m' />
+<Box box-border-width='s m l' />
+<Box box-border-width='s m l xl' />
+<Box
+    box-border-width-top='s'
+    box-border-width-right='m'
+    box-border-width-bottom='l'
+    box-border-width-left='xl'
+/>
+```
+
 ## `box-background`
 
 > Set the `THEME_NAME` depending on the [theming][create_theme]

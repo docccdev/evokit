@@ -358,6 +358,69 @@
         @else
             border-bottom-left-radius: var(--ek-box-round-$(value))
 
+/**
+ * Border width:
+ *
+ *  - border_width_none
+ *  - border_width_*
+ *
+ **/
+
+@each $value in (none, xxs, xs, s, m, l, xl, xxl)
+    @mixin media .border_width_$(value)
+        @if $value == none
+            border-width: 0
+        @else
+            border-width: var(--ek-box-border-width-$(value))
+
+    @mixin media .border_width-top_$(value)
+        @if $value == none
+            border-top-width: 0
+        @else
+            border-top-width: var(--ek-box-border-width-$(value))
+
+    @mixin media .border_width-right_$(value)
+        @if $value == none
+            border-right-width: 0
+        @else
+            border-right-width: var(--ek-box-border-width-$(value))
+
+    @mixin media .border_width-bottom_$(value)
+        @if $value == none
+            border-bottom-width: 0
+        @else
+            border-bottom-width: var(--ek-box-border-width-$(value))
+
+    @mixin media .border_width-left_$(value)
+        @if $value == none
+            border-left-width: 0
+        @else
+            border-left-width: var(--ek-box-border-width-$(value))
+
+/**
+ * Border style:
+ *
+ *  - border_style_solid
+ *  - border_style_dotted
+ *  - border_style_dashed
+ *
+ **/
+
+@each $value in (solid, dotted, dashed)
+    @mixin media .border_style_$(value)
+        border-style: $value
+
+    @mixin media .border_style-top_$(value)
+        border-top-style: $value
+
+    @mixin media .border_style-right_$(value)
+        border-right-style: $value
+
+    @mixin media .border_style-bottom_$(value)
+        border-bottom-style: $value
+
+    @mixin media .border_style-left_$(value)
+        border-left-style: $value
 
 /**
  * Width:
