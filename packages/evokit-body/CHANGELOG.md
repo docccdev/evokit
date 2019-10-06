@@ -2,6 +2,7 @@
 [evokit]: /packages/evokit/README.md
 
 [body-display]: /packages/evokit-body/?id=body-display
+[body-overflow]: /packages/evokit-body/?id=body-overflow
 [body-section-display]: /packages/evokit-body/?id=body-section-display
 
 
@@ -19,6 +20,7 @@
 - **Updated** peer dependencies [`evokit`][evokit] >= **v3.1.0**
 - **Added** new props:
     - [`body-display`][body-display]
+    - [`body-overflow`][body-overflow]
     - [`body-section-display`][body-section-display]
 
 ### 3.0.1 *(19.06.2019)*

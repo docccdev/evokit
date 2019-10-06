@@ -13,6 +13,7 @@
 [body-color]: #body-color
 [body-display]: #body-display
 [body-indent]: #body-indent
+[body-overflow]: #body-overflow
 [body-section-display]: #body-section-display
 [body-section-tag]: #body-section-tag
 [body-size]: #body-size
@@ -57,7 +58,7 @@ const App = () => (
         </BodySection>
     </Body>
 );
-```
+``` 
 
 ## Props
 
@@ -65,14 +66,15 @@ const App = () => (
 
 ### `<Body />`
 
-| Prop name         | Default value | Possible value | Description    |
-|-------------------|---------------|-------------------|-------------|
-| [body-background] | `null`        | [Create theme][create_theme]    | Background color   |
-| [body-color]      | `null`        | [Create theme][create_theme]    | Text color         |
-| [body-display]    | `block`       | `block` `none`                  | Display type   |
-| [body-indent]     | `none`        | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Padding on the side left and right for children `<BodySection />` |
-| [body-size]       | `null`        | `xl` `xxl` `xxxl` | Max width for children `<BodySection />` |
-| [body-tag]        | `body`        | [HTML tags][html-all-tags] | HTML tag    |
+| Prop name           | Default value | Possible value | Description    |
+|---------------------|---------------|-------------------|-------------|
+| [body-background]   | `null`        | [Create theme][create_theme]    | Background color   |
+| [body-color]        | `null`        | [Create theme][create_theme]    | Text color         |
+| [body-display]      | `block`       | `block` `none`                  | Display type   |
+| [body-indent]       | `none`        | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Padding on the side left and right for children `<BodySection />` |
+| [body-overflow] `*` | `visible`     | `auto` `hidden` `scroll` `visible` | Overflow type |
+| [body-size]         | `null`        | `xl` `xxl` `xxxl` | Max width for children `<BodySection />` |
+| [body-tag]          | `body`        | [HTML tags][html-all-tags] | HTML tag    |
 
 ### `<BodySection />`
 
@@ -153,6 +155,34 @@ Default value `body`
 <Body body-size='xl'>
     ...
 </Body>
+```
+
+## `body-overflow`
+
+The property allows you to set the value for all axes at the same time or to determine it only for the specified axis
+
+**Advanced props**
+
+- `body-overflow-x`
+- `body-overflow-y`
+
+**Multi values** _(set value separated by a space)_
+
+- `body-overflow="{1} {2}"`
+
+> {1} - overflow-x, {2} - overflow-y
+
+**List of values**
+
+- `auto` - Scroll bars are added only when needed
+- `hidden` - Only the area inside the element is displayed, the rest will be hidden
+- `scroll` - Scroll bars are always added
+- `visible` - The entire content of the element is displayed, even beyond the specified height and width
+
+```jsx
+<Body body-overflow='scroll' />
+<Body body-overflow='visible scroll' />
+<Body body-overflow-x='visible' box-overflow-y='scroll' />
 ```
 
 ## `body-indent`

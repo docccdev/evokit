@@ -369,8 +369,8 @@ The property allows you to set the value for all axes at the same time or to det
 
 **Advanced props**
 
-1. `box-overflow-x`
-2. `box-overflow-y`
+- `box-overflow-x`
+- `box-overflow-y`
 
 **Multi values** _(set value separated by a space)_
 

@@ -98,3 +98,22 @@
             @else
                 padding-left: var(--ek-body-indent-$(value))
                 padding-right: var(--ek-body-indent-$(value))
+
+/**
+ * Overflow:
+ *
+ *  - body_overflow_*
+ *  - body_overflow-x_*
+ *  - body_overflow-y_*
+ *
+ **/
+
+@each $value in (auto, hidden, scroll, visible)
+    @mixin media .body_overflow_$(value)
+        overflow: $value
+
+    @mixin media .body_overflow-x_$(value)
+        overflow-x: $value
+
+    @mixin media .body_overflow-y_$(value)
+        overflow-y: $value
