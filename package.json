@@ -5,7 +5,9 @@
     "bootstrap": "lerna bootstrap",
     "build": "lerna run build",
     "prepublishOnly": "lerna run prepublishOnly",
-    "watch": "lerna run --parallel --stream watch"
+    "watch": "lerna run --parallel --stream watch",
+    "publish": "lerna publish",
+    "publish-from-git": "lerna publish from-git"
   },
   "repository": {
     "type": "git",
