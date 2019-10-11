@@ -40,6 +40,7 @@
 ### 3.1.0 *(xx.09.2019)*
 
 - **Fixed** react ref prop. The prop `{BLOCK_NAME}-ref` is now deprecated. [More][use-props_box-ref]
+- **Fixed** prop `{BLOCK_NAME}-tag`
 - **Added** multi prop values. [More][use-props_multi-values]
 
 ### 3.0.3 *(11.07.2019)*

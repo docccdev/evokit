@@ -33,8 +33,6 @@ The block for building flexible layouts. Contains two elements `<Flex>` and `<Fl
 
 ---
 
-!> THE ALPHA VERSION OF THE PACKAGE IS RECOMMENDED FOR REFERENCE ONLY. DO NOT USE IN PRODUCTION!
-
 ## Install
 
 > Peer dependencies [evokit]. More about [install][installation]
@@ -67,12 +65,12 @@ const App = () => (
 
 | Prop name          | Default value    | Possible value | Description |
 |--------------------|------------------|----------------|-------------|
+| [flex-content] `*` | `start`    | `start` `end` `center` `between` `around` `stretch` | Space between flex lines on the cross axis |
 | [flex-direction]   | `row`      | `row` `row-reverse` `column` `column-reverse` | Direction of all items |
 | [flex-display]     | `flex`     | `flex` `flex-inline` `none` | Display type |
+| [flex-items]       | `start`    | `start` `end` `center` `baseline` `stretch` | Alignment of all items on the cross axis |
 | [flex-tag]         | `div`      | [HTML tags][html-all-tags] | HTML tag    |
 | [flex-wrap]        | `wrap`     | `nowrap` `wrap` `wrap-reverse` | Wrap rules |
-| [flex-content] `*` | `start`    | `start` `end` `center` `between` `around` `stretch` | Space between flex lines on the cross axis |
-| [flex-items]       | `start`    | `start` `end` `center` `baseline` `stretch` | Alignment of all items on the cross axis |
 
 ### `<FlexItem />`
 

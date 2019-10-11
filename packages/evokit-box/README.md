@@ -180,7 +180,7 @@ The property allows you to set the indentation value for all sides of an element
 - `box-margin-bottom` <sup>{3}</sup>
 - `box-margin-left` <sup>{4}</sup>
 
-**Multi props** _(set value separated by a space)_
+**Multi values** _(set value separated by a space)_
 
 - `box-margin="{1,3} {2,4}"`
 - `box-margin="{1} {2,4} {3}"`
@@ -226,7 +226,7 @@ The property allows you to set the indentation value for all sides of an element
 - `box-padding-bottom` <sup>{3}</sup>
 - `box-padding-left` <sup>{4}</sup>
 
-**Multi props** _(set value separated by a space)_
+**Multi values** _(set value separated by a space)_
 
 - `box-padding="{1,3} {2,4}"`
 - `box-padding="{1} {2,4} {3}"`
@@ -271,7 +271,7 @@ The property allows you to set the fillet value for all corners of the element a
 - `box-round-bottom-right` <sup>{3}</sup>
 - `box-round-bottom-left` <sup>{4}</sup>
 
-**Multi props** _(set value separated by a space)_
+**Multi values** _(set value separated by a space)_
 
 - `box-round="{1,3} {2,4}"`
 - `box-round="{1} {2,4} {3}"`
@@ -366,7 +366,7 @@ The property allows you to set the value for all axes at the same time or to det
 - `box-overflow-x` <sup>{1}</sup>
 - `box-overflow-y` <sup>{2}</sup>
 
-**Multi props** _(set value separated by a space)_
+**Multi values** _(set value separated by a space)_
 
 - `box-overflow="{1} {2}"`
 
@@ -394,7 +394,7 @@ The property allows you to set the value for all axes at the same time or to det
 - `box-border-bottom`
 - `box-border-left`
 
-**Multi props** _(set value separated by a space)_
+**Multi values** _(set value separated by a space)_
 
 - `box-border="{1}"`
 - `box-border="{1} {2}"`
@@ -426,7 +426,7 @@ The property allows you to set the border width for all sides of an element at o
 - `box-border-width-bottom` <sup>{3}</sup>
 - `box-border-width-left` <sup>{4}</sup>
 
-**Multi props** _(set value separated by a space)_
+**Multi values** _(set value separated by a space)_
 
 - `box-border-width="{1,3} {2,4}"`
 - `box-border-width="{1} {2,4} {3}"`
@@ -469,7 +469,7 @@ The property allows you to set the border color for all sides of an element at o
 - `box-border-color-bottom` <sup>{3}</sup>
 - `box-border-color-left` <sup>{4}</sup>
 
-**Multi props** _(set value separated by a space)_
+**Multi values** _(set value separated by a space)_
 
 - `box-border-color="{1,3} {2,4}"`
 - `box-border-color="{1} {2,4} {3}"`
@@ -500,7 +500,7 @@ The property allows you to set the border style for all sides of an element at o
 - `box-border-style-bottom` <sup>{3}</sup>
 - `box-border-style-left` <sup>{4}</sup>
 
-**Multi props** _(set value separated by a space)_
+**Multi values** _(set value separated by a space)_
 
 - `box-border-style="{1,3} {2,4}"`
 - `box-border-style="{1} {2,4} {3}"`
