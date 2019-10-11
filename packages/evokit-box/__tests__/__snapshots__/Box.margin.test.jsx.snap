@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Box box-margin="..." /> DEPRECATED props props box-margin-lr 1`] = `
+<div
+  className="ek-box ek-box_margin-lr_xxl"
+/>
+`;
+
+exports[`<Box box-margin="..." /> DEPRECATED props props box-margin-tb 1`] = `
+<div
+  className="ek-box ek-box_margin-tb_xxl"
+/>
+`;
+
+exports[`<Box box-margin="..." /> extend 2 props box-margin 1`] = `
+<div
+  className="ek-box ek-box_margin-top_xs ek-box_margin-bottom_xs ek-box_margin-right_xl ek-box_margin-left_xl"
+/>
+`;
+
+exports[`<Box box-margin="..." /> extend 3 props box-margin 1`] = `
+<div
+  className="ek-box ek-box_margin-top_xs ek-box_margin-right_xl ek-box_margin-left_xl ek-box_margin-bottom_m"
+/>
+`;
+
+exports[`<Box box-margin="..." /> extend 4 props box-margin 1`] = `
+<div
+  className="ek-box ek-box_margin-top_s ek-box_margin-right_m ek-box_margin-bottom_l ek-box_margin-left_xl"
+/>
+`;
+
+exports[`<Box box-margin="..." /> props box-margin 1`] = `
+<div
+  className="ek-box ek-box_margin_xxl"
+/>
+`;
+
+exports[`<Box box-margin="..." /> props box-margin-bottom 1`] = `
+<div
+  className="ek-box ek-box_margin-bottom_xxl"
+/>
+`;
+
+exports[`<Box box-margin="..." /> props box-margin-left 1`] = `
+<div
+  className="ek-box ek-box_margin-left_xxl"
+/>
+`;
+
+exports[`<Box box-margin="..." /> props box-margin-right 1`] = `
+<div
+  className="ek-box ek-box_margin-right_xxl"
+/>
+`;
+
+exports[`<Box box-margin="..." /> props box-margin-top 1`] = `
+<div
+  className="ek-box ek-box_margin-top_xxl"
+/>
+`;

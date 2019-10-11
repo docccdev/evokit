@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Body body-color="..." /> props body-color 1`] = `
+<body
+  className="ek-body ek-body_color_value"
+/>
+`;

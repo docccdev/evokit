@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`import { withProps } from 'evokit'; default prop children 1`] = `
+<div
+  className="ek-block"
+>
+  I am a block
+</div>
+`;
+
+exports[`import { withProps } from 'evokit'; default prop children 2`] = `
+<block>
+  Babadook
+</block>
+`;
+
+exports[`import { withProps } from 'evokit'; default prop data 1`] = `
+<div
+  className="ek-block"
+>
+  ololo
+</div>
+`;
+
+exports[`import { withProps } from 'evokit'; default prop data 2`] = `
+<block
+  data-custom="ololo"
+>
+  ololo
+</block>
+`;
+
+exports[`import { withProps } from 'evokit'; default prop mod 1`] = `
+<div
+  className="ek-block"
+/>
+`;
+
+exports[`import { withProps } from 'evokit'; default prop mod 2`] = `
+<block
+  block-color="red"
+/>
+`;

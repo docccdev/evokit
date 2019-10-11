@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Image image-width="..." /> props image-width 1`] = `
+<img
+  className="ek-image ek-image_width_value"
+/>
+`;

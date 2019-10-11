@@ -5,7 +5,7 @@
 All blocks have base props, such as `tag`, `ref`, `preset`. Also supports other valid props of the React Element
 
 - `{BLOCK_NAME}-tag` - type `string`, used to change the HTML tag
-- `{BLOCK_NAME}-ref` - type `function`, used to get a NODE reference
+- ~~`{BLOCK_NAME}-ref` - type `function`, used to get a NODE reference~~ (**DEPRECATED**)
 - `{BLOCK_NAME}-preset` - type `object`, used to customize the generation of class names and CSS Modules
 
 ---
@@ -24,11 +24,14 @@ import 'evokit-box/style.css';
 
 // input:
 <Box box-tag='span' />
+
 // output:
 <span class='ek-box' />
 ```
 
 ### `box-ref`
+
+!> **DEPRECATED** prop `box-ref`, please use React `ref`
 
 The passed function will receive a `target` argument that refers to the current DOM node.
 
@@ -36,7 +39,11 @@ The passed function will receive a `target` argument that refers to the current 
 import { Box } from 'evokit-box';
 import 'evokit-box/style.css';
 
-<Box box-ref={(target) => console.log(target)} />
+// BAD
+<Box box-ref={...} />
+
+// GOOD
+<Box ref={...} />
 ```
 
 ### `box-preset`
@@ -62,6 +69,7 @@ import boxCss from 'evokit-box/style.css'; // return for example {'ek-box': 'ek-
 
 // input:
 <Box box-preset={{ css: boxCss }} />
+
 // output:
 <div class='ek-box-hF7j' />
 
@@ -83,13 +91,22 @@ import boxCss from 'evokit-box/style.css'; // return for example {'ek-box': 'ek-
 
 ```jsx
 // input:
+<Box box-padding='s m l xl' />
+
+// output:
+<div class='ek-box ek-box_padding-top_s ek-box_padding-right_m ek-box_padding-bottom_l ek-box_padding-left_xl' />
+```
+### Array of values
+
+```jsx
+// input:
 <Box box-padding={['s', 'xl']} />
 
 // output:
 <div class='ek-box ek-box_padding_s ek-box_padding_xl' />
 ```
 
-### Optional values
+### Object of values
 
 ```jsx
 // input:

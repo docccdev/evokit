@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Grid /> props className 1`] = `
+<div
+  className="ek-grid ololo"
+/>
+`;
+
+exports[`<Grid /> props className 2`] = `
+<div
+  className="ek-grid__item ololo"
+/>
+`;
+
+exports[`<Grid /> props grid-tag 1`] = `
+<span
+  className="ek-grid"
+/>
+`;
+
+exports[`<Grid /> props grid-tag 2`] = `
+<span
+  className="ek-grid__item"
+/>
+`;
+
+exports[`<Grid /> render 1`] = `
+<div
+  className="ek-grid"
+/>
+`;
+
+exports[`<Grid /> render 2`] = `
+<div
+  className="ek-grid__item"
+/>
+`;

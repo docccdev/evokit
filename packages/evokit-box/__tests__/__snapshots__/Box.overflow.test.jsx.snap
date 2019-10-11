@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Box box-overflow="..." /> extend 2 props box-overflow 1`] = `
+<div
+  className="ek-box ek-box_overflow-x_scroll ek-box_overflow-y_visible"
+/>
+`;
+
+exports[`<Box box-overflow="..." /> props box-overflow 1`] = `
+<div
+  className="ek-box ek-box_overflow_hidden"
+/>
+`;
+
+exports[`<Box box-overflow="..." /> props box-overflow-x 1`] = `
+<div
+  className="ek-box ek-box_overflow-x_hidden"
+/>
+`;
+
+exports[`<Box box-overflow="..." /> props box-overflow-y 1`] = `
+<div
+  className="ek-box ek-box_overflow-y_hidden"
+/>
+`;

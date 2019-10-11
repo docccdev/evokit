@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Flex flex-content="..." /> extend 2 props flex-content 1`] = `
+<div
+  className="ek-flex ek-flex_content-align_start ek-flex_content-justify_end"
+/>
+`;
+
+exports[`<Flex flex-content="..." /> props flex-content 1`] = `
+<div
+  className="ek-flex ek-flex_content_center"
+/>
+`;
+
+exports[`<Flex flex-content="..." /> props flex-content-align 1`] = `
+<div
+  className="ek-flex ek-flex_content-align_start"
+/>
+`;
+
+exports[`<Flex flex-content="..." /> props flex-content-justify 1`] = `
+<div
+  className="ek-flex ek-flex_content-justify_end"
+/>
+`;

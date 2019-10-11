@@ -26,6 +26,30 @@
     display: block
 
 /**
+ * Display:
+ *
+ *  - list_display_block
+ *  - list_display_none
+ *
+ **/
+
+@each $value in (block, none)
+    @mixin media .list_display_$(value)
+        display: $value
+
+/**
+ * Item display:
+ *
+ *  - list__item_display_block
+ *  - list__item_display_none
+ *
+ **/
+
+@each $value in (block, none)
+    @mixin media .list__item_display_$(value)
+        display: $value
+
+/**
  * Indent:
  *
  *  - list_indent_*

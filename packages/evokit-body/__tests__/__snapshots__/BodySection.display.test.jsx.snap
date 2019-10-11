@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BodySection body-section-display="..." /> props body-section-display 1`] = `
+<div
+  className="ek-body__section ek-body__section_display_value"
+/>
+`;

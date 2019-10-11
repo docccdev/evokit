@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Box box-width="..." /> props box-width 1`] = `
+<div
+  className="ek-box ek-box_width_1-7"
+/>
+`;

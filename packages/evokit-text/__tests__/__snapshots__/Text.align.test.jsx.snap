@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Text text-align="..." /> props text-align 1`] = `
+<span
+  className="ek-text ek-text_align_value"
+/>
+`;

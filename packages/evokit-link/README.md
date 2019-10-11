@@ -9,13 +9,14 @@
 [quik-start]: /docs/getting-started/quick-start.md
 [use-props]: /docs/getting-started/props.md
 
-[link-tag]: #link-tag
 [link-color]: #link-color
-[link-size]: #link-size
-[link-weight]: #link-weight
-[link-valign]: #link-valign
-[link-style]: #link-style
+[link-display]: #link-display
 [link-lheight]: #link-lheight
+[link-size]: #link-size
+[link-style]: #link-style
+[link-tag]: #link-tag
+[link-valign]: #link-valign
+[link-weight]: #link-weight
 
 # EvoKit - Link
 
@@ -39,13 +40,15 @@ npm install evokit-link --save
 > More about [usage][quik-start]
 
 ```jsx
+import React from 'react';
 import { Link } from 'evokit-link';
 import 'evokit-link/style.css';
 
-<Link href='#'>
-    ...
-</Link>
-
+const App = () => (
+    <Link link-weight='bold' href='#'>
+        ...
+    </Link>
+);
 ```
 
 ## Props
@@ -56,18 +59,14 @@ import 'evokit-link/style.css';
 
 | Prop name      | Default value | Possible value         | Description |
 |----------------|---------------|------------------------|-------------|
-| [link-tag]     | `a`           | [html tags][html-all-tags] | HTML tag    |
+| [link-color]   | `null`        | [Create theme][create_theme]  | Text color   |
+| [link-display] | `inline`      | `inline` `none`               | Display type |
+| [link-lheight] | `default`     | `default` `medium` `large`    | Line spacing |
 | [link-size]    | `default`     | `default` `small` `big` `h1` `h2` `h3` `h4` `h5` `h6` | Font size |
-| [link-weight]  | `default`     | `default` `thin` `light` `medium` `bold` `black` | Font weight |
-| [link-valign]  | `null`        | `baseline` `bottom` `middle` `sub` `super` `text-bottom` `text-top` `top` | Aligns text vertically |
 | [link-style]   | `null`        | `dotted` `multi-line` | Decoration styles |
-| [link-lheight] | `default`     | `default` `medium` `large` | Line spacing |
-
-> Use [theming][create_theme] for creating custom `{THEME_NAME}`.
-
-| Prop name        | Default value  | Possible value | Description  |
-|------------------|----------------|----------------|--------------|
-| [link-color]     | `null`         |`{THEME_NAME}`  | Text color   |
+| [link-tag]     | `a`           | [HTML tags][html-all-tags] | HTML tag    |
+| [link-valign]  | `null`        | `baseline` `bottom` `middle` `sub` `super` `text-bottom` `text-top` `top` | Aligns text vertically |
+| [link-weight]  | `default`     | `default` `thin` `light` `medium` `bold` `black` | Font weight |
 
 ## Customize
 
@@ -112,6 +111,17 @@ import 'evokit-link/style.css';
 
 ```jsx
 <Link link-tag='a' href='#'>
+    ...
+</Link>
+```
+
+## `link-display`
+
+- `inline` - displayed as inline
+- `none` - remove from a document
+
+```jsx
+<Link link-display='none' href='#'>
     ...
 </Link>
 ```

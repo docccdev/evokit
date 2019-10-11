@@ -29,6 +29,18 @@
     line-height: var(--ek-text-line-height)
 
 /**
+ * Display:
+ *
+ *  - text_display_inline
+ *  - text_display_none
+ *
+ **/
+
+@each $value in (inline, none)
+    @mixin media .text_display_$(value)
+        display: $value
+
+/**
  * Font size:
  *
  *  - text_size_*

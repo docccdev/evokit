@@ -1,4 +1,14 @@
 [README]: /packages/evokit-box/README.md
+[evokit]: /packages/evokit/README.md
+
+[box-margin]: /packages/evokit-box/?id=box-margin
+[box-overflow]: /packages/evokit-box/?id=box-overflow
+[box-padding]: /packages/evokit-box/?id=box-padding
+[box-round]: /packages/evokit-box/?id=box-round
+[box-border]: /packages/evokit-box/?id=box-border
+[box-border-color]: /packages/evokit-box/?id=box-border-color
+[box-border-width]: /packages/evokit-box/?id=box-border-width
+[box-border-style]: /packages/evokit-box/?id=box-border-style
 
 [create_theme]: /docs/base/theme.md
 
@@ -10,6 +20,31 @@
 ---
 
 ## CHANGELOG
+
+### 3.1.0 *(xx.09.2019)*
+
+- **Updated** peer dependencies [`evokit`][evokit] >= **v3.1.0**
+- **Added** new props:
+    - [`box-border-color`][box-border-color]
+    - [`box-border-width`][box-border-width]
+    - [`box-border-style`][box-border-style]
+- **Added** multi values for props:
+    - [`box-margin`][box-margin]
+    - [`box-overflow`][box-overflow]
+    - [`box-padding`][box-padding]
+    - [`box-round`][box-round]
+    - [`box-border`][box-border]
+- **Deprecated** some props are outdated and will be deleted:
+    - `box-margin-lr`
+    - `box-margin-tb`
+    - `box-padding-lr`
+    - `box-padding-tb`
+    - `box-round-top`
+    - `box-round-right`
+    - `box-round-bottom`
+    - `box-round-left`
+    - `box-border-lr`
+    - `box-border-tb`
 
 ### 3.0.2 *(11.07.2019)*
 

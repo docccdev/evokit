@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Box box-place="..." /> props box-place 1`] = `
+<div
+  className="ek-box ek-box_place_center"
+/>
+`;

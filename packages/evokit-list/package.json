@@ -1,9 +1,10 @@
 {
   "name": "evokit-list",
-  "version": "3.0.2",
+  "version": "3.1.0-alpha.0",
   "description": "Used to create list",
   "main": "index.js",
   "scripts": {
+    "test": "jest --colors",
     "build": "webpack --colors",
     "watch": "webpack --colors --progress --watch",
     "prepublishOnly": "webpack"
@@ -28,6 +29,6 @@
   },
   "license": "MIT",
   "peerDependencies": {
-    "evokit": ">=3.0.0"
+    "evokit": ">=3.1.0"
   }
 }

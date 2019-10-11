@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Image image-align="..." /> props image-align 1`] = `
+<img
+  className="ek-image ek-image_align_value"
+/>
+`;

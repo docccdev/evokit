@@ -7,16 +7,14 @@ const DEFAULT_PRESET = {
 };
 
 export const withPreset = (preset) => {
-    const {
-        b, e, m, v, css,
-    } = Object.assign({}, DEFAULT_PRESET, preset);
+    const { b, e, m, v, css } = Object.assign({}, DEFAULT_PRESET, preset);
 
     return (name, elem) => {
         if (typeof name !== 'string') {
             throw new Error('The argument "name" is not a string');
         }
 
-        return (mods, mix) => {
+        return (mods, mix, modsExtended = {}) => {
             const block = elem ? `${b}${name}${e}${elem}` : `${b}${name}`;
             const result = [block];
             const mixResult = [];
@@ -25,14 +23,38 @@ export const withPreset = (preset) => {
                 Object.keys(mods).forEach((key) => {
                     const modVal = mods[key];
                     const modValType = typeof modVal;
-                    const cnFn = (value) => {
-                        if (value) {
-                            return `${block}${m}${key}${v}${value}`;
+                    const cnFn = (modName, modValue) => {
+                        if (modValue) {
+                            return `${block}${m}${modName}${v}${modValue}`;
                         }
 
-                        return `${block}${m}${key}`;
+                        return `${block}${m}${modName}`;
                     };
-                    const appendFn = (value) => result.push(cnFn(value));
+                    const appendFn = (value) => {
+                        const splitVal = value ? `${value}`.split(' ') : [];
+
+                        if (splitVal.length > 1 && Object.prototype.hasOwnProperty.call(modsExtended, key)) {
+                            splitVal.forEach((val, index) => {
+                                const extendedVal = modsExtended[key];
+                                const extendedKey = extendedVal[index];
+
+                                if (extendedKey) {
+                                    if (Array.isArray(extendedKey)) {
+                                        extendedKey.filter((extKey, i) => {
+                                            const extIndex = extendedVal.indexOf(extKey);
+                                            return i === 0 || (extIndex !== -1 && !splitVal[extIndex]);
+                                        }).forEach((extKey) => {
+                                            result.push(cnFn(extKey, val));
+                                        });
+                                    } else {
+                                        result.push(cnFn(extendedKey, val));
+                                    }
+                                }
+                            });
+                        } else {
+                            result.push(cnFn(key, splitVal[0]));
+                        }
+                    };
 
                     if (modValType === 'string' || modValType === 'number') {
                         appendFn(modVal.toString());
@@ -51,17 +73,19 @@ export const withPreset = (preset) => {
                 });
             }
 
-            if (typeof mix === 'string') {
-                mixResult.push(mix);
-            } else if (Array.isArray(mix)) {
-                mix
-                    .filter((item) => typeof item === 'string')
-                    .forEach((item) => {
-                        item
-                            .split(' ')
-                            .filter((value) => !result.includes(value))
-                            .forEach((value) => mixResult.push(value));
-                    });
+            if (!!mix) {
+                if (typeof mix === 'string') {
+                    mixResult.push(mix);
+                } else if (Array.isArray(mix)) {
+                    mix
+                        .filter((item) => typeof item === 'string')
+                        .forEach((item) => {
+                            item
+                                .split(' ')
+                                .filter((value) => !result.includes(value))
+                                .forEach((value) => mixResult.push(value));
+                        });
+                }
             }
 
             if (typeof css === 'object' && css !== null) {
@@ -72,7 +96,7 @@ export const withPreset = (preset) => {
                 return [...cssModuleResult, ...mixResult].join(' ');
             }
 
-            return [...result, ...mixResult].join(' ');
+            return [...result, ...mixResult].join(' ').trim();
         };
     };
 };

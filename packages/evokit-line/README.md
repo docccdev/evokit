@@ -9,11 +9,11 @@
 [quik-start]: /docs/getting-started/quick-start.md
 [use-props]: /docs/getting-started/props.md
 
-[line-tag]: #line-tag
+[line-color]: #line-color
 [line-display]: #line-display
 [line-indent]: #line-indent
 [line-style]: #line-style
-[line-color]: #line-color
+[line-tag]: #line-tag
 
 # EvoKit - Line
 
@@ -37,10 +37,13 @@ npm install evokit-line --save
 > More about [usage][quik-start]
 
 ```jsx
+import React from 'react';
 import { Line } from 'evokit-line';
 import 'evokit-line/style.css';
 
-<Line />
+const App = () => (
+    <Line line-indent='xl' />
+);
 ```
 
 ## Props
@@ -51,16 +54,11 @@ import 'evokit-line/style.css';
 
 | Prop name      | Default value | Possible value | Description  |
 |----------------|---------------|----------------|--------------|
-| [line-tag]     | `hr`          | [html tags][html-all-tags] | HTML tag    |
+| [line-color]   | `null`        | [Create theme][create_theme] | Border color |
 | [line-display] | `block`       | `block` `none` | Display type |
 | [line-indent]  | `none`        | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Set the margin top and bottom |
 | [line-style]   | `solid`       | `solid` `dotted` `dashed` | Border style |
-
-> Use [theming][create_theme] for creating custom `{THEME_NAME}`.
-
-| Prop name        | Default value | Possible value | Description  |
-|------------------|---------------|----------------|--------------|
-| [line-color]     | `null`        | `{THEME_NAME}` | Border color |
+| [line-tag]     | `hr`          | [HTML tags][html-all-tags] | HTML tag    |
 
 ## Customize
 

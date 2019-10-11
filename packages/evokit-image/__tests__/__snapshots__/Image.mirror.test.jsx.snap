@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Image image-mirror="..." /> props image-mirror 1`] = `
+<img
+  className="ek-image ek-image_mirror_value"
+/>
+`;

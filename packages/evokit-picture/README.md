@@ -9,11 +9,13 @@
 [quik-start]: /docs/getting-started/quick-start.md
 [use-props]: /docs/getting-started/props.md
 
-[picture-tag]: #picture-tag
-[picture-item-tag]: #picture-item-tag
-[picture-fit]: #picture-fit
-[picture-round]: #picture-round
 [picture-border]: #picture-border
+[picture-display]: #picture-display
+[picture-fit]: #picture-fit
+[picture-item-display]: #picture-item-display
+[picture-item-tag]: #picture-item-tag
+[picture-round]: #picture-round
+[picture-tag]: #picture-tag
 
 # EvoKit - Picture
 
@@ -34,16 +36,18 @@ npm install evokit-picture --save
 
 ## Usage
 
-> More about [usage][quik-start]
+> More about [usage][quik-start]. You can also use `<Picture.Item>` instead of `<PictureItem>`
 
 ```jsx
+import React from 'react';
 import { Picture, PictureItem } from 'evokit-picture';
 import 'evokit-picture/style.css';
 
-<Picture>
-    <PictureItem src='' alt='' />
-</Picture>
-
+const App = () => (
+    <Picture picture-round='full'>
+        <PictureItem src='...' alt='...' />
+    </Picture>
+);
 ```
 
 ## Props
@@ -52,23 +56,23 @@ import 'evokit-picture/style.css';
 
 ### `<Picture />`
 
-| Prop name       | Default value | Possible value | Description |
-|-----------------|---------------|----------------|-------------|
-| [picture-tag]   | `picture`     | [html tags][html-all-tags] | HTML tag    |
-| [picture-fit]   | `null`        | `none` `fill` `contain` `cover` `scale-down`    | Filling the container relative to its height and width |
-| [picture-round] | `none`        | `none` `full` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Corner rounding |
-
-> Use [theming][create_theme] for creating custom `{THEME_NAME}`.
-
-| Prop name        | Default value  | Possible value | Description  |
-|------------------|----------------|----------------|--------------|
-| [picture-border] | `null`         | `{THEME_NAME}` | Border color |
+| Prop name           | Default value | Possible value | Description  |
+|---------------------|---------------|----------------|--------------|
+| [picture-border]    | `null`        | [Create theme][create_theme]  | Border color |
+| [picture-display]   | `block`       | `block` `none` | Display type |
+| [picture-fit]       | `null`        | `none` `fill` `contain` `cover` `scale-down`    | Filling the container relative to its height and width |
+| [picture-round] `*` | `none`        | `none` `full` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Corner rounding |
+| [picture-tag]       | `picture`     | [HTML tags][html-all-tags] | HTML tag    |
 
 ### `<PictureItem />`
 
-| Prop name          | Default value | Possible value             | Description |
-|--------------------|---------------|----------------------------|-------------|
-| [picture-item-tag] | `img`         | [html tags][html-all-tags] | HTML tag    |
+| Prop name                | Default value | Possible value             | Description  |
+|--------------------------|---------------|----------------------------|--------------|
+| [picture-item-display]   | `block`       | `block` `none`             | Display type |
+| [picture-item-tag]       | `img`         | [HTML tags][html-all-tags] | HTML tag     |
+
+
+> `*` — prop has advanced params
 
 ## Customize
 
@@ -109,13 +113,14 @@ import 'evokit-picture/style.css';
 </Picture>
 ```
 
-## `picture-item-tag`
+## `picture-display`
 
-- Default value `img`
+- `block` - shown as blocky (default)
+- `none` - remove block from document
 
 ```jsx
-<Picture>
-    <PictureItem picture-item-tag='img' src='' alt='' />
+<Picture picture-display='none'>
+    <PictureItem src='' alt='' />
 </Picture>
 ```
 
@@ -133,27 +138,51 @@ import 'evokit-picture/style.css';
 </Picture>
 ```
 
+
 ## `picture-round`
 
-> Has advanced props:
-> - `picture-round` - `top`, `right`, `bottom` or `left` for example **`picture-round-right`**
-> - `picture-round-top` - `left` or `right` for example **`picture-round-top-right`**
-> - `picture-round-bottom` - `left` or `right` for example **`picture-round-bottom-right`**
+The property allows you to set the fillet value for all corners of the element at the same time or to determine it only for the specified angle.
 
-- `none` - value: `0px`
-- `full` - value: `50%`
-- `xxs` - css variable `--ek-picture-round-xxs`, default value: `2px`
-- `xs` - css variable `--ek-picture-round-xs`, default value: `4px`
-- `s` - css variable `--ek-picture-round-s`, default value: `6px`
-- `m` - css variable `--ek-picture-round-m`, default value: `8px`
-- `l` - css variable `--ek-picture-round-l`, default value: `10px`
-- `xl` - css variable `--ek-picture-round-xl`, default value: `12px`
-- `xxl` - css variable `--ek-picture-round-xxl`, default value: `14px`
+!> **DEPRECATED** props `picture-round-top`, `picture-round-right`, `picture-round-bottom` and `picture-round-left`, please use multi values
+
+**Advanced props**
+
+1. `picture-round-top-left`
+2. `picture-round-top-right`
+3. `picture-round-bottom-right`
+4. `picture-round-bottom-left`
+
+**Multi values** _(set value separated by a space)_
+
+- `picture-round="{1,3} {2,4}"`
+- `picture-round="{1} {2,4} {3}"`
+- `picture-round="{1} {2} {3} {4}"`
+
+**List of values**
+
+| Value  | CSS var               | CSS value |
+|--------|-----------------------|-----------|
+| `none` | ---                   | `0px`     |
+| `full` | ---                   | `50%`     |
+| `xxs`  | `--ek-picture-round-xxs`  | `2px`     |
+| `xs`   | `--ek-picture-round-xs`   | `4px`    |
+| `s`    | `--ek-picture-round-s`    | `6px`    |
+| `m`    | `--ek-picture-round-m`    | `8px`    |
+| `l`    | `--ek-picture-round-l`    | `10px`    |
+| `xl`   | `--ek-picture-round-xl`   | `12px`    |
+| `xxl`  | `--ek-picture-round-xxl`  | `14px`    |
 
 ```jsx
-<Picture picture-round='full'>
-    <PictureItem src='' alt='' />
-</Picture>
+<Picture picture-round='s' />
+<Picture picture-round='s m' />
+<Picture picture-round='s m l' />
+<Picture picture-round='s m l xl' />
+<Picture
+    picture-round-top-left='s'
+    picture-round-top-right='m'
+    picture-round-bottom-right='l'
+    picture-round-bottom-left='xl'
+/>
 ```
 
 ## `picture-border`
@@ -167,5 +196,26 @@ import 'evokit-picture/style.css';
 ```jsx
 <Picture picture-border={THEME_NAME}>
     <PictureItem src='' alt='' />
+</Picture>
+```
+
+## `picture-item-tag`
+
+- Default value `img`
+
+```jsx
+<Picture>
+    <PictureItem picture-item-tag='img' src='' alt='' />
+</Picture>
+```
+
+## `picture-item-display`
+
+- `block` - shown as blocky (default)
+- `none` - remove block from document
+
+```jsx
+<Picture>
+    <PictureItem picture-item-display='none' src='' alt='' />
 </Picture>
 ```

@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Flex /> props className 1`] = `
+<div
+  className="ek-flex ololo"
+/>
+`;
+
+exports[`<Flex /> props className 2`] = `
+<div
+  className="ek-flex__item ololo"
+/>
+`;
+
+exports[`<Flex /> props flex-tag 1`] = `
+<span
+  className="ek-flex"
+/>
+`;
+
+exports[`<Flex /> props flex-tag 2`] = `
+<span
+  className="ek-flex__item"
+/>
+`;
+
+exports[`<Flex /> render 1`] = `
+<div
+  className="ek-flex"
+/>
+`;
+
+exports[`<Flex /> render 2`] = `
+<div
+  className="ek-flex__item"
+/>
+`;

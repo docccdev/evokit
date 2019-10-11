@@ -35,6 +35,18 @@
         text-decoration: underline
 
 /**
+ * Display:
+ *
+ *  - link_display_inline
+ *  - link_display_none
+ *
+ **/
+
+@each $value in (inline, none)
+    @mixin media .link_display_$(value)
+        display: $value
+
+/**
  * Font size:
  *
  *  - link_size_*

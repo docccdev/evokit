@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Picture picture-round="..." /> DEPRECATED props props picture-round-bottom 1`] = `
+<picture
+  className="ek-picture ek-picture_round-bottom_full"
+/>
+`;
+
+exports[`<Picture picture-round="..." /> DEPRECATED props props picture-round-left 1`] = `
+<picture
+  className="ek-picture ek-picture_round-left_full"
+/>
+`;
+
+exports[`<Picture picture-round="..." /> DEPRECATED props props picture-round-right 1`] = `
+<picture
+  className="ek-picture ek-picture_round-right_full"
+/>
+`;
+
+exports[`<Picture picture-round="..." /> DEPRECATED props props picture-round-top 1`] = `
+<picture
+  className="ek-picture ek-picture_round-top_full"
+/>
+`;
+
+exports[`<Picture picture-round="..." /> extend 2 props picture-round 1`] = `
+<picture
+  className="ek-picture ek-picture_round-top-left_xs ek-picture_round-bottom-right_xs ek-picture_round-top-right_xl ek-picture_round-bottom-left_xl"
+/>
+`;
+
+exports[`<Picture picture-round="..." /> extend 3 props picture-round 1`] = `
+<picture
+  className="ek-picture ek-picture_round-top-left_xs ek-picture_round-top-right_xl ek-picture_round-bottom-left_xl ek-picture_round-bottom-right_m"
+/>
+`;
+
+exports[`<Picture picture-round="..." /> extend 4 props picture-round 1`] = `
+<picture
+  className="ek-picture ek-picture_round-top-left_s ek-picture_round-top-right_m ek-picture_round-bottom-right_l ek-picture_round-bottom-left_xl"
+/>
+`;
+
+exports[`<Picture picture-round="..." /> props picture-round 1`] = `
+<picture
+  className="ek-picture ek-picture_round_full"
+/>
+`;
+
+exports[`<Picture picture-round="..." /> props picture-round-bottom-left 1`] = `
+<picture
+  className="ek-picture ek-picture_round-bottom-left_full"
+/>
+`;
+
+exports[`<Picture picture-round="..." /> props picture-round-bottom-right 1`] = `
+<picture
+  className="ek-picture ek-picture_round-bottom-right_full"
+/>
+`;
+
+exports[`<Picture picture-round="..." /> props picture-round-top-left 1`] = `
+<picture
+  className="ek-picture ek-picture_round-top-left_full"
+/>
+`;
+
+exports[`<Picture picture-round="..." /> props picture-round-top-right 1`] = `
+<picture
+  className="ek-picture ek-picture_round-top-right_full"
+/>
+`;

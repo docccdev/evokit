@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Text text-color="..." /> props text-color 1`] = `
+<span
+  className="ek-text ek-text_color_value"
+/>
+`;

@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Link link-weight="..." /> props link-weight 1`] = `
+<a
+  className="ek-link ek-link_weight_value"
+/>
+`;

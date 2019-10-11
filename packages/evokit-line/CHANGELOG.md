@@ -1,4 +1,5 @@
 [README]: /packages/evokit-line/README.md
+[evokit]: /packages/evokit/README.md
 
 # EvoKit - Line
 
@@ -8,6 +9,10 @@
 ---
 
 ## CHANGELOG
+
+### 3.1.0 *(xx.09.2019)*
+
+- **Updated** peer dependencies [`evokit`][evokit] >= **v3.1.0**
 
 ### 3.0.1
 

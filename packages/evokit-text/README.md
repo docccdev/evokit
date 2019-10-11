@@ -9,16 +9,17 @@
 [quik-start]: /docs/getting-started/quick-start.md
 [use-props]: /docs/getting-started/props.md
 
-[text-tag]: #text-tag
-[text-color]: #text-color
-[text-size]: #text-size
-[text-weight]: #text-weight
+[text-display]: #text-display
 [text-align]: #text-align
-[text-valign]: #text-valign
-[text-wrap]: #text-wrap
-[text-style]: #text-style
-[text-transform]: #text-transform
+[text-color]: #text-color
 [text-lheight]: #text-lheight
+[text-size]: #text-size
+[text-style]: #text-style
+[text-tag]: #text-tag
+[text-transform]: #text-transform
+[text-valign]: #text-valign
+[text-weight]: #text-weight
+[text-wrap]: #text-wrap
 
 # EvoKit - Text
 
@@ -42,12 +43,15 @@ npm install evokit-text --save
 > More about [usage][quik-start]
 
 ```jsx
+import React from 'react';
 import { Text } from 'evokit-text';
 import 'evokit-text/style.css';
 
-<Text>
-    ...
-</Text>
+const App = () => (
+    <Text text-align='center'>
+        ...
+    </Text>
+);
 ```
 
 ## Props
@@ -58,21 +62,17 @@ import 'evokit-text/style.css';
 
 | Prop name        | Default value | Possible value   | Description |
 |------------------|---------------|------------------|-------------|
-| [text-tag]       | `span`        | [html tags][html-all-tags] | HTML tag    |
-| [text-size]      | `default`     | `default` `small` `big` `h1` `h2` `h3` `h4` `h5` `h6` | Font size |
-| [text-weight]    | `default`     | `default` `thin` `light` `medium` `bold` `black` | Font weight |
 | [text-align]     | `left`        | `left` `center` `right` `justify` | Horizontal alignment |
-| [text-valign]    | `null`        | `baseline` `bottom` `middle` `sub` `super` `text-bottom` `text-top` `top` | Vertical alignment |
-| [text-wrap]      | `null`        | `nowrap` `break` `ellipsis` `three-line` `two-line` | Transferring and cutting text |
-| [text-style]     | `null`        | `italic` `strike` `underline` `overline` | Text style |
-| [text-transform] | `none`        | `none` `capitalize` `lowercase` `uppercase` | Text case conversion |
+| [text-display]   | `inline`      | `inline` `none`  | Display type |
+| [text-color]     | `null`        | [Create theme][create_theme] | Text color  |
 | [text-lheight]   | `default`     | `default` `medium` `large` | Line spacing |
-
-> Use [theming][create_theme] for creating custom `{THEME_NAME}`.
-
-| Prop name        | Default value | Possible value | Description  |
-|------------------|---------------|----------------|--------------|
-| [text-color]     | `null`        | `{THEME_NAME}` | Text color  |
+| [text-size]      | `default`     | `default` `small` `big` `h1` `h2` `h3` `h4` `h5` `h6` | Font size |
+| [text-style]     | `null`        | `italic` `strike` `underline` `overline` | Text style |
+| [text-tag]       | `span`        | [HTML tags][html-all-tags] | HTML tag    |
+| [text-transform] | `none`        | `none` `capitalize` `lowercase` `uppercase` | Text case conversion |
+| [text-valign]    | `null`        | `baseline` `bottom` `middle` `sub` `super` `text-bottom` `text-top` `top` | Vertical alignment |
+| [text-weight]    | `default`     | `default` `thin` `light` `medium` `bold` `black` | Font weight |
+| [text-wrap]      | `null`        | `nowrap` `break` `ellipsis` `three-line` `two-line` | Transferring and cutting text |
 
 ## Customize
 
@@ -117,6 +117,17 @@ import 'evokit-text/style.css';
 
 ```jsx
 <Text text-tag='span'>
+    ...
+</Text>
+```
+
+## `text-display`
+
+- `inline` - displayed as inline
+- `none` - remove from a document
+
+```jsx
+<Text text-display='none'>
     ...
 </Text>
 ```

@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Grid grid-valign="..." /> props grid-valign 1`] = `
+<div
+  className="ek-grid ek-grid_valign_value"
+/>
+`;

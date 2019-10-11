@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Flex flex-items="..." /> props flex-items 1`] = `
+<div
+  className="ek-flex ek-flex_items_value"
+/>
+`;

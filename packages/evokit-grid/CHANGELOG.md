@@ -1,4 +1,9 @@
 [README]: /packages/evokit-grid/README.md
+[evokit]: /packages/evokit/README.md
+
+[grid-indent]: /packages/evokit-grid/?id=grid-indent
+[grid-display]: /packages/evokit-grid/?id=grid-display
+[grid-item-display]: /packages/evokit-grid/?id=grid-item-display
 
 # EvoKit - Grid
 
@@ -8,6 +13,17 @@
 ---
 
 ## CHANGELOG
+
+### 3.1.0 *(xx.09.2019)*
+
+- **Updated** peer dependencies [`evokit`][evokit] >= **v3.1.0**
+- **Added** new props:
+    - [`grid-display`][grid-display]
+    - [`grid-item-display`][grid-item-display]
+- **Added** new advanced indent props:
+    - `grid-indent-x`
+    - `grid-indent-y`
+- **Added** multi values for [`grid-indent`][grid-indent]
 
 ### 3.0.1 *(19.06.2019)*
 

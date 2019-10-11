@@ -9,13 +9,15 @@
 [quik-start]: /docs/getting-started/quick-start.md
 [use-props]: /docs/getting-started/props.md
 
-[body-tag]: #body-tag
-[body-section-tag]: #body-section-tag
-
-[body-size]: #body-size
-[body-indent]: #body-indent
 [body-background]: #body-background
 [body-color]: #body-color
+[body-display]: #body-display
+[body-indent]: #body-indent
+[body-overflow]: #body-overflow
+[body-section-display]: #body-section-display
+[body-section-tag]: #body-section-tag
+[body-size]: #body-size
+[body-tag]: #body-tag
 
 # EvoKit - Body
 
@@ -36,24 +38,27 @@ npm install evokit-body --save
 
 ## Usage
 
-> More about [usage][quik-start]
+> More about [usage][quik-start]. You can also use `<Body.Section>` instead of `<BodySection>`
 
 ```jsx
+import React from 'react';
 import { Body, BodySection } from 'evokit-body';
 import 'evokit-body/style.css';
 
-<Body>
-    <BodySection>
-        header
-    </BodySection>
-    <BodySection>
-        content
-    </BodySection>
-    <BodySection>
-        footer
-    </BodySection>
-</Body>
-```
+const App = () => (
+    <Body body-indent='xl'>
+        <BodySection>
+            header
+        </BodySection>
+        <BodySection>
+            content
+        </BodySection>
+        <BodySection>
+            footer
+        </BodySection>
+    </Body>
+);
+``` 
 
 ## Props
 
@@ -61,24 +66,22 @@ import 'evokit-body/style.css';
 
 ### `<Body />`
 
-| Prop name         | Default value | Possible value | Description    |
-|-------------------|---------------|-------------------|-------------|
-| [body-tag]        | `body`        | [html tags][html-all-tags] | HTML tag    |
-| [body-size]       | `null`        | `xl` `xxl` `xxxl` | Max width for children `<BodySection />` |
-| [body-indent]     | `none`        | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Padding on the side left and right for children `<BodySection />` |
-
-> Use [theming][create_theme] for creating custom `{THEME_NAME}`.
-
-| Prop name         | Default value | Possible value | Description |
-|-------------------|--------|----------------|--------------------|
-| [body-background] | `null` | `{THEME_NAME}` | Background color   |
-| [body-color]      | `null` | `{THEME_NAME}` | Text color         |
+| Prop name           | Default value | Possible value | Description    |
+|---------------------|---------------|-------------------|-------------|
+| [body-background]   | `null`        | [Create theme][create_theme]    | Background color   |
+| [body-color]        | `null`        | [Create theme][create_theme]    | Text color         |
+| [body-display]      | `block`       | `block` `none`                  | Display type   |
+| [body-indent]       | `none`        | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Padding on the side left and right for children `<BodySection />` |
+| [body-overflow] `*` | `visible`     | `auto` `hidden` `scroll` `visible` | Overflow type |
+| [body-size]         | `null`        | `xl` `xxl` `xxxl` | Max width for children `<BodySection />` |
+| [body-tag]          | `body`        | [HTML tags][html-all-tags] | HTML tag    |
 
 ### `<BodySection />`
 
-| Prop name          | Default value | Possible value             | Description |
-|--------------------|---------------|----------------------------|-------------|
-| [body-section-tag] | `div`         | [html tags][html-all-tags] | HTML tag    |
+| Prop name              | Default value | Possible value             | Description |
+|------------------------|---------------|----------------------------|-------------|
+| [body-section-display] | `block`       | `block` `none`             | Display type   |
+| [body-section-tag]     | `div`         | [HTML tags][html-all-tags] | HTML tag    |
 
 
 ## Customize
@@ -131,15 +134,14 @@ Default value `body`
 </Body>
 ```
 
-## `body-section-tag`
+## `body-display`
 
-Default value `div`
+- `block` - shown as blocky
+- `none` - remove from a document
 
 ```jsx
-<Body>
-    <BodySection body-section-tag='div'>
-        ...
-    </BodySection>
+<Body body-display='none'>
+    ...
 </Body>
 ```
 
@@ -153,6 +155,34 @@ Default value `div`
 <Body body-size='xl'>
     ...
 </Body>
+```
+
+## `body-overflow`
+
+The property allows you to set the value for all axes at the same time or to determine it only for the specified axis
+
+**Advanced props**
+
+- `body-overflow-x`
+- `body-overflow-y`
+
+**Multi values** _(set value separated by a space)_
+
+- `body-overflow="{1} {2}"`
+
+> {1} - overflow-x, {2} - overflow-y
+
+**List of values**
+
+- `auto` - Scroll bars are added only when needed
+- `hidden` - Only the area inside the element is displayed, the rest will be hidden
+- `scroll` - Scroll bars are always added
+- `visible` - The entire content of the element is displayed, even beyond the specified height and width
+
+```jsx
+<Body body-overflow='scroll' />
+<Body body-overflow='visible scroll' />
+<Body body-overflow-x='visible' box-overflow-y='scroll' />
 ```
 
 ## `body-indent`
@@ -189,5 +219,30 @@ Default value `div`
 ```jsx
 <Body body-color={THEME_NAME}>
     ...
+</Body>
+```
+
+## `body-section-tag`
+
+Default value `div`
+
+```jsx
+<Body>
+    <BodySection body-section-tag='div'>
+        ...
+    </BodySection>
+</Body>
+```
+
+## `body-section-display`
+
+- `block` - shown as blocky
+- `none` - remove from a document
+
+```jsx
+<Body>
+    <BodySection body-section-display='none'>
+        ...
+    </BodySection>
 </Body>
 ```

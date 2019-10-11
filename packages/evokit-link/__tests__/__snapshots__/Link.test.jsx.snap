@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Link /> props className 1`] = `
+<a
+  className="ek-link ololo"
+/>
+`;
+
+exports[`<Link /> props link-tag 1`] = `
+<span
+  className="ek-link"
+/>
+`;
+
+exports[`<Link /> render 1`] = `
+<a
+  className="ek-link"
+/>
+`;

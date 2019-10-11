@@ -1,4 +1,8 @@
 [README]: /packages/evokit-text/README.md
+[evokit]: /packages/evokit/README.md
+
+[text-display]: /packages/evokit-text/?id=text-display
+
 
 # EvoKit - Text
 
@@ -8,6 +12,11 @@
 ---
 
 ## CHANGELOG
+
+### 3.1.0 *(xx.09.2019)*
+
+- **Updated** peer dependencies [`evokit`][evokit] >= **v3.1.0**
+- **Added** new prop [`text-display`][text-display]
 
 ### 3.0.0
 

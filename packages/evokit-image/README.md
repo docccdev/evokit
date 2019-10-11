@@ -9,14 +9,15 @@
 [quik-start]: /docs/getting-started/quick-start.md
 [use-props]: /docs/getting-started/props.md
 
-[image-tag]: #image-tag
 [image-align]: #image-align
-[image-valign]: #image-valign
-[image-mirror]: #image-mirror
-[image-fit]: #image-fit
-[image-width]: #image-width
-[image-round]: #image-round
 [image-border]: #image-border
+[image-display]: #image-display
+[image-fit]: #image-fit
+[image-mirror]: #image-mirror
+[image-round]: #image-round
+[image-tag]: #image-tag
+[image-valign]: #image-valign
+[image-width]: #image-width
 
 # EvoKit - Image
 
@@ -40,11 +41,13 @@ npm install evokit-image --save
 > More about [usage][quik-start]
 
 ```jsx
+import React from 'react';
 import { Image } from 'evokit-image';
 import 'evokit-image/style.css';
 
-<Image src='' alt='' />
-
+const App = () => (
+    <Image image-align='center' src='...' alt='...' />
+);
 ```
 
 ## Props
@@ -53,21 +56,19 @@ import 'evokit-image/style.css';
 
 ### `<Image />`
 
-| Prop name      | Default value | Possible value          | Description      |
-|----------------|---------------|-------------------------|------------------|
-| [image-tag]    | `img`         | [html tags][html-all-tags] | HTML tag    |
-| [image-align]  | `null`        | `left` `center` `right` | Horizontal alignment |
-| [image-valign] | `null`        | `baseline` `bottom` `middle` `sub` `super` `text-bottom` `text-top` `top` | Vertical alignment |
-| [image-mirror] | `null`        | `x` `y` `xy` | Mirroring |
-| [image-fit]    | `null`        | `none` `fill` `contain` `cover` `scale-down` | Filling the container relative to its height and width |
-| [image-width]  | `auto`        | `auto` `1-1` `*-2` `*-3` `*-4` `*-5` `*-6` `*-7` `*-8` `*-9` `*-10` | Set the width |
-| [image-round]  | `none`        | `none` `full` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Corner rounding |
+| Prop name          | Default value | Possible value          | Description      |
+|--------------------|---------------|-------------------------|------------------|
+| [image-align]      | `null`        | `left` `center` `right` | Horizontal alignment |
+| [image-border]     | `null`        | [Create theme][create_theme] | Border color |
+| [image-display]    | `inline`      | `inline` `none`         | Display type |
+| [image-fit]        | `null`        | `none` `fill` `contain` `cover` `scale-down` | Filling the container relative to its height and width |
+| [image-mirror]     | `null`        | `x` `y` `xy` | Mirroring |
+| [image-round] `*`  | `none`        | `none` `full` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Corner rounding |
+| [image-tag]        | `img`         | [HTML tags][html-all-tags] | HTML tag    |
+| [image-valign]     | `null`        | `baseline` `bottom` `middle` `sub` `super` `text-bottom` `text-top` `top` | Vertical alignment |
+| [image-width]      | `auto`        | `auto` `1-1` `*-2` `*-3` `*-4` `*-5` `*-6` `*-7` `*-8` `*-9` `*-10` | Set the width |
 
-> Use [theming][create_theme] for creating custom `{THEME_NAME}`.
-
-| Prop name        | Default value | Possible value | Description  |
-|------------------|---------------|----------------|--------------|
-| [image-border]   | `null`        | `{THEME_NAME}` | Border color |
+> `*` — prop has advanced params
 
 ## Customize
 
@@ -104,6 +105,15 @@ import 'evokit-image/style.css';
 
 ```jsx
 <Image image-tag='img' src='' alt='' />
+```
+
+## `image-display`
+
+- `inline` - displayed as inline
+- `none` - remove from a document
+
+```jsx
+<Image image-display='none' src='' alt='' />
 ```
 
 ## `image-align`
@@ -177,23 +187,48 @@ import 'evokit-image/style.css';
 
 ## `image-round`
 
-> Has advanced props:
-> - `image-round` - `top`, `right`, `bottom` or `left` for example **`image-round-right`**
-> - `image-round-top` - `left` or `right` for example **`image-round-top-right`**
-> - `image-round-bottom` - `left` or `right` for example **`image-round-bottom-right`**
+The property allows you to set the fillet value for all corners of the element at the same time or to determine it only for the specified angle.
 
-- `none` - value: `0px`
-- `full` - value: `50%`
-- `xxs` - css variable `--ek-image-round-xxs`, default value: `2px`
-- `xs` - css variable `--ek-image-round-xs`, default value: `4px`
-- `s` - css variable `--ek-image-round-s`, default value: `6px`
-- `m` - css variable `--ek-image-round-m`, default value: `8px`
-- `l` - css variable `--ek-image-round-l`, default value: `10px`
-- `xl` - css variable `--ek-image-round-xl`, default value: `12px`
-- `xxl` - css variable `--ek-image-round-xxl`, default value: `14px`
+!> **DEPRECATED** props `image-round-top`, `image-round-right`, `image-round-bottom` and `image-round-left`, please use multi values
+
+**Advanced props**
+
+1. `image-round-top-left`
+2. `image-round-top-right`
+3. `image-round-bottom-right`
+4. `image-round-bottom-left`
+
+**Multi values** _(set value separated by a space)_
+
+- `image-round="{1,3} {2,4}"`
+- `image-round="{1} {2,4} {3}"`
+- `image-round="{1} {2} {3} {4}"`
+
+**List of values**
+
+| Value  | CSS var               | CSS value |
+|--------|-----------------------|-----------|
+| `none` | ---                   | `0px`     |
+| `full` | ---                   | `50%`     |
+| `xxs`  | `--ek-image-round-xxs`  | `2px`     |
+| `xs`   | `--ek-image-round-xs`   | `4px`    |
+| `s`    | `--ek-image-round-s`    | `6px`    |
+| `m`    | `--ek-image-round-m`    | `8px`    |
+| `l`    | `--ek-image-round-l`    | `10px`    |
+| `xl`   | `--ek-image-round-xl`   | `12px`    |
+| `xxl`  | `--ek-image-round-xxl`  | `14px`    |
 
 ```jsx
-<Image image-round='full' src='' alt='' />
+<Image image-round='s' />
+<Image image-round='s m' />
+<Image image-round='s m l' />
+<Image image-round='s m l xl' />
+<Image
+    image-round-top-left='s'
+    image-round-top-right='m'
+    image-round-bottom-right='l'
+    image-round-bottom-left='xl'
+/>
 ```
 
 ## `image-border`

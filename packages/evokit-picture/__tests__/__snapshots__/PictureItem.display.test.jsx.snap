@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PictureItem picture-item-display="..." /> props picture-item-display 1`] = `
+<img
+  className="ek-picture__item ek-picture__item_display_value"
+/>
+`;

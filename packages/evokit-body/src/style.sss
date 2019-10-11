@@ -28,6 +28,7 @@
     --ek-body-max-width-xxxl: 1840px
 
 .body
+    display: block
     font-family: var(--ek-body-font-family)
     font-size: var(--ek-body-font-size)
     line-height: var(--ek-body-line-height)
@@ -44,6 +45,30 @@
     margin-right: auto
     min-width: var(--ek-body-min-width)
     max-width: var(--ek-body-max-width)
+
+/**
+ * Body display:
+ *
+ *  - body_display_block
+ *  - body_display_none
+ *
+ **/
+
+@each $value in (block, none)
+    @mixin media .body_display_$(value)
+        display: $value
+
+/**
+ * Section display:
+ *
+ *  - body__section_display_block
+ *  - body__section_display_none
+ *
+ **/
+
+@each $value in (block, none)
+    @mixin media .body__section_display_$(value)
+        display: $value
 
 /**
  * body-size:
@@ -73,3 +98,22 @@
             @else
                 padding-left: var(--ek-body-indent-$(value))
                 padding-right: var(--ek-body-indent-$(value))
+
+/**
+ * Overflow:
+ *
+ *  - body_overflow_*
+ *  - body_overflow-x_*
+ *  - body_overflow-y_*
+ *
+ **/
+
+@each $value in (auto, hidden, scroll, visible)
+    @mixin media .body_overflow_$(value)
+        overflow: $value
+
+    @mixin media .body_overflow-x_$(value)
+        overflow-x: $value
+
+    @mixin media .body_overflow-y_$(value)
+        overflow-y: $value

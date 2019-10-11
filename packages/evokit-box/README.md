@@ -9,21 +9,22 @@
 [quik-start]: /docs/getting-started/quick-start.md
 [use-props]: /docs/getting-started/props.md
 
-[box-tag]: #box-tag
-
 [box-align]: #box-align
-[box-margin]: #box-margin
-[box-padding]: #box-padding
-[box-round]: #box-round
-[box-width]: #box-width
-[box-height]: #box-height
-[box-display]: #box-display
-[box-position]: #box-position
-[box-place]: #box-place
-[box-overflow]: #box-overflow
-
 [box-background]: #box-background
 [box-border]: #box-border
+[box-border-color]: #box-border-color
+[box-border-width]: #box-border-width
+[box-border-style]: #box-border-style
+[box-display]: #box-display
+[box-height]: #box-height
+[box-margin]: #box-margin
+[box-overflow]: #box-overflow
+[box-padding]: #box-padding
+[box-place]: #box-place
+[box-position]: #box-position
+[box-round]: #box-round
+[box-tag]: #box-tag
+[box-width]: #box-width
 
 # EvoKit - Box
 
@@ -47,12 +48,15 @@ npm install evokit-box --save
 > More about [usage][quik-start]
 
 ```jsx
+import React from 'react';
 import { Box } from 'evokit-box';
 import 'evokit-box/style.css';
 
-<Box>
-    ...
-</Box>
+const App = () => (
+    <Box box-margin='xs xl'>
+        ...
+    </Box>
+);
 ```
 
 ## Props
@@ -61,26 +65,26 @@ import 'evokit-box/style.css';
 
 ### `<Box />`
 
-| Prop name        | Default value | Possible value | Description |
-|------------------|---------------|----------------|-------------|
-| [box-tag]        | `div`         | [html tags][html-all-tags] | HTML tag    |
-| [box-display]    | `block`       | `block` `inline-block` `inline` `none` | Display type |
-| [box-align]      | `none`        | `none` `left` `center` `right` | Horizontal alignment |
-| [box-margin]     | `none`        | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` `auto` | Indent around block |
-| [box-padding]    | `none`        | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Indent around an block content |
-| [box-round]      | `none`        | `none` `full` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Corner rounding |
-| [box-width]      | `auto`        | `auto` `1-1` `*-2` `*-3` `*-4` `*-5` `*-6` `*-7` `*-8` `*-9` `*-10` | Set the width |
-| [box-height]     | `auto`        | `auto` `1-1` | Set the height |
-| [box-position]   | `static`      | `static` `relative` `absolute` `fixed` | Positioning method |
-| [box-place]      | `null`        | `top` `top-left` `top-right` `center` `center-left` `center-right` `bottom` `bottom-left` `bottom-right` | Position place |
-| [box-overflow]   | `visible`      | `auto` `hidden` `scroll` `visible` | Display overflow block content |
+| Prop name              | Default value | Possible value | Description |
+|------------------------|---------------|----------------|-------------|
+| [box-align]            | `none`    | `none` `left` `center` `right` | Horizontal alignment |
+| [box-background]       | `null`    | [Create theme][create_theme]  | Background color |
+| [box-border] `*`       | `null`    | [Create theme][create_theme]  | Border color, width and style     |
+| [box-border-color] `*` | `null`    | [Create theme][create_theme]  | Border color     |
+| [box-border-width] `*` | `none`    | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl`  | Border width     |
+| [box-border-style] `*` | `solid`   | `solid` `dotted` `dashed`  | Border style     |
+| [box-display]          | `block`   | `block` `inline-block` `inline` `none` | Display type |
+| [box-height]           | `auto`    | `auto` `1-1` | Set the height |
+| [box-margin] `*`       | `none`    | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` `auto` | Indent around block |
+| [box-overflow] `*`     | `visible` | `auto` `hidden` `scroll` `visible` | Display overflow block content |
+| [box-padding] `*`      | `none`    | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Indent around an block content |
+| [box-place]            | `null`    | `top` `top-left` `top-right` `center` `center-left` `center-right` `bottom` `bottom-left` `bottom-right` | Position place |
+| [box-position]         | `static`  | `static` `relative` `absolute` `fixed` | Positioning method |
+| [box-round] `*`        | `none`    | `none` `full` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Corner rounding |
+| [box-tag]              | `div`     | [HTML tags][html-all-tags] | HTML tag    |
+| [box-width]            | `auto`    | `auto` `1-1` `*-2` `*-3` `*-4` `*-5` `*-6` `*-7` `*-8` `*-9` `*-10` | Set the width |
 
-> Use [theming][create_theme] for creating custom `{THEME_NAME}`.
-
-| Prop name        | Default value | Possible value | Description       |
-|------------------|---------------|-----------------|------------------|
-| [box-border]     | `null`        | `{THEME_NAME}`  | Border color     |
-| [box-background] | `null`        | `{THEME_NAME}`  | Background color |
+> `*` — prop has advanced params
 
 ## Customize
 
@@ -110,6 +114,14 @@ import 'evokit-box/style.css';
     --ek-box-round-l: 10px;
     --ek-box-round-xl: 12px;
     --ek-box-round-xxl: 14px;
+    /* prop 'box-border-width' */
+    --ek-box-border-width-xxs: 1px;
+    --ek-box-border-width-xs: 2px;
+    --ek-box-border-width-s: 3px;
+    --ek-box-border-width-m: 4px;
+    --ek-box-border-width-l: 5px;
+    --ek-box-border-width-xl: 6px;
+    --ek-box-border-width-xxl: 7px;
 }
 ```
 
@@ -130,6 +142,11 @@ Default value `div`
 ```
 
 ## `box-display`
+
+- `block` - shown as blocky
+- `block-inline` - block element that is wrapped around by other elements
+- `inline` - displayed as inline
+- `none` - remove from a document
 
 ```jsx
 <Box box-display='none'>
@@ -152,68 +169,139 @@ Default value `div`
 
 ## `box-margin`
 
-> Has advanced props:
-> - `box-margin` - `top`, `right`, `bottom` or `left` for example **`box-margin-right`**
-> - `box-margin` - `lr` or `tb` for example **`box-margin-tb`**
+The property allows you to set the indentation value for all sides of an element at once or to determine it only for specified sides.
 
-- `none` - value: `0px`
-- `auto` - value: `auto`
-- `xxs` - css variable `--ek-box-indent-xxs`, default value: `5px`
-- `xs` - css variable `--ek-box-indent-xs`, default value: `10px`
-- `s` - css variable `--ek-box-indent-s`, default value: `15px`
-- `m` - css variable `--ek-box-indent-m`, default value: `20px`
-- `l` - css variable `--ek-box-indent-l`, default value: `25px`
-- `xl` - css variable `--ek-box-indent-xl`, default value: `30px`
-- `xxl` - css variable `--ek-box-indent-xxl`, default value: `35px`
+!> **DEPRECATED** props `box-margin-lr` and `box-margin-tb`, please use multi values
+
+**Advanced props**
+
+- `box-margin-top` <sup>{1}</sup>
+- `box-margin-right` <sup>{2}</sup>
+- `box-margin-bottom` <sup>{3}</sup>
+- `box-margin-left` <sup>{4}</sup>
+
+**Multi values** _(set value separated by a space)_
+
+- `box-margin="{1,3} {2,4}"`
+- `box-margin="{1} {2,4} {3}"`
+- `box-margin="{1} {2} {3} {4}"`
+
+**List of values**
+
+| Value  | CSS var               | CSS value |
+|--------|-----------------------|-----------|
+| `none` | ---                   | `0px`     |
+| `auto` | ---                   | `auto`    |
+| `xxs`  | `--ek-box-indent-xxs` | `5px`     |
+| `xs`   | `--ek-box-indent-xs`  | `10px`    |
+| `s`    | `--ek-box-indent-s`   | `15px`    |
+| `m`    | `--ek-box-indent-m`   | `20px`    |
+| `l`    | `--ek-box-indent-l`   | `25px`    |
+| `xl`   | `--ek-box-indent-xl`  | `30px`    |
+| `xxl`  | `--ek-box-indent-xxl` | `35px`    |
 
 ```jsx
-<Box box-margin='xs'>
-    ...
-</Box>
+<Box box-margin='s' />
+<Box box-margin='s m' />
+<Box box-margin='s m l' />
+<Box box-margin='s m l xl' />
+<Box
+    box-margin-top='s'
+    box-margin-right='m'
+    box-margin-bottom='l'
+    box-margin-left='xl'
+/>
 ```
 
 ## `box-padding`
 
-> Has advanced props:
-> - `box-padding` - `top`, `right`, `bottom` or `left` for example **`box-padding-right`**
-> - `box-padding` - `lr` or `tb` for example **`box-padding-tb`**
+The property allows you to set the indentation value for all sides of an element at once or to determine it only for specified sides.
 
-- `none` - value: `0px`
-- `xxs` - css variable `--ek-box-indent-xxs`, default value: `5px`
-- `xs` - css variable `--ek-box-indent-xs`, default value: `10px`
-- `s` - css variable `--ek-box-indent-s`, default value: `15px`
-- `m` - css variable `--ek-box-indent-m`, default value: `20px`
-- `l` - css variable `--ek-box-indent-l`, default value: `25px`
-- `xl` - css variable `--ek-box-indent-xl`, default value: `30px`
-- `xxl` - css variable `--ek-box-indent-xxl`, default value: `35px`
+!> **DEPRECATED** props `box-padding-lr` and `box-padding-tb`, please use multi values
+
+**Advanced props**
+
+- `box-padding-top` <sup>{1}</sup>
+- `box-padding-right` <sup>{2}</sup>
+- `box-padding-bottom` <sup>{3}</sup>
+- `box-padding-left` <sup>{4}</sup>
+
+**Multi values** _(set value separated by a space)_
+
+- `box-padding="{1,3} {2,4}"`
+- `box-padding="{1} {2,4} {3}"`
+- `box-padding="{1} {2} {3} {4}"`
+
+**List of values**
+
+| Value  | CSS var               | CSS value |
+|--------|-----------------------|-----------|
+| `none` | ---                   | `0px`     |
+| `xxs`  | `--ek-box-indent-xxs` | `5px`     |
+| `xs`   | `--ek-box-indent-xs`  | `10px`    |
+| `s`    | `--ek-box-indent-s`   | `15px`    |
+| `m`    | `--ek-box-indent-m`   | `20px`    |
+| `l`    | `--ek-box-indent-l`   | `25px`    |
+| `xl`   | `--ek-box-indent-xl`  | `30px`    |
+| `xxl`  | `--ek-box-indent-xxl` | `35px`    |
 
 ```jsx
-<Box box-padding='xl'>
-    ...
-</Box>
+<Box box-padding='s' />
+<Box box-padding='s m' />
+<Box box-padding='s m l' />
+<Box box-padding='s m l xl' />
+<Box
+    box-padding-top='s'
+    box-padding-right='m'
+    box-padding-bottom='l'
+    box-padding-left='xl'
+/>
 ```
 
 ## `box-round`
 
-> Has advanced props:
-> - `box-round` - `top`, `right`, `bottom` or `left` for example **`box-round-right`**
-> - `box-round-top` - `left` or `right` for example **`box-round-top-right`**
-> - `box-round-bottom` - `left` or `right` for example **`box-round-bottom-right`**
+The property allows you to set the fillet value for all corners of the element at the same time or to determine it only for the specified angle.
 
-- `none` - value: `0px`
-- `full` - value: `50%`
-- `xxs` - css variable `--ek-box-round-xxs`, default value: `2px`
-- `xs` - css variable `--ek-box-round-xs`, default value: `4px`
-- `s` - css variable `--ek-box-round-s`, default value: `6px`
-- `m` - css variable `--ek-box-round-m`, default value: `8px`
-- `l` - css variable `--ek-box-round-l`, default value: `10px`
-- `xl` - css variable `--ek-box-round-xl`, default value: `12px`
-- `xxl` - css variable `--ek-box-round-xxl`, default value: `14px`
+!> **DEPRECATED** props `box-round-top`, `box-round-right`, `box-round-bottom` and `box-round-left`, please use multi values
+
+**Advanced props**
+
+- `box-round-top-left` <sup>{1}</sup>
+- `box-round-top-right` <sup>{2}</sup>
+- `box-round-bottom-right` <sup>{3}</sup>
+- `box-round-bottom-left` <sup>{4}</sup>
+
+**Multi values** _(set value separated by a space)_
+
+- `box-round="{1,3} {2,4}"`
+- `box-round="{1} {2,4} {3}"`
+- `box-round="{1} {2} {3} {4}"`
+
+**List of values**
+
+| Value  | CSS var               | CSS value |
+|--------|-----------------------|-----------|
+| `none` | ---                   | `0px`     |
+| `full` | ---                   | `50%`     |
+| `xxs`  | `--ek-box-round-xxs`  | `2px`     |
+| `xs`   | `--ek-box-round-xs`   | `4px`    |
+| `s`    | `--ek-box-round-s`    | `6px`    |
+| `m`    | `--ek-box-round-m`    | `8px`    |
+| `l`    | `--ek-box-round-l`    | `10px`    |
+| `xl`   | `--ek-box-round-xl`   | `12px`    |
+| `xxl`  | `--ek-box-round-xxl`  | `14px`    |
 
 ```jsx
-<Box box-round='full'>
-    ...
-</Box>
+<Box box-round='s' />
+<Box box-round='s m' />
+<Box box-round='s m l' />
+<Box box-round='s m l xl' />
+<Box
+    box-round-top-left='s'
+    box-round-top-right='m'
+    box-round-bottom-right='l'
+    box-round-bottom-left='xl'
+/>
 ```
 
 ## `box-width`
@@ -271,8 +359,18 @@ Default value `div`
 
 ## `box-overflow`
 
-> Has advanced props:
-> - `box-overflow-x` and `box-overflow-y`
+The property allows you to set the value for all axes at the same time or to determine it only for the specified axis
+
+**Advanced props**
+
+- `box-overflow-x` <sup>{1}</sup>
+- `box-overflow-y` <sup>{2}</sup>
+
+**Multi values** _(set value separated by a space)_
+
+- `box-overflow="{1} {2}"`
+
+**List of values**
 
 - `auto` - Scroll bars are added only when needed
 - `hidden` - Only the area inside the element is displayed, the rest will be hidden
@@ -280,31 +378,158 @@ Default value `div`
 - `visible` - The entire content of the element is displayed, even beyond the specified height and width
 
 ```jsx
-<Box box-overflow='scroll'>
-    ...
-</Box>
+<Box box-overflow='scroll' />
+<Box box-overflow='visible scroll' />
+<Box box-overflow-x='visible' box-overflow-y='scroll' />
 ```
 
 ## `box-border`
 
-> Set the `THEME_NAME` depending on the [theming][create_theme]
+!> **DEPRECATED** props `box-border-lr` and `box-border-tb`, please use the separately `box-border-left` and `box-border-right` or `box-border-top` and `box-border-bottom`
 
-> Has advanced props:
-> - `box-border` - `top`, `right`, `bottom` or `left` for example **`box-border-right`**
-> - `box-border` - `tb` or `lr` for example **`box-border-tb`**
+**Advanced props**
+
+- `box-border-top`
+- `box-border-right`
+- `box-border-bottom`
+- `box-border-left`
+
+**Multi values** _(set value separated by a space)_
+
+- `box-border="{1}"`
+- `box-border="{1} {2}"`
+- `box-border="{1} {2} {3}"`
+
+> {1} - [color][box-border-color], {2} - [width][box-border-width], {3} - [style][box-border-style]
 
 ```jsx
-<Box box-border={THEME_NAME}>
-    ...
-</Box>
+<Box box-border="{THEME_NAME}" />
+<Box box-border="{THEME_NAME} xs" />
+<Box box-border="{THEME_NAME} xs dotted" />
+
+<Box box-border-top="{THEME_NAME}" />
+<Box box-border-top="{THEME_NAME} xs" />
+<Box box-border-top="{THEME_NAME} xs dotted" />
+```
+
+> Set the `THEME_NAME` depending on the [theming][create_theme]
+
+
+## `box-border-width`
+
+The property allows you to set the border width for all sides of an element at once or to determine it only for specified sides.
+
+**Advanced props**
+
+- `box-border-width-top` <sup>{1}</sup>
+- `box-border-width-right` <sup>{2}</sup>
+- `box-border-width-bottom` <sup>{3}</sup>
+- `box-border-width-left` <sup>{4}</sup>
+
+**Multi values** _(set value separated by a space)_
+
+- `box-border-width="{1,3} {2,4}"`
+- `box-border-width="{1} {2,4} {3}"`
+- `box-border-width="{1} {2} {3} {4}"`
+
+**List of values**
+
+| Value  | CSS var                      | CSS value |
+|--------|------------------------------|-----------|
+| `none` | ---                          | `0px`     |
+| `xxs`  | `--ek-box-border-width-xxs`  | `1px`     |
+| `xs`   | `--ek-box-border-width-xs`   | `2px`     |
+| `s`    | `--ek-box-border-width-s`    | `3px`     |
+| `m`    | `--ek-box-border-width-m`    | `4px`     |
+| `l`    | `--ek-box-border-width-l`    | `5px`     |
+| `xl`   | `--ek-box-border-width-xl`   | `6px`     |
+| `xxl`  | `--ek-box-border-width-xxl`  | `7px`     |
+
+```jsx
+<Box box-border-width='s' />
+<Box box-border-width='s m' />
+<Box box-border-width='s m l' />
+<Box box-border-width='s m l xl' />
+<Box
+    box-border-width-top='s'
+    box-border-width-right='m'
+    box-border-width-bottom='l'
+    box-border-width-left='xl'
+/>
+```
+
+## `box-border-color`
+
+The property allows you to set the border color for all sides of an element at once or to determine it only for specified sides.
+
+**Advanced props**
+
+- `box-border-color-top` <sup>{1}</sup>
+- `box-border-color-right` <sup>{2}</sup>
+- `box-border-color-bottom` <sup>{3}</sup>
+- `box-border-color-left` <sup>{4}</sup>
+
+**Multi values** _(set value separated by a space)_
+
+- `box-border-color="{1,3} {2,4}"`
+- `box-border-color="{1} {2,4} {3}"`
+- `box-border-color="{1} {2} {3} {4}"`
+
+```jsx
+<Box box-border-color='{THEME_NAME}' />
+<Box box-border-color='{THEME_NAME} {THEME_NAME}' />
+<Box box-border-color='{THEME_NAME} {THEME_NAME} {THEME_NAME}' />
+<Box box-border-color='{THEME_NAME} {THEME_NAME} {THEME_NAME} {THEME_NAME}' />
+<Box
+    box-border-color-top='{THEME_NAME}'
+    box-border-color-right='{THEME_NAME}'
+    box-border-color-bottom='{THEME_NAME}'
+    box-border-color-left='{THEME_NAME}'
+/>
+```
+> Set the `THEME_NAME` depending on the [theming][create_theme]
+
+## `box-border-style`
+
+The property allows you to set the border style for all sides of an element at once or to determine it only for specified sides.
+
+**Advanced props**
+
+- `box-border-style-top` <sup>{1}</sup>
+- `box-border-style-right` <sup>{2}</sup>
+- `box-border-style-bottom` <sup>{3}</sup>
+- `box-border-style-left` <sup>{4}</sup>
+
+**Multi values** _(set value separated by a space)_
+
+- `box-border-style="{1,3} {2,4}"`
+- `box-border-style="{1} {2,4} {3}"`
+- `box-border-style="{1} {2} {3} {4}"`
+
+**Values**
+
+- `solid` - solid style _(default)_
+- `dotted` - dotted style
+- `dashed` - dashed style
+
+```jsx
+<Box box-border-style='solid' />
+<Box box-border-style='solid dotted' />
+<Box box-border-style='solid dotted dashed' />
+<Box box-border-style='solid dotted dashed solid' />
+<Box
+    box-border-style-top='solid'
+    box-border-style-right='dotted'
+    box-border-style-bottom='dashed'
+    box-border-style-left='solid'
+/>
 ```
 
 ## `box-background`
 
-> Set the `THEME_NAME` depending on the [theming][create_theme]
-
 ```jsx
-<Box box-background={THEME_NAME}>
+<Box box-background='{THEME_NAME}'>
     ...
 </Box>
 ```
+> Set the `THEME_NAME` depending on the [theming][create_theme]

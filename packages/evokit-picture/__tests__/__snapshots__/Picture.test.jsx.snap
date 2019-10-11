@@ -1,104 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Picture /> props picture-border 1`] = `
+exports[`<Picture /> props className 1`] = `
 <picture
-  className="ek-picture ek-picture_border_THEME_NAME"
+  className="ek-picture ololo"
 />
 `;
 
-exports[`<Picture /> props picture-border-bottom 1`] = `
-<picture
-  className="ek-picture ek-picture_border-bottom_THEME_NAME"
+exports[`<Picture /> props className 2`] = `
+<img
+  className="ek-picture__item ololo"
 />
 `;
 
-exports[`<Picture /> props picture-border-left 1`] = `
-<picture
-  className="ek-picture ek-picture_border-left_THEME_NAME"
+exports[`<Picture /> props picture-tag 1`] = `
+<span
+  className="ek-picture"
 />
 `;
 
-exports[`<Picture /> props picture-border-lr 1`] = `
-<picture
-  className="ek-picture ek-picture_border-lr_THEME_NAME"
-/>
-`;
-
-exports[`<Picture /> props picture-border-right 1`] = `
-<picture
-  className="ek-picture ek-picture_border-right_THEME_NAME"
-/>
-`;
-
-exports[`<Picture /> props picture-border-tb 1`] = `
-<picture
-  className="ek-picture ek-picture_border-tb_THEME_NAME"
-/>
-`;
-
-exports[`<Picture /> props picture-border-top 1`] = `
-<picture
-  className="ek-picture ek-picture_border-top_THEME_NAME"
-/>
-`;
-
-exports[`<Picture /> props picture-fit 1`] = `
-<picture
-  className="ek-picture ek-picture_fit_contain"
-/>
-`;
-
-exports[`<Picture /> props picture-round 1`] = `
-<picture
-  className="ek-picture ek-picture_round_full"
-/>
-`;
-
-exports[`<Picture /> props picture-round-bottom 1`] = `
-<picture
-  className="ek-picture ek-picture_round-bottom_full"
-/>
-`;
-
-exports[`<Picture /> props picture-round-bottom-left 1`] = `
-<picture
-  className="ek-picture ek-picture_round-bottom-left_full"
-/>
-`;
-
-exports[`<Picture /> props picture-round-bottom-right 1`] = `
-<picture
-  className="ek-picture ek-picture_round-bottom-right_full"
-/>
-`;
-
-exports[`<Picture /> props picture-round-left 1`] = `
-<picture
-  className="ek-picture ek-picture_round-left_full"
-/>
-`;
-
-exports[`<Picture /> props picture-round-right 1`] = `
-<picture
-  className="ek-picture ek-picture_round-right_full"
-/>
-`;
-
-exports[`<Picture /> props picture-round-top 1`] = `
-<picture
-  className="ek-picture ek-picture_round-top_full"
-/>
-`;
-
-exports[`<Picture /> props picture-round-top-left 1`] = `
-<picture
-  className="ek-picture ek-picture_round-top-left_full"
-/>
-`;
-
-exports[`<Picture /> props picture-round-top-right 1`] = `
-<picture
-  className="ek-picture ek-picture_round-top-right_full"
+exports[`<Picture /> props picture-tag 2`] = `
+<span
+  className="ek-picture__item"
 />
 `;
 
@@ -110,8 +32,6 @@ exports[`<Picture /> render 1`] = `
 
 exports[`<Picture /> render 2`] = `
 <img
-  alt="test alt"
   className="ek-picture__item"
-  src="test.jpg"
 />
 `;

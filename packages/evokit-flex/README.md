@@ -8,20 +8,17 @@
 [quik-start]: /docs/getting-started/quick-start.md
 [use-props]: /docs/getting-started/props.md
 
-[flex-tag]: #flex-tag
-[flex-item-tag]: #flex-item-tag
-
-[flex-display]: #flex-display
-[flex-align-content]: #flex-align-content
-[flex-align-items]: #flex-align-items
 [flex-align-self]: #flex-align-self
-[flex-justify-content]: #flex-justify-content
 [flex-direction]: #flex-direction
-[flex-wrap]: #flex-wrap
-
-[flex-item-display]: #flex-item-display
+[flex-display]: #flex-display
 [flex-item-align]: #flex-item-align
+[flex-item-display]: #flex-item-display
 [flex-item-order]: #flex-item-order
+[flex-item-tag]: #flex-item-tag
+[flex-tag]: #flex-tag
+[flex-wrap]: #flex-wrap
+[flex-items]: #flex-items
+[flex-content]: #flex-content
 
 # EvoKit - Flex
 
@@ -36,8 +33,6 @@ The block for building flexible layouts. Contains two elements `<Flex>` and `<Fl
 
 ---
 
-!> THE ALPHA VERSION OF THE PACKAGE IS RECOMMENDED FOR REFERENCE ONLY. DO NOT USE IN PRODUCTION!
-
 ## Install
 
 > Peer dependencies [evokit]. More about [install][installation]
@@ -48,41 +43,45 @@ npm install evokit-flex --save
 
 ## Usage
 
-> More about [usage][quik-start]
+> More about [usage][quik-start]. You can also use `<Flex.Item>` instead of `<FlexItem>`
 
 ```jsx
+import React from 'react';
 import { Flex, FlexItem } from 'evokit-flex';
 import 'evokit-flex/style.css';
 
-<Flex>
-    <FlexItem>...</FlexItem> // some <Flex.Item>...<Flex.Item>
-</Flex>
-
+const App = () => (
+    <Flex flex-content='center'>
+        <FlexItem>...</FlexItem>
+    </Flex>
+);
 ```
 
 ## Props
 
-> Also supports other valid props of the React Element. More about [use props][use-props]. More about [use props][use-props]
+> Also supports other valid props of the React Element. More about [use props][use-props]
 
 ### `<Flex />`
 
-| Prop name        | Default value    | Possible value | Description |
-|------------------|------------------|----------------|-------------|
-| [flex-tag]       | `div`         | [html tags][html-all-tags] | HTML tag    |
-| [flex-display]   | `flex`     | `flex` `flex-inline` `none` | Display type |
-| flex-content     | `start`    | `start` `end` `center` `between` `around` `stretch` | Space between flex lines on the cross axis |
-| flex-items       | `start`    | `start` `end` `center` `baseline` `stretch` | Alignment of all items on the cross axis |
-| [flex-direction] | `row`      | `row` `row-reverse` `column` `column-reverse` | Direction of all items |
-| [flex-wrap]      | `wrap`   | `nowrap` `wrap` `wrap-reverse` | Wrap rules |
+| Prop name          | Default value    | Possible value | Description |
+|--------------------|------------------|----------------|-------------|
+| [flex-content] `*` | `start`    | `start` `end` `center` `between` `around` `stretch` | Space between flex lines on the cross axis |
+| [flex-direction]   | `row`      | `row` `row-reverse` `column` `column-reverse` | Direction of all items |
+| [flex-display]     | `flex`     | `flex` `flex-inline` `none` | Display type |
+| [flex-items]       | `start`    | `start` `end` `center` `baseline` `stretch` | Alignment of all items on the cross axis |
+| [flex-tag]         | `div`      | [HTML tags][html-all-tags] | HTML tag    |
+| [flex-wrap]        | `wrap`     | `nowrap` `wrap` `wrap-reverse` | Wrap rules |
 
 ### `<FlexItem />`
 
 | Prop name           | Default value    | Possible value | Description |
 |---------------------|------------------|----------------|-------------|
-| [flex-item-tag]     | `div`    | [html tags][html-all-tags] | HTML tag    |
-| [flex-item-display] | `block`  | `block` `none` | Display type |
 | [flex-item-align]   | `start`  | `start` `end` `center` `baseline` `stretch` | Alignment item on the cross axis |
+| [flex-item-display] | `block`  | `block` `none` | Display type |
 | [flex-item-order]   | `0`      | `0` `1` `2` `3` `4` `5` `6` `7` `8` `9` `10` | Set the order |
+| [flex-item-tag]     | `div`    | [HTML tags][html-all-tags] | HTML tag    |
+
+> `*` — prop has advanced params
 
 ## Customize
 
@@ -112,18 +111,6 @@ Default value `div`
 </Flex>
 ```
 
-## `flex-item-tag`
-
-Default value `div`
-
-```jsx
-<Flex>
-    <FlexItem flex-item-tag='div'>
-        ...
-    </FlexItem>
-</Flex>
-```
-
 ## `flex-display`
 
 ```jsx
@@ -132,7 +119,34 @@ Default value `div`
 </Flex>
 ```
 
-## `flex-align-content`
+## `flex-items`
+
+- `start` - The cross-start margin edges of the flex items are flushed with the cross-start edge of the line
+- `end` - The cross-end margin edges of the flex items are flushed with the cross-end edge of the line
+- `center` - The flex items' margin boxes are centered within the line on the cross-axis
+- `baseline` - All flex items are aligned such that their flex container baselines align
+- `stretch` - Flex items are stretched such that the cross-size of the item's margin box is the same as the line while respecting width and height constraints
+
+![flex-items](_media/flex-items.svg)
+
+```jsx
+<Flex flex-items='center'>
+    ...
+</Flex>
+```
+
+## `flex-content`
+
+**Advanced props**
+
+1. `flex-content-align`
+2. `flex-content-justify`
+
+**Multi values** _(set value separated by a space)_
+
+- `flex-content="{1} {2}"`
+
+**List of values**
 
 - `start` - Lines are packed toward the start of the flex container
 - `end` - Lines are packed toward the end of the flex container
@@ -141,61 +155,9 @@ Default value `div`
 - `around` - Lines are evenly distributed in the flex container, with half-size spaces on either end
 - `stretch` - Lines stretch to take up the remaining space
 
-![align-content](_media/align-content.svg)
-
-```jsx
-<Flex flex-align-content='center'>
-    ...
-</Flex>
-```
-
-## `flex-align-items`
-
-- `start` - The cross-start margin edges of the flex items are flushed with the cross-start edge of the line
-- `end` - The cross-end margin edges of the flex items are flushed with the cross-end edge of the line
-- `center` - The flex items' margin boxes are centered within the line on the cross-axis
-- `baseline` - All flex items are aligned such that their flex container baselines align
-- `stretch` - Flex items are stretched such that the cross-size of the item's margin box is the same as the line while respecting width and height constraints
-
-![align-items](_media/align-items.svg)
-
-```jsx
-<Flex flex-align-items='center'>
-    ...
-</Flex>
-```
-
-## `flex-align-self`
-
-- `start` - The cross-start margin edges of the flex item are flushed with the cross-start edge of the line
-- `end` - The cross-end margin edges of the flex item are flushed with the cross-end edge of the line
-- `center` - The flex item' margin boxes are centered within the line on the cross-axis
-- `baseline` - All flex item are aligned such that their flex container baselines align
-- `stretch` - Flex item are stretched such that the cross-size of the item's margin box is the same as the line while respecting width and height constraints
-
-![align-self](_media/align-self.svg)
-
-```jsx
-<Flex flex-align-self='center'>
-    ...
-</Flex>
-```
-
-## `flex-justify-content`
-
-- `start` - Flex items are packed toward the start of the line
-- `end` - Flex items are packed toward the end of the line
-- `center` - Flex items are packed toward the center of the line
-- `between` - Flex items are evenly distributed in the line
-- `around` - Flex items are evenly distributed in the line, with half-size spaces on either end
-
-![justify-content](_media/justify-content.svg)
-
-```jsx
-<Flex flex-justify-content='center'>
-    ...
-</Flex>
-```
+| flex-content | flex-content-align | flex-content-justify |
+|------------- |--------------------|----------------------|
+| ![align-content](_media/align-content.svg) | ![align-content](_media/align-content.svg) | ![justify-content](_media/justify-content.svg) |
 
 ## `flex-direction`
 
@@ -222,6 +184,34 @@ Default value `div`
 
 ```jsx
 <Flex flex-wrap='wrap'>
+    ...
+</Flex>
+```
+
+## `flex-item-tag`
+
+Default value `div`
+
+```jsx
+<Flex>
+    <FlexItem flex-item-tag='div'>
+        ...
+    </FlexItem>
+</Flex>
+```
+
+## `flex-item-align`
+
+- `start` - The cross-start margin edges of the flex item are flushed with the cross-start edge of the line
+- `end` - The cross-end margin edges of the flex item are flushed with the cross-end edge of the line
+- `center` - The flex item' margin boxes are centered within the line on the cross-axis
+- `baseline` - All flex item are aligned such that their flex container baselines align
+- `stretch` - Flex item are stretched such that the cross-size of the item's margin box is the same as the line while respecting width and height constraints
+
+![align-self](_media/align-self.svg)
+
+```jsx
+<Flex flex-item-align='center'>
     ...
 </Flex>
 ```

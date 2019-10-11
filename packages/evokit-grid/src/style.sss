@@ -22,14 +22,41 @@
     min-width: 0
 
 .grid__item
+    display: block
     box-sizing: border-box
     min-width: 0
     max-width: 100%
 
 /**
+ * Display:
+ *
+ *  - grid_display_flex
+ *  - grid_display_none
+ *
+ **/
+
+@each $value in (flex, none)
+    @mixin media .grid_display_$(value)
+        display: $value
+
+/**
+ * Item display:
+ *
+ *  - grid__item_display_block
+ *  - grid__item_display_none
+ *
+ **/
+
+@each $value in (block, none)
+    @mixin media .grid__item_display_$(value)
+        display: $value
+
+/**
  * Indent:
  *
  *  - grid_indent_*
+ *  - grid_indent-x_*
+ *  - grid_indent-y_*
  *
  **/
 
@@ -57,6 +84,70 @@
 
                 & > .grid__item
                     padding: var(--ek-grid-indent-$(value))
+
+    @mixin media .grid_indent-x_$(value)
+        @if $value == none
+            margin-left: 0
+            margin-right: 0
+
+            & > .grid__item
+                padding-left: 0
+                padding-right: 0
+
+            &[class*='grid_divider']
+                margin-left: 0
+                margin-right: 0
+
+                & > .grid__item
+                    padding-left: 0
+                    padding-right: 0
+        @else
+            margin-left: calc(var(--ek-grid-indent-$(value)) / 2 * -1)
+            margin-right: calc(var(--ek-grid-indent-$(value)) / 2 * -1)
+
+            & > .grid__item
+                padding-left: calc(var(--ek-grid-indent-$(value)) / 2)
+                padding-right: calc(var(--ek-grid-indent-$(value)) / 2)
+
+            &[class*='grid_divider']
+                margin-left: 0
+                margin-right: 0
+
+                & > .grid__item
+                    padding-left: var(--ek-grid-indent-$(value))
+                    padding-right: var(--ek-grid-indent-$(value))
+
+    @mixin media .grid_indent-y_$(value)
+        @if $value == none
+            margin-top: 0
+            margin-bottom: 0
+
+            & > .grid__item
+                padding-top: 0
+                padding-bottom: 0
+
+            &[class*='grid_divider']
+                margin-top: 0
+                margin-bottom: 0
+
+                & > .grid__item
+                    padding-top: 0
+                    padding-bottom: 0
+        @else
+            margin-top: calc(var(--ek-grid-indent-$(value)) / 2 * -1)
+            margin-bottom: calc(var(--ek-grid-indent-$(value)) / 2 * -1)
+
+            & > .grid__item
+                padding-top: calc(var(--ek-grid-indent-$(value)) / 2)
+                padding-bottom: calc(var(--ek-grid-indent-$(value)) / 2)
+
+            &[class*='grid_divider']
+                margin-top: 0
+                margin-bottom: 0
+
+                & > .grid__item
+                    padding-top: var(--ek-grid-indent-$(value))
+                    padding-bottom: var(--ek-grid-indent-$(value))
 
 /**
  * Colum:

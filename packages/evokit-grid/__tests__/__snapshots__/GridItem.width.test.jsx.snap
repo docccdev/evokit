@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<GridItem grid-item-width="..." /> props grid-item-width 1`] = `
+<div
+  className="ek-grid__item ek-grid__item_width_value"
+/>
+`;

@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Line line-display="..." /> props line-display 1`] = `
+<hr
+  className="ek-line ek-line_display_value"
+/>
+`;

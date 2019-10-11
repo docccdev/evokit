@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Picture picture-fit="..." /> props picture-fit 1`] = `
+<picture
+  className="ek-picture ek-picture_fit_value"
+/>
+`;

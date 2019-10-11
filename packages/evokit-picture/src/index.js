@@ -1,25 +1,28 @@
 import { createBlock } from 'evokit';
 
 export const Picture = createBlock('picture', 'picture', [
-    'fit',
-    'round',
-    'round-top',
-    'round-right',
-    'round-bottom',
-    'round-left',
-    'round-top-left',
-    'round-top-right',
-    'round-bottom-left',
-    'round-bottom-right',
     'border',
-    'border-top',
-    'border-right',
     'border-bottom',
     'border-left',
-    'border-tb',
     'border-lr',
+    'border-right',
+    'border-tb',
+    'border-top',
+    'display',
+    'fit',
+    ['round', [
+        ['round-top-left', 'round-bottom-right'],
+        ['round-top-right', 'round-bottom-left'],
+        'round-bottom-right',
+        'round-bottom-left',
+    ]],
+    // DEPRECATED
+    'round-bottom',
+    'round-left',
+    'round-right',
+    'round-top',
 ]);
 
-export const PictureItem = createBlock('img', 'picture__item');
+export const PictureItem = createBlock('img', 'picture__item', ['display']);
 
 Picture.Item = PictureItem;

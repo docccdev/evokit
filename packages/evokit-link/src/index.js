@@ -2,9 +2,10 @@ import { createBlock } from 'evokit';
 
 export const Link = createBlock('a', 'link', [
     'color',
+    'display',
+    'lheight',
     'size',
-    'weight',
     'style',
     'valign',
-    'lheight',
+    'weight',
 ]);
