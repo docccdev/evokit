@@ -135,22 +135,6 @@ Default value `div`
 </Flex>
 ```
 
-## `flex-align-self`
-
-- `start` - The cross-start margin edges of the flex item are flushed with the cross-start edge of the line
-- `end` - The cross-end margin edges of the flex item are flushed with the cross-end edge of the line
-- `center` - The flex item' margin boxes are centered within the line on the cross-axis
-- `baseline` - All flex item are aligned such that their flex container baselines align
-- `stretch` - Flex item are stretched such that the cross-size of the item's margin box is the same as the line while respecting width and height constraints
-
-![align-self](_media/align-self.svg)
-
-```jsx
-<Flex flex-align-self='center'>
-    ...
-</Flex>
-```
-
 ## `flex-content`
 
 **Advanced props**
@@ -213,6 +197,22 @@ Default value `div`
     <FlexItem flex-item-tag='div'>
         ...
     </FlexItem>
+</Flex>
+```
+
+## `flex-item-align`
+
+- `start` - The cross-start margin edges of the flex item are flushed with the cross-start edge of the line
+- `end` - The cross-end margin edges of the flex item are flushed with the cross-end edge of the line
+- `center` - The flex item' margin boxes are centered within the line on the cross-axis
+- `baseline` - All flex item are aligned such that their flex container baselines align
+- `stretch` - Flex item are stretched such that the cross-size of the item's margin box is the same as the line while respecting width and height constraints
+
+![align-self](_media/align-self.svg)
+
+```jsx
+<Flex flex-item-align='center'>
+    ...
 </Flex>
 ```
 
