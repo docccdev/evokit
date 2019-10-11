@@ -175,18 +175,16 @@ The property allows you to set the indentation value for all sides of an element
 
 **Advanced props**
 
-- `box-margin-top`
-- `box-margin-right`
-- `box-margin-bottom`
-- `box-margin-left`
+- `box-margin-top` <sup>{1}</sup>
+- `box-margin-right` <sup>{2}</sup>
+- `box-margin-bottom` <sup>{3}</sup>
+- `box-margin-left` <sup>{4}</sup>
 
-**Multi values** _(set value separated by a space)_
+**Multi props** _(set value separated by a space)_
 
 - `box-margin="{1,3} {2,4}"`
 - `box-margin="{1} {2,4} {3}"`
 - `box-margin="{1} {2} {3} {4}"`
-
-> {1} - top, {2} - right, {3} - bottom, {4} - left
 
 **List of values**
 
@@ -223,18 +221,16 @@ The property allows you to set the indentation value for all sides of an element
 
 **Advanced props**
 
-- `box-padding-top`
-- `box-padding-right`
-- `box-padding-bottom`
-- `box-padding-left`
+- `box-padding-top` <sup>{1}</sup>
+- `box-padding-right` <sup>{2}</sup>
+- `box-padding-bottom` <sup>{3}</sup>
+- `box-padding-left` <sup>{4}</sup>
 
-**Multi values** _(set value separated by a space)_
+**Multi props** _(set value separated by a space)_
 
 - `box-padding="{1,3} {2,4}"`
 - `box-padding="{1} {2,4} {3}"`
 - `box-padding="{1} {2} {3} {4}"`
-
-> {1} - top, {2} - right, {3} - bottom, {4} - left
 
 **List of values**
 
@@ -270,18 +266,16 @@ The property allows you to set the fillet value for all corners of the element a
 
 **Advanced props**
 
-- `box-round-top-left`
-- `box-round-top-right`
-- `box-round-bottom-right`
-- `box-round-bottom-left`
+- `box-round-top-left` <sup>{1}</sup>
+- `box-round-top-right` <sup>{2}</sup>
+- `box-round-bottom-right` <sup>{3}</sup>
+- `box-round-bottom-left` <sup>{4}</sup>
 
-**Multi values** _(set value separated by a space)_
+**Multi props** _(set value separated by a space)_
 
 - `box-round="{1,3} {2,4}"`
 - `box-round="{1} {2,4} {3}"`
 - `box-round="{1} {2} {3} {4}"`
-
-> {1} - top-left, {2} - top-right, {3} - bottom-right, {4} - bottom-left
 
 **List of values**
 
@@ -369,14 +363,12 @@ The property allows you to set the value for all axes at the same time or to det
 
 **Advanced props**
 
-- `box-overflow-x`
-- `box-overflow-y`
+- `box-overflow-x` <sup>{1}</sup>
+- `box-overflow-y` <sup>{2}</sup>
 
-**Multi values** _(set value separated by a space)_
+**Multi props** _(set value separated by a space)_
 
 - `box-overflow="{1} {2}"`
-
-> {1} - overflow-x, {2} - overflow-y
 
 **List of values**
 
@@ -393,8 +385,6 @@ The property allows you to set the value for all axes at the same time or to det
 
 ## `box-border`
 
-Set the `THEME_NAME` depending on the [theming][create_theme]
-
 !> **DEPRECATED** props `box-border-lr` and `box-border-tb`, please use the separately `box-border-left` and `box-border-right` or `box-border-top` and `box-border-bottom`
 
 **Advanced props**
@@ -404,7 +394,7 @@ Set the `THEME_NAME` depending on the [theming][create_theme]
 - `box-border-bottom`
 - `box-border-left`
 
-**Multi values** _(set value separated by a space)_
+**Multi props** _(set value separated by a space)_
 
 - `box-border="{1}"`
 - `box-border="{1} {2}"`
@@ -422,24 +412,25 @@ Set the `THEME_NAME` depending on the [theming][create_theme]
 <Box box-border-top="{THEME_NAME} xs dotted" />
 ```
 
+> Set the `THEME_NAME` depending on the [theming][create_theme]
+
+
 ## `box-border-width`
 
 The property allows you to set the border width for all sides of an element at once or to determine it only for specified sides.
 
 **Advanced props**
 
-- `box-border-width-top`
-- `box-border-width-right`
-- `box-border-width-bottom`
-- `box-border-width-left`
+- `box-border-width-top` <sup>{1}</sup>
+- `box-border-width-right` <sup>{2}</sup>
+- `box-border-width-bottom` <sup>{3}</sup>
+- `box-border-width-left` <sup>{4}</sup>
 
-**Multi values** _(set value separated by a space)_
+**Multi props** _(set value separated by a space)_
 
 - `box-border-width="{1,3} {2,4}"`
 - `box-border-width="{1} {2,4} {3}"`
 - `box-border-width="{1} {2} {3} {4}"`
-
-> {1} - top, {2} - right, {3} - bottom, {4} - left
 
 **List of values**
 
@@ -467,12 +458,78 @@ The property allows you to set the border width for all sides of an element at o
 />
 ```
 
-## `box-background`
+## `box-border-color`
 
-> Set the `THEME_NAME` depending on the [theming][create_theme]
+The property allows you to set the border color for all sides of an element at once or to determine it only for specified sides.
+
+**Advanced props**
+
+- `box-border-color-top` <sup>{1}</sup>
+- `box-border-color-right` <sup>{2}</sup>
+- `box-border-color-bottom` <sup>{3}</sup>
+- `box-border-color-left` <sup>{4}</sup>
+
+**Multi props** _(set value separated by a space)_
+
+- `box-border-color="{1,3} {2,4}"`
+- `box-border-color="{1} {2,4} {3}"`
+- `box-border-color="{1} {2} {3} {4}"`
 
 ```jsx
-<Box box-background={THEME_NAME}>
+<Box box-border-color='{THEME_NAME}' />
+<Box box-border-color='{THEME_NAME} {THEME_NAME}' />
+<Box box-border-color='{THEME_NAME} {THEME_NAME} {THEME_NAME}' />
+<Box box-border-color='{THEME_NAME} {THEME_NAME} {THEME_NAME} {THEME_NAME}' />
+<Box
+    box-border-color-top='{THEME_NAME}'
+    box-border-color-right='{THEME_NAME}'
+    box-border-color-bottom='{THEME_NAME}'
+    box-border-color-left='{THEME_NAME}'
+/>
+```
+> Set the `THEME_NAME` depending on the [theming][create_theme]
+
+## `box-border-style`
+
+The property allows you to set the border style for all sides of an element at once or to determine it only for specified sides.
+
+**Advanced props**
+
+- `box-border-style-top` <sup>{1}</sup>
+- `box-border-style-right` <sup>{2}</sup>
+- `box-border-style-bottom` <sup>{3}</sup>
+- `box-border-style-left` <sup>{4}</sup>
+
+**Multi props** _(set value separated by a space)_
+
+- `box-border-style="{1,3} {2,4}"`
+- `box-border-style="{1} {2,4} {3}"`
+- `box-border-style="{1} {2} {3} {4}"`
+
+**Values**
+
+- `solid` - solid style _(default)_
+- `dotted` - dotted style
+- `dashed` - dashed style
+
+```jsx
+<Box box-border-style='solid' />
+<Box box-border-style='solid dotted' />
+<Box box-border-style='solid dotted dashed' />
+<Box box-border-style='solid dotted dashed solid' />
+<Box
+    box-border-style-top='solid'
+    box-border-style-right='dotted'
+    box-border-style-bottom='dashed'
+    box-border-style-left='solid'
+/>
+```
+
+## `box-background`
+
+```jsx
+<Box box-background='{THEME_NAME}'>
     ...
 </Box>
 ```
+> Set the `THEME_NAME` depending on the [theming][create_theme]
