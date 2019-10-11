@@ -10,7 +10,7 @@
 
 ## CHANGELOG
 
-### 3.0.0-alpha.3 (not published)
+### 3.1.0
 
 - Remove value `block` for prop `flex-display`
 - Added new props:

@@ -15,7 +15,7 @@
 
 ## CHANGELOG
 
-### 3.1.0 *(xx.09.2019)*
+### 3.1.0 *(11.10.2019)*
 
 - **Updated** peer dependencies [`evokit`][evokit] >= **v3.1.0**
 - **Added** new prop [`image-display`][image-display]

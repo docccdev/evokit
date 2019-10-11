@@ -37,7 +37,7 @@
 
 !> In version 3.0.0 there are no more UI blocks, they are all in separate packages, please update carefully.
 
-### 3.1.0 *(xx.09.2019)*
+### 3.1.0 *(11.10.2019)*
 
 - **Fixed** react ref prop. The prop `{BLOCK_NAME}-ref` is now deprecated. [More][use-props_box-ref]
 - **Fixed** prop `{BLOCK_NAME}-tag`
