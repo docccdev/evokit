@@ -29,7 +29,7 @@ const App = () => (
 
 Recommend using advanced mode. To do this, you will need to create a UI folder in the project where the configured blocks.
 
-```
+```text
 ├── UI/
 │   └── Text/
 │   └───── index.js

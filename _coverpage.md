@@ -8,7 +8,7 @@
 
 > React primitive UI blocks
 
-* Basis for creating an interface
+* Basis for creating interface
 
 [GITHUB](https://github.com/docccdev/evokit)
 [README](/docs/getting-started/introduction.md)

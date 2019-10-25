@@ -8,7 +8,7 @@ To create a new block, use the function `createBlock` from the npm package [evok
 
 ## Structure
 
-```
+```text
 ├── MyBlock
 │   └── index.js
 │   └── style.css

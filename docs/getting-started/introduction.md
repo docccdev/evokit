@@ -33,24 +33,9 @@ Blocks:
   * [evokit-picture]
   * [evokit-text]
 
-### Let's look at an example of creating a three-column list of product list with 10px indentation between cells
+## Let's look at an example of creating a three-column list of product list with 10px indentation between cells
 
 Every time if you need to place something in the grid, you have to create new styles only for this case without being able to flexibly reuse in other components.
-
-```css
-/* ProductList.css */
-
-.products {
-    font-size: 0;
-}
-
-.products__cell {
-    display: inline-block;
-    width: 33.33%;
-    box-sizing: border-box;
-    vertical-align: top;
-}
-```
 
 ```jsx
 import React from 'react';
@@ -65,18 +50,18 @@ const ProductList = () => (
 );
 ```
 
-!> Look how clean and beautiful it is. A great option to use [evokit-grid]!
+#### With EvoKIt
 
 ```jsx
 import React from 'react';
-import { Grid, GridItem } from 'evokit-grid';
+import { Grid } from 'evokit-grid';
 import 'evokit-grid/style.css';
 
 const ProductList = () => (
     <Grid grid-column={3} grid-indent='xs'>
-        <GridItem>...</GridItem>
-        <GridItem>...</GridItem>
-        <GridItem>...</GridItem>
+        <Grid.Item>...</Grid.Item>
+        <Grid.Item>...</Grid.Item>
+        <Grid.Item>...</Grid.Item>
     </Grid>
 );
 ```
