@@ -12,28 +12,7 @@
 **webpack.config.js**
 
 ```js
-var postcssImport = require('postcss-import');
-var postcssPresetEnv = require('postcss-preset-env');
-
-var CSS_LOADER = {
-    loader: 'css-loader',
-    options: {
-        importLoaders: 1
-    }
-};
-
-var POSTCSS_LOADER = {
-    loader: 'postcss-loader',
-    options: {
-        plugins: [
-            postcssImport(),
-            postcssPresetEnv()
-        ],
-    },
-};
-
 module.exports = {
-    mode: 'development',
     entry: {
         main: './src/index.js'
     },
@@ -48,21 +27,37 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                use: ['style-loader', CSS_LOADER, POSTCSS_LOADER]
+                use: [
+                    'style-loader',
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            importLoaders: 1
+                        }
+                    },
+                    {
+                        loader: 'postcss-loader',
+                        options: {
+                            plugins: [
+                                require('postcss-import')(),
+                                require('postcss-preset-env')()
+                            ]
+                        }
+                    }
+                ]
             }
         ]
     }
 };
-
 ```
 
 ## Postcss dependencies
 
 - [postcss]
-- [postcss-preset-env]
 - [postcss-import]
 - [postcss-loader]
+- [postcss-preset-env]
 
 ```bash
-npm install postcss postcss-preset-env postcss-import postcss-loader --save-dev
+npm install postcss postcss-import postcss-loader postcss-preset-env --save-dev
 ```
