@@ -51,9 +51,9 @@ import 'evokit-grid/style.css';
 
 const App = () => (
     <Grid grid-column='3'>
-        <GridItem>
+        <Grid.Item>
             ...
-        </GridItem>
+        </Grid.Item>
     </Grid>
 );
 ```
@@ -145,9 +145,9 @@ Default value `div`
 
 ```jsx
 <Grid grid-column='2'>
-    <GridItem>
+    <Grid.Item>
         ...
-    </GridItem>
+    </Grid.Item>
 </Grid>
 ```
 
@@ -196,9 +196,9 @@ The property allows you to set the indentation value for all sides of an element
 
 ```jsx
 <Grid grid-direction='row-reverse'>
-    <GridItem>
+    <Grid.Item>
         ...
-    </GridItem>
+    </Grid.Item>
 </Grid>
 ```
 
@@ -210,9 +210,9 @@ The property allows you to set the indentation value for all sides of an element
 
 ```jsx
 <Grid grid-wrap='nowrap'>
-    <GridItem>
+    <Grid.Item>
         ...
-    </GridItem>
+    </Grid.Item>
 </Grid>
 ```
 
@@ -225,9 +225,9 @@ The property allows you to set the indentation value for all sides of an element
 
 ```jsx
 <Grid grid-align='center'>
-    <GridItem>
+    <Grid.Item>
         ...
-    </GridItem>
+    </Grid.Item>
 </Grid>
 ```
 
@@ -241,9 +241,9 @@ The property allows you to set the indentation value for all sides of an element
 
 ```jsx
 <Grid grid-valign='middle'>
-    <GridItem>
+    <Grid.Item>
         ...
-    </GridItem>
+    </Grid.Item>
 </Grid>
 ```
 
@@ -253,9 +253,9 @@ The property allows you to set the indentation value for all sides of an element
 
 ```jsx
 <Grid grid-divider={THEME_NAME}>
-    <GridItem>
+    <Grid.Item>
         ...
-    </GridItem>
+    </Grid.Item>
 </Grid>
 ```
 
@@ -265,9 +265,9 @@ Default value `div`
 
 ```jsx
 <Grid>
-    <GridItem grid-item-tag='div'>
+    <Grid.Item grid-item-tag='div'>
         ...
-    <GridItem>
+    <Grid.Item>
 </Grid>
 ```
 
@@ -278,9 +278,9 @@ Default value `div`
 
 ```jsx
 <Grid >
-    <GridItem grid-item-display='none'>
+    <Grid.Item grid-item-display='none'>
         ...
-    </GridItem>
+    </Grid.Item>
 </Grid>
 ```
 
@@ -290,12 +290,12 @@ Default value `div`
 
 ```jsx
 <Grid>
-    <GridItem grid-item-order='2'>
+    <Grid.Item grid-item-order='2'>
         ...
-    </GridItem>
-    <GridItem>
+    </Grid.Item>
+    <Grid.Item>
         ...
-    </GridItem>
+    </Grid.Item>
 </Grid>
 ```
 
@@ -322,11 +322,11 @@ Default value `div`
 
 ```jsx
 <Grid>
-    <GridItem grid-item-width='expand'>
+    <Grid.Item grid-item-width='expand'>
         ...
-    </GridItem>
-    <GridItem grid-item-width='3-10'>
+    </Grid.Item>
+    <Grid.Item grid-item-width='3-10'>
         ...
-    </GridItem>
+    </Grid.Item>
 </Grid>
 ```
