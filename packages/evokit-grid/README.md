@@ -267,7 +267,7 @@ Default value `div`
 <Grid>
     <Grid.Item grid-item-tag='div'>
         ...
-    <Grid.Item>
+    </Grid.Item>
 </Grid>
 ```
 
