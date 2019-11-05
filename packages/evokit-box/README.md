@@ -309,6 +309,8 @@ The property allows you to set the fillet value for all corners of the element a
 - `auto` - value: `auto`
 - See table, for example: `3-4` = `75%`
 
+<div class='tableHovered'></div>
+
 | |1|2|3|4|5|6|7|8|9|10|
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 |1|`100%`|`50%`|`33.33%`|`25%`|`20%`|`16.66%`|`14.28%`|`12.5%`|`11.11%`|`10%`|

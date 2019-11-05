@@ -467,6 +467,30 @@ body.sticky .sidebar,body.sticky .sidebar-toggle {
     color: #f66
 }
 
+.markdown-section .tableHovered + table {
+    overflow: hidden;
+}
+
+.markdown-section .tableHovered + table tr:hover {
+    background-color: #f8f8f8;
+}
+
+.markdown-section .tableHovered + table td,
+.markdown-section .tableHovered + table th {
+    position: relative;
+}
+.markdown-section .tableHovered + table td:hover::after,
+.markdown-section .tableHovered + table th:hover::after {
+    content: "";
+    position: absolute;
+    background-color: #f8f8f8;
+    left: 0;
+    top: -5000px;
+    height: 10000px;
+    width: 100%;
+    z-index: -1;
+}
+
 .markdown-section p.tip {
     border-bottom-right-radius: 2px;
     border-left: 4px solid #f66;
