@@ -5,10 +5,13 @@
 [box-overflow]: /packages/evokit-box/?id=box-overflow
 [box-padding]: /packages/evokit-box/?id=box-padding
 [box-round]: /packages/evokit-box/?id=box-round
+[box-place]: /packages/evokit-box/?id=box-place
 [box-border]: /packages/evokit-box/?id=box-border
 [box-border-color]: /packages/evokit-box/?id=box-border-color
 [box-border-width]: /packages/evokit-box/?id=box-border-width
 [box-border-style]: /packages/evokit-box/?id=box-border-style
+[box-position]: /packages/evokit-box/?id=box-position
+[box-zindex]: /packages/evokit-box/?id=box-zindex
 
 [create_theme]: /docs/base/theme.md
 
@@ -20,6 +23,12 @@
 ---
 
 ## CHANGELOG
+
+### 3.2.0 *(30.11.2019)*
+- **Added** `-webkit-overflow-scrolling: touch` for prop [`box-overflow`][box-overflow]
+- **Added** multi props for [`box-position`][box-position]:
+- **Added** new prop [`box-zindex`][box-zindex]
+- **Added** new value `none` for prop [`box-place`][box-place]
 
 ### 3.1.0 *(11.10.2019)*
 

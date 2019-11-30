@@ -31,7 +31,14 @@
     --ek-box-border-width-l: 5px
     --ek-box-border-width-xl: 6px
     --ek-box-border-width-xxl: 7px
-
+    // prop 'box-zindex'
+    --ek-box-zindex-xxs: 5
+    --ek-box-zindex-xs: 10
+    --ek-box-zindex-s: 15
+    --ek-box-zindex-m: 20
+    --ek-box-zindex-l: 25
+    --ek-box-zindex-xl: 30
+    --ek-box-zindex-xxl: 35
 .box
     display: block
     box-sizing: border-box
@@ -103,44 +110,84 @@
  *
  **/
 
-@each $value in (top, top-left, top-right, center, center-left, center-right, bottom, bottom-left, bottom-right)
+@each $value in (none, top, top-left, top-right, center, center-left, center-right, bottom, bottom-left, bottom-right)
     @mixin media .box_place_$(value)
-        @if $value == top
+        @if $value == none
+            top: auto
+            right: auto
+            bottom: auto
+            left: auto
+            transform: none
+        @else $value == top
             top: 0
+            right: auto
+            bottom: auto
             left: 50%
             transform: translateX(-50%)
         @else if $value == top-left
             top: 0
+            right: auto
+            bottom: auto
             left: 0
             transform: none
         @else if $value == top-right
             top: 0
             right: 0
+            bottom: auto
+            left: auto
             transform: none
         @else if $value == center
             top: 50%
+            right: auto
+            bottom: auto
             left: 50%
             transform: translate(-50%, -50%)
         @else if $value == center-left
             top: 50%
+            right: auto
+            bottom: auto
             left: 0
             transform: translateY(-50%)
         @else if $value == center-right
             top: 50%
             right: 0
+            bottom: auto
+            left: auto
             transform: translateY(-50%)
         @else if $value == bottom
+            top: auto
+            right: auto
             bottom: 0
             left: 50%
             transform: translateX(-50%)
         @else if $value == bottom-left
+            top: auto
+            right: auto
             bottom: 0
             left: 0
             transform: none
         @else if $value == bottom-right
-            bottom: 0
+            top: auto
             right: 0
+            bottom: 0
+            left: auto
             transform: none
+
+/**
+ * Position index:
+ *
+ *  - box_zindex_*
+ *
+ **/
+
+@each $value in (none, xxs, xs, s, m, l, xl, xxl, auto)
+    @mixin media .box_zindex_$(value)
+        @if $value == none
+            z-index: 0
+        @else if $value == auto
+            z-index: auto
+        @else
+            z-index: var(--ek-box-zindex-$(value))
 
 /**
  * Margin:
@@ -463,9 +510,12 @@
 @each $value in (auto, hidden, scroll, visible)
     @mixin media .box_overflow_$(value)
         overflow: $value
+        -webkit-overflow-scrolling: touch
 
     @mixin media .box_overflow-x_$(value)
         overflow-x: $value
+        -webkit-overflow-scrolling: touch
 
     @mixin media .box_overflow-y_$(value)
         overflow-y: $value
+        -webkit-overflow-scrolling: touch

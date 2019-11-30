@@ -22,6 +22,7 @@
 [box-padding]: #box-padding
 [box-place]: #box-place
 [box-position]: #box-position
+[box-zindex]: #box-zindex
 [box-round]: #box-round
 [box-tag]: #box-tag
 [box-width]: #box-width
@@ -78,11 +79,12 @@ const App = () => (
 | [box-margin] `*`       | `none`    | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` `auto` | Indent around block |
 | [box-overflow] `*`     | `visible` | `auto` `hidden` `scroll` `visible` | Display overflow block content |
 | [box-padding] `*`      | `none`    | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Indent around an block content |
-| [box-place]            | `null`    | `top` `top-left` `top-right` `center` `center-left` `center-right` `bottom` `bottom-left` `bottom-right` | Position place |
-| [box-position]         | `static`  | `static` `relative` `absolute` `fixed` | Positioning method |
+| [box-place]            | `null`    | `none` `top` `top-left` `top-right` `center` `center-left` `center-right` `bottom` `bottom-left` `bottom-right` | Position place, depending [box-position] |
+| [box-position] `*`     | `static`  | `static` `relative` `absolute` `fixed` | Positioning method |
 | [box-round] `*`        | `none`    | `none` `full` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Corner rounding |
 | [box-tag]              | `div`     | [HTML tags][html-all-tags] | HTML tag    |
 | [box-width]            | `auto`    | `auto` `1-1` `*-2` `*-3` `*-4` `*-5` `*-6` `*-7` `*-8` `*-9` `*-10` | Set the width |
+| [box-zindex]           | `null`    | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Position z-index, depending [box-position] |
 
 > `*` — prop has advanced params
 
@@ -122,6 +124,14 @@ const App = () => (
     --ek-box-border-width-l: 5px;
     --ek-box-border-width-xl: 6px;
     --ek-box-border-width-xxl: 7px;
+    /* prop 'box-zindex' */
+    --ek-box-zindex-xxs: 5;
+    --ek-box-zindex-xs: 10;
+    --ek-box-zindex-s: 15;
+    --ek-box-zindex-m: 20;
+    --ek-box-zindex-l: 25;
+    --ek-box-zindex-xl: 30;
+    --ek-box-zindex-xxl: 35;
 }
 ```
 
@@ -343,18 +353,70 @@ The property allows you to set the fillet value for all corners of the element a
 
 ## `box-position`
 
+The property allows you to set the type of positioning, location place on all sides and z-index
+
+**Advanced props**
+
+- `box-position` <sup>{1}</sup>
+- [`box-place`][box-place] <sup>{2}</sup>
+- [`box-zindex`][box-zindex] <sup>{3}</sup>
+
+**Multi values** _(set value separated by a space)_
+
+- `box-position="{1}"`
+- `box-position="{1} {2}"`
+- `box-position="{1} {2} {3}"`
+
 ```jsx
-<Box box-position='absolute'>
-    ...
-</Box>
+<Box box-position='absolute' />
+<Box box-position='absolute center' />
+<Box box-position='absolute center xs' />
 ```
 
 ## `box-place`
 
 > Use with prop `box-position`
 
+**List of values**
+
+| Value           | Description              |
+|-----------------|--------------------------|
+| `none`          | Reset placement          |
+| `top`           | Center top placement     |
+| `top-left`      | Left top placement       |
+| `top-right`     | Right top placement      |
+| `center`        | Center placement         |
+| `center-left`   | Left center placement    |
+| `center-right`  | Right center placement   |
+| `bottom`        | Center bottom placement  |
+| `bottom-left`   | Left bottom placement    |
+| `bottom-right`  | Right bottom placement   |
+
 ```jsx
 <Box box-position='absolute' box-place='center'>
+    ...
+</Box>
+```
+
+## `box-zindex`
+
+> Use with prop `box-position`
+
+**List of values**
+
+| Value  | CSS var               | CSS value |
+|--------|-----------------------|-----------|
+| `none` | ---                   | `0`       |
+| `xxs`  | `--ek-box-zindex-xxs` | `5`       |
+| `xs`   | `--ek-box-zindex-xs`  | `10`      |
+| `s`    | `--ek-box-zindex-s`   | `15`      |
+| `m`    | `--ek-box-zindex-m`   | `20`      |
+| `l`    | `--ek-box-zindex-l`   | `25`      |
+| `xl`   | `--ek-box-zindex-xl`  | `30`      |
+| `xxl`  | `--ek-box-zindex-xxl` | `35`      |
+
+```jsx
+<Box box-position='absolute' box-zindex='xs'>
     ...
 </Box>
 ```
