@@ -26,7 +26,7 @@
 
 ### 3.1.1 *(30.11.2019)*
 - **Added** `-webkit-overflow-scrolling: touch` for prop [`box-overflow`][box-overflow]
-- **Added** multi props for [`box-position`][box-position]:
+- **Added** multi props for [`box-position`][box-position]
 - **Added** new prop [`box-zindex`][box-zindex]
 - **Added** new value `none` for prop [`box-place`][box-place]
 
