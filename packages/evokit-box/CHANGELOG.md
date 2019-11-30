@@ -24,7 +24,7 @@
 
 ## CHANGELOG
 
-### 3.2.0 *(30.11.2019)*
+### 3.1.1 *(30.11.2019)*
 - **Added** `-webkit-overflow-scrolling: touch` for prop [`box-overflow`][box-overflow]
 - **Added** multi props for [`box-position`][box-position]:
 - **Added** new prop [`box-zindex`][box-zindex]
