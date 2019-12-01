@@ -38,6 +38,7 @@
     - [`box-border-width`][box-border-width]
 - **Added** multi props for [`box-position`][box-position]
 - **Added** `-webkit-overflow-scrolling: touch` for prop [`box-overflow`][box-overflow]
+- **Fixed** media rules for [`box-place`][box-place]
 
 ### 3.1.2 *(30.11.2019)*
 
