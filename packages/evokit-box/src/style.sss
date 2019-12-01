@@ -15,6 +15,9 @@
     --ek-box-indent-l: 25px
     --ek-box-indent-xl: 30px
     --ek-box-indent-xxl: 35px
+    --ek-box-indent-3xl: 40px
+    --ek-box-indent-4xl: 45px
+    --ek-box-indent-5xl: 50px
     // prop 'box-round'
     --ek-box-round-xxs: 2px
     --ek-box-round-xs: 4px
@@ -23,6 +26,9 @@
     --ek-box-round-l: 10px
     --ek-box-round-xl: 12px
     --ek-box-round-xxl: 14px
+    --ek-box-round-3xl: 16px
+    --ek-box-round-4xl: 18px
+    --ek-box-round-5xl: 20px
     // prop 'box-border-width'
     --ek-box-border-width-xxs: 1px
     --ek-box-border-width-xs: 2px
@@ -31,6 +37,9 @@
     --ek-box-border-width-l: 5px
     --ek-box-border-width-xl: 6px
     --ek-box-border-width-xxl: 7px
+    --ek-box-border-width-3xl: 8px
+    --ek-box-border-width-4xl: 9px
+    --ek-box-border-width-5xl: 10px
     // prop 'box-zindex'
     --ek-box-zindex-xxs: 5
     --ek-box-zindex-xs: 10
@@ -39,6 +48,10 @@
     --ek-box-zindex-l: 25
     --ek-box-zindex-xl: 30
     --ek-box-zindex-xxl: 35
+    --ek-box-zindex-3xl: 40
+    --ek-box-zindex-4xl: 45
+    --ek-box-zindex-5xl: 50
+
 .box
     display: block
     box-sizing: border-box
@@ -99,7 +112,7 @@
  *
  **/
 
-@each $value in (static, relative, absolute, fixed)
+@each $value in (static, relative, absolute, fixed, sticky)
     @mixin media .box_position_$(value)
         position: $value
 
@@ -180,7 +193,7 @@
  *
  **/
 
-@each $value in (none, xxs, xs, s, m, l, xl, xxl, auto)
+@each $value in (none, xxs, xs, s, m, l, xl, xxl, 3xl, 4xl, 5xl, auto)
     @mixin media .box_zindex_$(value)
         @if $value == none
             z-index: 0
@@ -196,7 +209,7 @@
  *
  **/
 
-@each $value in (none, xxs, xs, s, m, l, xl, xxl, auto)
+@each $value in (none, xxs, xs, s, m, l, xl, xxl, 3xl, 4xl, 5xl, auto)
     @mixin media .box_margin_$(value)
         @if $value == none
             margin: 0
@@ -266,7 +279,7 @@
  *
  **/
 
-@each $value in (none, xxs, xs, s, m, l, xl, xxl)
+@each $value in (none, xxs, xs, s, m, l, xl, xxl, 3xl, 4xl, 5xl)
     @mixin media .box_padding_$(value)
         @if $value == none
             padding: 0
@@ -320,7 +333,7 @@
  *
  **/
 
-@each $value in (none, xxs, xs, s, m, l, xl, xxl, full)
+@each $value in (none, xxs, xs, s, m, l, xl, xxl, 3xl, 4xl, 5xl, full)
     @mixin media .box_round_$(value)
         @if $value == none
             border-radius: 0
@@ -413,7 +426,7 @@
  *
  **/
 
-@each $value in (none, xxs, xs, s, m, l, xl, xxl)
+@each $value in (none, xxs, xs, s, m, l, xl, xxl, 3xl, 4xl, 5xl)
     @mixin media .box_border-width_$(value)
         @if $value == none
             border-width: 0
@@ -519,3 +532,14 @@
     @mixin media .box_overflow-y_$(value)
         overflow-y: $value
         -webkit-overflow-scrolling: touch
+
+/**
+ * Opacity:
+ *
+ *  - box_opacity_*
+ *
+ **/
+
+@each $value in (0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100)
+    @mixin media .box_opacity_$(value)
+        opacity: resolve($value / 100)

@@ -5,6 +5,7 @@ export const Box = createBlock('div', 'box', [
     'background',
     'display',
     'height',
+    'opacity',
     'width',
     ['position', [
         'position',

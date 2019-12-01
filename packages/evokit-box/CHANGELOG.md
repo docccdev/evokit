@@ -12,6 +12,7 @@
 [box-border-style]: /packages/evokit-box/?id=box-border-style
 [box-position]: /packages/evokit-box/?id=box-position
 [box-zindex]: /packages/evokit-box/?id=box-zindex
+[box-opacity]: /packages/evokit-box/?id=box-opacity
 
 [create_theme]: /docs/base/theme.md
 
@@ -24,11 +25,27 @@
 
 ## CHANGELOG
 
-### 3.1.2 *(30.11.2019)*
-- **Added** `-webkit-overflow-scrolling: touch` for prop [`box-overflow`][box-overflow]
-- **Added** multi props for [`box-position`][box-position]
+### 3.2.0 *(01.12.2019)*
 - **Added** new prop [`box-zindex`][box-zindex]
+- **Added** new prop [`box-opacity`][box-opacity]
 - **Added** new value `none` for prop [`box-place`][box-place]
+- **Added** new value `sticky` for prop [`box-position`][box-position]
+- **Added** new values `3xl`, `4xl`, `5xl` for props:
+    - [`box-margin`][box-margin]
+    - [`box-padding`][box-padding]
+    - [`box-round`][box-round]
+    - [`box-zindex`][box-zindex]
+    - [`box-border-width`][box-border-width]
+- **Added** multi props for [`box-position`][box-position]
+- **Added** `-webkit-overflow-scrolling: touch` for prop [`box-overflow`][box-overflow]
+
+### 3.1.2 *(30.11.2019)*
+
+?> Fixed :)
+
+### 3.1.1 *(30.11.2019)*
+
+!> Broken :(
 
 ### 3.1.0 *(11.10.2019)*
 
