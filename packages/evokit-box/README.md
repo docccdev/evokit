@@ -3,6 +3,7 @@
 
 [css-variable-usage]: //w3schools.com/css/css3_variables.asp
 [html-all-tags]: //www.w3schools.com/tags/default.asp
+[react-component]: //reactjs.org/docs/react-component.html
 
 [create_theme]: /docs/base/theme.md
 [installation]: /docs/getting-started/installation.md
@@ -18,14 +19,15 @@
 [box-display]: #box-display
 [box-height]: #box-height
 [box-margin]: #box-margin
+[box-opacity]: #box-opacity
 [box-overflow]: #box-overflow
 [box-padding]: #box-padding
 [box-place]: #box-place
 [box-position]: #box-position
-[box-zindex]: #box-zindex
 [box-round]: #box-round
 [box-tag]: #box-tag
 [box-width]: #box-width
+[box-zindex]: #box-zindex
 
 # EvoKit - Box
 
@@ -72,19 +74,20 @@ const App = () => (
 | [box-background]       | `null`    | [Create theme][create_theme]  | Background color |
 | [box-border] `*`       | `null`    | [Create theme][create_theme]  | Border color, width and style     |
 | [box-border-color] `*` | `null`    | [Create theme][create_theme]  | Border color     |
-| [box-border-width] `*` | `none`    | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl`  | Border width     |
+| [box-border-width] `*` | `none`    | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` `3xl` `4xl` `5xl`  | Border width     |
 | [box-border-style] `*` | `solid`   | `solid` `dotted` `dashed`  | Border style     |
 | [box-display]          | `block`   | `block` `inline-block` `inline` `none` | Display type |
 | [box-height]           | `auto`    | `auto` `1-1` | Set the height |
-| [box-margin] `*`       | `none`    | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` `auto` | Indent around block |
+| [box-margin] `*`       | `none`    | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` `3xl` `4xl` `5xl` `auto` | Indent around block |
+| [box-opacity]          | `null`    | `0` `10` `20` `30` `40` `50` `60` `70` `80` `90` `100` | Set the opacity in % |
 | [box-overflow] `*`     | `visible` | `auto` `hidden` `scroll` `visible` | Display overflow block content |
-| [box-padding] `*`      | `none`    | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Indent around an block content |
+| [box-padding] `*`      | `none`    | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` `3xl` `4xl` `5xl` | Indent around an block content |
 | [box-place]            | `null`    | `none` `top` `top-left` `top-right` `center` `center-left` `center-right` `bottom` `bottom-left` `bottom-right` | Position place, depending [box-position] |
-| [box-position] `*`     | `static`  | `static` `relative` `absolute` `fixed` | Positioning method |
-| [box-round] `*`        | `none`    | `none` `full` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Corner rounding |
-| [box-tag]              | `div`     | [HTML tags][html-all-tags] | HTML tag    |
+| [box-position] `*`     | `static`  | `static` `relative` `absolute` `fixed` `sticky` | Positioning method |
+| [box-round] `*`        | `none`    | `none` `full` `xxs` `xs` `s` `m` `l` `xl` `xxl` `3xl` `4xl` `5xl` | Corner rounding |
+| [box-tag]              | `div`     | [HTML tags][html-all-tags] or [React Component][react-component] | HTML tag or React Component    |
 | [box-width]            | `auto`    | `auto` `1-1` `*-2` `*-3` `*-4` `*-5` `*-6` `*-7` `*-8` `*-9` `*-10` | Set the width |
-| [box-zindex]           | `null`    | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Position z-index, depending [box-position] |
+| [box-zindex]           | `null`    | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` `3xl` `4xl` `5xl` | Position z-index, depending [box-position] |
 
 > `*` — prop has advanced params
 
@@ -108,6 +111,9 @@ const App = () => (
     --ek-box-indent-l: 25px;
     --ek-box-indent-xl: 30px;
     --ek-box-indent-xxl: 35px;
+    --ek-box-indent-3xl: 40px;
+    --ek-box-indent-4xl: 45px;
+    --ek-box-indent-5xl: 50px;
     /* prop 'box-round' */
     --ek-box-round-xxs: 2px;
     --ek-box-round-xs: 4px;
@@ -116,6 +122,9 @@ const App = () => (
     --ek-box-round-l: 10px;
     --ek-box-round-xl: 12px;
     --ek-box-round-xxl: 14px;
+    --ek-box-round-3xl: 16px;
+    --ek-box-round-4xl: 18px;
+    --ek-box-round-5xl: 20px;
     /* prop 'box-border-width' */
     --ek-box-border-width-xxs: 1px;
     --ek-box-border-width-xs: 2px;
@@ -124,6 +133,9 @@ const App = () => (
     --ek-box-border-width-l: 5px;
     --ek-box-border-width-xl: 6px;
     --ek-box-border-width-xxl: 7px;
+    --ek-box-border-width-3xl: 8px;
+    --ek-box-border-width-4xl: 9px;
+    --ek-box-border-width-5xl: 10px;
     /* prop 'box-zindex' */
     --ek-box-zindex-xxs: 5;
     --ek-box-zindex-xs: 10;
@@ -132,6 +144,9 @@ const App = () => (
     --ek-box-zindex-l: 25;
     --ek-box-zindex-xl: 30;
     --ek-box-zindex-xxl: 35;
+    --ek-box-zindex-3xl: 40;
+    --ek-box-zindex-4xl: 45;
+    --ek-box-zindex-5xl: 50;
 }
 ```
 
@@ -209,6 +224,9 @@ The property allows you to set the indentation value for all sides of an element
 | `l`    | `--ek-box-indent-l`   | `25px`    |
 | `xl`   | `--ek-box-indent-xl`  | `30px`    |
 | `xxl`  | `--ek-box-indent-xxl` | `35px`    |
+| `3xl`  | `--ek-box-indent-3xl` | `40px`    |
+| `4xl`  | `--ek-box-indent-4xl` | `45px`    |
+| `5xl`  | `--ek-box-indent-5xl` | `50px`    |
 
 ```jsx
 <Box box-margin='s' />
@@ -254,6 +272,9 @@ The property allows you to set the indentation value for all sides of an element
 | `l`    | `--ek-box-indent-l`   | `25px`    |
 | `xl`   | `--ek-box-indent-xl`  | `30px`    |
 | `xxl`  | `--ek-box-indent-xxl` | `35px`    |
+| `3xl`  | `--ek-box-indent-3xl` | `40px`    |
+| `4xl`  | `--ek-box-indent-4xl` | `45px`    |
+| `5xl`  | `--ek-box-indent-5xl` | `50px`    |
 
 ```jsx
 <Box box-padding='s' />
@@ -294,12 +315,15 @@ The property allows you to set the fillet value for all corners of the element a
 | `none` | ---                   | `0px`     |
 | `full` | ---                   | `50%`     |
 | `xxs`  | `--ek-box-round-xxs`  | `2px`     |
-| `xs`   | `--ek-box-round-xs`   | `4px`    |
-| `s`    | `--ek-box-round-s`    | `6px`    |
-| `m`    | `--ek-box-round-m`    | `8px`    |
+| `xs`   | `--ek-box-round-xs`   | `4px`     |
+| `s`    | `--ek-box-round-s`    | `6px`     |
+| `m`    | `--ek-box-round-m`    | `8px`     |
 | `l`    | `--ek-box-round-l`    | `10px`    |
 | `xl`   | `--ek-box-round-xl`   | `12px`    |
 | `xxl`  | `--ek-box-round-xxl`  | `14px`    |
+| `3xl`  | `--ek-box-round-3xl`  | `16px`    |
+| `4xl`  | `--ek-box-round-4xl`  | `18px`    |
+| `5xl`  | `--ek-box-round-5xl`  | `20px`    |
 
 ```jsx
 <Box box-round='s' />
@@ -414,6 +438,9 @@ The property allows you to set the type of positioning, location place on all si
 | `l`    | `--ek-box-zindex-l`   | `25`      |
 | `xl`   | `--ek-box-zindex-xl`  | `30`      |
 | `xxl`  | `--ek-box-zindex-xxl` | `35`      |
+| `3xl`  | `--ek-box-zindex-3xl` | `40`      |
+| `4xl`  | `--ek-box-zindex-4xl` | `45`      |
+| `5xl`  | `--ek-box-zindex-5xl` | `50`      |
 
 ```jsx
 <Box box-position='absolute' box-zindex='xs'>
@@ -508,6 +535,9 @@ The property allows you to set the border width for all sides of an element at o
 | `l`    | `--ek-box-border-width-l`    | `5px`     |
 | `xl`   | `--ek-box-border-width-xl`   | `6px`     |
 | `xxl`  | `--ek-box-border-width-xxl`  | `7px`     |
+| `3xl`  | `--ek-box-border-width-3xl`  | `8px`    |
+| `4xl`  | `--ek-box-border-width-4xl`  | `9px`    |
+| `5xl`  | `--ek-box-border-width-5xl`  | `10px`    |
 
 ```jsx
 <Box box-border-width='s' />
@@ -597,3 +627,24 @@ The property allows you to set the border style for all sides of an element at o
 </Box>
 ```
 > Set the `THEME_NAME` depending on the [theming][create_theme]
+
+
+## `box-opacity`
+
+- `0` - value: `0`
+- `10` - value: `0.1`
+- `20` - value: `0.2`
+- `30` - value: `0.3`
+- `40` - value: `0.4`
+- `50` - value: `0.5`
+- `60` - value: `0.6`
+- `70` - value: `0.7`
+- `80` - value: `0.8`
+- `90` - value: `0.9`
+- `100` - value: `1`
+
+```jsx
+<Box box-opacity='50'>
+    ...
+</Box>
+```

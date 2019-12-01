@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Box box-opacity="..." /> props box-opacity 1`] = `
+<div
+  className="ek-box ek-box_opacity_100"
+/>
+`;
