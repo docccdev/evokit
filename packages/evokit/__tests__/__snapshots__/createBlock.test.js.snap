@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`import { createBlock } from 'evokit'; as props class 1`] = `
+<ClassComponent
+  className="ek-block"
+/>
+`;
+
+exports[`import { createBlock } from 'evokit'; as props class 2`] = `"<header data-test=\\"test\\" class=\\"ek-block\\"></header>"`;
+
+exports[`import { createBlock } from 'evokit'; as props class with mods 1`] = `
+<ClassComponent
+  className="ek-block ek-block_modName_modValue"
+/>
+`;
+
+exports[`import { createBlock } from 'evokit'; as props class with mods 2`] = `"<header data-test=\\"test\\" class=\\"ek-block ek-block_modName_modValue\\"></header>"`;
+
+exports[`import { createBlock } from 'evokit'; as props func 1`] = `
+<FuncComponent
+  className="ek-block"
+/>
+`;
+
+exports[`import { createBlock } from 'evokit'; as props func 2`] = `"<table data-test=\\"test\\" class=\\"ek-block\\"></table>"`;
+
+exports[`import { createBlock } from 'evokit'; as props func with mods 1`] = `
+<FuncComponent
+  className="ek-block ek-block_modName_modValue"
+/>
+`;
+
+exports[`import { createBlock } from 'evokit'; as props func with mods 2`] = `"<table data-test=\\"test\\" class=\\"ek-block ek-block_modName_modValue\\"></table>"`;
+
+exports[`import { createBlock } from 'evokit'; as props string 1`] = `
+<section
+  className="ek-block"
+/>
+`;
+
+exports[`import { createBlock } from 'evokit'; as props string 2`] = `"<section class=\\"ek-block\\"></section>"`;

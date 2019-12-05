@@ -55,7 +55,7 @@ const Footer = createBlock('div', 'footer', ['padding']);
 <Footer footer-padding='xxl' /> // <div class="ek-footer ek-footer_padding_xxl"></div>
 
 // ADDITIONAL PROPS:
-<Footer footer-tag='span' /> // <span class="ek-footer ek-footer_padding_xxl"></span>
+<Footer footer-as='span' /> // <span class="ek-footer ek-footer_padding_xxl"></span>
 <Footer footer-preset={{ css: cssModules }} /> // CSS Modules
 ```
 
@@ -97,7 +97,7 @@ import { createBlock, withProps } from 'evokit';
 const Footer = createBlock('div', 'footer', ['padding']);
 
 const FooterXXL = withProps(Footer, {
-    'footer-tag': 'table',
+    'footer-as': 'table',
     'footer-padding': 'xxl',
 });
 
@@ -109,5 +109,5 @@ const FooterXXL = withProps(Footer, {
 
 <Footer /> // <div class="ek-footer"></div>
 <FooterXXL /> // <table class="ek-footer ek-footer_padding_xxl"></table>
-<FooterXXL footer-tag='span' footer-padding='m' /> // <span class="ek-footer ek-footer_padding_m"></span>
+<FooterXXL footer-as='span' footer-padding='m' /> // <span class="ek-footer ek-footer_padding_m"></span>
 ```

@@ -8,7 +8,8 @@
 
 [media]: /docs/getting-started/media.md
 [use-props_multi-values]: /docs/getting-started/props?id=multi-values
-[use-props_box-ref]: /docs/getting-started/props?id=box-ref
+[block_name-ref]: /docs/getting-started/props?id=block_name-ref
+[block_name-as]: /docs/getting-started/props?id=block_name-as
 [text]: /docs/base/text.md
 [colors]: /docs/base/colors.md
 [create_theme]: /docs/base/theme.md
@@ -37,9 +38,14 @@
 
 !> In version 3.0.0 there are no more UI blocks, they are all in separate packages, please update carefully.
 
+### 3.2.0 *(05.12.2019)*
+
+- **Deprecated** prop `{BLOCK_NAME}-tag`
+- **Added** new prop `{BLOCK_NAME}-as`. [More][block_name-as]
+
 ### 3.1.0 *(11.10.2019)*
 
-- **Fixed** react ref prop. The prop `{BLOCK_NAME}-ref` is now deprecated. [More][use-props_box-ref]
+- **Fixed** react ref prop. The prop `{BLOCK_NAME}-ref` is now deprecated. [More][block_name-ref]
 - **Fixed** prop `{BLOCK_NAME}-tag`
 - **Added** multi prop values. [More][use-props_multi-values]
 
