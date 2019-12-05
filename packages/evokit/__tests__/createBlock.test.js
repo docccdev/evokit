@@ -103,6 +103,59 @@ describe("import { createBlock } from 'evokit';", () => {
         expect(shallow(<Block>ololo</Block>).contains(<div className='ek-block'>ololo</div>)).toBeTruthy();
     });
 
+    describe("as props", () => {
+        const Block = createBlock('div', 'block', ['modName']);
+        const FuncComponent = (props) => <table data-test='test' {...props} />;
+        class ClassComponent extends React.Component {
+            constructor(props) {
+                super(props);
+            }
+            render() {
+                return <header data-test='test' {...this.props} />;
+            }
+        }
+
+        it('string', () => {
+            const wrapper = shallow(<Block block-as='section' />);
+
+            expect(wrapper).toMatchSnapshot();
+            expect(wrapper.html()).toMatchSnapshot();
+            expect(wrapper.html()).toEqual('<section class="ek-block"></section>');
+        });
+
+        it('func', () => {
+            const wrapper = shallow(<Block block-as={FuncComponent} />);
+
+            expect(wrapper).toMatchSnapshot();
+            expect(wrapper.html()).toMatchSnapshot();
+            expect(wrapper.html()).toEqual('<table data-test="test" class="ek-block"></table>');
+        });
+
+        it('class', () => {
+            const wrapper = shallow(<Block block-as={ClassComponent} />);
+
+            expect(wrapper).toMatchSnapshot();
+            expect(wrapper.html()).toMatchSnapshot();
+            expect(wrapper.html()).toEqual('<header data-test="test" class="ek-block"></header>');
+        });
+
+        it('func with mods', () => {
+            const wrapper = shallow(<Block block-modName='modValue' block-as={FuncComponent} />);
+
+            expect(wrapper).toMatchSnapshot();
+            expect(wrapper.html()).toMatchSnapshot();
+            expect(wrapper.html()).toEqual('<table data-test="test" class="ek-block ek-block_modName_modValue"></table>');
+        });
+
+        it('class with mods', () => {
+            const wrapper = shallow(<Block block-modName='modValue' block-as={ClassComponent} />);
+
+            expect(wrapper).toMatchSnapshot();
+            expect(wrapper.html()).toMatchSnapshot();
+            expect(wrapper.html()).toEqual('<header data-test="test" class="ek-block ek-block_modName_modValue"></header>');
+        });
+    });
+
     describe("with props", () => {
         const Block = createBlock('div', 'block', ['modName']);
         const BlockItem = createBlock('div', 'block__item', ['elModName']);
@@ -113,7 +166,7 @@ describe("import { createBlock } from 'evokit';", () => {
             ).toBeTruthy();
         });
 
-        it('tag', () => {
+        it('DEPRECATED prop tag', () => {
             expect(shallow(<Block block-tag='span' />).contains(<span className='ek-block'></span>)).toBeTruthy();
         });
 

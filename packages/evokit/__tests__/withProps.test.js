@@ -31,6 +31,23 @@ describe("import { withProps } from 'evokit';", () => {
         expect(wrapperBlock.html()).toEqual('<div class="ek-block"></div>');
     });
 
+    it('default prop as', () => {
+        const Block = createBlock('div', 'block');
+        const BlockBabadook = withProps(Block, { 'block-as': 'span' });
+
+        const wrapperBlock = shallow(<Block>test1</Block>);
+        const wrapperBlockBabadook = shallow(<BlockBabadook>test2</BlockBabadook>);
+
+        expect(wrapperBlock).toMatchSnapshot();
+        expect(wrapperBlockBabadook).toMatchSnapshot();
+
+        expect(wrapperBlock.html()).toMatchSnapshot();
+        expect(wrapperBlockBabadook.html()).toMatchSnapshot();
+
+        expect(wrapperBlock.html()).toEqual('<div class="ek-block">test1</div>');
+        expect(wrapperBlockBabadook.html()).toEqual('<span class="ek-block">test2</span>');
+    });
+
     it('default prop children', () => {
         const Block = createBlock('div', 'block', ['color']);
         const BlockBabadook = withProps(Block, { children: 'Babadook' });

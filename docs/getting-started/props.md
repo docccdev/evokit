@@ -1,56 +1,43 @@
 [evokit-box]: /packages/evokit-box/
+[evokit-link]: /packages/evokit-link/
+[react-component]: //reactjs.org/docs/components-and-props.html
 
 # Use props
 
-All blocks have base props, such as `tag`, `ref`, `preset`. Also supports other valid props of the React Element
+All blocks have base props, such as `{BLOCK_NAME}-as`, `{BLOCK_NAME}-preset`. Also supports other valid props of the React Element
 
-- `{BLOCK_NAME}-tag` - type `string`, used to change the HTML tag
+- ~~`{BLOCK_NAME}-tag` - type `string`, used to change the HTML tag~~ (**DEPRECATED**)
 - ~~`{BLOCK_NAME}-ref` - type `function`, used to get a NODE reference~~ (**DEPRECATED**)
+- `{BLOCK_NAME}-as` - type argument can be either a tag name string (such as `div` or `span`), a [React component][react-component] type (a class or a function)
 - `{BLOCK_NAME}-preset` - type `object`, used to customize the generation of class names and CSS Modules
 
 ---
 
 ## Props
 
-For examples, consider the use base props on the [Box][evokit-box] block.
+### `{BLOCK_NAME}-as`
 
-### `box-tag`
+The type argument can be either a tag name string (such as `div` or `span`), a [React component][react-component] type (a class or a function)
 
-The block will have a tag `span`
-
-```jsx
-import { Box } from 'evokit-box';
-import 'evokit-box/style.css';
-
-// input:
-<Box box-tag='span' />
-
-// output:
-<span class='ek-box' />
-```
-
-### `box-ref`
-
-!> **DEPRECATED** prop `box-ref`, please use React `ref`
-
-The passed function will receive a `target` argument that refers to the current DOM node.
+> For examples, consider the use base props on the [evokit-link][evokit-link] block.
 
 ```jsx
-import { Box } from 'evokit-box';
-import 'evokit-box/style.css';
+import { Link as RouterLink } from "react-router-dom";
+import { Link } from 'evokit-link';
+import 'evokit-link/style.css';
 
-// BAD
-<Box box-ref={...} />
-
-// GOOD
-<Box ref={...} />
+<Link href='#' /> // <a href='#' className='ek-link'></a>
+<Link link-as='span' /> // <span className='ek-link'></span>
+<Link link-as={RouterLink} to='/home' /> // <RouterLink className='ek-link' to='/home'></RouterLink>
 ```
 
-### `box-preset`
+### `{BLOCK_NAME}-preset`
 
 By default, uses the rules BEM naming and class prefix `ek-`
 - `ek-blockName`
 - `ek-blockName_modName_modVal`
+
+> For examples, consider the use base props on the [evokit-box][evokit-box] block.
 
 ```js
 {
@@ -73,6 +60,40 @@ import boxCss from 'evokit-box/style.css'; // return for example {'ek-box': 'ek-
 // output:
 <div class='ek-box-hF7j' />
 
+```
+
+### `{BLOCK_NAME}-tag`
+
+!> **DEPRECATED** prop `{BLOCK_NAME}-tag`, please use `{BLOCK_NAME}-as`
+
+The block will have a tag `span`
+
+```jsx
+import { Box } from 'evokit-box';
+import 'evokit-box/style.css';
+
+// input:
+<Box box-tag='span' />
+
+// output:
+<span class='ek-box' />
+```
+
+### `{BLOCK_NAME}-ref`
+
+!> **DEPRECATED** prop `{BLOCK_NAME}-ref`, please use React `ref`
+
+The passed function will receive a `target` argument that refers to the current DOM node.
+
+```jsx
+import { Box } from 'evokit-box';
+import 'evokit-box/style.css';
+
+// BAD
+<Box box-ref={...} />
+
+// GOOD
+<Box ref={...} />
 ```
 
 ## Use cases

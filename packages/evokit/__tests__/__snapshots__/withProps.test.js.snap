@@ -1,5 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`import { withProps } from 'evokit'; default prop as 1`] = `
+<div
+  className="ek-block"
+>
+  test1
+</div>
+`;
+
+exports[`import { withProps } from 'evokit'; default prop as 2`] = `
+<block
+  block-as="span"
+>
+  test2
+</block>
+`;
+
+exports[`import { withProps } from 'evokit'; default prop as 3`] = `"<div class=\\"ek-block\\">test1</div>"`;
+
+exports[`import { withProps } from 'evokit'; default prop as 4`] = `"<span class=\\"ek-block\\">test2</span>"`;
+
 exports[`import { withProps } from 'evokit'; default prop children 1`] = `
 <div
   className="ek-block"

@@ -40,11 +40,12 @@ export const createBlock = (tagName = 'div', blockName, blockMods, blockPreset) 
 
     const Block = forwardRef(({ className, children, ...props }, ref) => {
         checkPropDeprecated(!!getProp(props, 'ref'), getPropKey(blockName, 'ref'), 'ref');
+        checkPropDeprecated(!!getProp(props, 'tag'), getPropKey(blockName, 'tag'), getPropKey(blockName, 'as'));
 
         const [cleanProps, modProps] = divideProps(props, modPropKeys, basePropKeys);
         const reanameModProps = renameKeys(modProps, mapPropMods);
         const newRef = ref || getProp(props, 'ref');
-        const newTag = getProp(props, 'tag') || tagName;
+        const newType = getProp(props, 'as') || getProp(props, 'tag') || tagName;
         const newPreset = getProp(props, 'preset') || blockPreset;
         const newClassName = withPreset(newPreset)(blockName)(
             reanameModProps,
@@ -53,7 +54,7 @@ export const createBlock = (tagName = 'div', blockName, blockMods, blockPreset) 
         );
 
         return createElement(
-            newTag,
+            newType,
             {
                 ...cleanProps,
                 className: newClassName,

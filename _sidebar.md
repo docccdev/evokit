@@ -4,11 +4,11 @@
   * [Installation](/docs/getting-started/installation.md)
   * [Quick start](/docs/getting-started/quick-start.md)
   * [Webpack](/docs/getting-started/webpack.md)
-  * [Use props](/docs/getting-started/props.md)
-  * [Use media](/docs/getting-started/media.md)
 
 * CORE
   * [EvoKit](/packages/evokit/)
+  * [Use props](/docs/getting-started/props.md)
+  * [Use media](/docs/getting-started/media.md)
   * [createBlock()](/docs/base/create-block.md)
   * [withProps()](/docs/base/with-props.md)
 
