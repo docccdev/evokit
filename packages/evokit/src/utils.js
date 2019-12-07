@@ -34,7 +34,11 @@ export const getPropKey = (...args) => {
 
 export const getBasePropTypes = (blockName) => ({
     [getPropKey(blockName, 'tag')]: PropTypes.string, // DEPRECATED
-    [getPropKey(blockName, 'as')]: PropTypes.elementType,
+    [getPropKey(blockName, 'as')]: PropTypes.oneOfType([
+        PropTypes.func,
+        PropTypes.string,
+        PropTypes.shape({ render: PropTypes.func.isRequired }),
+    ]),
     [getPropKey(blockName, 'ref')]: PropTypes.func,
     [getPropKey(blockName, 'preset')]: PropTypes.object,
 });

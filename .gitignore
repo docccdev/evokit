@@ -2,7 +2,8 @@ node_modules
 dist
 lerna-debug.log
 .DS_Store
-packages/*/index.js
+packages/evokit/dist
+packages/evokit-*/index.js
 packages/*/style.css
 packages/*/style@*.css
 packages/*/theme.css
