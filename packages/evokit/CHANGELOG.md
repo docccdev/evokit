@@ -38,6 +38,11 @@
 
 !> In version 3.0.0 there are no more UI blocks, they are all in separate packages, please update carefully.
 
+### 3.2.1 *(07.12.2019)*
+
+- **Fixed** print warning invalid props
+- **Added** separated dist `evokit.js` and `evokit.min.js`
+
 ### 3.2.0 *(05.12.2019)*
 
 - **Deprecated** prop `{BLOCK_NAME}-tag`

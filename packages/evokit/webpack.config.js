@@ -1,12 +1,13 @@
+var path = require('path');
+var isProd = process.env.NODE_ENV === 'production';
 var babelConfig = require('../../config/babel.config.js');
 
 module.exports = {
-    mode: 'production',
     entry: './src/index.js',
     output: {
         library: 'EvoKit',
-        path: __dirname,
-        filename: 'index.js',
+        path: path.resolve(__dirname, 'dist'),
+        filename: isProd ? 'evokit.min.js' : 'evokit.js',
         libraryTarget: 'umd',
         globalObject: 'this'
     },
