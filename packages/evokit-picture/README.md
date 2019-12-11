@@ -67,7 +67,7 @@ const App = () => (
 | [picture-border-style] `*` | `solid`       | `solid` `dotted` `dashed`  | Border style     |
 | [picture-display]          | `block`       | `block` `none` | Display type |
 | [picture-fit]              | `null`        | `none` `fill` `contain` `cover` `scale-down`    | Filling the container relative to its height and width |
-| [picture-round] `*`        | `none`        | `none` `full` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Corner rounding |
+| [picture-round] `*`        | `none`        | `none` `full` `xxs` `xs` `s` `m` `l` `xl` `xxl` `3xl` `4xl` `5xl` | Corner rounding |
 
 ### `<Picture.Item />`
 
@@ -98,6 +98,9 @@ const App = () => (
     --ek-picture-round-l: 10px;
     --ek-picture-round-xl: 12px;
     --ek-picture-round-xxl: 14px;
+    --ek-picture-round-3xl: 16px;
+    --ek-picture-round-4xl: 18px;
+    --ek-picture-round-5xl: 20px;
     /* prop 'picture-border-width */
     --ek-picture-border-width-xxs: 1px;
     --ek-picture-border-width-xs: 2px;

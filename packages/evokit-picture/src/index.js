@@ -1,4 +1,4 @@
-// 3.2.0-beta.1
+// 3.2.0-beta.3
 import { createBlock } from 'evokit';
 
 export const Picture = createBlock('picture', 'picture', [

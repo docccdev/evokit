@@ -21,7 +21,7 @@
 
 ## CHANGELOG
 
-### 3.2.0-beta.1 *(11.12.2019)*
+### 3.2.0-beta.3 *(11.12.2019)*
 
 - **Added** new prop [`picture-background`][picture-background]
 - **Added** new props:
@@ -29,6 +29,7 @@
     - [`picture-border-width`][picture-border-width]
     - [`picture-border-style`][picture-border-style]
 - **Added** multi values for prop [`picture-border`][picture-border]
+- **Added** new values `3xl`, `4xl`, `5xl` for prop [`picture-round`][picture-round]
 - **Deprecated** some props are outdated and will be deleted:
     - `picture-border-lr`
     - `picture-border-tb`

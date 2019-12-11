@@ -15,6 +15,9 @@
     --ek-picture-round-l: 10px
     --ek-picture-round-xl: 12px
     --ek-picture-round-xxl: 14px
+    --ek-picture-round-3xl: 16px
+    --ek-picture-round-4xl: 18px
+    --ek-picture-round-5xl: 20px
     // prop 'picture-border-width'
     --ek-picture-border-width-xxs: 1px
     --ek-picture-border-width-xs: 2px
@@ -104,7 +107,7 @@
  *
  **/
 
-@each $value in (none, xxs, xs, s, m, l, xl, xxl, full)
+@each $value in (none, xxs, xs, s, m, l, xl, xxl, 3xl, 4xl, 5xl, full)
     @mixin media .picture_round_$(value)
         @if $value == none
             border-radius: 0
