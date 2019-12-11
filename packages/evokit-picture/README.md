@@ -170,17 +170,20 @@ The property allows you to set the fillet value for all corners of the element a
 
 **List of values**
 
-| Value  | CSS var               | CSS value |
-|--------|-----------------------|-----------|
-| `none` | ---                   | `0px`     |
-| `full` | ---                   | `50%`     |
+| Value  | CSS var                   | CSS value |
+|--------|---------------------------|-----------|
+| `none` | ---                       | `0px`     |
+| `full` | ---                       | `50%`     |
 | `xxs`  | `--ek-picture-round-xxs`  | `2px`     |
-| `xs`   | `--ek-picture-round-xs`   | `4px`    |
-| `s`    | `--ek-picture-round-s`    | `6px`    |
-| `m`    | `--ek-picture-round-m`    | `8px`    |
+| `xs`   | `--ek-picture-round-xs`   | `4px`     |
+| `s`    | `--ek-picture-round-s`    | `6px`     |
+| `m`    | `--ek-picture-round-m`    | `8px`     |
 | `l`    | `--ek-picture-round-l`    | `10px`    |
 | `xl`   | `--ek-picture-round-xl`   | `12px`    |
 | `xxl`  | `--ek-picture-round-xxl`  | `14px`    |
+| `3xl`  | `--ek-picture-round-xxl`  | `16px`    |
+| `4xl`  | `--ek-picture-round-xxl`  | `18px`    |
+| `5xl`  | `--ek-picture-round-xxl`  | `20px`    |
 
 ```jsx
 <Picture picture-round='s' />

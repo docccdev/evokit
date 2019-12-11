@@ -21,7 +21,7 @@
 
 ## CHANGELOG
 
-### 3.2.0-beta.3 *(11.12.2019)*
+### 3.2.0 *(11.12.2019)*
 
 - **Added** new prop [`picture-background`][picture-background]
 - **Added** new props:
