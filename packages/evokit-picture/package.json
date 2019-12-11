@@ -1,6 +1,6 @@
 {
   "name": "evokit-picture",
-  "version": "3.1.0",
+  "version": "3.2.0-beta.1",
   "description": "Creates a square with an image",
   "main": "index.js",
   "scripts": {
