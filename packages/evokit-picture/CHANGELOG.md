@@ -23,8 +23,8 @@
 
 ### 3.2.0 *(11.12.2019)*
 
-- **Added** new prop [`picture-background`][picture-background]
 - **Added** new props:
+    - [`picture-background`][picture-background]
     - [`picture-border-color`][picture-border-color]
     - [`picture-border-width`][picture-border-width]
     - [`picture-border-style`][picture-border-style]
@@ -33,7 +33,7 @@
 - **Deprecated** some props are outdated and will be deleted:
     - `picture-border-lr`
     - `picture-border-tb`
-- **Fixed** bug if added width styles `<Picture style={{ width: 100 }} />`
+- **Fixed** bug if added width style `<Picture style={{ width: 100 }} />`
 - Please [update theme][create_theme]
 
 ### 3.1.0 *(11.10.2019)*
