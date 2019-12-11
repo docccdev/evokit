@@ -46,6 +46,9 @@
             backgroundColor: '#42b983',
             textColor: '#fff'
         })
+        document.getElementById('back-to-top').addEventListener('click', function() {
+            window.location.href = window.location.href.split('?')[0];
+        });
     </script>
 </body>
 </html>

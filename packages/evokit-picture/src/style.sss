@@ -15,12 +15,28 @@
     --ek-picture-round-l: 10px
     --ek-picture-round-xl: 12px
     --ek-picture-round-xxl: 14px
+    // prop 'picture-border-width'
+    --ek-picture-border-width-xxs: 1px
+    --ek-picture-border-width-xs: 2px
+    --ek-picture-border-width-s: 3px
+    --ek-picture-border-width-m: 4px
+    --ek-picture-border-width-l: 5px
+    --ek-picture-border-width-xl: 6px
+    --ek-picture-border-width-xxl: 7px
+    --ek-picture-border-width-3xl: 8px
+    --ek-picture-border-width-4xl: 9px
+    --ek-picture-border-width-5xl: 10px
 
 .picture
     display: block
     position: relative
-    padding-top: 100%
     overflow: hidden
+    box-sizing: border-box
+
+    &:after
+        content: ""
+        display: block
+        padding-bottom: 100%
 
 .picture__item
     position: absolute
@@ -170,3 +186,67 @@
             border-bottom-left-radius: 50%
         @else
             border-bottom-left-radius: var(--ek-picture-round-$(value))
+
+/**
+ * Border width:
+ *
+ *  - picture_border-width_none
+ *  - picture_border-width_*
+ *
+ **/
+
+@each $value in (none, xxs, xs, s, m, l, xl, xxl, 3xl, 4xl, 5xl)
+    @mixin media .picture_border-width_$(value)
+        @if $value == none
+            border-width: 0
+        @else
+            border-width: var(--ek-picture-border-width-$(value))
+
+    @mixin media .picture_border-width-top_$(value)
+        @if $value == none
+            border-top-width: 0
+        @else
+            border-top-width: var(--ek-picture-border-width-$(value))
+
+    @mixin media .picture_border-width-right_$(value)
+        @if $value == none
+            border-right-width: 0
+        @else
+            border-right-width: var(--ek-picture-border-width-$(value))
+
+    @mixin media .picture_border-width-bottom_$(value)
+        @if $value == none
+            border-bottom-width: 0
+        @else
+            border-bottom-width: var(--ek-picture-border-width-$(value))
+
+    @mixin media .picture_border-width-left_$(value)
+        @if $value == none
+            border-left-width: 0
+        @else
+            border-left-width: var(--ek-picture-border-width-$(value))
+
+/**
+ * Border style:
+ *
+ *  - picture_border-style_solid
+ *  - picture_border-style_dotted
+ *  - picture_border-style_dashed
+ *
+ **/
+
+@each $value in (solid, dotted, dashed)
+    @mixin media .picture_border-style_$(value)
+        border-style: $value
+
+    @mixin media .picture_border-style-top_$(value)
+        border-top-style: $value
+
+    @mixin media .picture_border-style-right_$(value)
+        border-right-style: $value
+
+    @mixin media .picture_border-style-bottom_$(value)
+        border-bottom-style: $value
+
+    @mixin media .picture_border-style-left_$(value)
+        border-left-style: $value

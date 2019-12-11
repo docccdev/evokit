@@ -2,7 +2,12 @@
 [evokit]: /packages/evokit/README.md
 
 [picture-round]: /packages/evokit-picture/?id=picture-round
+[picture-border]: /packages/evokit-picture/?id=picture-border
+[picture-border-color]: /packages/evokit-picture/?id=picture-border-color
+[picture-border-width]: /packages/evokit-picture/?id=picture-border-width
+[picture-border-style]: /packages/evokit-picture/?id=picture-border-style
 [picture-display]: /packages/evokit-picture/?id=picture-display
+[picture-background]: /packages/evokit-picture/?id=picture-background
 [picture-item-display]: /packages/evokit-picture/?id=picture-item-display
 
 [create_theme]: /docs/base/theme.md
@@ -15,6 +20,20 @@
 ---
 
 ## CHANGELOG
+
+### 3.2.0-beta.1 *(11.12.2019)*
+
+- **Added** new prop [`picture-background`][picture-background]
+- **Added** new props:
+    - [`picture-border-color`][picture-border-color]
+    - [`picture-border-width`][picture-border-width]
+    - [`picture-border-style`][picture-border-style]
+- **Added** multi values for prop [`picture-border`][picture-border]
+- **Deprecated** some props are outdated and will be deleted:
+    - `picture-border-lr`
+    - `picture-border-tb`
+- **Fixed** bug if added width styles `<Picture style={{ width: 100 }} />`
+- Please [update theme][create_theme]
 
 ### 3.1.0 *(11.10.2019)*
 
