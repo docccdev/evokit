@@ -2,6 +2,12 @@
 
 :root
     --ek-picture-border-TEMPLATE_NAME: var(--border)
+    --ek-picture-background-TEMPLATE_NAME: var(--background)
+
+@mixin media .picture_background_TEMPLATE_NAME
+    background: var(--ek-picture-background-TEMPLATE_NAME)
+
+/* BORDER */
 
 @mixin media .picture_border_TEMPLATE_NAME
     border: 1px solid var(--ek-picture-border-TEMPLATE_NAME)
@@ -17,6 +23,25 @@
 
 @mixin media .picture_border-left_TEMPLATE_NAME
     border-left: 1px solid var(--ek-picture-border-TEMPLATE_NAME)
+
+/* BORDER COLOR */
+
+@mixin media .picture_border-color_TEMPLATE_NAME
+    border-color: var(--ek-picture-border-TEMPLATE_NAME)
+
+@mixin media .picture_border-color-top_TEMPLATE_NAME
+    border-top-color: var(--ek-picture-border-TEMPLATE_NAME)
+
+@mixin media .picture_border-color-right_TEMPLATE_NAME
+    border-right-color: var(--ek-picture-border-TEMPLATE_NAME)
+
+@mixin media .picture_border-color-bottom_TEMPLATE_NAME
+    border-bottom-color: var(--ek-picture-border-TEMPLATE_NAME)
+
+@mixin media .picture_border-color-left_TEMPLATE_NAME
+    border-left-color: var(--ek-picture-border-TEMPLATE_NAME)
+
+/* DEPRECATED */
 
 @mixin media .picture_border-tb_TEMPLATE_NAME
     border-top: 1px solid var(--ek-picture-border-TEMPLATE_NAME)

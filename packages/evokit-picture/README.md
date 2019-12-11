@@ -9,20 +9,22 @@
 [quik-start]: /docs/getting-started/quick-start.md
 [use-props]: /docs/getting-started/props.md
 
+[picture-background]: #picture-background
 [picture-border]: #picture-border
+[picture-border-color]: #picture-border-color
+[picture-border-width]: #picture-border-width
+[picture-border-style]: #picture-border-style
 [picture-display]: #picture-display
 [picture-fit]: #picture-fit
 [picture-item-display]: #picture-item-display
-[picture-item-tag]: #picture-item-tag
 [picture-round]: #picture-round
-[picture-tag]: #picture-tag
 
 # EvoKit - Picture
 
 [![](https://img.shields.io/npm/v/evokit-picture.svg)](https://www.npmjs.com/package/evokit-picture)
 [![](https://img.shields.io/badge/page-CHANGELOG-42b983)][CHANGELOG]
 
-Creates a square with an image. Contains two elements `<Picture>` and `<PictureItem>`
+Creates a square with an image. Contains two elements `<Picture>` and `<Picture.Item>`
 
 ---
 
@@ -36,7 +38,7 @@ npm install evokit-picture --save
 
 ## Usage
 
-> More about [usage][quik-start]. You can also use `<Picture.Item>` instead of `<PictureItem>`
+> More about [usage][quik-start]. You can also import and use `PictureItem` instead of `Picture.Item`
 
 ```jsx
 import React from 'react';
@@ -45,7 +47,7 @@ import 'evokit-picture/style.css';
 
 const App = () => (
     <Picture picture-round='full'>
-        <PictureItem src='...' alt='...' />
+        <Picture.Item src='...' alt='...' />
     </Picture>
 );
 ```
@@ -56,20 +58,22 @@ const App = () => (
 
 ### `<Picture />`
 
-| Prop name           | Default value | Possible value | Description  |
-|---------------------|---------------|----------------|--------------|
-| [picture-border]    | `null`        | [Create theme][create_theme]  | Border color |
-| [picture-display]   | `block`       | `block` `none` | Display type |
-| [picture-fit]       | `null`        | `none` `fill` `contain` `cover` `scale-down`    | Filling the container relative to its height and width |
-| [picture-round] `*` | `none`        | `none` `full` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Corner rounding |
-| [picture-tag]       | `picture`     | [HTML tags][html-all-tags] | HTML tag    |
+| Prop name                  | Default value | Possible value | Description  |
+|----------------------------|---------------|----------------|--------------|
+| [picture-background]       | `null`        | [Create theme][create_theme]  | Background color |
+| [picture-border] `*`       | `null`        | [Create theme][create_theme]  | Border color, width and style     |
+| [picture-border-color] `*` | `null`        | [Create theme][create_theme]  | Border color     |
+| [picture-border-width] `*` | `none`        | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` `3xl` `4xl` `5xl`  | Border width     |
+| [picture-border-style] `*` | `solid`       | `solid` `dotted` `dashed`  | Border style     |
+| [picture-display]          | `block`       | `block` `none` | Display type |
+| [picture-fit]              | `null`        | `none` `fill` `contain` `cover` `scale-down`    | Filling the container relative to its height and width |
+| [picture-round] `*`        | `none`        | `none` `full` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Corner rounding |
 
-### `<PictureItem />`
+### `<Picture.Item />`
 
 | Prop name                | Default value | Possible value             | Description  |
 |--------------------------|---------------|----------------------------|--------------|
 | [picture-item-display]   | `block`       | `block` `none`             | Display type |
-| [picture-item-tag]       | `img`         | [HTML tags][html-all-tags] | HTML tag     |
 
 
 > `*` — prop has advanced params
@@ -94,6 +98,17 @@ const App = () => (
     --ek-picture-round-l: 10px;
     --ek-picture-round-xl: 12px;
     --ek-picture-round-xxl: 14px;
+    /* prop 'picture-border-width */
+    --ek-picture-border-width-xxs: 1px;
+    --ek-picture-border-width-xs: 2px;
+    --ek-picture-border-width-s: 3px;
+    --ek-picture-border-width-m: 4px;
+    --ek-picture-border-width-l: 5px;
+    --ek-picture-border-width-xl: 6px;
+    --ek-picture-border-width-xxl: 7px;
+    --ek-picture-border-width-3xl: 8px;
+    --ek-picture-border-width-4xl: 9px;
+    --ek-picture-border-width-5xl: 10px;
 }
 ```
 
@@ -103,15 +118,6 @@ const App = () => (
 
 ---
 
-## `picture-tag`
-
-- Default value `picture`
-
-```jsx
-<Picture picture-tag='picture'>
-    ...
-</Picture>
-```
 
 ## `picture-display`
 
@@ -120,9 +126,10 @@ const App = () => (
 
 ```jsx
 <Picture picture-display='none'>
-    <PictureItem src='' alt='' />
+    <Picture.Item src='' alt='' />
 </Picture>
 ```
+
 
 ## `picture-fit`
 
@@ -134,7 +141,7 @@ const App = () => (
 
 ```jsx
 <Picture picture-fit='cover'>
-    <PictureItem src='' alt='' />
+    <Picture.Item src='' alt='' />
 </Picture>
 ```
 
@@ -185,29 +192,164 @@ The property allows you to set the fillet value for all corners of the element a
 />
 ```
 
+
 ## `picture-border`
+
+!> **DEPRECATED** props `picture-border-lr` and `picture-border-tb`, please use the separately `picture-border-left` and `picture-border-right` or `picture-border-top` and `picture-border-bottom`
+
+**Advanced props**
+
+- `picture-border-top`
+- `picture-border-right`
+- `picture-border-bottom`
+- `picture-border-left`
+
+**Multi values** _(set value separated by a space)_
+
+- `picture-border="{1}"`
+- `picture-border="{1} {2}"`
+- `picture-border="{1} {2} {3}"`
+
+> {1} - [color][picture-border-color], {2} - [width][picture-border-width], {3} - [style][picture-border-style]
+
+```jsx
+<Picture picture-border="{THEME_NAME}" />
+<Picture picture-border="{THEME_NAME} xs" />
+<Picture picture-border="{THEME_NAME} xs dotted" />
+
+<Picture picture-border-top="{THEME_NAME}" />
+<Picture picture-border-top="{THEME_NAME} xs" />
+<Picture picture-border-top="{THEME_NAME} xs dotted" />
+```
 
 > Set the `THEME_NAME` depending on the [theming][create_theme]
 
-> Has advanced props:
-> - `picture-border` - `top`, `right`, `bottom` or `left` for example **`picture-border-right`**
-> - `picture-border` - `tb` or `lr` for example **`picture-border-tb`**
+
+## `picture-border-color`
+
+The property allows you to set the border color for all sides of an element at once or to determine it only for specified sides.
+
+**Advanced props**
+
+- `picture-border-color-top` <sup>{1}</sup>
+- `picture-border-color-right` <sup>{2}</sup>
+- `picture-border-color-bottom` <sup>{3}</sup>
+- `picture-border-color-left` <sup>{4}</sup>
+
+**Multi values** _(set value separated by a space)_
+
+- `picture-border-color="{1,3} {2,4}"`
+- `picture-border-color="{1} {2,4} {3}"`
+- `picture-border-color="{1} {2} {3} {4}"`
 
 ```jsx
-<Picture picture-border={THEME_NAME}>
-    <PictureItem src='' alt='' />
-</Picture>
+<Picture picture-border-color='{THEME_NAME}' />
+<Picture picture-border-color='{THEME_NAME} {THEME_NAME}' />
+<Picture picture-border-color='{THEME_NAME} {THEME_NAME} {THEME_NAME}' />
+<Picture picture-border-color='{THEME_NAME} {THEME_NAME} {THEME_NAME} {THEME_NAME}' />
+<Picture
+    picture-border-color-top='{THEME_NAME}'
+    picture-border-color-right='{THEME_NAME}'
+    picture-border-color-bottom='{THEME_NAME}'
+    picture-border-color-left='{THEME_NAME}'
+/>
 ```
+> Set the `THEME_NAME` depending on the [theming][create_theme]
 
-## `picture-item-tag`
 
-- Default value `img`
+## `picture-border-width`
+
+The property allows you to set the border width for all sides of an element at once or to determine it only for specified sides.
+
+**Advanced props**
+
+- `picture-border-width-top` <sup>{1}</sup>
+- `picture-border-width-right` <sup>{2}</sup>
+- `picture-border-width-bottom` <sup>{3}</sup>
+- `picture-border-width-left` <sup>{4}</sup>
+
+**Multi values** _(set value separated by a space)_
+
+- `picture-border-width="{1,3} {2,4}"`
+- `picture-border-width="{1} {2,4} {3}"`
+- `picture-border-width="{1} {2} {3} {4}"`
+
+**List of values**
+
+| Value  | CSS var                      | CSS value |
+|--------|------------------------------|-----------|
+| `none` | ---                          | `0px`     |
+| `xxs`  | `--ek-picture-border-width-xxs`  | `1px`     |
+| `xs`   | `--ek-picture-border-width-xs`   | `2px`     |
+| `s`    | `--ek-picture-border-width-s`    | `3px`     |
+| `m`    | `--ek-picture-border-width-m`    | `4px`     |
+| `l`    | `--ek-picture-border-width-l`    | `5px`     |
+| `xl`   | `--ek-picture-border-width-xl`   | `6px`     |
+| `xxl`  | `--ek-picture-border-width-xxl`  | `7px`     |
+| `3xl`  | `--ek-picture-border-width-3xl`  | `8px`    |
+| `4xl`  | `--ek-picture-border-width-4xl`  | `9px`    |
+| `5xl`  | `--ek-picture-border-width-5xl`  | `10px`    |
 
 ```jsx
-<Picture>
-    <PictureItem picture-item-tag='img' src='' alt='' />
+<Picture picture-border-width='s' />
+<Picture picture-border-width='s m' />
+<Picture picture-border-width='s m l' />
+<Picture picture-border-width='s m l xl' />
+<Picture
+    picture-border-width-top='s'
+    picture-border-width-right='m'
+    picture-border-width-bottom='l'
+    picture-border-width-left='xl'
+/>
+```
+
+
+## `picture-border-style`
+
+The property allows you to set the border style for all sides of an element at once or to determine it only for specified sides.
+
+**Advanced props**
+
+- `picture-border-style-top` <sup>{1}</sup>
+- `picture-border-style-right` <sup>{2}</sup>
+- `picture-border-style-bottom` <sup>{3}</sup>
+- `picture-border-style-left` <sup>{4}</sup>
+
+**Multi values** _(set value separated by a space)_
+
+- `picture-border-style="{1,3} {2,4}"`
+- `picture-border-style="{1} {2,4} {3}"`
+- `picture-border-style="{1} {2} {3} {4}"`
+
+**Values**
+
+- `solid` - solid style _(default)_
+- `dotted` - dotted style
+- `dashed` - dashed style
+
+```jsx
+<Picture picture-border-style='solid' />
+<Picture picture-border-style='solid dotted' />
+<Picture picture-border-style='solid dotted dashed' />
+<Picture picture-border-style='solid dotted dashed solid' />
+<Picture
+    picture-border-style-top='solid'
+    picture-border-style-right='dotted'
+    picture-border-style-bottom='dashed'
+    picture-border-style-left='solid'
+/>
+```
+
+
+## `picture-background`
+
+```jsx
+<Picture picture-background='{THEME_NAME}'>
+    ...
 </Picture>
 ```
+> Set the `THEME_NAME` depending on the [theming][create_theme]
+
 
 ## `picture-item-display`
 
@@ -216,6 +358,6 @@ The property allows you to set the fillet value for all corners of the element a
 
 ```jsx
 <Picture>
-    <PictureItem picture-item-display='none' src='' alt='' />
+    <Picture.Item picture-item-display='none' src='' alt='' />
 </Picture>
 ```

@@ -10,6 +10,20 @@ describe('<Picture picture-border="..." />', () => {
         expect(wrapper.html()).toEqual('<picture class="ek-picture ek-picture_border_THEME_NAME"></picture>');
     });
 
+    it('extend 2 props picture-border', () => {
+        const wrapper = shallow(<Picture picture-border='THEME_NAME xs' />);
+        expect(wrapper).toMatchSnapshot();
+
+        expect(wrapper.html()).toEqual('<picture class="ek-picture ek-picture_border-color_THEME_NAME ek-picture_border-width_xs"></picture>');
+    });
+
+    it('extend 3 props picture-border', () => {
+        const wrapper = shallow(<Picture picture-border='THEME_NAME xs solid' />);
+        expect(wrapper).toMatchSnapshot();
+
+        expect(wrapper.html()).toEqual('<picture class="ek-picture ek-picture_border-color_THEME_NAME ek-picture_border-width_xs ek-picture_border-style_solid"></picture>');
+    });
+
     it('props picture-border-top', () => {
         const wrapper = shallow(<Picture picture-border-top='THEME_NAME' />);
         expect(wrapper).toMatchSnapshot();
@@ -38,17 +52,19 @@ describe('<Picture picture-border="..." />', () => {
         expect(wrapper.html()).toEqual('<picture class="ek-picture ek-picture_border-left_THEME_NAME"></picture>');
     });
 
-    it('props picture-border-tb', () => {
-        const wrapper = shallow(<Picture picture-border-tb='THEME_NAME' />);
-        expect(wrapper).toMatchSnapshot();
+    describe("DEPRECATED props", () => {
+        it('props picture-border-tb', () => {
+            const wrapper = shallow(<Picture picture-border-tb='THEME_NAME' />);
+            expect(wrapper).toMatchSnapshot();
 
-        expect(wrapper.html()).toEqual('<picture class="ek-picture ek-picture_border-tb_THEME_NAME"></picture>');
-    });
+            expect(wrapper.html()).toEqual('<picture class="ek-picture ek-picture_border-tb_THEME_NAME"></picture>');
+        });
 
-    it('props picture-border-lr', () => {
-        const wrapper = shallow(<Picture picture-border-lr='THEME_NAME' />);
-        expect(wrapper).toMatchSnapshot();
+        it('props picture-border-lr', () => {
+            const wrapper = shallow(<Picture picture-border-lr='THEME_NAME' />);
+            expect(wrapper).toMatchSnapshot();
 
-        expect(wrapper.html()).toEqual('<picture class="ek-picture ek-picture_border-lr_THEME_NAME"></picture>');
+            expect(wrapper.html()).toEqual('<picture class="ek-picture ek-picture_border-lr_THEME_NAME"></picture>');
+        });
     });
 });

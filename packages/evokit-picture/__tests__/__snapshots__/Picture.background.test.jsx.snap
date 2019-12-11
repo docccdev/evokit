@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Picture picture-background="..." /> props picture-background 1`] = `
+<picture
+  className="ek-picture ek-picture_background_THEME_NAME"
+/>
+`;
