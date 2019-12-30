@@ -2,7 +2,6 @@
 [CHANGELOG]: /packages/evokit-picture/CHANGELOG.md
 
 [css-variable-usage]: //w3schools.com/css/css3_variables.asp
-[html-all-tags]: //www.w3schools.com/tags/default.asp
 
 [create_theme]: /docs/base/theme.md
 [installation]: /docs/getting-started/installation.md
@@ -38,11 +37,11 @@ npm install evokit-picture --save
 
 ## Usage
 
-> More about [usage][quik-start]. You can also import and use `PictureItem` instead of `Picture.Item`
+> More about [usage][quik-start]
 
 ```jsx
 import React from 'react';
-import { Picture, PictureItem } from 'evokit-picture';
+import { Picture } from 'evokit-picture';
 import 'evokit-picture/style.css';
 
 const App = () => (

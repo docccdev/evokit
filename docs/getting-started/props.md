@@ -6,10 +6,10 @@
 
 All blocks have base props, such as `{BLOCK_NAME}-as`, `{BLOCK_NAME}-preset`. Also supports other valid props of the React Element
 
-- ~~`{BLOCK_NAME}-tag` - type `string`, used to change the HTML tag~~ (**DEPRECATED**)
-- ~~`{BLOCK_NAME}-ref` - type `function`, used to get a NODE reference~~ (**DEPRECATED**)
 - `{BLOCK_NAME}-as` - type argument can be either a tag name string (such as `div` or `span`), a [React component][react-component] type (a class or a function)
 - `{BLOCK_NAME}-preset` - type `object`, used to customize the generation of class names and CSS Modules
+- ~~`{BLOCK_NAME}-tag` - type `string`, used to change the HTML tag~~ (**DEPRECATED**)
+- ~~`{BLOCK_NAME}-ref` - type `function`, used to get a NODE reference~~ (**DEPRECATED**)
 
 ---
 

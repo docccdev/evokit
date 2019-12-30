@@ -2,7 +2,6 @@
 [CHANGELOG]: /packages/evokit-flex/CHANGELOG.md
 
 [css-variable-usage]: //w3schools.com/css/css3_variables.asp
-[html-all-tags]: //www.w3schools.com/tags/default.asp
 
 [installation]: /docs/getting-started/installation.md
 [quik-start]: /docs/getting-started/quick-start.md
@@ -14,8 +13,6 @@
 [flex-item-align]: #flex-item-align
 [flex-item-display]: #flex-item-display
 [flex-item-order]: #flex-item-order
-[flex-item-tag]: #flex-item-tag
-[flex-tag]: #flex-tag
 [flex-wrap]: #flex-wrap
 [flex-items]: #flex-items
 [flex-content]: #flex-content
@@ -29,7 +26,7 @@
 [![npm peer dependency version](https://img.shields.io/npm/dependency-version/evokit-flex/peer/evokit)](https://www.npmjs.com/package/evokit)
 -->
 
-The block for building flexible layouts. Contains two elements `<Flex>` and `<FlexItem>`
+The block for building flexible layouts. Contains two elements `<Flex>` and `<Flex.Item>`
 
 ---
 
@@ -43,16 +40,16 @@ npm install evokit-flex --save
 
 ## Usage
 
-> More about [usage][quik-start]. You can also use `<Flex.Item>` instead of `<FlexItem>`
+> More about [usage][quik-start]
 
 ```jsx
 import React from 'react';
-import { Flex, FlexItem } from 'evokit-flex';
+import { Flex } from 'evokit-flex';
 import 'evokit-flex/style.css';
 
 const App = () => (
     <Flex flex-content='center'>
-        <FlexItem>...</FlexItem>
+        <Flex.Item>...</Flex.Item>
     </Flex>
 );
 ```
@@ -69,17 +66,15 @@ const App = () => (
 | [flex-direction]   | `row`      | `row` `row-reverse` `column` `column-reverse` | Direction of all items |
 | [flex-display]     | `flex`     | `flex` `flex-inline` `none` | Display type |
 | [flex-items]       | `start`    | `start` `end` `center` `baseline` `stretch` | Alignment of all items on the cross axis |
-| [flex-tag]         | `div`      | [HTML tags][html-all-tags] | HTML tag    |
 | [flex-wrap]        | `wrap`     | `nowrap` `wrap` `wrap-reverse` | Wrap rules |
 
-### `<FlexItem />`
+### `<Flex.Item />`
 
 | Prop name           | Default value    | Possible value | Description |
 |---------------------|------------------|----------------|-------------|
 | [flex-item-align]   | `start`  | `start` `end` `center` `baseline` `stretch` | Alignment item on the cross axis |
 | [flex-item-display] | `block`  | `block` `none` | Display type |
 | [flex-item-order]   | `0`      | `0` `1` `2` `3` `4` `5` `6` `7` `8` `9` `10` | Set the order |
-| [flex-item-tag]     | `div`    | [HTML tags][html-all-tags] | HTML tag    |
 
 > `*` — prop has advanced params
 
@@ -100,16 +95,6 @@ const App = () => (
 [![Edit flex-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/flex-usage-d85tn?fontsize=14&runonclick=0 ':include :type=iframe width=100% height=500px')
 
 ---
-
-## `flex-tag`
-
-Default value `div`
-
-```jsx
-<Flex flex-tag='div'>
-    ...
-</Flex>
-```
 
 ## `flex-display`
 
@@ -188,18 +173,6 @@ Default value `div`
 </Flex>
 ```
 
-## `flex-item-tag`
-
-Default value `div`
-
-```jsx
-<Flex>
-    <FlexItem flex-item-tag='div'>
-        ...
-    </FlexItem>
-</Flex>
-```
-
 ## `flex-item-align`
 
 - `start` - The cross-start margin edges of the flex item are flushed with the cross-start edge of the line
@@ -223,9 +196,9 @@ Default value `div`
 
 ```jsx
 <Flex>
-    <FlexItem flex-item-display='none'>
+    <Flex.Item flex-item-display='none'>
         ...
-    </FlexItem>
+    </Flex.Item>
 </Flex>
 ```
 
@@ -235,8 +208,8 @@ Default value `div`
 
 ```jsx
 <Flex>
-    <FlexItem flex-item-order='2'>
+    <Flex.Item flex-item-order='2'>
         ...
-    </FlexItem>
+    </Flex.Item>
 </Flex>
 ```

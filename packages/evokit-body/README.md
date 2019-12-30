@@ -2,7 +2,6 @@
 [CHANGELOG]: /packages/evokit-body/CHANGELOG.md
 
 [css-variable-usage]: //w3schools.com/css/css3_variables.asp
-[html-all-tags]: //www.w3schools.com/tags/default.asp
 
 [create_theme]: /docs/base/theme.md
 [installation]: /docs/getting-started/installation.md
@@ -15,16 +14,14 @@
 [body-indent]: #body-indent
 [body-overflow]: #body-overflow
 [body-section-display]: #body-section-display
-[body-section-tag]: #body-section-tag
 [body-size]: #body-size
-[body-tag]: #body-tag
 
 # EvoKit - Body
 
 [![](https://img.shields.io/npm/v/evokit-body.svg)](https://www.npmjs.com/package/evokit-body)
 [![](https://img.shields.io/badge/page-CHANGELOG-42b983)][CHANGELOG]
 
-Used for body of the web page and sets the basic styles. Contains two elements `<Body>` and `<BodySection>`
+Used for body of the web page and sets the basic styles. Contains two elements `<Body>` and `<Body.Section>`
 
 ---
 
@@ -38,27 +35,27 @@ npm install evokit-body --save
 
 ## Usage
 
-> More about [usage][quik-start]. You can also use `<Body.Section>` instead of `<BodySection>`
+> More about [usage][quik-start]
 
 ```jsx
 import React from 'react';
-import { Body, BodySection } from 'evokit-body';
+import { Body } from 'evokit-body';
 import 'evokit-body/style.css';
 
 const App = () => (
     <Body body-indent='xl'>
-        <BodySection>
+        <Body.Section>
             header
-        </BodySection>
-        <BodySection>
+        </Body.Section>
+        <Body.Section>
             content
-        </BodySection>
-        <BodySection>
+        </Body.Section>
+        <Body.Section>
             footer
-        </BodySection>
+        </Body.Section>
     </Body>
 );
-``` 
+```
 
 ## Props
 
@@ -71,17 +68,15 @@ const App = () => (
 | [body-background]   | `null`        | [Create theme][create_theme]    | Background color   |
 | [body-color]        | `null`        | [Create theme][create_theme]    | Text color         |
 | [body-display]      | `block`       | `block` `none`                  | Display type   |
-| [body-indent]       | `none`        | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Padding on the side left and right for children `<BodySection />` |
+| [body-indent]       | `none`        | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Padding on the side left and right for children `<Body.Section />` |
 | [body-overflow] `*` | `visible`     | `auto` `hidden` `scroll` `visible` | Overflow type |
-| [body-size]         | `null`        | `xl` `xxl` `xxxl` | Max width for children `<BodySection />` |
-| [body-tag]          | `body`        | [HTML tags][html-all-tags] | HTML tag    |
+| [body-size]         | `null`        | `xl` `xxl` `xxxl` | Max width for children `<Body.Section />` |
 
-### `<BodySection />`
+### `<Body.Section />`
 
-| Prop name              | Default value | Possible value             | Description |
-|------------------------|---------------|----------------------------|-------------|
-| [body-section-display] | `block`       | `block` `none`             | Display type   |
-| [body-section-tag]     | `div`         | [HTML tags][html-all-tags] | HTML tag    |
+| Prop name              | Default value | Possible value             | Description  |
+|------------------------|---------------|----------------------------|--------------|
+| [body-section-display] | `block`       | `block` `none`             | Display type |
 
 
 ## Customize
@@ -123,16 +118,6 @@ const App = () => (
 [![Edit body-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/bodyusage-kz6ss?fontsize=14&runonclick=0 ':include :type=iframe width=100% height=500px')
 
 ---
-
-## `body-tag`
-
-Default value `body`
-
-```jsx
-<Body body-tag='body'>
-    ...
-</Body>
-```
 
 ## `body-display`
 
@@ -222,18 +207,6 @@ The property allows you to set the value for all axes at the same time or to det
 </Body>
 ```
 
-## `body-section-tag`
-
-Default value `div`
-
-```jsx
-<Body>
-    <BodySection body-section-tag='div'>
-        ...
-    </BodySection>
-</Body>
-```
-
 ## `body-section-display`
 
 - `block` - shown as blocky
@@ -241,8 +214,8 @@ Default value `div`
 
 ```jsx
 <Body>
-    <BodySection body-section-display='none'>
+    <Body.Section body-section-display='none'>
         ...
-    </BodySection>
+    </Body.Section>
 </Body>
 ```

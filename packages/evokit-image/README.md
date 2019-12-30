@@ -2,7 +2,6 @@
 [CHANGELOG]: /packages/evokit-image/CHANGELOG.md
 
 [css-variable-usage]: //w3schools.com/css/css3_variables.asp
-[html-all-tags]: //www.w3schools.com/tags/default.asp
 
 [create_theme]: /docs/base/theme.md
 [installation]: /docs/getting-started/installation.md
@@ -15,7 +14,6 @@
 [image-fit]: #image-fit
 [image-mirror]: #image-mirror
 [image-round]: #image-round
-[image-tag]: #image-tag
 [image-valign]: #image-valign
 [image-width]: #image-width
 
@@ -64,7 +62,6 @@ const App = () => (
 | [image-fit]        | `null`        | `none` `fill` `contain` `cover` `scale-down` | Filling the container relative to its height and width |
 | [image-mirror]     | `null`        | `x` `y` `xy` | Mirroring |
 | [image-round] `*`  | `none`        | `none` `full` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Corner rounding |
-| [image-tag]        | `img`         | [HTML tags][html-all-tags] | HTML tag    |
 | [image-valign]     | `null`        | `baseline` `bottom` `middle` `sub` `super` `text-bottom` `text-top` `top` | Vertical alignment |
 | [image-width]      | `auto`        | `auto` `1-1` `*-2` `*-3` `*-4` `*-5` `*-6` `*-7` `*-8` `*-9` `*-10` | Set the width |
 
@@ -98,14 +95,6 @@ const App = () => (
 [![Edit image-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/imageusage-7qyol?fontsize=14&runonclick=0 ':include :type=iframe width=100% height=500px')
 
 ---
-
-## `image-tag`
-
-- Default value `img`
-
-```jsx
-<Image image-tag='img' src='' alt='' />
-```
 
 ## `image-display`
 

@@ -2,7 +2,6 @@
 [CHANGELOG]: /packages/evokit-list/CHANGELOG.md
 
 [css-variable-usage]: //w3schools.com/css/css3_variables.asp
-[html-all-tags]: //www.w3schools.com/tags/default.asp
 
 [create_theme]: /docs/base/theme.md
 [installation]: /docs/getting-started/installation.md
@@ -14,16 +13,14 @@
 [list-divider]: #list-divider
 [list-indent]: #list-indent
 [list-item-display]: #list-item-display
-[list-item-tag]: #list-item-tag
 [list-style]: #list-style
-[list-tag]: #list-tag
 
 # EvoKit - List
 
 [![](https://img.shields.io/npm/v/evokit-list.svg)](https://www.npmjs.com/package/evokit-list)
 [![](https://img.shields.io/badge/page-CHANGELOG-42b983)][CHANGELOG]
 
-Used to create list. Contains two elements `<List>` and `<ListItem>`
+Used to create list. Contains two elements `<List>` and `<List.Item>`
 
 ---
 
@@ -37,18 +34,18 @@ npm install evokit-list --save
 
 ## Usage
 
-> More about [usage][quik-start]. You can also use `<List.Item>` instead of `<ListItem>`
+> More about [usage][quik-start]
 
 ```jsx
 import React from 'react';
-import { List, ListItem } from 'evokit-list';
+import { List } from 'evokit-list';
 import 'evokit-list/style.css';
 
 const App = () => (
     <List list-indent='m'>
-        <ListItem>
+        <List.Item>
             ...
-        </ListItem>
+        </List.Item>
     </List>
 );
 ```
@@ -66,14 +63,12 @@ const App = () => (
 | [list-divider] | `null`        | [Create theme][create_theme] | Color separator between elements |
 | [list-indent]  | `none`        | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Indentation between elements |
 | [list-style]   | `null`        | `dash` `decimal` `disc` | Marker type |
-| [list-tag]     | `ul`          | [HTML tags][html-all-tags] | HTML tag    |
 
-### `<ListItem />`
+### `<List.Item />`
 
 | Prop name           | Default value | Possible value             | Description  |
 |---------------------|---------------|----------------------------|--------------|
 | [list-item-display] | `block`       | `block` `none`             | Display type |
-| [list-item-tag]     | `li`          | [HTML tags][html-all-tags] | HTML tag     |
 
 
 ## Customize
@@ -105,16 +100,6 @@ const App = () => (
 
 ---
 
-## `list-tag`
-
-- Default value `ul`
-
-```jsx
-<List list-tag='ul'>
-    ...
-</List>
-```
-
 ## `list-display`
 
 - `block` - shown as blocky (default)
@@ -122,9 +107,9 @@ const App = () => (
 
 ```jsx
 <List list-display='none'>
-    <ListItem>
+    <List.Item>
         ...
-    </ListItem>
+    </List.Item>
 </List>
 ```
 
@@ -141,9 +126,9 @@ const App = () => (
 
 ```jsx
 <List list-indent='xxl'>
-    <ListItem>
+    <List.Item>
         ...
-    </ListItem>
+    </List.Item>
 </List>
 ```
 
@@ -155,9 +140,9 @@ const App = () => (
 
 ```jsx
 <List list-style='decimal'>
-    <ListItem>
+    <List.Item>
         ...
-    </ListItem>
+    </List.Item>
 </List>
 ```
 
@@ -167,9 +152,9 @@ const App = () => (
 
 ```jsx
 <List list-color={THEME_NAME}>
-    <ListItem>
+    <List.Item>
         ...
-    </ListItem>
+    </List.Item>
 </List>
 ```
 
@@ -179,21 +164,9 @@ const App = () => (
 
 ```jsx
 <List list-divider={THEME_NAME}>
-    <ListItem>
+    <List.Item>
         ...
-    </ListItem>
-</List>
-```
-
-## `list-item-tag`
-
-- Default value `li`
-
-```jsx
-<List>
-    <ListItem list-item-tag='li'>
-        ...
-    </ListItem>
+    </List.Item>
 </List>
 ```
 
@@ -204,8 +177,8 @@ const App = () => (
 
 ```jsx
 <List>
-    <ListItem list-item-display='none'>
+    <List.Item list-item-display='none'>
         ...
-    </ListItem>
+    </List.Item>
 </List>
 ```

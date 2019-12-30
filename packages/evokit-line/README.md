@@ -2,7 +2,6 @@
 [CHANGELOG]: /packages/evokit-line/CHANGELOG.md
 
 [css-variable-usage]: //w3schools.com/css/css3_variables.asp
-[html-all-tags]: //www.w3schools.com/tags/default.asp
 
 [create_theme]: /docs/base/theme.md
 [installation]: /docs/getting-started/installation.md
@@ -13,7 +12,6 @@
 [line-display]: #line-display
 [line-indent]: #line-indent
 [line-style]: #line-style
-[line-tag]: #line-tag
 
 # EvoKit - Line
 
@@ -58,7 +56,6 @@ const App = () => (
 | [line-display] | `block`       | `block` `none` | Display type |
 | [line-indent]  | `none`        | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Set the margin top and bottom |
 | [line-style]   | `solid`       | `solid` `dotted` `dashed` | Border style |
-| [line-tag]     | `hr`          | [HTML tags][html-all-tags] | HTML tag    |
 
 ## Customize
 
@@ -88,14 +85,6 @@ const App = () => (
 [![Edit line-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/lineusage-mti8w?fontsize=14&runonclick=0 ':include :type=iframe width=100% height=500px')
 
 ---
-
-## `line-tag`
-
-Default value `hr`
-
-```jsx
-<Line line-tag='hr' />
-```
 
 ## `line-display`
 

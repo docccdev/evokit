@@ -2,7 +2,6 @@
 [CHANGELOG]: /packages/evokit-grid/CHANGELOG.md
 
 [css-variable-usage]: //w3schools.com/css/css3_variables.asp
-[html-all-tags]: //www.w3schools.com/tags/default.asp
 
 [create_theme]: /docs/base/theme.md
 [installation]: /docs/getting-started/installation.md
@@ -17,9 +16,7 @@
 [grid-indent]: #grid-indent
 [grid-item-display]: #grid-item-display
 [grid-item-order]: #grid-item-order
-[grid-item-tag]: #grid-item-tag
 [grid-item-width]: #grid-item-width
-[grid-tag]: #grid-tag
 [grid-valign]: #grid-valign
 [grid-wrap]: #grid-wrap
 
@@ -28,7 +25,7 @@
 [![](https://img.shields.io/npm/v/evokit-grid.svg)](https://www.npmjs.com/package/evokit-grid)
 [![](https://img.shields.io/badge/page-CHANGELOG-42b983)][CHANGELOG]
 
-The grid for placing content on the page, has 10 columns. Contains two elements `<Grid>` and `<GridItem>`
+The grid for placing content on the page, has 10 columns. Contains two elements `<Grid>` and `<Grid.Item>`
 
 ---
 
@@ -42,11 +39,11 @@ npm install evokit-grid --save
 
 ## Usage
 
-> More about [usage][quik-start]. You can also use `<Grid.Item>` instead of `<GridItem>`
+> More about [usage][quik-start]
 
 ```jsx
 import React from 'react';
-import { Grid, GridItem } from 'evokit-grid';
+import { Grid } from 'evokit-grid';
 import 'evokit-grid/style.css';
 
 const App = () => (
@@ -72,16 +69,14 @@ const App = () => (
 | [grid-display]    | `flex`        | `flex` `none` | Display type |
 | [grid-divider]    | `null`        | [Create theme][create_theme] | Color border between cells |
 | [grid-indent] `*` | `none`        | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Indentation between cells |
-| [grid-tag]        | `div`         | [HTML tags][html-all-tags] | HTML tag    |
 | [grid-valign]     | `top`         | `top` `middle` `bottom` `baseline` `justify` | Vertical Cell Alignment |
 | [grid-wrap]       | `wrap`        | `wrap` `nowrap` `wrap-reverse` | Wrap rules |
 
-### `<GridItem />`
+### `<Grid.Item />`
 
 | Prop name           | Default value | Possible value             | Description |
 |---------------------|---------------|----------------------------|-------------|
 | [grid-item-order]   | `null`        | `1` `2` `3` `4` `5` `6` `7` `8` `9` `10` | Sets the order of the cell |
-| [grid-item-tag]     | `div`         | [HTML tags][html-all-tags] | HTML tag    |
 | [grid-item-width]   | `auto`        | `auto` `expand` `1-1` `*-2` `*-3` `*-4` `*-5` `*-6` `*-7` `*-8` `*-9` `*-10` | Cell width |
 | [grid-item-display] | `block`       | `block` `none` | Display type |
 
@@ -115,16 +110,6 @@ const App = () => (
 [![Edit grid-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/gridusage-bweb5?fontsize=14&runonclick=0 ':include :type=iframe width=100% height=500px')
 
 ---
-
-## `grid-tag`
-
-Default value `div`
-
-```jsx
-<Grid grid-tag='div'>
-    ...
-</Grid>
-```
 
 ## `grid-display`
 
@@ -254,18 +239,6 @@ The property allows you to set the indentation value for all sides of an element
 ```jsx
 <Grid grid-divider={THEME_NAME}>
     <Grid.Item>
-        ...
-    </Grid.Item>
-</Grid>
-```
-
-## `grid-item-tag`
-
-Default value `div`
-
-```jsx
-<Grid>
-    <Grid.Item grid-item-tag='div'>
         ...
     </Grid.Item>
 </Grid>

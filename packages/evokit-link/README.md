@@ -2,7 +2,6 @@
 [CHANGELOG]: /packages/evokit-link/CHANGELOG.md
 
 [css-variable-usage]: //w3schools.com/css/css3_variables.asp
-[html-all-tags]: //www.w3schools.com/tags/default.asp
 
 [create_theme]: /docs/base/theme.md
 [installation]: /docs/getting-started/installation.md
@@ -14,7 +13,6 @@
 [link-lheight]: #link-lheight
 [link-size]: #link-size
 [link-style]: #link-style
-[link-tag]: #link-tag
 [link-valign]: #link-valign
 [link-weight]: #link-weight
 
@@ -64,7 +62,6 @@ const App = () => (
 | [link-lheight] | `default`     | `default` `medium` `large`    | Line spacing |
 | [link-size]    | `default`     | `default` `small` `big` `h1` `h2` `h3` `h4` `h5` `h6` | Font size |
 | [link-style]   | `null`        | `dotted` `multi-line` | Decoration styles |
-| [link-tag]     | `a`           | [HTML tags][html-all-tags] | HTML tag    |
 | [link-valign]  | `null`        | `baseline` `bottom` `middle` `sub` `super` `text-bottom` `text-top` `top` | Aligns text vertically |
 | [link-weight]  | `default`     | `default` `thin` `light` `medium` `bold` `black` | Font weight |
 
@@ -104,16 +101,6 @@ const App = () => (
 [![Edit link-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/linkusage-c7mgv?fontsize=14&runonclick=0 ':include :type=iframe width=100% height=500px')
 
 ---
-
-## `link-tag`
-
-- Default value `a`
-
-```jsx
-<Link link-tag='a' href='#'>
-    ...
-</Link>
-```
 
 ## `link-display`
 

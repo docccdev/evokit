@@ -2,7 +2,6 @@
 [CHANGELOG]: /packages/evokit-box/CHANGELOG.md
 
 [css-variable-usage]: //w3schools.com/css/css3_variables.asp
-[html-all-tags]: //www.w3schools.com/tags/default.asp
 [react-component]: //reactjs.org/docs/react-component.html
 
 [create_theme]: /docs/base/theme.md
@@ -25,7 +24,6 @@
 [box-place]: #box-place
 [box-position]: #box-position
 [box-round]: #box-round
-[box-tag]: #box-tag
 [box-width]: #box-width
 [box-zindex]: #box-zindex
 
@@ -85,7 +83,6 @@ const App = () => (
 | [box-place]            | `null`    | `none` `top` `top-left` `top-right` `center` `center-left` `center-right` `bottom` `bottom-left` `bottom-right` | Position place, depending [box-position] |
 | [box-position] `*`     | `static`  | `static` `relative` `absolute` `fixed` `sticky` | Positioning method |
 | [box-round] `*`        | `none`    | `none` `full` `xxs` `xs` `s` `m` `l` `xl` `xxl` `3xl` `4xl` `5xl` | Corner rounding |
-| [box-tag]              | `div`     | [HTML tags][html-all-tags] or [React Component][react-component] | HTML tag or React Component    |
 | [box-width]            | `auto`    | `auto` `1-1` `*-2` `*-3` `*-4` `*-5` `*-6` `*-7` `*-8` `*-9` `*-10` | Set the width |
 | [box-zindex]           | `null`    | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` `3xl` `4xl` `5xl` | Position z-index, depending [box-position] |
 
@@ -155,16 +152,6 @@ const App = () => (
 [![Edit box-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/boxusage-3r9iy?fontsize=14&runonclick=0 ':include :type=iframe width=100% height=500px')
 
 ---
-
-## `box-tag`
-
-Default value `div`
-
-```jsx
-<Box box-tag='div'>
-    ...
-</Box>
-```
 
 ## `box-display`
 

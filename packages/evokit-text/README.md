@@ -2,7 +2,6 @@
 [CHANGELOG]: /packages/evokit-text/CHANGELOG.md
 
 [css-variable-usage]: //w3schools.com/css/css3_variables.asp
-[html-all-tags]: //www.w3schools.com/tags/default.asp
 
 [create_theme]: /docs/base/theme.md
 [installation]: /docs/getting-started/installation.md
@@ -15,7 +14,6 @@
 [text-lheight]: #text-lheight
 [text-size]: #text-size
 [text-style]: #text-style
-[text-tag]: #text-tag
 [text-transform]: #text-transform
 [text-valign]: #text-valign
 [text-weight]: #text-weight
@@ -68,7 +66,6 @@ const App = () => (
 | [text-lheight]   | `default`     | `default` `medium` `large` | Line spacing |
 | [text-size]      | `default`     | `default` `small` `big` `h1` `h2` `h3` `h4` `h5` `h6` | Font size |
 | [text-style]     | `null`        | `italic` `strike` `underline` `overline` | Text style |
-| [text-tag]       | `span`        | [HTML tags][html-all-tags] | HTML tag    |
 | [text-transform] | `none`        | `none` `capitalize` `lowercase` `uppercase` | Text case conversion |
 | [text-valign]    | `null`        | `baseline` `bottom` `middle` `sub` `super` `text-bottom` `text-top` `top` | Vertical alignment |
 | [text-weight]    | `default`     | `default` `thin` `light` `medium` `bold` `black` | Font weight |
@@ -110,16 +107,6 @@ const App = () => (
 [![Edit text-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/textusage-wm53d?fontsize=14&runonclick=0 ':include :type=iframe width=100% height=500px')
 
 ---
-
-## `text-tag`
-
-- Default value `span`
-
-```jsx
-<Text text-tag='span'>
-    ...
-</Text>
-```
 
 ## `text-display`
 
