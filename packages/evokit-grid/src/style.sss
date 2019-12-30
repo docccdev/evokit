@@ -15,6 +15,9 @@
     --ek-grid-indent-l: 25px
     --ek-grid-indent-xl: 30px
     --ek-grid-indent-xxl: 35px
+    --ek-grid-indent-3xl: 40px
+    --ek-grid-indent-4xl: 45px
+    --ek-grid-indent-5xl: 50px
 
 .grid
     display: flex
@@ -60,7 +63,7 @@
  *
  **/
 
-@each $value in (none, xxs, xs, s, m, l, xl, xxl)
+@each $value in (none, xxs, xs, s, m, l, xl, xxl, 3xl, 4xl, 5xl)
     @mixin media .grid_indent_$(value)
         @if $value == none
             margin: 0
