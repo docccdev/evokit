@@ -69,7 +69,7 @@ const App = () => (
 | [text-transform] | `none`        | `none` `capitalize` `lowercase` `uppercase` | Text case conversion |
 | [text-valign]    | `null`        | `baseline` `bottom` `middle` `sub` `super` `text-bottom` `text-top` `top` | Vertical alignment |
 | [text-weight]    | `default`     | `default` `thin` `light` `medium` `bold` `black` | Font weight |
-| [text-wrap]      | `null`        | `nowrap` `break` `ellipsis` `three-line` `two-line` | Transferring and cutting text |
+| [text-wrap]      | `normal`      | `normal` `nowrap` `break` `ellipsis` `three-line` `two-line` | Transferring and cutting text |
 
 ## Customize
 
@@ -182,6 +182,7 @@ const App = () => (
 
 ## `text-wrap`
 
+- `normal` - The text is displayed as usual
 - `nowrap` - All text is displayed in one line
 - `break` - Line wrapping is added automatically
 - `ellipsis` - The text is cut and an ellipsis is added to the end of the line

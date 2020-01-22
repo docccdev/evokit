@@ -143,9 +143,11 @@
  *
  **/
 
-@each $value in (nowrap, break, ellipsis, three-line, two-line)
+@each $value in (normal, nowrap, break, ellipsis, three-line, two-line)
     @mixin media .text_wrap_$(value)
-        @if $value == nowrap
+        @if $value == normal
+            white-space: normal
+        @else if $value == nowrap
             white-space: nowrap
         @else if $value == break
             word-wrap: break-word

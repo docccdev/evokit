@@ -2,6 +2,7 @@
 [evokit]: /packages/evokit/README.md
 
 [text-display]: /packages/evokit-text/?id=text-display
+[text-wrap]: /packages/evokit-text/?id=text-wrap
 
 
 # EvoKit - Text
@@ -12,6 +13,10 @@
 ---
 
 ## CHANGELOG
+
+### 3.1.1 *(22.01.2020)*
+
+- **Added** new value `normal` for prop [`text-wrap`][text-wrap]
 
 ### 3.1.0 *(11.10.2019)*
 
