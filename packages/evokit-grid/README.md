@@ -68,7 +68,7 @@ const App = () => (
 | [grid-direction]  | `row`         | `row` `row-reverse` `column` `column-reverse` | Cell direction |
 | [grid-display]    | `flex`        | `flex` `none` | Display type |
 | [grid-divider]    | `null`        | [Create theme][create_theme] | Color border between cells |
-| [grid-indent] `*` | `none`        | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Indentation between cells |
+| [grid-indent] `*` | `none`        | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` `3xl` `4xl` `5xl` | Indentation between cells |
 | [grid-valign]     | `top`         | `top` `middle` `bottom` `baseline` `justify` | Vertical Cell Alignment |
 | [grid-wrap]       | `wrap`        | `wrap` `nowrap` `wrap-reverse` | Wrap rules |
 
@@ -102,6 +102,9 @@ const App = () => (
     --ek-grid-indent-l: 25px;
     --ek-grid-indent-xl: 30px;
     --ek-grid-indent-xxl: 35px;
+    --ek-grid-indent-3xl: 40px;
+    --ek-grid-indent-4xl: 45px;
+    --ek-grid-indent-5xl: 50px;
 }
 ```
 
@@ -162,6 +165,9 @@ The property allows you to set the indentation value for all sides of an element
 | `l`    | `--ek-grid-indent-l`   | `25px`    |
 | `xl`   | `--ek-grid-indent-xl`  | `30px`    |
 | `xxl`  | `--ek-grid-indent-xxl` | `35px`    |
+| `3xl`  | `--ek-grid-indent-3xl` | `40px`    |
+| `4xl`  | `--ek-grid-indent-4xl` | `45px`    |
+| `5xl`  | `--ek-grid-indent-5xl` | `50px`    |
 
 ```jsx
 <Grid grid-indent='xs' />
