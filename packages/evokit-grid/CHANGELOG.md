@@ -14,7 +14,7 @@
 
 ## CHANGELOG
 
-### 3.2.0 *(26.01.2019)*
+### 3.2.0 *(26.01.2020)*
 
 - **Added** new values `3xl`, `4xl`, `5xl` for prop [`grid-indent`][grid-indent]
 
