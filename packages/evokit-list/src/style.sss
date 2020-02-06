@@ -15,6 +15,9 @@
     --ek-list-indent-l: 25px
     --ek-list-indent-xl: 30px
     --ek-list-indent-xxl: 35px
+    --ek-list-indent-3xl: 40px
+    --ek-list-indent-4xl: 45px
+    --ek-list-indent-5xl: 50px
 
 .list
     display: block
@@ -56,7 +59,7 @@
  *
  **/
 
-@each $value in (none, xxs, xs, s, m, l, xl, xxl)
+@each $value in (none, xxs, xs, s, m, l, xl, xxl, 3xl, 4xl, 5xl)
     @mixin media .list_indent_$(value)
         @if $value == none
             margin-top: 0
@@ -65,14 +68,6 @@
             & > .list__item
                 padding-top: 0
                 padding-bottom: 0
-
-            &[class*='list_divider']
-                margin-top: 0
-                margin-bottom: 0
-
-                & > .list__item
-                    padding-top: 0
-                    padding-bottom: 0
         @else
             margin-top: calc(var(--ek-list-indent-$(value)) / 2  * -1)
             margin-bottom: calc(var(--ek-list-indent-$(value)) / 2  * -1)
@@ -80,14 +75,6 @@
             & > .list__item
                 padding-top: calc(var(--ek-list-indent-$(value)) / 2)
                 padding-bottom: calc(var(--ek-list-indent-$(value)) / 2)
-
-            &[class*='list_divider']
-                margin-top: calc(var(--ek-list-indent-$(value)) * -1)
-                margin-bottom: calc(var(--ek-list-indent-$(value)) * -1)
-
-                & > .list__item
-                    padding-top: var(--ek-list-indent-$(value))
-                    padding-bottom: var(--ek-list-indent-$(value))
 
 /**
  * Style:

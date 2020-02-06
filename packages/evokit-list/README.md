@@ -61,7 +61,7 @@ const App = () => (
 | [list-display] | `block`       | `block` `none` | Display type |
 | [list-color]   | `null`        | [Create theme][create_theme] | Marker color |
 | [list-divider] | `null`        | [Create theme][create_theme] | Color separator between elements |
-| [list-indent]  | `none`        | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Indentation between elements |
+| [list-indent]  | `none`        | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` `3xl` `4xl` `5xl` | Indentation between elements |
 | [list-style]   | `null`        | `dash` `decimal` `disc` | Marker type |
 
 ### `<List.Item />`
@@ -91,6 +91,9 @@ const App = () => (
     --ek-list-indent-l: 25px;
     --ek-list-indent-xl: 30px;
     --ek-list-indent-xxl: 35px;
+    --ek-list-indent-3xl: 40px;
+    --ek-list-indent-4xl: 45px;
+    --ek-list-indent-5xl: 50px;
 }
 ```
 
@@ -123,6 +126,9 @@ const App = () => (
 - `l` - css variable `--ek-list-indent-l`, default value: `25px`
 - `xl` - css variable `--ek-list-indent-xl`, default value: `30px`
 - `xxl` - css variable `--ek-list-indent-xxl`, default value: `35px`
+- `3xl` - css variable `--ek-list-indent-3xl`, default value: `40px`
+- `4xl` - css variable `--ek-list-indent-4xl`, default value: `45px`
+- `5xl` - css variable `--ek-list-indent-5xl`, default value: `50px`
 
 ```jsx
 <List list-indent='xxl'>
