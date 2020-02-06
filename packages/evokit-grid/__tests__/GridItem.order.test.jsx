@@ -14,10 +14,16 @@ describe('<GridItem grid-item-order="..." />', () => {
 
     it('css', () => {
         const css = barista({ content: style });
-        const values = [1,2,3,4,5,6,7,8,9,10];
 
-        values.forEach((name) => {
-            expect(css.rule(`.ek-grid__item_order_${name}`).exists()).toBeTruthy();
-        });
+        expect(css.rule('.ek-grid__item_order_1').exists()).toBeTruthy();
+        expect(css.rule('.ek-grid__item_order_2').exists()).toBeTruthy();
+        expect(css.rule('.ek-grid__item_order_3').exists()).toBeTruthy();
+        expect(css.rule('.ek-grid__item_order_4').exists()).toBeTruthy();
+        expect(css.rule('.ek-grid__item_order_5').exists()).toBeTruthy();
+        expect(css.rule('.ek-grid__item_order_6').exists()).toBeTruthy();
+        expect(css.rule('.ek-grid__item_order_7').exists()).toBeTruthy();
+        expect(css.rule('.ek-grid__item_order_8').exists()).toBeTruthy();
+        expect(css.rule('.ek-grid__item_order_9').exists()).toBeTruthy();
+        expect(css.rule('.ek-grid__item_order_10').exists()).toBeTruthy();
     });
 });

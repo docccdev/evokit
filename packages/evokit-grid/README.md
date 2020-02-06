@@ -13,6 +13,8 @@
 [grid-direction]: #grid-direction
 [grid-display]: #grid-display
 [grid-divider]: #grid-divider
+[grid-divider-indent]: #grid-divider-indent
+[grid-divider-column]: #grid-divider-column
 [grid-height]: #grid-height
 [grid-indent]: #grid-indent
 [grid-item-display]: #grid-item-display
@@ -68,6 +70,8 @@ const App = () => (
 | [grid-column]     | `auto`        | `auto` `1` `2` `3` `4` `5` `6` `7` `8` `9` `10` `expand` | Number of cells in a row |
 | [grid-direction]  | `row`         | `row` `row-reverse` `column` `column-reverse` | Cell direction |
 | [grid-display]    | `flex`        | `flex` `none` | Display type |
+| [grid-divider-column]     | `auto`        | `auto` `1` `2` `3` `4` `5` `6` `7` `8` `9` `10` `expand` | Number of cells in a row, only use with prop [grid-divider] |
+| [grid-divider-indent] `*` | `none`        | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` `3xl` `4xl` `5xl` | Indentation between cells, only use with prop [grid-divider] |
 | [grid-divider]    | `null`        | [Create theme][create_theme] | Color border between cells |
 | [grid-height]     | `auto`        | `auto` `inherit` `1-1` | Set the height |
 | [grid-indent] `*` | `none`        | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` `3xl` `4xl` `5xl` | Indentation between cells |
@@ -118,6 +122,8 @@ const App = () => (
 
 ## `grid-display`
 
+Display type
+
 - `flex` - shown as blocky
 - `none` - remove from a document
 
@@ -128,6 +134,8 @@ const App = () => (
 ```
 
 ## `grid-column`
+
+Number of cells in a row
 
 - `1, 2, 3, 4, 5, 6, 7, 8, 9, 10` - Number of cells in a row
 - `auto` - The width of the cells depends on the content
@@ -143,7 +151,9 @@ const App = () => (
 
 ## `grid-indent`
 
-The property allows you to set the indentation value for all sides of an element at once or to determine it only for specified sides.
+The property allows you to set the indentation value for all sides of an cell at once or to determine it only for specified sides.
+
+> **Is calculated from content to content.**
 
 **Advanced props**
 
@@ -182,6 +192,8 @@ The property allows you to set the indentation value for all sides of an element
 
 ## `grid-direction`
 
+Cell direction
+
 - `row` - Cell direction from left to right
 - `row-reverse` - Cell direction from right to left
 - `column` - Cell direction from top to bottom
@@ -197,6 +209,8 @@ The property allows you to set the indentation value for all sides of an element
 
 ## `grid-wrap`
 
+Wrap cell rules
+
 - `nowrap` - The location of the cells in one line
 - `wrap` - Cells that do not fit one line in width are shifted down
 - `wrap-reverse` - Similar behavior with `wrap` only cell offset occurs up
@@ -210,6 +224,8 @@ The property allows you to set the indentation value for all sides of an element
 ```
 
 ## `grid-align`
+
+Horizontal alignment of cells
 
 - `left` - Align cells to the left
 - `center` - Center alignment of cells
@@ -225,6 +241,8 @@ The property allows you to set the indentation value for all sides of an element
 ```
 
 ## `grid-valign`
+
+Vertical cell alignment
 
 - `top` - Align cells to top
 - `middle` - Alignment of cells in the middle
@@ -242,6 +260,8 @@ The property allows you to set the indentation value for all sides of an element
 
 ## `grid-height`
 
+Set the height
+
 - `auto` - value: `auto`
 - `inherit` - value: `inherit`
 - `1-1` - value: `100%`
@@ -252,9 +272,73 @@ The property allows you to set the indentation value for all sides of an element
 </Grid>
 ```
 
+## `grid-divider-indent`
+
+The property allows you to set the indentation value for all sides of an cell at once or to determine it only for specified sides. Only use with prop [grid-divider].
+
+> **Is calculated from the dividing line to the cell content.**
+
+**Advanced props**
+
+1. `grid-divider-indent-x`
+2. `grid-divider-indent-y`
+
+**Multi values** _(set value separated by a space)_
+
+- `grid-divider-indent="{1} {2}"`
+
+
+**List of values**
+
+| Value  | CSS var                | CSS value |
+|--------|------------------------|-----------|
+| `none` | ---                    | `0px`     |
+| `xxs`  | `--ek-grid-indent-xxs` | `5px`     |
+| `xs`   | `--ek-grid-indent-xs`  | `10px`    |
+| `s`    | `--ek-grid-indent-s`   | `15px`    |
+| `m`    | `--ek-grid-indent-m`   | `20px`    |
+| `l`    | `--ek-grid-indent-l`   | `25px`    |
+| `xl`   | `--ek-grid-indent-xl`  | `30px`    |
+| `xxl`  | `--ek-grid-indent-xxl` | `35px`    |
+| `3xl`  | `--ek-grid-indent-3xl` | `40px`    |
+| `4xl`  | `--ek-grid-indent-4xl` | `45px`    |
+| `5xl`  | `--ek-grid-indent-5xl` | `50px`    |
+
+```jsx
+<Grid
+    grid-divider-indent='xs'
+    grid-divider={THEME_NAME}
+/>
+<Grid
+    grid-divider-indent='xs xl'
+    grid-divider={THEME_NAME}
+/>
+<Grid
+    grid-divider-indent-x='xs'
+    grid-divider-indent-y='xl'
+    grid-divider={THEME_NAME}
+/>
+```
+
+## `grid-divider-column`
+
+Number of cells in a row. Only use with prop [grid-divider].
+
+- `1, 2, 3, 4, 5, 6, 7, 8, 9, 10` - Number of cells in a row
+- `auto` - The width of the cells depends on the content
+- `expand` - The width of the cells is proportional to their count
+
+```jsx
+<Grid grid-divider-column='2' grid-divider={THEME_NAME}>
+    <Grid.Item>
+        ...
+    </Grid.Item>
+</Grid>
+```
+
 ## `grid-divider`
 
-> Set the `THEME_NAME` depending on the [theming][create_theme]
+Color border between cells
 
 ```jsx
 <Grid grid-divider={THEME_NAME}>
@@ -264,7 +348,12 @@ The property allows you to set the indentation value for all sides of an element
 </Grid>
 ```
 
+> Set the `THEME_NAME` depending on the [theming][create_theme]
+
+
 ## `grid-item-display`
+
+Display type
 
 - `block` - shown as blocky
 - `none` - remove from a document
@@ -278,6 +367,8 @@ The property allows you to set the indentation value for all sides of an element
 ```
 
 ## `grid-item-order`
+
+Sets the order of the cell
 
 - `1, 2, 3, 4, 5, 6, 7, 8, 9, 10` - Determines the cell order
 
@@ -293,6 +384,8 @@ The property allows you to set the indentation value for all sides of an element
 ```
 
 ## `grid-item-width`
+
+Cell width
 
 - `auto` - Cell width depends on content, value: `auto`
 - `expand` - Cell width occupies free space

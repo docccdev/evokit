@@ -24,18 +24,32 @@
 
 
 @define-mixin grid-divider-item $value
-    & + .grid__item
-        border-left-width: 0
+    &.grid__item
+        & + .grid__item
+            border-left-width: 0
 
-    @for $index from 1 to $value
-        &:nth-child(resolve($value)n-resolve($value - $index))
-            @if $index == $value
-                border-right-width: 0
-            @else
-                border-right-width: 1px
+        @for $index from 1 to $value
+            &:nth-child(resolve($value)n-resolve($value - $index))
+                @if $index == $value
+                    border-right-width: 0
+                @else
+                    border-right-width: 1px
 
-            &:nth-last-child(-n+resolve($value - $index + 1))
+                &:nth-last-child(-n+resolve($value - $index + 1))
+                    border-bottom-width: 0
+
+                &:not(:nth-last-child(-n+resolve($value - $index + 1)))
+                    border-bottom-width: 1px
+
+@define-mixin grid-divider-item-expand
+    &.grid__item
+        & + .grid__item
+            border-left-width: 1px
+
+        &:nth-child(even),
+        &:nth-child(odd)
+            border-right-width: 0
+
+            &:not(:nth-child(odd)),
+            &:not(:nth-child(even))
                 border-bottom-width: 0
-
-            &:not(:nth-last-child(-n+resolve($value - $index + 1)))
-                border-bottom-width: 1px

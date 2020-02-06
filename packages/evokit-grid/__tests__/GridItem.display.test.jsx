@@ -14,10 +14,8 @@ describe('<GridItem grid-item-display="..." />', () => {
 
     it('css', () => {
         const css = barista({ content: style });
-        const values = ['block', 'none'];
 
-        values.forEach((name) => {
-            expect(css.rule(`.ek-grid__item_display_${name}`).exists()).toBeTruthy();
-        });
+        expect(css.rule('.ek-grid__item_display_block').exists()).toBeTruthy();
+        expect(css.rule('.ek-grid__item_display_none').exists()).toBeTruthy();
     });
 });

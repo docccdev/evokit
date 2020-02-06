@@ -70,23 +70,11 @@
 
             & > .grid__item
                 padding: 0
-
-            &[class*='grid_divider']
-                margin: 0
-
-                & > .grid__item
-                    padding: 0
         @else
             margin: calc(var(--ek-grid-indent-$(value)) / 2 * -1)
 
             & > .grid__item
                 padding: calc(var(--ek-grid-indent-$(value)) / 2)
-
-            &[class*='grid_divider']
-                margin: 0
-
-                & > .grid__item
-                    padding: var(--ek-grid-indent-$(value))
 
     @mixin media .grid_indent-x_$(value)
         @if $value == none
@@ -96,14 +84,6 @@
             & > .grid__item
                 padding-left: 0
                 padding-right: 0
-
-            &[class*='grid_divider']
-                margin-left: 0
-                margin-right: 0
-
-                & > .grid__item
-                    padding-left: 0
-                    padding-right: 0
         @else
             margin-left: calc(var(--ek-grid-indent-$(value)) / 2 * -1)
             margin-right: calc(var(--ek-grid-indent-$(value)) / 2 * -1)
@@ -111,14 +91,6 @@
             & > .grid__item
                 padding-left: calc(var(--ek-grid-indent-$(value)) / 2)
                 padding-right: calc(var(--ek-grid-indent-$(value)) / 2)
-
-            &[class*='grid_divider']
-                margin-left: 0
-                margin-right: 0
-
-                & > .grid__item
-                    padding-left: var(--ek-grid-indent-$(value))
-                    padding-right: var(--ek-grid-indent-$(value))
 
     @mixin media .grid_indent-y_$(value)
         @if $value == none
@@ -128,14 +100,6 @@
             & > .grid__item
                 padding-top: 0
                 padding-bottom: 0
-
-            &[class*='grid_divider']
-                margin-top: 0
-                margin-bottom: 0
-
-                & > .grid__item
-                    padding-top: 0
-                    padding-bottom: 0
         @else
             margin-top: calc(var(--ek-grid-indent-$(value)) / 2 * -1)
             margin-bottom: calc(var(--ek-grid-indent-$(value)) / 2 * -1)
@@ -144,16 +108,44 @@
                 padding-top: calc(var(--ek-grid-indent-$(value)) / 2)
                 padding-bottom: calc(var(--ek-grid-indent-$(value)) / 2)
 
-            &[class*='grid_divider']
-                margin-top: 0
-                margin-bottom: 0
+/**
+ * Indent:
+ *
+ *  - grid_divider-indent_*
+ *
+ **/
 
-                & > .grid__item
-                    padding-top: var(--ek-grid-indent-$(value))
-                    padding-bottom: var(--ek-grid-indent-$(value))
+@each $value in (none, xxs, xs, s, m, l, xl, xxl, 3xl, 4xl, 5xl)
+    @mixin media .grid_divider-indent_$(value)
+
+        & > .grid__item
+            @if $value == none
+                padding: 0
+            @else
+                padding: var(--ek-grid-indent-$(value))
+
+    @mixin media .grid_divider-indent-x_$(value)
+
+        & > .grid__item
+            @if $value == none
+                padding-left: 0
+                padding-right: 0
+            @else
+                padding-left: var(--ek-grid-indent-$(value))
+                padding-right: var(--ek-grid-indent-$(value))
+
+    @mixin media .grid_divider-indent-y_$(value)
+
+        & > .grid__item
+            @if $value == none
+                padding-top: 0
+                padding-bottom: 0
+            @else
+                padding-top: var(--ek-grid-indent-$(value))
+                padding-bottom: var(--ek-grid-indent-$(value))
 
 /**
- * Colum:
+ * Column:
  *
  *  - grid_column_*
  *
@@ -165,11 +157,6 @@
             flex: none
             width: calc(100% / $value)
 
-        &[class*='grid_divider']
-
-            & > .grid__item
-                @mixin grid-divider-item $value
-
 @mixin media .grid_column_expand
     & > .grid__item
         flex: 1
@@ -179,6 +166,34 @@
     & > .grid__item
         flex: none
         width: auto
+
+
+/**
+ * Divider column:
+ *
+ *  - grid_divider-column_*
+ *
+ **/
+
+@each $value in (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+    @mixin media .grid_divider-column_$(value)
+        & > .grid__item
+            flex: none
+            width: calc(100% / $value)
+            @mixin grid-divider-item $value
+
+@mixin media .grid_divider-column_expand
+    & > .grid__item
+        flex: 1
+        width: auto
+        @mixin grid-divider-item-expand
+
+
+@mixin media .grid_divider-column_auto
+    & > .grid__item
+        flex: none
+        width: auto
+        @mixin grid-divider-item-expand
 
 /**
  * Align:

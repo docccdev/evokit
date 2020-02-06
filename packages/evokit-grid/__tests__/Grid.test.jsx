@@ -41,6 +41,18 @@ describe('<Grid />', () => {
     it('css', () => {
         const css = barista({ content: style });
 
+        expect(css.rule(':root').exists()).toBeTruthy();
+        expect(css.rule(':root').prop('--ek-grid-indent-xxs')).toBe('5px');
+        expect(css.rule(':root').prop('--ek-grid-indent-xs')).toBe('10px');
+        expect(css.rule(':root').prop('--ek-grid-indent-s')).toBe('15px');
+        expect(css.rule(':root').prop('--ek-grid-indent-m')).toBe('20px');
+        expect(css.rule(':root').prop('--ek-grid-indent-l')).toBe('25px');
+        expect(css.rule(':root').prop('--ek-grid-indent-xl')).toBe('30px');
+        expect(css.rule(':root').prop('--ek-grid-indent-xxl')).toBe('35px');
+        expect(css.rule(':root').prop('--ek-grid-indent-3xl')).toBe('40px');
+        expect(css.rule(':root').prop('--ek-grid-indent-4xl')).toBe('45px');
+        expect(css.rule(':root').prop('--ek-grid-indent-5xl')).toBe('50px');
+
         expect(css.rule('.ek-grid').exists()).toBeTruthy();
         expect(css.rule('.ek-grid__item').exists()).toBeTruthy();
     });

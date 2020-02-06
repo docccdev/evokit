@@ -1,4 +1,4 @@
 import { Box } from 'evokit-box';
-import 'evokit-box/style.css';
+import './style.css';
 
 export { Box };
