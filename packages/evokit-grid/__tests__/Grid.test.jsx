@@ -1,6 +1,8 @@
 import React from 'react';
+import barista from 'seed-barista';
 import { shallow } from 'enzyme';
 import { Grid, GridItem } from '../src';
+import style from '../style.css';
 
 describe('<Grid />', () => {
     it('render', () => {
@@ -34,5 +36,12 @@ describe('<Grid />', () => {
 
         expect(wrapper.html()).toEqual('<span class="ek-grid"></span>');
         expect(wrapperItem.html()).toEqual('<span class="ek-grid__item"></span>');
+    });
+
+    it('css', () => {
+        const css = barista({ content: style });
+
+        expect(css.rule('.ek-grid').exists()).toBeTruthy();
+        expect(css.rule('.ek-grid__item').exists()).toBeTruthy();
     });
 });
