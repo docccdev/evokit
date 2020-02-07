@@ -44,11 +44,16 @@
         addBackToTop({
             diameter: 56,
             backgroundColor: '#42b983',
-            textColor: '#fff'
+            textColor: '#fff',
+            cornerOffset: 56
         })
         document.getElementById('back-to-top').addEventListener('click', function() {
             window.location.href = window.location.href.split('?')[0];
         });
+        ((window.gitter = {}).chat = {}).options = {
+            room: 'evokit/evokit.net'
+        };
     </script>
+    <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
 </body>
 </html>
