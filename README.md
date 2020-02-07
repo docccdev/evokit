@@ -1,5 +1,7 @@
 # EvoKit
 
+[![Gitter](https://badges.gitter.im/evokit/community.svg)](https://gitter.im/evokit/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+
 Tool for creating UI React blocks.
 
 ---
