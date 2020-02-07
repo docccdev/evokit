@@ -1,5 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
+import barista from 'seed-barista';
+import style from '../style.css';
 import { GridItem } from '../src';
 
 describe('<GridItem grid-item-display="..." />', () => {
@@ -8,5 +10,14 @@ describe('<GridItem grid-item-display="..." />', () => {
         expect(wrapper).toMatchSnapshot();
 
         expect(wrapper.html()).toEqual('<div class="ek-grid__item ek-grid__item_display_value"></div>');
+    });
+
+    it('css', () => {
+        const css = barista({ content: style });
+        const values = ['block', 'none'];
+
+        values.forEach((name) => {
+            expect(css.rule(`.ek-grid__item_display_${name}`).exists()).toBeTruthy();
+        });
     });
 });

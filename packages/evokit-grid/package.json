@@ -7,6 +7,7 @@
     "test": "jest --colors",
     "build": "webpack --colors",
     "watch": "webpack --colors --progress --watch",
+    "pretest": "npm run build",
     "prepublishOnly": "webpack"
   },
   "repository": {

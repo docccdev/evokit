@@ -11,6 +11,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/docs/_media/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/docs/_media/favicon-16x16.png">
     <link rel="stylesheet" href="/docs/_media/css/docsify.theme.css">
+    <link rel="stylesheet" href="/docs/_media/css/tippy.css">
 </head>
 <body>
     <div id="app"></div>
@@ -29,7 +30,31 @@
             },
             auto2top: true,
             onlyCover: true,
-            externalLinkTarget: '_blank'
+            externalLinkTarget: '_blank',
+            plugins: [
+                function(hook) {
+                    hook.doneEach(function() {
+                        document.querySelectorAll('.tableHovered').forEach(function(node) {
+                            const tooltipContent = node.dataset.tooltipContent;
+                            const table = node.nextElementSibling;
+
+                            if (table && tooltipContent) {
+                                table.querySelectorAll('tbody tr').forEach(function(trNode, trIndex) {
+                                    trNode.querySelectorAll('td:not(:first-child)').forEach(function(tdNode, tdIndex) {
+                                        const codeNode = tdNode.querySelectorAll('code');
+                                        if (codeNode.length) {
+                                            window.tippy(codeNode, {
+                                                placement: 'bottom',
+                                                content: tooltipContent+'="'+(trIndex+1)+'-'+(tdIndex+1)+'"'
+                                            });
+                                        }
+                                    });
+                                });
+                            }
+                        });
+                    });
+                }
+            ]
         };
     </script>
     <script src="/docs/_media/js/docsify.min.js"></script>
@@ -40,6 +65,9 @@
     <script src="/docs/_media/js/docsify.plugin.emoji.min.js"></script>
     <script src="/docs/_media/js/docsify-copy-code.min.js"></script>
     <script src="/docs/_media/js/vanilla-back-to-top.min.js"></script>
+    <script src="/docs/_media/js/popper.min.js"></script>
+    <script src="/docs/_media/js/tippy-bundle.iife.min.js"></script>
+    <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
     <script>
         addBackToTop({
             diameter: 56,
@@ -54,6 +82,5 @@
             room: 'evokit/community'
         };
     </script>
-    <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
 </body>
 </html>

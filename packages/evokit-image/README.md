@@ -157,7 +157,7 @@ const App = () => (
 - `auto` - value: `auto`
 - See table, for example: `3-4` = `75%`
 
-<div class='tableHovered'></div>
+<div class='tableHovered' data-tooltip-content='image-width'></div>
 
 | |1|2|3|4|5|6|7|8|9|10|
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
