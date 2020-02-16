@@ -3,6 +3,7 @@
 
 [image-round]: /packages/evokit-image/?id=image-round
 [image-display]: /packages/evokit-image/?id=image-display
+[image-alt]: /packages/evokit-image/?id=image-alt
 
 [create_theme]: /docs/base/theme.md
 
@@ -14,6 +15,10 @@
 ---
 
 ## CHANGELOG
+
+### 3.1.1 *(17.02.2020)*
+
+- **Added** new prop [`image-alt`][image-alt]
 
 ### 3.1.0 *(11.10.2019)*
 

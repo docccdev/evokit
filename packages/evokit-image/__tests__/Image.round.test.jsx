@@ -1,5 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
+import barista from 'seed-barista';
+import style from '../style.css';
 import { Image } from '../src';
 
 describe('<Image image-round="..." />', () => {
@@ -93,5 +95,75 @@ describe('<Image image-round="..." />', () => {
 
             expect(wrapper.html()).toEqual('<img class="ek-image ek-image_round-left_full"/>');
         });
+    });
+
+    it('css', () => {
+        const css = barista({ content: style });
+
+        expect(css.rule('.ek-image_round-top-left_xxs').exists()).toBeTruthy();
+        expect(css.rule('.ek-image_round-top-left_xs').exists()).toBeTruthy();
+        expect(css.rule('.ek-image_round-top-left_s').exists()).toBeTruthy();
+        expect(css.rule('.ek-image_round-top-left_m').exists()).toBeTruthy();
+        expect(css.rule('.ek-image_round-top-left_l').exists()).toBeTruthy();
+        expect(css.rule('.ek-image_round-top-left_xl').exists()).toBeTruthy();
+        expect(css.rule('.ek-image_round-top-left_xxl').exists()).toBeTruthy();
+
+        expect(css.rule('.ek-image_round-top-right_xxs').exists()).toBeTruthy();
+        expect(css.rule('.ek-image_round-top-right_xs').exists()).toBeTruthy();
+        expect(css.rule('.ek-image_round-top-right_s').exists()).toBeTruthy();
+        expect(css.rule('.ek-image_round-top-right_m').exists()).toBeTruthy();
+        expect(css.rule('.ek-image_round-top-right_l').exists()).toBeTruthy();
+        expect(css.rule('.ek-image_round-top-right_xl').exists()).toBeTruthy();
+        expect(css.rule('.ek-image_round-top-right_xxl').exists()).toBeTruthy();
+
+        expect(css.rule('.ek-image_round-bottom-right_xxs').exists()).toBeTruthy();
+        expect(css.rule('.ek-image_round-bottom-right_xs').exists()).toBeTruthy();
+        expect(css.rule('.ek-image_round-bottom-right_s').exists()).toBeTruthy();
+        expect(css.rule('.ek-image_round-bottom-right_m').exists()).toBeTruthy();
+        expect(css.rule('.ek-image_round-bottom-right_l').exists()).toBeTruthy();
+        expect(css.rule('.ek-image_round-bottom-right_xl').exists()).toBeTruthy();
+        expect(css.rule('.ek-image_round-bottom-right_xxl').exists()).toBeTruthy();
+
+        expect(css.rule('.ek-image_round-bottom-left_xxs').exists()).toBeTruthy();
+        expect(css.rule('.ek-image_round-bottom-left_xs').exists()).toBeTruthy();
+        expect(css.rule('.ek-image_round-bottom-left_s').exists()).toBeTruthy();
+        expect(css.rule('.ek-image_round-bottom-left_m').exists()).toBeTruthy();
+        expect(css.rule('.ek-image_round-bottom-left_l').exists()).toBeTruthy();
+        expect(css.rule('.ek-image_round-bottom-left_xl').exists()).toBeTruthy();
+        expect(css.rule('.ek-image_round-bottom-left_xxl').exists()).toBeTruthy();
+
+        // DEPRECATED
+
+        expect(css.rule('.ek-image_round-top_xxs').exists()).toBeTruthy();
+        expect(css.rule('.ek-image_round-top_xs').exists()).toBeTruthy();
+        expect(css.rule('.ek-image_round-top_s').exists()).toBeTruthy();
+        expect(css.rule('.ek-image_round-top_m').exists()).toBeTruthy();
+        expect(css.rule('.ek-image_round-top_l').exists()).toBeTruthy();
+        expect(css.rule('.ek-image_round-top_xl').exists()).toBeTruthy();
+        expect(css.rule('.ek-image_round-top_xxl').exists()).toBeTruthy();
+
+        expect(css.rule('.ek-image_round-right_xxs').exists()).toBeTruthy();
+        expect(css.rule('.ek-image_round-right_xs').exists()).toBeTruthy();
+        expect(css.rule('.ek-image_round-right_s').exists()).toBeTruthy();
+        expect(css.rule('.ek-image_round-right_m').exists()).toBeTruthy();
+        expect(css.rule('.ek-image_round-right_l').exists()).toBeTruthy();
+        expect(css.rule('.ek-image_round-right_xl').exists()).toBeTruthy();
+        expect(css.rule('.ek-image_round-right_xxl').exists()).toBeTruthy();
+
+        expect(css.rule('.ek-image_round-bottom_xxs').exists()).toBeTruthy();
+        expect(css.rule('.ek-image_round-bottom_xs').exists()).toBeTruthy();
+        expect(css.rule('.ek-image_round-bottom_s').exists()).toBeTruthy();
+        expect(css.rule('.ek-image_round-bottom_m').exists()).toBeTruthy();
+        expect(css.rule('.ek-image_round-bottom_l').exists()).toBeTruthy();
+        expect(css.rule('.ek-image_round-bottom_xl').exists()).toBeTruthy();
+        expect(css.rule('.ek-image_round-bottom_xxl').exists()).toBeTruthy();
+
+        expect(css.rule('.ek-image_round-left_xxs').exists()).toBeTruthy();
+        expect(css.rule('.ek-image_round-left_xs').exists()).toBeTruthy();
+        expect(css.rule('.ek-image_round-left_s').exists()).toBeTruthy();
+        expect(css.rule('.ek-image_round-left_m').exists()).toBeTruthy();
+        expect(css.rule('.ek-image_round-left_l').exists()).toBeTruthy();
+        expect(css.rule('.ek-image_round-left_xl').exists()).toBeTruthy();
+        expect(css.rule('.ek-image_round-left_xxl').exists()).toBeTruthy();
     });
 });

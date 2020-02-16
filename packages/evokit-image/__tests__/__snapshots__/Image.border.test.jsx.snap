@@ -1,5 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<Image image-border="..." /> DEPRECATED props props image-border-lr 1`] = `
+<img
+  className="ek-image ek-image_border-lr_THEME_NAME"
+/>
+`;
+
+exports[`<Image image-border="..." /> DEPRECATED props props image-border-tb 1`] = `
+<img
+  className="ek-image ek-image_border-tb_THEME_NAME"
+/>
+`;
+
 exports[`<Image image-border="..." /> props image-border 1`] = `
 <img
   className="ek-image ek-image_border_THEME_NAME"
@@ -18,21 +30,9 @@ exports[`<Image image-border="..." /> props image-border-left 1`] = `
 />
 `;
 
-exports[`<Image image-border="..." /> props image-border-lr 1`] = `
-<img
-  className="ek-image ek-image_border-lr_THEME_NAME"
-/>
-`;
-
 exports[`<Image image-border="..." /> props image-border-right 1`] = `
 <img
   className="ek-image ek-image_border-right_THEME_NAME"
-/>
-`;
-
-exports[`<Image image-border="..." /> props image-border-tb 1`] = `
-<img
-  className="ek-image ek-image_border-tb_THEME_NAME"
 />
 `;
 
