@@ -6,6 +6,7 @@ export const Grid = createBlock('div', 'grid', [
     'direction',
     'display',
     'divider',
+    'height',
     'valign',
     'wrap',
     ['indent', [
