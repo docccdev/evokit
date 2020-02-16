@@ -273,3 +273,19 @@
 @mixin media .grid__item_width_auto
     flex: none
     width: auto
+
+/**
+ * Height:
+ *
+ *  - grid_height_auto
+ *  - grid_height_inherit
+ *  - grid_height_1-1
+ *
+ **/
+
+@each $value in (auto, inherit, 1-1)
+    @mixin media .grid_height_$(value)
+        @if $value == 1-1
+            height: 100%
+        @else
+            height: $value

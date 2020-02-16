@@ -13,6 +13,7 @@
 [grid-direction]: #grid-direction
 [grid-display]: #grid-display
 [grid-divider]: #grid-divider
+[grid-height]: #grid-height
 [grid-indent]: #grid-indent
 [grid-item-display]: #grid-item-display
 [grid-item-order]: #grid-item-order
@@ -68,6 +69,7 @@ const App = () => (
 | [grid-direction]  | `row`         | `row` `row-reverse` `column` `column-reverse` | Cell direction |
 | [grid-display]    | `flex`        | `flex` `none` | Display type |
 | [grid-divider]    | `null`        | [Create theme][create_theme] | Color border between cells |
+| [grid-height]     | `auto`        | `auto` `inherit` `1-1` | Set the height |
 | [grid-indent] `*` | `none`        | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` `3xl` `4xl` `5xl` | Indentation between cells |
 | [grid-valign]     | `top`         | `top` `middle` `bottom` `baseline` `justify` | Vertical Cell Alignment |
 | [grid-wrap]       | `wrap`        | `wrap` `nowrap` `wrap-reverse` | Wrap rules |
@@ -235,6 +237,18 @@ The property allows you to set the indentation value for all sides of an element
     <Grid.Item>
         ...
     </Grid.Item>
+</Grid>
+```
+
+## `grid-height`
+
+- `auto` - value: `auto`
+- `inherit` - value: `inherit`
+- `1-1` - value: `100%`
+
+```jsx
+<Grid grid-height='1-1'>
+    ...
 </Grid>
 ```
 

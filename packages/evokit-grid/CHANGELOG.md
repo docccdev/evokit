@@ -3,6 +3,7 @@
 
 [grid-indent]: /packages/evokit-grid/?id=grid-indent
 [grid-display]: /packages/evokit-grid/?id=grid-display
+[grid-height]: /packages/evokit-grid/?id=grid-height
 [grid-item-display]: /packages/evokit-grid/?id=grid-item-display
 
 # EvoKit - Grid
@@ -13,6 +14,10 @@
 ---
 
 ## CHANGELOG
+
+### 3.2.1 *(17.02.2020)*
+
+- **Added** new prop [`grid-height`][grid-height]
 
 ### 3.2.0 *(26.01.2020)*
 
