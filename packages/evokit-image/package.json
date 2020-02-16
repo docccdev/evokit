@@ -1,6 +1,6 @@
 {
   "name": "evokit-image",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "description": "Used to display the image",
   "main": "index.js",
   "scripts": {
