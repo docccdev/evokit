@@ -1,5 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
+import barista from 'seed-barista';
+import style from '../theme.css';
 import { Image } from '../src';
 
 describe('<Image image-border="..." />', () => {
@@ -38,17 +40,32 @@ describe('<Image image-border="..." />', () => {
         expect(wrapper.html()).toEqual('<img class="ek-image ek-image_border-left_THEME_NAME"/>');
     });
 
-    it('props image-border-tb', () => {
-        const wrapper = shallow(<Image image-border-tb='THEME_NAME' />);
-        expect(wrapper).toMatchSnapshot();
+    describe("DEPRECATED props", () => {
+        it('props image-border-tb', () => {
+            const wrapper = shallow(<Image image-border-tb='THEME_NAME' />);
+            expect(wrapper).toMatchSnapshot();
 
-        expect(wrapper.html()).toEqual('<img class="ek-image ek-image_border-tb_THEME_NAME"/>');
+            expect(wrapper.html()).toEqual('<img class="ek-image ek-image_border-tb_THEME_NAME"/>');
+        });
+
+        it('props image-border-lr', () => {
+            const wrapper = shallow(<Image image-border-lr='THEME_NAME' />);
+            expect(wrapper).toMatchSnapshot();
+
+            expect(wrapper.html()).toEqual('<img class="ek-image ek-image_border-lr_THEME_NAME"/>');
+        });
     });
 
-    it('props image-border-lr', () => {
-        const wrapper = shallow(<Image image-border-lr='THEME_NAME' />);
-        expect(wrapper).toMatchSnapshot();
+    it('css', () => {
+        const css = barista({ content: style });
 
-        expect(wrapper.html()).toEqual('<img class="ek-image ek-image_border-lr_THEME_NAME"/>');
+        expect(css.rule('.ek-image_border_TEMPLATE_NAME').exists()).toBeTruthy();
+        expect(css.rule('.ek-image_border-top_TEMPLATE_NAME').exists()).toBeTruthy();
+        expect(css.rule('.ek-image_border-right_TEMPLATE_NAME').exists()).toBeTruthy();
+        expect(css.rule('.ek-image_border-bottom_TEMPLATE_NAME').exists()).toBeTruthy();
+        expect(css.rule('.ek-image_border-left_TEMPLATE_NAME').exists()).toBeTruthy();
+        // DEPRECATED
+        expect(css.rule('.ek-image_border-tb_TEMPLATE_NAME').exists()).toBeTruthy();
+        expect(css.rule('.ek-image_border-lr_TEMPLATE_NAME').exists()).toBeTruthy();
     });
 });

@@ -202,3 +202,19 @@
             border-bottom-left-radius: 50%
         @else
             border-bottom-left-radius: var(--ek-image-round-$(value))
+
+/**
+ * Alt:
+ *
+ *  - image_alt_visible
+ *  - image_alt_hidden
+ *
+ **/
+
+@each $value in (visible, hidden)
+    @mixin media .image_alt_$(value)
+        &[alt]
+            @if $value == visible
+                font-size: inherit
+            @else if $value == hidden
+                font-size: 0

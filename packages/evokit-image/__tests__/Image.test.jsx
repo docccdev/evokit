@@ -1,5 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
+import barista from 'seed-barista';
+import style from '../style.css';
 import { Image } from '../src';
 
 describe('<Image />', () => {
@@ -22,5 +24,12 @@ describe('<Image />', () => {
         expect(wrapper).toMatchSnapshot();
 
         expect(wrapper.html()).toEqual('<span class="ek-image"></span>');
+    });
+
+    it('css', () => {
+        const css = barista({ content: style });
+
+        expect(css.rule('.ek-image').exists()).toBeTruthy();
+        expect(css.rule('.ek-image[alt]').exists()).toBeTruthy();
     });
 });

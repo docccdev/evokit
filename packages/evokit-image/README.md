@@ -9,6 +9,7 @@
 [use-props]: /docs/getting-started/props.md
 
 [image-align]: #image-align
+[image-alt]: #image-alt
 [image-border]: #image-border
 [image-display]: #image-display
 [image-fit]: #image-fit
@@ -57,6 +58,7 @@ const App = () => (
 | Prop name          | Default value | Possible value          | Description      |
 |--------------------|---------------|-------------------------|------------------|
 | [image-align]      | `null`        | `left` `center` `right` | Horizontal alignment |
+| [image-alt]        | `visible`     | `visible` `hidden` | Visibility alt text if the image is not uploaded |
 | [image-border]     | `null`        | [Create theme][create_theme] | Border color |
 | [image-display]    | `inline`      | `inline` `none`         | Display type |
 | [image-fit]        | `null`        | `none` `fill` `contain` `cover` `scale-down` | Filling the container relative to its height and width |
@@ -220,6 +222,15 @@ The property allows you to set the fillet value for all corners of the element a
     image-round-bottom-right='l'
     image-round-bottom-left='xl'
 />
+```
+
+## `image-alt`
+
+- `visible` - Visible Alt Text
+- `hidden` - Hidden Alt Text
+
+```jsx
+<Image image-alt='hidden' src='' alt='' />
 ```
 
 ## `image-border`
