@@ -47,9 +47,12 @@
  *
  **/
 
-@each $value in (small, default, big, h1, h2, h3, h4, h5, h6)
+@each $value in (none, small, default, big, h1, h2, h3, h4, h5, h6)
     @mixin media .text_size_$(value)
-        font-size: var(--ek-text-size-$(value))
+        @if $value == none
+            font-size: 0
+        @else
+            font-size: var(--ek-text-size-$(value))
 
 /**
  * Font weight:
