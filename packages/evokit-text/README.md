@@ -61,10 +61,10 @@ const App = () => (
 | Prop name        | Default value | Possible value   | Description |
 |------------------|---------------|------------------|-------------|
 | [text-align]     | `left`        | `left` `center` `right` `justify` | Horizontal alignment |
-| [text-display]   | `inline`      | `inline` `none`  | Display type |
 | [text-color]     | `null`        | [Create theme][create_theme] | Text color  |
+| [text-display]   | `inline`      | `inline` `none`  | Display type |
 | [text-lheight]   | `default`     | `default` `medium` `large` | Line spacing |
-| [text-size]      | `default`     | `default` `small` `big` `h1` `h2` `h3` `h4` `h5` `h6` | Font size |
+| [text-size]      | `default`     | `default` `none` `small` `big` `h1` `h2` `h3` `h4` `h5` `h6` | Font size |
 | [text-style]     | `null`        | `italic` `strike` `underline` `overline` | Text style |
 | [text-transform] | `none`        | `none` `capitalize` `lowercase` `uppercase` | Text case conversion |
 | [text-valign]    | `null`        | `baseline` `bottom` `middle` `sub` `super` `text-bottom` `text-top` `top` | Vertical alignment |
@@ -121,6 +121,7 @@ const App = () => (
 
 ## `text-size`
 
+- `none` - value: `0px`
 - `small` - css variable `--ek-text-size-small`, default value: `11px`
 - `default` - css variable `--ek-text-size-default`, default value: `13px`
 - `big` - css variable `--ek-text-size-big`, default value: `15px`

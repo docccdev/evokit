@@ -3,6 +3,7 @@
 
 [text-display]: /packages/evokit-text/?id=text-display
 [text-wrap]: /packages/evokit-text/?id=text-wrap
+[text-size]: /packages/evokit-text/?id=text-size
 
 
 # EvoKit - Text
@@ -13,6 +14,10 @@
 ---
 
 ## CHANGELOG
+
+### 3.1.2 *(17.02.2020)*
+
+- **Added** new value `none` for prop [`text-size`][text-size]
 
 ### 3.1.1 *(22.01.2020)*
 

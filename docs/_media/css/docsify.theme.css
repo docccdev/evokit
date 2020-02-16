@@ -1112,3 +1112,32 @@ img[data-origin] {
 del code {
     text-decoration: line-through;
 }
+
+#back-to-top {
+    background-color: #36bc98;
+    color: #fff;
+    bottom: 0;
+    right: 170px;
+    width: 38px;
+    height: 38px;
+    border-radius: .5em .5em 0 0;
+    box-shadow: none;
+-   webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+#back-to-top svg {
+    margin: 6px auto;
+    width: 26px;
+    height: 26px;
+}
+
+#back-to-top:hover {
+    background-color: #3ea07f;
+}
+
+#back-to-top:focus, #back-to-top:active {
+    box-shadow: 0 0 8px rgba(62,160,127,.6);
+}

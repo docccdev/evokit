@@ -69,12 +69,7 @@
     <script src="/docs/_media/js/tippy-bundle.iife.min.js"></script>
     <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
     <script>
-        addBackToTop({
-            diameter: 56,
-            backgroundColor: '#42b983',
-            textColor: '#fff',
-            cornerOffset: 56
-        })
+        addBackToTop();
         document.getElementById('back-to-top').addEventListener('click', function() {
             window.location.href = window.location.href.split('?')[0];
         });
