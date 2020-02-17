@@ -1,5 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
+import barista from 'seed-barista';
+import style from '../style.css';
 import { Flex, FlexItem } from '../src';
 
 describe('<Flex />', () => {
@@ -34,5 +36,13 @@ describe('<Flex />', () => {
 
         expect(wrapper.html()).toEqual('<span class="ek-flex"></span>');
         expect(wrapperItem.html()).toEqual('<span class="ek-flex__item"></span>');
+    });
+
+    it('css', () => {
+        const css = barista({ content: style });
+
+        expect(css.rule('.ek-flex').exists()).toBeTruthy();
+        expect(css.rule('.ek-flex__item').exists()).toBeTruthy();
+        expect(css.rule('.ek-flex__item:empty').exists()).toBeTruthy();
     });
 });

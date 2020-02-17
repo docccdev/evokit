@@ -1,5 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
+import barista from 'seed-barista';
+import style from '../style.css';
 import { List, ListItem } from '../src';
 
 describe('<List />', () => {
@@ -34,5 +36,12 @@ describe('<List />', () => {
 
         expect(wrapper.html()).toEqual('<span class="ek-list"></span>');
         expect(wrapperItem.html()).toEqual('<span class="ek-list__item"></span>');
+    });
+
+    it('css', () => {
+        const css = barista({ content: style });
+
+        expect(css.rule('.ek-list').exists()).toBeTruthy();
+        expect(css.rule('.ek-list__item').exists()).toBeTruthy();
     });
 });

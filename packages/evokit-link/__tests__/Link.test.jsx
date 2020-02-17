@@ -1,5 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
+import barista from 'seed-barista';
+import style from '../style.css';
 import { Link } from '../src';
 
 describe('<Link />', () => {
@@ -22,5 +24,11 @@ describe('<Link />', () => {
         expect(wrapper).toMatchSnapshot();
 
         expect(wrapper.html()).toEqual('<span class="ek-link"></span>');
+    });
+
+    it('css', () => {
+        const css = barista({ content: style });
+
+        expect(css.rule('.ek-link').exists()).toBeTruthy();
     });
 });

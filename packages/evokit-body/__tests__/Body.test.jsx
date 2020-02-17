@@ -1,5 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
+import barista from 'seed-barista';
+import style from '../style.css';
 import { Body, BodySection } from '../src';
 
 describe('<Body />', () => {
@@ -34,5 +36,12 @@ describe('<Body />', () => {
 
         expect(wrapper.html()).toEqual('<span class="ek-body"></span>');
         expect(wrapperSection.html()).toEqual('<span class="ek-body__section"></span>');
+    });
+
+    it('css', () => {
+        const css = barista({ content: style });
+
+        expect(css.rule('.ek-body').exists()).toBeTruthy();
+        expect(css.rule('.ek-body__section').exists()).toBeTruthy();
     });
 });
