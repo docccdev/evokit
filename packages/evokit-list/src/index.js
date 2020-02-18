@@ -4,6 +4,7 @@ export const List = createBlock('ul', 'list', [
     'color',
     'display',
     'divider',
+    'divider-indent',
     'indent',
     'style',
 ]);

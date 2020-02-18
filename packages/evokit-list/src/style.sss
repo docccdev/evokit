@@ -77,6 +77,30 @@
                 padding-bottom: calc(var(--ek-list-indent-$(value)) / 2)
 
 /**
+ * Divider indent:
+ *
+ *  - list_divider-indent_*
+ *
+ **/
+
+@each $value in (none, xxs, xs, s, m, l, xl, xxl, 3xl, 4xl, 5xl)
+    @mixin media .list_divider-indent_$(value)
+        @if $value == none
+            margin-top: 0
+            margin-bottom: 0
+
+            & > .list__item
+                padding-top: 0
+                padding-bottom: 0
+        @else
+            margin-top: calc(var(--ek-list-indent-$(value)) * -1)
+            margin-bottom: calc(var(--ek-list-indent-$(value)) * -1)
+
+            & > .list__item
+                padding-top: var(--ek-list-indent-$(value))
+                padding-bottom: var(--ek-list-indent-$(value))
+
+/**
  * Style:
  *
  *  - list_style_*
