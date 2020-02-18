@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Grid grid-divider-indent="..." /> extend 2 props grid-divider-indent 1`] = `
+<div
+  className="ek-grid ek-grid_divider-indent-x_xs ek-grid_divider-indent-y_xl"
+/>
+`;
+
+exports[`<Grid grid-divider-indent="..." /> props grid-divider-indent 1`] = `
+<div
+  className="ek-grid ek-grid_divider-indent_xs"
+/>
+`;
+
+exports[`<Grid grid-divider-indent="..." /> props grid-divider-indent-x 1`] = `
+<div
+  className="ek-grid ek-grid_divider-indent-x_xs"
+/>
+`;
+
+exports[`<Grid grid-divider-indent="..." /> props grid-divider-indent-y 1`] = `
+<div
+  className="ek-grid ek-grid_divider-indent-y_xs"
+/>
+`;

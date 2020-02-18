@@ -1,10 +1,16 @@
 [README]: /packages/evokit-grid/README.md
 [evokit]: /packages/evokit/README.md
 
-[grid-indent]: /packages/evokit-grid/?id=grid-indent
 [grid-display]: /packages/evokit-grid/?id=grid-display
+[grid-divider]: /packages/evokit-grid/?id=grid-divider
+[grid-divider-indent]: /packages/evokit-grid/?id=grid-divider-indent
+[grid-divider-column]: /packages/evokit-grid/?id=grid-divider-column
 [grid-height]: /packages/evokit-grid/?id=grid-height
+[grid-indent]: /packages/evokit-grid/?id=grid-indent
+[grid-column]: /packages/evokit-grid/?id=grid-column
 [grid-item-display]: /packages/evokit-grid/?id=grid-item-display
+
+[issues_4]: //github.com/docccdev/evokit/issues/4
 
 # EvoKit - Grid
 
@@ -14,6 +20,28 @@
 ---
 
 ## CHANGELOG
+
+### 3.3.0 *(18.02.2020)*
+
+- **Added** new prop [`grid-divider-indent`][grid-divider-indent]
+- **Added** new prop [`grid-divider-column`][grid-divider-column]
+- **Fixed** issue [#4][issues_4] when prop [`grid-divider`][grid-divider] do not work with css modules
+- **Fixed** bug on the new prop [`grid-divider-column`][grid-divider-column] when media values `expand@{media}` and `auto@{media}` not work for [`grid-divider`][grid-divider]
+
+!> Please note there may be visual artefacts. Removed bug two-fold increase in indentation when using props [`grid-indent`][grid-indent] with [`grid-divider`][grid-divider].
+
+!> If you want to keep the previous behavior when using the [`grid-divider`][grid-divider] prop, replace the [`grid-indent`][grid-indent] and [`grid-column`][grid-column] with [`grid-divider-indent`][grid-divider-indent] and [`grid-divider-column`][grid-divider-column].
+
+**Example:**
+```jsx
+<Grid
+    grid-divider='YourValue'
+    grid-divider-indent='YourValue'
+    grid-divider-column='YourValue'
+>
+    ...
+</Grid>
+```
 
 ### 3.2.1 *(17.02.2020)*
 

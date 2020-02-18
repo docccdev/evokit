@@ -19,15 +19,12 @@ describe('<GridItem grid-item-width="..." />', () => {
 
     it('css', () => {
         const css = barista({ content: style });
-        const values = ['auto', 'expand'];
 
-        values.forEach((name) => {
-            expect(css.rule(`.ek-grid__item_width_${name}`).exists()).toBeTruthy();
-        });
+        expect(css.rule(`.ek-grid__item_width_auto`).exists()).toBeTruthy();
+        expect(css.rule(`.ek-grid__item_width_expand`).exists()).toBeTruthy();
 
         range(1, 10).forEach((from) => {
             range(from, 10).filter((to) => to > from || (from == 1 && to == 1)).forEach((to) => {
-                console.log(from, to);
                 expect(css.rule(`.ek-grid__item_width_${from}-${to}`).exists()).toBeTruthy();
             });
         });
