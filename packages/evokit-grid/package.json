@@ -1,6 +1,6 @@
 {
   "name": "evokit-grid",
-  "version": "3.2.1",
+  "version": "3.3.0",
   "description": "The grid for placing content on the page, has 10 columns",
   "main": "index.js",
   "scripts": {
