@@ -11,6 +11,7 @@
 [list-color]: #list-color
 [list-display]: #list-display
 [list-divider]: #list-divider
+[list-divider-indent]: #list-divider-indent
 [list-indent]: #list-indent
 [list-item-display]: #list-item-display
 [list-style]: #list-style
@@ -58,8 +59,9 @@ const App = () => (
 
 | Prop name      | Default value | Possible value | Description  |
 |----------------|---------------|----------------|--------------|
-| [list-display] | `block`       | `block` `none` | Display type |
 | [list-color]   | `null`        | [Create theme][create_theme] | Marker color |
+| [list-display] | `block`       | `block` `none` | Display type |
+| [list-divider-indent]  | `none`        | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` `3xl` `4xl` `5xl` | Indentation between elements, only use with prop [list-divider] |
 | [list-divider] | `null`        | [Create theme][create_theme] | Color separator between elements |
 | [list-indent]  | `none`        | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` `3xl` `4xl` `5xl` | Indentation between elements |
 | [list-style]   | `null`        | `dash` `decimal` `disc` | Marker type |
@@ -105,6 +107,8 @@ const App = () => (
 
 ## `list-display`
 
+Display type
+
 - `block` - shown as blocky (default)
 - `none` - remove block from document
 
@@ -117,6 +121,8 @@ const App = () => (
 ```
 
 ## `list-indent`
+
+Indentation between elements, is calculated from content to content
 
 - `none` - no indent, value: `0px`
 - `xxs` - css variable `--ek-list-indent-xxs`, default value: `5px`
@@ -140,6 +146,8 @@ const App = () => (
 
 ## `list-style`
 
+Marker type
+
 - `dash` - Dash marker (—)
 - `decimal` - Arabic numbers (1, 2, 3, 4,...).
 - `disc` - Dotted markerи (•)
@@ -152,7 +160,33 @@ const App = () => (
 </List>
 ```
 
+## `list-divider-indent`
+
+Indentation between elements, is calculated from the dividing line to the content. Only use with prop [list-divider].
+
+- `none` - no indent, value: `0px`
+- `xxs` - css variable `--ek-list-indent-xxs`, default value: `5px`
+- `xs` - css variable `--ek-list-indent-xs`, default value: `10px`
+- `s` - css variable `--ek-list-indent-s`, default value: `15px`
+- `m` - css variable `--ek-list-indent-m`, default value: `20px`
+- `l` - css variable `--ek-list-indent-l`, default value: `25px`
+- `xl` - css variable `--ek-list-indent-xl`, default value: `30px`
+- `xxl` - css variable `--ek-list-indent-xxl`, default value: `35px`
+- `3xl` - css variable `--ek-list-indent-3xl`, default value: `40px`
+- `4xl` - css variable `--ek-list-indent-4xl`, default value: `45px`
+- `5xl` - css variable `--ek-list-indent-5xl`, default value: `50px`
+
+```jsx
+<List list-divider={THEME_NAME} list-divider-indent='xxl'>
+    <List.Item>
+        ...
+    </List.Item>
+</List>
+```
+
 ## `list-color`
+
+Marker color
 
 > Set the `THEME_NAME` depending on the [theming][create_theme]
 
@@ -166,7 +200,7 @@ const App = () => (
 
 ## `list-divider`
 
-> Set the `THEME_NAME` depending on the [theming][create_theme]
+Color separator between elements
 
 ```jsx
 <List list-divider={THEME_NAME}>
@@ -176,7 +210,12 @@ const App = () => (
 </List>
 ```
 
+> Set the `THEME_NAME` depending on the [theming][create_theme]
+
+
 ## `list-item-display`
+
+Display type
 
 - `block` - shown as blocky (default)
 - `none` - remove block from document
