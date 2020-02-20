@@ -22,6 +22,7 @@ Core:
 Blocks:
   * [evokit-body](/packages/evokit-body/)
   * [evokit-box](/packages/evokit-box/)
+  * [evokit-button](/packages/evokit-button/)
   * [evokit-flex](/packages/evokit-flex/)
   * [evokit-grid](/packages/evokit-grid/)
   * [evokit-image](/packages/evokit-image/)

@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button button-round="..." /> extend 2 props button-round 1`] = `
+<button
+  className="ek-button ek-button_round-top-left_xs ek-button_round-bottom-right_xs ek-button_round-top-right_xl ek-button_round-bottom-left_xl"
+/>
+`;
+
+exports[`<Button button-round="..." /> extend 3 props button-round 1`] = `
+<button
+  className="ek-button ek-button_round-top-left_xs ek-button_round-top-right_xl ek-button_round-bottom-left_xl ek-button_round-bottom-right_m"
+/>
+`;
+
+exports[`<Button button-round="..." /> extend 4 props button-round 1`] = `
+<button
+  className="ek-button ek-button_round-top-left_s ek-button_round-top-right_m ek-button_round-bottom-right_l ek-button_round-bottom-left_xl"
+/>
+`;
+
+exports[`<Button button-round="..." /> props button-round 1`] = `
+<button
+  className="ek-button ek-button_round_full"
+/>
+`;
+
+exports[`<Button button-round="..." /> props button-round-bottom-left 1`] = `
+<button
+  className="ek-button ek-button_round-bottom-left_full"
+/>
+`;
+
+exports[`<Button button-round="..." /> props button-round-bottom-right 1`] = `
+<button
+  className="ek-button ek-button_round-bottom-right_full"
+/>
+`;
+
+exports[`<Button button-round="..." /> props button-round-top-left 1`] = `
+<button
+  className="ek-button ek-button_round-top-left_full"
+/>
+`;
+
+exports[`<Button button-round="..." /> props button-round-top-right 1`] = `
+<button
+  className="ek-button ek-button_round-top-right_full"
+/>
+`;

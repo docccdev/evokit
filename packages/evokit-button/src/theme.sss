@@ -1,0 +1,47 @@
+@import './mixins.sss'
+
+:root
+    --ek-button-background-TEMPLATE_NAME: var(--background)
+    --ek-button-border-TEMPLATE_NAME: var(--border)
+    --ek-button-color-TEMPLATE_NAME: var(--color)
+
+    --ek-button-focus-background-TEMPLATE_NAME: var(--focus-background)
+    --ek-button-focus-border-TEMPLATE_NAME: var(--focus-border)
+    --ek-button-focus-color-TEMPLATE_NAME: var(--focus-color)
+
+    --ek-button-hover-background-TEMPLATE_NAME: var(--hover-background)
+    --ek-button-hover-border-TEMPLATE_NAME: var(--hover-border)
+    --ek-button-hover-color-TEMPLATE_NAME: var(--hover-color)
+
+    --ek-button-active-background-TEMPLATE_NAME: var(--active-background)
+    --ek-button-active-border-TEMPLATE_NAME: var(--active-border)
+    --ek-button-active-color-TEMPLATE_NAME: var(--active-color)
+
+    --ek-button-disabled-background-TEMPLATE_NAME: var(--disabled-background)
+    --ek-button-disabled-border-TEMPLATE_NAME: var(--disabled-border)
+    --ek-button-disabled-color-TEMPLATE_NAME: var(--disabled-color)
+
+@mixin media .button_theme_TEMPLATE_NAME
+    background-color: var(--ek-button-background-TEMPLATE_NAME)
+    border-color: var(--ek-button-border-TEMPLATE_NAME)
+    color: var(--ek-button-color-TEMPLATE_NAME)
+
+    &:focus
+        background-color: var(--ek-button-focus-background-TEMPLATE_NAME)
+        border-color: var(--ek-button-focus-border-TEMPLATE_NAME)
+        color: var(--ek-button-focus-color-TEMPLATE_NAME)
+
+    &:hover
+        background-color: var(--ek-button-hover-background-TEMPLATE_NAME)
+        border-color: var(--ek-button-hover-border-TEMPLATE_NAME)
+        color: var(--ek-button-hover-color-TEMPLATE_NAME)
+
+    &:active
+        background-color: var(--ek-button-active-background-TEMPLATE_NAME)
+        border-color: var(--ek-button-active-border-TEMPLATE_NAME)
+        color: var(--ek-button-active-color-TEMPLATE_NAME)
+
+    &:disabled
+        background-color: var(--ek-button-disabled-background-TEMPLATE_NAME)
+        border-color: var(--ek-button-disabled-border-TEMPLATE_NAME)
+        color: var(--ek-button-disabled-color-TEMPLATE_NAME)

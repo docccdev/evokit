@@ -1,0 +1,35 @@
+{
+  "name": "evokit-button",
+  "version": "2.0.0",
+  "description": "Just a button",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --colors",
+    "build": "webpack --colors",
+    "watch": "webpack --colors --progress --watch",
+    "pretest": "npm run build",
+    "prepublishOnly": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/docccdev/evokit.git"
+  },
+  "homepage": "https://evokit.net/#/packages/evokit-button/",
+  "keywords": [
+    "evokit",
+    "react",
+    "ui",
+    "block",
+    "uikit",
+    "button"
+  ],
+  "author": {
+    "author": "docccdev",
+    "email": "doccc.dev@gmail.com",
+    "url": "http://evokit.net"
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "evokit": ">=3.1.0"
+  }
+}

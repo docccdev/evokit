@@ -4,6 +4,7 @@
 [evokit]: /packages/evokit/
 [evokit-body]: /packages/evokit-body/
 [evokit-box]: /packages/evokit-box/
+[evokit-button]: /packages/evokit-button/
 [evokit-flex]: /packages/evokit-flex/
 [evokit-grid]: /packages/evokit-grid/
 [evokit-image]: /packages/evokit-image/
@@ -42,6 +43,7 @@ npm install evokit-box --save
 List of blocks:
   * [evokit-body]
   * [evokit-box]
+  * [evokit-button]
   * [evokit-flex]
   * [evokit-grid]
   * [evokit-image]

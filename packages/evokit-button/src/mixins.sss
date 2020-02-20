@@ -1,0 +1,29 @@
+@define-mixin media $selector
+    $selector
+        @mixin-content
+
+    @media (--ek-button-media-small)
+        $(selector)\@small
+            @mixin-content
+
+    @media (--ek-button-media-medium)
+        $(selector)\@medium
+            @mixin-content
+
+    @media (--ek-button-media-large)
+        $(selector)\@large
+            @mixin-content
+
+    @media (--ek-button-media-wide)
+        $(selector)\@wide
+            @mixin-content
+
+    @media (--ek-button-media-huge)
+        $(selector)\@huge
+            @mixin-content
+
+@define-mixin hover $selector
+    @media (hover), (min-width:0\0), (min--moz-device-pixel-ratio:0)
+        $(selector)
+            &:hover
+                @mixin-content

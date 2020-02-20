@@ -3,15 +3,22 @@ import { Body } from '../Body';
 import { Grid } from '../Grid';
 import { Box } from '../Box';
 import { List } from '../List';
+import { Button } from '../Button';
 
 export const App = () => (
     <Body body-as='div'>
         <Body.Section>
-            <Box box-padding='5xl' box-border='red1'>
+            <Box box-padding='5xl' box-border='red'>
                 <Grid grid-divider-indent='xl' grid-divider-column='3' grid-divider='red'>
                     {[1,2,3,4,5,6,7].map((value) => (
                         <Grid.Item key={value}>
-                            45465465
+                            <Button
+                                button-padding={value === 1 ? 's 5xl' : null}
+                                button-theme='switcher'
+                                button-height='1-1'
+                            >
+                                привет
+                            </Button>
                         </Grid.Item>
                     ))}
                 </Grid>

@@ -1,0 +1,227 @@
+@import './mixins.sss'
+
+@custom-media --ek-button-media-small only screen and (min-width: 480px)
+@custom-media --ek-button-media-medium only screen and (min-width: 768px)
+@custom-media --ek-button-media-large only screen and (min-width: 960px)
+@custom-media --ek-button-media-wide only screen and (min-width: 1200px)
+@custom-media --ek-button-media-huge only screen and (min-width: 1400px)
+
+:root
+    // base
+    --ek-button-border-radius: 2px
+    --ek-button-border-width: 1px
+    --ek-button-font-size: inherit
+    --ek-button-font-weight: bold
+    --ek-button-line-height: 1em
+    --ek-button-padding: 10px 15px
+    --ek-button-transition: 150ms ease-in-out
+    // prop 'button-padding'
+    --ek-button-indent-xxs: 5px
+    --ek-button-indent-xs: 10px
+    --ek-button-indent-s: 15px
+    --ek-button-indent-m: 20px
+    --ek-button-indent-l: 25px
+    --ek-button-indent-xl: 30px
+    --ek-button-indent-xxl: 35px
+    --ek-button-indent-3xl: 40px
+    --ek-button-indent-4xl: 45px
+    --ek-button-indent-5xl: 50px
+    // prop 'button-round'
+    --ek-button-round-xxs: 2px
+    --ek-button-round-xs: 4px
+    --ek-button-round-s: 6px
+    --ek-button-round-m: 8px
+    --ek-button-round-l: 10px
+    --ek-button-round-xl: 12px
+    --ek-button-round-xxl: 14px
+    --ek-button-round-3xl: 16px
+    --ek-button-round-4xl: 18px
+    --ek-button-round-5xl: 20px
+
+.button
+    position: relative
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    font: inherit
+    color: inherit
+    box-sizing: border-box
+    -webkit-tap-highlight-color: transparent
+    appearance: none
+    text-decoration: none
+    background: transparent
+    user-select: none
+    outline: none
+    vertical-align: middle
+    cursor: pointer
+    transition-property: color, background-color, border-color
+    border: var(--ek-button-border-width) solid transparent
+    padding: var(--ek-button-padding)
+    border-radius: var(--ek-button-border-radius)
+    font-size: var(--ek-button-font-size)
+    font-weight: var(--ek-button-font-weight)
+    line-height: var(--ek-button-line-height)
+    transition: var(--ek-button-transition)
+
+    &:disabled
+        cursor: default
+        pointer-events: none
+
+    &::-moz-focus-inner
+        border-style: none
+
+/**
+ * Display:
+ *
+ *  - button_display_block
+ *  - button_display_none
+ *
+ **/
+
+@each $value in (inline-flex, none)
+    @mixin media .button_display_$(value)
+        display: $value
+
+
+/**
+ * Height:
+ *
+ *  - button_height_auto
+ *  - button_height_inherit
+ *  - button_height_1-1
+ *
+ **/
+
+@each $value in (auto, inherit, 1-1)
+    @mixin media .button_height_$(value)
+        @if $value == 1-1
+            height: 100%
+        @else
+            height: $value
+
+
+/**
+ * Width:
+ *
+ *  - button_width_auto
+ *  - button_width_inherit
+ *  - button_width_1-1
+ *
+ **/
+
+@each $value in (auto, inherit, 1-1)
+    @mixin media .button_width_$(value)
+        @if $value == 1-1
+            width: 100%
+        @else
+            width: $value
+
+
+/**
+ * Padding:
+ *
+ *  - button_padding_*
+ *
+ **/
+
+@each $value in (none, xxs, xs, s, m, l, xl, xxl, 3xl, 4xl, 5xl)
+    @mixin media .button_padding_$(value)
+        @if $value == none
+            padding: 0
+        @else
+            padding: var(--ek-button-indent-$(value))
+
+    @mixin media .button_padding-left_$(value)
+        @if $value == none
+            padding-left: 0
+        @else
+            padding-left: var(--ek-button-indent-$(value))
+
+    @mixin media .button_padding-top_$(value)
+        @if $value == none
+            padding-top: 0
+        @else
+            padding-top: var(--ek-button-indent-$(value))
+
+    @mixin media .button_padding-right_$(value)
+        @if $value == none
+            padding-right: 0
+        @else
+            padding-right: var(--ek-button-indent-$(value))
+
+    @mixin media .button_padding-bottom_$(value)
+        @if $value == none
+            padding-bottom: 0
+        @else
+            padding-bottom: var(--ek-button-indent-$(value))
+
+
+/**
+ * Round:
+ *
+ *  - button_round_*
+ *
+ **/
+
+@each $value in (none, xxs, xs, s, m, l, xl, xxl, 3xl, 4xl, 5xl, full)
+    @mixin media .button_round_$(value)
+        @if $value == none
+            border-radius: 0
+        @else if $value == full
+            border-radius: 50%
+        @else
+            border-radius: var(--ek-box-round-$(value))
+
+    @mixin media .button_round-top-left_$(value)
+        @if $value == none
+            border-top-left-radius: 0
+        @else if $value == full
+            border-top-left-radius: 50%
+        @else
+            border-top-left-radius: var(--ek-box-round-$(value))
+
+    @mixin media .button_round-top-right_$(value)
+        @if $value == none
+            border-top-right-radius: 0
+        @else if $value == full
+            border-top-right-radius: 50%
+        @else
+            border-top-right-radius: var(--ek-box-round-$(value))
+
+    @mixin media .button_round-bottom-right_$(value)
+        @if $value == none
+            border-bottom-right-radius: 0
+        @else if $value == full
+            border-bottom-right-radius: 50%
+        @else
+            border-bottom-right-radius: var(--ek-box-round-$(value))
+
+    @mixin media .button_round-bottom-left_$(value)
+        @if $value == none
+            border-bottom-left-radius: 0
+        @else if $value == full
+            border-bottom-left-radius: 50%
+        @else
+            border-bottom-left-radius: var(--ek-box-round-$(value))
+
+/**
+ * Font weight:
+ *
+ *  - button_weight_*
+ *
+ **/
+
+@each $value in (thin, light, normal, medium, bold, black)
+    @mixin media .button_weight_$(value)
+        @if $value == thin
+            font-weight: 100
+        @else if $value == light
+            font-weight: 300
+        @else if $value == normal
+            font-weight: 400
+        @else if $value == medium
+            font-weight: 500
+        @else if $value == bold
+            font-weight: 700
+        @else if $value == black
+            font-weight: 900
