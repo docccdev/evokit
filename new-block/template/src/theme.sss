@@ -1,0 +1,8 @@
+@import './mixins.sss'
+
+:root
+    --ek-${BLOCK_NAME}-background-TEMPLATE_NAME: var(--background)
+    --ek-${BLOCK_NAME}-border-TEMPLATE_NAME: var(--border)
+
+@mixin media .${BLOCK_NAME}_background_TEMPLATE_NAME
+    background: var(--ek-${BLOCK_NAME}-background-TEMPLATE_NAME)

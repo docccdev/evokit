@@ -1,0 +1,27 @@
+@import './mixins.sss'
+
+@custom-media --ek-${BLOCK_NAME}-media-small only screen and (min-width: 480px)
+@custom-media --ek-${BLOCK_NAME}-media-medium only screen and (min-width: 768px)
+@custom-media --ek-${BLOCK_NAME}-media-large only screen and (min-width: 960px)
+@custom-media --ek-${BLOCK_NAME}-media-wide only screen and (min-width: 1200px)
+@custom-media --ek-${BLOCK_NAME}-media-huge only screen and (min-width: 1400px)
+
+.${BLOCK_NAME}
+    border: 1px red solid
+
+/**
+ * Display:
+ *
+ *  - ${BLOCK_NAME}_display_block
+ *  - ${BLOCK_NAME}_display_none
+ *
+ **/
+
+@each $value in (block, none)
+    @mixin media .${BLOCK_NAME}_display_$(value)
+        @if $value == block
+            display: block
+        @else if $value == none
+            display: none
+        @else
+            display: inherit
