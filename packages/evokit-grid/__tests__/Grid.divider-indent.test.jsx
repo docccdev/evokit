@@ -36,18 +36,6 @@ describe('<Grid grid-divider-indent="..." />', () => {
     it('css', () => {
         const css = barista({ content: style });
 
-        expect(css.rule('.ek-grid_divider-indent_none').exists()).toBeTruthy();
-        expect(css.rule('.ek-grid_divider-indent_xxs').exists()).toBeTruthy();
-        expect(css.rule('.ek-grid_divider-indent_xs').exists()).toBeTruthy();
-        expect(css.rule('.ek-grid_divider-indent_s').exists()).toBeTruthy();
-        expect(css.rule('.ek-grid_divider-indent_m').exists()).toBeTruthy();
-        expect(css.rule('.ek-grid_divider-indent_l').exists()).toBeTruthy();
-        expect(css.rule('.ek-grid_divider-indent_xl').exists()).toBeTruthy();
-        expect(css.rule('.ek-grid_divider-indent_xxl').exists()).toBeTruthy();
-        expect(css.rule('.ek-grid_divider-indent_3xl').exists()).toBeTruthy();
-        expect(css.rule('.ek-grid_divider-indent_4xl').exists()).toBeTruthy();
-        expect(css.rule('.ek-grid_divider-indent_5xl').exists()).toBeTruthy();
-
         expect(css.rule('.ek-grid_divider-indent_none > .ek-grid__item').exists()).toBeTruthy();
         expect(css.rule('.ek-grid_divider-indent_xxs > .ek-grid__item').exists()).toBeTruthy();
         expect(css.rule('.ek-grid_divider-indent_xs > .ek-grid__item').exists()).toBeTruthy();
@@ -60,18 +48,6 @@ describe('<Grid grid-divider-indent="..." />', () => {
         expect(css.rule('.ek-grid_divider-indent_4xl > .ek-grid__item').exists()).toBeTruthy();
         expect(css.rule('.ek-grid_divider-indent_5xl > .ek-grid__item').exists()).toBeTruthy();
 
-        expect(css.rule('.ek-grid_divider-indent-x_none').exists()).toBeTruthy();
-        expect(css.rule('.ek-grid_divider-indent-x_xxs').exists()).toBeTruthy();
-        expect(css.rule('.ek-grid_divider-indent-x_xs').exists()).toBeTruthy();
-        expect(css.rule('.ek-grid_divider-indent-x_s').exists()).toBeTruthy();
-        expect(css.rule('.ek-grid_divider-indent-x_m').exists()).toBeTruthy();
-        expect(css.rule('.ek-grid_divider-indent-x_l').exists()).toBeTruthy();
-        expect(css.rule('.ek-grid_divider-indent-x_xl').exists()).toBeTruthy();
-        expect(css.rule('.ek-grid_divider-indent-x_xxl').exists()).toBeTruthy();
-        expect(css.rule('.ek-grid_divider-indent-x_3xl').exists()).toBeTruthy();
-        expect(css.rule('.ek-grid_divider-indent-x_4xl').exists()).toBeTruthy();
-        expect(css.rule('.ek-grid_divider-indent-x_5xl').exists()).toBeTruthy();
-
         expect(css.rule('.ek-grid_divider-indent-x_none > .ek-grid__item').exists()).toBeTruthy();
         expect(css.rule('.ek-grid_divider-indent-x_xxs > .ek-grid__item').exists()).toBeTruthy();
         expect(css.rule('.ek-grid_divider-indent-x_xs > .ek-grid__item').exists()).toBeTruthy();
@@ -83,18 +59,6 @@ describe('<Grid grid-divider-indent="..." />', () => {
         expect(css.rule('.ek-grid_divider-indent-x_3xl > .ek-grid__item').exists()).toBeTruthy();
         expect(css.rule('.ek-grid_divider-indent-x_4xl > .ek-grid__item').exists()).toBeTruthy();
         expect(css.rule('.ek-grid_divider-indent-x_5xl > .ek-grid__item').exists()).toBeTruthy();
-
-        expect(css.rule('.ek-grid_divider-indent-y_none').exists()).toBeTruthy();
-        expect(css.rule('.ek-grid_divider-indent-y_xxs').exists()).toBeTruthy();
-        expect(css.rule('.ek-grid_divider-indent-y_xs').exists()).toBeTruthy();
-        expect(css.rule('.ek-grid_divider-indent-y_s').exists()).toBeTruthy();
-        expect(css.rule('.ek-grid_divider-indent-y_m').exists()).toBeTruthy();
-        expect(css.rule('.ek-grid_divider-indent-y_l').exists()).toBeTruthy();
-        expect(css.rule('.ek-grid_divider-indent-y_xl').exists()).toBeTruthy();
-        expect(css.rule('.ek-grid_divider-indent-y_xxl').exists()).toBeTruthy();
-        expect(css.rule('.ek-grid_divider-indent-y_3xl').exists()).toBeTruthy();
-        expect(css.rule('.ek-grid_divider-indent-y_4xl').exists()).toBeTruthy();
-        expect(css.rule('.ek-grid_divider-indent-y_5xl').exists()).toBeTruthy();
 
         expect(css.rule('.ek-grid_divider-indent-y_none > .ek-grid__item').exists()).toBeTruthy();
         expect(css.rule('.ek-grid_divider-indent-y_xxs > .ek-grid__item').exists()).toBeTruthy();
