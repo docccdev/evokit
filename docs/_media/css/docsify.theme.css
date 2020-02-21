@@ -71,7 +71,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: subpixel-antialiased;
     color: #34495e;
-    font-family: -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
     font-size: 14px;
     letter-spacing: 0;
     margin: 0;
@@ -1140,4 +1140,15 @@ del code {
 
 #back-to-top:focus, #back-to-top:active {
     box-shadow: 0 0 8px rgba(62,160,127,.6);
+}
+
+.beta {
+    display: inline-block;
+    background: #f66;
+    border: 1px #f66 solid;
+    border-radius: 2px;
+    color: #fff;
+    line-height: 1;
+    font-size: 10px;
+    padding: 0 2px;
 }

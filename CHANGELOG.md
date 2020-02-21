@@ -1,6 +1,7 @@
 [evokit]: /packages/evokit/CHANGELOG.md
 [evokit-body]: /packages/evokit-body/CHANGELOG.md
 [evokit-box]: /packages/evokit-box/CHANGELOG.md
+[evokit-button]: /packages/evokit-button/CHANGELOG.md
 [evokit-flex]: /packages/evokit-flex/CHANGELOG.md
 [evokit-grid]: /packages/evokit-grid/CHANGELOG.md
 [evokit-image]: /packages/evokit-image/CHANGELOG.md
@@ -17,6 +18,7 @@
 [![evokit changelog](https://img.shields.io/npm/v/evokit.svg?label=evokit)][evokit]
 [![evokit-body changelog](https://img.shields.io/npm/v/evokit-body.svg?label=evokit-body)][evokit-body]
 [![evokit-box changelog](https://img.shields.io/npm/v/evokit-box.svg?label=evokit-box)][evokit-box]
+[![evokit-button changelog](https://img.shields.io/npm/v/evokit-button.svg?label=evokit-button)][evokit-button]
 [![evokit-flex changelog](https://img.shields.io/npm/v/evokit-flex.svg?label=evokit-flex)][evokit-flex]
 [![evokit-grid changelog](https://img.shields.io/npm/v/evokit-grid.svg?label=evokit-grid)][evokit-grid]
 [![evokit-image changelog](https://img.shields.io/npm/v/evokit-image.svg?label=evokit-image)][evokit-image]
@@ -27,6 +29,10 @@
 [![evokit-text changelog](https://img.shields.io/npm/v/evokit-text.svg?label=evokit-text)][evokit-text]
 
 ---
+
+### *(20.02.2020)*
+
+- [evokit-button]: **3.0.0-beta.0**
 
 ### *(18.02.2020)*
 

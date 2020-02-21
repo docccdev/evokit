@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button button-padding="..." /> extend 2 props button-padding 1`] = `
+<button
+  className="ek-button ek-button_padding-top_xs ek-button_padding-bottom_xs ek-button_padding-right_xl ek-button_padding-left_xl"
+/>
+`;
+
+exports[`<Button button-padding="..." /> extend 3 props button-padding 1`] = `
+<button
+  className="ek-button ek-button_padding-top_xs ek-button_padding-right_xl ek-button_padding-left_xl ek-button_padding-bottom_m"
+/>
+`;
+
+exports[`<Button button-padding="..." /> extend 4 props button-padding 1`] = `
+<button
+  className="ek-button ek-button_padding-top_s ek-button_padding-right_m ek-button_padding-bottom_l ek-button_padding-left_xl"
+/>
+`;
+
+exports[`<Button button-padding="..." /> props button-padding 1`] = `
+<button
+  className="ek-button ek-button_padding_xxl"
+/>
+`;
+
+exports[`<Button button-padding="..." /> props button-padding-bottom 1`] = `
+<button
+  className="ek-button ek-button_padding-bottom_xxl"
+/>
+`;
+
+exports[`<Button button-padding="..." /> props button-padding-left 1`] = `
+<button
+  className="ek-button ek-button_padding-left_xxl"
+/>
+`;
+
+exports[`<Button button-padding="..." /> props button-padding-right 1`] = `
+<button
+  className="ek-button ek-button_padding-right_xxl"
+/>
+`;
+
+exports[`<Button button-padding="..." /> props button-padding-top 1`] = `
+<button
+  className="ek-button ek-button_padding-top_xxl"
+/>
+`;
