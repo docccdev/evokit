@@ -37,6 +37,16 @@
     --ek-button-round-3xl: 16px
     --ek-button-round-4xl: 18px
     --ek-button-round-5xl: 20px
+    // prop 'button-size'
+    --ek-button-size-small: 11px
+    --ek-button-size-default: var(--ek-button-font-size)
+    --ek-button-size-big: 15px
+    --ek-button-size-h1: 24px
+    --ek-button-size-h2: 22px
+    --ek-button-size-h3: 20px
+    --ek-button-size-h4: 18px
+    --ek-button-size-h5: 16px
+    --ek-button-size-h6: 14px
 
 .button
     position: relative
@@ -46,7 +56,6 @@
     font: inherit
     color: inherit
     box-sizing: border-box
-    -webkit-tap-highlight-color: transparent
     appearance: none
     text-decoration: none
     background: transparent
@@ -55,6 +64,7 @@
     vertical-align: middle
     cursor: pointer
     transition-property: color, background-color, border-color
+    max-width: 100%
     border: var(--ek-button-border-width) solid transparent
     padding: var(--ek-button-padding)
     border-radius: var(--ek-button-border-radius)
@@ -225,3 +235,41 @@
             font-weight: 700
         @else if $value == black
             font-weight: 900
+
+/**
+ * Font size:
+ *
+ *  - button_size_*
+ *
+ **/
+
+@each $value in (none, inherit, small, default, big, h1, h2, h3, h4, h5, h6)
+    @mixin media .button_size_$(value)
+        @if $value == none
+            font-size: 0
+        @else if $value == inherit
+            font-size: inherit
+        @else
+            font-size: var(--ek-button-size-$(value))
+
+/**
+ * Valign:
+ *
+ *  - button_valign_*
+ *
+ **/
+
+@each $value in (baseline, bottom, middle, sub, super, text-bottom, text-top, top)
+    @mixin media .button_valign_$(value)
+        vertical-align: $value
+
+/**
+ * Pointer events:
+ *
+ *  - button_events_*
+ *
+ **/
+
+@each $value in (none, auto)
+    @mixin media .button_events_$(value)
+        pointer-events: $value

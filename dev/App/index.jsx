@@ -19,6 +19,13 @@ export const App = () => (
                             >
                                 привет
                             </Button>
+                            <Button
+                                button-size='small'
+                                button-valign='baseline'
+                                button-theme='TEMPLATE_NAME:hover'
+                            >
+                                привет
+                            </Button>
                         </Grid.Item>
                     ))}
                 </Grid>

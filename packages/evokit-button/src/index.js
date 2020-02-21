@@ -2,10 +2,13 @@ import { createBlock } from 'evokit';
 
 export const Button = createBlock('button', 'button', [
     'display',
+    'events',
     'height',
+    'size',
     'theme',
-    'width',
+    'valign',
     'weight',
+    'width',
     ['padding', [
         ['padding-top', 'padding-bottom'],
         ['padding-right', 'padding-left'],

@@ -9,10 +9,13 @@
 [use-props]: /docs/getting-started/props.md
 
 [button-display]: #button-display
+[button-events]: #button-events
 [button-height]: #button-height
 [button-padding]: #button-padding
 [button-round]: #button-round
+[button-size]: #button-size
 [button-theme]: #button-theme
+[button-valign]: #button-valign
 [button-weight]: #button-weight
 [button-width]: #button-width
 
@@ -65,10 +68,13 @@ const App = () => (
 | Prop name          | Default value    | Possible value | Description  |
 |--------------------|------------------|----------------|--------------|
 | [button-display]     | `inline-flex`  | `inline-flex` `none`  | Display type    |
+| [button-events]      | `auto`         | `auto` `none` | Respond to mouse/touch events |
 | [button-height]      | `auto`         | `auto` `inherit` `1-1` | Set the height |
 | [button-padding] `*` | `null`         | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` `3xl` `4xl` `5xl` | Inner indent around an button content |
 | [button-round] `*`   | `null`         | `none` `full` `xxs` `xs` `s` `m` `l` `xl` `xxl` `3xl` `4xl` `5xl` | Corner rounding |
+| [button-size]        | `null`         | `none` `inherit` `default` `small` `big` `h1` `h2` `h3` `h4` `h5` `h6` | Font size |
 | [button-theme]       | `null`         | [Create theme][create_theme] | Background, border and text colors |
+| [button-valign]      | `middle`       | `baseline` `bottom` `middle` `sub` `super` `text-bottom` `text-top` `top` | Vertical alignment |
 | [button-weight]      | `null`         | `thin` `light` `normal` `medium` `bold` `black` | Font weight |
 | [button-width]       | `auto`         | `auto` `inherit` `1-1` | Set the width |
 
@@ -276,14 +282,73 @@ Font weight
 </Button>
 ```
 
-## `button-theme`
+## `button-size`
 
-Set the **background**, **border** and **text** colors
+- `none` - value: `0px`
+- `inherit` - Inherits the meaning of the parent.
+- `small` - css variable `--ek-button-size-small`, default value: `11px`
+- `default` - css variable `--ek-button-size-default`, default value: `13px`
+- `big` - css variable `--ek-button-size-big`, default value: `15px`
+- `h1` - css variable `--ek-button-size-h1`, default value: `24px`
+- `h2` - css variable `--ek-button-size-h2`, default value: `22px`
+- `h3` - css variable `--ek-button-size-h3`, default value: `20px`
+- `h4` - css variable `--ek-button-size-h4`, default value: `18px`
+- `h5` - css variable `--ek-button-size-h5`, default value: `16px`
+- `h6` - css variable `--ek-button-size-h6`, default value: `14px`
 
 ```jsx
-<Button button-theme={THEME_NAME}>
+<Button button-size='big'>
     ...
 </Button>
+```
+
+## `button-valign`
+
+- `top` - Align the top edge of the element to the top of the tallest line item.
+- `bottom` - Aligns the base of the current element at the bottom of the element of the line below it all
+- `middle` - The alignment of the midpoint of the element at the baseline of the parent plus half the height of the parent element
+- `baseline` - Aligns the baseline of the current element to the parent's baseline
+- `sub` - The element is depicted as subscript, in the form of a subscript
+- `super` - The element is depicted as superscript, in the form of a superscript
+- `text-top` - The top border of the element is aligned to the highest text element of the current line
+- `text-bottom` - The bottom border of the element is aligned at the very bottom edge of the current line
+
+```jsx
+<Button button-valign='baseline'>
+    ...
+</Button>
+```
+
+## `button-events`
+
+- `auto` - Restores item functionality to default.
+- `none` - Prevents mouse events and clicks on an element.
+
+```jsx
+<Button button-events='none'>
+    ...
+</Button>
+```
+
+## `button-theme`
+
+Set the **background**, **border** and **text** colors.
+
+The theme has some interactive states, such as `focus` `hover` `active` `disabled`.
+If you want to display statically one of them, apply `button-theme='{THEME_NAME}:hover'`
+
+**For example, we created a `primary` theme**
+
+All effects:
+
+```jsx
+<Button button-theme='primary' />
+```
+
+One state without more effects:
+
+```jsx
+<Button button-theme='primary:active' />
 ```
 
 > Set the `THEME_NAME` depending on the [theming][create_theme]

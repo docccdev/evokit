@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button button-size="..." /> props button-size 1`] = `
+<button
+  className="ek-button ek-button_size_value"
+/>
+`;
