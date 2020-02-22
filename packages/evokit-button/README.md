@@ -119,11 +119,9 @@ const App = () => (
 }
 ```
 
-<!--
 ## Live demo
 
-[![Edit button-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/button-usage-d85tn?fontsize=14&runonclick=0 ':include :type=iframe width=100% height=500px')
--->
+[![Edit button-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/button-usage-qxm6i?fontsize=14&runonclick=0 ':include :type=iframe width=100% height=500px')
 
 ---
 
