@@ -29,6 +29,9 @@ describe('<Text />', () => {
     it('css', () => {
         const css = barista({ content: style });
 
+        expect(css.rule(':root').exists()).toBeTruthy();
+        expect(css.rule(':root').prop('--ek-text-line-height')).toBe('1em');
+
         expect(css.rule('.ek-text').exists()).toBeTruthy();
     });
 });

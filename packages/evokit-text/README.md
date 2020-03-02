@@ -64,12 +64,12 @@ const App = () => (
 | [text-color]     | `null`        | [Create theme][create_theme] | Text color  |
 | [text-display]   | `inline`      | `inline` `none`  | Display type |
 | [text-lheight]   | `default`     | `default` `medium` `large` | Line spacing |
-| [text-size]      | `default`     | `default` `none` `small` `big` `h1` `h2` `h3` `h4` `h5` `h6` | Font size |
+| [text-size]      | `default`     | `none` `inherit` `default` `small` `big` `h1` `h2` `h3` `h4` `h5` `h6` | Font size |
 | [text-style]     | `null`        | `italic` `strike` `underline` `overline` | Text style |
 | [text-transform] | `none`        | `none` `capitalize` `lowercase` `uppercase` | Text case conversion |
 | [text-valign]    | `null`        | `baseline` `bottom` `middle` `sub` `super` `text-bottom` `text-top` `top` | Vertical alignment |
 | [text-weight]    | `default`     | `default` `thin` `light` `medium` `bold` `black` | Font weight |
-| [text-wrap]      | `normal`      | `normal` `nowrap` `break` `ellipsis` `three-line` `two-line` | Transferring and cutting text |
+| [text-wrap]      | `normal`      | `normal` `nowrap` `pre` `pre-wrap` `pre-line` `break` `ellipsis` `three-line` `two-line` | Transferring and cutting text |
 
 ## Customize
 
@@ -122,6 +122,7 @@ const App = () => (
 ## `text-size`
 
 - `none` - value: `0px`
+- `inherit` - inherits the meaning of the parent
 - `small` - css variable `--ek-text-size-small`, default value: `11px`
 - `default` - css variable `--ek-text-size-default`, default value: `13px`
 - `big` - css variable `--ek-text-size-big`, default value: `15px`
@@ -185,6 +186,9 @@ const App = () => (
 
 - `normal` - The text is displayed as usual
 - `nowrap` - All text is displayed in one line
+- `pre` - Whitespace is preserved by the browser. Text will only wrap on line breaks. Acts like the `<pre>` tag in HTML
+- `pre-wrap` - Whitespace is preserved by the browser. Text will wrap when necessary, and on line breaks
+- `pre-line` - Sequences of whitespace will collapse into a single whitespace. Text will wrap when necessary, and on line breaks
 - `break` - Line wrapping is added automatically
 - `ellipsis` - The text is cut and an ellipsis is added to the end of the line
 - `two-line` - Text is cut in two lines

@@ -3,7 +3,10 @@
 
 [text-display]: /packages/evokit-text/?id=text-display
 [text-wrap]: /packages/evokit-text/?id=text-wrap
+[text-lheight]: /packages/evokit-text/?id=text-lheight
 [text-size]: /packages/evokit-text/?id=text-size
+
+[issues_4]: //github.com/docccdev/evokit/issues/4
 
 
 # EvoKit - Text
@@ -14,6 +17,12 @@
 ---
 
 ## CHANGELOG
+
+### 3.2.0 *(03.03.2020)*
+
+- **Added** new value `inherit` for prop [`text-size`][text-size]
+- **Added** new values `pre` `pre-wrap` `pre-line` for prop [`text-wrap`][text-wrap]
+- **Fixed** issue [#4][issues_4] when prop [`text-lheight`][text-lheight] do not work with css modules
 
 ### 3.1.2 *(17.02.2020)*
 
