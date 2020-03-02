@@ -1,6 +1,7 @@
 @import 'evokit-button/style.css';
 @import './themes/evokit-button@testing-switcher.css';
 @import './themes/evokit-button@testing-simple.css';
+@import './themes/TEMPLATE_NAME.css';
 
 :root {
     /* base */
