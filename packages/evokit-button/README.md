@@ -122,6 +122,16 @@ const App = () => (
     --ek-button-round-3xl: 16px;
     --ek-button-round-4xl: 18px;
     --ek-button-round-5xl: 20px;
+    /* prop 'button-size' */
+    --ek-button-size-small: 11px;
+    --ek-button-size-default: var(--ek-button-font-size);
+    --ek-button-size-big: 15px;
+    --ek-button-size-h1: 24px;
+    --ek-button-size-h2: 22px;
+    --ek-button-size-h3: 20px;
+    --ek-button-size-h4: 18px;
+    --ek-button-size-h5: 16px;
+    --ek-button-size-h6: 14px;
 }
 ```
 
