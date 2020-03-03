@@ -47,10 +47,12 @@
  *
  **/
 
-@each $value in (none, small, default, big, h1, h2, h3, h4, h5, h6)
+@each $value in (none, inherit, small, default, big, h1, h2, h3, h4, h5, h6)
     @mixin media .text_size_$(value)
         @if $value == none
             font-size: 0
+        @else if $value == inherit
+            font-size: inherit
         @else
             font-size: var(--ek-text-size-$(value))
 
@@ -146,13 +148,9 @@
  *
  **/
 
-@each $value in (normal, nowrap, break, ellipsis, three-line, two-line)
+@each $value in (normal, nowrap, pre, pre-wrap, pre-line, break, ellipsis, two-line, three-line)
     @mixin media .text_wrap_$(value)
-        @if $value == normal
-            white-space: normal
-        @else if $value == nowrap
-            white-space: nowrap
-        @else if $value == break
+        @if $value == break
             word-wrap: break-word
             word-break: break-word
             hyphens: auto
@@ -166,19 +164,20 @@
             overflow: hidden
             max-height: calc(var(--ek-text-line-height) * 2)
 
-            &[class*='text_lheight_medium']
+            &.text_lheight_medium
                 max-height: calc(var(--ek-text-line-height-medium) * 2)
 
-            &[class*='text_lheight_large']
+            &.text_lheight_large
                 max-height: calc(var(--ek-text-line-height-large) * 2)
-
         @else if $value == three-line
             display: block
             overflow: hidden
             max-height: calc(var(--ek-text-line-height) * 3)
 
-            &[class*='text_lheight_medium']
+            &.text_lheight_medium
                 max-height: calc(var(--ek-text-line-height-medium) * 3)
 
-            &[class*='text_lheight_large']
+            &.text_lheight_large
                 max-height: calc(var(--ek-text-line-height-large) * 3)
+        @else
+            white-space: $value

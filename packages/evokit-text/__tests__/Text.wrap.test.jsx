@@ -17,9 +17,17 @@ describe('<Text text-wrap="..." />', () => {
 
         expect(css.rule('.ek-text_wrap_normal').exists()).toBeTruthy();
         expect(css.rule('.ek-text_wrap_nowrap').exists()).toBeTruthy();
+        expect(css.rule('.ek-text_wrap_pre').exists()).toBeTruthy();
+        expect(css.rule('.ek-text_wrap_pre-wrap').exists()).toBeTruthy();
+        expect(css.rule('.ek-text_wrap_pre-line').exists()).toBeTruthy();
         expect(css.rule('.ek-text_wrap_break').exists()).toBeTruthy();
         expect(css.rule('.ek-text_wrap_ellipsis').exists()).toBeTruthy();
-        expect(css.rule('.ek-text_wrap_three-line').exists()).toBeTruthy();
         expect(css.rule('.ek-text_wrap_two-line').exists()).toBeTruthy();
+        expect(css.rule('.ek-text_wrap_three-line').exists()).toBeTruthy();
+
+        expect(css.rule('.ek-text_wrap_two-line.ek-text_lheight_medium').exists()).toBeTruthy();
+        expect(css.rule('.ek-text_wrap_two-line.ek-text_lheight_large').exists()).toBeTruthy();
+        expect(css.rule('.ek-text_wrap_three-line.ek-text_lheight_medium').exists()).toBeTruthy();
+        expect(css.rule('.ek-text_wrap_three-line.ek-text_lheight_large').exists()).toBeTruthy();
     });
 });
