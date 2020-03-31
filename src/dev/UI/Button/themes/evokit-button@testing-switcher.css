@@ -1,0 +1,211 @@
+:root {
+  --ek-button-background-switcher: #fff;
+  --ek-button-border-switcher: #dee1ef;
+  --ek-button-color-switcher: inherit;
+
+  --ek-button-focus-background-switcher: #ecebff;
+  --ek-button-focus-border-switcher: #1e00c2;
+  --ek-button-focus-color-switcher: #1e00c2;
+
+  --ek-button-hover-background-switcher: #ecebff;
+  --ek-button-hover-border-switcher: #1e00c2;
+  --ek-button-hover-color-switcher: #1e00c2;
+
+  --ek-button-active-background-switcher: #dad4ff;
+  --ek-button-active-border-switcher: #1b00ab;
+  --ek-button-active-color-switcher: #1b00ab;
+
+  --ek-button-disabled-background-switcher: #fff;
+  --ek-button-disabled-border-switcher: #dee1ef;
+  --ek-button-disabled-color-switcher: #a4abc4;
+}
+
+.ek-button_theme_switcher {
+  background-color: var(--ek-button-background-switcher);
+  border-color: var(--ek-button-border-switcher);
+  color: var(--ek-button-color-switcher);
+}
+
+.ek-button_theme_switcher:focus {
+      background-color: var(--ek-button-focus-background-switcher);
+      border-color: var(--ek-button-focus-border-switcher);
+      color: var(--ek-button-focus-color-switcher);
+}
+
+.ek-button_theme_switcher:hover {
+      background-color: var(--ek-button-hover-background-switcher);
+      border-color: var(--ek-button-hover-border-switcher);
+      color: var(--ek-button-hover-color-switcher);
+}
+
+.ek-button_theme_switcher:active {
+      background-color: var(--ek-button-active-background-switcher);
+      border-color: var(--ek-button-active-border-switcher);
+      color: var(--ek-button-active-color-switcher);
+}
+
+.ek-button_theme_switcher:disabled {
+      background-color: var(--ek-button-disabled-background-switcher);
+      border-color: var(--ek-button-disabled-border-switcher);
+      color: var(--ek-button-disabled-color-switcher);
+}
+
+@media (--ek-button-media-small) {
+      .ek-button_theme_switcher@small {
+  background-color: var(--ek-button-background-switcher);
+  border-color: var(--ek-button-border-switcher);
+  color: var(--ek-button-color-switcher);
+  }
+
+  .ek-button_theme_switcher@small:focus {
+      background-color: var(--ek-button-focus-background-switcher);
+      border-color: var(--ek-button-focus-border-switcher);
+      color: var(--ek-button-focus-color-switcher);
+  }
+
+  .ek-button_theme_switcher@small:hover {
+      background-color: var(--ek-button-hover-background-switcher);
+      border-color: var(--ek-button-hover-border-switcher);
+      color: var(--ek-button-hover-color-switcher);
+  }
+
+  .ek-button_theme_switcher@small:active {
+      background-color: var(--ek-button-active-background-switcher);
+      border-color: var(--ek-button-active-border-switcher);
+      color: var(--ek-button-active-color-switcher);
+  }
+
+  .ek-button_theme_switcher@small:disabled {
+      background-color: var(--ek-button-disabled-background-switcher);
+      border-color: var(--ek-button-disabled-border-switcher);
+      color: var(--ek-button-disabled-color-switcher);
+  }
+}
+
+@media (--ek-button-media-medium) {
+      .ek-button_theme_switcher@medium {
+  background-color: var(--ek-button-background-switcher);
+  border-color: var(--ek-button-border-switcher);
+  color: var(--ek-button-color-switcher);
+  }
+
+  .ek-button_theme_switcher@medium:focus {
+      background-color: var(--ek-button-focus-background-switcher);
+      border-color: var(--ek-button-focus-border-switcher);
+      color: var(--ek-button-focus-color-switcher);
+  }
+
+  .ek-button_theme_switcher@medium:hover {
+      background-color: var(--ek-button-hover-background-switcher);
+      border-color: var(--ek-button-hover-border-switcher);
+      color: var(--ek-button-hover-color-switcher);
+  }
+
+  .ek-button_theme_switcher@medium:active {
+      background-color: var(--ek-button-active-background-switcher);
+      border-color: var(--ek-button-active-border-switcher);
+      color: var(--ek-button-active-color-switcher);
+  }
+
+  .ek-button_theme_switcher@medium:disabled {
+      background-color: var(--ek-button-disabled-background-switcher);
+      border-color: var(--ek-button-disabled-border-switcher);
+      color: var(--ek-button-disabled-color-switcher);
+  }
+}
+
+@media (--ek-button-media-large) {
+      .ek-button_theme_switcher@large {
+  background-color: var(--ek-button-background-switcher);
+  border-color: var(--ek-button-border-switcher);
+  color: var(--ek-button-color-switcher);
+  }
+
+  .ek-button_theme_switcher@large:focus {
+      background-color: var(--ek-button-focus-background-switcher);
+      border-color: var(--ek-button-focus-border-switcher);
+      color: var(--ek-button-focus-color-switcher);
+  }
+
+  .ek-button_theme_switcher@large:hover {
+      background-color: var(--ek-button-hover-background-switcher);
+      border-color: var(--ek-button-hover-border-switcher);
+      color: var(--ek-button-hover-color-switcher);
+  }
+
+  .ek-button_theme_switcher@large:active {
+      background-color: var(--ek-button-active-background-switcher);
+      border-color: var(--ek-button-active-border-switcher);
+      color: var(--ek-button-active-color-switcher);
+  }
+
+  .ek-button_theme_switcher@large:disabled {
+      background-color: var(--ek-button-disabled-background-switcher);
+      border-color: var(--ek-button-disabled-border-switcher);
+      color: var(--ek-button-disabled-color-switcher);
+  }
+}
+
+@media (--ek-button-media-wide) {
+      .ek-button_theme_switcher@wide {
+  background-color: var(--ek-button-background-switcher);
+  border-color: var(--ek-button-border-switcher);
+  color: var(--ek-button-color-switcher);
+  }
+
+  .ek-button_theme_switcher@wide:focus {
+      background-color: var(--ek-button-focus-background-switcher);
+      border-color: var(--ek-button-focus-border-switcher);
+      color: var(--ek-button-focus-color-switcher);
+  }
+
+  .ek-button_theme_switcher@wide:hover {
+      background-color: var(--ek-button-hover-background-switcher);
+      border-color: var(--ek-button-hover-border-switcher);
+      color: var(--ek-button-hover-color-switcher);
+  }
+
+  .ek-button_theme_switcher@wide:active {
+      background-color: var(--ek-button-active-background-switcher);
+      border-color: var(--ek-button-active-border-switcher);
+      color: var(--ek-button-active-color-switcher);
+  }
+
+  .ek-button_theme_switcher@wide:disabled {
+      background-color: var(--ek-button-disabled-background-switcher);
+      border-color: var(--ek-button-disabled-border-switcher);
+      color: var(--ek-button-disabled-color-switcher);
+  }
+}
+
+@media (--ek-button-media-huge) {
+      .ek-button_theme_switcher@huge {
+  background-color: var(--ek-button-background-switcher);
+  border-color: var(--ek-button-border-switcher);
+  color: var(--ek-button-color-switcher);
+  }
+
+  .ek-button_theme_switcher@huge:focus {
+      background-color: var(--ek-button-focus-background-switcher);
+      border-color: var(--ek-button-focus-border-switcher);
+      color: var(--ek-button-focus-color-switcher);
+  }
+
+  .ek-button_theme_switcher@huge:hover {
+      background-color: var(--ek-button-hover-background-switcher);
+      border-color: var(--ek-button-hover-border-switcher);
+      color: var(--ek-button-hover-color-switcher);
+  }
+
+  .ek-button_theme_switcher@huge:active {
+      background-color: var(--ek-button-active-background-switcher);
+      border-color: var(--ek-button-active-border-switcher);
+      color: var(--ek-button-active-color-switcher);
+  }
+
+  .ek-button_theme_switcher@huge:disabled {
+      background-color: var(--ek-button-disabled-background-switcher);
+      border-color: var(--ek-button-disabled-border-switcher);
+      color: var(--ek-button-disabled-color-switcher);
+  }
+}

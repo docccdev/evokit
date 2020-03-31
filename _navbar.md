@@ -1,6 +1,6 @@
 * [HOME](/#/)
 
-* [THEMING](/docs/base/theme.md)
+* [THEMING](/public/theming.html)
 
 * [EXAMPLES](/docs/examples/)
 
