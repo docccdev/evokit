@@ -1,0 +1,15 @@
+@import 'evokit-button/style.css';
+@import './themes/evokit-button@testing-switcher.css';
+@import './themes/evokit-button@testing-simple.css';
+@import './themes/TEMPLATE_NAME.css';
+
+:root {
+    /* base */
+    --ek-button-border-radius: 8px;
+    --ek-button-border-width: 1px;
+    --ek-button-font-size: inherit;
+    --ek-button-font-weight: bold;
+    --ek-button-line-height: 1em;
+    --ek-button-padding: 10px 15px;
+    --ek-button-transition: 150ms ease-in-out;
+}
