@@ -21,6 +21,20 @@ const Title = ({ children }) => (
     </Box>
 );
 
+const SvgClip = () => (
+    <svg width='1.2em' height='1.2em' viewBox="0 0 30.34 30.34">
+        <path
+            fill='currentColor'
+            d="M22.562,12.491c0,0,1.227-0.933,0.293-1.866c-0.934-0.933-1.842,0.271-1.842,0.271l-9.389,9.391
+            c0,0-2.199,2.838-3.871,1.122c-1.67-1.718,1.121-3.872,1.121-3.872l12.311-12.31c0,0,2.873-3.165,5.574-0.466
+            c2.697,2.7-0.477,5.579-0.477,5.579L12.449,24.173c0,0-4.426,5.113-8.523,1.015s1.066-8.474,1.066-8.474L15.494,6.209
+            c0,0,1.176-0.982,0.295-1.866c-0.885-0.883-1.865,0.295-1.865,0.295L1.873,16.689c0,0-4.549,4.989,0.531,10.068
+            c5.08,5.082,10.072,0.533,10.072,0.533l16.563-16.565c0,0,3.314-3.655-0.637-7.608s-7.607-0.639-7.607-0.639L6.543,16.728
+            c0,0-3.65,2.969-0.338,6.279c3.312,3.314,6.227-0.39,6.227-0.39L22.562,12.491z"
+        />
+    </svg>
+);
+
 export class ThemeGenerator extends React.Component {
     constructor(props) {
         super(props);
@@ -124,40 +138,6 @@ export class ThemeGenerator extends React.Component {
             advancedMode,
         } = this.state;
         const hasRoot = !!Object.keys(root).length;
-
-        const DownloadButton = () => (
-            <Button
-                button-theme='blue'
-                disabled={!themeName}
-                type='button'
-                onClick={() => {
-                    const plugins = [];
-                    const finishCss = replaceThemeCss(
-                        themeCss,
-                        themeName,
-                        rootValues
-                    );
-
-                    if (minimizeChecked) {
-                        plugins.push(cssnano({ preset: 'default' }));
-                    }
-                    postcss(plugins)
-                        .process(finishCss)
-                        .then(result => {
-                            downloadFile(
-                                `${packageName}-${themeName}.css`,
-                                result.css
-                            );
-                        });
-                }}
-            >
-                <Text text-wrap='ellipsis'>
-                    {themeName
-                        ? `${packageName}-${themeName}.css`
-                        : 'Please enter theme name'}
-                </Text>
-            </Button>
-        );
 
         const inputThemeName = (
             <input
@@ -283,8 +263,50 @@ export class ThemeGenerator extends React.Component {
                                     </Grid.Item>
                                 </Grid>
                             )}
-                            <Box box-align='center' box-margin-top='xl'>
-                                <DownloadButton />
+                            <Box box-margin-top='xl'>
+                                <Text text-align='center'>
+                                    <Button
+                                        button-theme='blue'
+                                        disabled={!themeName}
+                                        type='button'
+                                        onClick={() => {
+                                            const plugins = [];
+                                            const finishCss = replaceThemeCss(
+                                                themeCss,
+                                                themeName,
+                                                rootValues
+                                            );
+
+                                            if (minimizeChecked) {
+                                                plugins.push(cssnano({ preset: 'default' }));
+                                            }
+                                            postcss(plugins)
+                                                .process(finishCss)
+                                                .then(result => {
+                                                    downloadFile(
+                                                        `${packageName}-${themeName}.css`,
+                                                        result.css
+                                                    );
+                                                });
+                                        }}
+                                    >
+                                        Download
+                                    </Button>
+                                    {!!themeName && (
+                                        <Box box-margin-top='xs'>
+                                            <Text text-size='small' text-color='muted' text-wrap='ellipsis'>
+                                                <Grid grid-valign='middle' grid-align='center' grid-indent='xxs'>
+                                                    <Grid.Item>
+                                                        <SvgClip />
+                                                    </Grid.Item>
+                                                    <Grid.Item>
+                                                        {`${packageName}-${themeName}.css`}
+                                                    </Grid.Item>
+                                                </Grid>
+                                            </Text>
+                                        </Box>
+                                    )}
+                                </Text>
                             </Box>
                         </Box>
                     )}
