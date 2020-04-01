@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { SketchPicker, SliderPicker } from 'react-color';
 import OutsideClickHandler from 'react-outside-click-handler';
@@ -50,85 +50,71 @@ const getTitle = rootVarKey => {
     return 'other';
 };
 
-export class PartTheme extends React.Component {
-    static propTypes = {
-        rootVarKey: PropTypes.string.isRequired,
-        onChange: PropTypes.func.isRequired
-    };
+export const PartTheme = ({ rootVarKey, sliderPickerChecked, inputValue, onChange }) => {
+    const [isPickerOpen, setPickerOpen] = useState(false);
 
-    constructor(props) {
-        super(props);
-        this.state = { inputValue: '', isPickerOpen: false };
-    }
+    const onChangeInput = ({ target }) => onChange(target.value);
+    const onOpenPicker = () => setPickerOpen(true);
+    const onClosePicker = () => setPickerOpen(false);
+    const onChangePicker = ({ hex }) => onChange(hex);
 
-    onChangeInput = ({ target }) => {
-        const { onChange } = this.props;
-        const { value } = target;
-
-        this.setState({ inputValue: value }, () => onChange(value));
-    };
-
-    onOpenPicker = () => this.setState({ isPickerOpen: true });
-
-    onClosePicker = () => this.setState({ isPickerOpen: false });
-
-    onChangePicker = ({ hex }) => this.setState({ inputValue: hex });
-
-    onChangePickerComplete = ({ hex }) => this.props.onChange(hex);
-
-    render() {
-        const { rootVarKey, sliderPickerChecked } = this.props;
-        const { inputValue, isPickerOpen } = this.state;
-
-        return (
-            <Fragment>
+    return (
+        <>
+            {!!rootVarKey && (
                 <Box box-margin-bottom='xs'>
                     <Text text-weight='medium' text-align='center'>
                         {getTitle(rootVarKey)}
                     </Text>
                 </Box>
-                <Box box-position='relative'>
-                    <input
-                        className='input-value input-value_colorpicker'
-                        type='text'
-                        placeholder='#000000'
-                        onChange={this.onChangeInput}
-                        value={inputValue}
+            )}
+            <Box box-position='relative'>
+                <input
+                    className='input-value input-value_colorpicker'
+                    type='text'
+                    placeholder='#000000'
+                    onChange={onChangeInput}
+                    value={inputValue}
+                />
+                <Box
+                    box-position='absolute'
+                    box-place='center-right'
+                    box-margin-right='xxs'
+                >
+                    <div
+                        className='input-color'
+                        style={{ background: inputValue }}
+                        onClick={onOpenPicker}
                     />
-                    <Box
-                        box-position='absolute'
-                        box-place='center-right'
-                        box-margin-right='xxs'
-                    >
-                        <div
-                            className='input-color'
-                            style={{ background: inputValue }}
-                            onClick={this.onOpenPicker}
-                        />
-                    </Box>
                 </Box>
-                {sliderPickerChecked && (
-                    <Box box-margin-top='m'>
-                        <SliderPicker
+            </Box>
+            {sliderPickerChecked && (
+                <Box box-margin-top='m'>
+                    <SliderPicker
+                        color={inputValue}
+                        onChange={onChangePicker}
+                        onChangeComplete={onChangePicker}
+                    />
+                </Box>
+            )}
+            {isPickerOpen && (
+                <Box box-position='absolute center xs'>
+                    <OutsideClickHandler onOutsideClick={onClosePicker}>
+                        <SketchPicker
                             color={inputValue}
-                            onChange={this.onChangePicker}
-                            onChangeComplete={this.onChangePickerComplete}
+                            onChange={onChangePicker}
+                            onChangeComplete={onChangePicker}
+                            disableAlpha
                         />
-                    </Box>
-                )}
-                {isPickerOpen && (
-                    <Box box-position='absolute center xs'>
-                        <OutsideClickHandler onOutsideClick={this.onClosePicker}>
-                            <SketchPicker
-                                color={inputValue}
-                                onChange={this.onChangePicker}
-                                onChangeComplete={this.onChangePickerComplete}
-                                disableAlpha
-                            />
-                        </OutsideClickHandler>
-                    </Box>
-                )}
-            </Fragment>
-        );
-    }
-}
+                    </OutsideClickHandler>
+                </Box>
+            )}
+        </>
+    );
+};
+
+PartTheme.propTypes = {
+    rootVarKey: PropTypes.string,
+    sliderPickerChecked: PropTypes.bool,
+    inputValue: PropTypes.string,
+    onChange: PropTypes.func,
+};

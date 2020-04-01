@@ -36,7 +36,7 @@ export const LinkChangeLog = ({ children, ...props }) => {
                 <OutsideClickHandler onOutsideClick={() => setOpen(false)}>
                     <Box
                         className='popup-changelog'
-                        box-position='absolute center xs'
+                        box-position='absolute center m'
                         box-background='white'
                         box-padding='xl'
                         box-round='xs'
@@ -46,6 +46,14 @@ export const LinkChangeLog = ({ children, ...props }) => {
                                 Changelog
                             </Text>
                         </Box>
+                        <BoxLogItem
+                            box-margin-bottom='m'
+                            version='1.4.0'
+                            changes={[
+                                'add by default single mod',
+                                'improvement code'
+                            ]}
+                        />
                         <BoxLogItem
                             box-margin-bottom='m'
                             version='1.3.0'
