@@ -1,17 +1,15 @@
 import React from 'react';
-import { Box, Text, Grid, Button } from '../UI';
+import { Box, Text, Grid, Button, List } from '../UI';
 import { downloadFile, replaceThemeCss } from './utils';
 import { SelectPackage } from './SelectPackage';
 import { PartTheme } from './PartTheme';
-import { LinkChangeLog } from './LinkChangeLog';
+import { LinkChangeLog, VERSION } from './LinkChangeLog';
 import { SwitchBox } from './SwitchBox';
 import postcss from 'postcss';
 import cssnano from 'cssnano';
 import './style.css';
 
 const THEME_NAME_MAXLENGTH = 128;
-const VERSION = '1.4.0';
-
 
 const Title = ({ children }) => (
     <Box box-margin-bottom='xl'>
@@ -41,7 +39,7 @@ export class ThemeGenerator extends React.Component {
 
         this.state = {
             loading: false,
-            root: {},
+            rootDeclList: [],
             rootValues: {},
             packageName: '',
             themeName: '',
@@ -57,31 +55,31 @@ export class ThemeGenerator extends React.Component {
 
     onSuccessSelectPackage = (packageName, themeTemplate) => {
         const parseCss = postcss.parse(themeTemplate);
-
-        const rootNodes = parseCss.nodes.filter(
+        const parseRoot = parseCss.nodes.filter(
             ({ selector }) => selector === ':root'
-        )[0];
-
-        const root = rootNodes.nodes.reduce(
-            (acc, node) => ({
-                ...acc,
-                [node.prop]: node.value
-            }),
-            {}
         );
 
-        const rootValues = rootNodes.nodes.reduce(
-            (acc, node) => ({
-                ...acc,
-                [node.value]: ''
-            }),
-            {}
-        );
+        const rootDeclList = parseRoot.map((rule) => (
+            rule.nodes.filter(({ type }) => type == 'decl')
+        ));
+
+        // const rootCommList = parseRoot.map((rule) => (
+        //     rule.nodes.filter(({ type }) => type == 'comment')
+        // ));
+
+        const rootStateValues = rootDeclList.reduce((acc, rootDecl) => {
+            const values = rootDecl.reduce((accValues, { value }) => ({
+                ...accValues,
+                [value]: '',
+            }), {});
+
+            return { ...acc, ...values };
+        }, {});
 
         this.setState({
             loading: false,
-            root: root,
-            rootValues: rootValues,
+            rootDeclList: rootDeclList,
+            rootValues: rootStateValues,
             packageName: packageName,
             themeCss: themeTemplate.trim(),
             minimizeChecked: true,
@@ -107,20 +105,16 @@ export class ThemeGenerator extends React.Component {
     };
 
     onPartThemeChangeAll = (value) => {
-        const { root, rootValues } = this.state;
+        const { rootValues } = this.state;
 
-        const newRootValues = {};
-
-        Object.keys(root).forEach((key) => {
-            newRootValues[root[key]] = value;
-        });
+        const newRootValues = Object.keys(rootValues).reduce((acc, keyValue) => ({
+            ...acc,
+            [keyValue]: value,
+        }), {});
 
         this.setState({
             singleColorValue: value,
-            rootValues: {
-                ...rootValues,
-                ...newRootValues,
-            }
+            rootValues: newRootValues,
         });
     };
 
@@ -129,7 +123,7 @@ export class ThemeGenerator extends React.Component {
             loading,
             packageName,
             themeName,
-            root,
+            rootDeclList,
             rootValues,
             themeCss,
             minimizeChecked,
@@ -137,7 +131,7 @@ export class ThemeGenerator extends React.Component {
             singleColorValue,
             advancedMode,
         } = this.state;
-        const hasRoot = !!Object.keys(root).length;
+        const hasRoot = !!rootDeclList.length;
 
         const inputThemeName = (
             <input
@@ -227,23 +221,29 @@ export class ThemeGenerator extends React.Component {
                                         {inputThemeName}
                                     </Box>
                                     <Title>Colors</Title>
-                                    <Grid
-                                        grid-indent='m'
-                                        grid-column={Object.keys(root).length < 3 ? 'expand' : 3}
-                                    >
-                                        {Object.keys(root).map(key => (
-                                            <Grid.Item key={key}>
-                                                <PartTheme
-                                                    sliderPickerChecked={sliderPickerChecked}
-                                                    rootVarKey={key}
-                                                    inputValue={rootValues[root[key]]}
-                                                    onChange={(value) =>
-                                                        this.onPartThemeChange(root[key], value)
-                                                    }
-                                                />
-                                            </Grid.Item>
+                                    <List list-indent='m'>
+                                        {rootDeclList.map((rootDecl, rootDeclIndex) => (
+                                            <List.Item key={rootDeclIndex}>
+                                                <Grid
+                                                    grid-indent='m'
+                                                    grid-column={rootDecl.length < 3 ? 'expand' : 3}
+                                                >
+                                                    {rootDecl.map(({ prop, value }) => (
+                                                        <Grid.Item key={prop}>
+                                                            <PartTheme
+                                                                sliderPickerChecked={sliderPickerChecked}
+                                                                rootVarKey={prop}
+                                                                inputValue={rootValues[value]}
+                                                                onChange={(newValue) =>
+                                                                    this.onPartThemeChange(value, newValue)
+                                                                }
+                                                            />
+                                                        </Grid.Item>
+                                                    ))}
+                                                </Grid>
+                                            </List.Item>
                                         ))}
-                                    </Grid>
+                                    </List>
                                 </>
                             ) : (
                                 <Grid grid-indent='m' grid-column='expand'>

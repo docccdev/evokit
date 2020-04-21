@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Select from 'react-select';
 
@@ -17,45 +17,44 @@ const PACKAGES_LIST = [
 
 const SELECT_OPTIONS = PACKAGES_LIST.map(value => ({ value, label: value }));
 
-export class SelectPackage extends React.Component {
-    static propTypes = {
-        onSelect: PropTypes.func.isRequired,
-        onSuccess: PropTypes.func.isRequired
-    };
+export const SelectPackage = ({ onSelect, onSuccess }) => {
+    const [packageName, setPackageName] = useState('');
 
-    constructor(props) {
-        super(props);
-        this.state = { packageName: '' };
-    }
+    useEffect(() => {
+        if (!PACKAGES_LIST.includes(packageName)) {
+            return;
+        }
 
-    getTheme = () => {
-        const { onSelect, onSuccess } = this.props;
-        const { packageName } = this.state;
+        let themeUrl = `//unpkg.com/${packageName}/theme.css`;
+
+        if (window.location.hostname === 'localhost') {
+            const cleanPackageName = packageName.split('@')[0];
+            themeUrl = `//${window.location.host}/packages/${cleanPackageName}/theme.css`;
+        }
 
         onSelect();
 
-        fetch(`//unpkg.com/${packageName}/theme.css`).then(response => {
-            response.text().then(resp => onSuccess(packageName, resp));
+        fetch(themeUrl).then((response) => {
+            response.text().then((resp) => onSuccess(packageName, resp));
         });
-    };
+    }, [packageName]);
 
-    onSelectChange = ({ value }) => {
-        this.setState({ packageName: value }, this.getTheme);
-    };
+    return (
+        <Select
+            options={SELECT_OPTIONS}
+            onChange={({ value }) => setPackageName(value)}
+            isSearchable={false}
+            styles={{
+                control: (styles) => ({
+                    ...styles,
+                    width: 240,
+                }),
+            }}
+        />
+    );
+};
 
-    render() {
-        return (
-            <Select
-                options={SELECT_OPTIONS}
-                onChange={this.onSelectChange}
-                isSearchable={false}
-                styles={{
-                    control: (styles) => ({
-                        ...styles,
-                        width: 240,
-                    }),
-                }}
-            />
-        );
-    }
-}
+SelectPackage.propTypes = {
+    onSelect: PropTypes.func.isRequired,
+    onSuccess: PropTypes.func.isRequired,
+};
