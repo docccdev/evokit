@@ -2,6 +2,29 @@ import React, { useState } from 'react';
 import OutsideClickHandler from 'react-outside-click-handler';
 import { Box, Text, Link, List } from '../UI';
 
+const CHANGELOG = {
+    '1.0.0': ['initial version'],
+    '1.1.0': [
+        'package name cut spaces',
+        'package name max length 128 characters',
+        'code improvement',
+        'UI improvement',
+    ],
+    '1.2.0': ['add checkbox minimize css'],
+    '1.3.0': [
+        'add checkbox slider color picker',
+        'add new block evokit-button',
+        'fix grid column for input colors',
+    ],
+    '1.4.0': [
+        'add by default single mod',
+        'improvement code',
+    ],
+    '1.4.1': ['improvement code'],
+};
+
+export const VERSION = Object.keys(CHANGELOG).reverse()[0];
+
 const BoxLogItem = ({ version, changes, children, ...props }) => (
     <Box {...props}>
         <Box box-margin-bottom='xs'>
@@ -38,7 +61,7 @@ export const LinkChangeLog = ({ children, ...props }) => {
                         className='popup-changelog'
                         box-position='absolute center m'
                         box-background='white'
-                        box-padding='xl'
+                        box-padding='xl xl xs xl'
                         box-round='xs'
                     >
                         <Box box-margin-bottom='xl'>
@@ -46,39 +69,14 @@ export const LinkChangeLog = ({ children, ...props }) => {
                                 Changelog
                             </Text>
                         </Box>
-                        <BoxLogItem
-                            box-margin-bottom='m'
-                            version='1.4.0'
-                            changes={[
-                                'add by default single mod',
-                                'improvement code'
-                            ]}
-                        />
-                        <BoxLogItem
-                            box-margin-bottom='m'
-                            version='1.3.0'
-                            changes={[
-                                'add checkbox slider color picker',
-                                'add new block evokit-button',
-                                'fix grid column for input colors'
-                            ]}
-                        />
-                        <BoxLogItem
-                            box-margin-bottom='m'
-                            version='1.2.0'
-                            changes={['add checkbox minimize css']}
-                        />
-                        <BoxLogItem
-                            box-margin-bottom='m'
-                            version='1.1.0'
-                            changes={[
-                                'package name cut spaces',
-                                'package name max length 128 characters',
-                                'code improvement',
-                                'UI improvement'
-                            ]}
-                        />
-                        <BoxLogItem version='1.0.0' changes={['initial version']} />
+                        {Object.keys(CHANGELOG).reverse().map((ver) => (
+                            <BoxLogItem
+                                box-margin-bottom='m'
+                                key={ver}
+                                version={ver}
+                                changes={CHANGELOG[ver]}
+                            />
+                        ))}
                     </Box>
                 </OutsideClickHandler>
             )}
