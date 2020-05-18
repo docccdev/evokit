@@ -1,7 +1,7 @@
 {
   "scripts": {
     "start": "webpack-dev-server",
-    "test": "lerna run test",
+    "test": "lerna run test --concurrency 6",
     "bootstrap": "lerna bootstrap",
     "build": "lerna run build && rm -rf public && webpack -p",
     "prepublishOnly": "lerna run prepublishOnly",

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 export const divideProps = (props, ...divide) => {
     const propsKeys = Object.keys(props);
     const divideKeys = [].concat(...divide);
+
     const result = [
         Object.create(null),
         ...divide.map(() => Object.create(null)),
@@ -25,11 +26,15 @@ export const divideProps = (props, ...divide) => {
     return result;
 };
 
-export const getPropKey = (...args) => {
-    return args
-        .reduce((acc, val) => [...acc, ...val.split('__')], [])
-        .filter((key) => typeof key === 'string')
-        .join('-');
+export const getPropKey = (blockName, modName) => {
+    let newBlockName = blockName;
+
+    if (blockName.indexOf('__') > -1) {
+        // convert 'block__mod' to 'block-mod'
+        newBlockName = blockName.replace(/__/, '-');
+    }
+
+    return newBlockName + '-' + modName;
 };
 
 export const getBasePropTypes = (blockName) => ({
@@ -53,32 +58,30 @@ export const getModPropTypes = (blockName, blockMods) => {
 
     return blockMods.reduce((acc, modName) => {
         if (Array.isArray(modName) && modName.length > 0) {
-            return {
-                ...acc,
-                ...getModPropTypes(blockName, modName),
-            };
+            Object.assign(
+                acc,
+                getModPropTypes(blockName, modName),
+            );
         }
 
-        return {
-            ...acc,
-            ...{ [getPropKey(blockName, modName)]: propType },
-        };
+        acc[getPropKey(blockName, modName)] = propType;
+
+        return acc;
     }, {});
 };
 
 export const getMapPropMods = (blockName, blockMods) => {
     return blockMods.reduce((acc, modName) => {
         if (Array.isArray(modName) && modName.length > 0) {
-            return {
-                ...acc,
-                ...getMapPropMods(blockName, modName),
-            };
+            Object.assign(
+                acc,
+                getMapPropMods(blockName, modName),
+            );
+        } else {
+            acc[getPropKey(blockName, modName)] = modName;
         }
 
-        return {
-            ...acc,
-            ...{ [getPropKey(blockName, modName)]: modName },
-        };
+        return acc;
     }, {});
 };
 
@@ -91,10 +94,8 @@ export const getPrepareMods = (mods) => {
 export const getMapPropModsExtend = (blockName, blockMods) => {
     return blockMods.reduce((acc, modName) => {
         if (Array.isArray(modName) && modName.length > 0) {
-            return {
-                ...acc,
-                ...{ [modName[0]]: modName[1] },
-            };
+            const [key, value] = modName;
+            acc[key] = value;
         }
 
         return acc;
@@ -102,8 +103,11 @@ export const getMapPropModsExtend = (blockName, blockMods) => {
 };
 
 export const renameKeys = (obj, keysMap) => {
-    return Object.keys(obj).reduce((acc, key) => ({
-        ...acc,
-        ...{ [keysMap[key]]: obj[key] },
-    }), {});
+    return Object
+        .keys(obj)
+        .reduce((acc, key) => {
+            acc[keysMap[key]] = obj[key];
+
+            return acc;
+        }, {});
 };

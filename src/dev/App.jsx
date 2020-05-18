@@ -6,10 +6,49 @@ import { List } from './UI/List';
 import { Button } from './UI/Button';
 import { Text } from './UI/Text';
 
+
+import { data } from './data';
+
+function range(start, end) {
+    if(start === end) return [start];
+    return [start, ...range(start + 1, end)];
+}
+
+const RenderList = ({ arr }) => (
+    <List list-indent='xxs'>
+        {arr.map(({ children, name, id }) => (
+            <List.Item key={id}>
+                <Text text-weight='bold'>
+                    {name}
+                </Text>
+                {(children && children.length > 0) && (
+                    <Box box-padding-left='s'>
+                        <RenderList arr={children} />
+                    </Box>
+                )}
+            </List.Item>
+        ))}
+    </List>
+);
+
 export const App = () => (
     <Body body-as='div'>
         <Body.Section>
-            <Text style={{ width: 100 }} text-lheight='large' text-wrap={['break', 'two-line']}>
+
+            <RenderList arr={data} />
+            <RenderList arr={data} />
+            <RenderList arr={data} />
+            <RenderList arr={data} />
+            <RenderList arr={data} />
+            <RenderList arr={data} />
+            <RenderList arr={data} />
+            <RenderList arr={data} />
+            <RenderList arr={data} />
+            <RenderList arr={data} />
+            <RenderList arr={data} />
+            <RenderList arr={data} />
+
+{/*            <Text style={{ width: 100 }} text-lheight='large' text-wrap={['break', 'two-line']}>
                 gdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhgl
                 gdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhgl
             </Text>
@@ -34,7 +73,7 @@ export const App = () => (
                         </Grid.Item>
                     ))}
                 </Grid>
-            </Box>
+            </Box>*/}
 
 {/*            <Box box-border='red1'>
                 <Grid grid-divider-indent='5xl xs' grid-divider-column={['1', '2@medium', '3@large', '4@wide', 'expand@huge']} grid-divider='red'>

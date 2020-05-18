@@ -5,7 +5,7 @@ const postcssImport = require('postcss-import');
 const babelConfig = require('./config/babel.config.js');
 
 module.exports = {
-    mode: 'development',
+    mode: 'production',
     entry: {
         theming: './src/theming/index.jsx',
         dev: './src/dev/index.jsx',

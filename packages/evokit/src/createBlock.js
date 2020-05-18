@@ -20,10 +20,12 @@ import {
 } from './checks';
 
 export const createBlock = (tagName = 'div', blockName, blockMods, blockPreset) => {
-    checkTagName(tagName);
-    checkBlockName(blockName);
-    checkBlockMods(blockMods);
-    checkBlockPreset(blockPreset);
+    if (process.env.NODE_ENV !== 'production') {
+        checkTagName(tagName);
+        checkBlockName(blockName);
+        checkBlockMods(blockMods);
+        checkBlockPreset(blockPreset);
+    }
 
     const prepareMods = getPrepareMods(blockMods);
 
@@ -39,8 +41,10 @@ export const createBlock = (tagName = 'div', blockName, blockMods, blockPreset) 
     const getProp = (props, key) => props[getPropKey(blockName, key)];
 
     const Block = forwardRef(({ className, children, ...props }, ref) => {
-        checkPropDeprecated(!!getProp(props, 'ref'), getPropKey(blockName, 'ref'), 'ref');
-        checkPropDeprecated(!!getProp(props, 'tag'), getPropKey(blockName, 'tag'), getPropKey(blockName, 'as'));
+        if (process.env.NODE_ENV !== 'production') {
+            checkPropDeprecated(!!getProp(props, 'ref'), getPropKey(blockName, 'ref'), 'ref');
+            checkPropDeprecated(!!getProp(props, 'tag'), getPropKey(blockName, 'tag'), getPropKey(blockName, 'as'));
+        }
 
         const [cleanProps, modProps] = divideProps(props, modPropKeys, basePropKeys);
         const reanameModProps = renameKeys(modProps, mapPropMods);
