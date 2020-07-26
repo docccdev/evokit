@@ -36,7 +36,9 @@
 
 ## CHANGELOG
 
-!> In version 3.0.0 there are no more UI blocks, they are all in separate packages, please update carefully.
+### 3.2.2-alpha.0 *(26.07.2020)*
+
+- **Fixed** performance
 
 ### 3.2.1 *(07.12.2019)*
 
@@ -67,6 +69,8 @@
 - Added function `withProps`
 
 ### 3.0.0
+
+!> In version 3.0.0 there are no more UI blocks, they are all in separate packages, please update carefully.
 
 - **Added** New core [evokit][evokit].
 - **Added** Separated all UI blocks in packages:
