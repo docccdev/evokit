@@ -22,7 +22,21 @@
     --ek-body-indent-l: 25px
     --ek-body-indent-xl: 30px
     --ek-body-indent-xxl: 35px
-    // prop 'body-size'
+    --ek-body-indent-3xl: 40px
+    --ek-body-indent-4xl: 45px
+    --ek-body-indent-5xl: 50px
+    // prop 'body-width', 'body-width-min', 'body-width-max'
+    --ek-body-width-xxs: 320px
+    --ek-body-width-xs: 480px
+    --ek-body-width-s: 768px
+    --ek-body-width-m: 900px
+    --ek-body-width-l: 1024px
+    --ek-body-width-xl: 1280px
+    --ek-body-width-xxl: 1366px
+    --ek-body-width-3xl: 1440px
+    --ek-body-width-4xl: 1600px
+    --ek-body-width-5xl: 1920px
+    // DEPRECATED prop 'body-size'
     --ek-body-max-width-xl: 1440px
     --ek-body-max-width-xxl: 1640px
     --ek-body-max-width-xxxl: 1840px
@@ -59,18 +73,6 @@
         display: $value
 
 /**
- * Section display:
- *
- *  - body__section_display_block
- *  - body__section_display_none
- *
- **/
-
-@each $value in (block, none)
-    @mixin media .body__section_display_$(value)
-        display: $value
-
-/**
  * body-size:
  *
  *  - body_size_[xl|xxl|xxxl]
@@ -83,13 +85,74 @@
             max-width: var(--ek-body-max-width-$(value))
 
 /**
- * body-indent:
+ * body-width:
  *
- *  - body_indent_[none|xxs|xs|s|m|l|xl|xxl]
+ *  - body_width_none
+ *  - body_width_xxs
+ *  - body_width_xs
+ *  - body_width_s
+ *  - body_width_m
+ *  - body_width_l
+ *  - body_width_xl
+ *  - body_width_xxl
+ *  - body_width_3xl
+ *  - body_width_4xl
+ *  - body_width_5xl
  *
  **/
 
-@each $value in (none, xxs, xs, s, m, l, xl, xxl)
+@each $value in (none, xxs, xs, s, m, l, xl, xxl, 3xl, 4xl, 5xl)
+    @mixin media .body_width_$(value)
+        @if $value == none
+            min-width: 0
+        @else
+            min-width: var(--ek-body-width-$(value))
+
+        .body__section
+            @if $value == none
+                min-width: 0
+                max-width: none
+            @else
+                min-width: var(--ek-body-width-$(value))
+                max-width: var(--ek-body-width-$(value))
+
+    @mixin media .body_width-min_$(value)
+        @if $value == none
+            min-width: 0
+        @else
+            min-width: var(--ek-body-width-$(value))
+
+        .body__section
+            @if $value == none
+                min-width: 0
+            @else
+                min-width: var(--ek-body-width-$(value))
+
+    @mixin media .body_width-max_$(value)
+        .body__section
+            @if $value == none
+                max-width: none
+            @else
+                max-width: var(--ek-body-width-$(value))
+
+/**
+ * body-indent:
+ *
+ *  - body_indent_none
+ *  - body_indent_xxs
+ *  - body_indent_xs
+ *  - body_indent_s
+ *  - body_indent_m
+ *  - body_indent_l
+ *  - body_indent_xl
+ *  - body_indent_xxl
+ *  - body_indent_3xl
+ *  - body_indent_4xl
+ *  - body_indent_5xl
+ *
+ **/
+
+@each $value in (none, xxs, xs, s, m, l, xl, xxl, 3xl, 4xl, 5xl)
     @mixin media .body_indent_$(value)
         .body__section
             @if $value == none
@@ -117,3 +180,43 @@
 
     @mixin media .body_overflow-y_$(value)
         overflow-y: $value
+
+/**
+ * body-overflow-anchor:
+ *
+ *  - body_overflow-anchor_none
+ *  - body_overflow-anchor_auto
+ *
+ **/
+
+@each $value in (none, auto)
+    @mixin media .body_overflow-anchor_$(value)
+        overflow-anchor: $value
+
+/**
+ * Section display:
+ *
+ *  - body__section_display_block
+ *  - body__section_display_none
+ *
+ **/
+
+@each $value in (block, none)
+    @mixin media .body__section_display_$(value)
+        display: $value
+
+/**
+ * Section height:
+ *
+ *  - body__section_height_auto
+ *  - body__section_height_inherit
+ *  - body__section_height_1-1
+ *
+ **/
+
+@each $value in (auto, inherit, 1-1)
+    @mixin media .body__section_height_$(value)
+        @if $value == 1-1
+            height: 100%
+        @else
+            height: $value

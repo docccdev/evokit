@@ -2,8 +2,14 @@
 [evokit]: /packages/evokit/README.md
 
 [body-display]: /packages/evokit-body/?id=body-display
+[body-indent]: /packages/evokit-body/?id=body-indent
+[body-overflow-anchor]: /packages/evokit-body/?id=body-overflow-anchor
 [body-overflow]: /packages/evokit-body/?id=body-overflow
+[body-width]: /packages/evokit-body/?id=body-width
+[body-size]: /packages/evokit-body/?id=body-size
+
 [body-section-display]: /packages/evokit-body/?id=body-section-display
+[body-section-height]: /packages/evokit-body/?id=body-section-height
 
 
 # EvoKit - Body
@@ -14,6 +20,17 @@
 ---
 
 ## CHANGELOG
+
+### 3.2.0 *(28.09.2020)*
+
+- **Added** new prop [`body-overflow-anchor`][body-overflow-anchor]
+- **Added** new prop [`body-section-height`][body-section-height]
+- **Added** new values `3xl`, `4xl` and `5xl` for prop [`body-indent`][body-indent]
+- **Added** new props:
+    - [`body-width`][body-width]
+    - [`body-width-min`][body-width]
+    - [`body-width-max`][body-width]
+- **Deprecated** prop [`body-size`][body-size] are outdated and will be deleted
 
 ### 3.1.0 *(11.10.2019)*
 
