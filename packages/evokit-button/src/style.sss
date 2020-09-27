@@ -72,6 +72,7 @@
     font-weight: var(--ek-button-font-weight)
     line-height: var(--ek-button-line-height)
     transition: var(--ek-button-transition)
+    touch-action: manipulation
 
     &:disabled
         cursor: default
@@ -79,6 +80,9 @@
 
     &::-moz-focus-inner
         border-style: none
+
+    @mixin hover
+        text-decoration: none
 
 /**
  * Display:
