@@ -7,6 +7,7 @@ export const withProps = (target, defaultProps) => {
         ...target.defaultProps,
         ...defaultProps,
     };
+
     Block.displayName = 'withProps';
     Block.propTypes = target.propTypes;
 
