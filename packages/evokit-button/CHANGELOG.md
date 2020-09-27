@@ -14,6 +14,10 @@
 
 ## CHANGELOG
 
+### 3.0.0 *(27.09.2020)*
+
+- **Removed** style text decoration on hover
+
 ### 3.0.0-beta.1 *(02.03.2020)*
 
 - **Added** new prop [`button-size`][button-size]

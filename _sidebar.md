@@ -15,7 +15,7 @@
 * BLOCKS
   * [Body](/packages/evokit-body/)
   * [Box](/packages/evokit-box/)
-  * [Button <sup class='beta'>beta</sup>](/packages/evokit-button/)
+  * [Button](/packages/evokit-button/)
   * [Flex](/packages/evokit-flex/)
   * [Grid](/packages/evokit-grid/)
   * [Image](/packages/evokit-image/)
@@ -24,3 +24,7 @@
   * [List](/packages/evokit-list/)
   * [Picture](/packages/evokit-picture/)
   * [Text](/packages/evokit-text/)
+
+<!--
+  [Button <sup class='beta'>beta</sup>](/packages/evokit-button/)
+-->
