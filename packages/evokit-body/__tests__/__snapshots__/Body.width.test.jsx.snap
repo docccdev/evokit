@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Body body-width="..." /> extend 2 props body-width 1`] = `
+<body
+  className="ek-body ek-body_width-min_value1 ek-body_width-max_value2"
+/>
+`;
+
+exports[`<Body body-width="..." /> props body-width 1`] = `
+<body
+  className="ek-body ek-body_width_value"
+/>
+`;
+
+exports[`<Body body-width="..." /> props body-width-max 1`] = `
+<body
+  className="ek-body ek-body_width-max_value"
+/>
+`;
+
+exports[`<Body body-width="..." /> props body-width-min 1`] = `
+<body
+  className="ek-body ek-body_width-min_value"
+/>
+`;

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Body body-size="..." /> props body-size 1`] = `
+exports[`DEPRECATED <Body body-size="..." /> props body-size 1`] = `
 <body
   className="ek-body ek-body_size_value"
 />

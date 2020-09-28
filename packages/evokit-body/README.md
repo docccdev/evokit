@@ -2,6 +2,7 @@
 [CHANGELOG]: /packages/evokit-body/CHANGELOG.md
 
 [css-variable-usage]: //w3schools.com/css/css3_variables.asp
+[css-overflow-anchor]: //developer.mozilla.org/en-US/docs/Web/CSS/overflow-anchor
 
 [create_theme]: /docs/base/theme.md
 [installation]: /docs/getting-started/installation.md
@@ -12,9 +13,13 @@
 [body-color]: #body-color
 [body-display]: #body-display
 [body-indent]: #body-indent
+[body-overflow-anchor]: #body-overflow-anchor
 [body-overflow]: #body-overflow
-[body-section-display]: #body-section-display
 [body-size]: #body-size
+[body-width]: #body-width
+
+[body-section-display]: #body-section-display
+[body-section-height]: #body-section-height
 
 # EvoKit - Body
 
@@ -68,16 +73,17 @@ const App = () => (
 | [body-background]   | `null`        | [Create theme][create_theme]    | Background color   |
 | [body-color]        | `null`        | [Create theme][create_theme]    | Text color         |
 | [body-display]      | `block`       | `block` `none`                  | Display type   |
-| [body-indent]       | `none`        | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Padding on the side left and right for children `<Body.Section />` |
+| [body-indent]       | `none`        | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` `3xl` `4xl` `5xl` | Padding on the side left and right for children `<Body.Section />` |
 | [body-overflow] `*` | `visible`     | `auto` `hidden` `scroll` `visible` | Overflow type |
-| [body-size]         | `null`        | `xl` `xxl` `xxxl` | Max width for children `<Body.Section />` |
+| [body-overflow-anchor] | `auto`     | `auto` `none` | Scroll anchoring behavior |
+| [body-width] `*`    | `null`        | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` `3xl` `4xl` `5xl` | Min and Max width for children `<Body.Section />` |
 
 ### `<Body.Section />`
 
 | Prop name              | Default value | Possible value             | Description  |
 |------------------------|---------------|----------------------------|--------------|
 | [body-section-display] | `block`       | `block` `none`             | Display type |
-
+| [body-section-height]  | `auto`        | `auto` `inherit` `1-1`     | Set the height |
 
 ## Customize
 
@@ -106,10 +112,20 @@ const App = () => (
     --ek-body-indent-l: 25px;
     --ek-body-indent-xl: 30px;
     --ek-body-indent-xxl: 35px;
-    /* prop 'body-size' */
-    --ek-body-max-width-xl: 1440px;
-    --ek-body-max-width-xxl: 1640px;
-    --ek-body-max-width-xxxl: 1840px;
+    --ek-body-indent-3xl: 40px;
+    --ek-body-indent-4xl: 45px;
+    --ek-body-indent-5xl: 50px;
+    /* prop 'body-width', 'body-width-min', 'body-width-max' */
+    --ek-body-width-xxs: 320px;
+    --ek-body-width-xs: 480px;
+    --ek-body-width-s: 768px;
+    --ek-body-width-m: 900px;
+    --ek-body-width-l: 1024px;
+    --ek-body-width-xl: 1280px;
+    --ek-body-width-xxl: 1366px;
+    --ek-body-width-3xl: 1440px;
+    --ek-body-width-4xl: 1600px;
+    --ek-body-width-5xl: 1920px;
 }
 ```
 
@@ -126,18 +142,6 @@ const App = () => (
 
 ```jsx
 <Body body-display='none'>
-    ...
-</Body>
-```
-
-## `body-size`
-
-- `xl` - css variable `--ek-body-max-width-xl`, default value: `1440px`
-- `xxl` - css variable `--ek-body-max-width-xxl`, default value: `1640px`
-- `xxxl` - css variable `--ek-body-max-width-xxxl`, default value: `1840px`
-
-```jsx
-<Body body-size='xl'>
     ...
 </Body>
 ```
@@ -167,7 +171,22 @@ The property allows you to set the value for all axes at the same time or to det
 ```jsx
 <Body body-overflow='scroll' />
 <Body body-overflow='visible scroll' />
-<Body body-overflow-x='visible' box-overflow-y='scroll' />
+<Body body-overflow-x='visible' body-overflow-y='scroll' />
+```
+
+## `body-overflow-anchor`
+
+The property provides a way to opt out of the browser's scroll anchoring behavior, which adjusts scroll position to minimize content shifts.
+
+Scroll anchoring behavior is enabled by default in any browser that supports it. Therefore, changing the value of this property is typically only required if you are experiencing problems with scroll anchoring in a document or part of a document and need to turn the behavior off. [Read more][css-overflow-anchor]
+
+- `auto` - The element becomes a potential anchor when adjusting scroll position.
+- `none` - The element won't be selected as a potential anchor.
+
+```jsx
+<Body body-overflow-anchor='none'>
+    ...
+</Body>
 ```
 
 ## `body-indent`
@@ -180,10 +199,62 @@ The property allows you to set the value for all axes at the same time or to det
 - `l` - css variable `--ek-body-indent-l`, default value: `25px`
 - `xl` - css variable `--ek-body-indent-xl`, default value: `30px`
 - `xxl` - css variable `--ek-body-indent-xxl`, default value: `35px`
+- `3xl` - css variable `--ek-body-indent-3xl`, default value: `40px`
+- `4xl` - css variable `--ek-body-indent-4xl`, default value: `45px`
+- `5xl` - css variable `--ek-body-indent-5xl`, default value: `50px`
 
 ```jsx
 <Body body-indent='m'>
     ...
+</Body>
+```
+
+## `body-width`
+
+This property set the min and max width for children `<Body.Section />`
+
+**Advanced props**
+
+- `body-width-min`
+- `body-width-max`
+
+**Multi values** _(set value separated by a space)_
+
+- `body-width="{1} {2}"`
+
+> {1} - width-min, {2} - width-max
+
+**List of values**
+
+- `none` - no min/max width, value: `0/none`
+- `xxs` - css variable `--ek-body-width-xxs`, default value: `320px`
+- `xs` - css variable `--ek-body-width-xs`, default value: `480px`
+- `s` - css variable `--ek-body-width-s`, default value: `768px`
+- `m` - css variable `--ek-body-width-m`, default value: `900px`
+- `l` - css variable `--ek-body-width-l`, default value: `1024px`
+- `xl` - css variable `--ek-body-width-xl`, default value: `1280px`
+- `xxl` - css variable `--ek-body-width-xxl`, default value: `1366px`
+- `3xl` - css variable `--ek-body-width-3xl`, default value: `1440px`
+- `4xl` - css variable `--ek-body-width-4xl`, default value: `1600px`
+- `5xl` - css variable `--ek-body-width-5xl`, default value: `1920px`
+
+```jsx
+<Body body-width='l'>
+    <Body.Section>
+        // min-width: 1024px; max-width: 1024px;
+    </Body.Section>
+</Body>
+
+<Body body-width='xxs xl'>
+    <Body.Section>
+        // min-width: 320px; max-width: 1280px;
+    </Body.Section>
+</Body>
+
+<Body body-width-min='xxs' body-width-max='xl'>
+    <Body.Section>
+        // min-width: 320px; max-width: 1280px;
+    </Body.Section>
 </Body>
 ```
 
@@ -217,5 +288,36 @@ The property allows you to set the value for all axes at the same time or to det
     <Body.Section body-section-display='none'>
         ...
     </Body.Section>
+</Body>
+```
+
+## `body-section-height`
+
+Set the height
+
+- `auto` - value: `auto`
+- `inherit` - value: `inherit`
+- `1-1` - value: `100%`
+
+```jsx
+<Body>
+    <Body.Section body-section-height='1-1'>
+        ...
+    </Body.Section>
+</Body>
+```
+
+## `body-size`
+
+!> **DEPRECATED** prop, please use [body-width]
+
+
+- `xl` - css variable `--ek-body-max-width-xl`, default value: `1440px`
+- `xxl` - css variable `--ek-body-max-width-xxl`, default value: `1640px`
+- `xxxl` - css variable `--ek-body-max-width-xxxl`, default value: `1840px`
+
+```jsx
+<Body body-size='xl'>
+    ...
 </Body>
 ```

@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Body body-overflow-anchor="..." /> props body-overflow-anchor 1`] = `
+<body
+  className="ek-body ek-body_overflow-anchor_value"
+/>
+`;
