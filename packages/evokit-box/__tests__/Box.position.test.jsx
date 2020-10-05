@@ -1,5 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
+import barista from 'seed-barista';
+import style from '../style.css';
 import { Box } from '../src';
 
 describe('<Box box-position="..." />', () => {
@@ -26,5 +28,15 @@ describe('<Box box-position="..." />', () => {
         expect(wrapper.html()).toEqual(
             '<div class="ek-box ek-box_position_absolute ek-box_place_center ek-box_zindex_xs"></div>'
         );
+    });
+
+    it('css', () => {
+        const css = barista({ content: style });
+
+        expect(css.rule('.ek-box_position_static').exists()).toBeTruthy();
+        expect(css.rule('.ek-box_position_relative').exists()).toBeTruthy();
+        expect(css.rule('.ek-box_position_absolute').exists()).toBeTruthy();
+        expect(css.rule('.ek-box_position_fixed').exists()).toBeTruthy();
+        expect(css.rule('.ek-box_position_sticky').exists()).toBeTruthy();
     });
 });

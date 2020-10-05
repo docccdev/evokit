@@ -4,15 +4,16 @@
 [box-margin]: /packages/evokit-box/?id=box-margin
 [box-overflow]: /packages/evokit-box/?id=box-overflow
 [box-padding]: /packages/evokit-box/?id=box-padding
-[box-round]: /packages/evokit-box/?id=box-round
 [box-place]: /packages/evokit-box/?id=box-place
+[box-round]: /packages/evokit-box/?id=box-round
 [box-border]: /packages/evokit-box/?id=box-border
 [box-border-color]: /packages/evokit-box/?id=box-border-color
 [box-border-width]: /packages/evokit-box/?id=box-border-width
 [box-border-style]: /packages/evokit-box/?id=box-border-style
+[box-empty]: /packages/evokit-box/?id=box-empty
+[box-opacity]: /packages/evokit-box/?id=box-opacity
 [box-position]: /packages/evokit-box/?id=box-position
 [box-zindex]: /packages/evokit-box/?id=box-zindex
-[box-opacity]: /packages/evokit-box/?id=box-opacity
 
 [create_theme]: /docs/base/theme.md
 
@@ -25,7 +26,21 @@
 
 ## CHANGELOG
 
+### 3.3.0 *(05.10.2020)*
+
+- **Added** new prop [`box-empty`][box-empty]
+- **Removed** values `3xl`, `4xl` and `5xl` for **deprecated** props:
+    - [`box-round-top`][box-round]
+    - [`box-round-right`][box-round]
+    - [`box-round-bottom`][box-round]
+    - [`box-round-left`][box-round]
+    - [`box-padding-lr`][box-padding]
+    - [`box-padding-tb`][box-padding]
+    - [`box-margin-lr`][box-margin]
+    - [`box-margin-tb`][box-margin]
+
 ### 3.2.0 *(01.12.2019)*
+
 - **Added** new prop [`box-zindex`][box-zindex]
 - **Added** new prop [`box-opacity`][box-opacity]
 - **Added** new value `none` for prop [`box-place`][box-place]
