@@ -49,6 +49,8 @@ const App = () => (
 );
 ```
 
+[![Edit image-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/imageusage-7qyol?fontsize=14&runonclick=0 ':include :type=iframe width=100% height=500px')
+
 ## Props
 
 > Also supports other valid props of the React Element. More about [use props][use-props]
@@ -60,10 +62,10 @@ const App = () => (
 | [image-align]      | `null`        | `left` `center` `right` | Horizontal alignment |
 | [image-alt]        | `visible`     | `visible` `hidden` | Visibility alt text if the image is not uploaded |
 | [image-border]     | `null`        | [Create theme][create_theme] | Border color |
-| [image-display]    | `inline`      | `inline` `none`         | Display type |
+| [image-display]    | `inline`      | `inline` `block` `none`         | Display type |
 | [image-fit]        | `null`        | `none` `fill` `contain` `cover` `scale-down` | Filling the container relative to its height and width |
 | [image-mirror]     | `null`        | `x` `y` `xy` | Mirroring |
-| [image-round] `*`  | `none`        | `none` `full` `xxs` `xs` `s` `m` `l` `xl` `xxl` | Corner rounding |
+| [image-round] `*`  | `none`        | `none` `full` `xxs` `xs` `s` `m` `l` `xl` `xxl` `3xl` `4xl` `5xl` | Corner rounding |
 | [image-valign]     | `null`        | `baseline` `bottom` `middle` `sub` `super` `text-bottom` `text-top` `top` | Vertical alignment |
 | [image-width]      | `auto`        | `auto` `1-1` `*-2` `*-3` `*-4` `*-5` `*-6` `*-7` `*-8` `*-9` `*-10` | Set the width |
 
@@ -89,18 +91,18 @@ const App = () => (
     --ek-image-round-l: 10px;
     --ek-image-round-xl: 12px;
     --ek-image-round-xxl: 14px;
+    --ek-image-round-3xl: 16px;
+    --ek-image-round-4xl: 18px;
+    --ek-image-round-5xl: 20px;
 }
 ```
-
-## Live demo
-
-[![Edit image-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/imageusage-7qyol?fontsize=14&runonclick=0 ':include :type=iframe width=100% height=500px')
 
 ---
 
 ## `image-display`
 
 - `inline` - displayed as inline
+- `block` - shown as blocky
 - `none` - remove from a document
 
 ```jsx
@@ -210,6 +212,9 @@ The property allows you to set the fillet value for all corners of the element a
 | `l`    | `--ek-image-round-l`    | `10px`    |
 | `xl`   | `--ek-image-round-xl`   | `12px`    |
 | `xxl`  | `--ek-image-round-xxl`  | `14px`    |
+| `3xl`  | `--ek-image-round-3xl`  | `16px`    |
+| `4xl`  | `--ek-image-round-4xl`  | `18px`    |
+| `5xl`  | `--ek-image-round-5xl`  | `20px`    |
 
 ```jsx
 <Image image-round='s' />
