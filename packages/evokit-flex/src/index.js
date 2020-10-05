@@ -3,6 +3,7 @@ import { createBlock } from 'evokit';
 export const Flex = createBlock('div', 'flex', [
     'direction',
     'display',
+    'height',
     'items',
     'wrap',
     ['content', [
@@ -14,6 +15,7 @@ export const Flex = createBlock('div', 'flex', [
 export const FlexItem = createBlock('div', 'flex__item', [
     'align',
     'display',
+    'empty',
     'order',
 ]);
 

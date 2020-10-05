@@ -43,6 +43,5 @@ describe('<Flex />', () => {
 
         expect(css.rule('.ek-flex').exists()).toBeTruthy();
         expect(css.rule('.ek-flex__item').exists()).toBeTruthy();
-        expect(css.rule('.ek-flex__item:empty').exists()).toBeTruthy();
     });
 });

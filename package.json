@@ -71,6 +71,7 @@
     "evokit-body": "file:packages/evokit-body",
     "evokit-box": "file:packages/evokit-box",
     "evokit-button": "file:packages/evokit-button",
+    "evokit-flex": "file:packages/evokit-flex",
     "evokit-grid": "file:packages/evokit-grid",
     "evokit-image": "file:packages/evokit-image",
     "evokit-line": "file:packages/evokit-line",
