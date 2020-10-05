@@ -1,5 +1,9 @@
 [README]: /packages/evokit-flex/README.md
 
+[flex-height]: /packages/evokit-flex/?id=flex-height
+
+[flex-item-empty]: /packages/evokit-flex/?id=flex-item-empty
+[flex-item-order]: /packages/evokit-flex/?id=flex-item-order
 
 # EvoKit - Flex
 
@@ -9,6 +13,12 @@
 ---
 
 ## CHANGELOG
+
+### 3.2.0 *(05.10.2020)*
+
+- **Added** new prop [`flex-height`][flex-height]
+- **Added** new prop [`flex-item-empty`][flex-item-empty]
+- **Fixed** prop [`flex-item-order`][flex-item-order] if value `0`
 
 ### 3.1.0
 

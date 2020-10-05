@@ -19,9 +19,6 @@
     min-width: 0
     min-height: 0
 
-    &:empty
-        display: none
-
 /**
  * Item display:
  *
@@ -61,9 +58,20 @@
  *
  **/
 
-@each $value in (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+@each $value in (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
     @mixin media .flex__item_order_$(value)
         order: $value
+
+/**
+ * Item empty:
+ *
+ *  - flex__item_empty_hidden
+ *
+ **/
+
+@mixin media .flex__item_empty_hidden
+    &:empty
+        display: none
 
 /**
  * Display:
@@ -176,3 +184,19 @@
 @each $value in (nowrap, wrap, wrap-reverse)
     @mixin media .flex_wrap_$(value)
         flex-wrap: $value
+
+/**
+ * Height:
+ *
+ *  - flex_height_auto
+ *  - flex_height_inherit
+ *  - flex_height_1-1
+ *
+ **/
+
+@each $value in (auto, inherit, 1-1)
+    @mixin media .flex_height_$(value)
+        @if $value == 1-1
+            height: 100%
+        @else
+            height: $value

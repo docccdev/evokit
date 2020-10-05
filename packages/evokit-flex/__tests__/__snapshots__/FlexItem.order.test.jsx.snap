@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FlexItem flex-item-order="..." /> props flex-item-order 1`] = `
+<div
+  className="ek-flex__item ek-flex__item_order_value"
+/>
+`;

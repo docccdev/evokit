@@ -8,14 +8,17 @@
 [use-props]: /docs/getting-started/props.md
 
 [flex-align-self]: #flex-align-self
+[flex-content]: #flex-content
 [flex-direction]: #flex-direction
 [flex-display]: #flex-display
+[flex-height]: #flex-height
+[flex-items]: #flex-items
+[flex-wrap]: #flex-wrap
+
 [flex-item-align]: #flex-item-align
 [flex-item-display]: #flex-item-display
 [flex-item-order]: #flex-item-order
-[flex-wrap]: #flex-wrap
-[flex-items]: #flex-items
-[flex-content]: #flex-content
+[flex-item-empty]: #flex-item-empty
 
 # EvoKit - Flex
 
@@ -54,6 +57,8 @@ const App = () => (
 );
 ```
 
+[![Edit flex-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/flex-usage-d85tn?fontsize=14&runonclick=0 ':include :type=iframe width=100% height=500px')
+
 ## Props
 
 > Also supports other valid props of the React Element. More about [use props][use-props]
@@ -64,9 +69,10 @@ const App = () => (
 |--------------------|------------------|----------------|-------------|
 | [flex-content] `*` | `start`    | `start` `end` `center` `between` `around` `stretch` | Space between flex lines on the cross axis |
 | [flex-direction]   | `row`      | `row` `row-reverse` `column` `column-reverse` | Direction of all items |
-| [flex-display]     | `flex`     | `flex` `flex-inline` `none` | Display type |
+| [flex-display]     | `flex`     | `flex` `inline-flex` `none` | Display type |
 | [flex-items]       | `start`    | `start` `end` `center` `baseline` `stretch` | Alignment of all items on the cross axis |
 | [flex-wrap]        | `wrap`     | `nowrap` `wrap` `wrap-reverse` | Wrap rules |
+| [flex-height]      | `auto`     | `auto` `inherit` `1-1`     | Set the height |
 
 ### `<Flex.Item />`
 
@@ -74,7 +80,8 @@ const App = () => (
 |---------------------|------------------|----------------|-------------|
 | [flex-item-align]   | `start`  | `start` `end` `center` `baseline` `stretch` | Alignment item on the cross axis |
 | [flex-item-display] | `block`  | `block` `none` | Display type |
-| [flex-item-order]   | `0`      | `0` `1` `2` `3` `4` `5` `6` `7` `8` `9` `10` | Set the order |
+| [flex-item-order]   | `null`   | `0` `1` `2` `3` `4` `5` `6` `7` `8` `9` `10` | Set the order |
+| [flex-item-empty]   | `null`   | `hidden` | Hide if contain either nothing or only an HTML comment. |
 
 > `*` — prop has advanced params
 
@@ -90,16 +97,12 @@ const App = () => (
 @custom-media --ek-flex-media-huge only screen and (min-width: 1400px);
 ```
 
-## Live demo
-
-[![Edit flex-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/flex-usage-d85tn?fontsize=14&runonclick=0 ':include :type=iframe width=100% height=500px')
-
 ---
 
 ## `flex-display`
 
 ```jsx
-<Flex flex-display='flex-inline'>
+<Flex flex-display='inline-flex'>
     ...
 </Flex>
 ```
@@ -173,6 +176,20 @@ const App = () => (
 </Flex>
 ```
 
+## `flex-height`
+
+Set the height
+
+- `auto` - value: `auto`
+- `inherit` - value: `inherit`
+- `1-1` - value: `100%`
+
+```jsx
+<Flex flex-height='1-1'>
+    ...
+</Flex>
+```
+
 ## `flex-item-align`
 
 - `start` - The cross-start margin edges of the flex item are flushed with the cross-start edge of the line
@@ -210,6 +227,18 @@ const App = () => (
 <Flex>
     <Flex.Item flex-item-order='2'>
         ...
+    </Flex.Item>
+</Flex>
+```
+
+## `flex-item-empty`
+
+The `<Flex.Item>` will be hidden `display: none` that contain either nothing or only an HTML comment.
+
+```jsx
+<Flex>
+    <Flex.Item flex-item-empty='hidden'>
+        {null}
     </Flex.Item>
 </Flex>
 ```

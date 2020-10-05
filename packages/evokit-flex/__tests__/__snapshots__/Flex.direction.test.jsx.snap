@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Flex flex-direction="..." /> props flex-direction 1`] = `
+<div
+  className="ek-flex ek-flex_direction_value"
+/>
+`;
