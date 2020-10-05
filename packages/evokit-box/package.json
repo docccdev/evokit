@@ -1,6 +1,6 @@
 {
   "name": "evokit-box",
-  "version": "3.2.0",
+  "version": "3.3.0",
   "description": "The content block allows to apply indents, position and more",
   "main": "index.js",
   "scripts": {
