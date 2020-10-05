@@ -1,9 +1,9 @@
 [README]: /packages/evokit-image/README.md
 [evokit]: /packages/evokit/README.md
 
-[image-round]: /packages/evokit-image/?id=image-round
-[image-display]: /packages/evokit-image/?id=image-display
 [image-alt]: /packages/evokit-image/?id=image-alt
+[image-display]: /packages/evokit-image/?id=image-display
+[image-round]: /packages/evokit-image/?id=image-round
 
 [create_theme]: /docs/base/theme.md
 
@@ -15,6 +15,11 @@
 ---
 
 ## CHANGELOG
+
+### 3.1.2 *(05.10.2020)*
+
+- **Added** new value `block` for prop [`image-display`][image-display]
+- **Added** new values `3xl`, `4xl` and `5xl` for prop [`image-round`][image-round]
 
 ### 3.1.1 *(17.02.2020)*
 

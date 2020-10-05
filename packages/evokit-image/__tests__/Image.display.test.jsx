@@ -16,6 +16,7 @@ describe('<Image image-display="..." />', () => {
         const css = barista({ content: style });
 
         expect(css.rule('.ek-image_display_inline').exists()).toBeTruthy();
+        expect(css.rule('.ek-image_display_block').exists()).toBeTruthy();
         expect(css.rule('.ek-image_display_none').exists()).toBeTruthy();
     });
 });

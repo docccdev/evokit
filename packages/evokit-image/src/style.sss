@@ -15,6 +15,9 @@
     --ek-image-round-l: 10px
     --ek-image-round-xl: 12px
     --ek-image-round-xxl: 14px
+    --ek-image-round-3xl: 16px
+    --ek-image-round-4xl: 18px
+    --ek-image-round-5xl: 20px
 
 .image
     display: inline
@@ -32,11 +35,12 @@
  * Display:
  *
  *  - image_display_inline
+ *  - image_display_block
  *  - image_display_none
  *
  **/
 
-@each $value in (inline, none)
+@each $value in (inline, block, none)
     @mixin media .image_display_$(value)
         display: $value
 
@@ -118,7 +122,7 @@
  *
  **/
 
-@each $value in (none, xxs, xs, s, m, l, xl, xxl, full)
+@each $value in (none, xxs, xs, s, m, l, xl, xxl, 3xl, 4xl, 5xl, full)
     @mixin media .image_round_$(value)
         @if $value == none
             border-radius: 0
@@ -126,6 +130,41 @@
             border-radius: 50%
         @else
             border-radius: var(--ek-image-round-$(value))
+
+    @mixin media .image_round-top-left_$(value)
+        @if $value == none
+            border-top-left-radius: 0
+        @else if $value == full
+            border-top-left-radius: 50%
+        @else
+            border-top-left-radius: var(--ek-image-round-$(value))
+
+    @mixin media .image_round-top-right_$(value)
+        @if $value == none
+            border-top-right-radius: 0
+        @else if $value == full
+            border-top-right-radius: 50%
+        @else
+            border-top-right-radius: var(--ek-image-round-$(value))
+
+    @mixin media .image_round-bottom-right_$(value)
+        @if $value == none
+            border-bottom-right-radius: 0
+        @else if $value == full
+            border-bottom-right-radius: 50%
+        @else
+            border-bottom-right-radius: var(--ek-image-round-$(value))
+
+    @mixin media .image_round-bottom-left_$(value)
+        @if $value == none
+            border-bottom-left-radius: 0
+        @else if $value == full
+            border-bottom-left-radius: 50%
+        @else
+            border-bottom-left-radius: var(--ek-image-round-$(value))
+
+// DEPRECATED
+@each $value in (none, xxs, xs, s, m, l, xl, xxl, full)
 
     @mixin media .image_round-top_$(value)
         @if $value == none
@@ -169,38 +208,6 @@
             border-bottom-left-radius: 50%
         @else
             border-top-left-radius: var(--ek-image-round-$(value))
-            border-bottom-left-radius: var(--ek-image-round-$(value))
-
-    @mixin media .image_round-top-left_$(value)
-        @if $value == none
-            border-top-left-radius: 0
-        @else if $value == full
-            border-top-left-radius: 50%
-        @else
-            border-top-left-radius: var(--ek-image-round-$(value))
-
-    @mixin media .image_round-top-right_$(value)
-        @if $value == none
-            border-top-right-radius: 0
-        @else if $value == full
-            border-top-right-radius: 50%
-        @else
-            border-top-right-radius: var(--ek-image-round-$(value))
-
-    @mixin media .image_round-bottom-right_$(value)
-        @if $value == none
-            border-bottom-right-radius: 0
-        @else if $value == full
-            border-bottom-right-radius: 50%
-        @else
-            border-bottom-right-radius: var(--ek-image-round-$(value))
-
-    @mixin media .image_round-bottom-left_$(value)
-        @if $value == none
-            border-bottom-left-radius: 0
-        @else if $value == full
-            border-bottom-left-radius: 50%
-        @else
             border-bottom-left-radius: var(--ek-image-round-$(value))
 
 /**
