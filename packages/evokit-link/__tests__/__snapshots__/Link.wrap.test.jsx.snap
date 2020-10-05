@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Link link-wrap="..." /> props link-wrap 1`] = `
+<a
+  className="ek-link ek-link_wrap_value"
+/>
+`;

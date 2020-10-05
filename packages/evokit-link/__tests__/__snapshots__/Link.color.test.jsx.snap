@@ -2,6 +2,6 @@
 
 exports[`<Link link-color="..." /> props link-color 1`] = `
 <a
-  className="ek-link ek-link_color_value"
+  className="ek-link ek-link_color_TEMPLATE_NAME"
 />
 `;

@@ -8,4 +8,5 @@ export const Link = createBlock('a', 'link', [
     'style',
     'valign',
     'weight',
+    'wrap',
 ]);

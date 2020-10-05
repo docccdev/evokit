@@ -15,6 +15,7 @@
 [link-style]: #link-style
 [link-valign]: #link-valign
 [link-weight]: #link-weight
+[link-wrap]: #link-wrap
 
 # EvoKit - Link
 
@@ -49,6 +50,8 @@ const App = () => (
 );
 ```
 
+[![Edit link-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/linkusage-c7mgv?fontsize=14&runonclick=0 ':include :type=iframe width=100% height=500px')
+
 ## Props
 
 > Also supports other valid props of the React Element. More about [use props][use-props]
@@ -60,10 +63,12 @@ const App = () => (
 | [link-color]   | `null`        | [Create theme][create_theme]  | Text color   |
 | [link-display] | `inline`      | `inline` `none`               | Display type |
 | [link-lheight] | `default`     | `default` `medium` `large`    | Line spacing |
-| [link-size]    | `default`     | `default` `small` `big` `h1` `h2` `h3` `h4` `h5` `h6` | Font size |
-| [link-style]   | `null`        | `dotted` `multi-line` | Decoration styles |
+| [link-size]    | `default`     | `none` `inherit` `default` `small` `big` `h1` `h2` `h3` `h4` `h5` `h6` | Font size |
+| [link-style]   | `null`        | `solid` `dotted` `dashed` `multi-line` | Decoration styles |
 | [link-valign]  | `null`        | `baseline` `bottom` `middle` `sub` `super` `text-bottom` `text-top` `top` | Aligns text vertically |
 | [link-weight]  | `default`     | `default` `thin` `light` `medium` `bold` `black` | Font weight |
+| [link-wrap]    | `normal`      | `normal` `nowrap` `pre` `pre-wrap` `pre-line` `break` `ellipsis` | Transferring and cutting text |
+
 
 ## Customize
 
@@ -96,10 +101,6 @@ const App = () => (
 }
 ```
 
-## Live demo
-
-[![Edit link-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/linkusage-c7mgv?fontsize=14&runonclick=0 ':include :type=iframe width=100% height=500px')
-
 ---
 
 ## `link-display`
@@ -115,6 +116,8 @@ const App = () => (
 
 ## `link-size`
 
+- `none` - value: `0px`
+- `inherit` - inherits the meaning of the parent
 - `small` - css variable `--ek-link-size-small`, default value: `11px`
 - `default` - css variable `--ek-link-size-default`, default value: `13px`
 - `big` - css variable `--ek-link-size-big`, default value: `15px`
@@ -165,7 +168,9 @@ const App = () => (
 
 ## `link-style`
 
+- `solid` - solid style
 - `dotted` - dotted style
+- `dashed` - dashed style
 - `multi-line` - for multiline links (fix cursor pointer)
 
 ```jsx
@@ -182,6 +187,22 @@ const App = () => (
 
 ```jsx
 <Link link-lheight='medium' href='#'>
+    ...
+</Link>
+```
+
+## `link-wrap`
+
+- `normal` - The text is displayed as usual
+- `nowrap` - All text is displayed in one line
+- `pre` - Whitespace is preserved by the browser. Text will only wrap on line breaks. Acts like the `<pre>` tag in HTML
+- `pre-wrap` - Whitespace is preserved by the browser. Text will wrap when necessary, and on line breaks
+- `pre-line` - Sequences of whitespace will collapse into a single whitespace. Text will wrap when necessary, and on line breaks
+- `break` - Line wrapping is added automatically
+- `ellipsis` - The text is cut and an ellipsis is added to the end of the line
+
+```jsx
+<Link link-wrap='ellipsis' href='#'>
     ...
 </Link>
 ```

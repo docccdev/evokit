@@ -53,9 +53,14 @@
  *
  **/
 
-@each $value in (small, default, big, h1, h2, h3, h4, h5, h6)
+@each $value in (none, inherit, small, default, big, h1, h2, h3, h4, h5, h6)
     @mixin media .link_size_$(value)
-        font-size: var(--ek-link-size-$(value))
+        @if $value == none
+            font-size: 0
+        @else if $value == inherit
+            font-size: inherit
+        @else
+            font-size: var(--ek-link-size-$(value))
 
 /**
  * Font weight:
@@ -108,12 +113,13 @@
  *
  **/
 
-.link_style_dotted
-    border-bottom: 1px dotted
+@each $value in (solid, dotted, dashed)
+    .link_style_$(value)
+        border-bottom: 1px $value
 
-    @mixin hover
-        text-decoration: none
-        border-bottom-color: transparent
+        @mixin hover
+            text-decoration: none
+            border-bottom-color: transparent
 
 .link_style_multi-line
     position: relative
@@ -126,3 +132,25 @@
         top: 0
         right: 0
         bottom: 0
+
+/**
+ * Wrap:
+ *
+ *  - link_wrap_*
+ *
+ **/
+
+@each $value in (normal, nowrap, pre, pre-wrap, pre-line, break, ellipsis)
+    .link_wrap_$(value)
+        @if $value == break
+            word-wrap: break-word
+            word-break: break-word
+            hyphens: auto
+        @else if $value == ellipsis
+            display: inline-block
+            max-width: 100%
+            overflow: hidden
+            text-overflow: ellipsis
+            white-space: nowrap
+        @else
+            white-space: $value

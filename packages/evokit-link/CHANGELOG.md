@@ -2,7 +2,9 @@
 [evokit]: /packages/evokit/README.md
 
 [link-display]: /packages/evokit-link/?id=link-display
-
+[link-size]: /packages/evokit-link/?id=link-size
+[link-style]: /packages/evokit-link/?id=link-style
+[link-wrap]: /packages/evokit-link/?id=link-wrap
 
 # EvoKit - Link
 
@@ -12,6 +14,12 @@
 ---
 
 ## CHANGELOG
+
+### 3.2.0 *(06.10.2020)*
+
+- **Added** new prop [`link-wrap`][link-wrap]
+- **Added** new values `solid` and `dashed` for prop [`link-style`][link-style]
+- **Added** new values `none` and `inherit` for prop [`link-size`][link-size]
 
 ### 3.1.0 *(11.10.2019)*
 
