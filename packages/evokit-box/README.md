@@ -16,6 +16,7 @@
 [box-border-width]: #box-border-width
 [box-border-style]: #box-border-style
 [box-display]: #box-display
+[box-empty]: #box-empty
 [box-height]: #box-height
 [box-margin]: #box-margin
 [box-opacity]: #box-opacity
@@ -60,6 +61,8 @@ const App = () => (
 );
 ```
 
+[![Edit box-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/boxusage-3r9iy?fontsize=14&runonclick=0 ':include :type=iframe width=100% height=500px')
+
 ## Props
 
 > Also supports other valid props of the React Element. More about [use props][use-props]
@@ -75,6 +78,7 @@ const App = () => (
 | [box-border-width] `*` | `none`    | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` `3xl` `4xl` `5xl`  | Border width     |
 | [box-border-style] `*` | `solid`   | `solid` `dotted` `dashed`  | Border style     |
 | [box-display]          | `block`   | `block` `inline-block` `inline` `none` | Display type |
+| [box-empty]            | `null`   | `hidden` | Hide if contain either nothing or only an HTML comment. |
 | [box-height]           | `auto`    | `auto` `1-1` | Set the height |
 | [box-margin] `*`       | `none`    | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` `3xl` `4xl` `5xl` `auto` | Indent around block |
 | [box-opacity]          | `null`    | `0` `10` `20` `30` `40` `50` `60` `70` `80` `90` `100` | Set the opacity in % |
@@ -146,10 +150,6 @@ const App = () => (
     --ek-box-zindex-5xl: 50;
 }
 ```
-
-## Live demo
-
-[![Edit box-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/boxusage-3r9iy?fontsize=14&runonclick=0 ':include :type=iframe width=100% height=500px')
 
 ---
 
@@ -633,5 +633,15 @@ The property allows you to set the border style for all sides of an element at o
 ```jsx
 <Box box-opacity='50'>
     ...
+</Box>
+```
+
+## `box-empty`
+
+The `<Box>` will be hidden `display: none` that contain either nothing or only an HTML comment.
+
+```jsx
+<Box box-empty='hidden'>
+    {null}
 </Box>
 ```

@@ -70,9 +70,9 @@ const App = () => (
 | [flex-content] `*` | `start`    | `start` `end` `center` `between` `around` `stretch` | Space between flex lines on the cross axis |
 | [flex-direction]   | `row`      | `row` `row-reverse` `column` `column-reverse` | Direction of all items |
 | [flex-display]     | `flex`     | `flex` `inline-flex` `none` | Display type |
+| [flex-height]      | `auto`     | `auto` `inherit` `1-1`     | Set the height |
 | [flex-items]       | `start`    | `start` `end` `center` `baseline` `stretch` | Alignment of all items on the cross axis |
 | [flex-wrap]        | `wrap`     | `nowrap` `wrap` `wrap-reverse` | Wrap rules |
-| [flex-height]      | `auto`     | `auto` `inherit` `1-1`     | Set the height |
 
 ### `<Flex.Item />`
 
@@ -80,8 +80,8 @@ const App = () => (
 |---------------------|------------------|----------------|-------------|
 | [flex-item-align]   | `start`  | `start` `end` `center` `baseline` `stretch` | Alignment item on the cross axis |
 | [flex-item-display] | `block`  | `block` `none` | Display type |
-| [flex-item-order]   | `null`   | `0` `1` `2` `3` `4` `5` `6` `7` `8` `9` `10` | Set the order |
 | [flex-item-empty]   | `null`   | `hidden` | Hide if contain either nothing or only an HTML comment. |
+| [flex-item-order]   | `null`   | `0` `1` `2` `3` `4` `5` `6` `7` `8` `9` `10` | Set the order |
 
 > `*` — prop has advanced params
 

@@ -1,5 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
+import barista from 'seed-barista';
+import style from '../theme.css';
 import { Box } from '../src';
 
 describe('<Box box-background="..." />', () => {
@@ -8,5 +10,11 @@ describe('<Box box-background="..." />', () => {
         expect(wrapper).toMatchSnapshot();
 
         expect(wrapper.html()).toEqual('<div class="ek-box ek-box_background_THEME_NAME"></div>');
+    });
+
+    it('css', () => {
+        const css = barista({ content: style });
+
+        expect(css.rule('.ek-box_background_TEMPLATE_NAME').exists()).toBeTruthy();
     });
 });

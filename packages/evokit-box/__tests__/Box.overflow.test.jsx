@@ -1,5 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
+import barista from 'seed-barista';
+import style from '../style.css';
 import { Box } from '../src';
 
 describe('<Box box-overflow="..." />', () => {
@@ -29,5 +31,24 @@ describe('<Box box-overflow="..." />', () => {
         expect(wrapper).toMatchSnapshot();
 
         expect(wrapper.html()).toEqual('<div class="ek-box ek-box_overflow-y_hidden"></div>');
+    });
+
+    it('css', () => {
+        const css = barista({ content: style });
+
+        expect(css.rule('.ek-box_overflow_auto').exists()).toBeTruthy();
+        expect(css.rule('.ek-box_overflow_hidden').exists()).toBeTruthy();
+        expect(css.rule('.ek-box_overflow_scroll').exists()).toBeTruthy();
+        expect(css.rule('.ek-box_overflow_visible').exists()).toBeTruthy();
+
+        expect(css.rule('.ek-box_overflow-x_auto').exists()).toBeTruthy();
+        expect(css.rule('.ek-box_overflow-x_hidden').exists()).toBeTruthy();
+        expect(css.rule('.ek-box_overflow-x_scroll').exists()).toBeTruthy();
+        expect(css.rule('.ek-box_overflow-x_visible').exists()).toBeTruthy();
+
+        expect(css.rule('.ek-box_overflow-y_auto').exists()).toBeTruthy();
+        expect(css.rule('.ek-box_overflow-y_hidden').exists()).toBeTruthy();
+        expect(css.rule('.ek-box_overflow-y_scroll').exists()).toBeTruthy();
+        expect(css.rule('.ek-box_overflow-y_visible').exists()).toBeTruthy();
     });
 });

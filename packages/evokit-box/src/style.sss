@@ -218,28 +218,6 @@
         @else
             margin: var(--ek-box-indent-$(value))
 
-    @mixin media .box_margin-tb_$(value)
-        @if $value == none
-            margin-top: 0
-            margin-bottom: 0
-        @else if $value == auto
-            margin-top: auto
-            margin-bottom: auto
-        @else
-            margin-top: var(--ek-box-indent-$(value))
-            margin-bottom: var(--ek-box-indent-$(value))
-
-    @mixin media .box_margin-lr_$(value)
-        @if $value == none
-            margin-left: 0
-            margin-right: 0
-        @else if $value == auto
-            margin-left: auto
-            margin-right: auto
-        @else
-            margin-left: var(--ek-box-indent-$(value))
-            margin-right: var(--ek-box-indent-$(value))
-
     @mixin media .box_margin-left_$(value)
         @if $value == none
             margin-left: 0
@@ -272,6 +250,30 @@
         @else
             margin-bottom: var(--ek-box-indent-$(value))
 
+// DEPRECATED
+@each $value in (none, xxs, xs, s, m, l, xl, xxl, auto)
+    @mixin media .box_margin-tb_$(value)
+        @if $value == none
+            margin-top: 0
+            margin-bottom: 0
+        @else if $value == auto
+            margin-top: auto
+            margin-bottom: auto
+        @else
+            margin-top: var(--ek-box-indent-$(value))
+            margin-bottom: var(--ek-box-indent-$(value))
+
+    @mixin media .box_margin-lr_$(value)
+        @if $value == none
+            margin-left: 0
+            margin-right: 0
+        @else if $value == auto
+            margin-left: auto
+            margin-right: auto
+        @else
+            margin-left: var(--ek-box-indent-$(value))
+            margin-right: var(--ek-box-indent-$(value))
+
 /**
  * Padding:
  *
@@ -285,22 +287,6 @@
             padding: 0
         @else
             padding: var(--ek-box-indent-$(value))
-
-    @mixin media .box_padding-tb_$(value)
-        @if $value == none
-            padding-top: 0
-            padding-bottom: 0
-        @else
-            padding-top: var(--ek-box-indent-$(value))
-            padding-bottom: var(--ek-box-indent-$(value))
-
-    @mixin media .box_padding-lr_$(value)
-        @if $value == none
-            padding-left: 0
-            padding-right: 0
-        @else
-            padding-left: var(--ek-box-indent-$(value))
-            padding-right: var(--ek-box-indent-$(value))
 
     @mixin media .box_padding-left_$(value)
         @if $value == none
@@ -326,6 +312,24 @@
         @else
             padding-bottom: var(--ek-box-indent-$(value))
 
+// DEPRECATED
+@each $value in (none, xxs, xs, s, m, l, xl, xxl)
+    @mixin media .box_padding-tb_$(value)
+        @if $value == none
+            padding-top: 0
+            padding-bottom: 0
+        @else
+            padding-top: var(--ek-box-indent-$(value))
+            padding-bottom: var(--ek-box-indent-$(value))
+
+    @mixin media .box_padding-lr_$(value)
+        @if $value == none
+            padding-left: 0
+            padding-right: 0
+        @else
+            padding-left: var(--ek-box-indent-$(value))
+            padding-right: var(--ek-box-indent-$(value))
+
 /**
  * Round:
  *
@@ -342,6 +346,40 @@
         @else
             border-radius: var(--ek-box-round-$(value))
 
+    @mixin media .box_round-top-left_$(value)
+        @if $value == none
+            border-top-left-radius: 0
+        @else if $value == full
+            border-top-left-radius: 50%
+        @else
+            border-top-left-radius: var(--ek-box-round-$(value))
+
+    @mixin media .box_round-top-right_$(value)
+        @if $value == none
+            border-top-right-radius: 0
+        @else if $value == full
+            border-top-right-radius: 50%
+        @else
+            border-top-right-radius: var(--ek-box-round-$(value))
+
+    @mixin media .box_round-bottom-right_$(value)
+        @if $value == none
+            border-bottom-right-radius: 0
+        @else if $value == full
+            border-bottom-right-radius: 50%
+        @else
+            border-bottom-right-radius: var(--ek-box-round-$(value))
+
+    @mixin media .box_round-bottom-left_$(value)
+        @if $value == none
+            border-bottom-left-radius: 0
+        @else if $value == full
+            border-bottom-left-radius: 50%
+        @else
+            border-bottom-left-radius: var(--ek-box-round-$(value))
+
+// DEPRECATED
+@each $value in (none, xxs, xs, s, m, l, xl, xxl, full)
     @mixin media .box_round-top_$(value)
         @if $value == none
             border-top-left-radius: 0
@@ -384,38 +422,6 @@
             border-bottom-left-radius: 50%
         @else
             border-top-left-radius: var(--ek-box-round-$(value))
-            border-bottom-left-radius: var(--ek-box-round-$(value))
-
-    @mixin media .box_round-top-left_$(value)
-        @if $value == none
-            border-top-left-radius: 0
-        @else if $value == full
-            border-top-left-radius: 50%
-        @else
-            border-top-left-radius: var(--ek-box-round-$(value))
-
-    @mixin media .box_round-top-right_$(value)
-        @if $value == none
-            border-top-right-radius: 0
-        @else if $value == full
-            border-top-right-radius: 50%
-        @else
-            border-top-right-radius: var(--ek-box-round-$(value))
-
-    @mixin media .box_round-bottom-right_$(value)
-        @if $value == none
-            border-bottom-right-radius: 0
-        @else if $value == full
-            border-bottom-right-radius: 50%
-        @else
-            border-bottom-right-radius: var(--ek-box-round-$(value))
-
-    @mixin media .box_round-bottom-left_$(value)
-        @if $value == none
-            border-bottom-left-radius: 0
-        @else if $value == full
-            border-bottom-left-radius: 50%
-        @else
             border-bottom-left-radius: var(--ek-box-round-$(value))
 
 /**
@@ -543,3 +549,14 @@
 @each $value in (0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100)
     @mixin media .box_opacity_$(value)
         opacity: resolve($value / 100)
+
+/**
+ * Empty:
+ *
+ *  - box_empty_hidden
+ *
+ **/
+
+@mixin media .box_empty_hidden
+    &:empty
+        display: none
