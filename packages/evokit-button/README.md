@@ -20,7 +20,11 @@
 [button-width]: #button-width
 
 
-# EvoKit - Button <sup class='beta'>beta</sup>
+# EvoKit - Button
+
+<!--
+<sup class='beta'>beta</sup>
+-->
 
 [![](https://img.shields.io/npm/v/evokit-button.svg)](https://www.npmjs.com/package/evokit-button)
 [![](https://img.shields.io/badge/page-CHANGELOG-42b983)][CHANGELOG]

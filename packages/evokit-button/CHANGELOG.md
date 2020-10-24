@@ -1,9 +1,10 @@
 [README]: /packages/evokit-button/README.md
 
+[button-events]: /packages/evokit-button/?id=button-events
+[button-round]: /packages/evokit-button/?id=button-round
 [button-size]: /packages/evokit-button/?id=button-size
 [button-theme]: /packages/evokit-button/?id=button-theme
 [button-valign]: /packages/evokit-button/?id=button-valign
-[button-events]: /packages/evokit-button/?id=button-events
 
 # EvoKit - Button
 
@@ -13,6 +14,10 @@
 ---
 
 ## CHANGELOG
+
+### 3.0.1 *(24.10.2020)*
+
+- **Fixed** prop [`button-round`][button-round]
 
 ### 3.0.0 *(27.09.2020)*
 
