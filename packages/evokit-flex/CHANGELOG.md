@@ -1,5 +1,6 @@
 [README]: /packages/evokit-flex/README.md
 
+[flex-content]: /packages/evokit-flex/?id=flex-content
 [flex-display]: /packages/evokit-flex/?id=flex-display
 [flex-height]: /packages/evokit-flex/?id=flex-height
 
@@ -15,6 +16,10 @@
 ---
 
 ## CHANGELOG
+
+### 3.2.1 *(24.10.2020)*
+- **Fixed** prop [`flex-content-align`][flex-content]
+- **Fixed** prop [`flex-content-justify`][flex-content]
 
 ### 3.2.0 *(05.10.2020)*
 
