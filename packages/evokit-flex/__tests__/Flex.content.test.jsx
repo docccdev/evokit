@@ -43,18 +43,18 @@ describe('<Flex flex-content="..." />', () => {
         expect(css.rule('.ek-flex_content_around').exists()).toBeTruthy();
         expect(css.rule('.ek-flex_content_stretch').exists()).toBeTruthy();
 
-        expect(css.rule('.ek-flex_content_align-start').exists()).toBeTruthy();
-        expect(css.rule('.ek-flex_content_align-end').exists()).toBeTruthy();
-        expect(css.rule('.ek-flex_content_align-center').exists()).toBeTruthy();
-        expect(css.rule('.ek-flex_content_align-between').exists()).toBeTruthy();
-        expect(css.rule('.ek-flex_content_align-around').exists()).toBeTruthy();
-        expect(css.rule('.ek-flex_content_align-stretch').exists()).toBeTruthy();
+        expect(css.rule('.ek-flex_content-align_start').exists()).toBeTruthy();
+        expect(css.rule('.ek-flex_content-align_end').exists()).toBeTruthy();
+        expect(css.rule('.ek-flex_content-align_center').exists()).toBeTruthy();
+        expect(css.rule('.ek-flex_content-align_between').exists()).toBeTruthy();
+        expect(css.rule('.ek-flex_content-align_around').exists()).toBeTruthy();
+        expect(css.rule('.ek-flex_content-align_stretch').exists()).toBeTruthy();
 
-        expect(css.rule('.ek-flex_content_justify-start').exists()).toBeTruthy();
-        expect(css.rule('.ek-flex_content_justify-end').exists()).toBeTruthy();
-        expect(css.rule('.ek-flex_content_justify-center').exists()).toBeTruthy();
-        expect(css.rule('.ek-flex_content_justify-between').exists()).toBeTruthy();
-        expect(css.rule('.ek-flex_content_justify-around').exists()).toBeTruthy();
-        expect(css.rule('.ek-flex_content_justify-stretch').exists()).toBeTruthy();
+        expect(css.rule('.ek-flex_content-justify_start').exists()).toBeTruthy();
+        expect(css.rule('.ek-flex_content-justify_end').exists()).toBeTruthy();
+        expect(css.rule('.ek-flex_content-justify_center').exists()).toBeTruthy();
+        expect(css.rule('.ek-flex_content-justify_between').exists()).toBeTruthy();
+        expect(css.rule('.ek-flex_content-justify_around').exists()).toBeTruthy();
+        expect(css.rule('.ek-flex_content-justify_stretch').exists()).toBeTruthy();
     });
 });

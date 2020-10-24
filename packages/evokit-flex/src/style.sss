@@ -113,7 +113,7 @@
             align-content: $value
             justify-content: $value
 
-    @mixin media .flex_content_align-$(value)
+    @mixin media .flex_content-align_$(value)
         @if $value == start
             align-content: flex-start
         @else if $value == end
@@ -125,7 +125,7 @@
         @else
             align-content: $value
 
-    @mixin media .flex_content_justify-$(value)
+    @mixin media .flex_content-justify_$(value)
         @if $value == start
             justify-content: flex-start
         @else if $value == end
