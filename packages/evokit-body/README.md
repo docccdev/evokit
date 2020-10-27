@@ -4,7 +4,7 @@
 [css-variable-usage]: //w3schools.com/css/css3_variables.asp
 [css-overflow-anchor]: //developer.mozilla.org/en-US/docs/Web/CSS/overflow-anchor
 
-[create_theme]: /docs/base/theme.md
+[create_theme]: /public/theming.html
 [installation]: /docs/getting-started/installation.md
 [quik-start]: /docs/getting-started/quick-start.md
 [use-props]: /docs/getting-started/props.md

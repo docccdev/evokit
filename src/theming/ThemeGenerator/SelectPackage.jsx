@@ -5,7 +5,7 @@ import Select from 'react-select';
 const PACKAGES_LIST = [
     'evokit-body@3.1.0',
     'evokit-box@3.1.0',
-    'evokit-button@3.0.0-beta.1',
+    'evokit-button@3.0.0',
     'evokit-grid@3.1.0',
     'evokit-image@3.1.0',
     'evokit-line@3.1.0',

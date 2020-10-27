@@ -10,7 +10,7 @@
 [picture-background]: /packages/evokit-picture/?id=picture-background
 [picture-item-display]: /packages/evokit-picture/?id=picture-item-display
 
-[create_theme]: /docs/base/theme.md
+[create_theme]: /public/theming.html
 
 # EvoKit - Picture
 

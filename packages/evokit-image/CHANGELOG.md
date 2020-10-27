@@ -5,7 +5,7 @@
 [image-display]: /packages/evokit-image/?id=image-display
 [image-round]: /packages/evokit-image/?id=image-round
 
-[create_theme]: /docs/base/theme.md
+[create_theme]: /public/theming.html
 
 # EvoKit - Image
 

@@ -15,7 +15,7 @@
 [box-position]: /packages/evokit-box/?id=box-position
 [box-zindex]: /packages/evokit-box/?id=box-zindex
 
-[create_theme]: /docs/base/theme.md
+[create_theme]: /public/theming.html
 
 # EvoKit - Box
 

@@ -12,7 +12,7 @@
 [block_name-as]: /docs/getting-started/props?id=block_name-as
 [text]: /docs/base/text.md
 [colors]: /docs/base/colors.md
-[create_theme]: /docs/base/theme.md
+[create_theme]: /public/theming.html
 
 [evokit]: /packages/evokit/
 [body]: /packages/evokit-body/
