@@ -9,6 +9,7 @@
 [evokit-link]: /packages/evokit-link/
 [evokit-list]: /packages/evokit-list/
 [evokit-picture]: /packages/evokit-picture/
+[evokit-plug]: /packages/evokit-plug/
 [evokit-text]: /packages/evokit-text/
 
 # Introduction
@@ -33,6 +34,7 @@ Blocks:
   * [evokit-link]
   * [evokit-list]
   * [evokit-picture]
+  * [evokit-plug]
   * [evokit-text]
 
 ## Let's look at an example of creating a three-column list of product list with 10px indentation between cells

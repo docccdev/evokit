@@ -1,0 +1,35 @@
+{
+  "name": "evokit-plug",
+  "version": "3.0.0-beta.0",
+  "description": "New block",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --colors",
+    "build": "webpack --colors",
+    "watch": "webpack --colors --progress --watch",
+    "pretest": "npm run build",
+    "prepublishOnly": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/docccdev/evokit.git"
+  },
+  "homepage": "https://evokit.net/#/packages/evokit-plug/",
+  "keywords": [
+    "evokit",
+    "react",
+    "ui",
+    "block",
+    "uikit",
+    "plug"
+  ],
+  "author": {
+    "author": "docccdev",
+    "email": "doccc.dev@gmail.com",
+    "url": "http://evokit.net"
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "evokit": ">=3.1.0"
+  }
+}

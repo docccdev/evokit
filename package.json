@@ -78,6 +78,7 @@
     "evokit-link": "file:packages/evokit-link",
     "evokit-list": "file:packages/evokit-list",
     "evokit-picture": "file:packages/evokit-picture",
+    "evokit-plug": "file:packages/evokit-plug",
     "evokit-text": "file:packages/evokit-text",
     "postcss": "7.0.27",
     "prop-types": "15.7.2",

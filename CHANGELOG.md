@@ -9,6 +9,7 @@
 [evokit-link]: /packages/evokit-link/CHANGELOG.md
 [evokit-list]: /packages/evokit-list/CHANGELOG.md
 [evokit-picture]: /packages/evokit-picture/CHANGELOG.md
+[evokit-plug]: /packages/evokit-plug/CHANGELOG.md
 [evokit-text]: /packages/evokit-text/CHANGELOG.md
 
 [theming]: /public/theming.html
@@ -29,6 +30,10 @@
 [![evokit-text changelog](https://img.shields.io/npm/v/evokit-text.svg?label=evokit-text)][evokit-text]
 
 ---
+
+### *(xx.11.2020)*
+
+- [evokit-plug]: **3.0.0-beta.0**
 
 ### *(24.10.2020)*
 

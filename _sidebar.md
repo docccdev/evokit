@@ -23,6 +23,7 @@
   * [Link](/packages/evokit-link/)
   * [List](/packages/evokit-list/)
   * [Picture](/packages/evokit-picture/)
+  * [Plug <sup class='beta'>beta</sup>](/packages/evokit-plug/)
   * [Text](/packages/evokit-text/)
 
 <!--

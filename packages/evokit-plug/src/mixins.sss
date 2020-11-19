@@ -1,0 +1,23 @@
+@define-mixin media $selector
+    $selector
+        @mixin-content
+
+    @media (--ek-plug-media-small)
+        $(selector)\@small
+            @mixin-content
+
+    @media (--ek-plug-media-medium)
+        $(selector)\@medium
+            @mixin-content
+
+    @media (--ek-plug-media-large)
+        $(selector)\@large
+            @mixin-content
+
+    @media (--ek-plug-media-wide)
+        $(selector)\@wide
+            @mixin-content
+
+    @media (--ek-plug-media-huge)
+        $(selector)\@huge
+            @mixin-content

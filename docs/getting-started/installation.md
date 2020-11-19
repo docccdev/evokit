@@ -12,6 +12,7 @@
 [evokit-link]: /packages/evokit-link/
 [evokit-list]: /packages/evokit-list/
 [evokit-picture]: /packages/evokit-picture/
+[evokit-plug]: /packages/evokit-plug/
 [evokit-text]: /packages/evokit-text/
 
 # Installation
@@ -51,4 +52,5 @@ List of blocks:
   * [evokit-link]
   * [evokit-list]
   * [evokit-picture]
+  * [evokit-plug]
   * [evokit-text]
