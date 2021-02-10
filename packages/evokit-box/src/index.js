@@ -4,7 +4,6 @@ export const Box = createBlock('div', 'box', [
     'align',
     'background',
     'display',
-    'empty',
     'height',
     'opacity',
     'width',
@@ -79,6 +78,7 @@ export const Box = createBlock('div', 'box', [
         'round-bottom-left',
     ]],
     // DEPRECATED
+    'empty',
     'margin-lr',
     'margin-tb',
     'padding-lr',

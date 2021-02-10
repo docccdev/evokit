@@ -93,7 +93,11 @@
 /**
  * Display:
  *
- *  - box_display_*
+ *  - box_display_none
+ *  - box_display_inline
+ *  - box_display_inline-block
+ *  - box_display_block
+ *  - box_display_none:empty
  *
  **/
 
@@ -104,6 +108,10 @@
         @if $value == inline
             &:after, &:before
                 content: none
+
+.box_display_none\:empty
+    &:empty
+        display: none
 
 /**
  * Position:
@@ -557,6 +565,7 @@
  *
  **/
 
+// DEPRECATED
 @mixin media .box_empty_hidden
     &:empty
         display: none
