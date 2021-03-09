@@ -7,7 +7,7 @@
 [postcss]: //postcss.org
 [postcss-preset-env]: //preset-env.cssdb.org
 
-# Use media
+# Media props
 
 All blocks have additional styles for Media Rules, this will reduce the size of the main bundle of styles and the flexibility of customization.
 

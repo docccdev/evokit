@@ -7,10 +7,13 @@
 
 * CORE
   * [EvoKit](/packages/evokit/)
-  * [Use props](/docs/getting-started/props.md)
-  * [Use media](/docs/getting-started/media.md)
   * [createBlock()](/docs/base/create-block.md)
   * [withProps()](/docs/base/with-props.md)
+
+* PROPS
+  * [Base](/docs/props/base.md)
+  * [Variants](/docs/props/variants.md)
+  * [Media](/docs/props/media.md)
 
 * BLOCKS
   * [Body](/packages/evokit-body/)

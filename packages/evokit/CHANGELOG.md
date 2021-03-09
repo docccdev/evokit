@@ -6,10 +6,10 @@
 [mixes]: /docs/deprecated/removed_mixes.md
 [sizes]: /docs/deprecated/removed_sizes.md
 
-[media]: /docs/getting-started/media.md
-[use-props_multi-values]: /docs/getting-started/props?id=multi-values
-[block_name-ref]: /docs/getting-started/props?id=block_name-ref
-[block_name-as]: /docs/getting-started/props?id=block_name-as
+[media]: /docs/props/media.md
+[use-props_multi-values]: /docs/props/variants?id=multi-values
+[block_name-ref]: /docs/props/base?id=block_name-ref
+[block_name-as]: /docs/props/base?id=block_name-as
 [text]: /docs/base/text.md
 [colors]: /docs/base/colors.md
 [create_theme]: /public/theming.html
