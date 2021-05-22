@@ -1,11 +1,16 @@
 import React from 'react';
-import { Body } from './UI/Body';
-import { Grid } from './UI/Grid';
-import { Box } from './UI/Box';
-import { List } from './UI/List';
-import { Button } from './UI/Button';
-import { Text } from './UI/Text';
 
+import { Body } from './UI/Body';
+import { Box } from './UI/Box';
+import { Button } from './UI/Button';
+import { Flex } from './UI/Flex';
+import { Grid } from './UI/Grid';
+import { Image } from './UI/Image';
+import { Line } from './UI/Line';
+import { Link } from './UI/Link';
+import { List } from './UI/List';
+import { Picture } from './UI/Picture';
+import { Text } from './UI/Text';
 
 import { data } from './data';
 
