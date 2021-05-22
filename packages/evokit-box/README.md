@@ -77,8 +77,7 @@ const App = () => (
 | [box-border-color] `*` | `null`    | [Create theme][create_theme]  | Border color     |
 | [box-border-width] `*` | `none`    | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` `3xl` `4xl` `5xl`  | Border width     |
 | [box-border-style] `*` | `solid`   | `solid` `dotted` `dashed`  | Border style     |
-| [box-display]          | `block`   | `block` `inline-block` `inline` `none` | Display type |
-| [box-empty]            | `null`   | `hidden` | Hide if contain either nothing or only an HTML comment. |
+| [box-display]          | `block`   | `block` `inline-block` `inline` `none` `none:empty` | Display type |
 | [box-height]           | `auto`    | `auto` `1-1` | Set the height |
 | [box-margin] `*`       | `none`    | `none` `xxs` `xs` `s` `m` `l` `xl` `xxl` `3xl` `4xl` `5xl` `auto` | Indent around block |
 | [box-opacity]          | `null`    | `0` `10` `20` `30` `40` `50` `60` `70` `80` `90` `100` | Set the opacity in % |
@@ -159,6 +158,7 @@ const App = () => (
 - `block-inline` - block element that is wrapped around by other elements
 - `inline` - displayed as inline
 - `none` - remove from a document
+- `none:empty` - Hide if contain either nothing or only an HTML comment
 
 ```jsx
 <Box box-display='none'>
@@ -637,6 +637,8 @@ The property allows you to set the border style for all sides of an element at o
 ```
 
 ## `box-empty`
+
+!> In version [evokit-box@3.4.0][CHANGELOG] **DEPRECATED** prop `box-empty='hidden'`, please use `box-display='none:empty'`
 
 The `<Box>` will be hidden `display: none` that contain either nothing or only an HTML comment.
 

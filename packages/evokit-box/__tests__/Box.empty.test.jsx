@@ -4,7 +4,7 @@ import barista from 'seed-barista';
 import style from '../style.css';
 import { Box } from '../src';
 
-describe('<Box box-empty="..." />', () => {
+describe('DEPRECATED <Box box-empty="..." />', () => {
     it('props box-empty', () => {
         const wrapper = shallow(<Box box-empty='auto' />);
         expect(wrapper).toMatchSnapshot();

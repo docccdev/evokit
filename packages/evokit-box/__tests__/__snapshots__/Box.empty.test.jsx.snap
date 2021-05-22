@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Box box-empty="..." /> props box-empty 1`] = `
+exports[`DEPRECATED <Box box-empty="..." /> props box-empty 1`] = `
 <div
   className="ek-box ek-box_empty_auto"
 />

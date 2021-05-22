@@ -1,6 +1,7 @@
 [README]: /packages/evokit-box/README.md
 [evokit]: /packages/evokit/README.md
 
+[box-display]: /packages/evokit-box/?id=box-display
 [box-margin]: /packages/evokit-box/?id=box-margin
 [box-overflow]: /packages/evokit-box/?id=box-overflow
 [box-padding]: /packages/evokit-box/?id=box-padding
@@ -25,6 +26,10 @@
 ---
 
 ## CHANGELOG
+
+### 3.4.0 *(22.05.2021)*
+- **Deprecated** prop [`box-empty`][box-empty]
+- **Added** new value `none:empty` for prop [`box-display`][box-display]
 
 ### 3.3.0 *(05.10.2020)*
 
