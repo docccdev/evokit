@@ -5,7 +5,7 @@
 
 [installation]: /docs/getting-started/installation.md
 [quik-start]: /docs/getting-started/quick-start.md
-[use-props]: /docs/getting-started/props.md
+[use-props]: /docs/props/base.md
 
 [flex-align-self]: #flex-align-self
 [flex-content]: #flex-content

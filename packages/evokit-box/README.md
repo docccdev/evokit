@@ -7,7 +7,7 @@
 [create_theme]: /public/theming.html
 [installation]: /docs/getting-started/installation.md
 [quik-start]: /docs/getting-started/quick-start.md
-[use-props]: /docs/getting-started/props.md
+[use-props]: /docs/props/base.md
 
 [box-align]: #box-align
 [box-background]: #box-background
