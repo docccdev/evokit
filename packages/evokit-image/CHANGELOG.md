@@ -2,7 +2,9 @@
 [evokit]: /packages/evokit/README.md
 
 [image-alt]: /packages/evokit-image/?id=image-alt
+[image-background]: /packages/evokit-image/?id=image-background
 [image-display]: /packages/evokit-image/?id=image-display
+[image-height]: /packages/evokit-image/?id=image-height
 [image-round]: /packages/evokit-image/?id=image-round
 
 [create_theme]: /public/theming.html
@@ -15,6 +17,12 @@
 ---
 
 ## CHANGELOG
+
+### 3.2.0 *(24.06.2021)*
+
+- **Added** new prop [`image-height`][image-height]
+- **Added** new prop [`image-background`][image-background]
+- Please [update theme][create_theme]
 
 ### 3.1.2 *(05.10.2020)*
 

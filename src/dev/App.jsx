@@ -40,6 +40,17 @@ export const App = () => (
     <Body body-as='div'>
         <Body.Section>
 
+            <Image
+                image-border='green'
+                image-background='red'
+                image-fit='contain'
+                image-height='auto'
+                src='//picsum.photos/240/120'
+                width={240}
+                height={240}
+                alt=''
+            />
+
             <RenderList arr={data} />
             <RenderList arr={data} />
             <RenderList arr={data} />

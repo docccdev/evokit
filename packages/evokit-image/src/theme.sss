@@ -2,6 +2,10 @@
 
 :root
     --ek-image-border-TEMPLATE_NAME: var(--border)
+    --ek-image-background-TEMPLATE_NAME: var(--background)
+
+@mixin media .image_background_TEMPLATE_NAME
+    background: var(--ek-image-background-TEMPLATE_NAME)
 
 @mixin media .image_border_TEMPLATE_NAME
     border: 1px solid var(--ek-image-border-TEMPLATE_NAME)

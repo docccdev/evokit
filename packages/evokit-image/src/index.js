@@ -3,6 +3,7 @@ import { createBlock } from 'evokit';
 export const Image = createBlock('img', 'image', [
     'align',
     'alt',
+    'background',
     'border',
     'border-bottom',
     'border-left',
@@ -12,6 +13,7 @@ export const Image = createBlock('img', 'image', [
     'border-top',
     'display',
     'fit',
+    'height',
     'mirror',
     'valign',
     'width',
