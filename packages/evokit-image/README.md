@@ -10,9 +10,11 @@
 
 [image-align]: #image-align
 [image-alt]: #image-alt
+[image-background]: #image-background
 [image-border]: #image-border
 [image-display]: #image-display
 [image-fit]: #image-fit
+[image-height]: #image-height
 [image-mirror]: #image-mirror
 [image-round]: #image-round
 [image-valign]: #image-valign
@@ -61,13 +63,15 @@ const App = () => (
 |--------------------|---------------|-------------------------|------------------|
 | [image-align]      | `null`        | `left` `center` `right` | Horizontal alignment |
 | [image-alt]        | `visible`     | `visible` `hidden` | Visibility alt text if the image is not uploaded |
+| [image-background] | `null`        | [Create theme][create_theme] | Background color |
 | [image-border]     | `null`        | [Create theme][create_theme] | Border color |
 | [image-display]    | `inline`      | `inline` `block` `none`         | Display type |
 | [image-fit]        | `null`        | `none` `fill` `contain` `cover` `scale-down` | Filling the container relative to its height and width |
 | [image-mirror]     | `null`        | `x` `y` `xy` | Mirroring |
 | [image-round] `*`  | `none`        | `none` `full` `xxs` `xs` `s` `m` `l` `xl` `xxl` `3xl` `4xl` `5xl` | Corner rounding |
 | [image-valign]     | `null`        | `baseline` `bottom` `middle` `sub` `super` `text-bottom` `text-top` `top` | Vertical alignment |
-| [image-width]      | `auto`        | `auto` `1-1` `*-2` `*-3` `*-4` `*-5` `*-6` `*-7` `*-8` `*-9` `*-10` | Set the width |
+| [image-height]     | `null`        | `auto` `1-1` | Set the height |
+| [image-width]      | `null`        | `auto` `1-1` `*-2` `*-3` `*-4` `*-5` `*-6` `*-7` `*-8` `*-9` `*-10` | Set the width |
 
 > `*` — prop has advanced params
 
@@ -156,6 +160,19 @@ const App = () => (
 <Image image-fit='cover' src='' alt='' />
 ```
 
+## `image-height`
+
+- `auto` - value: `auto`
+- `1-1` - value: `100%`
+
+```jsx
+<Image
+    image-height='auto'
+    src=''
+    alt=''
+/>
+```
+
 ## `image-width`
 
 - `auto` - value: `auto`
@@ -177,7 +194,11 @@ const App = () => (
 |10|---|---|---|---|---|---|---|---|---|`100%`|
 
 ```jsx
-<Image image-width='3-4' src='' alt='' />
+<Image
+    image-width='3-4'
+    src=''
+    alt=''
+/>
 ```
 
 ## `image-round`
@@ -238,14 +259,30 @@ The property allows you to set the fillet value for all corners of the element a
 <Image image-alt='hidden' src='' alt='' />
 ```
 
-## `image-border`
+## `image-background`
+
+```jsx
+<Image
+    image-background={THEME_NAME}
+    src=''
+    alt=''
+/>
+```
 
 > Set the `THEME_NAME` depending on the [theming][create_theme]
+
+## `image-border`
 
 > Has advanced props:
 > - `image-border` - `top`, `right`, `bottom` or `left` for example **`image-border-right`**
 > - `image-border` - `tb` or `lr` for example **`image-border-tb`**
 
 ```jsx
-<Image image-border={THEME_NAME} src='' alt='' />
+<Image
+    image-border={THEME_NAME}
+    src=''
+    alt=''
+/>
 ```
+
+> Set the `THEME_NAME` depending on the [theming][create_theme]

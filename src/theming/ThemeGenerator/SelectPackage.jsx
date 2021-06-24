@@ -7,7 +7,7 @@ const PACKAGES_LIST = [
     'evokit-box@3.1.0',
     'evokit-button@3.0.0',
     'evokit-grid@3.1.0',
-    'evokit-image@3.1.0',
+    'evokit-image@3.2.0',
     'evokit-line@3.1.0',
     'evokit-link@3.1.0',
     'evokit-list@3.1.0',

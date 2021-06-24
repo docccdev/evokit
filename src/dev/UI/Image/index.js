@@ -1,4 +1,4 @@
 import { Image } from 'evokit-image';
-import 'evokit-image/style.css';
+import './style.css';
 
 export { Image };

@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Image image-height="..." /> props image-height 1`] = `
+<img
+  className="ek-image ek-image_height_auto"
+/>
+`;
