@@ -36,6 +36,11 @@
 
 ## CHANGELOG
 
+
+### 3.2.3 *(17.11.2021)*
+
+- **Fixed** performance, scripting time `~30%` faster
+
 ### 3.2.2 *(27.09.2020)*
 
 - **Fixed** performance
