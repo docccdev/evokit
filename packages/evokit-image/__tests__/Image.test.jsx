@@ -16,7 +16,7 @@ describe('<Image />', () => {
         const wrapper = shallow(<Image className='ololo' src='' alt='' />);
         expect(wrapper).toMatchSnapshot();
 
-        expect(wrapper.html()).toEqual('<img src="" alt="" class="ek-image ololo"/>');
+        expect(wrapper.html()).toEqual('<img class="ek-image ololo" src="" alt=""/>');
     });
 
     it('props image-tag', () => {

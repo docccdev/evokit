@@ -1,14 +1,9 @@
 import { createElement, forwardRef } from 'react';
 import { withPreset } from './className';
 import {
-    divideProps,
-    getPropKey,
-    getBasePropTypes,
-    getModPropTypes,
-    getMapPropMods,
     getMapPropModsExtend,
     getPrepareMods,
-    renameKeys,
+    flatten,
 } from './utils';
 
 import {
@@ -27,49 +22,58 @@ export const createBlock = (tagName = 'div', blockName, blockMods, blockPreset) 
         checkBlockPreset(blockPreset);
     }
 
-    const prepareMods = getPrepareMods(blockMods);
+    const PREFIX = blockName.replace(/__/, '-');
 
-    const basePropTypes = getBasePropTypes(blockName);
-    const basePropKeys = Object.keys(basePropTypes);
+    const KEY_AS = PREFIX + '-as';
+    const KEY_PRESET = PREFIX + '-preset';
+    const KEY_REF = PREFIX + '-ref'; // DEPRECATED
+    const KEY_TAG = PREFIX + '-tag'; // DEPRECATED
 
-    const modPropTypes = getModPropTypes(blockName, prepareMods);
-    const modPropKeys = Object.keys(modPropTypes);
+    // add 'blackhole' to allowed mods
+    const BLOCK_MODS = getPrepareMods(blockMods);
 
-    const mapPropMods = getMapPropMods(blockName, prepareMods);
-    const mapPropModsExtend = getMapPropModsExtend(blockName, prepareMods);
+    const BASE_BLOCK_PROPS = ['as', 'preset', 'ref', 'tag'];
+    const MODS_BLOCK_PROPS = flatten(BLOCK_MODS);
+    const MODS_BLOCK_PROPS_EXTENDED = getMapPropModsExtend(BLOCK_MODS);
 
-    const getProp = (props, key) => props[getPropKey(blockName, key)];
+    const BASE_BLOCK_PROPS_WITH_PREFIX = BASE_BLOCK_PROPS.map((val) => PREFIX + '-' + val);
+    const MODS_BLOCK_PROPS_WITH_PREFIX = MODS_BLOCK_PROPS.map((val) => PREFIX + '-' + val);
 
-    const Block = forwardRef(({ className, children, ...props }, ref) => {
+    const Block = forwardRef((props, ref) => {
         if (process.env.NODE_ENV !== 'production') {
-            checkPropDeprecated(!!getProp(props, 'ref'), getPropKey(blockName, 'ref'), 'ref');
-            checkPropDeprecated(!!getProp(props, 'tag'), getPropKey(blockName, 'tag'), getPropKey(blockName, 'as'));
+            checkPropDeprecated(!!props[KEY_REF], KEY_REF, 'ref');
+            checkPropDeprecated(!!props[KEY_TAG], KEY_TAG, KEY_AS);
         }
 
-        const [cleanProps, modProps] = divideProps(props, modPropKeys, basePropKeys);
-        const reanameModProps = renameKeys(modProps, mapPropMods);
-        const newRef = ref || getProp(props, 'ref');
-        const newType = getProp(props, 'as') || getProp(props, 'tag') || tagName;
-        const newPreset = getProp(props, 'preset') || blockPreset;
-        const newClassName = withPreset(newPreset)(blockName)(
-            reanameModProps,
-            className,
-            mapPropModsExtend,
+        const elementType = props[KEY_AS] || props[KEY_TAG] || tagName;
+        const elementProps = {};
+        const modsProps = {};
+
+        // eslint-disable-next-line no-restricted-syntax
+        for (const key in props) {
+            // eslint-disable-next-line no-continue
+            if (BASE_BLOCK_PROPS_WITH_PREFIX.indexOf(key) !== -1) continue;
+
+            const index = MODS_BLOCK_PROPS_WITH_PREFIX.indexOf(key);
+
+            if (index !== -1) {
+                modsProps[MODS_BLOCK_PROPS[index]] = props[key];
+            } else {
+                elementProps[key] = props[key];
+            }
+        }
+
+        elementProps.ref = ref || props[KEY_REF];
+        elementProps.className = withPreset(props[KEY_PRESET] || blockPreset)(blockName)(
+            modsProps,
+            props.className,
+            MODS_BLOCK_PROPS_EXTENDED,
         );
 
-        return createElement(
-            newType,
-            {
-                ...cleanProps,
-                className: newClassName,
-                ref: newRef,
-            },
-            children,
-        );
+        return createElement(elementType, elementProps);
     });
 
     Block.displayName = blockName;
-    Block.propTypes = { ...basePropTypes, ...modPropTypes };
 
     return Block;
 };
