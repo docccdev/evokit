@@ -36,34 +36,17 @@ const RenderList = ({ arr }) => (
     </List>
 );
 
+const LARGE_ARRAY = [...Array(50).keys()];
+
 export const App = () => (
     <Body body-as='div'>
         <Body.Section>
-
-            <Image
-                image-border='green'
-                image-background='red'
-                image-fit='contain'
-                image-height='auto'
-                src='//picsum.photos/240/120'
-                width={240}
-                height={240}
-                alt=''
-            />
-
-            <RenderList arr={data} />
-            <RenderList arr={data} />
-            <RenderList arr={data} />
-            <RenderList arr={data} />
-            <RenderList arr={data} />
-            <RenderList arr={data} />
-            <RenderList arr={data} />
-            <RenderList arr={data} />
-            <RenderList arr={data} />
-            <RenderList arr={data} />
-            <RenderList arr={data} />
-            <RenderList arr={data} />
-
+            <div>
+                {LARGE_ARRAY.length}
+            </div>
+            {LARGE_ARRAY.map((value) => (
+                <RenderList key={value} arr={data} />
+            ))}
 {/*            <Text style={{ width: 100 }} text-lheight='large' text-wrap={['break', 'two-line']}>
                 gdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhgl
                 gdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhglgdfjhgl
