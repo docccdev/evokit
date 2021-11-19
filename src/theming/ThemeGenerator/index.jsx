@@ -1,12 +1,16 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Box, Text, Grid, Button, List } from '../UI';
 import { downloadFile, replaceThemeCss } from './utils';
 import { SelectPackage } from './SelectPackage';
 import { PartTheme } from './PartTheme';
-import { LinkChangeLog, VERSION } from './LinkChangeLog';
+import { LinkChangeLog } from './LinkChangeLog';
 import { SwitchBox } from './SwitchBox';
 import postcss from 'postcss';
 import cssnano from 'cssnano';
+import postcssCustomProperties from 'postcss-custom-properties';
+import postcssPrettify from 'postcss-prettify';
+import postcssDiscard from 'postcss-discard';
+
 import './style.css';
 
 const THEME_NAME_MAXLENGTH = 128;
@@ -33,33 +37,92 @@ const SvgClip = () => (
     </svg>
 );
 
-export class ThemeGenerator extends React.Component {
-    constructor(props) {
-        super(props);
+export const ThemeGenerator = () => {
+    const [loading, setLoading] = useState(false);
+    const [rootDeclList, setRootDeclList] = useState([]);
+    const [rootValues, setRootValues] = useState({});
+    const [packageName, setPackageName] = useState('');
+    const [themeName, setThemeName] = useState('');
+    const [themeCss, setThemeCss] = useState('');
+    const [singleColorValue, setSingleColorValue] = useState('');
+    const [advancedMode, setAdvancedMode] = useState(false);
+    const [resultThemeCSS, setResultThemeCSS] = useState('');
 
-        this.state = {
-            loading: false,
-            rootDeclList: [],
-            rootValues: {},
-            packageName: '',
-            themeName: '',
-            themeCss: '',
-            singleColorValue: '',
-            advancedMode: false,
-        };
-    }
+    // SETTINGS STATE
+    const [minimizeChecked, setMinimizeChecked] = useState(true);
+    const [removeRootChecked, setRemoveRootChecked] = useState(true);
+    const [removeMediaRulesChecked, setRemoveMediaRulesChecked] = useState(false);
+    const [previewCssChecked, setPreviewCssChecked] = useState(false);
+    const [sliderPickerChecked, setSliderPickerChecked] = useState(false);
 
-    onSelectPackage = () => {
-        this.setState({ loading: true });
+    const disabledDownload = !!!themeName;
+
+    useEffect(() => {
+        if (disabledDownload) {
+            setResultThemeCSS('');
+        } else {
+            const plugins = [];
+
+            const finishCss = replaceThemeCss(
+                themeCss,
+                themeName,
+                rootValues
+            );
+
+            if (removeMediaRulesChecked) {
+                plugins.push(
+                    postcssDiscard({
+                      atrule: [
+                        /--ek-(.*?)-media-(.*?)/,
+                      ],
+                    })
+                );
+            }
+
+            if (removeRootChecked) {
+                plugins.push(postcssCustomProperties({ preserve: false }));
+            }
+
+            if (minimizeChecked) {
+                plugins.push(cssnano({ preset: 'default' }));
+            } else {
+                plugins.push(postcssPrettify());
+            }
+
+            const postcssPromise = postcss(plugins)
+                .process(finishCss)
+                .then(result => {
+                    let resultCSS = result.css;
+
+                    if (!minimizeChecked) {
+                        resultCSS = resultCSS.replace(/  /g, '    ');
+                    }
+
+                    setResultThemeCSS(resultCSS);
+                }).catch(() => {
+                    setResultThemeCSS('');
+                });
+        }
+    }, [
+        themeName,
+        minimizeChecked,
+        removeRootChecked,
+        removeMediaRulesChecked,
+        themeCss,
+        rootValues,
+    ]);
+
+    const onSelectPackage = () => {
+        setLoading(true);
     };
 
-    onSuccessSelectPackage = (packageName, themeTemplate) => {
+    const onSuccessSelectPackage = (newPackageName, themeTemplate) => {
         const parseCss = postcss.parse(themeTemplate);
         const parseRoot = parseCss.nodes.filter(
             ({ selector }) => selector === ':root'
         );
 
-        const rootDeclList = parseRoot.map((rule) => (
+        const newRootDeclList = parseRoot.map((rule) => (
             rule.nodes.filter(({ type }) => type == 'decl')
         ));
 
@@ -67,7 +130,7 @@ export class ThemeGenerator extends React.Component {
         //     rule.nodes.filter(({ type }) => type == 'comment')
         // ));
 
-        const rootStateValues = rootDeclList.reduce((acc, rootDecl) => {
+        const rootStateValues = newRootDeclList.reduce((acc, rootDecl) => {
             const values = rootDecl.reduce((accValues, { value }) => ({
                 ...accValues,
                 [value]: '',
@@ -76,242 +139,233 @@ export class ThemeGenerator extends React.Component {
             return { ...acc, ...values };
         }, {});
 
-        this.setState({
-            loading: false,
-            rootDeclList: rootDeclList,
-            rootValues: rootStateValues,
-            packageName: packageName,
-            themeCss: themeTemplate.trim(),
-            minimizeChecked: true,
-            sliderPickerChecked: false,
-            singleColorValue: '',
-        });
+
+        setLoading(false);
+        setRootDeclList(newRootDeclList);
+        setRootValues(rootStateValues);
+        setPackageName(newPackageName);
+        setThemeCss(themeTemplate.trim());
+        // setMinimizeChecked(true);
+        setSliderPickerChecked(false);
+        setSingleColorValue('');
+        setResultThemeCSS('');
     };
 
-    onChangeThemeName = ({ target }) => {
+    const onChangeThemeName = ({ target }) => {
         const themeName = target.value.trim().replace(/\s/g, '-');
-        this.setState({ themeName });
+
+        setThemeName(themeName);
     };
 
-    onPartThemeChange = (key, value) => {
-        const { rootValues } = this.state;
-
-        this.setState({
-            rootValues: {
-                ...rootValues,
-                [key]: value
-            }
-        });
+    const onPartThemeChange = (key, value) => {
+        setRootValues({ ...rootValues, [key]: value });
     };
 
-    onPartThemeChangeAll = (value) => {
-        const { rootValues } = this.state;
-
+    const onPartThemeChangeAll = (value) => {
         const newRootValues = Object.keys(rootValues).reduce((acc, keyValue) => ({
             ...acc,
             [keyValue]: value,
         }), {});
 
-        this.setState({
-            singleColorValue: value,
-            rootValues: newRootValues,
-        });
+        setSingleColorValue(value);
+        setRootValues(newRootValues);
     };
 
-    render() {
-        const {
-            loading,
-            packageName,
-            themeName,
-            rootDeclList,
-            rootValues,
-            themeCss,
-            minimizeChecked,
-            sliderPickerChecked,
-            singleColorValue,
-            advancedMode,
-        } = this.state;
-        const hasRoot = !!rootDeclList.length;
+    const hasRoot = !!rootDeclList.length;
 
-        const inputThemeName = (
-            <input
-                className='input-value'
-                type='text'
-                placeholder='success'
-                value={themeName}
-                onChange={this.onChangeThemeName}
-                autoFocus
-                maxLength={THEME_NAME_MAXLENGTH}
-            />
-        );
+    const inputThemeName = (
+        <input
+            className='input-value'
+            type='text'
+            placeholder='success'
+            value={themeName}
+            onChange={onChangeThemeName}
+            autoFocus
+            maxLength={THEME_NAME_MAXLENGTH}
+        />
+    );
 
-        return (
-            <>
-                <Box box-position='relative' box-padding='xxl' box-background='muted'>
-                    <Text text-align='center' text-size='h1' text-weight='medium'>
-                        Theming
-                        <Text text-as='sup' text-size='small' text-color='muted'>
-                            <LinkChangeLog>
-                                v{VERSION}
-                            </LinkChangeLog>
-                        </Text>
+    const getDownloadFileName = () => {
+        // const minName = minimizeChecked ? '.min' : '';
+        return `${packageName}-${themeName}.css`;
+    };
+
+    return (
+        <>
+            <Box box-position='relative' box-padding='xxl' box-background='muted'>
+                <Text text-align='center' text-size='h1' text-weight='medium'>
+                    Theming
+                    <Text text-as='sup' text-size='small' text-color='muted'>
+                        <LinkChangeLog />
                     </Text>
-                    <Box box-margin-top='xxs'>
-                        <Text text-align='center' text-size='small' text-color='muted'>
-                            Selected Block and create theme
-                        </Text>
+                </Text>
+                <Box box-margin-top='xxs'>
+                    <Text text-align='center' text-size='small' text-color='muted'>
+                        Selected Block and create theme
+                    </Text>
+                </Box>
+                <Box box-zindex='xs' box-align='center' box-margin-top='m'>
+                    <SelectPackage
+                        onSelect={onSelectPackage}
+                        onSuccess={onSuccessSelectPackage}
+                    />
+                </Box>
+                {loading && (
+                    <Box box-margin-top='xl'>
+                        <Text text-align='center'>Loading...</Text>
                     </Box>
-                    <Box box-zindex='xs' box-align='center' box-margin-top='m'>
-                        <SelectPackage
-                            onSelect={this.onSelectPackage}
-                            onSuccess={this.onSuccessSelectPackage}
-                        />
-                    </Box>
-                    {loading && (
-                        <Box box-margin-top='xl'>
-                            <Text text-align='center'>Loading...</Text>
+                )}
+                {!loading && hasRoot && (
+                    <Box box-margin-top='xl'>
+                        <Box box-margin-bottom='xl'>
+                            <Grid grid-indent='xl' grid-align='center'>
+                                <Grid.Item>
+                                    <SwitchBox
+                                        checked={advancedMode}
+                                        onChange={() => setAdvancedMode(!advancedMode)}
+                                    >
+                                        advanced mode
+                                    </SwitchBox>
+                                </Grid.Item>
+                                <Grid.Item>
+                                    <SwitchBox
+                                        checked={sliderPickerChecked}
+                                        onChange={() => setSliderPickerChecked(!sliderPickerChecked)}
+                                    >
+                                        slider color picker
+                                    </SwitchBox>
+                                </Grid.Item>
+                            </Grid>
                         </Box>
-                    )}
-                    {!loading && hasRoot && (
-                        <Box box-margin-top='xl'>
-                            <Box box-margin-bottom='xl'>
-                                <Grid grid-indent='xl' grid-align='center'>
-                                    <Grid.Item>
-                                        <SwitchBox
-                                            checked={advancedMode}
-                                            onChange={() =>
-                                                this.setState({
-                                                    advancedMode: !advancedMode
-                                                })
-                                            }
-                                        >
-                                            advanced mode
-                                        </SwitchBox>
-                                    </Grid.Item>
-                                    <Grid.Item>
-                                        <SwitchBox
-                                            checked={sliderPickerChecked}
-                                            onChange={() =>
-                                                this.setState({
-                                                    sliderPickerChecked: !sliderPickerChecked
-                                                })
-                                            }
-                                        >
-                                            slider color picker
-                                        </SwitchBox>
-                                    </Grid.Item>
-                                    <Grid.Item>
-                                        <SwitchBox
-                                            checked={minimizeChecked}
-                                            onChange={() =>
-                                                this.setState({
-                                                    minimizeChecked: !minimizeChecked
-                                                })
-                                            }
-                                        >
-                                            minimize css
-                                        </SwitchBox>
-                                    </Grid.Item>
-                                </Grid>
-                            </Box>
-                            {advancedMode ? (
-                                <>
+                        {advancedMode ? (
+                            <>
+                                <Title>Name</Title>
+                                <Box box-margin-bottom='xl'>
+                                    {inputThemeName}
+                                </Box>
+                                <Title>Colors</Title>
+                                <List list-indent='m'>
+                                    {rootDeclList.map((rootDecl, rootDeclIndex) => (
+                                        <List.Item key={rootDeclIndex}>
+                                            <Grid
+                                                grid-indent='m'
+                                                grid-column={rootDecl.length < 3 ? 'expand' : 3}
+                                            >
+                                                {rootDecl.map(({ prop, value }) => (
+                                                    <Grid.Item key={prop}>
+                                                        <PartTheme
+                                                            sliderPickerChecked={sliderPickerChecked}
+                                                            rootVarKey={prop}
+                                                            inputValue={rootValues[value]}
+                                                            onChange={(newValue) => (
+                                                                onPartThemeChange(value, newValue)
+                                                            )}
+                                                        />
+                                                    </Grid.Item>
+                                                ))}
+                                            </Grid>
+                                        </List.Item>
+                                    ))}
+                                </List>
+                            </>
+                        ) : (
+                            <Grid grid-indent='m' grid-column='expand'>
+                                <Grid.Item>
                                     <Title>Name</Title>
-                                    <Box box-margin-bottom='xl'>
-                                        {inputThemeName}
-                                    </Box>
-                                    <Title>Colors</Title>
-                                    <List list-indent='m'>
-                                        {rootDeclList.map((rootDecl, rootDeclIndex) => (
-                                            <List.Item key={rootDeclIndex}>
-                                                <Grid
-                                                    grid-indent='m'
-                                                    grid-column={rootDecl.length < 3 ? 'expand' : 3}
-                                                >
-                                                    {rootDecl.map(({ prop, value }) => (
-                                                        <Grid.Item key={prop}>
-                                                            <PartTheme
-                                                                sliderPickerChecked={sliderPickerChecked}
-                                                                rootVarKey={prop}
-                                                                inputValue={rootValues[value]}
-                                                                onChange={(newValue) =>
-                                                                    this.onPartThemeChange(value, newValue)
-                                                                }
-                                                            />
-                                                        </Grid.Item>
-                                                    ))}
-                                                </Grid>
-                                            </List.Item>
-                                        ))}
-                                    </List>
-                                </>
-                            ) : (
-                                <Grid grid-indent='m' grid-column='expand'>
+                                    {inputThemeName}
+                                </Grid.Item>
+                                <Grid.Item>
+                                    <Title>Color</Title>
+                                    <PartTheme
+                                        sliderPickerChecked={sliderPickerChecked}
+                                        inputValue={singleColorValue}
+                                        onChange={(value) => onPartThemeChangeAll(value)}
+                                    />
+                                </Grid.Item>
+                            </Grid>
+                        )}
+                        <Box box-margin-top='xl'>
+                            <Text text-align='center'>
+                                <Grid grid-indent='xl' grid-align='center' grid-valign='middle'>
                                     <Grid.Item>
-                                        <Title>Name</Title>
-                                        {inputThemeName}
+                                        <SwitchBox
+                                            disabled={disabledDownload}
+                                            checked={minimizeChecked}
+                                            onChange={() => setMinimizeChecked(!minimizeChecked)}
+                                        >
+                                            Minimize
+                                        </SwitchBox>
                                     </Grid.Item>
                                     <Grid.Item>
-                                        <Title>Color</Title>
-                                        <PartTheme
-                                            sliderPickerChecked={sliderPickerChecked}
-                                            inputValue={singleColorValue}
-                                            onChange={(value) =>
-                                                this.onPartThemeChangeAll(value)
-                                            }
-                                        />
+                                        <SwitchBox
+                                            disabled={disabledDownload}
+                                            checked={removeRootChecked}
+                                            onChange={() => setRemoveRootChecked(!removeRootChecked)}
+                                        >
+                                            Remove :root
+                                        </SwitchBox>
+                                    </Grid.Item>
+                                    <Grid.Item>
+                                        <SwitchBox
+                                            disabled={disabledDownload}
+                                            checked={removeMediaRulesChecked}
+                                            onChange={() => setRemoveMediaRulesChecked(!removeMediaRulesChecked)}
+                                        >
+                                            Remove @media
+                                        </SwitchBox>
+                                    </Grid.Item>
+                                    <Grid.Item>
+                                        <SwitchBox
+                                            disabled={disabledDownload}
+                                            checked={previewCssChecked}
+                                            onChange={() => setPreviewCssChecked(!previewCssChecked)}
+                                        >
+                                            Preview
+                                        </SwitchBox>
                                     </Grid.Item>
                                 </Grid>
-                            )}
-                            <Box box-margin-top='xl'>
-                                <Text text-align='center'>
+                                <Box box-margin-top='m'>
                                     <Button
                                         button-theme='blue'
-                                        disabled={!themeName}
+                                        disabled={disabledDownload}
                                         type='button'
                                         onClick={() => {
-                                            const plugins = [];
-                                            const finishCss = replaceThemeCss(
-                                                themeCss,
-                                                themeName,
-                                                rootValues
+                                            downloadFile(
+                                                getDownloadFileName(),
+                                                resultThemeCSS,
                                             );
-
-                                            if (minimizeChecked) {
-                                                plugins.push(cssnano({ preset: 'default' }));
-                                            }
-                                            postcss(plugins)
-                                                .process(finishCss)
-                                                .then(result => {
-                                                    downloadFile(
-                                                        `${packageName}-${themeName}.css`,
-                                                        result.css
-                                                    );
-                                                });
                                         }}
                                     >
                                         Download
                                     </Button>
-                                    {!!themeName && (
-                                        <Box box-margin-top='xs'>
-                                            <Text text-size='small' text-color='muted' text-wrap='ellipsis'>
-                                                <Grid grid-valign='middle' grid-align='center' grid-indent='xxs'>
-                                                    <Grid.Item>
-                                                        <SvgClip />
-                                                    </Grid.Item>
-                                                    <Grid.Item>
-                                                        {`${packageName}-${themeName}.css`}
-                                                    </Grid.Item>
-                                                </Grid>
-                                            </Text>
-                                        </Box>
-                                    )}
-                                </Text>
-                            </Box>
+                                </Box>
+                                {!!themeName && (
+                                    <Box box-margin-top='xs'>
+                                        <Text text-size='small' text-color='muted' text-wrap='ellipsis'>
+                                            <Grid grid-valign='middle' grid-align='center' grid-indent='xxs'>
+                                                <Grid.Item>
+                                                    <SvgClip />
+                                                </Grid.Item>
+                                                <Grid.Item>
+                                                    {getDownloadFileName()}
+                                                </Grid.Item>
+                                            </Grid>
+                                        </Text>
+                                    </Box>
+                                )}
+                            </Text>
                         </Box>
-                    )}
-                </Box>
-            </>
-        );
-    }
-}
+                        {(previewCssChecked && !disabledDownload) && (
+                            <Box box-margin-top='xl'>
+                                <Title>Preview</Title>
+                                <code className='input-value' rows={10}>
+                                    {resultThemeCSS}
+                                </code>
+                            </Box>
+                        )}
+                    </Box>
+                )}
+            </Box>
+        </>
+    );
+};

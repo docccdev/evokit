@@ -21,6 +21,12 @@ const CHANGELOG = {
         'improvement code',
     ],
     '1.4.1': ['improvement code'],
+    '1.5.0': [
+        'use react hooks',
+        'add checkbox remove :root from css',
+        'add checkbox remove @media from css',
+        'add checkbox preview theme file',
+    ],
 };
 
 export const VERSION = Object.keys(CHANGELOG).reverse()[0];
@@ -47,21 +53,22 @@ const BoxLogItem = ({ version, changes, children, ...props }) => (
     </Box>
 );
 
-export const LinkChangeLog = ({ children, ...props }) => {
+export const LinkChangeLog = (props) => {
     const [isOpen, setOpen] = useState(false);
 
     return (
         <>
             <Link {...props} onClick={() => setOpen(!isOpen)}>
-                {children}
+                v{VERSION}
             </Link>
             {isOpen && (
                 <OutsideClickHandler onOutsideClick={() => setOpen(false)}>
                     <Box
                         className='popup-changelog'
-                        box-position='absolute center m'
+                        box-position='absolute top m'
                         box-background='white'
                         box-padding='xl xl xs xl'
+                        box-margin-top='xl'
                         box-round='xs'
                     >
                         <Box box-margin-bottom='xl'>

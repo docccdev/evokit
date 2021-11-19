@@ -1,12 +1,15 @@
 .input-value {
     padding: 10px;
-    text-align: center;
     width: 100%;
     box-sizing: border-box;
     min-height: 29px;
     border: 1px #ccc solid;
     border-radius: 4px;
     transition: all 100ms;
+}
+
+input.input-value {
+    text-align: center;
 }
 
 .input-value_colorpicker {
