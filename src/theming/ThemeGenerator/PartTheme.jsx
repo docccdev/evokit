@@ -97,7 +97,7 @@ export const PartTheme = ({ rootVarKey, sliderPickerChecked, inputValue, onChang
                 </Box>
             )}
             {isPickerOpen && (
-                <Box box-position='absolute center xs'>
+                <Box box-position='absolute top xs'  box-margin-top='xl'>
                     <OutsideClickHandler onOutsideClick={onClosePicker}>
                         <SketchPicker
                             color={inputValue}
