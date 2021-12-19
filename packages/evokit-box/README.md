@@ -155,7 +155,7 @@ const App = () => (
 ## `box-display`
 
 - `block` - shown as blocky
-- `block-inline` - block element that is wrapped around by other elements
+- `inline-block` - block element that is wrapped around by other elements
 - `inline` - displayed as inline
 - `none` - remove from a document
 - `none:empty` - Hide if contain either nothing or only an HTML comment
