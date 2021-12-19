@@ -6,9 +6,17 @@ Tool for creating UI React blocks.
 
 ---
 
-## Recipe
+## Concept
 
-`html tag` + `css rules` = `evokit block`
+``` jsx
+const MyBlock = createBlock('div', 'block', ['padding']);
+
+// usage
+<MyBlock block-padding='xl' />
+
+// result
+<div class='ek-block ek-block_padding_xl'></div>
+```
 
 ## Documentation
 
