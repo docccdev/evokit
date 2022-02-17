@@ -98,6 +98,8 @@ export const ThemeGenerator = () => {
                         resultCSS = resultCSS.replace(/  /g, '    ');
                     }
 
+                    resultCSS = '/* stylelint-disable */\n' + resultCSS;
+
                     setResultThemeCSS(resultCSS);
                 }).catch(() => {
                     setResultThemeCSS('');

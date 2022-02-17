@@ -27,6 +27,9 @@ const CHANGELOG = {
         'add checkbox remove @media from css',
         'add checkbox preview theme file',
     ],
+    '1.5.1': [
+        'add stylelint-disable comment',
+    ],
 };
 
 export const VERSION = Object.keys(CHANGELOG).reverse()[0];
