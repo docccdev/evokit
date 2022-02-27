@@ -1,14 +1,14 @@
 <!-- _coverpage.md -->
 
-![logo](docs/_media/logo.svg)
+![logo](docs/_media/logo.svg?ua)
 
 # [EvoKit](/)
 
 [![](https://img.shields.io/npm/v/evokit.svg?style=flat-square&colorB=blue)](https://www.npmjs.com/package/evokit)
 
-> React primitive UI blocks
+> Русский мир - иди нахуй!
 
-* Basis for creating interface
+* СЛАВА УКРАЇНІ! ГЕРОЯМ СЛАВА!
 
 [GITHUB](https://github.com/docccdev/evokit)
 [README](/docs/getting-started/introduction.md)
