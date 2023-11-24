@@ -6,9 +6,9 @@
 
 [![](https://img.shields.io/npm/v/evokit.svg?style=flat-square&colorB=blue)](https://www.npmjs.com/package/evokit)
 
-> Русский мир - иди нахуй!
+> React primitive UI blocks
 
-* СЛАВА УКРАЇНІ! ГЕРОЯМ СЛАВА!
+* Basis for creating interface
 
 [GITHUB](https://github.com/docccdev/evokit)
 [README](/docs/getting-started/introduction.md)
