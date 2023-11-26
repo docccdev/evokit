@@ -13,7 +13,11 @@ describe("import { createBlock } from 'evokit';", () => {
     it('createRef()', () => {
         const Block = createBlock('div', 'block');
         const blockRef = React.createRef();
-        const wrapper = mount(<><Block ref={blockRef}>ololo</Block></>);
+        const wrapper = mount(
+            <>
+                <Block ref={blockRef}>ololo</Block>
+            </>
+        );
 
         expect(wrapper.find('div').text()).toEqual('ololo');
         expect(wrapper.find('div').instance()).toEqual(blockRef.current);
@@ -22,7 +26,17 @@ describe("import { createBlock } from 'evokit';", () => {
     it('DEPRECATED prop ref', () => {
         const Block = createBlock('div', 'block');
         let blockRef = null;
-        const wrapper = mount(<><Block block-ref={(target) => { blockRef = target }}>ololo</Block></>);
+        const wrapper = mount(
+            <>
+                <Block
+                    block-ref={(target) => {
+                        blockRef = target;
+                    }}
+                >
+                    ololo
+                </Block>
+            </>
+        );
 
         expect(wrapper.find('div').text()).toEqual('ololo');
         expect(wrapper.find('div').instance()).toEqual(blockRef);
@@ -49,18 +63,24 @@ describe("import { createBlock } from 'evokit';", () => {
         const Block = createBlock('div', 'block', [
             'modName',
             ['border', ['border-color', 'border-weight', 'border-style']],
-            ['border-color', [
-                ['border-color-top', 'border-color-bottom'],
-                ['border-color-right', 'border-color-left'],
-                'border-color-bottom',
-                'border-color-left',
-            ]],
-            ['border-weight', [
-                ['border-weight-top', 'border-weight-bottom'],
-                ['border-weight-right', 'border-weight-left'],
-                'border-weight-bottom',
-                'border-weight-left',
-            ]],
+            [
+                'border-color',
+                [
+                    ['border-color-top', 'border-color-bottom'],
+                    ['border-color-right', 'border-color-left'],
+                    'border-color-bottom',
+                    'border-color-left',
+                ],
+            ],
+            [
+                'border-weight',
+                [
+                    ['border-weight-top', 'border-weight-bottom'],
+                    ['border-weight-right', 'border-weight-left'],
+                    'border-weight-bottom',
+                    'border-weight-left',
+                ],
+            ],
         ]);
         expect(shallow(<Block block-modName='modValue' />).html()).toEqual(
             '<div class="ek-block ek-block_modName_modValue"></div>'
@@ -94,7 +114,12 @@ describe("import { createBlock } from 'evokit';", () => {
     it('blackhole', () => {
         const Block = createBlock('div', 'block', ['modName']);
         expect(
-            shallow(<Block block-blackhole='sucks' block-modName='modValue' />).contains(<div className='ek-block ek-block_blackhole_sucks ek-block_modName_modValue' />)
+            shallow(
+                <Block
+                    block-blackhole='sucks'
+                    block-modName='modValue'
+                />
+            ).contains(<div className='ek-block ek-block_blackhole_sucks ek-block_modName_modValue' />)
         ).toBeTruthy();
     });
 
@@ -103,15 +128,25 @@ describe("import { createBlock } from 'evokit';", () => {
         expect(shallow(<Block>ololo</Block>).contains(<div className='ek-block'>ololo</div>)).toBeTruthy();
     });
 
-    describe("as props", () => {
+    describe('as props', () => {
         const Block = createBlock('div', 'block', ['modName']);
-        const FuncComponent = (props) => <table data-test='test' {...props} />;
+        const FuncComponent = (props) => (
+            <table
+                data-test='test'
+                {...props}
+            />
+        );
         class ClassComponent extends React.Component {
             constructor(props) {
                 super(props);
             }
             render() {
-                return <header data-test='test' {...this.props} />;
+                return (
+                    <header
+                        data-test='test'
+                        {...this.props}
+                    />
+                );
             }
         }
 
@@ -140,29 +175,45 @@ describe("import { createBlock } from 'evokit';", () => {
         });
 
         it('func with mods', () => {
-            const wrapper = shallow(<Block block-modName='modValue' block-as={FuncComponent} />);
+            const wrapper = shallow(
+                <Block
+                    block-modName='modValue'
+                    block-as={FuncComponent}
+                />
+            );
 
             expect(wrapper).toMatchSnapshot();
             expect(wrapper.html()).toMatchSnapshot();
-            expect(wrapper.html()).toEqual('<table data-test="test" class="ek-block ek-block_modName_modValue"></table>');
+            expect(wrapper.html()).toEqual(
+                '<table data-test="test" class="ek-block ek-block_modName_modValue"></table>'
+            );
         });
 
         it('class with mods', () => {
-            const wrapper = shallow(<Block block-modName='modValue' block-as={ClassComponent} />);
+            const wrapper = shallow(
+                <Block
+                    block-modName='modValue'
+                    block-as={ClassComponent}
+                />
+            );
 
             expect(wrapper).toMatchSnapshot();
             expect(wrapper.html()).toMatchSnapshot();
-            expect(wrapper.html()).toEqual('<header data-test="test" class="ek-block ek-block_modName_modValue"></header>');
+            expect(wrapper.html()).toEqual(
+                '<header data-test="test" class="ek-block ek-block_modName_modValue"></header>'
+            );
         });
     });
 
-    describe("with props", () => {
+    describe('with props', () => {
         const Block = createBlock('div', 'block', ['modName']);
         const BlockItem = createBlock('div', 'block__item', ['elModName']);
 
         it('elem', () => {
             expect(
-                shallow(<BlockItem block-item-elModName='elModValue' />).contains(<div className='ek-block__item ek-block__item_elModName_elModValue'></div>)
+                shallow(<BlockItem block-item-elModName='elModValue' />).contains(
+                    <div className='ek-block__item ek-block__item_elModName_elModValue'></div>
+                )
             ).toBeTruthy();
         });
 
@@ -171,36 +222,47 @@ describe("import { createBlock } from 'evokit';", () => {
         });
 
         it('mods', () => {
-            expect(shallow(<Block block-modName='modValue' />).contains(<div className='ek-block ek-block_modName_modValue'></div>)).toBeTruthy();
+            expect(
+                shallow(<Block block-modName='modValue' />).contains(
+                    <div className='ek-block ek-block_modName_modValue'></div>
+                )
+            ).toBeTruthy();
         });
 
         it('with className', () => {
             expect(
                 shallow(
-                    <Block block-modName='modValue' className='class-name' />
-                ).contains(
-                    <div className='ek-block ek-block_modName_modValue class-name'></div>
-                )
+                    <Block
+                        block-modName='modValue'
+                        className='class-name'
+                    />
+                ).contains(<div className='ek-block ek-block_modName_modValue class-name'></div>)
             ).toBeTruthy();
         });
 
-        describe("custom class prefix", () => {
+        describe('custom class prefix', () => {
             it('default', () => {
-                expect(shallow(<Block block-preset={{ b: 'ek-' }} />).contains(<div className='ek-block'></div>)).toBeTruthy();
+                expect(
+                    shallow(<Block block-preset={{ b: 'ek-' }} />).contains(<div className='ek-block'></div>)
+                ).toBeTruthy();
             });
 
             it('mods', () => {
-                expect(shallow(<Block block-preset={{ b: 'ek-' }} block-modName='modValue' />)
-                    .contains(<div className='ek-block ek-block_modName_modValue'></div>)).toBeTruthy();
+                expect(
+                    shallow(
+                        <Block
+                            block-preset={{ b: 'ek-' }}
+                            block-modName='modValue'
+                        />
+                    ).contains(<div className='ek-block ek-block_modName_modValue'></div>)
+                ).toBeTruthy();
             });
         });
 
-        describe("css modules", () => {
+        describe('css modules', () => {
             it('default', () => {
                 expect(
-                    shallow(
-                        <Block block-preset={{ b: '', css: { block: 'h67f' } }} />
-                    ).contains(
+                    shallow(<Block block-preset={{ b: '', css: { block: 'h67f' } }} />).contains(
                         <div className='h67f'></div>
                     )
                 ).toBeTruthy();
@@ -213,9 +275,7 @@ describe("import { createBlock } from 'evokit';", () => {
                             block-preset={{ b: '', css: { block: 'h67f', block_modName_modValue: 'ko45' } }}
                             block-modName='modValue'
                         />
-                    ).contains(
-                        <div className='h67f ko45'></div>
-                    )
+                    ).contains(<div className='h67f ko45'></div>)
                 ).toBeTruthy();
             });
 
@@ -226,9 +286,7 @@ describe("import { createBlock } from 'evokit';", () => {
                             block-preset={{ b: '', css: { block: 'h67f' } }}
                             className='class-name'
                         />
-                    ).contains(
-                        <div className='h67f class-name'></div>
-                    )
+                    ).contains(<div className='h67f class-name'></div>)
                 ).toBeTruthy();
             });
 
@@ -240,9 +298,7 @@ describe("import { createBlock } from 'evokit';", () => {
                             block-modName='modValue'
                             className='class-name VasYa'
                         />
-                    ).contains(
-                        <div className='h67f ko45 class-name VasYa'></div>
-                    )
+                    ).contains(<div className='h67f ko45 class-name VasYa'></div>)
                 ).toBeTruthy();
             });
         });

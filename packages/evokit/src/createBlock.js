@@ -1,18 +1,8 @@
 import { createElement, forwardRef } from 'react';
 import { withPreset } from './className';
-import {
-    getMapPropModsExtend,
-    getPrepareMods,
-    flatten,
-} from './utils';
+import { getMapPropModsExtend, getPrepareMods, flatten } from './utils';
 
-import {
-    checkTagName,
-    checkBlockName,
-    checkBlockMods,
-    checkBlockPreset,
-    checkPropDeprecated,
-} from './checks';
+import { checkTagName, checkBlockName, checkBlockMods, checkBlockPreset, checkPropDeprecated } from './checks';
 
 export const createBlock = (tagName = 'div', blockName, blockMods, blockPreset) => {
     if (process.env.NODE_ENV !== 'production') {
@@ -67,7 +57,7 @@ export const createBlock = (tagName = 'div', blockName, blockMods, blockPreset) 
         elementProps.className = withPreset(props[KEY_PRESET] || blockPreset)(blockName)(
             modsProps,
             props.className,
-            MODS_BLOCK_PROPS_EXTENDED,
+            MODS_BLOCK_PROPS_EXTENDED
         );
 
         return createElement(elementType, elementProps);

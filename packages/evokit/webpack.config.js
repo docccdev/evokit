@@ -9,37 +9,34 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         filename: isProd ? 'evokit.min.js' : 'evokit.js',
         libraryTarget: 'umd',
-        globalObject: 'this'
+        globalObject: 'this',
     },
     module: {
         rules: [
             {
                 test: /\.jsx?$/,
-                use: [
-                    { loader: 'babel-loader', options: babelConfig },
-                    'eslint-loader',
-                ],
-                exclude: /node_modules/
-            }
-        ]
+                use: [{ loader: 'babel-loader', options: babelConfig }, 'eslint-loader'],
+                exclude: /node_modules/,
+            },
+        ],
     },
     externals: {
-        'react': {
+        react: {
             root: 'React',
             commonjs: 'react',
             commonjs2: 'react',
-            amd: 'react'
+            amd: 'react',
         },
         'prop-types': {
             root: 'PropTypes',
             commonjs: 'prop-types',
             commonjs2: 'prop-types',
-            amd: 'prop-types'
-        }
+            amd: 'prop-types',
+        },
     },
     stats: {
         entrypoints: false,
         children: false,
         modules: false,
-    }
+    },
 };

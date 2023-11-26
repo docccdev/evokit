@@ -40,12 +40,14 @@ export const withPreset = (preset) => {
 
                                 if (extendedKey) {
                                     if (Array.isArray(extendedKey)) {
-                                        extendedKey.filter((extKey, i) => {
-                                            const extIndex = extendedVal.indexOf(extKey);
-                                            return i === 0 || (extIndex !== -1 && !splitVal[extIndex]);
-                                        }).forEach((extKey) => {
-                                            result.push(cnFn(extKey, val));
-                                        });
+                                        extendedKey
+                                            .filter((extKey, i) => {
+                                                const extIndex = extendedVal.indexOf(extKey);
+                                                return i === 0 || (extIndex !== -1 && !splitVal[extIndex]);
+                                            })
+                                            .forEach((extKey) => {
+                                                result.push(cnFn(extKey, val));
+                                            });
                                     } else {
                                         result.push(cnFn(extendedKey, val));
                                     }
@@ -61,8 +63,7 @@ export const withPreset = (preset) => {
                     } else if (Array.isArray(modVal) && modVal.length) {
                         modVal.forEach(appendFn);
                     } else if (modValType === 'object' && modVal !== null) {
-                        Object
-                            .keys(modVal)
+                        Object.keys(modVal)
                             .filter((value) => !!modVal[value])
                             .forEach(appendFn);
                     } else if (modValType === 'boolean') {
@@ -77,14 +78,11 @@ export const withPreset = (preset) => {
                 if (typeof mix === 'string') {
                     mixResult.push(mix);
                 } else if (Array.isArray(mix)) {
-                    mix
-                        .filter((item) => typeof item === 'string')
-                        .forEach((item) => {
-                            item
-                                .split(' ')
-                                .filter((value) => !result.includes(value))
-                                .forEach((value) => mixResult.push(value));
-                        });
+                    mix.filter((item) => typeof item === 'string').forEach((item) => {
+                        item.split(' ')
+                            .filter((value) => !result.includes(value))
+                            .forEach((value) => mixResult.push(value));
+                    });
                 }
             }
 

@@ -66,7 +66,11 @@ describe("import { withProps } from 'evokit';", () => {
         const Block = createBlock('div', 'block');
         const BlockBabadook = withProps(Block, { children: 'Babadook' });
         const blockRef = React.createRef();
-        const wrapper = mount(<><BlockBabadook ref={blockRef} /></>);
+        const wrapper = mount(
+            <>
+                <BlockBabadook ref={blockRef} />
+            </>
+        );
 
         expect(wrapper.find('div').text()).toEqual('Babadook');
         expect(wrapper.find('div').instance()).toEqual(blockRef.current);
@@ -76,7 +80,15 @@ describe("import { withProps } from 'evokit';", () => {
         const Block = createBlock('div', 'block');
         const BlockBabadook = withProps(Block, { children: 'Babadook' });
         let blockRef = null;
-        const wrapper = mount(<><BlockBabadook block-ref={(target) => { blockRef = target }} /></>);
+        const wrapper = mount(
+            <>
+                <BlockBabadook
+                    block-ref={(target) => {
+                        blockRef = target;
+                    }}
+                />
+            </>
+        );
 
         expect(wrapper.find('div').text()).toEqual('Babadook');
         expect(wrapper.find('div').instance()).toEqual(blockRef);

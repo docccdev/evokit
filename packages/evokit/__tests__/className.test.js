@@ -20,7 +20,7 @@ describe("import { className, withPreset } from 'evokit';", () => {
         expect(cn()).toBe('ek-Block__Elem');
     });
 
-    describe("modifiers", () => {
+    describe('modifiers', () => {
         it('block', () => {
             const cn = className('Block');
             expect(cn({ modName: true })).toBe('ek-Block ek-Block_modName');
@@ -42,10 +42,8 @@ describe("import { className, withPreset } from 'evokit';", () => {
 
         it('different values', () => {
             const cn = className('Block');
-            expect(cn({ modName: { val1: true, val2: false, val3: 0 } }))
-                .toBe('ek-Block ek-Block_modName_val1');
-            expect(cn({ modName: ['val1', 'val2'] }))
-                .toBe('ek-Block ek-Block_modName_val1 ek-Block_modName_val2');
+            expect(cn({ modName: { val1: true, val2: false, val3: 0 } })).toBe('ek-Block ek-Block_modName_val1');
+            expect(cn({ modName: ['val1', 'val2'] })).toBe('ek-Block ek-Block_modName_val1 ek-Block_modName_val2');
         });
 
         it('empty', () => {
@@ -76,7 +74,7 @@ describe("import { className, withPreset } from 'evokit';", () => {
         });
     });
 
-    describe("extended modifiers", () => {
+    describe('extended modifiers', () => {
         it('existing extend', () => {
             const cn = className('Block');
             const extendMods = { modName: ['modName1', 'modName2'] };
@@ -84,8 +82,12 @@ describe("import { className, withPreset } from 'evokit';", () => {
             expect(cn({ modName: 'modValue' }, '', extendMods)).toBe('ek-Block ek-Block_modName_modValue');
             expect(cn({ modName1: 'modValue1' }, '', extendMods)).toBe('ek-Block ek-Block_modName1_modValue1');
             expect(cn({ modName2: 'modValue2' }, '', extendMods)).toBe('ek-Block ek-Block_modName2_modValue2');
-            expect(cn({ modName: 'modValue1 modValue2' }, '', extendMods)).toBe('ek-Block ek-Block_modName1_modValue1 ek-Block_modName2_modValue2');
-            expect(cn({ modName: 'modValue', modName2: 'modValue2' }, '', extendMods)).toBe('ek-Block ek-Block_modName_modValue ek-Block_modName2_modValue2');
+            expect(cn({ modName: 'modValue1 modValue2' }, '', extendMods)).toBe(
+                'ek-Block ek-Block_modName1_modValue1 ek-Block_modName2_modValue2'
+            );
+            expect(cn({ modName: 'modValue', modName2: 'modValue2' }, '', extendMods)).toBe(
+                'ek-Block ek-Block_modName_modValue ek-Block_modName2_modValue2'
+            );
         });
 
         it('no existing extend', () => {
@@ -94,7 +96,7 @@ describe("import { className, withPreset } from 'evokit';", () => {
         });
     });
 
-    describe("mix", () => {
+    describe('mix', () => {
         it('block', () => {
             const cn = className('Block');
             expect(cn(null, ['mix1', 'mix2'])).toBe('ek-Block mix1 mix2');
@@ -127,7 +129,9 @@ describe("import { className, withPreset } from 'evokit';", () => {
 
         it('unique block with mods', () => {
             const cn = className('Block');
-            expect(cn({ theme: 'normal' }, ['ek-Block ek-Block_size_m'])).toBe('ek-Block ek-Block_theme_normal ek-Block_size_m');
+            expect(cn({ theme: 'normal' }, ['ek-Block ek-Block_size_m'])).toBe(
+                'ek-Block ek-Block_theme_normal ek-Block_size_m'
+            );
         });
 
         it('unique elem', () => {
@@ -137,8 +141,9 @@ describe("import { className, withPreset } from 'evokit';", () => {
 
         it('unique elem with mods', () => {
             const cn = className('Block', 'Elem');
-            expect(cn({ theme: 'normal' }, ['ek-Block__Elem ek-Block__Elem_size_m']))
-                .toBe('ek-Block__Elem ek-Block__Elem_theme_normal ek-Block__Elem_size_m');
+            expect(cn({ theme: 'normal' }, ['ek-Block__Elem ek-Block__Elem_size_m'])).toBe(
+                'ek-Block__Elem ek-Block__Elem_theme_normal ek-Block__Elem_size_m'
+            );
         });
     });
 
@@ -157,7 +162,7 @@ describe("import { className, withPreset } from 'evokit';", () => {
             expect(cn()).toBe('Prefix-Block__Elem');
         });
 
-        describe("modifiers", () => {
+        describe('modifiers', () => {
             it('block', () => {
                 const cn = cnBlockPrefix('Block');
                 expect(cn({ modName: true })).toBe('Prefix-Block Prefix-Block_modName');
@@ -174,15 +179,19 @@ describe("import { className, withPreset } from 'evokit';", () => {
                 const cn2 = cnBlockPrefix('Block', 'Elem');
 
                 expect(cn1(mods)).toBe('Prefix-Block Prefix-Block_modName Prefix-Block_modName2_modVal');
-                expect(cn2(mods)).toBe('Prefix-Block__Elem Prefix-Block__Elem_modName Prefix-Block__Elem_modName2_modVal');
+                expect(cn2(mods)).toBe(
+                    'Prefix-Block__Elem Prefix-Block__Elem_modName Prefix-Block__Elem_modName2_modVal'
+                );
             });
 
             it('different values', () => {
                 const cn = cnBlockPrefix('Block');
-                expect(cn({ modName: { val1: true, val2: false, val3: 0 } }))
-                    .toBe('Prefix-Block Prefix-Block_modName_val1');
-                expect(cn({ modName: ['val1', 'val2'] }))
-                    .toBe('Prefix-Block Prefix-Block_modName_val1 Prefix-Block_modName_val2');
+                expect(cn({ modName: { val1: true, val2: false, val3: 0 } })).toBe(
+                    'Prefix-Block Prefix-Block_modName_val1'
+                );
+                expect(cn({ modName: ['val1', 'val2'] })).toBe(
+                    'Prefix-Block Prefix-Block_modName_val1 Prefix-Block_modName_val2'
+                );
             });
 
             it('empty', () => {
@@ -214,7 +223,7 @@ describe("import { className, withPreset } from 'evokit';", () => {
         });
     });
 
-    describe("with preset { b, e, m, v }", () => {
+    describe('with preset { b, e, m, v }', () => {
         const cnBlockAllCustom = withPreset({
             b: '_',
             e: '-',
@@ -237,17 +246,17 @@ describe("import { className, withPreset } from 'evokit';", () => {
         });
     });
 
-    describe("with preset { css }", () => {
+    describe('with preset { css }', () => {
         const cnBlockCssModules = withPreset({
             b: '',
             css: {
-                'Block': 'cssBlock',
-                'Elem': 'cssElem',
-                'Block_mod': 'cssBlock_cssMod',
-                'Block_mod_value': 'cssBlock_cssMod_cssValue',
-                'Block__Elem': 'cssBlock__cssElem',
-                'Block__Elem_mod': 'cssBlock__cssElem_cssMod',
-                'Block__Elem_mod_value': 'cssBlock__cssElem_cssMod_cssValue',
+                Block: 'cssBlock',
+                Elem: 'cssElem',
+                Block_mod: 'cssBlock_cssMod',
+                Block_mod_value: 'cssBlock_cssMod_cssValue',
+                Block__Elem: 'cssBlock__cssElem',
+                Block__Elem_mod: 'cssBlock__cssElem_cssMod',
+                Block__Elem_mod_value: 'cssBlock__cssElem_cssMod_cssValue',
             },
         });
 
@@ -269,7 +278,7 @@ describe("import { className, withPreset } from 'evokit';", () => {
             expect(cn({ mod: 'value' })).toBe('cssBlock__cssElem cssBlock__cssElem_cssMod_cssValue');
         });
 
-        describe("mix", () => {
+        describe('mix', () => {
             it('block', () => {
                 const cn = cnBlockCssModules('Block');
                 expect(cn(null, ['mix1', 'mix2'])).toBe('cssBlock mix1 mix2');
@@ -312,8 +321,9 @@ describe("import { className, withPreset } from 'evokit';", () => {
 
             it('unique elem with mods', () => {
                 const cn = cnBlockCssModules('Block', 'Elem');
-                expect(cn({ mod: 'value' }, ['Block__Elem Block__Elem_mod_value']))
-                    .toBe('cssBlock__cssElem cssBlock__cssElem_cssMod_cssValue');
+                expect(cn({ mod: 'value' }, ['Block__Elem Block__Elem_mod_value'])).toBe(
+                    'cssBlock__cssElem cssBlock__cssElem_cssMod_cssValue'
+                );
             });
         });
     });
