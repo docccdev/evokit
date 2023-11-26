@@ -111,11 +111,20 @@ export const withPreset = (preset) => {
                 }
             }
 
-            if (typeof mix === 'string') {
-                if (result) {
-                    result += ' ';
+            if (mix) {
+                if (typeof mix === 'string') {
+                    if (result) {
+                        result += ' ';
+                    }
+                    result += mix;
+                } else if (Array.isArray(mix)) {
+                    for (let i = 0; i < mix.length; i++) {
+                        if (result) {
+                            result += ' ';
+                        }
+                        result += mix[i];
+                    }
                 }
-                result += mix;
             }
 
             return result;

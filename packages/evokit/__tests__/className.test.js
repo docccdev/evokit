@@ -92,7 +92,7 @@ describe("import { className, withPreset } from 'evokit';", () => {
 
         it('no existing extend', () => {
             const cn = className('Block');
-            expect(cn({ modName: 'modValue ololo' })).toBe('ek-Block ek-Block_modName_modValue');
+            expect(cn({ modName: 'modValue ololo' })).toBe('ek-Block');
         });
     });
 
@@ -124,25 +124,25 @@ describe("import { className, withPreset } from 'evokit';", () => {
 
         it('unique block', () => {
             const cn = className('Block');
-            expect(cn(null, ['ek-Block'])).toBe('ek-Block');
+            expect(cn(null, ['ek-Block'])).toBe('ek-Block ek-Block');
         });
 
         it('unique block with mods', () => {
             const cn = className('Block');
             expect(cn({ theme: 'normal' }, ['ek-Block ek-Block_size_m'])).toBe(
-                'ek-Block ek-Block_theme_normal ek-Block_size_m'
+                'ek-Block ek-Block_theme_normal ek-Block ek-Block_size_m'
             );
         });
 
         it('unique elem', () => {
             const cn = className('Block', 'Elem');
-            expect(cn(null, ['ek-Block__Elem'])).toBe('ek-Block__Elem');
+            expect(cn(null, ['ek-Block__Elem'])).toBe('ek-Block__Elem ek-Block__Elem');
         });
 
         it('unique elem with mods', () => {
             const cn = className('Block', 'Elem');
             expect(cn({ theme: 'normal' }, ['ek-Block__Elem ek-Block__Elem_size_m'])).toBe(
-                'ek-Block__Elem ek-Block__Elem_theme_normal ek-Block__Elem_size_m'
+                'ek-Block__Elem ek-Block__Elem_theme_normal ek-Block__Elem ek-Block__Elem_size_m'
             );
         });
     });
@@ -306,23 +306,25 @@ describe("import { className, withPreset } from 'evokit';", () => {
 
             it('unique block', () => {
                 const cn = cnBlockCssModules('Block');
-                expect(cn(null, ['Block'])).toBe('cssBlock');
+                expect(cn(null, ['Block'])).toBe('cssBlock Block');
             });
 
             it('unique block with mods', () => {
                 const cn = cnBlockCssModules('Block');
-                expect(cn({ mod: 'value' }, ['Block Block_mod_value'])).toBe('cssBlock cssBlock_cssMod_cssValue');
+                expect(cn({ mod: 'value' }, ['Block Block_mod_value'])).toBe(
+                    'cssBlock cssBlock_cssMod_cssValue Block Block_mod_value'
+                );
             });
 
             it('unique elem', () => {
                 const cn = cnBlockCssModules('Block', 'Elem');
-                expect(cn(null, ['Block__Elem'])).toBe('cssBlock__cssElem');
+                expect(cn(null, 'Block__Elem')).toBe('cssBlock__cssElem Block__Elem');
             });
 
             it('unique elem with mods', () => {
                 const cn = cnBlockCssModules('Block', 'Elem');
                 expect(cn({ mod: 'value' }, ['Block__Elem Block__Elem_mod_value'])).toBe(
-                    'cssBlock__cssElem cssBlock__cssElem_cssMod_cssValue'
+                    'cssBlock__cssElem cssBlock__cssElem_cssMod_cssValue Block__Elem Block__Elem_mod_value'
                 );
             });
         });

@@ -9,92 +9,125 @@ const DEFAULT_PRESET = {
 export const withPreset = (preset) => {
     const { b, e, m, v, css } = Object.assign({}, DEFAULT_PRESET, preset);
 
+    const getCSSModuleClassName = typeof css === 'object' && css !== null ? (cls) => css[cls] : (cls) => cls;
+
+    const getBlockClassName = (name, elem) => {
+        if (elem) {
+            return b + name + e + elem;
+        }
+        return b + name;
+    };
+
+    const getModClassName = (blockName, modName, modValue) => {
+        if (modValue) {
+            return blockName + m + modName + v + modValue;
+        }
+        return blockName + m + modName;
+    };
+
     return (name, elem) => {
         if (typeof name !== 'string') {
             throw new Error('The argument "name" is not a string');
         }
 
+        const block = getBlockClassName(name, elem);
+
         return (mods, mix, modsExtended = {}) => {
-            const block = elem ? `${b}${name}${e}${elem}` : `${b}${name}`;
-            const result = [block];
-            const mixResult = [];
+            let result = '';
 
-            if (mods) {
-                Object.keys(mods).forEach((key) => {
-                    const modVal = mods[key];
-                    const modValType = typeof modVal;
-                    const cnFn = (modName, modValue) => {
-                        if (modValue) {
-                            return `${block}${m}${modName}${v}${modValue}`;
-                        }
+            const appendResult = (cls) => {
+                const CSSModuleClassName = getCSSModuleClassName(cls);
 
-                        return `${block}${m}${modName}`;
-                    };
-                    const appendFn = (value) => {
-                        const splitVal = value ? `${value}`.split(' ') : [];
+                if (CSSModuleClassName) {
+                    if (result) {
+                        result += ' ';
+                    }
+                    result += CSSModuleClassName;
+                }
+            };
 
-                        if (splitVal.length > 1 && Object.prototype.hasOwnProperty.call(modsExtended, key)) {
-                            splitVal.forEach((val, index) => {
-                                const extendedVal = modsExtended[key];
-                                const extendedKey = extendedVal[index];
+            appendResult(block);
 
-                                if (extendedKey) {
-                                    if (Array.isArray(extendedKey)) {
-                                        extendedKey
-                                            .filter((extKey, i) => {
-                                                const extIndex = extendedVal.indexOf(extKey);
-                                                return i === 0 || (extIndex !== -1 && !splitVal[extIndex]);
-                                            })
-                                            .forEach((extKey) => {
-                                                result.push(cnFn(extKey, val));
-                                            });
-                                    } else {
-                                        result.push(cnFn(extendedKey, val));
+            const appendFn = (modKey, modVal) => {
+                if (modVal.indexOf(' ') !== -1) {
+                    const splitVal = modVal.split(' ');
+
+                    if (splitVal.length > 1 && Object.prototype.hasOwnProperty.call(modsExtended, modKey)) {
+                        for (let index = 0; index < splitVal.length; index++) {
+                            const extendedVal = modsExtended[modKey];
+                            const extendedKey = extendedVal[index];
+
+                            if (extendedKey) {
+                                if (Array.isArray(extendedKey)) {
+                                    for (let i = 0; i < extendedKey.length; i++) {
+                                        const extKey = extendedKey[i];
+                                        const extIndex = extendedVal.indexOf(extKey);
+
+                                        if (i === 0 || (extIndex !== -1 && !splitVal[extIndex])) {
+                                            appendResult(getModClassName(block, extKey, splitVal[index]));
+                                        }
                                     }
+                                } else {
+                                    appendResult(getModClassName(block, extendedKey, splitVal[index]));
                                 }
-                            });
-                        } else {
-                            result.push(cnFn(key, splitVal[0]));
-                        }
-                    };
-
-                    if (modValType === 'string' || modValType === 'number') {
-                        appendFn(modVal.toString());
-                    } else if (Array.isArray(modVal) && modVal.length) {
-                        modVal.forEach(appendFn);
-                    } else if (modValType === 'object' && modVal !== null) {
-                        Object.keys(modVal)
-                            .filter((value) => !!modVal[value])
-                            .forEach(appendFn);
-                    } else if (modValType === 'boolean') {
-                        if (modVal) {
-                            appendFn();
+                            }
                         }
                     }
-                });
-            }
+                } else {
+                    appendResult(getModClassName(block, modKey, modVal));
+                }
+            };
 
-            if (!!mix) {
-                if (typeof mix === 'string') {
-                    mixResult.push(mix);
-                } else if (Array.isArray(mix)) {
-                    mix.filter((item) => typeof item === 'string').forEach((item) => {
-                        item.split(' ')
-                            .filter((value) => !result.includes(value))
-                            .forEach((value) => mixResult.push(value));
-                    });
+            if (typeof mods === 'object') {
+                // eslint-disable-next-line no-restricted-syntax
+                for (const key in mods) {
+                    if (Object.prototype.hasOwnProperty.call(mods, key)) {
+                        const modVal = mods[key];
+
+                        if (typeof modVal === 'string' || typeof modVal === 'number') {
+                            appendFn(key, '' + modVal);
+                        } else if (typeof modVal === 'boolean') {
+                            if (modVal) {
+                                appendResult(getModClassName(block, key));
+                            }
+                        } else if (typeof modVal === 'object') {
+                            let k;
+                            if (Array.isArray(modVal)) {
+                                for (k = 0; k < modVal.length; k++) {
+                                    if (typeof modVal[k] === 'string' || typeof modVal[k] === 'number') {
+                                        appendFn(key, '' + modVal[k]);
+                                    }
+                                }
+                            } else {
+                                // eslint-disable-next-line no-restricted-syntax
+                                for (k in modVal) {
+                                    if (modVal[k]) {
+                                        appendFn(key, '' + k);
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
 
-            if (typeof css === 'object' && css !== null) {
-                const cssModuleResult = result
-                    .filter((key) => Object.prototype.hasOwnProperty.call(css, key))
-                    .map((key) => css[key]);
-
-                return [...cssModuleResult, ...mixResult].join(' ');
+            if (mix) {
+                if (typeof mix === 'string') {
+                    if (result) {
+                        result += ' ';
+                    }
+                    result += mix;
+                } else if (Array.isArray(mix)) {
+                    for (let i = 0; i < mix.length; i++) {
+                        if (result) {
+                            result += ' ';
+                        }
+                        result += mix[i];
+                    }
+                }
             }
 
-            return [...result, ...mixResult].join(' ').trim();
+            return result;
         };
     };
 };

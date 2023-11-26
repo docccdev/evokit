@@ -16,13 +16,15 @@ const PROPS = { padding: { s: true, m: true, xl: true }, margin: { s: true, m: t
 
 const BLOCK_MODS = getPrepareMods(blockMods);
 const MODS_BLOCK_PROPS_EXTENDED = getMapPropModsExtend(BLOCK_MODS);
+const MIX_CLASS = ['mix1', 'mix2'];
+// const MIX_CLASS = 'mix1';
 
 /* --------------------------------------------------------------------------------------------------------------- */
 const timerStart1 = performance.now();
 let counter1 = 0;
 let res1 = '';
 while (counter1 < ITERATION) {
-    res1 = withPreset({ css: cssModules })('box')(PROPS, 'customClass', MODS_BLOCK_PROPS_EXTENDED);
+    res1 = withPreset({ css: cssModules })('box')(PROPS, MIX_CLASS, MODS_BLOCK_PROPS_EXTENDED);
     counter1++;
 }
 const timerEnd1 = performance.now();
@@ -33,7 +35,7 @@ const timerStart2 = performance.now();
 let counter2 = 0;
 let res2 = '';
 while (counter2 < ITERATION) {
-    res2 = withPreset2({ css: cssModules })('box')(PROPS, 'customClass', MODS_BLOCK_PROPS_EXTENDED);
+    res2 = withPreset2({ css: cssModules })('box')(PROPS, MIX_CLASS, MODS_BLOCK_PROPS_EXTENDED);
     counter2++;
 }
 const timerEnd2 = performance.now();

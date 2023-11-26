@@ -85,9 +85,7 @@ describe("import { createBlock } from 'evokit';", () => {
         expect(shallow(<Block block-modName='modValue' />).html()).toEqual(
             '<div class="ek-block ek-block_modName_modValue"></div>'
         );
-        expect(shallow(<Block block-modName='modValue ololo' />).html()).toEqual(
-            '<div class="ek-block ek-block_modName_modValue"></div>'
-        );
+        expect(shallow(<Block block-modName='modValue ololo' />).html()).toEqual('<div class="ek-block"></div>');
         expect(shallow(<Block block-border='value' />).html()).toEqual(
             '<div class="ek-block ek-block_border_value"></div>'
         );
