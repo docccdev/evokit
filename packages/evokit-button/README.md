@@ -126,6 +126,7 @@ const App = () => (
     --ek-button-round-3xl: 16px;
     --ek-button-round-4xl: 18px;
     --ek-button-round-5xl: 20px;
+    --ek-button-round-full: 50%;
     /* prop 'button-size' */
     --ek-button-size-small: 11px;
     --ek-button-size-default: var(--ek-button-font-size);
@@ -254,7 +255,7 @@ Corner rounding. The property allows you to set the border radius for all corner
 | Value  | CSS var               | CSS value |
 |--------|-----------------------|-----------|
 | `none` | ---                   | `0px`     |
-| `full` | ---                   | `50%`     |
+| `full` | `--ek-button-round-full` | `50%`     |
 | `xxs`  | `--ek-button-round-xxs`  | `2px`     |
 | `xs`   | `--ek-button-round-xs`   | `4px`     |
 | `s`    | `--ek-button-round-s`    | `6px`     |

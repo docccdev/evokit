@@ -15,6 +15,10 @@
 
 ## CHANGELOG
 
+### 3.0.2 *(26.11.2023)*
+
+- **Added** new css variable `--ek-button-round-full`
+
 ### 3.0.1 *(24.10.2020)*
 
 - **Fixed** prop [`button-round`][button-round]

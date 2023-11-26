@@ -81,6 +81,7 @@ describe('<Button button-round="..." />', () => {
         expect(css.rule(':root').prop('--ek-button-round-3xl')).toBe('16px');
         expect(css.rule(':root').prop('--ek-button-round-4xl')).toBe('18px');
         expect(css.rule(':root').prop('--ek-button-round-5xl')).toBe('20px');
+        expect(css.rule(':root').prop('--ek-button-round-full')).toBe('50%');
 
         expect(css.rule('.ek-button_padding_none').exists()).toBeTruthy();
         expect(css.rule('.ek-button_padding_xxs').exists()).toBeTruthy();
@@ -93,5 +94,18 @@ describe('<Button button-round="..." />', () => {
         expect(css.rule('.ek-button_padding_3xl').exists()).toBeTruthy();
         expect(css.rule('.ek-button_padding_4xl').exists()).toBeTruthy();
         expect(css.rule('.ek-button_padding_5xl').exists()).toBeTruthy();
+
+        expect(css.rule('.ek-button_round_none').exists()).toBeTruthy();
+        expect(css.rule('.ek-button_round_xxs').exists()).toBeTruthy();
+        expect(css.rule('.ek-button_round_xs').exists()).toBeTruthy();
+        expect(css.rule('.ek-button_round_s').exists()).toBeTruthy();
+        expect(css.rule('.ek-button_round_m').exists()).toBeTruthy();
+        expect(css.rule('.ek-button_round_l').exists()).toBeTruthy();
+        expect(css.rule('.ek-button_round_xl').exists()).toBeTruthy();
+        expect(css.rule('.ek-button_round_xxl').exists()).toBeTruthy();
+        expect(css.rule('.ek-button_round_3xl').exists()).toBeTruthy();
+        expect(css.rule('.ek-button_round_4xl').exists()).toBeTruthy();
+        expect(css.rule('.ek-button_round_5xl').exists()).toBeTruthy();
+        expect(css.rule('.ek-button_round_full').exists()).toBeTruthy();
     });
 });

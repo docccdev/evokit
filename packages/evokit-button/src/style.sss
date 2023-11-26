@@ -37,6 +37,7 @@
     --ek-button-round-3xl: 16px
     --ek-button-round-4xl: 18px
     --ek-button-round-5xl: 20px
+    --ek-button-round-full: 50%
     // prop 'button-size'
     --ek-button-size-small: 11px
     --ek-button-size-default: var(--ek-button-font-size)
@@ -182,7 +183,7 @@
         @if $value == none
             border-radius: 0
         @else if $value == full
-            border-radius: 50%
+            border-radius: var(--ek-button-round-full)
         @else
             border-radius: var(--ek-button-round-$(value))
 
@@ -190,7 +191,7 @@
         @if $value == none
             border-top-left-radius: 0
         @else if $value == full
-            border-top-left-radius: 50%
+            border-top-left-radius: var(--ek-button-round-full)
         @else
             border-top-left-radius: var(--ek-button-round-$(value))
 
@@ -198,7 +199,7 @@
         @if $value == none
             border-top-right-radius: 0
         @else if $value == full
-            border-top-right-radius: 50%
+            border-top-right-radius: var(--ek-button-round-full)
         @else
             border-top-right-radius: var(--ek-button-round-$(value))
 
@@ -206,7 +207,7 @@
         @if $value == none
             border-bottom-right-radius: 0
         @else if $value == full
-            border-bottom-right-radius: 50%
+            border-bottom-right-radius: var(--ek-button-round-full)
         @else
             border-bottom-right-radius: var(--ek-button-round-$(value))
 
@@ -214,7 +215,7 @@
         @if $value == none
             border-bottom-left-radius: 0
         @else if $value == full
-            border-bottom-left-radius: 50%
+            border-bottom-left-radius: var(--ek-button-round-full)
         @else
             border-bottom-left-radius: var(--ek-button-round-$(value))
 
