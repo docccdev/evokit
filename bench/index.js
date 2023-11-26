@@ -6,9 +6,9 @@ import { cssModules } from './cssModules.js';
 
 const ITERATION = 200000;
 // const ITERATION = 1000;
-const PROPS = { padding: 's m l xl', margin: ['s', 'm', 'xl'], border: 'none' };
+// const PROPS = { padding: 's m l xl', margin: ['s', 'm', 'xl'], border: 'none' };
 // const PROPS = { padding: ['s', 'm', 'xl'], margin: ['s', 'm', 'xl'], border: 'none' };
-// const PROPS = { padding: { s: true, m: true, xl: true }, margin: { s: true, m: true, xl: true }, border: 'none' };
+const PROPS = { padding: { s: true, m: true, xl: true }, margin: { s: true, m: true, xl: true }, border: 'none' };
 // const PROPS = { opacity: [20, 30, 40] };
 // const PROPS = { opacity: { 0: true, 20: true, 30: true, 40: true } };
 // const PROPS = { opacity: true };

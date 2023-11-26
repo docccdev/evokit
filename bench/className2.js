@@ -78,28 +78,32 @@ export const withPreset = (preset) => {
                 }
             };
 
-            if (mods) {
+            if (typeof mods === 'object') {
+                // eslint-disable-next-line no-restricted-syntax
                 for (const key in mods) {
-                    const modVal = mods[key];
+                    if (Object.prototype.hasOwnProperty.call(mods, key)) {
+                        const modVal = mods[key];
 
-                    if (typeof modVal === 'string' || typeof modVal === 'number') {
-                        appendFn(key, '' + modVal);
-                    } else if (typeof modVal === 'boolean') {
-                        if (modVal) {
-                            appendResult(getModClassName(block, key));
-                        }
-                    } else if (typeof modVal === 'object') {
-                        let k;
-                        if (Array.isArray(modVal)) {
-                            for (k = 0; k < modVal.length; k++) {
-                                if (typeof modVal[k] === 'string' || typeof modVal[k] === 'number') {
-                                    appendFn(key, '' + modVal[k]);
-                                }
+                        if (typeof modVal === 'string' || typeof modVal === 'number') {
+                            appendFn(key, '' + modVal);
+                        } else if (typeof modVal === 'boolean') {
+                            if (modVal) {
+                                appendResult(getModClassName(block, key));
                             }
-                        } else {
-                            for (k in modVal) {
-                                if (modVal[k]) {
-                                    appendFn(key, '' + k);
+                        } else if (typeof modVal === 'object') {
+                            let k;
+                            if (Array.isArray(modVal)) {
+                                for (k = 0; k < modVal.length; k++) {
+                                    if (typeof modVal[k] === 'string' || typeof modVal[k] === 'number') {
+                                        appendFn(key, '' + modVal[k]);
+                                    }
+                                }
+                            } else {
+                                // eslint-disable-next-line no-restricted-syntax
+                                for (k in modVal) {
+                                    if (modVal[k]) {
+                                        appendFn(key, '' + k);
+                                    }
                                 }
                             }
                         }

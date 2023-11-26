@@ -39,6 +39,8 @@
         "object-curly-newline": 0,
         "no-extra-boolean-cast": 0,
         "prefer-template": 0,
-        "default-param-last": 0
+        "default-param-last": 0,
+        "comma-dangle": 0,
+        "no-plusplus": 0
     }
 }
