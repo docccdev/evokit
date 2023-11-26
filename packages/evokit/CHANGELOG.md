@@ -37,6 +37,10 @@
 ## CHANGELOG
 
 
+### 3.2.4 *(26.11.2023)*
+
+- **Fixed** performance, generated classNames `~70%` faster
+
 ### 3.2.3 *(17.11.2021)*
 
 - **Fixed** performance, scripting time `~30%` faster
