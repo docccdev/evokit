@@ -37,6 +37,10 @@
 ## CHANGELOG
 
 
+### 3.2.5 *(04.12.2023)*
+
+- **Fixed** some performance
+
 ### 3.2.4 *(26.11.2023)*
 
 - **Fixed** performance, generated classNames `~70%` faster
