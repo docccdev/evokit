@@ -19,8 +19,6 @@ BoxPerf.defaultProps = {
     },
 };
 
-const ITERATION = 200000;
-// const ITERATION = 1000;
 // const PROPS = { 'box-padding': 's m l xl', 'box-margin': ['s', 'm', 'xl'], border: 'none' };
 // const PROPS = { 'box-padding': ['s', 'm', 'xl'], 'box-margin': ['s', 'm', 'xl'], border: 'none' };
 const PROPS = {
@@ -33,10 +31,10 @@ const PROPS = {
 // const PROPS = { 'box-opacity': true };
 // const PROPS = { 'box-padding': 's', 'box-margin': 'm', border: 'none' };
 
-checkPerformance('test1', ITERATION, () => {
+checkPerformance('test1', () => {
     return ReactDOMServer.default.renderToString(React.createElement(Box, PROPS));
 });
 
-checkPerformance('test1', ITERATION, () => {
+checkPerformance('test2', () => {
     return ReactDOMServer.default.renderToString(React.createElement(BoxPerf, PROPS));
 });

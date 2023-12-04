@@ -1,11 +1,21 @@
-export const checkPerformance = (name, iteration, cb) => {
-    const timerStart1 = performance.now();
-    let result = '';
-    let counter = 0;
-    while (counter < iteration) {
-        result = cb();
-        counter++;
+const REPEAT = 100;
+const ITERATION = 2000;
+
+export const checkPerformance = (name, cb) => {
+    const timerStart = performance.now();
+    let timerEnd = 0;
+    let result;
+
+    let repeatCount = 0;
+    while (repeatCount < REPEAT) {
+        let iterationCount = 0;
+        while (iterationCount < ITERATION) {
+            result = cb();
+            iterationCount++;
+        }
+        repeatCount++;
     }
-    const timerEnd1 = performance.now();
-    console.log(`${name} (${iteration}): -- ${timerEnd1 - timerStart1}`, '\n' + result + '\n');
+
+    timerEnd = performance.now();
+    console.log(`${name} (${ITERATION} * ${REPEAT}): -- ${timerEnd - timerStart}`, '\n' + result + '\n');
 };
