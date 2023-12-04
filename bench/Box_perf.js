@@ -1,4 +1,6 @@
-export const blockMods = [
+import { createBlock } from './evokit_perf/index.js';
+
+export const Box = createBlock('div', 'box', [
     'align',
     'background',
     'display',
@@ -65,4 +67,4 @@ export const blockMods = [
     'round-top',
     'border-lr',
     'border-tb',
-];
+]);
