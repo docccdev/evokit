@@ -1,15 +1,27 @@
-const DEFAULT_PRESET = {
-    b: 'ek-',
-    e: '__',
-    m: '_',
-    v: '_',
-    css: null,
-};
-
 export const withPreset = (preset) => {
-    const { b, e, m, v, css } = Object.assign({}, DEFAULT_PRESET, preset);
+    let b = 'ek-';
+    let e = '__';
+    let m = '_';
+    let v = '_';
+    let getCSSModuleClassName = (cls) => cls;
 
-    const getCSSModuleClassName = typeof css === 'object' && css !== null ? (cls) => css[cls] : (cls) => cls;
+    if (typeof preset === 'object' && preset !== null) {
+        if (typeof preset.b === 'string') {
+            b = preset.b;
+        }
+        if (typeof preset.e === 'string') {
+            e = preset.e;
+        }
+        if (typeof preset.m === 'string') {
+            m = preset.m;
+        }
+        if (typeof preset.v === 'string') {
+            v = preset.v;
+        }
+        if (typeof preset.css === 'object' && preset.css !== null) {
+            getCSSModuleClassName = (cls) => preset.css[cls];
+        }
+    }
 
     const getBlockClassName = (name, elem) => {
         if (elem) {
