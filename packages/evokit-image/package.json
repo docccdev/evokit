@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --colors",
-    "build": "webpack --colors",
-    "watch": "webpack --colors --progress --watch",
+    "build": "webpack --color",
+    "watch": "webpack --color --progress --watch",
     "pretest": "npm run build",
     "prepublishOnly": "webpack"
   },
