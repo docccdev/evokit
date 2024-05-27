@@ -4,6 +4,7 @@
             "ignoreChanges": [
                 "package.json",
                 "package-lock.json",
+                "webpack.config.js",
                 "*.md",
                 "**/__tests__/**"
             ]

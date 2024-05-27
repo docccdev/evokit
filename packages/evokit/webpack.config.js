@@ -3,6 +3,7 @@ var isProd = process.env.NODE_ENV === 'production';
 var babelConfig = require('../../config/babel.config.js');
 
 module.exports = {
+    mode: isProd ? 'production' : 'development',
     entry: './src/index.js',
     output: {
         library: 'EvoKit',

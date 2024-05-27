@@ -12,17 +12,15 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, 'public'),
-        filename: '[name].[contenthash].js',
-        publicPath: '/public'
+        filename: '[name].[hash].js',
+        publicPath: '/public',
     },
     module: {
         rules: [
             {
                 test: /\.jsx?$/,
-                use: [
-                    { loader: 'babel-loader', options: babelConfig },
-                ],
-                exclude: /node_modules/
+                use: [{ loader: 'babel-loader', options: babelConfig }],
+                exclude: /node_modules/,
             },
             {
                 test: /\.css$/,
@@ -34,8 +32,8 @@ module.exports = {
                             importLoaders: 1,
                             modules: {
                                 localIdentName: '[local]',
-                            }
-                        }
+                            },
+                        },
                     },
                     {
                         loader: 'postcss-loader',
@@ -44,35 +42,35 @@ module.exports = {
                                 postcssImport(),
                                 postcssPresetEnv({
                                     stage: 1,
-                                    preserve: false
+                                    preserve: false,
                                 }),
                             ],
-                        }
+                        },
                     },
                 ],
             },
-        ]
+        ],
     },
     devServer: {
-        contentBase: path.join(__dirname),
+        static: path.join(__dirname),
         compress: true,
-        port: 8080
+        port: 8080,
     },
     plugins: [
         new HtmlWebpackPlugin({
             chunks: ['theming'],
-            filename: 'theming.html'
+            filename: 'theming.html',
         }),
         new HtmlWebpackPlugin({
             chunks: ['dev'],
-            filename: 'dev.html'
-        })
+            filename: 'dev.html',
+        }),
     ],
     resolve: {
-        extensions: ['.js', '.jsx']
+        extensions: ['.js', '.jsx'],
     },
-    performance : {
-        hints : false,
+    performance: {
+        hints: false,
     },
     stats: {
         children: false,
@@ -83,13 +81,13 @@ module.exports = {
                 vendor: {
                     test: /[\\/]node_modules[\\/]/,
                     name: 'vendor',
-                    chunks: 'all'
+                    chunks: 'all',
                 },
-            }
-        }
+            },
+        },
     },
     node: {
         fs: 'empty',
-        module: 'empty'
-    }
+        module: 'empty',
+    },
 };
