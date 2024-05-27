@@ -1,38 +1,38 @@
 function setActiveClass(nodeList, index, withCount) {
-    [].forEach.call(nodeList, function(node, i) {
+    [].forEach.call(nodeList, function (node, i) {
         if (i === index) {
             if (withCount) {
-                document.querySelector("[data-slider-count-prev]").textContent = i + 1;
+                document.querySelector('[data-slider-count-prev]').textContent = i + 1;
             }
             node.classList.add('active');
         } else {
             if (withCount) {
-                document.querySelector("[data-slider-count-next]").textContent = nodeList.length;
+                document.querySelector('[data-slider-count-next]').textContent = nodeList.length;
             }
             node.classList.remove('active');
         }
     });
-};
+}
 
-document.addEventListener("DOMContentLoaded", function(){
-    var canvasNodeList = document.querySelectorAll("[data-slider-canvas]");
-    var canvasCaseNodeList = document.querySelectorAll("[data-slider-canvas-case]");
-    var targetNext = document.querySelector("[data-slider-next]");
-    var targetPrev = document.querySelector("[data-slider-prev]");
-    var targetTop = document.querySelector("[data-slider-top]");
-    var targetBottom = document.querySelector("[data-slider-bottom]");
+document.addEventListener('DOMContentLoaded', function () {
+    var canvasNodeList = document.querySelectorAll('[data-slider-canvas]');
+    var canvasCaseNodeList = document.querySelectorAll('[data-slider-canvas-case]');
+    var targetNext = document.querySelector('[data-slider-next]');
+    var targetPrev = document.querySelector('[data-slider-prev]');
+    var targetTop = document.querySelector('[data-slider-top]');
+    var targetBottom = document.querySelector('[data-slider-bottom]');
     var canvasIndex = 0;
     var canvasCaseIndex = [...Array(canvasNodeList.length)].map(() => 0);
 
     function getChildrenCaseNodeList() {
-        return canvasNodeList[canvasIndex].querySelectorAll("[data-slider-canvas-case]");
+        return canvasNodeList[canvasIndex].querySelectorAll('[data-slider-canvas-case]');
     }
 
     function setTargetClass() {
         if (canvasIndex === 0) {
             targetPrev.classList.add('disable');
             targetNext.classList.remove('disable');
-        } else if (canvasIndex === (canvasNodeList.length - 1)) {
+        } else if (canvasIndex === canvasNodeList.length - 1) {
             targetPrev.classList.remove('disable');
             targetNext.classList.add('disable');
         } else {
@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function(){
             if (canvasCaseIndex[canvasIndex] === 0) {
                 targetTop.classList.add('disable');
                 targetBottom.classList.remove('disable');
-            } else if (canvasCaseIndex[canvasIndex] === (caseNodeList.length -1)) {
+            } else if (canvasCaseIndex[canvasIndex] === caseNodeList.length - 1) {
                 targetTop.classList.remove('disable');
                 targetBottom.classList.add('disable');
             } else {
@@ -57,10 +57,10 @@ document.addEventListener("DOMContentLoaded", function(){
             targetTop.classList.add('disable');
             targetBottom.classList.add('disable');
         }
-    };
+    }
 
     function slideToNext() {
-        if (canvasIndex >= (canvasNodeList.length - 1)) {
+        if (canvasIndex >= canvasNodeList.length - 1) {
             return false;
         }
         setActiveClass(canvasNodeList, ++canvasIndex, true);
@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
     function slideToBottom() {
         const nideList = getChildrenCaseNodeList();
-        if (canvasCaseIndex[canvasIndex] >= (nideList.length - 1)) {
+        if (canvasCaseIndex[canvasIndex] >= nideList.length - 1) {
             return false;
         }
 
@@ -102,23 +102,23 @@ document.addEventListener("DOMContentLoaded", function(){
     setActiveClass(canvasNodeList, canvasIndex, true);
     setActiveClass(canvasCaseNodeList, canvasCaseIndex[canvasIndex]);
 
-    targetNext.addEventListener("click", function(e) {
+    targetNext.addEventListener('click', function (e) {
         slideToNext();
     });
 
-    targetPrev.addEventListener("click", function(e) {
+    targetPrev.addEventListener('click', function (e) {
         slideToPrev();
     });
 
-    targetBottom.addEventListener("click", function(e) {
+    targetBottom.addEventListener('click', function (e) {
         slideToBottom();
     });
 
-    targetTop.addEventListener("click", function(e) {
+    targetTop.addEventListener('click', function (e) {
         slideToTop();
     });
 
-    document.onkeyup = function(e) {
+    document.onkeyup = function (e) {
         if (e.keyCode === 37) {
             slideToPrev();
             targetPrev.classList.remove('active');
@@ -134,7 +134,7 @@ document.addEventListener("DOMContentLoaded", function(){
         }
     };
 
-    document.onkeydown = function(e) {
+    document.onkeydown = function (e) {
         if (e.keyCode === 37) {
             targetPrev.classList.add('active');
         } else if (e.keyCode === 39) {

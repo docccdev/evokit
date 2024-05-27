@@ -4,8 +4,8 @@ import { SketchPicker, SliderPicker } from 'react-color';
 import OutsideClickHandler from 'react-outside-click-handler';
 import { Box, Text } from '../UI';
 
-const getTitle = rootVarKey => {
-    const _is = name => rootVarKey.search(`-${name}-`) !== -1;
+const getTitle = (rootVarKey) => {
+    const _is = (name) => rootVarKey.search(`-${name}-`) !== -1;
 
     if (_is('disabled-background')) {
         return 'DISABLED background color';
@@ -62,7 +62,10 @@ export const PartTheme = ({ rootVarKey, sliderPickerChecked, inputValue, onChang
         <>
             {!!rootVarKey && (
                 <Box box-margin-bottom='xs'>
-                    <Text text-weight='medium' text-align='center'>
+                    <Text
+                        text-weight='medium'
+                        text-align='center'
+                    >
                         {getTitle(rootVarKey)}
                     </Text>
                 </Box>
@@ -97,7 +100,10 @@ export const PartTheme = ({ rootVarKey, sliderPickerChecked, inputValue, onChang
                 </Box>
             )}
             {isPickerOpen && (
-                <Box box-position='absolute top xs'  box-margin-top='xl'>
+                <Box
+                    box-position='absolute top xs'
+                    box-margin-top='xl'
+                >
                     <OutsideClickHandler onOutsideClick={onClosePicker}>
                         <SketchPicker
                             color={inputValue}

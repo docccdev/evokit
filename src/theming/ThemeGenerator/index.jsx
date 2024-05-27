@@ -17,22 +17,30 @@ const THEME_NAME_MAXLENGTH = 128;
 
 const Title = ({ children }) => (
     <Box box-margin-bottom='xl'>
-        <Text text-align='center' text-size='h4' text-weight='medium'>
+        <Text
+            text-align='center'
+            text-size='h4'
+            text-weight='medium'
+        >
             {children}
         </Text>
     </Box>
 );
 
 const SvgClip = () => (
-    <svg width='1.2em' height='1.2em' viewBox="0 0 30.34 30.34">
+    <svg
+        width='1.2em'
+        height='1.2em'
+        viewBox='0 0 30.34 30.34'
+    >
         <path
             fill='currentColor'
-            d="M22.562,12.491c0,0,1.227-0.933,0.293-1.866c-0.934-0.933-1.842,0.271-1.842,0.271l-9.389,9.391
+            d='M22.562,12.491c0,0,1.227-0.933,0.293-1.866c-0.934-0.933-1.842,0.271-1.842,0.271l-9.389,9.391
             c0,0-2.199,2.838-3.871,1.122c-1.67-1.718,1.121-3.872,1.121-3.872l12.311-12.31c0,0,2.873-3.165,5.574-0.466
             c2.697,2.7-0.477,5.579-0.477,5.579L12.449,24.173c0,0-4.426,5.113-8.523,1.015s1.066-8.474,1.066-8.474L15.494,6.209
             c0,0,1.176-0.982,0.295-1.866c-0.885-0.883-1.865,0.295-1.865,0.295L1.873,16.689c0,0-4.549,4.989,0.531,10.068
             c5.08,5.082,10.072,0.533,10.072,0.533l16.563-16.565c0,0,3.314-3.655-0.637-7.608s-7.607-0.639-7.607-0.639L6.543,16.728
-            c0,0-3.65,2.969-0.338,6.279c3.312,3.314,6.227-0.39,6.227-0.39L22.562,12.491z"
+            c0,0-3.65,2.969-0.338,6.279c3.312,3.314,6.227-0.39,6.227-0.39L22.562,12.491z'
         />
     </svg>
 );
@@ -63,19 +71,13 @@ export const ThemeGenerator = () => {
         } else {
             const plugins = [];
 
-            const finishCss = replaceThemeCss(
-                themeCss,
-                themeName,
-                rootValues
-            );
+            const finishCss = replaceThemeCss(themeCss, themeName, rootValues);
 
             if (removeMediaRulesChecked) {
                 plugins.push(
                     postcssDiscard({
-                      atrule: [
-                        /--ek-(.*?)-media-(.*?)/,
-                      ],
-                    })
+                        atrule: [/--ek-(.*?)-media-(.*?)/],
+                    }),
                 );
             }
 
@@ -91,7 +93,7 @@ export const ThemeGenerator = () => {
 
             const postcssPromise = postcss(plugins)
                 .process(finishCss)
-                .then(result => {
+                .then((result) => {
                     let resultCSS = result.css;
 
                     if (!minimizeChecked) {
@@ -101,18 +103,12 @@ export const ThemeGenerator = () => {
                     resultCSS = '/* stylelint-disable */\n' + resultCSS;
 
                     setResultThemeCSS(resultCSS);
-                }).catch(() => {
+                })
+                .catch(() => {
                     setResultThemeCSS('');
                 });
         }
-    }, [
-        themeName,
-        minimizeChecked,
-        removeRootChecked,
-        removeMediaRulesChecked,
-        themeCss,
-        rootValues,
-    ]);
+    }, [themeName, minimizeChecked, removeRootChecked, removeMediaRulesChecked, themeCss, rootValues]);
 
     const onSelectPackage = () => {
         setLoading(true);
@@ -120,27 +116,25 @@ export const ThemeGenerator = () => {
 
     const onSuccessSelectPackage = (newPackageName, themeTemplate) => {
         const parseCss = postcss.parse(themeTemplate);
-        const parseRoot = parseCss.nodes.filter(
-            ({ selector }) => selector === ':root'
-        );
+        const parseRoot = parseCss.nodes.filter(({ selector }) => selector === ':root');
 
-        const newRootDeclList = parseRoot.map((rule) => (
-            rule.nodes.filter(({ type }) => type == 'decl')
-        ));
+        const newRootDeclList = parseRoot.map((rule) => rule.nodes.filter(({ type }) => type == 'decl'));
 
         // const rootCommList = parseRoot.map((rule) => (
         //     rule.nodes.filter(({ type }) => type == 'comment')
         // ));
 
         const rootStateValues = newRootDeclList.reduce((acc, rootDecl) => {
-            const values = rootDecl.reduce((accValues, { value }) => ({
-                ...accValues,
-                [value]: '',
-            }), {});
+            const values = rootDecl.reduce(
+                (accValues, { value }) => ({
+                    ...accValues,
+                    [value]: '',
+                }),
+                {},
+            );
 
             return { ...acc, ...values };
         }, {});
-
 
         setLoading(false);
         setRootDeclList(newRootDeclList);
@@ -164,10 +158,13 @@ export const ThemeGenerator = () => {
     };
 
     const onPartThemeChangeAll = (value) => {
-        const newRootValues = Object.keys(rootValues).reduce((acc, keyValue) => ({
-            ...acc,
-            [keyValue]: value,
-        }), {});
+        const newRootValues = Object.keys(rootValues).reduce(
+            (acc, keyValue) => ({
+                ...acc,
+                [keyValue]: value,
+            }),
+            {},
+        );
 
         setSingleColorValue(value);
         setRootValues(newRootValues);
@@ -194,19 +191,39 @@ export const ThemeGenerator = () => {
 
     return (
         <>
-            <Box box-position='relative' box-padding='xxl' box-background='muted'>
-                <Text text-align='center' text-size='h1' text-weight='medium'>
+            <Box
+                box-position='relative'
+                box-padding='xxl'
+                box-background='muted'
+            >
+                <Text
+                    text-align='center'
+                    text-size='h1'
+                    text-weight='medium'
+                >
                     Theming
-                    <Text text-as='sup' text-size='small' text-color='muted'>
+                    <Text
+                        text-as='sup'
+                        text-size='small'
+                        text-color='muted'
+                    >
                         <LinkChangeLog />
                     </Text>
                 </Text>
                 <Box box-margin-top='xxs'>
-                    <Text text-align='center' text-size='small' text-color='muted'>
+                    <Text
+                        text-align='center'
+                        text-size='small'
+                        text-color='muted'
+                    >
                         Selected Block and create theme
                     </Text>
                 </Box>
-                <Box box-zindex='xs' box-align='center' box-margin-top='m'>
+                <Box
+                    box-zindex='xs'
+                    box-align='center'
+                    box-margin-top='m'
+                >
                     <SelectPackage
                         onSelect={onSelectPackage}
                         onSuccess={onSuccessSelectPackage}
@@ -220,7 +237,10 @@ export const ThemeGenerator = () => {
                 {!loading && hasRoot && (
                     <Box box-margin-top='xl'>
                         <Box box-margin-bottom='xl'>
-                            <Grid grid-indent='xl' grid-align='center'>
+                            <Grid
+                                grid-indent='xl'
+                                grid-align='center'
+                            >
                                 <Grid.Item>
                                     <SwitchBox
                                         checked={advancedMode}
@@ -242,9 +262,7 @@ export const ThemeGenerator = () => {
                         {advancedMode ? (
                             <>
                                 <Title>Name</Title>
-                                <Box box-margin-bottom='xl'>
-                                    {inputThemeName}
-                                </Box>
+                                <Box box-margin-bottom='xl'>{inputThemeName}</Box>
                                 <Title>Colors</Title>
                                 <List list-indent='m'>
                                     {rootDeclList.map((rootDecl, rootDeclIndex) => (
@@ -259,9 +277,7 @@ export const ThemeGenerator = () => {
                                                             sliderPickerChecked={sliderPickerChecked}
                                                             rootVarKey={prop}
                                                             inputValue={rootValues[value]}
-                                                            onChange={(newValue) => (
-                                                                onPartThemeChange(value, newValue)
-                                                            )}
+                                                            onChange={(newValue) => onPartThemeChange(value, newValue)}
                                                         />
                                                     </Grid.Item>
                                                 ))}
@@ -271,7 +287,10 @@ export const ThemeGenerator = () => {
                                 </List>
                             </>
                         ) : (
-                            <Grid grid-indent='m' grid-column='expand'>
+                            <Grid
+                                grid-indent='m'
+                                grid-column='expand'
+                            >
                                 <Grid.Item>
                                     <Title>Name</Title>
                                     {inputThemeName}
@@ -288,7 +307,11 @@ export const ThemeGenerator = () => {
                         )}
                         <Box box-margin-top='xl'>
                             <Text text-align='center'>
-                                <Grid grid-indent='xl' grid-align='center' grid-valign='middle'>
+                                <Grid
+                                    grid-indent='xl'
+                                    grid-align='center'
+                                    grid-valign='middle'
+                                >
                                     <Grid.Item>
                                         <SwitchBox
                                             disabled={disabledDownload}
@@ -332,10 +355,7 @@ export const ThemeGenerator = () => {
                                         disabled={disabledDownload}
                                         type='button'
                                         onClick={() => {
-                                            downloadFile(
-                                                getDownloadFileName(),
-                                                resultThemeCSS,
-                                            );
+                                            downloadFile(getDownloadFileName(), resultThemeCSS);
                                         }}
                                     >
                                         Download
@@ -343,24 +363,33 @@ export const ThemeGenerator = () => {
                                 </Box>
                                 {!!themeName && (
                                     <Box box-margin-top='xs'>
-                                        <Text text-size='small' text-color='muted' text-wrap='ellipsis'>
-                                            <Grid grid-valign='middle' grid-align='center' grid-indent='xxs'>
+                                        <Text
+                                            text-size='small'
+                                            text-color='muted'
+                                            text-wrap='ellipsis'
+                                        >
+                                            <Grid
+                                                grid-valign='middle'
+                                                grid-align='center'
+                                                grid-indent='xxs'
+                                            >
                                                 <Grid.Item>
                                                     <SvgClip />
                                                 </Grid.Item>
-                                                <Grid.Item>
-                                                    {getDownloadFileName()}
-                                                </Grid.Item>
+                                                <Grid.Item>{getDownloadFileName()}</Grid.Item>
                                             </Grid>
                                         </Text>
                                     </Box>
                                 )}
                             </Text>
                         </Box>
-                        {(previewCssChecked && !disabledDownload) && (
+                        {previewCssChecked && !disabledDownload && (
                             <Box box-margin-top='xl'>
                                 <Title>Preview</Title>
-                                <code className='input-value' rows={10}>
+                                <code
+                                    className='input-value'
+                                    rows={10}
+                                >
                                     {resultThemeCSS}
                                 </code>
                             </Box>

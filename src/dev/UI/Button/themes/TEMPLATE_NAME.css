@@ -1,23 +1,23 @@
 @import 'evokit-button/theme.css';
 
 :root {
-  --background: #fff;
-  --border: #dee1ef;
-  --color: inherit;
+    --background: #fff;
+    --border: #dee1ef;
+    --color: inherit;
 
-  --focus-background: #ecebff;
-  --focus-border: #1e00c2;
-  --focus-color: #1e00c2;
+    --focus-background: #ecebff;
+    --focus-border: #1e00c2;
+    --focus-color: #1e00c2;
 
-  --hover-background: #ecebff;
-  --hover-border: #1e00c2;
-  --hover-color: #1e00c2;
+    --hover-background: #ecebff;
+    --hover-border: #1e00c2;
+    --hover-color: #1e00c2;
 
-  --active-background: #dad4ff;
-  --active-border: #1b00ab;
-  --active-color: #1b00ab;
+    --active-background: #dad4ff;
+    --active-border: #1b00ab;
+    --active-color: #1b00ab;
 
-  --disabled-background: #fff;
-  --disabled-border: #dee1ef;
-  --disabled-color: #a4abc4;
+    --disabled-background: #fff;
+    --disabled-border: #dee1ef;
+    --disabled-color: #a4abc4;
 }

@@ -22,7 +22,10 @@ input.input-value {
 
 .input-value:focus {
     outline: none;
-    box-shadow: 0 -1px 0 #2684ff, 1px 0 0 #2684ff, 0 1px 0 #2684ff,
+    box-shadow:
+        0 -1px 0 #2684ff,
+        1px 0 0 #2684ff,
+        0 1px 0 #2684ff,
         -1px 0 0 #2684ff;
     border-color: #2684ff;
 }
@@ -53,7 +56,8 @@ input.input-value {
 .popup-changelog {
     min-width: 320px;
     max-width: 90%;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px,
+    box-shadow:
+        rgba(0, 0, 0, 0.15) 0px 0px 0px 1px,
         rgba(0, 0, 0, 0.15) 0px 8px 16px;
 }
 

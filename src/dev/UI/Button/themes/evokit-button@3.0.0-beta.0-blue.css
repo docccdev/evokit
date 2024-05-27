@@ -13,64 +13,64 @@
     --ek-button-active-color-blue: #fff;
     --ek-button-disabled-background-blue: #e0e0e0;
     --ek-button-disabled-border-blue: #e0e0e0;
-    --ek-button-disabled-color-blue: #a6a6a6
+    --ek-button-disabled-color-blue: #a6a6a6;
 }
 
 .ek-button_theme_blue {
     background-color: var(--ek-button-background-blue);
     border-color: var(--ek-button-border-blue);
-    color: var(--ek-button-color-blue)
+    color: var(--ek-button-color-blue);
 }
 
 .ek-button_theme_blue:focus {
     background-color: var(--ek-button-focus-background-blue);
     border-color: var(--ek-button-focus-border-blue);
-    color: var(--ek-button-focus-color-blue)
+    color: var(--ek-button-focus-color-blue);
 }
 
 .ek-button_theme_blue:hover {
     background-color: var(--ek-button-hover-background-blue);
     border-color: var(--ek-button-hover-border-blue);
-    color: var(--ek-button-hover-color-blue)
+    color: var(--ek-button-hover-color-blue);
 }
 
 .ek-button_theme_blue:active {
     background-color: var(--ek-button-active-background-blue);
     border-color: var(--ek-button-active-border-blue);
-    color: var(--ek-button-active-color-blue)
+    color: var(--ek-button-active-color-blue);
 }
 
 .ek-button_theme_blue:disabled {
     background-color: var(--ek-button-disabled-background-blue);
     border-color: var(--ek-button-disabled-border-blue);
-    color: var(--ek-button-disabled-color-blue)
+    color: var(--ek-button-disabled-color-blue);
 }
 
 @media (--ek-button-media-small) {
     .ek-button_theme_blue\@small {
         background-color: var(--ek-button-background-blue);
         border-color: var(--ek-button-border-blue);
-        color: var(--ek-button-color-blue)
+        color: var(--ek-button-color-blue);
     }
     .ek-button_theme_blue\@small: focus {
         background-color: var(--ek-button-focus-background-blue);
         border-color: var(--ek-button-focus-border-blue);
-        color: var(--ek-button-focus-color-blue)
+        color: var(--ek-button-focus-color-blue);
     }
     .ek-button_theme_blue\@small: hover {
         background-color: var(--ek-button-hover-background-blue);
         border-color: var(--ek-button-hover-border-blue);
-        color: var(--ek-button-hover-color-blue)
+        color: var(--ek-button-hover-color-blue);
     }
     .ek-button_theme_blue\@small: active {
         background-color: var(--ek-button-active-background-blue);
         border-color: var(--ek-button-active-border-blue);
-        color: var(--ek-button-active-color-blue)
+        color: var(--ek-button-active-color-blue);
     }
     .ek-button_theme_blue\@small: disabled {
         background-color: var(--ek-button-disabled-background-blue);
         border-color: var(--ek-button-disabled-border-blue);
-        color: var(--ek-button-disabled-color-blue)
+        color: var(--ek-button-disabled-color-blue);
     }
 }
 
@@ -78,27 +78,27 @@
     .ek-button_theme_blue\@medium {
         background-color: var(--ek-button-background-blue);
         border-color: var(--ek-button-border-blue);
-        color: var(--ek-button-color-blue)
+        color: var(--ek-button-color-blue);
     }
     .ek-button_theme_blue\@medium: focus {
         background-color: var(--ek-button-focus-background-blue);
         border-color: var(--ek-button-focus-border-blue);
-        color: var(--ek-button-focus-color-blue)
+        color: var(--ek-button-focus-color-blue);
     }
     .ek-button_theme_blue\@medium: hover {
         background-color: var(--ek-button-hover-background-blue);
         border-color: var(--ek-button-hover-border-blue);
-        color: var(--ek-button-hover-color-blue)
+        color: var(--ek-button-hover-color-blue);
     }
     .ek-button_theme_blue\@medium: active {
         background-color: var(--ek-button-active-background-blue);
         border-color: var(--ek-button-active-border-blue);
-        color: var(--ek-button-active-color-blue)
+        color: var(--ek-button-active-color-blue);
     }
     .ek-button_theme_blue\@medium: disabled {
         background-color: var(--ek-button-disabled-background-blue);
         border-color: var(--ek-button-disabled-border-blue);
-        color: var(--ek-button-disabled-color-blue)
+        color: var(--ek-button-disabled-color-blue);
     }
 }
 
@@ -106,27 +106,27 @@
     .ek-button_theme_blue\@large {
         background-color: var(--ek-button-background-blue);
         border-color: var(--ek-button-border-blue);
-        color: var(--ek-button-color-blue)
+        color: var(--ek-button-color-blue);
     }
     .ek-button_theme_blue\@large: focus {
         background-color: var(--ek-button-focus-background-blue);
         border-color: var(--ek-button-focus-border-blue);
-        color: var(--ek-button-focus-color-blue)
+        color: var(--ek-button-focus-color-blue);
     }
     .ek-button_theme_blue\@large: hover {
         background-color: var(--ek-button-hover-background-blue);
         border-color: var(--ek-button-hover-border-blue);
-        color: var(--ek-button-hover-color-blue)
+        color: var(--ek-button-hover-color-blue);
     }
     .ek-button_theme_blue\@large: active {
         background-color: var(--ek-button-active-background-blue);
         border-color: var(--ek-button-active-border-blue);
-        color: var(--ek-button-active-color-blue)
+        color: var(--ek-button-active-color-blue);
     }
     .ek-button_theme_blue\@large: disabled {
         background-color: var(--ek-button-disabled-background-blue);
         border-color: var(--ek-button-disabled-border-blue);
-        color: var(--ek-button-disabled-color-blue)
+        color: var(--ek-button-disabled-color-blue);
     }
 }
 
@@ -134,27 +134,27 @@
     .ek-button_theme_blue\@wide {
         background-color: var(--ek-button-background-blue);
         border-color: var(--ek-button-border-blue);
-        color: var(--ek-button-color-blue)
+        color: var(--ek-button-color-blue);
     }
     .ek-button_theme_blue\@wide: focus {
         background-color: var(--ek-button-focus-background-blue);
         border-color: var(--ek-button-focus-border-blue);
-        color: var(--ek-button-focus-color-blue)
+        color: var(--ek-button-focus-color-blue);
     }
     .ek-button_theme_blue\@wide: hover {
         background-color: var(--ek-button-hover-background-blue);
         border-color: var(--ek-button-hover-border-blue);
-        color: var(--ek-button-hover-color-blue)
+        color: var(--ek-button-hover-color-blue);
     }
     .ek-button_theme_blue\@wide: active {
         background-color: var(--ek-button-active-background-blue);
         border-color: var(--ek-button-active-border-blue);
-        color: var(--ek-button-active-color-blue)
+        color: var(--ek-button-active-color-blue);
     }
     .ek-button_theme_blue\@wide: disabled {
         background-color: var(--ek-button-disabled-background-blue);
         border-color: var(--ek-button-disabled-border-blue);
-        color: var(--ek-button-disabled-color-blue)
+        color: var(--ek-button-disabled-color-blue);
     }
 }
 
@@ -162,26 +162,26 @@
     .ek-button_theme_blue\@huge {
         background-color: var(--ek-button-background-blue);
         border-color: var(--ek-button-border-blue);
-        color: var(--ek-button-color-blue)
+        color: var(--ek-button-color-blue);
     }
     .ek-button_theme_blue\@huge: focus {
         background-color: var(--ek-button-focus-background-blue);
         border-color: var(--ek-button-focus-border-blue);
-        color: var(--ek-button-focus-color-blue)
+        color: var(--ek-button-focus-color-blue);
     }
     .ek-button_theme_blue\@huge: hover {
         background-color: var(--ek-button-hover-background-blue);
         border-color: var(--ek-button-hover-border-blue);
-        color: var(--ek-button-hover-color-blue)
+        color: var(--ek-button-hover-color-blue);
     }
     .ek-button_theme_blue\@huge: active {
         background-color: var(--ek-button-active-background-blue);
         border-color: var(--ek-button-active-border-blue);
-        color: var(--ek-button-active-color-blue)
+        color: var(--ek-button-active-color-blue);
     }
     .ek-button_theme_blue\@huge: disabled {
         background-color: var(--ek-button-disabled-background-blue);
         border-color: var(--ek-button-disabled-border-blue);
-        color: var(--ek-button-disabled-color-blue)
+        color: var(--ek-button-disabled-color-blue);
     }
 }

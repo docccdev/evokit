@@ -25,9 +25,7 @@ export const SwitchBox = ({ checked, onChange, children, disabled }) => (
             />
         </Grid.Item>
         <Grid.Item>
-            <Text text-color={disabled ? 'muted' : null}>
-                {children}
-            </Text>
+            <Text text-color={disabled ? 'muted' : null}>{children}</Text>
         </Grid.Item>
     </Grid>
 );

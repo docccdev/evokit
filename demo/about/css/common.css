@@ -3,9 +3,16 @@
     margin: 0;
 }
 
-html, body {
+html,
+body {
     font-size: 13px;
-    font-family: -apple-system,BlinkMacSystemFont,Roboto,Open Sans,Helvetica Neue,sans-serif;
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        Roboto,
+        Open Sans,
+        Helvetica Neue,
+        sans-serif;
     overflow: hidden;
     user-select: none;
     cursor: default;
@@ -21,7 +28,7 @@ img {
     top: 0;
     bottom: 0;
     right: 0;
-    transition: transform .28s ease-out;
+    transition: transform 0.28s ease-out;
     transform: translateX(-100%);
 }
 [data-slider-canvas].active {
@@ -37,7 +44,7 @@ img {
     top: 0;
     bottom: 0;
     right: 0;
-    transition: transform .2s ease-out;
+    transition: transform 0.2s ease-out;
     transform: translateY(-100%);
 }
 [data-slider-canvas-case].active {
@@ -61,7 +68,7 @@ img {
     padding: 20px;
     font-size: 11px;
     z-index: 99999;
-    opacity: .6;
+    opacity: 0.6;
     white-space: nowrap;
     transform: translateX(-50%);
     box-sizing: border-box;
@@ -74,7 +81,7 @@ img {
     margin: 20px;
     font-size: 16px;
     z-index: 99999;
-    opacity: .6;
+    opacity: 0.6;
 }
 
 .nav {
@@ -109,16 +116,17 @@ img {
     justify-content: center;
     font-size: 18px;
     font-weight: bold;
-    opacity: .7;
+    opacity: 0.7;
     cursor: pointer;
-    transition: opacity .07s ease-out;
+    transition: opacity 0.07s ease-out;
 }
 
 .nav-item.disable {
-    opacity: .2 !important;
+    opacity: 0.2 !important;
     cursor: default;
 }
 
-.nav-item.active, .nav-item:active {
+.nav-item.active,
+.nav-item:active {
     opacity: 1;
 }

@@ -11,7 +11,7 @@ var postcssImport = require('postcss-import');
 var postcssPrefixer = require('postcss-prefixer');
 var postcssMqpacker = require('css-mqpacker');
 
-module.exports = function(dirName) {
+module.exports = function (dirName) {
     return {
         mode: 'production',
         entry: path.resolve(dirName, 'src/theme.sss'),
@@ -28,8 +28,8 @@ module.exports = function(dirName) {
                         {
                             loader: 'css-loader',
                             options: {
-                                importLoaders: 1
-                            }
+                                importLoaders: 1,
+                            },
                         },
                         {
                             loader: 'postcss-loader',
@@ -46,30 +46,30 @@ module.exports = function(dirName) {
                                         postcssConditionals(),
                                         postcssNested(),
                                         postcssPrefixer({
-                                            prefix: 'ek-'
+                                            prefix: 'ek-',
                                         }),
-                                        postcssMqpacker()
-                                    ]
-                                }
-                            }
+                                        postcssMqpacker(),
+                                    ],
+                                },
+                            },
                         },
-                    ]
-                }
-            ]
+                    ],
+                },
+            ],
         },
         plugins: [
             new FixStyleOnlyEntriesPlugin({
                 extensions: ['sss'],
-                silent: true
+                silent: true,
             }),
             new MiniCssExtractPlugin({
-                filename: 'theme.css'
+                filename: 'theme.css',
             }),
         ],
         stats: {
             entrypoints: false,
             children: false,
             modules: false,
-        }
+        },
     };
 };

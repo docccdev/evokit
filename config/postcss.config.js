@@ -12,7 +12,7 @@ var postcssMqpacker = require('css-mqpacker');
 var postcssExtractMediaQuery = require('postcss-extract-media-query');
 // var evokitConfig = require('./evokit.config.js');
 
-module.exports = function(emqEntry, emqPath, emqQueries) {
+module.exports = function (emqEntry, emqPath, emqQueries) {
     return {
         parser: 'sugarss',
         plugins: {
@@ -34,7 +34,7 @@ module.exports = function(emqEntry, emqPath, emqQueries) {
                 //     importFrom: [evokitConfig]
                 // }),
                 postcssPrefixer({
-                    prefix: 'ek-'
+                    prefix: 'ek-',
                 }),
                 postcssMqpacker(),
                 postcssExtractMediaQuery({
@@ -43,10 +43,10 @@ module.exports = function(emqEntry, emqPath, emqQueries) {
                     queries: emqQueries,
                     output: {
                         name: '[name]@[query].css',
-                        path: emqPath
-                    }
-                })
-            ]
-        }
+                        path: emqPath,
+                    },
+                }),
+            ],
+        },
     };
-}
+};

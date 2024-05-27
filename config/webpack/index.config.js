@@ -1,7 +1,7 @@
 var path = require('path');
 var babelConfig = require('../babel.config.js');
 
-module.exports = function(dirName, moduleName) {
+module.exports = function (dirName, moduleName) {
     return {
         mode: 'production',
         entry: path.resolve(dirName, 'src/index.js'),
@@ -10,32 +10,29 @@ module.exports = function(dirName, moduleName) {
             path: dirName,
             filename: 'index.js',
             libraryTarget: 'umd',
-            globalObject: 'this'
+            globalObject: 'this',
         },
         module: {
             rules: [
                 {
                     test: /\.jsx?$/,
-                    use: [
-                        { loader: 'babel-loader', options: babelConfig },
-                        'eslint-loader',
-                    ],
-                    exclude: /node_modules/
-                }
-            ]
+                    use: [{ loader: 'babel-loader', options: babelConfig }, 'eslint-loader'],
+                    exclude: /node_modules/,
+                },
+            ],
         },
         externals: {
-            'evokit': {
+            evokit: {
                 root: 'EvoKit',
                 commonjs: 'evokit',
                 commonjs2: 'evokit',
-                amd: 'evokit'
-            }
+                amd: 'evokit',
+            },
         },
         stats: {
             entrypoints: false,
             children: false,
             modules: false,
-        }
+        },
     };
 };

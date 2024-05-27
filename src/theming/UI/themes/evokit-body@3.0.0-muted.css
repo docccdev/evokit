@@ -1,57 +1,57 @@
 :root {
-  --ek-body-background-muted: #f7f7f7;
-  --ek-body-color-muted: #f7f7f7;
+    --ek-body-background-muted: #f7f7f7;
+    --ek-body-color-muted: #f7f7f7;
 }
 
 .ek-body_background_muted {
-  background: var(--ek-body-background-muted);
+    background: var(--ek-body-background-muted);
 }
 
 .ek-body_color_muted {
-  color: var(--ek-body-color-muted);
+    color: var(--ek-body-color-muted);
 }
 
 @media (--ek-body-media-small) {
-  .ek-body_background_muted\@small {
-    background: var(--ek-body-background-muted);
-  }
-  .ek-body_color_muted\@small {
-    color: var(--ek-body-color-muted);
-  }
+    .ek-body_background_muted\@small {
+        background: var(--ek-body-background-muted);
+    }
+    .ek-body_color_muted\@small {
+        color: var(--ek-body-color-muted);
+    }
 }
 
 @media (--ek-body-media-medium) {
-  .ek-body_background_muted\@medium {
-    background: var(--ek-body-background-muted);
-  }
-  .ek-body_color_muted\@medium {
-    color: var(--ek-body-color-muted);
-  }
+    .ek-body_background_muted\@medium {
+        background: var(--ek-body-background-muted);
+    }
+    .ek-body_color_muted\@medium {
+        color: var(--ek-body-color-muted);
+    }
 }
 
 @media (--ek-body-media-large) {
-  .ek-body_background_muted\@large {
-    background: var(--ek-body-background-muted);
-  }
-  .ek-body_color_muted\@large {
-    color: var(--ek-body-color-muted);
-  }
+    .ek-body_background_muted\@large {
+        background: var(--ek-body-background-muted);
+    }
+    .ek-body_color_muted\@large {
+        color: var(--ek-body-color-muted);
+    }
 }
 
 @media (--ek-body-media-wide) {
-  .ek-body_background_muted\@wide {
-    background: var(--ek-body-background-muted);
-  }
-  .ek-body_color_muted\@wide {
-    color: var(--ek-body-color-muted);
-  }
+    .ek-body_background_muted\@wide {
+        background: var(--ek-body-background-muted);
+    }
+    .ek-body_color_muted\@wide {
+        color: var(--ek-body-color-muted);
+    }
 }
 
 @media (--ek-body-media-huge) {
-  .ek-body_background_muted\@huge {
-    background: var(--ek-body-background-muted);
-  }
-  .ek-body_color_muted\@huge {
-    color: var(--ek-body-color-muted);
-  }
+    .ek-body_background_muted\@huge {
+        background: var(--ek-body-background-muted);
+    }
+    .ek-body_color_muted\@huge {
+        color: var(--ek-body-color-muted);
+    }
 }
