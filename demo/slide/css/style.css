@@ -2,9 +2,16 @@
     padding: 0;
     margin: 0;
 }
-html, body {
+html,
+body {
     font-size: 13px;
-    font-family: -apple-system,BlinkMacSystemFont,Roboto,Open Sans,Helvetica Neue,sans-serif;
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        Roboto,
+        Open Sans,
+        Helvetica Neue,
+        sans-serif;
     overflow: hidden;
     user-select: none;
     cursor: default;
@@ -15,7 +22,7 @@ html, body {
     top: 0;
     bottom: 0;
     right: 0;
-    transition: transform .3s ease-out;
+    transition: transform 0.3s ease-out;
     transform: translateX(-100%);
 }
 .slider-case.active {
@@ -38,7 +45,7 @@ html, body {
     margin-top: 230px;
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
-    border: 2px solid rgba(0,0,0,.2);
+    border: 2px solid rgba(0, 0, 0, 0.2);
     border-width: 0 2px 2px 0;
     margin: 0 auto;
 }
@@ -57,7 +64,7 @@ html, body {
     margin: 20px;
     font-size: 11px;
     z-index: 99999;
-    opacity: .6;
+    opacity: 0.6;
 }
 
 .pages {
@@ -67,7 +74,7 @@ html, body {
     margin: 20px;
     font-size: 16px;
     z-index: 99999;
-    opacity: .6;
+    opacity: 0.6;
 }
 
 .o4ki {
@@ -167,15 +174,16 @@ html, body {
     justify-content: center;
     font-size: 18px;
     font-weight: bold;
-    opacity: .7;
+    opacity: 0.7;
     cursor: pointer;
 }
 
 .nav-item.disable {
-    opacity: .2;
+    opacity: 0.2;
     cursor: default;
 }
 
-.nav-item.active, .nav-item:active {
+.nav-item.active,
+.nav-item:active {
     opacity: 1;
 }

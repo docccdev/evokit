@@ -10,10 +10,7 @@ const replaceText = (source, from, to) => {
 export const downloadFile = (filename, text) => {
     const element = document.createElement('a');
 
-    element.setAttribute(
-        'href',
-        `data:text/plain;charset=utf-8,${encodeURIComponent(text)}`
-    );
+    element.setAttribute('href', `data:text/plain;charset=utf-8,${encodeURIComponent(text)}`);
     element.setAttribute('download', filename);
 
     element.style.display = 'none';
@@ -27,7 +24,7 @@ export const downloadFile = (filename, text) => {
 export const replaceThemeCss = (themeCss, themeName, rootValues) => {
     let result = replaceText(themeCss, TEMPLATE_NAME_KEY, themeName);
 
-    Object.keys(rootValues).forEach(key => {
+    Object.keys(rootValues).forEach((key) => {
         const value = !!rootValues[key] ? rootValues[key] : 'transparent';
         result = replaceText(result, key, value);
     });

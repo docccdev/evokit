@@ -12,10 +12,10 @@ const PACKAGES_LIST = [
     'evokit-link@3.1.0',
     'evokit-list@3.1.0',
     'evokit-picture@3.2.0',
-    'evokit-text@3.1.0'
+    'evokit-text@3.1.0',
 ];
 
-const SELECT_OPTIONS = PACKAGES_LIST.map(value => ({ value, label: value }));
+const SELECT_OPTIONS = PACKAGES_LIST.map((value) => ({ value, label: value }));
 
 export const SelectPackage = ({ onSelect, onSuccess }) => {
     const [packageName, setPackageName] = useState('');

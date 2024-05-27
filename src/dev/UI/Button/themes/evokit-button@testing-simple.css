@@ -1,211 +1,211 @@
 :root {
-  --ek-button-background-simple: red;
-  --ek-button-border-simple: green;
-  --ek-button-color-simple: blue;
+    --ek-button-background-simple: red;
+    --ek-button-border-simple: green;
+    --ek-button-color-simple: blue;
 
-  --ek-button-focus-background-simple: transparent;
-  --ek-button-focus-border-simple: transparent;
-  --ek-button-focus-color-simple: transparent;
+    --ek-button-focus-background-simple: transparent;
+    --ek-button-focus-border-simple: transparent;
+    --ek-button-focus-color-simple: transparent;
 
-  --ek-button-hover-background-simple: transparent;
-  --ek-button-hover-border-simple: transparent;
-  --ek-button-hover-color-simple: transparent;
+    --ek-button-hover-background-simple: transparent;
+    --ek-button-hover-border-simple: transparent;
+    --ek-button-hover-color-simple: transparent;
 
-  --ek-button-active-background-simple: transparent;
-  --ek-button-active-border-simple: transparent;
-  --ek-button-active-color-simple: transparent;
+    --ek-button-active-background-simple: transparent;
+    --ek-button-active-border-simple: transparent;
+    --ek-button-active-color-simple: transparent;
 
-  --ek-button-disabled-background-simple: transparent;
-  --ek-button-disabled-border-simple: transparent;
-  --ek-button-disabled-color-simple: transparent;
+    --ek-button-disabled-background-simple: transparent;
+    --ek-button-disabled-border-simple: transparent;
+    --ek-button-disabled-color-simple: transparent;
 }
 
 .ek-button_theme_simple {
-  background-color: var(--ek-button-background-simple);
-  border-color: var(--ek-button-border-simple);
-  color: var(--ek-button-color-simple);
+    background-color: var(--ek-button-background-simple);
+    border-color: var(--ek-button-border-simple);
+    color: var(--ek-button-color-simple);
 }
 
 .ek-button_theme_simple:focus {
-      background-color: var(--ek-button-focus-background-simple);
-      border-color: var(--ek-button-focus-border-simple);
-      color: var(--ek-button-focus-color-simple);
+    background-color: var(--ek-button-focus-background-simple);
+    border-color: var(--ek-button-focus-border-simple);
+    color: var(--ek-button-focus-color-simple);
 }
 
 .ek-button_theme_simple:hover {
-      background-color: var(--ek-button-hover-background-simple);
-      border-color: var(--ek-button-hover-border-simple);
-      color: var(--ek-button-hover-color-simple);
+    background-color: var(--ek-button-hover-background-simple);
+    border-color: var(--ek-button-hover-border-simple);
+    color: var(--ek-button-hover-color-simple);
 }
 
 .ek-button_theme_simple:active {
-      background-color: var(--ek-button-active-background-simple);
-      border-color: var(--ek-button-active-border-simple);
-      color: var(--ek-button-active-color-simple);
+    background-color: var(--ek-button-active-background-simple);
+    border-color: var(--ek-button-active-border-simple);
+    color: var(--ek-button-active-color-simple);
 }
 
 .ek-button_theme_simple:disabled {
-      background-color: var(--ek-button-disabled-background-simple);
-      border-color: var(--ek-button-disabled-border-simple);
-      color: var(--ek-button-disabled-color-simple);
+    background-color: var(--ek-button-disabled-background-simple);
+    border-color: var(--ek-button-disabled-border-simple);
+    color: var(--ek-button-disabled-color-simple);
 }
 
 @media (--ek-button-media-small) {
-      .ek-button_theme_simple@small {
-  background-color: var(--ek-button-background-simple);
-  border-color: var(--ek-button-border-simple);
-  color: var(--ek-button-color-simple);
-  }
+    .ek-button_theme_simple@small {
+        background-color: var(--ek-button-background-simple);
+        border-color: var(--ek-button-border-simple);
+        color: var(--ek-button-color-simple);
+    }
 
-  .ek-button_theme_simple@small:focus {
-      background-color: var(--ek-button-focus-background-simple);
-      border-color: var(--ek-button-focus-border-simple);
-      color: var(--ek-button-focus-color-simple);
-  }
+    .ek-button_theme_simple@small:focus {
+        background-color: var(--ek-button-focus-background-simple);
+        border-color: var(--ek-button-focus-border-simple);
+        color: var(--ek-button-focus-color-simple);
+    }
 
-  .ek-button_theme_simple@small:hover {
-      background-color: var(--ek-button-hover-background-simple);
-      border-color: var(--ek-button-hover-border-simple);
-      color: var(--ek-button-hover-color-simple);
-  }
+    .ek-button_theme_simple@small:hover {
+        background-color: var(--ek-button-hover-background-simple);
+        border-color: var(--ek-button-hover-border-simple);
+        color: var(--ek-button-hover-color-simple);
+    }
 
-  .ek-button_theme_simple@small:active {
-      background-color: var(--ek-button-active-background-simple);
-      border-color: var(--ek-button-active-border-simple);
-      color: var(--ek-button-active-color-simple);
-  }
+    .ek-button_theme_simple@small:active {
+        background-color: var(--ek-button-active-background-simple);
+        border-color: var(--ek-button-active-border-simple);
+        color: var(--ek-button-active-color-simple);
+    }
 
-  .ek-button_theme_simple@small:disabled {
-      background-color: var(--ek-button-disabled-background-simple);
-      border-color: var(--ek-button-disabled-border-simple);
-      color: var(--ek-button-disabled-color-simple);
-  }
+    .ek-button_theme_simple@small:disabled {
+        background-color: var(--ek-button-disabled-background-simple);
+        border-color: var(--ek-button-disabled-border-simple);
+        color: var(--ek-button-disabled-color-simple);
+    }
 }
 
 @media (--ek-button-media-medium) {
-      .ek-button_theme_simple@medium {
-  background-color: var(--ek-button-background-simple);
-  border-color: var(--ek-button-border-simple);
-  color: var(--ek-button-color-simple);
-  }
+    .ek-button_theme_simple@medium {
+        background-color: var(--ek-button-background-simple);
+        border-color: var(--ek-button-border-simple);
+        color: var(--ek-button-color-simple);
+    }
 
-  .ek-button_theme_simple@medium:focus {
-      background-color: var(--ek-button-focus-background-simple);
-      border-color: var(--ek-button-focus-border-simple);
-      color: var(--ek-button-focus-color-simple);
-  }
+    .ek-button_theme_simple@medium:focus {
+        background-color: var(--ek-button-focus-background-simple);
+        border-color: var(--ek-button-focus-border-simple);
+        color: var(--ek-button-focus-color-simple);
+    }
 
-  .ek-button_theme_simple@medium:hover {
-      background-color: var(--ek-button-hover-background-simple);
-      border-color: var(--ek-button-hover-border-simple);
-      color: var(--ek-button-hover-color-simple);
-  }
+    .ek-button_theme_simple@medium:hover {
+        background-color: var(--ek-button-hover-background-simple);
+        border-color: var(--ek-button-hover-border-simple);
+        color: var(--ek-button-hover-color-simple);
+    }
 
-  .ek-button_theme_simple@medium:active {
-      background-color: var(--ek-button-active-background-simple);
-      border-color: var(--ek-button-active-border-simple);
-      color: var(--ek-button-active-color-simple);
-  }
+    .ek-button_theme_simple@medium:active {
+        background-color: var(--ek-button-active-background-simple);
+        border-color: var(--ek-button-active-border-simple);
+        color: var(--ek-button-active-color-simple);
+    }
 
-  .ek-button_theme_simple@medium:disabled {
-      background-color: var(--ek-button-disabled-background-simple);
-      border-color: var(--ek-button-disabled-border-simple);
-      color: var(--ek-button-disabled-color-simple);
-  }
+    .ek-button_theme_simple@medium:disabled {
+        background-color: var(--ek-button-disabled-background-simple);
+        border-color: var(--ek-button-disabled-border-simple);
+        color: var(--ek-button-disabled-color-simple);
+    }
 }
 
 @media (--ek-button-media-large) {
-      .ek-button_theme_simple@large {
-  background-color: var(--ek-button-background-simple);
-  border-color: var(--ek-button-border-simple);
-  color: var(--ek-button-color-simple);
-  }
+    .ek-button_theme_simple@large {
+        background-color: var(--ek-button-background-simple);
+        border-color: var(--ek-button-border-simple);
+        color: var(--ek-button-color-simple);
+    }
 
-  .ek-button_theme_simple@large:focus {
-      background-color: var(--ek-button-focus-background-simple);
-      border-color: var(--ek-button-focus-border-simple);
-      color: var(--ek-button-focus-color-simple);
-  }
+    .ek-button_theme_simple@large:focus {
+        background-color: var(--ek-button-focus-background-simple);
+        border-color: var(--ek-button-focus-border-simple);
+        color: var(--ek-button-focus-color-simple);
+    }
 
-  .ek-button_theme_simple@large:hover {
-      background-color: var(--ek-button-hover-background-simple);
-      border-color: var(--ek-button-hover-border-simple);
-      color: var(--ek-button-hover-color-simple);
-  }
+    .ek-button_theme_simple@large:hover {
+        background-color: var(--ek-button-hover-background-simple);
+        border-color: var(--ek-button-hover-border-simple);
+        color: var(--ek-button-hover-color-simple);
+    }
 
-  .ek-button_theme_simple@large:active {
-      background-color: var(--ek-button-active-background-simple);
-      border-color: var(--ek-button-active-border-simple);
-      color: var(--ek-button-active-color-simple);
-  }
+    .ek-button_theme_simple@large:active {
+        background-color: var(--ek-button-active-background-simple);
+        border-color: var(--ek-button-active-border-simple);
+        color: var(--ek-button-active-color-simple);
+    }
 
-  .ek-button_theme_simple@large:disabled {
-      background-color: var(--ek-button-disabled-background-simple);
-      border-color: var(--ek-button-disabled-border-simple);
-      color: var(--ek-button-disabled-color-simple);
-  }
+    .ek-button_theme_simple@large:disabled {
+        background-color: var(--ek-button-disabled-background-simple);
+        border-color: var(--ek-button-disabled-border-simple);
+        color: var(--ek-button-disabled-color-simple);
+    }
 }
 
 @media (--ek-button-media-wide) {
-      .ek-button_theme_simple@wide {
-  background-color: var(--ek-button-background-simple);
-  border-color: var(--ek-button-border-simple);
-  color: var(--ek-button-color-simple);
-  }
+    .ek-button_theme_simple@wide {
+        background-color: var(--ek-button-background-simple);
+        border-color: var(--ek-button-border-simple);
+        color: var(--ek-button-color-simple);
+    }
 
-  .ek-button_theme_simple@wide:focus {
-      background-color: var(--ek-button-focus-background-simple);
-      border-color: var(--ek-button-focus-border-simple);
-      color: var(--ek-button-focus-color-simple);
-  }
+    .ek-button_theme_simple@wide:focus {
+        background-color: var(--ek-button-focus-background-simple);
+        border-color: var(--ek-button-focus-border-simple);
+        color: var(--ek-button-focus-color-simple);
+    }
 
-  .ek-button_theme_simple@wide:hover {
-      background-color: var(--ek-button-hover-background-simple);
-      border-color: var(--ek-button-hover-border-simple);
-      color: var(--ek-button-hover-color-simple);
-  }
+    .ek-button_theme_simple@wide:hover {
+        background-color: var(--ek-button-hover-background-simple);
+        border-color: var(--ek-button-hover-border-simple);
+        color: var(--ek-button-hover-color-simple);
+    }
 
-  .ek-button_theme_simple@wide:active {
-      background-color: var(--ek-button-active-background-simple);
-      border-color: var(--ek-button-active-border-simple);
-      color: var(--ek-button-active-color-simple);
-  }
+    .ek-button_theme_simple@wide:active {
+        background-color: var(--ek-button-active-background-simple);
+        border-color: var(--ek-button-active-border-simple);
+        color: var(--ek-button-active-color-simple);
+    }
 
-  .ek-button_theme_simple@wide:disabled {
-      background-color: var(--ek-button-disabled-background-simple);
-      border-color: var(--ek-button-disabled-border-simple);
-      color: var(--ek-button-disabled-color-simple);
-  }
+    .ek-button_theme_simple@wide:disabled {
+        background-color: var(--ek-button-disabled-background-simple);
+        border-color: var(--ek-button-disabled-border-simple);
+        color: var(--ek-button-disabled-color-simple);
+    }
 }
 
 @media (--ek-button-media-huge) {
-      .ek-button_theme_simple@huge {
-  background-color: var(--ek-button-background-simple);
-  border-color: var(--ek-button-border-simple);
-  color: var(--ek-button-color-simple);
-  }
+    .ek-button_theme_simple@huge {
+        background-color: var(--ek-button-background-simple);
+        border-color: var(--ek-button-border-simple);
+        color: var(--ek-button-color-simple);
+    }
 
-  .ek-button_theme_simple@huge:focus {
-      background-color: var(--ek-button-focus-background-simple);
-      border-color: var(--ek-button-focus-border-simple);
-      color: var(--ek-button-focus-color-simple);
-  }
+    .ek-button_theme_simple@huge:focus {
+        background-color: var(--ek-button-focus-background-simple);
+        border-color: var(--ek-button-focus-border-simple);
+        color: var(--ek-button-focus-color-simple);
+    }
 
-  .ek-button_theme_simple@huge:hover {
-      background-color: var(--ek-button-hover-background-simple);
-      border-color: var(--ek-button-hover-border-simple);
-      color: var(--ek-button-hover-color-simple);
-  }
+    .ek-button_theme_simple@huge:hover {
+        background-color: var(--ek-button-hover-background-simple);
+        border-color: var(--ek-button-hover-border-simple);
+        color: var(--ek-button-hover-color-simple);
+    }
 
-  .ek-button_theme_simple@huge:active {
-      background-color: var(--ek-button-active-background-simple);
-      border-color: var(--ek-button-active-border-simple);
-      color: var(--ek-button-active-color-simple);
-  }
+    .ek-button_theme_simple@huge:active {
+        background-color: var(--ek-button-active-background-simple);
+        border-color: var(--ek-button-active-border-simple);
+        color: var(--ek-button-active-color-simple);
+    }
 
-  .ek-button_theme_simple@huge:disabled {
-      background-color: var(--ek-button-disabled-background-simple);
-      border-color: var(--ek-button-disabled-border-simple);
-      color: var(--ek-button-disabled-color-simple);
-  }
+    .ek-button_theme_simple@huge:disabled {
+        background-color: var(--ek-button-disabled-background-simple);
+        border-color: var(--ek-button-disabled-border-simple);
+        color: var(--ek-button-disabled-color-simple);
+    }
 }

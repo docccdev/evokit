@@ -1,37 +1,37 @@
 :root {
-  --ek-text-color-muted: #848484;
+    --ek-text-color-muted: #848484;
 }
 
 .ek-text_color_muted {
-  color: var(--ek-text-color-muted);
+    color: var(--ek-text-color-muted);
 }
 
 @media (--ek-text-media-small) {
-  .ek-text_color_muted\@small {
-    color: var(--ek-text-color-muted);
-  }
+    .ek-text_color_muted\@small {
+        color: var(--ek-text-color-muted);
+    }
 }
 
 @media (--ek-text-media-medium) {
-  .ek-text_color_muted\@medium {
-    color: var(--ek-text-color-muted);
-  }
+    .ek-text_color_muted\@medium {
+        color: var(--ek-text-color-muted);
+    }
 }
 
 @media (--ek-text-media-large) {
-  .ek-text_color_muted\@large {
-    color: var(--ek-text-color-muted);
-  }
+    .ek-text_color_muted\@large {
+        color: var(--ek-text-color-muted);
+    }
 }
 
 @media (--ek-text-media-wide) {
-  .ek-text_color_muted\@wide {
-    color: var(--ek-text-color-muted);
-  }
+    .ek-text_color_muted\@wide {
+        color: var(--ek-text-color-muted);
+    }
 }
 
 @media (--ek-text-media-huge) {
-  .ek-text_color_muted\@huge {
-    color: var(--ek-text-color-muted);
-  }
+    .ek-text_color_muted\@huge {
+        color: var(--ek-text-color-muted);
+    }
 }

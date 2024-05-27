@@ -1,32 +1,32 @@
 :root {
-  /* base */
-  --ek-button-border-radius: 4px;
-  --ek-button-border-width: 1px;
-  --ek-button-font-size: inherit;
-  --ek-button-font-weight: bold;
-  --ek-button-line-height: 1.4em;
-  --ek-button-padding: 10px 15px;
-  --ek-button-transition: 150ms ease-in-out;
-  /* prop 'button-padding' */
-  --ek-button-indent-xxs: 5px;
-  --ek-button-indent-xs: 10px;
-  --ek-button-indent-s: 15px;
-  --ek-button-indent-m: 20px;
-  --ek-button-indent-l: 25px;
-  --ek-button-indent-xl: 30px;
-  --ek-button-indent-xxl: 35px;
-  --ek-button-indent-3xl: 40px;
-  --ek-button-indent-4xl: 45px;
-  --ek-button-indent-5xl: 50px;
-  /* prop 'button-round' */
-  --ek-button-round-xxs: 2px;
-  --ek-button-round-xs: 4px;
-  --ek-button-round-s: 6px;
-  --ek-button-round-m: 8px;
-  --ek-button-round-l: 10px;
-  --ek-button-round-xl: 12px;
-  --ek-button-round-xxl: 14px;
-  --ek-button-round-3xl: 16px;
-  --ek-button-round-4xl: 18px;
-  --ek-button-round-5xl: 20px;
+    /* base */
+    --ek-button-border-radius: 4px;
+    --ek-button-border-width: 1px;
+    --ek-button-font-size: inherit;
+    --ek-button-font-weight: bold;
+    --ek-button-line-height: 1.4em;
+    --ek-button-padding: 10px 15px;
+    --ek-button-transition: 150ms ease-in-out;
+    /* prop 'button-padding' */
+    --ek-button-indent-xxs: 5px;
+    --ek-button-indent-xs: 10px;
+    --ek-button-indent-s: 15px;
+    --ek-button-indent-m: 20px;
+    --ek-button-indent-l: 25px;
+    --ek-button-indent-xl: 30px;
+    --ek-button-indent-xxl: 35px;
+    --ek-button-indent-3xl: 40px;
+    --ek-button-indent-4xl: 45px;
+    --ek-button-indent-5xl: 50px;
+    /* prop 'button-round' */
+    --ek-button-round-xxs: 2px;
+    --ek-button-round-xs: 4px;
+    --ek-button-round-s: 6px;
+    --ek-button-round-m: 8px;
+    --ek-button-round-l: 10px;
+    --ek-button-round-xl: 12px;
+    --ek-button-round-xxl: 14px;
+    --ek-button-round-3xl: 16px;
+    --ek-button-round-4xl: 18px;
+    --ek-button-round-5xl: 20px;
 }

@@ -1,0 +1,12 @@
+node_modules
+coverage
+dist
+bench
+public
+new-block
+*.md
+*.html
+*.min.js
+packages/*/index.js
+package-lock.json
+lerna.json

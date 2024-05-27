@@ -12,15 +12,15 @@ var postcssPrefixer = require('postcss-prefixer');
 var postcssMqpacker = require('css-mqpacker');
 var postcssExtractMediaQuery = require('postcss-extract-media-query');
 
-var makeQueriesList = function(blockName) {
+var makeQueriesList = function (blockName) {
     const result = {};
-    ['small', 'medium', 'large', 'wide', 'huge'].forEach(function(value) {
-        result['(--ek-'+blockName+'-media-'+value+')'] = value;
+    ['small', 'medium', 'large', 'wide', 'huge'].forEach(function (value) {
+        result['(--ek-' + blockName + '-media-' + value + ')'] = value;
     });
     return result;
 };
 
-module.exports = function(dirName, blockName) {
+module.exports = function (dirName, blockName) {
     return {
         mode: 'production',
         entry: path.resolve(dirName, 'src/style.sss'),
@@ -37,8 +37,8 @@ module.exports = function(dirName, blockName) {
                         {
                             loader: 'css-loader',
                             options: {
-                                importLoaders: 1
-                            }
+                                importLoaders: 1,
+                            },
                         },
                         {
                             loader: 'postcss-loader',
@@ -55,7 +55,7 @@ module.exports = function(dirName, blockName) {
                                         postcssConditionals(),
                                         postcssNested(),
                                         postcssPrefixer({
-                                            prefix: 'ek-'
+                                            prefix: 'ek-',
                                         }),
                                         postcssMqpacker(),
                                         postcssExtractMediaQuery({
@@ -63,30 +63,30 @@ module.exports = function(dirName, blockName) {
                                             queries: makeQueriesList(blockName),
                                             output: {
                                                 name: 'style@[query].css',
-                                                path: dirName
-                                            }
-                                        })
-                                    ]
-                                }
-                            }
+                                                path: dirName,
+                                            },
+                                        }),
+                                    ],
+                                },
+                            },
                         },
-                    ]
-                }
-            ]
+                    ],
+                },
+            ],
         },
         plugins: [
             new FixStyleOnlyEntriesPlugin({
                 extensions: ['sss'],
-                silent: true
+                silent: true,
             }),
             new MiniCssExtractPlugin({
-                filename: 'style.css'
+                filename: 'style.css',
             }),
         ],
         stats: {
             entrypoints: false,
             children: false,
             modules: false,
-        }
+        },
     };
 };
