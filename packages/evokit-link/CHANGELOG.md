@@ -5,6 +5,7 @@
 [link-size]: /packages/evokit-link/?id=link-size
 [link-style]: /packages/evokit-link/?id=link-style
 [link-wrap]: /packages/evokit-link/?id=link-wrap
+[link-weight]: /packages/evokit-link/?id=link-weight
 
 # EvoKit - Link
 
@@ -14,6 +15,13 @@
 ---
 
 ## CHANGELOG
+
+### 3.3.0 *(28.05.2024)*
+
+- **Added** new values `block` and `inline-block` for prop [`link-display`][link-display]
+- **Added** new values `100`, `200`, `300`, `400`, `500`, `600`, `700`, `800` and `900` for prop [`link-weight`][link-weight]
+
+
 
 ### 3.2.0 *(06.10.2020)*
 
