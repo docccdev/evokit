@@ -62,13 +62,13 @@ const App = () => (
 |------------------|---------------|------------------|-------------|
 | [text-align]     | `left`        | `left` `center` `right` `justify` | Horizontal alignment |
 | [text-color]     | `null`        | [Create theme][create_theme] | Text color  |
-| [text-display]   | `inline`      | `inline` `none`  | Display type |
+| [text-display]   | `inline`      | `block` `inline-block` `inline` `none`  | Display type |
 | [text-lheight]   | `default`     | `default` `medium` `large` | Line spacing |
 | [text-size]      | `default`     | `none` `inherit` `default` `small` `big` `h1` `h2` `h3` `h4` `h5` `h6` | Font size |
 | [text-style]     | `null`        | `italic` `strike` `underline` `overline` | Text style |
 | [text-transform] | `none`        | `none` `capitalize` `lowercase` `uppercase` | Text case conversion |
 | [text-valign]    | `null`        | `baseline` `bottom` `middle` `sub` `super` `text-bottom` `text-top` `top` | Vertical alignment |
-| [text-weight]    | `default`     | `default` `thin` `light` `medium` `bold` `black` | Font weight |
+| [text-weight]    | `default`     | `default` `thin` `light` `medium` `bold` `black` `100` `200` `300` `400` `500` `600` `700` `800` `900` | Font weight |
 | [text-wrap]      | `normal`      | `normal` `nowrap` `pre` `pre-wrap` `pre-line` `break` `ellipsis` `three-line` `two-line` | Transferring and cutting text |
 
 ## Customize
@@ -110,6 +110,8 @@ const App = () => (
 
 ## `text-display`
 
+- `block` - shown as blocky
+- `inline-block` - block element that is wrapped around by other elements
 - `inline` - displayed as inline
 - `none` - remove from a document
 
@@ -147,6 +149,10 @@ const App = () => (
 - `medium` - value: `500`
 - `bold` - value: `700`
 - `black` - value: `900`
+
+or
+
+- `100` `200` `300` `400` `500` `600` `700` `800` `900`
 
 ```jsx
 <Text text-weight='bold'>
