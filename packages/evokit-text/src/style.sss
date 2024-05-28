@@ -31,12 +31,14 @@
 /**
  * Display:
  *
+ *  - text_display_block
+ *  - text_display_inline-block
  *  - text_display_inline
  *  - text_display_none
  *
  **/
 
-@each $value in (inline, none)
+@each $value in (block, inline-block, inline, none)
     @mixin media .text_display_$(value)
         display: $value
 
@@ -63,7 +65,7 @@
  *
  **/
 
-@each $value in (default, thin, light, medium, bold, black)
+@each $value in (default, thin, light, medium, bold, black, 100, 200, 300, 400, 500, 600, 700, 800, 900)
     @mixin media .text_weight_$(value)
         @if $value == default
             font-weight: 400
@@ -77,6 +79,8 @@
             font-weight: 700
         @else if $value == black
             font-weight: 900
+        @else
+            font-weight: $value
 
 /**
  * Align:

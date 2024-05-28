@@ -5,6 +5,7 @@
 [text-wrap]: /packages/evokit-text/?id=text-wrap
 [text-lheight]: /packages/evokit-text/?id=text-lheight
 [text-size]: /packages/evokit-text/?id=text-size
+[text-weight]: /packages/evokit-text/?id=text-weight
 
 [issues_4]: //github.com/docccdev/evokit/issues/4
 
@@ -17,6 +18,11 @@
 ---
 
 ## CHANGELOG
+
+### 3.3.0 *(28.05.2024)*
+
+- **Added** new values `block` and `inline-block` for prop [`text-display`][text-display]
+- **Added** new values `100`, `200`, `300`, `400`, `500`, `600`, `700`, `800` and `900` for prop [`text-weight`][text-weight]
 
 ### 3.2.0 *(03.03.2020)*
 
